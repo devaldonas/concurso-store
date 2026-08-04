@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Confirmado - Concurso Store</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">Concurso Store</div>
+                <ul class="nav-links">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/#produtos">Concursos</a></li>
+                    <li><a href="/success.html">Meus Pedidos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="success-container">
+            <div class="container">
+                <div class="success-card">
+                    <h1>Pagamento Confirmado</h1>
+                    <p class="success-message">Seu pagamento foi processado com sucesso.</p>
+                    
+                    <div id="orderDetails" class="order-details">
+                        <p>Aguardando confirmação do pagamento...</p>
+                    </div>
+
+                    <div class="actions">
+                        <a href="/" class="btn btn-primary">Ver outros concursos</a>
+                        <a href="/" class="btn btn-secondary">Meus materiais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        
+        if (sessionId) {
+            fetch(`/api/check-session/${sessionId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'paid') {
+                        const detailsDiv = document.getElementById('orderDetails');
+                        detailsDiv.innerHTML = `
+                            <p><strong>Status:</strong> Pagamento confirmado</p>
+                            <p><strong>Email:</strong> ${data.customer_email || 'Não informado'}</p>
+                            <hr style="margin: 1rem 0; border: none; border-top: 1px solid #e9ecef;">
+                            <p style="margin-top: 0.8rem;">Seu material de memorização já está disponível.</p>
+                            <p>Verifique seu e-mail para acessar o conteúdo completo.</p>
+                        `;
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+    </script>
+</body>
+</html>
