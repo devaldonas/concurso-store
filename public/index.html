@@ -2,104 +2,118 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concurso Store - Método de Memorização</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Concurso Store - Materiais para Concursos</title>
     <link rel="stylesheet" href="/styles.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">Concurso Store</div>
-                <ul class="nav-links">
-                    <li><a href="/">Início</a></li>
-                    <li><a href="#produtos">Concursos</a></li>
-                    <li><a href="#metodo">Método</a></li>
-                    <li><a href="/success.html">Meus Pedidos</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Menu Mobile -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Concurso Store</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" data-page="home" class="active">Início</a></li>
+                <li><a href="#" data-page="concursos">Concursos</a></li>
+                <li><a href="#" data-page="metodo">Método</a></li>
+                <li><a href="#" data-page="pedidos">Meus Pedidos</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Método de Memorização para Concursos</h1>
-                        <p>Aprenda e retenha todo o conteúdo com técnicas comprovadas de memorização</p>
-                        <div class="hero-cta">
-                            <a href="#produtos" class="btn btn-primary">Ver Concursos</a>
-                            <a href="#metodo" class="btn btn-outline">Saiba Mais</a>
+        <!-- Página Home -->
+        <section class="page page-home active" id="page-home">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1>Método de Memorização para Concursos</h1>
+                            <p>Aprenda e retenha todo o conteúdo com técnicas comprovadas</p>
+                            <div class="hero-cta">
+                                <a href="#" data-page="concursos" class="btn btn-primary">Ver Concursos</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">97%</span>
-                            <span class="stat-label">Taxa de aprovação</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15K+</span>
-                            <span class="stat-label">Alunos aprovados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Concursos disponíveis</span>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">97%</span>
+                                <span class="stat-label">Taxa de aprovação</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15K+</span>
+                                <span class="stat-label">Alunos aprovados</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Concursos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="metodo" id="metodo">
-            <div class="container">
-                <h2 class="section-title">Como funciona nosso método de memorização</h2>
-                <p class="section-subtitle">Uma abordagem científica para fixar o conteúdo de forma definitiva</p>
-                <div class="metodo-grid">
-                    <div class="metodo-item">
-                        <div class="metodo-number">01</div>
-                        <h3>Mapas Mentais</h3>
-                        <p>Organização visual do conteúdo para facilitar a compreensão e conexão entre temas</p>
-                    </div>
-                    <div class="metodo-item">
-                        <div class="metodo-number">02</div>
-                        <h3>Flashcards Inteligentes</h3>
-                        <p>Sistema de repetição espaçada para fixação de longo prazo</p>
-                    </div>
-                    <div class="metodo-item">
-                        <div class="metodo-number">03</div>
-                        <h3>Revisão Programada</h3>
-                        <p>Algoritmo que define os melhores momentos para revisar cada conteúdo</p>
-                    </div>
-                    <div class="metodo-item">
-                        <div class="metodo-number">04</div>
-                        <h3>Simulados Estratégicos</h3>
-                        <p>Treine com questões no formato da banca e acompanhe seu desempenho</p>
+        <!-- Página Concursos -->
+        <section class="page page-concursos" id="page-concursos">
+            <div class="products">
+                <div class="container">
+                    <h2 class="section-title">Concursos Disponíveis</h2>
+                    <p class="section-subtitle">Escolha seu concurso e comece a se preparar</p>
+                    <div class="products-grid" id="productsContainer">
+                        <!-- Produtos carregados via JavaScript -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="products" id="produtos">
-            <div class="container">
-                <h2 class="section-title">Materiais disponíveis</h2>
-                <p class="section-subtitle">Escolha seu concurso e comece a memorizar hoje mesmo</p>
-                <div class="products-grid" id="productsContainer">
-                    <!-- Produtos serão carregados via JavaScript -->
+        <!-- Página Método -->
+        <section class="page page-metodo" id="page-metodo">
+            <div class="metodo">
+                <div class="container">
+                    <h2 class="section-title">Como funciona nosso método</h2>
+                    <p class="section-subtitle">Uma abordagem científica para fixar o conteúdo</p>
+                    <div class="metodo-grid">
+                        <div class="metodo-item">
+                            <div class="metodo-number">01</div>
+                            <h3>Mapas Mentais</h3>
+                            <p>Organização visual para facilitar a compreensão</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-number">02</div>
+                            <h3>Flashcards Inteligentes</h3>
+                            <p>Sistema de repetição espaçada para fixação</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-number">03</div>
+                            <h3>Revisão Programada</h3>
+                            <p>Algoritmo que define os melhores momentos para revisar</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-number">04</div>
+                            <h3>Simulados Estratégicos</h3>
+                            <p>Treine com questões no formato da banca</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="testimonial">
+        <!-- Página Pedidos -->
+        <section class="page page-pedidos" id="page-pedidos">
             <div class="container">
-                <div class="testimonial-content">
-                    <blockquote>
-                        "O método de memorização revolucionou meus estudos. Consegui fixar conteúdos que antes pareciam impossíveis de aprender. Recomendo a todos que buscam aprovação em concursos!"
-                    </blockquote>
-                    <cite>
-                        <span class="author-name">Ana Carolina Silva</span>
-                        <span class="author-concurso">Aprovada - INSS 2023</span>
-                    </cite>
+                <h2 class="section-title">Meus Pedidos</h2>
+                <p class="section-subtitle">Acompanhe seus materiais adquiridos</p>
+                <div class="pedidos-content">
+                    <div class="empty-state">
+                        <p>Você ainda não possui pedidos.</p>
+                        <a href="#" data-page="concursos" class="btn btn-primary">Ver Concursos</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,12 +124,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>Concurso Store</h3>
-                    <p>Método de memorização para concursos públicos</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#produtos">Concursos</a>
-                    <a href="#metodo">Método</a>
-                    <a href="/success.html">Meus Pedidos</a>
+                    <p>Método de memorização para concursos</p>
                 </div>
             </div>
             <div class="footer-bottom">
