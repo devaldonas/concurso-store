@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado - Concurso SED/MS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #0f0f1a;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            opacity: 0.8;
+        }
+        .questao {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .questao .numero {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .questao h3 {
+            color: #0f0f1a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .questao .texto {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 3px solid #e94560;
+            white-space: pre-wrap;
+        }
+        .alternativas {
+            list-style: none;
+            padding: 0;
+        }
+        .alternativas li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+            color: #495057;
+        }
+        .alternativas li::before {
+            content: attr(data-letra);
+            color: #e94560;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .gabarito {
+            background: #f1f3f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .gabarito.visible {
+            display: block;
+        }
+        .gabarito strong {
+            color: #e94560;
+        }
+        .btn {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Simulado Completo #1</h1>
+            <p>Concurso SED/MS - 80 questões | Tempo: 5h</p>
+        </div>
+
+        <div style="background: white; padding: 1rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
+            <button class="btn" onclick="toggleGabarito()">Mostrar Gabarito</button>
+            <span style="margin-left: 1rem; color: #6c757d; font-size: 0.9rem;">Clique para ver as respostas</span>
+        </div>
+
+        <!-- Grupo 1: Língua Portuguesa -->
+        <h2 style="color: #0f0f1a; margin: 2rem 0 1rem; border-bottom: 3px solid #e94560; padding-bottom: 0.5rem;">Grupo 1 - Língua Portuguesa (20 questões)</h2>
+
+        <!-- QUESTÃO 1 -->
+        <div class="questao">
+            <span class="numero">Questão 1</span>
+            <div class="texto">
+                "Então, com base neste conceito, ocorre-me uma inspiração que poderia mudar as atitudes deste país [...]"
+            </div>
+            <p><strong>Quanto ao excerto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">"Então" é um advérbio de tempo, como em "O João chegou a casa. Preparou-se, então, para dormir uma sexta."</li>
+                <li data-letra="B">Os termos "neste" e "deste" são elementos coesivos que atuam retomando elementos anteriormente citados no texto.</li>
+                <li data-letra="C">O conceito a que o excerto se refere é a criação de muitas modas no planeta, mencionando no primeiro parágrafo do texto.</li>
+                <li data-letra="D">A ênclise do pronome é o que se refere à sua função de complemento direto.</li>
+                <li data-letra="E">O item "que" é um pronome relativo que evita a repetição da palavra "inspiração" no excerto.</li>
+            </ul>
+            <div class="gabarito" id="gab1">
+                <strong>Gabarito:</strong> B) Os termos "neste" e "deste" são elementos coesivos que atuam retomando elementos anteriormente citados no texto.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 2 -->
+        <div class="questao">
+            <span class="numero">Questão 2</span>
+            <p><strong>Sobre as funções do "que" e do "se" nos seguintes excertos, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Em "Cria-se tanta moda neste planeta [...]", "se" indica que o sujeito é indeterminado.</li>
+                <li data-letra="B">Em "conjunto de dados ou comportamentos que ocorrem com maior frequência [...]", "que" demarca uma oração adjetiva explicativa.</li>
+                <li data-letra="C">Em "[...] a moda é uma onda que se alastra [...]", "se" é um pronome reflexivo que se refere ao sujeito da oração.</li>
+                <li data-letra="D">Em "[...] pelo simples fato de que todos querem andar na moda.", "que" é um pronome explicativo, podendo ser omitido sem que isso cause prejuízo sintático ao excerto.</li>
+                <li data-letra="E">Em "A questão toda é se isto interessa a alguém [...]", "se" é uma conjunção condicional.</li>
+            </ul>
+            <div class="gabarito" id="gab2">
+                <strong>Gabarito:</strong> A) Em "Cria-se tanta moda neste planeta [...]", "se" indica que o sujeito é indeterminado.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 3 -->
+        <div class="questao">
+            <span class="numero">Questão 3</span>
+            <div class="texto">
+                "Se fosse lançada como moda, no mesmo ano a grande maioria das pessoas entraria em ressonância."
+            </div>
+            <p><strong>Em relação ao excerto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">A vírgula está sendo empregada no excerto porque "no mesmo ano" é um adjunto adverbial deslocado de sua posição.</li>
+                <li data-letra="B">A primeira oração do excerto está na voz passiva, com sujeito oculto recuperável pelo contexto e sem agente.</li>
+                <li data-letra="C">O verbo "entrar" tem o mesmo significado e a mesma transitividade que em "Entrei o pátio da capela receoso".</li>
+                <li data-letra="D">"Grande maioria" é uma expressão pleonástica.</li>
+                <li data-letra="E">O verbo "entrar" estabelece erroneamente concordância com o núcleo do sujeito.</li>
+            </ul>
+            <div class="gabarito" id="gab3">
+                <strong>Gabarito:</strong> A) A vírgula está sendo empregada no excerto porque "no mesmo ano" é um adjunto adverbial deslocado de sua posição.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 4 -->
+        <div class="questao">
+            <span class="numero">Questão 4</span>
+            <p><strong>Assinale a alternativa em que o adjunto adverbial em destaque NÃO incide sobre um termo da oração, mas sobre esta como um todo.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">"Com certeza, o surgimento de um movimento neste sentido seria de eficácia extraordinária [...]".</li>
+                <li data-letra="B">"Por que não criar a moda do honestamente correto [...]".</li>
+                <li data-letra="C">"[...] sempre considerando a honestidade, a moralidade e o ambientalmente correto.".</li>
+                <li data-letra="D">"Cria-se tanta moda neste planeta, umas até bastante estranhas [...]".</li>
+                <li data-letra="E">"[...] a moda é uma onda que se alastra com velocidade extrema.".</li>
+            </ul>
+            <div class="gabarito" id="gab4">
+                <strong>Gabarito:</strong> A) "Com certeza, o surgimento de um movimento neste sentido seria de eficácia extraordinária [...]".
+            </div>
+        </div>
+
+        <!-- QUESTÃO 5 -->
+        <div class="questao">
+            <span class="numero">Questão 5</span>
+            <p><strong>Sobre as expressões em destaque nos seguintes excertos, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Em "[...] mas acabam caindo no gosto das pessoas.", o termo em destaque é um verbo auxiliar que denota o fim de uma ação.</li>
+                <li data-letra="B">Em "Se esta iniciativa fosse implantada [...]", a expressão em destaque é a forma composta do pretérito perfeito do subjuntivo.</li>
+                <li data-letra="C">Em "[...] uma inspiração que poderia mudar as atitudes [...]", o verbo em destaque é um verbo auxiliar modal que expressa um sentido de capacidade.</li>
+                <li data-letra="D">Em "[...] de que modo pode gerar lucros.", a locução em destaque é composta pelo verbo auxiliar "gerar" e pelo verbo principal "pode".</li>
+                <li data-letra="E">Em "[...] porém bastou acrescentar a palavra 'universitário' [...]", a expressão em destaque é uma locução verbal.</li>
+            </ul>
+            <div class="gabarito" id="gab5">
+                <strong>Gabarito:</strong> C) Em "[...] uma inspiração que poderia mudar as atitudes [...]", o verbo em destaque é um verbo auxiliar modal que expressa um sentido de capacidade.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 6 -->
+        <div class="questao">
+            <span class="numero">Questão 6</span>
+            <p><strong>Referente à formação de algumas palavras presentes no texto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Os vocábulos "honestidade" e "sociedade" são formados por derivação sufixal, com o acréscimo do sufixo "-dade" ao radical.</li>
+                <li data-letra="B">Em "realinhar", há o acréscimo do radical "re-", com sentido de repetição, ao sufixo "alinhar".</li>
+                <li data-letra="C">O termo "marqueteiros" possui três morfemas: radical "marquet-", deduzido do inglês "marketing"; "-eiro", sufixo comum na formação de nomes de profissões; e "-s" morfema formador de plural.</li>
+                <li data-letra="D">Na expressão "sertanejo universitário", a palavra em destaque é um substantivo formado por um radical e pelo sufixo "-ário". Nessa expressão, o vocábulo é usado com sentido de "aquele que é aluno de uma universidade".</li>
+                <li data-letra="E">"Comportamento" é uma palavra primitiva, a partir da qual se forma o vocábulo "comportar".</li>
+            </ul>
+            <div class="gabarito" id="gab6">
+                <strong>Gabarito:</strong> A) Os vocábulos "honestidade" e "sociedade" são formados por derivação sufixal, com o acréscimo do sufixo "-dade" ao radical.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 7 -->
+        <div class="questao">
+            <span class="numero">Questão 7</span>
+            <p><strong>Assinale a alternativa em que NÃO é possível substituir a expressão ou o termo em destaque por aquela/aquele entre parênteses sem que isso modifique o sentido original do excerto.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">"[...]a música sertaneja era coisa de 'grosso' [...]" (grosseiro).</li>
+                <li data-letra="B">"A nossa atuação tem como mote [...]" (lema).</li>
+                <li data-letra="C">"[...] realizar a energia dos ambientes empresariais em prol do pleno desenvolvimento do negócio [...]" (para o benefício).</li>
+                <li data-letra="D">"Seria a arrancada para a criação de uma sociedade [...]" (o impulso).</li>
+                <li data-letra="E">"[...] o surgimento de um movimento neste sentido seria de eficácia extraordinária [...]" (imprevista).</li>
+            </ul>
+            <div class="gabarito" id="gab7">
+                <strong>Gabarito:</strong> E) "[...] o surgimento de um movimento neste sentido seria de eficácia extraordinária [...]" (imprevista).
+            </div>
+        </div>
+
+        <!-- QUESTÃO 8 -->
+        <div class="questao">
+            <span class="numero">Questão 8</span>
+            <p><strong>Sobre a acentuação de vocábulos presentes no texto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Em "[...] visando à manutenção da saúde [...]", o sinal indicativo de crase é opcional.</li>
+                <li data-letra="B">Em "ambientes propícios [...] às pessoas e empresas [...]", o acento no item destacado poderia ser omitido.</li>
+                <li data-letra="C">A palavra destacada em "[...] o ambiente de um país de esportes [...]" recebe um acento chamado de diferencial, pois sua função é distinguir essa palavra do termo "pais" flexionado no plural.</li>
+                <li data-letra="D">O verbo destacado em "[...] criadores de moda e de comportamentos têm este poder [...]" recebe acento por se tratar de um monossílabo tônico, como "mês".</li>
+                <li data-letra="E">Uma reescrita graficamente correta para o excerto "[...] criadores de moda e de comportamentos têm este poder [...]" é "[...] criadores de moda e de comportamentos possuem este poder [...]".</li>
+            </ul>
+            <div class="gabarito" id="gab8">
+                <strong>Gabarito:</strong> E) Uma reescrita graficamente correta para o excerto "[...] criadores de moda e de comportamentos têm este poder [...]" é "[...] criadores de moda e de comportamentos possuem este poder [...]".
+            </div>
+        </div>
+
+        <!-- QUESTÃO 9 -->
+        <div class="questao">
+            <span class="numero">Questão 9</span>
+            <p><strong>A partir da leitura do texto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">O objetivo principal do texto é fazer uma crítica à instituição escolar, a qual não estaria cumprindo seu dever em ensinar a honestidade e a moralidade aos alunos.</li>
+                <li data-letra="B">Se a honestidade e a moralidade fossem incentivadas pela mídia, isso seria benéfico para a sociedade.</li>
+                <li data-letra="C">O texto não aborda os benefícios da "moda da honestidade" na vida familiar das pessoas, pois está centrado no tema a partir de um viés empresarial.</li>
+                <li data-letra="D">A "moda da honestidade" se aplica apenas aos adultos, visto que são eles que compõem os produtos ofertados pela mídia.</li>
+                <li data-letra="E">O autor considera o Brasil um ambiente propício para essa moda porque sua população prioriza o pensamento coletivo e a cooperação.</li>
+            </ul>
+            <div class="gabarito" id="gab9">
+                <strong>Gabarito:</strong> B) Se a honestidade e a moralidade fossem incentivadas pela mídia, isso seria benéfico para a sociedade.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 10 -->
+        <div class="questao">
+            <span class="numero">Questão 10</span>
+            <p><strong>Qual é a relação mantida entre o terceiro e o quarto período do segundo parágrafo do texto?</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">O primeiro contém uma condição para o segundo.</li>
+                <li data-letra="B">O segundo é uma paráfrase do primeiro.</li>
+                <li data-letra="C">O primeiro se contrapõe ao segundo.</li>
+                <li data-letra="D">O segundo contém um exemplo para o primeiro.</li>
+                <li data-letra="E">O segundo é uma causa para o primeiro.</li>
+            </ul>
+            <div class="gabarito" id="gab10">
+                <strong>Gabarito:</strong> D) O segundo contém um exemplo para o primeiro.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 11 -->
+        <div class="questao">
+            <span class="numero">Questão 11</span>
+            <p><strong>O texto pertence ao gênero textual "artigo de opinião". Assinale a alternativa que apresenta um aspecto que NÃO caracteriza esse gênero.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Uso de primeira pessoa do singular.</li>
+                <li data-letra="B">Estrutura dividida em três partes: introdução, desenvolvimento e conclusão.</li>
+                <li data-letra="C">Uso de argumentos que buscam convencer o leitor de dado ponto de vista.</li>
+                <li data-letra="D">Circulação em suportes como jornais e revistas.</li>
+                <li data-letra="E">Predominância da função referencial da linguagem, centrada no contexto da comunicação.</li>
+            </ul>
+            <div class="gabarito" id="gab11">
+                <strong>Gabarito:</strong> E) Predominância da função referencial da linguagem, centrada no contexto da comunicação.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 12 -->
+        <div class="questao">
+            <span class="numero">Questão 12</span>
+            <div class="texto">
+                "Vou te dizer uma coisa que parece óbvia: Ninguém deixa de se interessar por aquilo que interessa."
+            </div>
+            <p><strong>Sobre o excerto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Em "deixa de se interessar", o item em destaque é um verbo auxiliar modal com sentido de resultado.</li>
+                <li data-letra="B">Em ambas as locuções verbais presentes no excerto, o pronome átono poderia ser posposto ao verbo principal sem que isso causasse prejuízo sintático.</li>
+                <li data-letra="C">As orações "que parece óbvia" e "que interessa" são classificadas como adjetivas explicativas, pois fornecem informações secundárias a respeito do termo que as antecede.</li>
+                <li data-letra="D">O verbo "parece" apresenta a mesma transitividade e o mesmo significado que em "Parece-lhe que tudo está bem".</li>
+                <li data-letra="E">Em "vou te dizer" o verbo em destaque tem sentido de deslocamento espacial, como em "Vou à sua casa para te dizer pessoalmente que te amo".</li>
+            </ul>
+            <div class="gabarito" id="gab12">
+                <strong>Gabarito:</strong> B) Em ambas as locuções verbais presentes no excerto, o pronome átono poderia ser posposto ao verbo principal sem que isso causasse prejuízo sintático.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 13 -->
+        <div class="questao">
+            <span class="numero">Questão 13</span>
+            <div class="texto">
+                "Antes de mais nada, não estamos diante do crime perfeito, em que só há vítimas. Temos autor também. E essa autoria é multifacetada."
+            </div>
+            <p><strong>A respeito do excerto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Ainda que o excerto fosse reescrito adicionando-se a conjunção "mas" (Não estamos diante do crime perfeito, em que só há vítimas, mas temos autor também.) a relação de adição seria mantida entre as orações.</li>
+                <li data-letra="B">A expressão "antes de mais nada" é inadequada em discursos formais, devendo, nesses casos, ser substituída por "antes de tudo".</li>
+                <li data-letra="C">A expressão "antes de mais nada", no excerto, é um adjunto adverbial de tempo, com sentido semelhante ao empregado em "No almoço, com a salada antes de mais nada".</li>
+                <li data-letra="D">O termo "multifacetada" é formado pelo processo de composição, com um suposto de "multifacetada", com sentido de "que tem facetas".</li>
+                <li data-letra="E">Caso o item "só" fosse posposto ao termo "vítimas", ele teria de ser flexionado para o plural ("sóis") para que a concordância fosse mantida.</li>
+            </ul>
+            <div class="gabarito" id="gab13">
+                <strong>Gabarito:</strong> D) O termo "multifacetada" é formado pelo processo de composição, com um suposto de "multifacetada", com sentido de "que tem facetas".
+            </div>
+        </div>
+
+        <!-- QUESTÃO 14 -->
+        <div class="questao">
+            <span class="numero">Questão 14</span>
+            <div class="texto">
+                "As famílias se queixam das escolas e as escolas, dos pais."
+            </div>
+            <p><strong>Em "As famílias se queixam das escolas e as escolas, dos pais.", qual é a função da vírgula?</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Sinalizar uma pausa maior.</li>
+                <li data-letra="B">Separar termos coordenados.</li>
+                <li data-letra="C">Indicar a elipse de um verbo.</li>
+                <li data-letra="D">Isolar um adjunto adverbial.</li>
+                <li data-letra="E">Demarcar uma expressão explicativa.</li>
+            </ul>
+            <div class="gabarito" id="gab14">
+                <strong>Gabarito:</strong> C) Indicar a elipse de um verbo.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 15 -->
+        <div class="questao">
+            <span class="numero">Questão 15</span>
+            <div class="texto">
+                "A escola passou a ser vista como um espaço de salvação."
+            </div>
+            <p><strong>Em "A escola passou a ser vista como um espaço de salvação.", o termo em destaque NÃO</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">está flexionado no pretérito perfeito.</li>
+                <li data-letra="B">faz parte de uma locução verbal.</li>
+                <li data-letra="C">tem significado semelhante a "começou".</li>
+                <li data-letra="D">carrega morfemas de modo e tempo verbal.</li>
+                <li data-letra="E">é um verbo que constitui predicado.</li>
+            </ul>
+            <div class="gabarito" id="gab15">
+                <strong>Gabarito:</strong> A) está flexionado no pretérito perfeito.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 16 -->
+        <div class="questao">
+            <span class="numero">Questão 16</span>
+            <p><strong>Sobre as expressões "universo circunstancial" e "universo vivencial" presentes no texto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Elas se referem, respectivamente, àquilo que está à volta dos alunos e às experiências de vida que eles têm.</li>
+                <li data-letra="B">No contexto da entrevista, são expressões antônimas.</li>
+                <li data-letra="C">Por serem expressões sinônimas, o autor deveria ter optado por uma ou por outra, evitando, assim, um pleonasmo.</li>
+                <li data-letra="D">Em ambas as ocorrências, o termo "universo" poderia ser substituído por "espaço".</li>
+                <li data-letra="E">Em ambas as ocorrências, o termo "universo" está sendo empregado em seu sentido literal.</li>
+            </ul>
+            <div class="gabarito" id="gab16">
+                <strong>Gabarito:</strong> A) Elas se referem, respectivamente, àquilo que está à volta dos alunos e às experiências de vida que eles têm.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 17 -->
+        <div class="questao">
+            <span class="numero">Questão 17</span>
+            <p><strong>Qual é a relação de sentido mantida entre os excertos "Conversando com pais e professores [...]" e "[...] a impressão é de que estão insatisfeitos."</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Contraste.</li>
+                <li data-letra="B">Tempo.</li>
+                <li data-letra="C">Concessão.</li>
+                <li data-letra="D">Finalidade.</li>
+                <li data-letra="E">Condição.</li>
+            </ul>
+            <div class="gabarito" id="gab17">
+                <strong>Gabarito:</strong> B) Tempo.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 18 -->
+        <div class="questao">
+            <span class="numero">Questão 18</span>
+            <div class="texto">
+                COORDENADAS
+                Paula Pimenta
+
+                Naquela noite você me disse do anacronismo que também sentia,
+                Do conformismo que eu não queria,
+                Do seu ceticismo e da melancolia,
+                De todos os "ismos" de que tinha mania.
+                Só esqueceu de me avisar o que eu podia.
+                O que eu não devia.
+                E aonde ia...
+            </div>
+            <p><strong>A partir da leitura do texto, assinale a alternativa INCORRETA.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Uma interpretação possível para o primeiro verso é que o eu lírico sente anacronismo.</li>
+                <li data-letra="B">O título do texto faz referência aos três últimos versos.</li>
+                <li data-letra="C">Há uma ambiguidade no último verso relacionada à possibilidade de dois sujeitos diferentes para o verbo "ia".</li>
+                <li data-letra="D">O uso de "você" no primeiro verso indica que predomina no texto a função conativa da linguagem, com foco no receptor da mensagem.</li>
+                <li data-letra="E">O poema contém traços de uma narrativa.</li>
+            </ul>
+            <div class="gabarito" id="gab18">
+                <strong>Gabarito:</strong> D) O uso de "você" no primeiro verso indica que predomina no texto a função conativa da linguagem, com foco no receptor da mensagem.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 19 -->
+        <div class="questao">
+            <span class="numero">Questão 19</span>
+            <div class="texto">
+                "De todos os 'ismos' de que tinha mania."
+            </div>
+            <p><strong>O item "ismos", no quarto verso do poema, está sendo empregado como um</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">sufixo.</li>
+                <li data-letra="B">substantivo.</li>
+                <li data-letra="C">radical.</li>
+                <li data-letra="D">adjetivo.</li>
+                <li data-letra="E">prefixo.</li>
+            </ul>
+            <div class="gabarito" id="gab19">
+                <strong>Gabarito:</strong> B) substantivo.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 20 -->
+        <div class="questao">
+            <span class="numero">Questão 20</span>
+            <p><strong>Considerando o verbo "dizer" empregado no texto, assinale a alternativa correta.</strong></p>
+            <ul class="alternativas">
+                <li data-letra="A">Ele é um verbo bitransitivo, com um complemento direto e outro indireto.</li>
+                <li data-letra="B">As preposições que o acompanham poderiam ser adequadamente substituídas por "sobre".</li>
+                <li data-letra="C">Ele é um verbo transitivo indireto, e um de seus complementos está na forma pronominal.</li>
+                <li data-letra="D">Ele tem o mesmo significado que em "Essa atitude não diz com seu caráter".</li>
+                <li data-letra="E">Possui como objeto direto o pronome "me".</li>
+            </ul>
+            <div class="gabarito" id="gab20">
+                <strong>Gabarito:</strong> A) Ele é um verbo bitransitivo, com um complemento direto e outro indireto.
+            </div>
+        </div>
+
+        <!-- GRUPO 2 e 3 serão adicionados depois -->
+    </div>
+
+    <script>
+        function toggleGabarito() {
+            const gabaritos = document.querySelectorAll('.gabarito');
+            const btn = document.querySelector('.btn');
+            
+            gabaritos.forEach(gab => {
+                gab.classList.toggle('visible');
+            });
+            
+            if (btn.textContent === 'Mostrar Gabarito') {
+                btn.textContent = 'Ocultar Gabarito';
+            } else {
+                btn.textContent = 'Mostrar Gabarito';
+            }
+        }
+    </script>
+</body>
+</html>
