@@ -520,4 +520,31 @@ footer {
     .btn:hover {
         transform: none;
     }
+
+    /* Logo */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 768px) {
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Ajuste para o favicon */
+link[rel="icon"] {
+    border-radius: 8px;
+}
+
 }
