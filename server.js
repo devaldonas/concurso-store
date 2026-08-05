@@ -19,64 +19,64 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Produtos - Método de Memorização para Concursos
+// Produtos - Nomes completos dos concursos
 const products = [
   { 
     id: 'memorizacao_seduc_ms', 
-    name: 'Método de Memorização - SEDUC/MS', 
+    name: 'Secretaria de Educação - MS (Docência)', 
     price: 1990, 
     currency: 'brl', 
-    description: 'Sistema completo de memorização para nível superior na carreira de docência',
+    description: 'Concurso para nível superior na carreira de docência',
     badge: 'Lançamento',
     category: 'Educação',
     features: ['Mapas mentais', 'Flashcards digitais', 'Revisão programada', 'Simulados exclusivos']
   },
   { 
     id: 'memorizacao_pm_sp', 
-    name: 'Método de Memorização - PM/SP', 
+    name: 'Polícia Militar - SP (Soldado)', 
     price: 1990, 
     currency: 'brl', 
-    description: 'Técnicas avançadas de memorização para o cargo de Soldado da Polícia Militar',
+    description: 'Concurso para o cargo de Soldado da Polícia Militar',
     badge: 'Destaque',
     category: 'Segurança',
     features: ['Técnicas de associação', 'Revisão espaçada', 'Questões comentadas', 'Acompanhamento de desempenho']
   },
   { 
     id: 'memorizacao_inss', 
-    name: 'Método de Memorização - INSS', 
+    name: 'INSS - Instituto Nacional do Seguro Social', 
     price: 1990, 
     currency: 'brl', 
-    description: 'Domine todo o conteúdo do INSS com nosso método exclusivo de memorização',
+    description: 'Um dos maiores concursos previstos com grande volume de vagas',
     badge: 'Mais Vendido',
     category: 'Federal',
     features: ['Resumos estratégicos', 'Áudio revisão', 'Mapas conceituais', 'Banco de questões']
   },
   { 
     id: 'memorizacao_caixa', 
-    name: 'Método de Memorização - CAIXA', 
+    name: 'Caixa Econômica Federal', 
     price: 2490, 
     currency: 'brl', 
-    description: 'Preparação completa para concursos bancários com foco em memorização eficiente',
+    description: 'Concurso para cargos administrativos e técnicos',
     badge: '',
     category: 'Bancário',
     features: ['Técnicas mnemônicas', 'Exercícios práticos', 'Revisão diária', 'Simulados cronometrados']
   },
   { 
     id: 'memorizacao_pf', 
-    name: 'Método de Memorização - PF', 
+    name: 'Polícia Federal (Agente)', 
     price: 2990, 
     currency: 'brl', 
-    description: 'Sistema de memorização para o cargo de Agente da Polícia Federal',
+    description: 'Concurso para o cargo de Agente da Polícia Federal',
     badge: 'Premium',
     category: 'Segurança',
     features: ['Legislação memorizada', 'Casos práticos', 'Revisão estratégica', 'Testes de fixação']
   },
   { 
     id: 'memorizacao_tj_sp', 
-    name: 'Método de Memorização - TJ/SP', 
+    name: 'Tribunal de Justiça - SP (Escrevente)', 
     price: 2590, 
     currency: 'brl', 
-    description: 'Domine a jurisprudência com nosso método de memorização para Escrevente',
+    description: 'Concurso para o cargo de Escrevente do TJ/SP',
     badge: '',
     category: 'Judiciário',
     features: ['Jurisprudência sistematizada', 'Flashcards legais', 'Revisão programada', 'Questões práticas']
@@ -148,7 +148,7 @@ app.get('/config', (req, res) => {
   res.json({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
 });
 
-// Rota para health check (útil para o Render)
+// Rota para health check
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
 });

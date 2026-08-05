@@ -1,16 +1,77 @@
+// Navegação por páginas
+document.addEventListener('DOMContentLoaded', () => {
+    // Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Navegação entre páginas
+    const pages = {
+        home: document.getElementById('page-home'),
+        concursos: document.getElementById('page-concursos'),
+        metodo: document.getElementById('page-metodo'),
+        pedidos: document.getElementById('page-pedidos')
+    };
+
+    // Links de navegação
+    const navItems = document.querySelectorAll('.nav-links a, [data-page]');
+    
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = item.getAttribute('data-page');
+            if (page && pages[page]) {
+                navigateTo(page);
+                // Fecha menu mobile
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+
+    function navigateTo(pageName) {
+        // Esconde todas as páginas
+        Object.values(pages).forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Mostra a página selecionada
+        if (pages[pageName]) {
+            pages[pageName].classList.add('active');
+        }
+        
+        // Atualiza links ativos
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-page') === pageName) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Carregar produtos na página de concursos
+    loadProducts();
+});
+
 // Carregar produtos
-document.addEventListener('DOMContentLoaded', async () => {
+async function loadProducts() {
     try {
         const response = await fetch('/api/products');
         const products = await response.json();
         
         const container = document.getElementById('productsContainer');
+        container.innerHTML = '';
         
-        products.forEach((product, index) => {
+        products.forEach((product) => {
             const priceFormatted = (product.price / 100).toFixed(2);
             
-            // Lista de características
-            const featuresList = product.features.map(f => `<span class="feature-tag">${f}</span>`).join('');
+            const featuresList = product.features.map(f => 
+                `<span class="feature-tag">${f}</span>`
+            ).join('');
             
             const card = document.createElement('div');
             card.className = 'product-card';
@@ -40,11 +101,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Erro ao carregar produtos:', error);
         document.getElementById('productsContainer').innerHTML = `
             <div class="error-message">
-                <p>Não foi possível carregar os materiais. Por favor, tente novamente.</p>
+                <p>Não foi possível carregar os materiais.</p>
             </div>
         `;
     }
-});
+}
 
 // Função para comprar produto
 async function buyProduct(productId) {
