@@ -3,181 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mental - Conhecimentos Pedagógicos</title>
+    <title>Mapa Mental - Conhecimentos Pedagógicos | SEDUC/MS</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f8f9fa;
             padding: 2rem;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            color: #0f0f1a;
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
             margin-bottom: 2rem;
-            font-size: 2.2rem;
+            text-align: center;
         }
-        .mapa {
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 1.5rem;
         }
-        .modulo {
+        .card {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
             border-left: 4px solid #e94560;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .modulo h2 {
+        .card h2 {
             color: #0f0f1a;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #f1f3f5;
         }
-        .modulo ul {
-            list-style: none;
-            padding: 0;
-        }
-        .modulo ul li {
+        .card ul { list-style: none; padding: 0; }
+        .card ul li {
             padding: 0.5rem 0 0.5rem 1.5rem;
             position: relative;
             color: #495057;
             border-bottom: 1px solid #f8f9fa;
-            font-size: 0.9rem;
         }
-        .modulo ul li::before {
-            content: "•";
+        .card ul li::before {
+            content: "▸";
             color: #e94560;
             position: absolute;
             left: 0;
             font-weight: bold;
         }
-        .modulo ul ul {
-            padding-left: 1.2rem;
-        }
-        .modulo ul ul li {
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li {
             border-bottom: none;
-            padding: 0.3rem 0 0.3rem 1rem;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #6c757d;
         }
-        .modulo ul ul li::before {
-            content: "◦";
-            color: #adb5bd;
-        }
-        @media (max-width: 992px) {
-            .mapa {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
         @media (max-width: 768px) {
-            .mapa {
-                grid-template-columns: 1fr;
-            }
-            body {
-                padding: 1rem;
-            }
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 Mapa Mental - Conhecimentos Pedagógicos</h1>
-        <div class="mapa">
-            <div class="modulo">
-                <h2>BNCC</h2>
+        <div class="header">
+            <h1>📚 Conhecimentos Pedagógicos</h1>
+            <p>Conteúdo programático completo - Edital SEDUC/MS 2022</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">20 questões | Peso 1,00 | Total 20 pontos</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>BNCC e Currículo</h2>
                 <ul>
-                    <li>Competências Gerais
+                    <li>Base Nacional Comum Curricular
                         <ul>
-                            <li>Conhecimento</li>
-                            <li>Pensamento científico</li>
-                            <li>Repertório cultural</li>
-                            <li>Comunicação</li>
-                            <li>Cultura digital</li>
-                            <li>Trabalho e projeto de vida</li>
-                            <li>Argumentação</li>
-                            <li>Autoconhecimento</li>
-                            <li>Empatia</li>
-                            <li>Responsabilidade</li>
+                            <li>10 Competências Gerais</li>
+                            <li>Etapas: Educação Infantil, EF, EM</li>
+                            <li>Resolução CNE/CP n. 2/2017</li>
                         </ul>
                     </li>
-                    <li>Etapas da Educação Básica
+                    <li>Currículo de Referência MS
                         <ul>
-                            <li>Educação Infantil</li>
-                            <li>Ensino Fundamental</li>
-                            <li>Ensino Médio</li>
+                            <li>Organização curricular</li>
+                            <li>Diretrizes estaduais</li>
+                            <li>Ensino Fundamental e Médio</li>
+                        </ul>
+                    </li>
+                    <li>BNCC-EM
+                        <ul>
+                            <li>Resolução CNE/CEB n. 4/2018</li>
+                            <li>Etapa final da Educação Básica</li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
-            <div class="modulo">
+            <div class="card">
                 <h2>Legislação Educacional</h2>
                 <ul>
                     <li>LDB (Lei 9.394/96)
                         <ul>
-                            <li>Diretrizes da educação</li>
+                            <li>Diretrizes e bases da educação</li>
                             <li>Níveis e modalidades</li>
                             <li>Gestão democrática</li>
                         </ul>
                     </li>
-                    <li>PNE (Plano Nacional)
+                    <li>PNE (Lei 13.005/2014)
                         <ul>
                             <li>Metas educacionais</li>
-                            <li>Estratégias</li>
+                            <li>Estratégias de implementação</li>
+                        </ul>
+                    </li>
+                    <li>Plano Estadual de Educação MS
+                        <ul>
+                            <li>Lei Federal n.4.621/2014</li>
+                            <li>Metas estaduais</li>
                         </ul>
                     </li>
                     <li>FUNDEB (Lei 14.113/2020)
                         <ul>
                             <li>Fundo de Manutenção</li>
-                            <li>Valorização docente</li>
+                            <li>Valorização dos profissionais</li>
                         </ul>
                     </li>
                     <li>ECA (Lei 8.069/90)
                         <ul>
-                            <li>Direitos da criança</li>
+                            <li>Direitos da criança e adolescente</li>
                             <li>Proteção integral</li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
-            <div class="modulo">
-                <h2>Currículo MS e Metodologias</h2>
+            <div class="card">
+                <h2>Metodologias e Avaliação</h2>
                 <ul>
-                    <li>Currículo de Referência MS
-                        <ul>
-                            <li>Organização curricular</li>
-                            <li>Diretrizes estaduais</li>
-                        </ul>
-                    </li>
-                    <li>Metodologias Ativas
+                    <li>Metodologias ativas
                         <ul>
                             <li>Aprendizagem baseada em projetos</li>
                             <li>Gamificação</li>
-                            <li>Salas de aula invertidas</li>
+                            <li>Sala de aula invertida</li>
                         </ul>
                     </li>
                     <li>Avaliação
                         <ul>
                             <li>Formativa e somativa</li>
-                            <li>Avaliações internas/externas</li>
+                            <li>Avaliações internas e externas</li>
+                            <li>SAEB, Prova Brasil</li>
                         </ul>
                     </li>
                     <li>Competências Socioemocionais
                         <ul>
-                            <li>Habilidades socioemocionais</li>
-                            <li>Educação integral</li>
+                            <li>Habilidades para o século XXI</li>
+                            <li>Educação Integral</li>
+                        </ul>
+                    </li>
+                    <li>Tecnologia e Informática
+                        <ul>
+                            <li>Aplicações na educação</li>
+                            <li>Lei 12.965/2014 (Marco Civil)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Diretrizes e Deliberações</h2>
+                <ul>
+                    <li>Deliberação CEE/MS n. 10.814/2016
+                        <ul>
+                            <li>Normas para educação básica</li>
+                            <li>Sistema Estadual de Ensino MS</li>
+                        </ul>
+                    </li>
+                    <li>Resolução CNE/CEB n. 3/2018
+                        <ul>
+                            <li>Diretrizes para Ensino Médio</li>
+                        </ul>
+                    </li>
+                    <li>Lei 13.415/2017
+                        <ul>
+                            <li>Reforma do Ensino Médio</li>
                         </ul>
                     </li>
                 </ul>

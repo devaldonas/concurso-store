@@ -1,0 +1,25 @@
+Quais são os conjuntos numéricos?;Naturais (N), Inteiros (Z), Racionais (Q), Irracionais (I) e Reais (R);Matemática, Conjuntos
+O que é uma função linear?;Função do tipo f(x) = ax + b, onde 'a' é a taxa de variação e 'b' é o coeficiente linear;Matemática, Funções
+Como resolver uma equação do 2º grau?;Usando a fórmula de Bhaskara: x = (-b ± √(b²-4ac))/2a, onde Δ = b²-4ac;Matemática, Equações
+O que são matrizes?;São tabelas de números dispostos em linhas e colunas, representadas por uma matriz m × n;Matemática, Matrizes
+Qual a fórmula para calcular área de um círculo?;A = π × r², onde r é o raio do círculo;Matemática, Geometria
+O que é uma progressão aritmética (PA)?;É uma sequência onde cada termo é igual ao anterior acrescido de um valor fixo chamado razão (r);Matemática, Progressões
+O que é uma função quadrática?;Função do tipo f(x) = ax² + bx + c, onde a ≠ 0, com gráfico em forma de parábola;Matemática, Funções
+Como calcular a média aritmética?;Soma de todos os valores dividida pelo número de valores;Matemática, Estatística
+O que são números complexos?;Números da forma a + bi, onde a e b são reais e i = √-1 (unidade imaginária);Matemática, Complexos
+Qual a fórmula para calcular volume de um cubo?;V = a³, onde a é a medida da aresta do cubo;Matemática, Geometria
+O que é uma progressão geométrica (PG)?;É uma sequência onde cada termo é igual ao anterior multiplicado por um valor fixo chamado razão (q);Matemática, Progressões
+Como calcular a área de um triângulo?;A = (b × h)/2, onde b é a base e h é a altura;Matemática, Geometria
+O que é um sistema linear?;É um conjunto de equações lineares com as mesmas incógnitas, resolvido por substituição, adição ou escalonamento;Matemática, Sistemas
+Qual a fórmula do teorema de Pitágoras?;a² = b² + c², onde 'a' é a hipotenusa e 'b' e 'c' são os catetos;Matemática, Geometria
+O que é uma função exponencial?;Função do tipo f(x) = a^x, onde a > 0 e a ≠ 1, usada para representar crescimentos e decaimentos;Matemática, Funções
+Como calcular o perímetro de um retângulo?;P = 2 × (base + altura);Matemática, Geometria
+O que é um número primo?;Número natural maior que 1 que tem apenas dois divisores: 1 e ele mesmo;Matemática, Aritmética
+Qual a fórmula para calcular volume de um cilindro?;V = π × r² × h, onde r é o raio da base e h é a altura;Matemática, Geometria
+O que é uma função logarítmica?;Função inversa da exponencial: log_a(x) = y → a^y = x;Matemática, Funções
+Como calcular a área de um trapézio?;A = ((B + b) × h)/2, onde B é a base maior, b é a base menor e h é a altura;Matemática, Geometria
+O que é fração?;É a representação de uma parte de um todo, na forma a/b, onde a é o numerador e b é o denominador;Matemática, Aritmética
+Qual a fórmula da equação da reta?;y = mx + n, onde m é o coeficiente angular e n é o coeficiente linear;Matemática, Geometria Analítica
+O que é a regra de três?;É um método para resolver problemas de proporcionalidade entre duas ou mais grandezas;Matemática, Proporcionalidade
+Como calcular juros simples?;J = C × i × t, onde C é o capital, i é a taxa de juros e t é o tempo;Matemática, Matemática Financeira
+O que é um polinômio?;Expressão algébrica formada pela soma de termos com coeficientes e variáveis elevadas a expoentes naturais;Matemática, Álgebra

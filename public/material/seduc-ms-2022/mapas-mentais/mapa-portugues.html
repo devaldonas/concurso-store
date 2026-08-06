@@ -3,99 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mental - Língua Portuguesa</title>
+    <title>Mapa Mental - Língua Portuguesa | SEDUC/MS</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f8f9fa;
             padding: 2rem;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            color: #0f0f1a;
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
             margin-bottom: 2rem;
-            font-size: 2.2rem;
+            text-align: center;
         }
-        .mapa {
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
-        .modulo {
+        .card {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
             border-left: 4px solid #e94560;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .modulo h2 {
+        .card h2 {
             color: #0f0f1a;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #f1f3f5;
         }
-        .modulo ul {
-            list-style: none;
-            padding: 0;
-        }
-        .modulo ul li {
+        .card ul { list-style: none; padding: 0; }
+        .card ul li {
             padding: 0.5rem 0 0.5rem 1.5rem;
             position: relative;
             color: #495057;
             border-bottom: 1px solid #f8f9fa;
         }
-        .modulo ul li::before {
-            content: "•";
+        .card ul li::before {
+            content: "▸";
             color: #e94560;
             position: absolute;
             left: 0;
             font-weight: bold;
-            font-size: 1.2rem;
         }
-        .modulo ul ul {
-            padding-left: 1.5rem;
-            margin-top: 0.3rem;
-        }
-        .modulo ul ul li {
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li {
             border-bottom: none;
-            padding: 0.3rem 0 0.3rem 1.2rem;
             font-size: 0.9rem;
             color: #6c757d;
         }
-        .modulo ul ul li::before {
-            content: "◦";
-            color: #adb5bd;
-        }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
         @media (max-width: 768px) {
-            .mapa {
-                grid-template-columns: 1fr;
-            }
-            body {
-                padding: 1rem;
-            }
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 Mapa Mental - Língua Portuguesa</h1>
-        <div class="mapa">
-            <div class="modulo">
-                <h2>Compreensão Textual</h2>
+        <div class="header">
+            <h1>📚 Língua Portuguesa</h1>
+            <p>Conteúdo programático completo - Edital SEDUC/MS 2022</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">20 questões | Peso 1,00 | Total 20 pontos</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Compreensão e Interpretação</h2>
                 <ul>
                     <li>Interpretação de textos
                         <ul>
-                            <li>Identificação de ideias principais</li>
+                            <li>Ideias principais e secundárias</li>
                             <li>Inferências e conclusões</li>
                             <li>Intencionalidade do autor</li>
                         </ul>
@@ -112,11 +99,17 @@
                             <li>Cartas, e-mails, relatórios</li>
                         </ul>
                     </li>
+                    <li>Figuras de linguagem
+                        <ul>
+                            <li>Metáfora, comparação, personificação</li>
+                            <li>Hipérbole, eufemismo, ironia</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
-            <div class="modulo">
-                <h2>Gramática - Morfologia</h2>
+            <div class="card">
+                <h2>Morfologia</h2>
                 <ul>
                     <li>Classes de palavras variáveis
                         <ul>
@@ -132,43 +125,51 @@
                     </li>
                     <li>Formação de palavras
                         <ul>
-                            <li>Derivação e composição</li>
-                            <li>Prefixos e sufixos</li>
+                            <li>Derivação (prefixal, sufixal, parassintética)</li>
+                            <li>Composição (justaposição, aglutinação)</li>
                         </ul>
                     </li>
+                    <li>Locuções verbais (perífrases verbais)</li>
                 </ul>
             </div>
 
-            <div class="modulo">
-                <h2>Gramática - Sintaxe</h2>
+            <div class="card">
+                <h2>Sintaxe</h2>
                 <ul>
-                    <li>Análise de períodos
+                    <li>Período simples e composto
                         <ul>
-                            <li>Período simples e composto</li>
                             <li>Coordenação e subordinação</li>
+                            <li>Orações coordenadas e subordinadas</li>
                         </ul>
                     </li>
                     <li>Concordância
                         <ul>
-                            <li>Verbal e nominal</li>
-                            <li>Regras específicas</li>
+                            <li>Verbal (regras gerais e especiais)</li>
+                            <li>Nominal (artigo, adjetivo, numeral)</li>
                         </ul>
                     </li>
                     <li>Regência
                         <ul>
-                            <li>Verbal e nominal</li>
-                            <li>Crase</li>
+                            <li>Verbal (direta e indireta)</li>
+                            <li>Nominal</li>
+                            <li>Crase (regras de uso)</li>
+                        </ul>
+                    </li>
+                    <li>Colocação pronominal
+                        <ul>
+                            <li>Próclise, mesóclise, ênclise</li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
-            <div class="modulo">
+            <div class="card">
                 <h2>Ortografia e Semântica</h2>
                 <ul>
                     <li>Ortografia
                         <ul>
                             <li>Acentuação gráfica</li>
+                            <li>Divisão silábica</li>
                             <li>Uso da crase</li>
                             <li>Pontuação</li>
                         </ul>
@@ -176,14 +177,15 @@
                     <li>Semântica
                         <ul>
                             <li>Sinonímia e Antonímia</li>
-                            <li>Figuras de linguagem</li>
+                            <li>Polissemia e homonímia</li>
                             <li>Variação linguística</li>
                         </ul>
                     </li>
                     <li>Coesão e Coerência
                         <ul>
-                            <li>Elementos de coesão</li>
-                            <li>Progressão textual</li>
+                            <li>Elementos de coesão textual</li>
+                            <li>Progressão temática</li>
+                            <li>Função textual dos vocábulos</li>
                         </ul>
                     </li>
                 </ul>
