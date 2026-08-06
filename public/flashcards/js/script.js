@@ -1,3 +1,7 @@
+// ==========================================
+// ALGORITMO SM-2 (Repetição Espaçada)
+// ==========================================
+
 // Estado da aplicação
 let state = {
     concurso: null,
@@ -7,10 +11,141 @@ let state = {
     acertos: 0,
     erros: 0,
     revisados: 0,
-    total: 0
+    total: 0,
+    sessionId: null,
+    acessoLiberado: false
 };
 
-// Carregar dados do flashcards
+// Constantes do SM-2
+const SM2 = {
+    FATOR_INICIAL: 2.5,
+    INTERVALO_INICIAL: 0,
+    MINIMO_FATOR: 1.3,
+    MAXIMO_FATOR: 2.5
+};
+
+// ==========================================
+// FUNÇÕES DE SALVAMENTO (localStorage)
+// ==========================================
+
+function salvarProgresso() {
+    if (!state.concurso || !state.baralho) return;
+    
+    const key = `flashcards_${state.concurso}_${state.baralho}`;
+    const dados = {
+        cards: state.cards.map(c => ({
+            id: c.id,
+            frente: c.frente,
+            verso: c.verso,
+            dificuldade: c.dificuldade,
+            intervalo: c.intervalo || 0,
+            fator: c.fator || SM2.FATOR_INICIAL,
+            proxima_revisao: c.proxima_revisao || null,
+            revisado: c.revisado || false,
+            acertos: c.acertos || 0,
+            erros: c.erros || 0
+        })),
+        stats: {
+            total_revisoes: state.total_revisoes || 0,
+            ultimo_estudo: new Date().toISOString()
+        }
+    };
+    
+    localStorage.setItem(key, JSON.stringify(dados));
+}
+
+function carregarProgresso(concursoId, baralhoId) {
+    const key = `flashcards_${concursoId}_${baralhoId}`;
+    const dados = localStorage.getItem(key);
+    
+    if (dados) {
+        try {
+            return JSON.parse(dados);
+        } catch (e) {
+            return null;
+        }
+    }
+    return null;
+}
+
+// ==========================================
+// ALGORITMO SM-2
+// ==========================================
+
+function calcularProximoIntervalo(qualidade, intervaloAtual, fator) {
+    // Qualidade: 0-5 (0=esqueci, 5=fácil)
+    const qualidadeMap = {
+        0: { intervalo: 0, fator_ajuste: 0.0 },
+        1: { intervalo: 1, fator_ajuste: 0.0 },
+        2: { intervalo: 2, fator_ajuste: 0.0 },
+        3: { intervalo: 4, fator_ajuste: 1.3 },
+        4: { intervalo: 7, fator_ajuste: 1.5 },
+        5: { intervalo: 14, fator_ajuste: 1.7 }
+    };
+    
+    const dados = qualidadeMap[qualidade] || qualidadeMap[3];
+    
+    // Novo fator
+    let novoFator = fator + (0.1 - (5 - qualidade) * (0.08 + (5 - qualidade) * 0.02));
+    novoFator = Math.max(SM2.MINIMO_FATOR, Math.min(SM2.MAXIMO_FATOR, novoFator));
+    
+    // Novo intervalo
+    let novoIntervalo;
+    if (intervaloAtual === 0) {
+        novoIntervalo = dados.intervalo;
+    } else if (intervaloAtual === 1) {
+        novoIntervalo = dados.intervalo > 1 ? dados.intervalo : 6;
+    } else {
+        novoIntervalo = Math.round(intervaloAtual * novoFator);
+    }
+    
+    // Data da próxima revisão
+    const proximaData = new Date();
+    proximaData.setDate(proximaData.getDate() + novoIntervalo);
+    
+    return {
+        intervalo: novoIntervalo,
+        fator: novoFator,
+        proxima_revisao: proximaData.toISOString()
+    };
+}
+
+// ==========================================
+// FUNÇÕES PRINCIPAIS
+// ==========================================
+
+// Verificar acesso via Stripe
+async function verificarAcesso() {
+    const urlParams = new URLSearchParams(window.location.search);
+    state.sessionId = urlParams.get('session_id');
+    
+    if (!state.sessionId) {
+        // Tenta carregar do localStorage
+        const savedSession = localStorage.getItem('flashcards_session_id');
+        if (savedSession) {
+            state.sessionId = savedSession;
+        } else {
+            return false;
+        }
+    }
+    
+    try {
+        const response = await fetch(`/api/check-session/${state.sessionId}`);
+        const data = await response.json();
+        
+        if (data.status === 'paid') {
+            state.acessoLiberado = true;
+            localStorage.setItem('flashcards_session_id', state.sessionId);
+            return true;
+        }
+        return false;
+    } catch (error) {
+        console.error('Erro ao verificar acesso:', error);
+        return false;
+    }
+}
+
+// Carregar dados dos flashcards
 async function carregarFlashcards() {
     try {
         const response = await fetch('/flashcards/data/flashcards.json');
@@ -24,6 +159,13 @@ async function carregarFlashcards() {
 
 // Selecionar baralho
 async function selecionarBaralho(concursoId, baralhoId) {
+    // Verifica acesso
+    const temAcesso = await verificarAcesso();
+    if (!temAcesso) {
+        mostrarAcessoNegado();
+        return;
+    }
+    
     const data = await carregarFlashcards();
     if (!data) return;
     
@@ -35,7 +177,44 @@ async function selecionarBaralho(concursoId, baralhoId) {
     
     state.concurso = concursoId;
     state.baralho = baralhoId;
-    state.cards = baralho.cards.map(c => ({ ...c, revisado: false }));
+    
+    // Tenta carregar progresso salvo
+    const progressoSalvo = carregarProgresso(concursoId, baralhoId);
+    
+    if (progressoSalvo) {
+        state.cards = progressoSalvo.cards;
+        state.total = state.cards.length;
+        state.total_revisoes = progressoSalvo.stats.total_revisoes || 0;
+    } else {
+        // Inicializa novos cards
+        state.cards = baralho.cards.map(c => ({
+            ...c,
+            intervalo: 0,
+            fator: SM2.FATOR_INICIAL,
+            proxima_revisao: null,
+            revisado: false,
+            acertos: 0,
+            erros: 0
+        }));
+        state.total = state.cards.length;
+        state.total_revisoes = 0;
+    }
+    
+    // Filtra cards que precisam ser revisados (ou todos se for primeira vez)
+    const hoje = new Date();
+    const cardsParaRevisar = state.cards.filter(c => {
+        if (!c.revisado) return true;
+        if (!c.proxima_revisao) return true;
+        const dataRevisao = new Date(c.proxima_revisao);
+        return dataRevisao <= hoje;
+    });
+    
+    if (cardsParaRevisar.length === 0) {
+        mostrarParabens();
+        return;
+    }
+    
+    state.cards = cardsParaRevisar;
     state.cardAtual = 0;
     state.acertos = 0;
     state.erros = 0;
@@ -50,13 +229,7 @@ function iniciarEstudo() {
     const container = document.getElementById('app');
     
     if (state.cards.length === 0) {
-        container.innerHTML = `
-            <div class="finalizado">
-                <h2>🎉 Nenhum card encontrado!</h2>
-                <p>Este baralho está vazio.</p>
-                <a href="/flashcards/" class="btn btn-voltar">Voltar</a>
-            </div>
-        `;
+        mostrarParabens();
         return;
     }
     
@@ -69,17 +242,17 @@ function mostrarCard() {
     const card = state.cards[state.cardAtual];
     
     if (!card) {
-        mostrarFinalizado();
+        mostrarParabens();
         return;
     }
     
-    const progresso = ((state.revisados) / state.total * 100);
+    const progresso = state.total > 0 ? Math.round((state.revisados / state.total) * 100) : 0;
     
     container.innerHTML = `
         <div class="progress-container">
             <div class="progress-info">
                 <span>Card ${state.revisados + 1} de ${state.total}</span>
-                <span>${Math.round(progresso)}% concluído</span>
+                <span>${progresso}% concluído</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-bar-fill" style="width: ${progresso}%"></div>
@@ -93,19 +266,19 @@ function mostrarCard() {
             <div class="verso" id="verso" style="display: none;">
                 ${card.verso}
             </div>
-            <div class="dica" id="dica">👆 Clique para ver a resposta</div>
+            <div class="dica" id="dica">Clique para ver a resposta</div>
         </div>
         
         <div class="botoes" id="botoes" style="display: none;">
-            <button class="btn btn-dificil" onclick="avaliar(0)">😰 Esqueci</button>
-            <button class="btn btn-medio" onclick="avaliar(3)">🤔 Médio</button>
-            <button class="btn btn-facil" onclick="avaliar(5)">😊 Fácil</button>
+            <button class="btn btn-dificil" onclick="avaliar(0)">Esqueci</button>
+            <button class="btn btn-medio" onclick="avaliar(3)">Médio</button>
+            <button class="btn btn-facil" onclick="avaliar(5)">Fácil</button>
         </div>
         
         <div class="estatisticas">
-            <span class="acertos">✅ Acertos: <span class="numero">${state.acertos}</span></span>
-            <span class="erros">❌ Erros: <span class="numero">${state.erros}</span></span>
-            <span>📊 Revisados: <span class="numero">${state.revisados}</span></span>
+            <span class="acertos">Acertos: <span class="numero">${state.acertos}</span></span>
+            <span class="erros">Erros: <span class="numero">${state.erros}</span></span>
+            <span>Revisados: <span class="numero">${state.revisados}</span></span>
         </div>
     `;
 }
@@ -117,25 +290,38 @@ function virarCard() {
     const dica = document.getElementById('dica');
     const botoes = document.getElementById('botoes');
     
-    if (frente.style.display !== 'none') {
+    if (frente && frente.style.display !== 'none') {
         frente.style.display = 'none';
         verso.style.display = 'block';
-        dica.textContent = '📝 Como você se saiu?';
+        dica.textContent = 'Como você se saiu?';
         botoes.style.display = 'flex';
     }
 }
 
-// Avaliar o card
+// Avaliar o card (com SRS)
 function avaliar(nota) {
     const card = state.cards[state.cardAtual];
     card.revisado = true;
+    card.revisado_hoje = true;
     state.revisados++;
+    state.total_revisoes = (state.total_revisoes || 0) + 1;
     
     if (nota >= 4) {
         state.acertos++;
+        card.acertos = (card.acertos || 0) + 1;
     } else {
         state.erros++;
+        card.erros = (card.erros || 0) + 1;
     }
+    
+    // Calcula próximo intervalo usando SM-2
+    const resultado = calcularProximoIntervalo(nota, card.intervalo || 0, card.fator || SM2.FATOR_INICIAL);
+    card.intervalo = resultado.intervalo;
+    card.fator = resultado.fator;
+    card.proxima_revisao = resultado.proxima_revisao;
+    
+    // Salva progresso
+    salvarProgresso();
     
     // Avança para o próximo card
     state.cardAtual++;
@@ -156,37 +342,77 @@ function mostrarFinalizado() {
     
     container.innerHTML = `
         <div class="finalizado">
-            <h2>🎉 Estudo concluído!</h2>
+            <h2>Estudo concluído!</h2>
             <p>Você revisou <strong>${state.total}</strong> cards.</p>
-            <p>✅ Acertos: <strong>${state.acertos}</strong></p>
-            <p>❌ Erros: <strong>${state.erros}</strong></p>
-            <p>📊 Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
+            <p>Acertos: <strong>${state.acertos}</strong></p>
+            <p>Erros: <strong>${state.erros}</strong></p>
+            <p>Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
             <br>
-            <a href="/flashcards/" class="btn btn-voltar">⬅ Voltar aos baralhos</a>
-            <a href="#" class="btn btn-facil" onclick="reiniciar()">🔄 Revisar novamente</a>
+            <a href="/flashcards/" class="btn btn-voltar">Voltar aos baralhos</a>
+            <a href="#" class="btn btn-facil" onclick="reiniciar()">Revisar novamente</a>
+        </div>
+    `;
+}
+
+// Mostrar parabéns (todos os cards revisados)
+function mostrarParabens() {
+    const container = document.getElementById('app');
+    container.innerHTML = `
+        <div class="finalizado">
+            <h2>Parabéns!</h2>
+            <p>Você já revisou todos os cards deste baralho.</p>
+            <p>Volte amanhã para mais revisões.</p>
+            <br>
+            <a href="/flashcards/" class="btn btn-voltar">Voltar aos baralhos</a>
         </div>
     `;
 }
 
 // Reiniciar o estudo
 function reiniciar() {
-    state.cards.forEach(c => c.revisado = false);
     state.cardAtual = 0;
     state.acertos = 0;
     state.erros = 0;
     state.revisados = 0;
+    
+    // Marca todos como não revisados para o dia
+    state.cards.forEach(c => c.revisado = false);
     iniciarEstudo();
+}
+
+// Mostrar acesso negado
+function mostrarAcessoNegado() {
+    const container = document.getElementById('app');
+    container.innerHTML = `
+        <div class="acesso-negado">
+            <h2>Acesso restrito</h2>
+            <p>Você precisa adquirir o material para acessar os flashcards.</p>
+            <a href="/" class="btn btn-primary">Ver concursos disponíveis</a>
+            <br><br>
+            <p style="font-size: 0.9rem; color: #6c757d;">
+                Já comprou? Acesse pelo link enviado no e-mail de confirmação.
+            </p>
+        </div>
+    `;
 }
 
 // Página inicial - listar baralhos
 async function paginaInicial() {
     const container = document.getElementById('app');
+    
+    // Verifica acesso
+    const temAcesso = await verificarAcesso();
+    if (!temAcesso) {
+        mostrarAcessoNegado();
+        return;
+    }
+    
     const data = await carregarFlashcards();
     
     if (!data) {
         container.innerHTML = `
             <div class="finalizado">
-                <h2>⚠️ Erro ao carregar</h2>
+                <h2>Erro ao carregar</h2>
                 <p>Não foi possível carregar os flashcards.</p>
             </div>
         `;
@@ -198,17 +424,23 @@ async function paginaInicial() {
     const concurso = data[concursoId];
     
     let html = `
-        <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">📚 ${concurso.nome}</h2>
+        <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">${concurso.nome}</h2>
         <p style="color: #6c757d; margin-bottom: 1rem;">Escolha uma matéria para estudar</p>
         <div class="baralhos-grid">
     `;
     
     for (const [id, baralho] of Object.entries(concurso.baralhos)) {
+        // Verifica progresso salvo para mostrar status
+        const progresso = carregarProgresso(concursoId, id);
+        const total = baralho.cards.length;
+        const revisados = progresso ? progresso.cards.filter(c => c.revisado).length : 0;
+        const status = revisados > 0 ? `${revisados}/${total} revisados` : `${total} cards`;
+        
         html += `
             <div class="baralho-card" onclick="selecionarBaralho('${concursoId}', '${id}')">
                 <h3>${baralho.nome}</h3>
-                <p>${baralho.cards.length} cards</p>
-                <span class="qtd">${baralho.cards.length} questões</span>
+                <p>${status}</p>
+                <span class="qtd">${total} questões</span>
             </div>
         `;
     }
@@ -216,14 +448,18 @@ async function paginaInicial() {
     html += `
         </div>
         <div style="margin-top: 2rem; text-align: center; color: #6c757d; font-size: 0.9rem;">
-            <p>💡 Clique em um baralho para começar a estudar</p>
+            <p>Clique em um baralho para começar a estudar</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Seu progresso é salvo automaticamente</p>
         </div>
     `;
     
     container.innerHTML = html;
 }
 
-// Inicialização
+// ==========================================
+// INICIALIZAÇÃO
+// ==========================================
+
 document.addEventListener('DOMContentLoaded', () => {
     // Verifica se há um baralho selecionado via URL
     const urlParams = new URLSearchParams(window.location.search);

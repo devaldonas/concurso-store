@@ -273,6 +273,26 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Acesso negado */
+.acesso-negado {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.acesso-negado h2 {
+    color: #dc3545;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.acesso-negado p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .flashcard-container {
