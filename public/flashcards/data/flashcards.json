@@ -1,0 +1,267 @@
+{
+  "seduc-ms-2022": {
+    "nome": "SEDUC/MS 2022 - Professor",
+    "baralhos": {
+      "portugues": {
+        "nome": "Língua Portuguesa",
+        "cards": [
+          {
+            "id": 1,
+            "frente": "O que é interpretação de texto?",
+            "verso": "É a capacidade de compreender o sentido global do texto, identificando ideias principais, inferências e intenções do autor",
+            "dificuldade": 1
+          },
+          {
+            "id": 2,
+            "frente": "Quais são os 5 tipos de texto quanto à tipologia?",
+            "verso": "Narrativo, descritivo, dissertativo, injuntivo e expositivo",
+            "dificuldade": 2
+          },
+          {
+            "id": 3,
+            "frente": "O que são figuras de linguagem?",
+            "verso": "São recursos estilísticos que tornam a mensagem mais expressiva, como metáfora, comparação, personificação, hipérbole",
+            "dificuldade": 2
+          },
+          {
+            "id": 4,
+            "frente": "Quais são as classes de palavras variáveis?",
+            "verso": "Substantivo, adjetivo, artigo, numeral, pronome e verbo",
+            "dificuldade": 1
+          },
+          {
+            "id": 5,
+            "frente": "Quais são as classes de palavras invariáveis?",
+            "verso": "Advérbio, preposição, conjunção e interjeição",
+            "dificuldade": 1
+          },
+          {
+            "id": 6,
+            "frente": "O que é regência verbal?",
+            "verso": "É a relação entre o verbo e seus complementos. Pode ser direta (sem preposição) ou indireta (com preposição)",
+            "dificuldade": 2
+          },
+          {
+            "id": 7,
+            "frente": "Quando usar a crase?",
+            "verso": "Fusão da preposição 'a' com o artigo 'a'. Usa-se em locuções adverbiais femininas, antes de palavras femininas e em indicações de horas",
+            "dificuldade": 3
+          },
+          {
+            "id": 8,
+            "frente": "Quais são os tipos de concordância?",
+            "verso": "Verbal (verbo concorda com o sujeito) e nominal (artigo, adjetivo, numeral e pronome concordam com o substantivo)",
+            "dificuldade": 2
+          },
+          {
+            "id": 9,
+            "frente": "O que é sujeito na oração?",
+            "verso": "É o termo sobre o qual se declara algo. Pode ser simples, composto, oculto ou indeterminado",
+            "dificuldade": 1
+          },
+          {
+            "id": 10,
+            "frente": "O que é intertextualidade?",
+            "verso": "É a relação entre diferentes textos, onde um faz referência a outro, criando diálogos entre as obras",
+            "dificuldade": 2
+          }
+        ]
+      },
+      "legislacao": {
+        "nome": "Legislação Educacional",
+        "cards": [
+          {
+            "id": 1,
+            "frente": "Qual o objetivo da LDB (Lei 9.394/96)?",
+            "verso": "Estabelecer as diretrizes e bases da educação nacional, garantindo acesso, permanência, qualidade e gestão democrática na educação",
+            "dificuldade": 2
+          },
+          {
+            "id": 2,
+            "frente": "Quais são os níveis da Educação Básica segundo a LDB?",
+            "verso": "Educação Infantil, Ensino Fundamental e Ensino Médio",
+            "dificuldade": 1
+          },
+          {
+            "id": 3,
+            "frente": "O que a BNCC estabelece?",
+            "verso": "Define as aprendizagens essenciais que todos os alunos devem desenvolver ao longo da Educação Básica",
+            "dificuldade": 2
+          },
+          {
+            "id": 4,
+            "frente": "Quantas competências gerais tem a BNCC?",
+            "verso": "São 10 competências gerais que orientam a formação integral dos estudantes",
+            "dificuldade": 2
+          },
+          {
+            "id": 5,
+            "frente": "O que é o PNE (Lei 13.005/2014)?",
+            "verso": "É o Plano Nacional de Educação, com metas e estratégias para a educação brasileira em 10 anos",
+            "dificuldade": 2
+          },
+          {
+            "id": 6,
+            "frente": "Qual a função do FUNDEB (Lei 14.113/2020)?",
+            "verso": "Financiar a educação básica pública, garantindo recursos para manutenção e valorização dos profissionais da educação",
+            "dificuldade": 2
+          },
+          {
+            "id": 7,
+            "frente": "O que o ECA (Lei 8.069/90) protege?",
+            "verso": "Os direitos fundamentais das crianças e adolescentes, garantindo proteção integral e prioridade absoluta",
+            "dificuldade": 2
+          },
+          {
+            "id": 8,
+            "frente": "O que são Diretrizes Curriculares Nacionais?",
+            "verso": "Normas que orientam a organização, planejamento e execução do currículo na Educação Básica",
+            "dificuldade": 2
+          },
+          {
+            "id": 9,
+            "frente": "Qual a Deliberação que estabelece normas para educação básica em MS?",
+            "verso": "Deliberação CEE/MS n. 10.814, de 10 de março de 2016",
+            "dificuldade": 3
+          },
+          {
+            "id": 10,
+            "frente": "O que é a Resolução que institui a BNCC do Ensino Médio?",
+            "verso": "Resolução CNE/CEB n. 4, de 17 de dezembro de 2018",
+            "dificuldade": 3
+          }
+        ]
+      },
+      "matematica": {
+        "nome": "Matemática",
+        "cards": [
+          {
+            "id": 1,
+            "frente": "Quais são os conjuntos numéricos?",
+            "verso": "Naturais (N), Inteiros (Z), Racionais (Q), Irracionais (I) e Reais (R)",
+            "dificuldade": 1
+          },
+          {
+            "id": 2,
+            "frente": "O que é uma função linear?",
+            "verso": "Função do tipo f(x) = ax + b, onde 'a' é a taxa de variação e 'b' é o coeficiente linear",
+            "dificuldade": 2
+          },
+          {
+            "id": 3,
+            "frente": "Como resolver uma equação do 2º grau?",
+            "verso": "Usando a fórmula de Bhaskara: x = (-b ± √(b²-4ac))/2a, onde Δ = b²-4ac",
+            "dificuldade": 3
+          },
+          {
+            "id": 4,
+            "frente": "Qual a fórmula para calcular área de um círculo?",
+            "verso": "A = π × r², onde r é o raio do círculo",
+            "dificuldade": 2
+          },
+          {
+            "id": 5,
+            "frente": "O que é uma progressão aritmética (PA)?",
+            "verso": "É uma sequência onde cada termo é igual ao anterior acrescido de um valor fixo chamado razão (r)",
+            "dificuldade": 2
+          },
+          {
+            "id": 6,
+            "frente": "O que é uma função quadrática?",
+            "verso": "Função do tipo f(x) = ax² + bx + c, onde a ≠ 0, com gráfico em forma de parábola",
+            "dificuldade": 2
+          },
+          {
+            "id": 7,
+            "frente": "Como calcular a média aritmética?",
+            "verso": "Soma de todos os valores dividida pelo número de valores",
+            "dificuldade": 1
+          },
+          {
+            "id": 8,
+            "frente": "Qual a fórmula do teorema de Pitágoras?",
+            "verso": "a² = b² + c², onde 'a' é a hipotenusa e 'b' e 'c' são os catetos",
+            "dificuldade": 2
+          },
+          {
+            "id": 9,
+            "frente": "O que é um número primo?",
+            "verso": "Número natural maior que 1 que tem apenas dois divisores: 1 e ele mesmo",
+            "dificuldade": 1
+          },
+          {
+            "id": 10,
+            "frente": "Como calcular juros simples?",
+            "verso": "J = C × i × t, onde C é o capital, i é a taxa de juros e t é o tempo",
+            "dificuldade": 2
+          }
+        ]
+      },
+      "pedagogia": {
+        "nome": "Conhecimentos Pedagógicos",
+        "cards": [
+          {
+            "id": 1,
+            "frente": "O que é a BNCC?",
+            "verso": "Base Nacional Comum Curricular - documento que define as aprendizagens essenciais para a Educação Básica",
+            "dificuldade": 1
+          },
+          {
+            "id": 2,
+            "frente": "Quantas são as competências gerais da BNCC?",
+            "verso": "São 10 competências gerais que os estudantes devem desenvolver ao longo da Educação Básica",
+            "dificuldade": 2
+          },
+          {
+            "id": 3,
+            "frente": "O que são metodologias ativas?",
+            "verso": "Estratégias de ensino que colocam o aluno como protagonista do processo de aprendizagem",
+            "dificuldade": 2
+          },
+          {
+            "id": 4,
+            "frente": "Qual a função da avaliação formativa?",
+            "verso": "Acompanhar o processo de aprendizagem do aluno, identificando dificuldades e promovendo melhorias contínuas",
+            "dificuldade": 2
+          },
+          {
+            "id": 5,
+            "frente": "O que são competências socioemocionais?",
+            "verso": "Habilidades como autoconhecimento, empatia, resiliência, colaboração e responsabilidade",
+            "dificuldade": 2
+          },
+          {
+            "id": 6,
+            "frente": "O que é Educação Integral?",
+            "verso": "Abordagem que considera todas as dimensões do ser humano: intelectual, social, emocional, física, cultural e ética",
+            "dificuldade": 2
+          },
+          {
+            "id": 7,
+            "frente": "O que é gestão democrática na educação?",
+            "verso": "Participação da comunidade escolar nas decisões da escola, garantindo transparência e autonomia",
+            "dificuldade": 2
+          },
+          {
+            "id": 8,
+            "frente": "O que são tecnologias educacionais?",
+            "verso": "Ferramentas digitais e metodologias que utilizam tecnologia para potencializar o ensino e a aprendizagem",
+            "dificuldade": 2
+          },
+          {
+            "id": 9,
+            "frente": "O que é o projeto político-pedagógico?",
+            "verso": "Documento que orienta as ações da escola, definindo objetivos, metas e estratégias pedagógicas",
+            "dificuldade": 2
+          },
+          {
+            "id": 10,
+            "frente": "O que é interdisciplinaridade?",
+            "verso": "Abordagem que integra diferentes disciplinas para abordar um tema de forma ampla e contextualizada",
+            "dificuldade": 2
+          }
+        ]
+      }
+    }
+  }
+}

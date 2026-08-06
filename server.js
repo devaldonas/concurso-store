@@ -157,3 +157,12 @@ app.listen(PORT, () => {
   console.log(`🚀 Concurso Store rodando em: http://localhost:${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
 });
+
+// Rotas para flashcards
+app.get('/flashcards', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'flashcards', 'index.html'));
+});
+
+app.get('/flashcards/study', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'flashcards', 'study.html'));
+});

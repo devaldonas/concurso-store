@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #1a1a2e;
+}
+
+/* Header */
+.header {
+    background: #0f0f1a;
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 2px solid #e94560;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de progresso */
+.progress-container {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #e94560;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Flashcard */
+.flashcard-container {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.flashcard-container:hover {
+    border-color: #e94560;
+}
+
+.flashcard-container .frente,
+.flashcard-container .verso {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.flashcard-container .verso {
+    color: #e94560;
+    font-weight: 500;
+}
+
+.flashcard-container .dica {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 1rem;
+}
+
+/* Botões de avaliação */
+.botoes {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-dificil {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-dificil:hover {
+    background: #c82333;
+}
+
+.btn-medio {
+    background: #ffc107;
+    color: #1a1a2e;
+}
+
+.btn-medio:hover {
+    background: #e0a800;
+}
+
+.btn-facil {
+    background: #28a745;
+    color: white;
+}
+
+.btn-facil:hover {
+    background: #1e7e34;
+}
+
+.btn-voltar {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-voltar:hover {
+    background: #5a6268;
+}
+
+/* Estatísticas */
+.estatisticas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.estatisticas span {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.estatisticas .numero {
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.estatisticas .acertos .numero {
+    color: #28a745;
+}
+
+.estatisticas .erros .numero {
+    color: #dc3545;
+}
+
+/* Lista de baralhos */
+.baralhos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.baralho-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.baralho-card:hover {
+    transform: translateY(-4px);
+    border-color: #e94560;
+}
+
+.baralho-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.baralho-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.baralho-card .qtd {
+    display: inline-block;
+    background: #e94560;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* Estudo finalizado */
+.finalizado {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.finalizado h2 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.finalizado p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flashcard-container {
+        padding: 1.5rem 1rem;
+        min-height: 200px;
+    }
+    
+    .flashcard-container .frente,
+    .flashcard-container .verso {
+        font-size: 1.1rem;
+    }
+    
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .estatisticas {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .header h1 {
+        font-size: 1.2rem;
+    }
+}
