@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - Concurso Store</title>
+    <link rel="stylesheet" href="/flashcards/css/style.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        .baralhos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .baralho-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .baralho-card:hover {
+            transform: translateY(-4px);
+            border-color: #e94560;
+        }
+        .baralho-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+        .baralho-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .baralho-card .qtd {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .voltar {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #e94560;
+            text-decoration: none;
+        }
+        .voltar:hover {
+            text-decoration: underline;
+        }
+        .estudo-container {
+            display: none;
+        }
+        .estudo-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📚 Flashcards</h1>
+            <a href="/" id="linkVoltar">← Voltar à loja</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="app">
+            <!-- Conteúdo renderizado pelo JavaScript -->
+        </div>
+    </main>
+
+    <script>
+        // ==========================================
+        // CONFIGURAÇÃO
+        // ==========================================
+        const CONCURSO_ID = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
+        const SESSION_ID = new URLSearchParams(window.location.search).get('session_id');
+
+        // ==========================================
+        // ESTADO
+        // ==========================================
+        let state = {
+            concurso: null,
+            baralho: null,
+            cards: [],
+            cardAtual: 0,
+            acertos: 0,
+            erros: 0,
+            revisados: 0,
+            total: 0,
+            sessionId: SESSION_ID
+        };
+
+        // ==========================================
+        // FUNÇÕES PRINCIPAIS
+        // ==========================================
+
+        // Carregar dados do concurso
+        async function carregarDados() {
+            try {
+                const response = await fetch(`/material/dados/${CONCURSO_ID}.json`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                return null;
+            }
+        }
+
+        // Página inicial - listar baralhos
+        async function paginaInicial() {
+            const container = document.getElementById('app');
+            const dados = await carregarDados();
+            
+            if (!dados) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <h2>Erro ao carregar dados</h2>
+                        <p>Não foi possível carregar os flashcards.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `
+                <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">${dados.nome}</h2>
+                <p style="color: #6c757d; margin-bottom: 1rem;">Escolha uma matéria para estudar</p>
+                <div class="baralhos-grid">
+            `;
+
+            let totalCards = 0;
+            for (const [id, baralho] of Object.entries(dados.baralhos)) {
+                totalCards += baralho.cards.length;
+                // Verifica progresso salvo
+                const progresso = localStorage.getItem(`flashcards_${CONCURSO_ID}_${id}`);
+                const revisados = progresso ? JSON.parse(progresso).filter(c => c.revisado).length : 0;
+                const status = revisados > 0 ? `${revisados}/${baralho.cards.length} revisados` : `${baralho.cards.length} cards`;
+
+                html += `
+                    <div class="baralho-card" onclick="selecionarBaralho('${id}')">
+                        <h3>${baralho.nome}</h3>
+                        <p>${status}</p>
+                        <span class="qtd">${baralho.cards.length} questões</span>
+                    </div>
+                `;
+            }
+
+            html += `
+                </div>
+                <div style="margin-top: 2rem; text-align: center; color: #6c757d; font-size: 0.9rem;">
+                    <p>Clique em um baralho para começar a estudar</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Total: ${totalCards} cards disponíveis</p>
+                    <p style="font-size: 0.8rem;">Seu progresso é salvo automaticamente</p>
+                </div>
+                <a href="/" class="voltar">← Voltar à loja</a>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        // Selecionar baralho
+        async function selecionarBaralho(baralhoId) {
+            const dados = await carregarDados();
+            if (!dados) return;
+
+            const baralho = dados.baralhos[baralhoId];
+            if (!baralho) return;
+
+            state.concurso = CONCURSO_ID;
+            state.baralho = baralhoId;
+
+            // Carrega progresso salvo
+            const progressoSalvo = localStorage.getItem(`flashcards_${CONCURSO_ID}_${baralhoId}`);
+            if (progressoSalvo) {
+                state.cards = JSON.parse(progressoSalvo);
+            } else {
+                state.cards = baralho.cards.map(c => ({
+                    ...c,
+                    revisado: false,
+                    acertos: 0,
+                    erros: 0
+                }));
+            }
+
+            state.cardAtual = 0;
+            state.acertos = 0;
+            state.erros = 0;
+            state.revisados = 0;
+            state.total = state.cards.length;
+
+            iniciarEstudo();
+        }
+
+        // Iniciar estudo
+        function iniciarEstudo() {
+            const container = document.getElementById('app');
+            
+            if (state.cards.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <h2>Nenhum card encontrado</h2>
+                        <p>Este baralho está vazio.</p>
+                        <a href="#" onclick="paginaInicial()" class="voltar">← Voltar</a>
+                    </div>
+                `;
+                return;
+            }
+
+            mostrarCard();
+        }
+
+        // Mostrar card atual
+        function mostrarCard() {
+            const container = document.getElementById('app');
+            const card = state.cards[state.cardAtual];
+            
+            if (!card) {
+                mostrarFinalizado();
+                return;
+            }
+
+            const progresso = state.total > 0 ? Math.round((state.revisados / state.total) * 100) : 0;
+
+            container.innerHTML = `
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Card ${state.revisados + 1} de ${state.total}</span>
+                        <span>${progresso}% concluído</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: ${progresso}%"></div>
+                    </div>
+                </div>
+
+                <div class="flashcard-container" id="flashcard" onclick="virarCard()">
+                    <div class="frente" id="frente">
+                        ${card.frente}
+                    </div>
+                    <div class="verso" id="verso" style="display: none;">
+                        ${card.verso}
+                    </div>
+                    <div class="dica" id="dica">👆 Clique para ver a resposta</div>
+                </div>
+
+                <div class="botoes" id="botoes" style="display: none;">
+                    <button class="btn btn-dificil" onclick="avaliar(0)">😰 Esqueci</button>
+                    <button class="btn btn-medio" onclick="avaliar(3)">🤔 Médio</button>
+                    <button class="btn btn-facil" onclick="avaliar(5)">😊 Fácil</button>
+                </div>
+
+                <div class="estatisticas">
+                    <span class="acertos">✅ Acertos: <span class="numero">${state.acertos}</span></span>
+                    <span class="erros">❌ Erros: <span class="numero">${state.erros}</span></span>
+                    <span>📊 Revisados: <span class="numero">${state.revisados}</span></span>
+                </div>
+
+                <a href="#" onclick="paginaInicial()" class="voltar">← Voltar aos baralhos</a>
+            `;
+        }
+
+        // Virar o card (mostrar resposta)
+        function virarCard() {
+            const frente = document.getElementById('frente');
+            const verso = document.getElementById('verso');
+            const dica = document.getElementById('dica');
+            const botoes = document.getElementById('botoes');
+
+            if (frente && frente.style.display !== 'none') {
+                frente.style.display = 'none';
+                verso.style.display = 'block';
+                dica.textContent = '📝 Como você se saiu?';
+                botoes.style.display = 'flex';
+            }
+        }
+
+        // Avaliar o card
+        function avaliar(nota) {
+            const card = state.cards[state.cardAtual];
+            card.revisado = true;
+            state.revisados++;
+
+            if (nota >= 4) {
+                state.acertos++;
+                card.acertos = (card.acertos || 0) + 1;
+            } else {
+                state.erros++;
+                card.erros = (card.erros || 0) + 1;
+            }
+
+            // Salva progresso
+            localStorage.setItem(`flashcards_${state.concurso}_${state.baralho}`, JSON.stringify(state.cards));
+
+            // Avança para o próximo card
+            state.cardAtual++;
+
+            if (state.cardAtual >= state.cards.length) {
+                mostrarFinalizado();
+            } else {
+                mostrarCard();
+            }
+        }
+
+        // Mostrar tela de finalizado
+        function mostrarFinalizado() {
+            const container = document.getElementById('app');
+            const taxaAcerto = state.total > 0 ? Math.round((state.acertos / state.total) * 100) : 0;
+
+            container.innerHTML = `
+                <div class="finalizado">
+                    <h2>🎉 Estudo concluído!</h2>
+                    <p>Você revisou <strong>${state.total}</strong> cards.</p>
+                    <p>✅ Acertos: <strong>${state.acertos}</strong></p>
+                    <p>❌ Erros: <strong>${state.erros}</strong></p>
+                    <p>📊 Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
+                    <br>
+                    <a href="#" onclick="paginaInicial()" class="btn btn-voltar">← Voltar aos baralhos</a>
+                    <a href="#" onclick="reiniciar()" class="btn btn-facil">🔄 Revisar novamente</a>
+                </div>
+            `;
+        }
+
+        // Reiniciar o estudo
+        function reiniciar() {
+            state.cards.forEach(c => c.revisado = false);
+            state.cardAtual = 0;
+            state.acertos = 0;
+            state.erros = 0;
+            state.revisados = 0;
+            localStorage.setItem(`flashcards_${state.concurso}_${state.baralho}`, JSON.stringify(state.cards));
+            iniciarEstudo();
+        }
+
+        // ==========================================
+        // INICIALIZAÇÃO
+        // ==========================================
+
+        // Verifica se há um baralho selecionado via URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const baralho = urlParams.get('baralho');
+
+        if (baralho) {
+            selecionarBaralho(baralho);
+        } else {
+            paginaInicial();
+        }
+
+        // Exportar funções para o escopo global
+        window.selecionarBaralho = selecionarBaralho;
+        window.virarCard = virarCard;
+        window.avaliar = avaliar;
+        window.reiniciar = reiniciar;
+        window.paginaInicial = paginaInicial;
+    </script>
+</body>
+</html>
