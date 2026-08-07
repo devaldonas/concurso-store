@@ -19,7 +19,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Produtos - Nomes completos dos concursos
+// ==========================================
+// MODO DE DESENVOLVIMENTO
+// ==========================================
+const DEV_MODE = process.env.DEV_MODE === 'true' || true; // Ativado por padrão
+
+// ==========================================
+// PRODUTOS
+// ==========================================
 const products = [
   { 
     id: 'memorizacao_seduc_ms', 
@@ -83,7 +90,11 @@ const products = [
   }
 ];
 
-// API para listar produtos
+// ==========================================
+// ROTAS DA API
+// ==========================================
+
+// Listar produtos
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
@@ -127,15 +138,26 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-// Endpoint para verificar status do pagamento
+// Verificar status do pagamento (COM MODO DE TESTE)
 app.get('/api/check-session/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
-  
+
+  // 🔓 MODO DE DESENVOLVIMENTO: Aceita sessões de teste
+  if (DEV_MODE && (sessionId === 'cs_test_teste123' || sessionId.startsWith('dev_'))) {
+    console.log(`🔓 Modo DEV: Acesso liberado para ${sessionId}`);
+    return res.json({
+      status: 'paid',
+      customer_email: 'teste@dev.com',
+      product_id: 'memorizacao_seduc_ms'
+    });
+  }
+
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
     res.json({ 
       status: session.payment_status,
-      customer_email: session.customer_details?.email
+      customer_email: session.customer_details?.email,
+      product_id: session.metadata?.product_id
     });
   } catch (err) {
     console.error('Erro ao verificar sessão:', err);
@@ -143,26 +165,39 @@ app.get('/api/check-session/:sessionId', async (req, res) => {
   }
 });
 
-// Endpoint para obter chave pública
+// Obter chave pública do Stripe
 app.get('/config', (req, res) => {
   res.json({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
 });
 
-// Rota para health check
+// Health check
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// ==========================================
+// ROTAS DOS FLASHCARDS
+// ==========================================
+
+// Página principal dos flashcards
+app.get('/flashcards', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'flashcards', 'index.html'));
+});
+
+// Página de estudo
+app.get('/flashcards/study', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'flashcards', 'study.html'));
+});
+
+// ==========================================
+// INICIALIZAÇÃO
+// ==========================================
+
 app.listen(PORT, () => {
   console.log(`🚀 Concurso Store rodando em: http://localhost:${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
-});
-
-// Rotas para flashcards
-app.get('/flashcards', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'flashcards', 'index.html'));
-});
-
-app.get('/flashcards/study', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'flashcards', 'study.html'));
+  if (DEV_MODE) {
+    console.log(`🔓 Modo de desenvolvimento ATIVADO`);
+    console.log(`📝 Use session_id=dev_test para testar sem pagamento`);
+  }
 });
