@@ -29,7 +29,7 @@
 
         .baralhos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
@@ -54,6 +54,28 @@
             border-radius: 20px;
             font-size: 0.8rem;
             margin-top: 0.5rem;
+        }
+        .badge-basico {
+            display: inline-block;
+            background: #17a2b8;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            margin-top: 0.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-especifico {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            margin-top: 0.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }
         .voltar { display: inline-block; margin-top: 1rem; color: #e94560; text-decoration: none; }
         .voltar:hover { text-decoration: underline; }
@@ -172,10 +194,52 @@
         const urlParams = new URLSearchParams(window.location.search);
         const SESSION_ID = urlParams.get('session_id');
 
-        // Dados dos baralhos
+        // ==========================================
+        // TODOS OS 7 BARALHOS DO INSS
+        // ==========================================
         const baralhos = {
-            'portugues': { nome: 'Língua Portuguesa', arquivo: 'flashcards-portugues.csv' },
-            'especificos': { nome: 'Conhecimentos Específicos', arquivo: 'flashcards-especificos.csv' }
+            'portugues': { 
+                nome: 'Língua Portuguesa', 
+                arquivo: 'flashcards-portugues.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'constitucional': { 
+                nome: 'Direito Constitucional', 
+                arquivo: 'flashcards-constitucional.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'administrativo': { 
+                nome: 'Direito Administrativo', 
+                arquivo: 'flashcards-administrativo.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'etica': { 
+                nome: 'Ética no Serviço Público', 
+                arquivo: 'flashcards-etica.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'logica': { 
+                nome: 'Raciocínio Lógico-Matemático', 
+                arquivo: 'flashcards-logica.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'informatica': { 
+                nome: 'Noções de Informática', 
+                arquivo: 'flashcards-informatica.csv',
+                badge: 'Básico',
+                badgeClass: 'badge-basico'
+            },
+            'especificos': { 
+                nome: 'Conhecimentos Específicos', 
+                arquivo: 'flashcards-especificos.csv',
+                badge: 'Específico',
+                badgeClass: 'badge-especifico'
+            }
         };
 
         let state = {
@@ -191,11 +255,20 @@
         async function carregarFlashcards(baralhoId) {
             try {
                 const response = await fetch(`/material/inss-2022/flashcards/${baralhos[baralhoId].arquivo}`);
+                if (!response.ok) {
+                    console.warn(`Arquivo ${baralhos[baralhoId].arquivo} não encontrado.`);
+                    return [];
+                }
                 const text = await response.text();
                 const linhas = text.split('\n').filter(line => line.trim());
                 const cards = linhas.map((linha, index) => {
                     const partes = linha.split(';');
-                    return { id: index + 1, frente: partes[0] || '', verso: partes[1] || '', tags: partes[2] || '' };
+                    return { 
+                        id: index + 1, 
+                        frente: partes[0] || '', 
+                        verso: partes[1] || '', 
+                        tags: partes[2] || '' 
+                    };
                 });
                 return cards;
             } catch (error) {
@@ -208,29 +281,56 @@
             const container = document.getElementById('app');
             let html = `
                 <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">INSS 2022 - Técnico do Seguro Social</h2>
-                <p style="color: #6c757d; margin-bottom: 1rem;">Escolha uma matéria para estudar</p>
+                <p style="color: #6c757d; margin-bottom: 0.5rem;">Conhecimentos Básicos (P1) e Específicos (P2)</p>
+                <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Total: 295 flashcards</p>
                 <div class="baralhos-grid">
             `;
             let totalCards = 0;
+            let totalBasico = 0;
+            let totalEspecifico = 0;
+            
             for (const [id, baralho] of Object.entries(baralhos)) {
                 const cards = await carregarFlashcards(id);
-                totalCards += cards.length;
+                const cardCount = cards.length;
+                totalCards += cardCount;
+                if (baralho.badge === 'Básico') totalBasico += cardCount;
+                else totalEspecifico += cardCount;
+                
                 const progresso = localStorage.getItem(`flashcards_inss-2022_${id}`);
                 const revisados = progresso ? JSON.parse(progresso).filter(c => c.revisado).length : 0;
-                const status = revisados > 0 ? `${revisados}/${cards.length} revisados` : `${cards.length} cards`;
+                const status = revisados > 0 ? `${revisados}/${cardCount} revisados` : `${cardCount} cards`;
+                
                 html += `
                     <div class="baralho-card" onclick="selecionarBaralho('${id}')">
                         <h3>${baralho.nome}</h3>
+                        <span class="${baralho.badgeClass}">${baralho.badge}</span>
                         <p>${status}</p>
-                        <span class="qtd">${cards.length} questões</span>
+                        <span class="qtd">${cardCount} questões</span>
                     </div>
                 `;
             }
+            
             html += `
                 </div>
-                <div style="margin-top: 2rem; text-align: center; color: #6c757d; font-size: 0.9rem;">
+                <div style="margin-top: 2rem; padding: 1rem; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; text-align: center;">
+                        <div>
+                            <span style="font-weight: 700; font-size: 1.5rem; color: #17a2b8;">${totalBasico}</span>
+                            <p style="color: #6c757d; font-size: 0.85rem;">Cards - P1 (Básicos)</p>
+                        </div>
+                        <div>
+                            <span style="font-weight: 700; font-size: 1.5rem; color: #e94560;">${totalEspecifico}</span>
+                            <p style="color: #6c757d; font-size: 0.85rem;">Cards - P2 (Específicos)</p>
+                        </div>
+                        <div>
+                            <span style="font-weight: 700; font-size: 1.5rem; color: #1a1a2e;">${totalCards}</span>
+                            <p style="color: #6c757d; font-size: 0.85rem;">Total de flashcards</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; text-align: center; color: #6c757d; font-size: 0.9rem;">
                     <p>Clique em um baralho para começar a estudar</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Total: ${totalCards} cards disponíveis</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Seu progresso é salvo automaticamente</p>
                 </div>
                 <a href="/" class="voltar">← Voltar à loja</a>
             `;
@@ -241,7 +341,11 @@
             const cards = await carregarFlashcards(baralhoId);
             if (!cards || cards.length === 0) {
                 document.getElementById('app').innerHTML = `
-                    <div class="erro"><h2>Erro ao carregar</h2><p>Não foi possível carregar os flashcards.</p></div>
+                    <div class="erro">
+                        <h2>Baralho não disponível</h2>
+                        <p>O arquivo de flashcards ainda não foi criado.</p>
+                        <a href="#" onclick="paginaInicial()" class="voltar">← Voltar</a>
+                    </div>
                 `;
                 return;
             }
