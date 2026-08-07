@@ -1,0 +1,35 @@
+O que é uma proposição lógica?;Frase que pode ser classificada como verdadeira ou falsa;Lógica, Proposições
+O que é uma proposição simples?;Frase com uma única afirmação;Lógica, Proposições
+O que é uma proposição composta?;Frase com mais de uma afirmação, ligadas por conectivos;Lógica, Proposições
+O que é tabela-verdade?;Tabela que mostra os valores lógicos de uma proposição composta;Lógica, Tabela-verdade
+O que é o conectivo "e" (∧)?;Conjunção - verdadeira apenas quando ambas proposições são verdadeiras;Lógica, Conectivos
+O que é o conectivo "ou" (∨)?;Disjunção - verdadeira quando pelo menos uma proposição é verdadeira;Lógica, Conectivos
+O que é o conectivo "se...então" (→)?;Condicional - falsa apenas quando primeira é verdadeira e segunda falsa;Lógica, Conectivos
+O que é o conectivo "se e somente se" (↔)?;Bicondicional - verdadeira quando ambas têm o mesmo valor lógico;Lógica, Conectivos
+O que é a negação (¬)?;Inverte o valor lógico da proposição;Lógica, Conectivos
+O que é tautologia?;Proposição composta sempre verdadeira;Lógica, Tautologia
+O que é contradição?;Proposição composta sempre falsa;Lógica, Contradição
+O que é contingência?;Proposição que pode ser verdadeira ou falsa;Lógica, Contingência
+O que é um conjunto?;Agrupamento de elementos com características comuns;Lógica, Conjuntos
+O que é união de conjuntos?;Reunião de todos os elementos de dois ou mais conjuntos;Lógica, Conjuntos
+O que é interseção de conjuntos?;Elementos comuns a dois ou mais conjuntos;Lógica, Conjuntos
+O que é diferença de conjuntos?;Elementos de um conjunto que não estão no outro;Lógica, Conjuntos
+O que é complementar de um conjunto?;Elementos que não pertencem ao conjunto dentro de um universo;Lógica, Conjuntos
+O que é um diagrama lógico?;Representação visual de conjuntos e relações lógicas;Lógica, Diagramas
+O que é porcentagem?;Razão centesimal representada pelo símbolo %;Lógica, Porcentagem
+Como calcular porcentagem?;Valor × (percentual/100);Lógica, Porcentagem
+O que é a regra de três?;Método para resolver problemas de proporcionalidade;Lógica, Proporção
+O que é proporcionalidade direta?;Quando duas grandezas aumentam ou diminuem na mesma proporção;Lógica, Proporção
+O que é proporcionalidade inversa?;Quando uma grandeza aumenta e a outra diminui na mesma proporção;Lógica, Proporção
+O que é média aritmética simples?;Soma dos valores dividida pela quantidade;Lógica, Estatística
+O que é média ponderada?;Média onde os valores têm pesos diferentes;Lógica, Estatística
+O que é um argumento lógico?;Sequência de proposições onde uma conclusão é derivada das premissas;Lógica, Argumentos
+O que é um silogismo?;Argumento com duas premissas e uma conclusão;Lógica, Silogismo
+O que é equivalência lógica?;Duas proposições com a mesma tabela-verdade;Lógica, Equivalência
+O que é a Lei de De Morgan?;¬(P∧Q) = ¬P∨¬Q e ¬(P∨Q) = ¬P∧¬Q;Lógica, De Morgan
+O que é uma sentença aberta?;Frase com variável que pode ser verdadeira ou falsa;Lógica, Sentenças
+O que é quantificador universal?;Indica que a proposição vale para todos os elementos (∀);Lógica, Quantificadores
+O que é quantificador existencial?;Indica que existe pelo menos um elemento (∃);Lógica, Quantificadores
+O que é negação de proposição composta?;Negar uma conjunção, disjunção ou condicional;Lógica, Negação
+O que é a negação de "P → Q"?;P ∧ ¬Q;Lógica, Negação
+O que é raciocínio dedutivo?;Raciocínio que parte do geral para o particular;Lógica, Dedução

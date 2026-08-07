@@ -1,30 +1,77 @@
-O que é Seguridade Social?;Conjunto de políticas públicas nas áreas de saúde, previdência e assistência social;Seguridade Social, Conceito
-Quais são os princípios da Seguridade Social?;Universalidade da cobertura, uniformidade, seletividade, irredutibilidade, equidade, diversidade;Seguridade Social, Princípios
+O que é Seguridade Social?;Conjunto de políticas públicas nas áreas de saúde, previdência e assistência social;Seguridade, Conceito
+Quais são os princípios da Seguridade Social?;Universalidade da cobertura, uniformidade, seletividade, irredutibilidade, equidade, diversidade;Seguridade, Princípios
+O que é universalidade da cobertura?;Todas as pessoas devem ter acesso à seguridade social;Seguridade, Princípios
+O que é uniformidade na seguridade?;Mesmas regras para todos os segurados;Seguridade, Princípios
+O que é seletividade na seguridade?;Benefícios devem ser adequados às necessidades;Seguridade, Princípios
+O que é irredutibilidade?;Os benefícios não podem ser reduzidos;Seguridade, Princípios
+O que é equidade na seguridade?;Tratamento justo para situações diferentes;Seguridade, Princípios
 O que é o RGPS?;Regime Geral de Previdência Social - sistema previdenciário para trabalhadores da iniciativa privada;RGPS, Conceito
 Quem são os segurados obrigatórios do INSS?;Empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial;RGPS, Segurados
+O que é empregado para o INSS?;Pessoa que presta serviços a empregador, com subordinação e salário;RGPS, Segurados
+O que é empregado doméstico?;Trabalhador que presta serviços a uma família;RGPS, Segurados
+O que é contribuinte individual?;Trabalhador autônomo que contribui para o INSS;RGPS, Segurados
+O que é trabalhador avulso?;Trabalhador sem vínculo empregatício, que presta serviços a várias empresas;RGPS, Segurados
+O que é segurado especial?;Trabalhador rural que exerce atividades em regime de economia familiar;RGPS, Segurados
+O que é segurado facultativo?;Pessoa que não exerce atividade remunerada mas contribui para o INSS;RGPS, Segurados
 O que é filiação no INSS?;Vínculo inicial do segurado ao RGPS;RGPS, Filiação
 O que é inscrição no INSS?;Cadastro do segurado no sistema previdenciário;RGPS, Inscrição
-O que é salário de contribuição?;Base de cálculo para recolhimento das contribuições previdenciárias;Contribuições, Salário de Contribuição
-Quais são as alíquotas de contribuição do INSS?;7,5%, 9%, 12%, 14% (progressivas até o teto);Contribuições, Alíquotas
-O que é carência?;Número mínimo de contribuições mensais para ter direito a benefícios;Benefícios, Carência
-O que é salário de benefício?;Média dos salários de contribuição, usado para calcular o valor dos benefícios;Benefícios, Salário de Benefício
-Quais são os principais benefícios do INSS?;Aposentadoria (por idade, por tempo, especial), auxílio-doença, auxílio-acidente, pensão por morte;Benefícios, Aposentadoria
-O que é aposentadoria por idade?;Benefício para segurados que completam 65 anos (homens) ou 62 anos (mulheres);Benefícios, Aposentadoria
-O que é auxílio-doença?;Benefício para segurados incapacitados temporariamente para o trabalho;Benefícios, Auxílio-doença
-O que é pensão por morte?;Benefício pago aos dependentes do segurado falecido;Benefícios, Pensão
-O que é o BPC/LOAS?;Benefício de Prestação Continuada da Lei Orgânica da Assistência Social;LOAS, BPC
-Quem tem direito ao BPC?;Idosos com 65+ e pessoas com deficiência, ambos com renda familiar per capita inferior a 1/4 do salário mínimo;LOAS, BPC
+Quem são os dependentes do INSS?;Cônjuge, companheiro(a), filhos menores de 21 anos ou inválidos, pais, irmãos;RGPS, Dependentes
 O que é a Lei 8.212/91?;Lei que trata da organização da Seguridade Social;Legislação, Lei 8.212/91
 O que é a Lei 8.213/91?;Lei que trata dos benefícios da Previdência Social;Legislação, Lei 8.213/91
 O que é o Decreto 3.048/99?;Regulamento da Previdência Social;Legislação, Decreto 3.048/99
 O que é a Instrução Normativa 128/2022?;Norma do INSS que consolida procedimentos previdenciários;Legislação, IN 128/2022
 O que é a EC 103/2019?;Emenda Constitucional da Reforma da Previdência;Legislação, EC 103/2019
-O que é a Lei Complementar 142/2013?;Estabelece regras para aposentadoria de pessoas com deficiência;Legislação, LC 142/2013
-O que é auxílio-inclusão?;Benefício pago a pessoas com deficiência que ingressam no mercado de trabalho;LOAS, Auxílio-Inclusão
+O que é a LC 142/2013?;Estabelece regras para aposentadoria de pessoas com deficiência;Legislação, LC 142/2013
 O que é a Lei 10.779/2003?;Institui o seguro desemprego para pescadores artesanais (seguro defeso);Legislação, Seguro Defeso
-O que é compensação previdenciária?;Troca de informações entre regimes de previdência para contagem recíproca de tempo;Regimes Próprios, Compensação
-O que é Certidão de Tempo de Contribuição (CTC)?;Documento que comprova o tempo de contribuição do segurado;Regimes Próprios, CTC
+O que é o seguro defeso?;Benefício pago ao pescador artesanal durante o período de defeso;Legislação, Seguro Defeso
 O que é a Lei 11.520/2007?;Concede pensão especial a pessoas atingidas pela hanseníase;Legislação, Pensão Especial
 O que é a Lei 9.422/1996?;Concede pensão especial às vítimas de hemodiálise de Caruaru;Legislação, Pensão Especial
+O que é a Lei 9.425/1996?;Concede pensão vitalícia às vítimas do Césio 137;Legislação, Pensão Especial
 O que é a Lei 14.176/2021?;Altera a Lei Orgânica da Assistência Social (LOAS);Legislação, LOAS
 O que é a Lei 13.985/2020?;Concede pensão especial a crianças com Síndrome Congênita do Zika Vírus;Legislação, Pensão Especial
+O que é a Lei 7.070/1982?;Concede pensão especial às vítimas da Síndrome de Talidomida;Legislação, Pensão Especial
+O que é a Lei 7.986/1989?;Concede pensão especial aos seringueiros;Legislação, Pensão Especial
+O que é a Lei 8.059/1990?;Concede pensão especial aos ex-combatentes;Legislação, Pensão Especial
+O que é a Lei 10.559/2002?;Concede aposentadoria e pensão excepcional a anistiados políticos;Legislação, Pensão Especial
+O que é salário de contribuição?;Base de cálculo para recolhimento das contribuições previdenciárias;Contribuições, Salário
+Quais são as parcelas integrantes do salário de contribuição?;Salário, gratificações, comissões, horas extras, etc.;Contribuições, Salário
+Quais são as parcelas não integrantes do salário de contribuição?;Férias (com adicional), 13º salário, vale-transporte, etc.;Contribuições, Salário
+Qual é o limite mínimo do salário de contribuição?;O salário mínimo;Contribuições, Salário
+Qual é o limite máximo do salário de contribuição?;O teto do INSS;Contribuições, Salário
+O que é carência?;Número mínimo de contribuições mensais para ter direito a benefícios;Benefícios, Carência
+Quais benefícios têm carência?;Aposentadoria, auxílio-doença, salário-maternidade, etc.;Benefícios, Carência
+O que é salário de benefício?;Média dos salários de contribuição, usado para calcular o valor dos benefícios;Benefícios, Salário
+O que é renda mensal do benefício?;Valor do benefício após aplicação do fator previdenciário;Benefícios, Renda
+O que é reajustamento do benefício?;Atualização anual do valor dos benefícios;Benefícios, Reajuste
+Quais são os principais benefícios do INSS?;Aposentadorias (por idade, tempo, especial), auxílio-doença, auxílio-acidente, pensão por morte, salário-maternidade;Benefícios, Aposentadoria
+O que é aposentadoria por idade?;Benefício para segurados que completam 65 anos (homens) ou 62 anos (mulheres);Benefícios, Aposentadoria
+O que é aposentadoria por tempo de contribuição?;Benefício para segurados que completam o tempo mínimo de contribuição;Benefícios, Aposentadoria
+O que é aposentadoria especial?;Benefício para segurados que trabalham em atividades insalubres ou perigosas;Benefícios, Aposentadoria
+O que é auxílio-doença?;Benefício para segurados incapacitados temporariamente para o trabalho;Benefícios, Auxílio-doença
+O que é auxílio-acidente?;Benefício para segurados que sofrem acidente e ficam com sequela permanente;Benefícios, Auxílio-acidente
+O que é pensão por morte?;Benefício pago aos dependentes do segurado falecido;Benefícios, Pensão
+O que é salário-maternidade?;Benefício pago à segurada durante o período de gestação e pós-parto;Benefícios, Salário-maternidade
+O que é a LOAS?;Lei Orgânica da Assistência Social (Lei 8.742/93);LOAS, Conceito
+O que é o BPC/LOAS?;Benefício de Prestação Continuada da Lei Orgânica da Assistência Social;LOAS, BPC
+Quem tem direito ao BPC?;Idosos com 65+ e pessoas com deficiência, ambos com renda familiar per capita inferior a 1/4 do salário mínimo;LOAS, BPC
+O que é auxílio-inclusão?;Benefício pago a pessoas com deficiência que ingressam no mercado de trabalho;LOAS, Auxílio-Inclusão
+O que é compensação previdenciária?;Troca de informações entre regimes de previdência para contagem recíproca de tempo;Regimes Próprios, Compensação
+O que é Certidão de Tempo de Contribuição (CTC)?;Documento que comprova o tempo de contribuição do segurado;Regimes Próprios, CTC
+O que é contagem recíproca de tempo?;Soma de tempo de contribuição em diferentes regimes;Regimes Próprios, Contagem
+O que são regimes próprios de previdência?;Sistemas previdenciários para servidores públicos da União, estados e municípios;Regimes Próprios, Conceito
+O que é manutenção da qualidade de segurado?;Período em que o segurado mantém direitos mesmo sem contribuir;RGPS, Qualidade
+O que é perda da qualidade de segurado?;Quando o segurado perde os direitos previdenciários;RGPS, Qualidade
+O que é restabelecimento da qualidade de segurado?;Recuperação dos direitos previdenciários;RGPS, Qualidade
+O que é o serviço social no INSS?;Atendimento para orientar os segurados sobre benefícios e serviços;INSS, Serviços
+O que é reabilitação profissional?;Programa para readaptar segurados incapacitados para o trabalho;INSS, Serviços
+O que é o Conselho de Recursos da Previdência Social (CRPS)?;Órgão para julgamento de recursos administrativos;INSS, Recursos
+O que é a Junta de Recursos do INSS?;Primeira instância para recursos administrativos;INSS, Recursos
+O que é decadência?;Perda do direito de cobrar contribuições após 5 anos;INSS, Decadência
+O que é prescrição?;Perda do direito de cobrar benefícios após 5 anos;INSS, Prescrição
+O que são crimes contra a seguridade social?;Apropriação indébita, sonegação de contribuições, falsificação de documentos;INSS, Crimes
+O que é a empresa para fins previdenciários?;Qualquer pessoa física ou jurídica que contrata trabalhadores;INSS, Empresa
+O que são as receitas da Seguridade Social?;Contribuições, impostos e outras fontes de financiamento;Financiamento, Receitas
+O que são contribuições sociais?;Recursos arrecadados para financiar a Seguridade Social;Financiamento, Contribuições
+O que é o prazo de recolhimento de contribuições?;Até o dia 20 do mês seguinte;Financiamento, Recolhimento
+O que é a atualização monetária?;Correção do valor de contribuições em atraso;Financiamento, Atualização
+O que é o fator previdenciário?;Fator que reduz o valor da aposentadoria por tempo de contribuição;Benefícios, Fator
