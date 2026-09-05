@@ -15,10 +15,68 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ==========================================
-// MIDDLEWARES (ORDEM CORRETA É IMPORTANTE!)
+// CORS (pode ficar antes de tudo)
 // ==========================================
 app.use(cors());
-app.use(express.json());  // <-- DEVE VIR ANTES DAS ROTAS!
+
+// ==========================================
+// WEBHOOK DO STRIPE - PRIMEIRO DE TUDO!
+// NÃO PODE PASSAR PELO express.json()
+// ==========================================
+app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
+  console.log('📨 Webhook recebido');
+  console.log('📨 Headers:', req.headers);
+  console.log('📨 Body type:', typeof req.body);
+  console.log('📨 Body is Buffer?', Buffer.isBuffer(req.body));
+  
+  const sig = req.headers['stripe-signature'];
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  
+  if (!webhookSecret) {
+    console.error('⚠️ STRIPE_WEBHOOK_SECRET não configurado!');
+    return res.status(400).send('Webhook secret não configurado');
+  }
+
+  let event;
+  try {
+    // req.body agora é um Buffer (raw body)
+    event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
+  } catch (err) {
+    console.error('❌ Erro no webhook:', err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+  
+  console.log(`✅ Webhook recebido: ${event.type} (ID: ${event.id})`);
+
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object;
+    const email = session.customer_details?.email;
+    const productName = session.metadata?.product_name || 'Material de Estudo';
+    const sessionId = session.id;
+    
+    console.log(`💳 Pagamento confirmado para ${email} - Produto: ${productName}`);
+    
+    try {
+      const { enviarMaterial } = require('./config/email');
+      const resultado = await enviarMaterial(email, productName, sessionId);
+      if (resultado) {
+        console.log(`📧 E-mail enviado com sucesso para ${email}`);
+      } else {
+        console.log(`❌ Falha ao enviar e-mail para ${email}`);
+      }
+    } catch (error) {
+      console.error('❌ Erro ao enviar e-mail:', error.message);
+      console.error('❌ Erro completo:', error);
+    }
+  }
+  
+  res.json({ received: true });
+});
+
+// ==========================================
+// MIDDLEWARES (DEPOIS DO WEBHOOK)
+// ==========================================
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ==========================================
@@ -158,7 +216,6 @@ app.get('/api/check-session/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
   console.log(`🔍 Verificando sessão: ${sessionId}`);
 
-  // 🔓 MODO DE DESENVOLVIMENTO: Aceita sessões de teste
   if (DEV_MODE && (sessionId === 'cs_test_teste123' || sessionId.startsWith('dev_'))) {
     console.log(`🔓 Modo DEV: Acesso liberado para ${sessionId}`);
     return res.json({
@@ -207,64 +264,12 @@ app.get('/flashcards/study', (req, res) => {
 });
 
 // ==========================================
-// ROTAS DO MATERIAL (para servir arquivos estáticos)
+// ROTAS DO MATERIAL
 // ==========================================
 
-// Serve qualquer arquivo da pasta material
 app.get('/material/*', (req, res) => {
   const filePath = req.params[0];
   res.sendFile(path.join(__dirname, 'public', 'material', filePath));
-});
-
-// ==========================================
-// WEBHOOK DO STRIPE
-// ==========================================
-
-app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
-  console.log('📨 Webhook recebido');
-  const sig = req.headers['stripe-signature'];
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-  
-  // Verifica se o webhook está configurado
-  if (!webhookSecret) {
-    console.error('⚠️ STRIPE_WEBHOOK_SECRET não configurado!');
-    return res.status(400).send('Webhook secret não configurado');
-  }
-
-  let event;
-  try {
-    event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
-  } catch (err) {
-    console.error('❌ Erro no webhook:', err.message);
-    return res.status(400).send(`Webhook Error: ${err.message}`);
-  }
-  
-  console.log(`✅ Webhook recebido: ${event.type} (ID: ${event.id})`);
-
-  // Processa apenas eventos de pagamento concluído
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-    const email = session.customer_details?.email;
-    const productName = session.metadata?.product_name || 'Material de Estudo';
-    const sessionId = session.id;
-    
-    console.log(`💳 Pagamento confirmado para ${email} - Produto: ${productName}`);
-    
-    try {
-      const { enviarMaterial } = require('./config/email');
-      const resultado = await enviarMaterial(email, productName, sessionId);
-      if (resultado) {
-        console.log(`📧 E-mail enviado com sucesso para ${email}`);
-      } else {
-        console.log(`❌ Falha ao enviar e-mail para ${email}`);
-      }
-    } catch (error) {
-      console.error('❌ Erro ao enviar e-mail:', error.message);
-    }
-  }
-  
-  // Responde ao Stripe confirmando que recebeu
-  res.json({ received: true });
 });
 
 // ==========================================
