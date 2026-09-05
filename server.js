@@ -15,9 +15,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ==========================================
+// MIDDLEWARES (ORDEM CORRETA É IMPORTANTE!)
+// ==========================================
+app.use(cors());
+app.use(express.json());  // <-- DEVE VIR ANTES DAS ROTAS!
+app.use(express.static(path.join(__dirname, 'public')));
+
+// ==========================================
 // MODO DE DESENVOLVIMENTO
 // ==========================================
-const DEV_MODE = process.env.DEV_MODE === 'true' || true; // Ativado por padrão
+const DEV_MODE = process.env.DEV_MODE === 'true' || true;
 
 // ==========================================
 // PRODUTOS
@@ -96,14 +103,26 @@ app.get('/api/products', (req, res) => {
 
 // Criar sessão de checkout Stripe
 app.post('/create-checkout-session', async (req, res) => {
+  console.log('📥 POST /create-checkout-session recebido');
+  console.log('📦 Body:', req.body);
+  
   const { productId } = req.body;
+  
+  if (!productId) {
+    console.log('❌ productId não fornecido');
+    return res.status(400).json({ error: 'productId não fornecido' });
+  }
+  
   const product = products.find(p => p.id === productId);
   
   if (!product) {
+    console.log('❌ Produto não encontrado:', productId);
     return res.status(400).json({ error: 'Produto inválido' });
   }
 
   try {
+    console.log(`🔄 Criando sessão para: ${product.name} (R$ ${product.price/100})`);
+    
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card', 'boleto'],
       mode: 'payment',
@@ -126,9 +145,10 @@ app.post('/create-checkout-session', async (req, res) => {
       }
     });
     
+    console.log(`✅ Sessão criada: ${session.id}`);
     res.json({ id: session.id, url: session.url });
   } catch (err) {
-    console.error('Erro ao criar sessão:', err);
+    console.error('❌ Erro ao criar sessão:', err);
     res.status(500).json({ error: 'Erro ao criar sessão de pagamento' });
   }
 });
@@ -136,6 +156,7 @@ app.post('/create-checkout-session', async (req, res) => {
 // Verificar status do pagamento (COM MODO DE TESTE)
 app.get('/api/check-session/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
+  console.log(`🔍 Verificando sessão: ${sessionId}`);
 
   // 🔓 MODO DE DESENVOLVIMENTO: Aceita sessões de teste
   if (DEV_MODE && (sessionId === 'cs_test_teste123' || sessionId.startsWith('dev_'))) {
@@ -149,13 +170,14 @@ app.get('/api/check-session/:sessionId', async (req, res) => {
 
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
+    console.log(`✅ Sessão encontrada: ${sessionId} - Status: ${session.payment_status}`);
     res.json({ 
       status: session.payment_status,
       customer_email: session.customer_details?.email,
       product_id: session.metadata?.product_id
     });
   } catch (err) {
-    console.error('Erro ao verificar sessão:', err);
+    console.error('❌ Erro ao verificar sessão:', err);
     res.status(500).json({ error: 'Erro ao verificar pagamento' });
   }
 });
@@ -199,6 +221,7 @@ app.get('/material/*', (req, res) => {
 // ==========================================
 
 app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
+  console.log('📨 Webhook recebido');
   const sig = req.headers['stripe-signature'];
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   
