@@ -14,11 +14,6 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-
 // ==========================================
 // MODO DE DESENVOLVIMENTO
 // ==========================================
@@ -187,6 +182,66 @@ app.get('/flashcards', (req, res) => {
 // Página de estudo
 app.get('/flashcards/study', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'flashcards', 'study.html'));
+});
+
+// ==========================================
+// ROTAS DO MATERIAL (para servir arquivos estáticos)
+// ==========================================
+
+// Serve qualquer arquivo da pasta material
+app.get('/material/*', (req, res) => {
+  const filePath = req.params[0];
+  res.sendFile(path.join(__dirname, 'public', 'material', filePath));
+});
+
+// ==========================================
+// WEBHOOK DO STRIPE
+// ==========================================
+
+app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
+  const sig = req.headers['stripe-signature'];
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  
+  // Verifica se o webhook está configurado
+  if (!webhookSecret) {
+    console.error('⚠️ STRIPE_WEBHOOK_SECRET não configurado!');
+    return res.status(400).send('Webhook secret não configurado');
+  }
+
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
+  } catch (err) {
+    console.error('❌ Erro no webhook:', err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+  
+  console.log(`✅ Webhook recebido: ${event.type} (ID: ${event.id})`);
+
+  // Processa apenas eventos de pagamento concluído
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object;
+    const email = session.customer_details?.email;
+    const productName = session.metadata?.product_name || 'Material de Estudo';
+    const sessionId = session.id;
+    
+    console.log(`💳 Pagamento confirmado para ${email} - Produto: ${productName}`);
+    
+    try {
+      const { enviarMaterial } = require('./config/email');
+      const resultado = await enviarMaterial(email, productName, sessionId);
+      if (resultado) {
+        console.log(`📧 E-mail enviado com sucesso para ${email}`);
+      } else {
+        console.log(`❌ Falha ao enviar e-mail para ${email}`);
+      }
+    } catch (error) {
+      console.error('❌ Erro ao enviar e-mail:', error.message);
+    }
+  }
+  
+  // Responde ao Stripe confirmando que recebeu
+  res.json({ received: true });
 });
 
 // ==========================================
