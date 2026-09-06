@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado INSS 2022 - 120 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f9;
+            padding: 1.5rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .header .stats span {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .grupo {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .grupo h2 {
+            color: #0f0f1a;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e94560;
+        }
+        .grupo .subtitle {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .questao {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #e94560;
+        }
+        .questao .numero {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .questao .texto {
+            margin: 0.5rem 0 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #6c757d;
+            font-size: 0.95rem;
+        }
+        .questao .enunciado {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .alternativas {
+            list-style: none;
+            padding: 0;
+        }
+        .alternativas li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f3f5;
+        }
+        .alternativas li:last-child { border-bottom: none; }
+        .alternativas li::before {
+            content: attr(data-letra);
+            color: #e94560;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .gabarito {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .gabarito.visible { display: block; }
+        .gabarito strong { color: #e94560; }
+        .btn {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #c0392b; }
+        .btn-secondary { background: #6c757d; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .progresso {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .progresso .barra {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .progresso .barra-fill {
+            height: 100%;
+            background: #e94560;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .progresso .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .dica-tempo {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .header .stats span { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
+            .questao { padding: 1rem; }
+            .btn-group { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Simulado INSS 2022</h1>
+            <p>Técnico do Seguro Social - 120 questões</p>
+            <div class="stats">
+                <span>📄 120 questões</span>
+                <span>⏱️ 3h30</span>
+                <span>📊 120 pontos</span>
+            </div>
+        </div>
+
+        <div class="dica-tempo">
+            ⏰ Tempo sugerido: 3h30 | Formato: Certo (C) ou Errado (E)
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 120</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">⬅ Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima ➡</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Mostrar Gabarito</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+    </div>
+
+    <script>
+        // ============================================
+        // 120 QUESTÕES - INSS 2022 (Certo/Errado)
+        // ============================================
+        const questoes = [
+            // ========================================
+            // PARTE 1: CONHECIMENTOS BÁSICOS (1-50)
+            // ========================================
+            // LÍNGUA PORTUGUESA (1-15)
+            { id: 1, grupo: 'P1 - Língua Portuguesa', enunciado: 'A interpretação de texto envolve a capacidade de compreender o sentido global do texto, identificando ideias principais, inferências e intenções do autor.', correta: true, explicacao: 'A interpretação textual realmente envolve todos esses elementos.' },
+            { id: 2, grupo: 'P1 - Língua Portuguesa', enunciado: 'Os textos dissertativos têm como principal característica a narração de fatos e histórias.', correta: false, explicacao: 'Textos dissertativos expõem e defendem ideias, não narram histórias. A narração é característica do texto narrativo.' },
+            { id: 3, grupo: 'P1 - Língua Portuguesa', enunciado: 'A crase é a fusão da preposição "a" com o artigo "a" ou com o pronome demonstrativo "aquela".', correta: true, explicacao: 'A crase ocorre pela fusão da preposição "a" com o artigo "a", pronome demonstrativo ou com o "a" inicial de "aquele/aquilo".' },
+            { id: 4, grupo: 'P1 - Língua Portuguesa', enunciado: 'A palavra "café" é acentuada por ser uma oxítona terminada em "e".', correta: true, explicacao: 'Oxítonas terminadas em "e" são acentuadas. "Café" é oxítona terminada em "e".' },
+            { id: 5, grupo: 'P1 - Língua Portuguesa', enunciado: 'Os advérbios são palavras que modificam apenas os verbos.', correta: false, explicacao: 'Advérbios modificam verbos, adjetivos e outros advérbios.' },
+            { id: 6, grupo: 'P1 - Língua Portuguesa', enunciado: 'O período composto é aquele que possui duas ou mais orações.', correta: true, explicacao: 'Período composto é formado por duas ou mais orações.' },
+            { id: 7, grupo: 'P1 - Língua Portuguesa', enunciado: 'A pontuação não interfere no sentido do texto, sendo apenas um recurso estilístico.', correta: false, explicacao: 'A pontuação é fundamental para a clareza e pode alterar completamente o sentido de um texto.' },
+            { id: 8, grupo: 'P1 - Língua Portuguesa', enunciado: 'A concordância verbal estabelece que o verbo deve concordar em número e pessoa com o sujeito.', correta: true, explicacao: 'A concordância verbal é a flexão do verbo para concordar com o sujeito em número e pessoa.' },
+            { id: 9, grupo: 'P1 - Língua Portuguesa', enunciado: 'Os pronomes pessoais do caso reto podem funcionar como objetos diretos na oração.', correta: false, explicacao: 'Pronomes pessoais do caso reto funcionam como sujeito. Os pronomes oblíquos funcionam como complementos.' },
+            { id: 10, grupo: 'P1 - Língua Portuguesa', enunciado: 'A redação oficial deve ser impessoal, clara, precisa, objetiva, concisa, coesa e coerente.', correta: true, explicacao: 'Esses são os atributos da redação oficial, conforme Manual de Redação da Presidência.' },
+            { id: 11, grupo: 'P1 - Língua Portuguesa', enunciado: '"Fazem cinco anos que trabalho aqui" é uma frase com concordância verbal correta.', correta: false, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular: "Faz cinco anos".' },
+            { id: 12, grupo: 'P1 - Língua Portuguesa', enunciado: 'O sujeito pode ser classificado como simples, composto, oculto ou indeterminado.', correta: true, explicacao: 'Essas são as classificações possíveis para o sujeito da oração.' },
+            { id: 13, grupo: 'P1 - Língua Portuguesa', enunciado: 'A intertextualidade ocorre quando um texto faz referência a outro texto.', correta: true, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 14, grupo: 'P1 - Língua Portuguesa', enunciado: 'No ofício, a identificação do remetente deve ser feita por meio de rubrica manual.', correta: false, explicacao: 'No ofício, a identificação do remetente deve ser feita por meio de carimbo ou identificação impressa, não rubrica.' },
+            { id: 15, grupo: 'P1 - Língua Portuguesa', enunciado: 'A denotação é o sentido figurado da palavra, enquanto a conotação é o sentido literal.', correta: false, explicacao: 'Denotação é o sentido literal; conotação é o sentido figurado.' },
+
+            // DIREITO CONSTITUCIONAL (16-22)
+            { id: 16, grupo: 'P1 - Direito Constitucional', enunciado: 'O direito à vida é um direito fundamental garantido pela Constituição Federal.', correta: true, explicacao: 'O direito à vida está previsto no art. 5º da CF/88 como direito fundamental.' },
+            { id: 17, grupo: 'P1 - Direito Constitucional', enunciado: 'O habeas corpus é uma garantia que protege o direito de acesso à informação.', correta: false, explicacao: 'Habeas corpus protege a liberdade de locomoção. Habeas data protege o acesso à informação.' },
+            { id: 18, grupo: 'P1 - Direito Constitucional', enunciado: 'Os princípios da Administração Pública são: legalidade, impessoalidade, moralidade, publicidade e eficiência.', correta: true, explicacao: 'Esses são os princípios expressos no caput do art. 37 da CF/88.' },
+            { id: 19, grupo: 'P1 - Direito Constitucional', enunciado: 'A estabilidade é adquirida pelo servidor público após 5 anos de estágio probatório.', correta: false, explicacao: 'A estabilidade é adquirida após 3 anos de estágio probatório, conforme art. 41 da CF/88.' },
+            { id: 20, grupo: 'P1 - Direito Constitucional', enunciado: 'A Constituição Federal de 1988 estabelece que a administração pública direta e indireta deve obedecer aos princípios da legalidade, impessoalidade e moralidade.', correta: true, explicacao: 'O art. 37 da CF/88 estabelece esses princípios.' },
+            { id: 21, grupo: 'P1 - Direito Constitucional', enunciado: 'O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou mediante processo administrativo em que lhe seja assegurada ampla defesa.', correta: true, explicacao: 'Conforme art. 41, §1º da CF/88.' },
+            { id: 22, grupo: 'P1 - Direito Constitucional', enunciado: 'A nacionalidade é um direito social previsto no art. 6º da Constituição.', correta: false, explicacao: 'A nacionalidade é um direito fundamental, não um direito social. Os direitos sociais estão no art. 6º (educação, saúde, etc.).' },
+
+            // DIREITO ADMINISTRATIVO (23-29)
+            { id: 23, grupo: 'P1 - Direito Administrativo', enunciado: 'O Direito Administrativo é o ramo do direito que regula a atividade da Administração Pública.', correta: true, explicacao: 'Direito Administrativo é o ramo que estuda a organização e funcionamento da Administração Pública.' },
+            { id: 24, grupo: 'P1 - Direito Administrativo', enunciado: 'A administração indireta é composta por órgãos diretamente ligados ao chefe do Executivo.', correta: false, explicacao: 'A administração direta é composta por órgãos ligados ao chefe do Executivo. A indireta é composta por autarquias, fundações, etc.' },
+            { id: 25, grupo: 'P1 - Direito Administrativo', enunciado: 'O poder disciplinar permite à administração punir servidores e particulares.', correta: true, explicacao: 'O poder disciplinar é o poder de punir infrações funcionais e administrativas.' },
+            { id: 26, grupo: 'P1 - Direito Administrativo', enunciado: 'A Lei de Improbidade Administrativa (8.429/92) trata apenas de atos de improbidade praticados por servidores públicos.', correta: false, explicacao: 'A Lei 8.429/92 trata de atos de improbidade praticados por agentes públicos, incluindo servidores e particulares que se beneficiam.' },
+            { id: 27, grupo: 'P1 - Direito Administrativo', enunciado: 'A Lei 9.784/99 regula o processo administrativo na administração pública federal.', correta: true, explicacao: 'A Lei 9.784/99 estabelece normas básicas para o processo administrativo no âmbito federal.' },
+            { id: 28, grupo: 'P1 - Direito Administrativo', enunciado: 'Os atos administrativos são sempre discricionários.', correta: false, explicacao: 'Atos administrativos podem ser vinculados (quando a lei determina o que fazer) ou discricionários (quando há margem de escolha).' },
+            { id: 29, grupo: 'P1 - Direito Administrativo', enunciado: 'A concessão de serviço público é uma forma de delegação da administração para particulares.', correta: true, explicacao: 'Concessão, permissão e autorização são formas de delegação de serviços públicos.' },
+
+            // ÉTICA NO SERVIÇO PÚBLICO (30-35)
+            { id: 30, grupo: 'P1 - Ética no Serviço Público', enunciado: 'O Código de Ética do Servidor Público foi instituído pelo Decreto 1.171/94.', correta: true, explicacao: 'O Decreto 1.171/94 instituiu o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal.' },
+            { id: 31, grupo: 'P1 - Ética no Serviço Público', enunciado: 'A moralidade administrativa é um princípio fundamental do serviço público.', correta: true, explicacao: 'A moralidade é um dos princípios constitucionais da Administração Pública.' },
+            { id: 32, grupo: 'P1 - Ética no Serviço Público', enunciado: 'O servidor público pode utilizar o cargo para beneficiar parentes, desde que não haja prejuízo ao erário.', correta: false, explicacao: 'O uso do cargo para benefício próprio ou de terceiros é vedado pelo Código de Ética e configura conflito de interesses.' },
+            { id: 33, grupo: 'P1 - Ética no Serviço Público', enunciado: 'A Comissão de Ética Pública foi instituída pelo Decreto 6.029/2007.', correta: true, explicacao: 'O Decreto 6.029/2007 instituiu a Comissão de Ética Pública e normas complementares.' },
+            { id: 34, grupo: 'P1 - Ética no Serviço Público', enunciado: 'O nepotismo é permitido na administração pública em casos de comprovada necessidade técnica.', correta: false, explicacao: 'O nepotismo é vedado pela Súmula Vinculante 13 do STF, independentemente da necessidade técnica.' },
+            { id: 35, grupo: 'P1 - Ética no Serviço Público', enunciado: 'O sigilo profissional é um dever do servidor público.', correta: true, explicacao: 'A discrição e o sigilo sobre informações confidenciais são deveres do servidor.' },
+
+            // RACIOCÍNIO LÓGICO-MATEMÁTICO (36-43)
+            { id: 36, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'A proposição "Se chove, então a rua fica molhada" é verdadeira quando chove e a rua está molhada.', correta: true, explicacao: 'Na condicional, a proposição é falsa apenas quando a primeira é verdadeira e a segunda é falsa.' },
+            { id: 37, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'A negação de "Todos os alunos passaram" é "Nenhum aluno passou".', correta: false, explicacao: 'A negação de "Todos" é "Algum não" ou "Nem todos".' },
+            { id: 38, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'Em uma tabela-verdade com 3 proposições simples, o número de linhas é 8.', correta: true, explicacao: '2³ = 8 linhas para 3 proposições simples.' },
+            { id: 39, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'A interseção de dois conjuntos é o conjunto de elementos que pertencem a ambos os conjuntos.', correta: true, explicacao: 'A interseção A∩B contém apenas os elementos comuns aos dois conjuntos.' },
+            { id: 40, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: '20% de 150 é igual a 30.', correta: true, explicacao: '150 × 20/100 = 30.' },
+            { id: 41, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'A média aritmética de 4, 6, 8 e 10 é 8.', correta: true, explicacao: '(4+6+8+10)/4 = 28/4 = 7.' },
+            { id: 42, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'Na proporção 2/3 = 4/6, os números 2 e 6 são os extremos.', correta: true, explicacao: 'Em 2/3 = 4/6, os extremos são 2 e 6; os meios são 3 e 4.' },
+            { id: 43, grupo: 'P1 - Raciocínio Lógico-Matemático', enunciado: 'A negação de uma conjunção é uma disjunção de negações (Lei de De Morgan).', correta: true, explicacao: '¬(P∧Q) = ¬P∨¬Q é uma das Leis de De Morgan.' },
+
+            // NOÇÕES DE INFORMÁTICA (44-50)
+            { id: 44, grupo: 'P1 - Noções de Informática', enunciado: 'O sistema operacional é um software que gerencia os recursos de hardware e software do computador.', correta: true, explicacao: 'Sistema operacional é responsável pelo gerenciamento dos recursos do computador.' },
+            { id: 45, grupo: 'P1 - Noções de Informática', enunciado: 'A Internet é uma rede privada de computadores dentro de uma organização.', correta: false, explicacao: 'Internet é uma rede mundial de computadores. Intranet é a rede privada dentro de uma organização.' },
+            { id: 46, grupo: 'P1 - Noções de Informática', enunciado: 'O Microsoft Windows é um sistema operacional de código aberto.', correta: false, explicacao: 'O Windows é proprietário (closed source). O Linux é um exemplo de sistema operacional de código aberto.' },
+            { id: 47, grupo: 'P1 - Noções de Informática', enunciado: 'Firewall é um sistema que bloqueia acessos não autorizados à rede.', correta: true, explicacao: 'Firewall é uma ferramenta de segurança que controla o tráfego de rede.' },
+            { id: 48, grupo: 'P1 - Noções de Informática', enunciado: 'O phishing é uma técnica de segurança utilizada para proteger dados pessoais.', correta: false, explicacao: 'Phishing é uma tentativa de obter informações pessoais fraudulentamente, não é uma técnica de segurança.' },
+            { id: 49, grupo: 'P1 - Noções de Informática', enunciado: 'O LibreOffice Calc é um software de planilhas eletrônicas.', correta: true, explicacao: 'Calc é o aplicativo de planilhas do LibreOffice, equivalente ao Excel.' },
+            { id: 50, grupo: 'P1 - Noções de Informática', enunciado: 'A criptografia é uma técnica para codificar informações, garantindo a segurança dos dados.', correta: true, explicacao: 'Criptografia converte dados em formato ilegível, protegendo informações.' },
+
+            // ========================================
+            // PARTE 2: CONHECIMENTOS ESPECÍFICOS (51-120)
+            // ========================================
+            // SEGURIDADE SOCIAL (51-65)
+            { id: 51, grupo: 'P2 - Seguridade Social', enunciado: 'A Seguridade Social compreende as áreas de saúde, previdência e assistência social.', correta: true, explicacao: 'A Seguridade Social é composta por saúde, previdência e assistência social (art. 194 da CF).' },
+            { id: 52, grupo: 'P2 - Seguridade Social', enunciado: 'O princípio da universalidade da cobertura garante que todas as pessoas tenham acesso à seguridade social.', correta: true, explicacao: 'A universalidade da cobertura é um dos princípios da Seguridade Social.' },
+            { id: 53, grupo: 'P2 - Seguridade Social', enunciado: 'A seletividade na seguridade social significa que todos os benefícios têm o mesmo valor.', correta: false, explicacao: 'Seletividade significa que os benefícios devem ser adequados às necessidades, não que são iguais.' },
+            { id: 54, grupo: 'P2 - Seguridade Social', enunciado: 'O RGPS é o Regime Geral de Previdência Social, destinado aos trabalhadores da iniciativa privada.', correta: true, explicacao: 'O RGPS é o regime previdenciário para trabalhadores da iniciativa privada.' },
+            { id: 55, grupo: 'P2 - Seguridade Social', enunciado: 'O segurado facultativo é aquele que exerce atividade remunerada e contribui obrigatoriamente.', correta: false, explicacao: 'O segurado facultativo é aquele que não exerce atividade remunerada mas contribui voluntariamente.' },
+            { id: 56, grupo: 'P2 - Seguridade Social', enunciado: 'Os segurados obrigatórios incluem empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial.', correta: true, explicacao: 'Essas são as cinco categorias de segurados obrigatórios do RGPS.' },
+            { id: 57, grupo: 'P2 - Seguridade Social', enunciado: 'A filiação ao RGPS ocorre automaticamente com o exercício da atividade remunerada.', correta: true, explicacao: 'A filiação é automática e obrigatória para segurados obrigatórios.' },
+            { id: 58, grupo: 'P2 - Seguridade Social', enunciado: 'A inscrição no INSS é o primeiro passo para a filiação ao RGPS.', correta: false, explicacao: 'A filiação ocorre primeiro, automaticamente. A inscrição é o cadastro formal no sistema.' },
+            { id: 59, grupo: 'P2 - Seguridade Social', enunciado: 'O salário de contribuição é a base de cálculo para recolhimento das contribuições previdenciárias.', correta: true, explicacao: 'Salário de contribuição é a base de cálculo das contribuições.' },
+            { id: 60, grupo: 'P2 - Seguridade Social', enunciado: 'O limite máximo do salário de contribuição é ilimitado.', correta: false, explicacao: 'O salário de contribuição tem um limite máximo (teto do INSS).' },
+            { id: 61, grupo: 'P2 - Seguridade Social', enunciado: 'A contribuição do empregado ao INSS é calculada sobre o salário de contribuição com alíquotas progressivas.', correta: true, explicacao: 'As alíquotas são progressivas: 7,5%, 9%, 12% e 14%.' },
+            { id: 62, grupo: 'P2 - Seguridade Social', enunciado: 'O 13º salário integra o salário de contribuição.', correta: false, explicacao: 'O 13º salário não integra o salário de contribuição.' },
+            { id: 63, grupo: 'P2 - Seguridade Social', enunciado: 'A empresa tem a obrigação de reter e recolher as contribuições dos empregados.', correta: true, explicacao: 'A empresa é responsável pela retenção e recolhimento das contribuições dos empregados.' },
+            { id: 64, grupo: 'P2 - Seguridade Social', enunciado: 'O prazo de recolhimento das contribuições é até o dia 20 do mês seguinte.', correta: true, explicacao: 'O recolhimento das contribuições deve ser feito até o dia 20 do mês seguinte.' },
+            { id: 65, grupo: 'P2 - Seguridade Social', enunciado: 'A compensação previdenciária é a troca de informações entre regimes de previdência para contagem recíproca de tempo.', correta: true, explicacao: 'Compensação previdenciária permite a contagem de tempo em diferentes regimes.' },
+
+            // BENEFÍCIOS PREVIDENCIÁRIOS (66-85)
+            { id: 66, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A carência é o número mínimo de contribuições mensais para ter direito a benefícios.', correta: true, explicacao: 'Carência é o período mínimo de contribuições para obtenção de benefícios.' },
+            { id: 67, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O salário de benefício é a média dos salários de contribuição.', correta: true, explicacao: 'Salário de benefício é calculado a partir da média dos salários de contribuição.' },
+            { id: 68, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A aposentadoria por idade exige 65 anos para homens e 60 anos para mulheres.', correta: false, explicacao: 'A aposentadoria por idade exige 65 anos para homens e 62 anos para mulheres (EC 103/2019).' },
+            { id: 69, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A aposentadoria especial é concedida a segurados que trabalham em atividades insalubres ou perigosas.', correta: true, explicacao: 'Aposentadoria especial é para atividades com exposição a agentes prejudiciais à saúde.' },
+            { id: 70, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O auxílio-doença é um benefício pago a segurados incapacitados temporariamente para o trabalho.', correta: true, explicacao: 'Auxílio-doença substitui a remuneração durante a incapacidade temporária.' },
+            { id: 71, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O auxílio-acidente é um benefício vitalício pago a segurados que sofrem acidente.', correta: false, explicacao: 'Auxílio-acidente é pago em caráter indenizatório, não é vitalício, e exige sequelas permanentes.' },
+            { id: 72, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A pensão por morte é paga aos dependentes do segurado falecido.', correta: true, explicacao: 'Pensão por morte é destinada aos dependentes do segurado que falece.' },
+            { id: 73, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'Os dependentes do segurado incluem cônjuge, filhos menores de 21 anos e pais.', correta: true, explicacao: 'Dependentes: cônjuge, companheiro, filhos menores de 21 ou inválidos, pais e irmãos.' },
+            { id: 74, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O salário-maternidade é um benefício pago apenas a mulheres empregadas.', correta: false, explicacao: 'Salário-maternidade é pago a seguradas de todas as categorias, incluindo autônomas e facultativas.' },
+            { id: 75, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O fator previdenciário reduz o valor da aposentadoria por tempo de contribuição.', correta: true, explicacao: 'O fator previdenciário é aplicado à aposentadoria por tempo de contribuição.' },
+            { id: 76, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A Emenda Constitucional 103/2019 alterou as regras de aposentadoria no Brasil.', correta: true, explicacao: 'EC 103/2019 é a Reforma da Previdência, que alterou as regras de aposentadoria.' },
+            { id: 77, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A aposentadoria por idade é a única modalidade de aposentadoria existente no RGPS.', correta: false, explicacao: 'Existem diversas modalidades: por idade, por tempo de contribuição, especial, etc.' },
+            { id: 78, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O auxílio-inclusão é um benefício para pessoas com deficiência que ingressam no mercado de trabalho.', correta: true, explicacao: 'Auxílio-inclusão é pago a PCD que entram no mercado de trabalho.' },
+            { id: 79, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A pensão especial por hanseníase é regida pela Lei 11.520/2007.', correta: true, explicacao: 'Lei 11.520/2007 concede pensão especial a pessoas atingidas pela hanseníase.' },
+            { id: 80, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A aposentadoria do professor exige 25 anos de contribuição (homens) e 20 anos (mulheres).', correta: false, explicacao: 'A aposentadoria do professor exige 30 anos (homens) e 25 anos (mulheres) de efetivo exercício.' },
+            { id: 81, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A contribuição do segurado especial é calculada sobre a produção rural.', correta: true, explicacao: 'O segurado especial contribui sobre a produção rural.' },
+            { id: 82, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A manutenção da qualidade de segurado garante que o segurado mantenha direitos mesmo sem contribuir.', correta: true, explicacao: 'Período de graça mantém a qualidade de segurado por 12 meses.' },
+            { id: 83, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A perda da qualidade de segurado ocorre após 24 meses sem contribuição.', correta: false, explicacao: 'A perda ocorre após 12 meses sem contribuição (período de graça).' },
+            { id: 84, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'O Conselho de Recursos da Previdência Social (CRPS) é a primeira instância para recursos administrativos.', correta: false, explicacao: 'A primeira instância é a Junta de Recursos do INSS. O CRPS é a segunda instância.' },
+            { id: 85, grupo: 'P2 - Benefícios Previdenciários', enunciado: 'A decadência do direito de cobrar contribuições ocorre após 5 anos.', correta: true, explicacao: 'Decadência: perda do direito de cobrar contribuições após 5 anos.' },
+
+            // LEGISLAÇÃO (8.212/91, 8.213/91) (86-100)
+            { id: 86, grupo: 'P2 - Legislação', enunciado: 'A Lei 8.212/91 trata da organização da Seguridade Social.', correta: true, explicacao: 'Lei 8.212/91: organização da Seguridade Social.' },
+            { id: 87, grupo: 'P2 - Legislação', enunciado: 'A Lei 8.213/91 trata dos benefícios da Previdência Social.', correta: true, explicacao: 'Lei 8.213/91: Planos de Benefícios da Previdência Social.' },
+            { id: 88, grupo: 'P2 - Legislação', enunciado: 'O Decreto 3.048/99 é o regulamento da Previdência Social.', correta: true, explicacao: 'Decreto 3.048/99 regulamenta a Previdência Social.' },
+            { id: 89, grupo: 'P2 - Legislação', enunciado: 'A Instrução Normativa 128/2022 consolida os procedimentos previdenciários do INSS.', correta: true, explicacao: 'IN 128/2022 consolida as normas do INSS.' },
+            { id: 90, grupo: 'P2 - Legislação', enunciado: 'A Lei 10.779/2003 instituiu o seguro-desemprego para pescadores artesanais.', correta: true, explicacao: 'Lei 10.779/2003: seguro defeso para pescadores artesanais.' },
+            { id: 91, grupo: 'P2 - Legislação', enunciado: 'A Lei 9.425/1996 concede pensão vitalícia às vítimas do Césio 137.', correta: true, explicacao: 'Lei 9.425/1996: pensão vitalícia às vítimas do Césio 137 em Goiânia.' },
+            { id: 92, grupo: 'P2 - Legislação', enunciado: 'A Lei 9.422/1996 é a lei da pensão especial aos seringueiros.', correta: false, explicacao: 'Lei 9.422/1996: pensão especial às vítimas de hemodiálise de Caruaru. Lei 7.986/1989: pensão especial aos seringueiros.' },
+            { id: 93, grupo: 'P2 - Legislação', enunciado: 'A Lei 13.985/2020 concede pensão especial a crianças com Síndrome Congênita do Zika Vírus.', correta: true, explicacao: 'Lei 13.985/2020: pensão especial para crianças com Zika.' },
+            { id: 94, grupo: 'P2 - Legislação', enunciado: 'A Lei Complementar 142/2013 estabelece regras para aposentadoria de pessoas com deficiência.', correta: true, explicacao: 'LC 142/2013: aposentadoria da pessoa com deficiência.' },
+            { id: 95, grupo: 'P2 - Legislação', enunciado: 'A Lei 8.059/1990 concede pensão especial aos ex-combatentes.', correta: true, explicacao: 'Lei 8.059/1990: pensão especial aos ex-combatentes.' },
+            { id: 96, grupo: 'P2 - Legislação', enunciado: 'O seguro defeso é um benefício pago ao pescador artesanal durante a proibição da pesca.', correta: true, explicacao: 'Seguro defeso é pago durante o período de proibição da pesca.' },
+            { id: 97, grupo: 'P2 - Legislação', enunciado: 'A Lei 14.176/2021 altera a Lei Orgânica da Assistência Social (LOAS).', correta: true, explicacao: 'Lei 14.176/2021: alterações na LOAS, incluindo o Auxílio-Inclusão.' },
+            { id: 98, grupo: 'P2 - Legislação', enunciado: 'A pensão por morte pode ser acumulada com aposentadoria em qualquer hipótese.', correta: false, explicacao: 'A acumulação é permitida apenas em casos específicos e com limitações.' },
+            { id: 99, grupo: 'P2 - Legislação', enunciado: 'A Certidão de Tempo de Contribuição (CTC) comprova o tempo de contribuição do segurado.', correta: true, explicacao: 'CTC é o documento que comprova o tempo de contribuição.' },
+            { id: 100, grupo: 'P2 - Legislação', enunciado: 'A contagem recíproca permite a soma de tempo de contribuição em diferentes regimes.', correta: true, explicacao: 'Contagem recíproca soma tempo em regimes diferentes (RGPS e RPPS).' },
+
+            // LOAS E BENEFÍCIOS ESPECIAIS (101-110)
+            { id: 101, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O BPC/LOAS é o Benefício de Prestação Continuada da Lei Orgânica da Assistência Social.', correta: true, explicacao: 'BPC é o Benefício de Prestação Continuada.' },
+            { id: 102, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O BPC é destinado a idosos com 65 anos ou mais e pessoas com deficiência.', correta: true, explicacao: 'BPC atende idosos 65+ e PCD, ambos com renda per capita inferior a 1/4 do SM.' },
+            { id: 103, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'A renda familiar per capita para o BPC deve ser inferior a 1/2 salário mínimo.', correta: false, explicacao: 'A renda per capita deve ser inferior a 1/4 do salário mínimo.' },
+            { id: 104, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O BPC não exige contribuição prévia ao INSS.', correta: true, explicacao: 'O BPC é assistencial, não requer contribuição prévia.' },
+            { id: 105, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O auxílio-inclusão é um benefício pago a pessoas com deficiência que ingressam no mercado de trabalho.', correta: true, explicacao: 'Auxílio-inclusão é para PCD que entram no mercado de trabalho.' },
+            { id: 106, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'A Lei 8.742/93 é a Lei Orgânica da Assistência Social.', correta: true, explicacao: 'LOAS é a Lei 8.742/93.' },
+            { id: 107, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O seguro-defeso é um benefício previdenciário pago aos pescadores artesanais.', correta: false, explicacao: 'O seguro-defeso é um benefício assistencial, não previdenciário.' },
+            { id: 108, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O Decreto 6.214/2007 regulamenta o BPC/LOAS.', correta: true, explicacao: 'Decreto 6.214/2007: regulamentação do BPC.' },
+            { id: 109, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'A pensão especial da Síndrome de Talidomida é regida pela Lei 7.070/1982.', correta: true, explicacao: 'Lei 7.070/1982: pensão especial às vítimas da Talidomida.' },
+            { id: 110, grupo: 'P2 - LOAS e Benefícios Especiais', enunciado: 'O BPC pode ser acumulado com aposentadoria em qualquer hipótese.', correta: false, explicacao: 'O BPC não pode ser acumulado com outros benefícios previdenciários.' },
+
+            // REGIMES PRÓPRIOS (111-120)
+            { id: 111, grupo: 'P2 - Regimes Próprios', enunciado: 'Os Regimes Próprios de Previdência Social (RPPS) são destinados aos servidores públicos.', correta: true, explicacao: 'RPPS: regimes previdenciários para servidores públicos da União, estados e municípios.' },
+            { id: 112, grupo: 'P2 - Regimes Próprios', enunciado: 'A Certidão de Tempo de Contribuição (CTC) é emitida pelo INSS.', correta: false, explicacao: 'CTC pode ser emitida tanto pelo INSS quanto pelo órgão do RPPS.' },
+            { id: 113, grupo: 'P2 - Regimes Próprios', enunciado: 'A contagem recíproca é permitida entre RGPS e RPPS.', correta: true, explicacao: 'Contagem recíproca soma tempo nos dois regimes.' },
+            { id: 114, grupo: 'P2 - Regimes Próprios', enunciado: 'A Lei 9.796/1999 trata da compensação previdenciária entre regimes.', correta: true, explicacao: 'Lei 9.796/99: compensação previdenciária.' },
+            { id: 115, grupo: 'P2 - Regimes Próprios', enunciado: 'O servidor público pode acumular aposentadoria do RPPS com pensão por morte.', correta: true, explicacao: 'É permitida a acumulação de aposentadoria com pensão, desde que atendidos os requisitos legais.' },
+            { id: 116, grupo: 'P2 - Regimes Próprios', enunciado: 'A aposentadoria do servidor público é sempre integral, sem teto.', correta: false, explicacao: 'A aposentadoria do servidor público tem teto estabelecido pela EC 103/2019.' },
+            { id: 117, grupo: 'P2 - Regimes Próprios', enunciado: 'A compensação previdenciária evita que o segurado pague contribuições em duplicidade.', correta: true, explicacao: 'Compensação previdenciária evita a dupla contribuição.' },
+            { id: 118, grupo: 'P2 - Regimes Próprios', enunciado: 'O tempo de contribuição no RGPS pode ser convertido para tempo de serviço no RPPS.', correta: true, explicacao: 'Contagem recíproca permite a conversão de tempo entre regimes.' },
+            { id: 119, grupo: 'P2 - Regimes Próprios', enunciado: 'O Decreto 10.188/2019 regula a compensação previdenciária.', correta: true, explicacao: 'Decreto 10.188/2019: regulamentação da compensação previdenciária.' },
+            { id: 120, grupo: 'P2 - Regimes Próprios', enunciado: 'A contagem recíproca não exige a comprovação do tempo de contribuição.', correta: false, explicacao: 'Contagem recíproca exige a comprovação do tempo de contribuição por meio da CTC.' }
+        ];
+
+        // ============================================
+        // CONTROLE DA INTERFACE
+        // ============================================
+        let questaoAtual = 0;
+
+        function renderizarQuestao(index) {
+            const q = questoes[index];
+            const container = document.getElementById('questoes-container');
+            
+            const resposta = q.correta ? 'Certo' : 'Errado';
+            
+            container.innerHTML = `
+                <div class="grupo">
+                    <h2>${q.grupo}</h2>
+                    <div class="subtitle">Questão ${q.id} de 120</div>
+                    <div class="questao">
+                        <span class="numero">Questão ${q.id}</span>
+                        <div class="enunciado">${q.enunciado}</div>
+                        <div style="display: flex; gap: 2rem; margin: 0.5rem 0;">
+                            <span style="color: #28a745;">C) Certo</span>
+                            <span style="color: #dc3545;">E) Errado</span>
+                        </div>
+                        <div class="gabarito" id="gabarito-${q.id}">
+                            <strong>Gabarito:</strong> ${resposta}<br>
+                            <span style="color: #6c757d; font-size: 0.9rem;">${q.explicacao}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const progresso = ((index + 1) / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() {
+            if (questaoAtual < questoes.length - 1) {
+                questaoAtual++;
+                renderizarQuestao(questaoAtual);
+            }
+        }
+
+        function questaoAnterior() {
+            if (questaoAtual > 0) {
+                questaoAtual--;
+                renderizarQuestao(questaoAtual);
+            }
+        }
+
+        function mostrarGabarito() {
+            const q = questoes[questaoAtual];
+            const gabarito = document.getElementById(`gabarito-${q.id}`);
+            if (gabarito) {
+                gabarito.classList.toggle('visible');
+            }
+        }
+
+        renderizarQuestao(0);
+    </script>
+</body>
+</html>
