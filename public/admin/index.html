@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Concurso Store</title>
+    <link rel="stylesheet" href="/admin/style.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="/images/concurso-store-icon.png" alt="Logo" style="width: 32px; height: 32px;">
+                <span>Concurso Store</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/admin/" class="active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="/admin/pedidos.html">
+                    <span class="icon">📦</span> Pedidos
+                    <span class="badge" id="badge-pedidos">0</span>
+                </a>
+                <a href="/admin/clientes.html">
+                    <span class="icon">👤</span> Clientes
+                    <span class="badge" id="badge-clientes">0</span>
+                </a>
+                <a href="/admin/mensagens.html">
+                    <span class="icon">💬</span> Mensagens
+                    <span class="badge" id="badge-mensagens">0</span>
+                </a>
+                <a href="/admin/produtos.html">
+                    <span class="icon">📚</span> Produtos
+                    <span class="badge" id="badge-produtos">0</span>
+                </a>
+                <a href="/">
+                    <span class="icon">🏠</span> Voltar à loja
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>📊 Dashboard</h1>
+                <div class="admin-user">
+                    <span>👤 Administrador</span>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3 id="total-pedidos">0</h3>
+                            <p>Pedidos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👤</div>
+                        <div class="stat-info">
+                            <h3 id="total-clientes">0</h3>
+                            <p>Clientes</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💬</div>
+                        <div class="stat-info">
+                            <h3 id="total-mensagens">0</h3>
+                            <p>Mensagens</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3 id="total-produtos">0</h3>
+                            <p>Produtos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Últimas Atividades</h2>
+                    <div id="recent-activity-list">
+                        <p style="color: #6c757d; text-align: center; padding: 2rem;">Nenhuma atividade recente.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/admin/script.js"></script>
+</body>
+</html>

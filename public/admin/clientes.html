@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Admin</title>
+    <link rel="stylesheet" href="/admin/style.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="/images/concurso-store-icon.png" alt="Logo" style="width: 32px; height: 32px;">
+                <span>Concurso Store</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/admin/"><span class="icon">📊</span> Dashboard</a>
+                <a href="/admin/pedidos.html"><span class="icon">📦</span> Pedidos</a>
+                <a href="/admin/clientes.html" class="active"><span class="icon">👤</span> Clientes</a>
+                <a href="/admin/mensagens.html"><span class="icon">💬</span> Mensagens</a>
+                <a href="/admin/produtos.html"><span class="icon">📚</span> Produtos</a>
+                <a href="/"><span class="icon">🏠</span> Voltar à loja</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>👤 Clientes</h1>
+                <div class="admin-user"><span>👤 Administrador</span></div>
+            </header>
+            <div class="admin-content">
+                <div id="clientes-container"></div>
+            </div>
+        </main>
+    </div>
+    <script src="/admin/script.js"></script>
+</body>
+</html>
