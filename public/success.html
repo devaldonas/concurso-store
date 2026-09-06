@@ -24,21 +24,19 @@
         </nav>
     </header>
 
-    <!-- Resto do conteúdo permanece igual -->
     <main>
         <section class="success-container">
             <div class="container">
                 <div class="success-card">
-                    <h1>Pagamento Confirmado</h1>
+                    <h1>Pagamento Confirmado!</h1>
                     <p class="success-message">Seu pagamento foi processado com sucesso.</p>
                     
                     <div id="orderDetails" class="order-details">
-                        <p>Aguardando confirmação do pagamento...</p>
+                        <p>Carregando seu material...</p>
                     </div>
 
                     <div class="actions">
                         <a href="/" class="btn btn-primary">Ver outros concursos</a>
-                        <a href="/" class="btn btn-secondary">Meus materiais</a>
                     </div>
                 </div>
             </div>
@@ -57,18 +55,61 @@
         const urlParams = new URLSearchParams(window.location.search);
         const sessionId = urlParams.get('session_id');
         
+        // Mapeamento de produtos para suas páginas
+        const materialMap = {
+            'memorizacao_seduc_ms': {
+                nome: 'SEDUC/MS 2022',
+                url: '/material/flashcards.html?concurso=seduc-ms-2022'
+            },
+            'memorizacao_pm_sp': {
+                nome: 'PM/SP 2026',
+                url: '/material/flashcards.html?concurso=pm-sp-2026'
+            },
+            'memorizacao_inss': {
+                nome: 'INSS 2022',
+                url: '/material/inss-2022/flashcards.html'
+            },
+            'memorizacao_caixa': {
+                nome: 'Caixa Econômica Federal',
+                url: '/material/flashcards.html?concurso=caixa-2024'
+            },
+            'memorizacao_pf': {
+                nome: 'Polícia Federal',
+                url: '/material/flashcards.html?concurso=pf-2024'
+            },
+            'memorizacao_tj_sp': {
+                nome: 'TJ/SP',
+                url: '/material/flashcards.html?concurso=tj-sp-2024'
+            }
+        };
+        
         if (sessionId) {
             fetch(`/api/check-session/${sessionId}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'paid') {
+                        const productId = data.product_id;
+                        const material = materialMap[productId] || materialMap['memorizacao_seduc_ms'];
+                        const linkMaterial = `${material.url}&session_id=${sessionId}`;
+                        
                         const detailsDiv = document.getElementById('orderDetails');
                         detailsDiv.innerHTML = `
                             <p><strong>Status:</strong> Pagamento confirmado</p>
                             <p><strong>Email:</strong> ${data.customer_email || 'Não informado'}</p>
+                            <p><strong>Produto:</strong> ${material.nome}</p>
                             <hr style="margin: 1rem 0; border: none; border-top: 1px solid #e9ecef;">
-                            <p style="margin-top: 0.8rem;">Seu material de memorização já está disponível.</p>
-                            <p>Verifique seu e-mail para acessar o conteúdo completo.</p>
+                            <p style="margin-top: 0.8rem; color: #28a745; font-weight: bold;">
+                                Seu material está disponível!
+                            </p>
+                            <div style="margin: 1.5rem 0; text-align: center;">
+                                <a href="${linkMaterial}" 
+                                   style="background: #e94560; color: white; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
+                                    Acessar Material - ${material.nome}
+                                </a>
+                            </div>
+                            <p style="color: #6c757d; font-size: 0.85rem;">
+                                Guarde este link para acessar seu material quando quiser.
+                            </p>
                         `;
                     }
                 })
