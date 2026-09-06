@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Ética no Serviço Público | INSS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .badge-inss {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #e94560;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            color: #0f0f1a;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f3f5;
+        }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #495057;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        .card ul li::before {
+            content: "▸";
+            color: #e94560;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li {
+            border-bottom: none;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ética no Serviço Público - INSS</h1>
+            <p>Conteúdo programático - Edital INSS 2022</p>
+            <span class="badge-inss">Conhecimentos Básicos (P1)</span>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Cerca de 5 questões | Peso 1,0</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Código de Ética</h2>
+                <ul>
+                    <li>Decreto 1.171/94
+                        <ul>
+                            <li>Regras de conduta ética</li>
+                            <li>Princípios fundamentais</li>
+                        </ul>
+                    </li>
+                    <li>Decreto 6.029/07
+                        <ul>
+                            <li>Comissão de Ética Pública</li>
+                            <li>Normas complementares</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Deveres do Servidor</h2>
+                <ul>
+                    <li>Deveres fundamentais
+                        <ul>
+                            <li>Lealdade, honestidade</li>
+                            <li>Moralidade, eficiência</li>
+                            <li>Assiduidade, pontualidade</li>
+                        </ul>
+                    </li>
+                    <li>Discrição e urbanidade
+                        <ul>
+                            <li>Sigilo profissional</li>
+                            <li>Tratamento com o público</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Proibições e Responsabilidades</h2>
+                <ul>
+                    <li>Proibições éticas
+                        <ul>
+                            <li>Recebimento de presentes</li>
+                            <li>Uso do cargo para benefício próprio</li>
+                            <li>Conflito de interesses</li>
+                        </ul>
+                    </li>
+                    <li>Responsabilidades
+                        <ul>
+                            <li>Civil, criminal e administrativa</li>
+                            <li>Lei de Improbidade (8.429/92)</li>
+                        </ul>
+                    </li>
+                    <li>Nepotismo
+                        <ul>
+                            <li>Súmula Vinculante 13 do STF</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

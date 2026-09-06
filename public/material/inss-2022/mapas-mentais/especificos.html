@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Conhecimentos Específicos | INSS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .badge-inss {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #e94560;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            color: #0f0f1a;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f3f5;
+        }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #495057;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        .card ul li::before {
+            content: "▸";
+            color: #e94560;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li {
+            border-bottom: none;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Conhecimentos Específicos - INSS</h1>
+            <p>Conteúdo programático - Edital INSS 2022</p>
+            <span class="badge-inss">Conhecimentos Específicos (P2)</span>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">70 questões | Peso 1,0</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Seguridade Social</h2>
+                <ul>
+                    <li>Conceito e organização
+                        <ul>
+                            <li>Saúde, previdência, assistência</li>
+                            <li>Princípios constitucionais</li>
+                        </ul>
+                    </li>
+                    <li>Financiamento
+                        <ul>
+                            <li>Receitas da União</li>
+                            <li>Contribuições sociais</li>
+                            <li>Salário de contribuição</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>RGPS - Segurados</h2>
+                <ul>
+                    <li>Segurados obrigatórios
+                        <ul>
+                            <li>Empregado, empregado doméstico</li>
+                            <li>Contribuinte individual</li>
+                            <li>Trabalhador avulso</li>
+                            <li>Segurado especial</li>
+                        </ul>
+                    </li>
+                    <li>Segurado facultativo
+                        <ul>
+                            <li>Conceito e características</li>
+                            <li>Filiação e inscrição</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Benefícios Previdenciários</h2>
+                <ul>
+                    <li>Aposentadorias
+                        <ul>
+                            <li>Por idade, tempo, especial</li>
+                            <li>Reformas e regras</li>
+                        </ul>
+                    </li>
+                    <li>Benefícios por incapacidade
+                        <ul>
+                            <li>Auxílio-doença</li>
+                            <li>Auxílio-acidente</li>
+                        </ul>
+                    </li>
+                    <li>Pensão por morte
+                        <ul>
+                            <li>Dependentes</li>
+                            <li>Cálculo e regras</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Legislação</h2>
+                <ul>
+                    <li>Leis principais
+                        <ul>
+                            <li>Lei 8.212/91</li>
+                            <li>Lei 8.213/91</li>
+                            <li>Decreto 3.048/99</li>
+                        </ul>
+                    </li>
+                    <li>Atualizações
+                        <ul>
+                            <li>EC 103/2019</li>
+                            <li>LC 142/2013</li>
+                            <li>IN 128/2022</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>LOAS e Benefícios Especiais</h2>
+                <ul>
+                    <li>Benefício de Prestação Continuada
+                        <ul>
+                            <li>BPC/LOAS</li>
+                            <li>Requisitos e cálculo</li>
+                        </ul>
+                    </li>
+                    <li>Auxílio-inclusão
+                        <ul>
+                            <li>Lei 14.176/2021</li>
+                        </ul>
+                    </li>
+                    <li>Benefícios especiais
+                        <ul>
+                            <li>Pensões especiais (Talidomida, Seringueiros, etc.)</li>
+                            <li>Seguro defeso</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Regimes Próprios</h2>
+                <ul>
+                    <li>Certidão de Tempo de Contribuição
+                        <ul>
+                            <li>CTC</li>
+                        </ul>
+                    </li>
+                    <li>Contagem recíproca
+                        <ul>
+                            <li>Entre regimes</li>
+                        </ul>
+                    </li>
+                    <li>Compensação previdenciária
+                        <ul>
+                            <li>Lei 9.796/99</li>
+                            <li>Decreto 10.188/2019</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
