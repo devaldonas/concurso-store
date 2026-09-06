@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Concurso Store - Materiais para Concursos</title>
+    <title>Concurso Store - Método de Memorização</title>
     <link rel="stylesheet" href="/styles.css">
-    <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
     <!-- Menu Mobile -->
@@ -22,15 +22,14 @@
                 <span class="bar"></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#" data-page="home" class="active">Início</a></li>
-                <li><a href="#" data-page="concursos">Concursos</a></li>
-                <li><a href="#" data-page="metodo">Método</a></li>
-                <li><a href="#" data-page="pedidos">Meus Pedidos</a></li>
+                <li><a href="/" data-page="home" class="active">Início</a></li>
+                <li><a href="/#produtos" data-page="concursos">Concursos</a></li>
+                <li><a href="/#metodo" data-page="metodo">Método</a></li>
+                <li><a href="/success.html" data-page="pedidos">Meus Pedidos</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Resto do conteúdo permanece igual -->
     <main>
         <!-- Página Home -->
         <section class="page page-home active" id="page-home">
@@ -41,7 +40,7 @@
                             <h1>Método de Memorização para Concursos</h1>
                             <p>Aprenda e retenha todo o conteúdo com técnicas comprovadas</p>
                             <div class="hero-cta">
-                                <a href="#" data-page="concursos" class="btn btn-primary">Ver Concursos</a>
+                                <a href="/#produtos" class="btn btn-primary">Ver Concursos</a>
                             </div>
                         </div>
                         <div class="hero-stats">
@@ -64,59 +63,55 @@
         </section>
 
         <!-- Página Concursos -->
-        <section class="page page-concursos" id="page-concursos">
-            <div class="products">
-                <div class="container">
-                    <h2 class="section-title">Concursos Disponíveis</h2>
-                    <p class="section-subtitle">Escolha seu concurso e comece a se preparar</p>
-                    <div class="products-grid" id="productsContainer">
-                        <!-- Produtos carregados via JavaScript -->
-                    </div>
+        <section class="products" id="produtos">
+            <div class="container">
+                <h2 class="section-title">Concursos Disponíveis</h2>
+                <p class="section-subtitle">Escolha seu concurso e comece a se preparar</p>
+                <div class="products-grid" id="productsContainer">
+                    <!-- Produtos carregados via JavaScript -->
                 </div>
             </div>
         </section>
 
         <!-- Página Método -->
-        <section class="page page-metodo" id="page-metodo">
-            <div class="metodo">
-                <div class="container">
-                    <h2 class="section-title">Como funciona nosso método</h2>
-                    <p class="section-subtitle">Uma abordagem científica para fixar o conteúdo</p>
-                    <div class="metodo-grid">
-                        <div class="metodo-item">
-                            <div class="metodo-number">01</div>
-                            <h3>Mapas Mentais</h3>
-                            <p>Organização visual para facilitar a compreensão</p>
-                        </div>
-                        <div class="metodo-item">
-                            <div class="metodo-number">02</div>
-                            <h3>Flashcards Inteligentes</h3>
-                            <p>Sistema de repetição espaçada para fixação</p>
-                        </div>
-                        <div class="metodo-item">
-                            <div class="metodo-number">03</div>
-                            <h3>Revisão Programada</h3>
-                            <p>Algoritmo que define os melhores momentos para revisar</p>
-                        </div>
-                        <div class="metodo-item">
-                            <div class="metodo-number">04</div>
-                            <h3>Simulados Estratégicos</h3>
-                            <p>Treine com questões no formato da banca</p>
-                        </div>
+        <section class="metodo" id="metodo">
+            <div class="container">
+                <h2 class="section-title">Como funciona nosso método</h2>
+                <p class="section-subtitle">Uma abordagem científica para fixar o conteúdo</p>
+                <div class="metodo-grid">
+                    <div class="metodo-item">
+                        <div class="metodo-number">01</div>
+                        <h3>Mapas Mentais</h3>
+                        <p>Organização visual para facilitar a compreensão</p>
+                    </div>
+                    <div class="metodo-item">
+                        <div class="metodo-number">02</div>
+                        <h3>Flashcards Inteligentes</h3>
+                        <p>Sistema de repetição espaçada para fixação</p>
+                    </div>
+                    <div class="metodo-item">
+                        <div class="metodo-number">03</div>
+                        <h3>Revisão Programada</h3>
+                        <p>Algoritmo que define os melhores momentos para revisar</p>
+                    </div>
+                    <div class="metodo-item">
+                        <div class="metodo-number">04</div>
+                        <h3>Simulados Estratégicos</h3>
+                        <p>Treine com questões no formato da banca</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Página Pedidos -->
-        <section class="page page-pedidos" id="page-pedidos">
+        <section class="pedidos" id="pedidos">
             <div class="container">
                 <h2 class="section-title">Meus Pedidos</h2>
                 <p class="section-subtitle">Acompanhe seus materiais adquiridos</p>
                 <div class="pedidos-content">
                     <div class="empty-state">
                         <p>Você ainda não possui pedidos.</p>
-                        <a href="#" data-page="concursos" class="btn btn-primary">Ver Concursos</a>
+                        <a href="/#produtos" class="btn btn-primary">Ver Concursos</a>
                     </div>
                 </div>
             </div>
@@ -129,6 +124,11 @@
                 <div class="footer-info">
                     <h3>Concurso Store</h3>
                     <p>Método de memorização para concursos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/#produtos">Concursos</a>
+                    <a href="/#metodo">Método</a>
+                    <a href="/success.html">Meus Pedidos</a>
                 </div>
             </div>
             <div class="footer-bottom">

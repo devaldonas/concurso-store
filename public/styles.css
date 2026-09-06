@@ -547,4 +547,7 @@ link[rel="icon"] {
     border-radius: 8px;
 }
 
+}/* Ajuste para links de navegação */
+.nav-links a[href="/#produtos"] {
+    cursor: pointer;
 }
