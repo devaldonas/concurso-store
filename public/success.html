@@ -55,31 +55,31 @@
         const urlParams = new URLSearchParams(window.location.search);
         const sessionId = urlParams.get('session_id');
         
-        // Mapeamento de produtos para suas páginas
+        // Mapeamento de produtos para suas páginas de material
         const materialMap = {
             'memorizacao_seduc_ms': {
                 nome: 'SEDUC/MS 2022',
-                url: '/material/flashcards.html?concurso=seduc-ms-2022'
+                url: '/material/seduc-ms-2022/'
             },
             'memorizacao_pm_sp': {
                 nome: 'PM/SP 2026',
-                url: '/material/flashcards.html?concurso=pm-sp-2026'
+                url: '/material/pm-sp-2026/'
             },
             'memorizacao_inss': {
                 nome: 'INSS 2022',
-                url: '/material/inss-2022/flashcards.html'
+                url: '/material/inss-2022/'
             },
             'memorizacao_caixa': {
                 nome: 'Caixa Econômica Federal',
-                url: '/material/flashcards.html?concurso=caixa-2024'
+                url: '/material/caixa-2024/'
             },
             'memorizacao_pf': {
                 nome: 'Polícia Federal',
-                url: '/material/flashcards.html?concurso=pf-2024'
+                url: '/material/pf-2024/'
             },
             'memorizacao_tj_sp': {
                 nome: 'TJ/SP',
-                url: '/material/flashcards.html?concurso=tj-sp-2024'
+                url: '/material/tj-sp-2024/'
             }
         };
         
@@ -90,7 +90,7 @@
                     if (data.status === 'paid') {
                         const productId = data.product_id;
                         const material = materialMap[productId] || materialMap['memorizacao_seduc_ms'];
-                        const linkMaterial = `${material.url}&session_id=${sessionId}`;
+                        const linkMaterial = `${material.url}?session_id=${sessionId}`;
                         
                         const detailsDiv = document.getElementById('orderDetails');
                         detailsDiv.innerHTML = `
@@ -109,6 +109,9 @@
                             </div>
                             <p style="color: #6c757d; font-size: 0.85rem;">
                                 Guarde este link para acessar seu material quando quiser.
+                            </p>
+                            <p style="color: #6c757d; font-size: 0.85rem; margin-top: 0.5rem;">
+                                Um email com as informações também foi enviado para ${data.customer_email || 'seu email'}.
                             </p>
                         `;
                     }

@@ -48,27 +48,28 @@ app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) =
   
   console.log(`✅ Webhook recebido: ${event.type} (ID: ${event.id})`);
 
-  if (event.type === 'checkout.session.completed') {
+  // No webhook, quando processar checkout.session.completed:
+if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
     const email = session.customer_details?.email;
     const productName = session.metadata?.product_name || 'Material de Estudo';
+    const productId = session.metadata?.product_id || 'memorizacao_seduc_ms';
     const sessionId = session.id;
     
-    console.log(`💳 Pagamento confirmado para ${email} - Produto: ${productName}`);
+    console.log(`💳 Pagamento confirmado para ${email} - Produto: ${productName} (${productId})`);
     
     try {
-      const { enviarMaterial } = require('./config/email');
-      const resultado = await enviarMaterial(email, productName, sessionId);
-      if (resultado) {
-        console.log(`📧 E-mail enviado com sucesso para ${email}`);
-      } else {
-        console.log(`❌ Falha ao enviar e-mail para ${email}`);
-      }
+        const { enviarMaterial } = require('./config/email');
+        const resultado = await enviarMaterial(email, productName, sessionId, productId);
+        if (resultado) {
+            console.log(`📧 E-mail enviado com sucesso para ${email}`);
+        } else {
+            console.log(`❌ Falha ao enviar e-mail para ${email}`);
+        }
     } catch (error) {
-      console.error('❌ Erro ao enviar e-mail:', error.message);
-      console.error('❌ Erro completo:', error);
+        console.error('❌ Erro ao enviar e-mail:', error.message);
     }
-  }
+}
   
   res.json({ received: true });
 });
