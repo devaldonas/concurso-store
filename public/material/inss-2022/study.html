@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Estudar - INSS 2022</title>
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #1a1a2e;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+        .header {
+            background: #0f0f1a;
+            color: white;
+            padding: 1rem 0;
+            border-bottom: 2px solid #e94560;
+        }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { font-size: 1.5rem; font-weight: 700; }
+        .header a { color: #e94560; text-decoration: none; font-weight: 500; }
+        .header a:hover { text-decoration: underline; }
+
+        .progress-container {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .progress-info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; margin-bottom: 0.5rem; }
+        .progress-bar { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: #e94560; border-radius: 4px; transition: width 0.3s ease; }
+
+        .flashcard-container {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 2px solid transparent;
+        }
+        .flashcard-container:hover { border-color: #e94560; }
+        .flashcard-container .frente,
+        .flashcard-container .verso { font-size: 1.3rem; text-align: center; line-height: 1.6; width: 100%; }
+        .flashcard-container .verso { color: #e94560; font-weight: 500; }
+        .flashcard-container .dica { font-size: 0.9rem; color: #6c757d; margin-top: 1rem; }
+
+        .botoes { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
+        .btn { padding: 0.8rem 2rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 120px; }
+        .btn:active { transform: scale(0.95); }
+        .btn-dificil { background: #dc3545; color: white; }
+        .btn-dificil:hover { background: #c82333; }
+        .btn-medio { background: #ffc107; color: #1a1a2e; }
+        .btn-medio:hover { background: #e0a800; }
+        .btn-facil { background: #28a745; color: white; }
+        .btn-facil:hover { background: #1e7e34; }
+        .btn-voltar { background: #6c757d; color: white; }
+        .btn-voltar:hover { background: #5a6268; }
+
+        .estatisticas {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+        .estatisticas span { font-size: 0.9rem; color: #6c757d; }
+        .estatisticas .numero { font-weight: 700; color: #1a1a2e; }
+        .estatisticas .acertos .numero { color: #28a745; }
+        .estatisticas .erros .numero { color: #dc3545; }
+
+        .finalizado { text-align: center; padding: 3rem 1rem; }
+        .finalizado h2 { color: #28a745; font-size: 2rem; margin-bottom: 1rem; }
+        .finalizado p { color: #6c757d; margin-bottom: 1.5rem; }
+
+        .erro { text-align: center; padding: 3rem 1rem; }
+        .erro h2 { color: #dc3545; font-size: 1.8rem; margin-bottom: 1rem; }
+
+        footer {
+            background: #0f0f1a;
+            color: #c8c8d4;
+            padding: 2rem 0 1rem;
+            margin-top: auto;
+        }
+        .footer-bottom { text-align: center; opacity: 0.5; font-size: 0.75rem; }
+
+        .voltar { display: inline-block; margin-top: 1rem; color: #e94560; text-decoration: none; }
+        .voltar:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .flashcard-container { padding: 1.5rem 1rem; min-height: 180px; }
+            .flashcard-container .frente,
+            .flashcard-container .verso { font-size: 1.1rem; }
+            .botoes { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 250px; }
+            .estatisticas { flex-direction: column; gap: 0.5rem; text-align: center; }
+            .header h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Estudar - INSS</h1>
+            <a href="/material/inss-2022/flashcards.html?session_id=dev_test" id="linkVoltar">Voltar aos baralhos</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="app">
+            <!-- Conteúdo renderizado pelo JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // CONFIGURAÇÃO
+        // ==========================================
+        const urlParams = new URLSearchParams(window.location.search);
+        const baralhoId = urlParams.get('baralho');
+        const sessionId = urlParams.get('session_id') || 'dev_test';
+
+        const baralhos = {
+            'portugues': { nome: 'Língua Portuguesa', arquivo: 'flashcards-portugues.csv' },
+            'constitucional': { nome: 'Direito Constitucional', arquivo: 'flashcards-constitucional.csv' },
+            'administrativo': { nome: 'Direito Administrativo', arquivo: 'flashcards-administrativo.csv' },
+            'etica': { nome: 'Ética no Serviço Público', arquivo: 'flashcards-etica.csv' },
+            'logica': { nome: 'Raciocínio Lógico-Matemático', arquivo: 'flashcards-logica.csv' },
+            'informatica': { nome: 'Noções de Informática', arquivo: 'flashcards-informatica.csv' },
+            'especificos': { nome: 'Conhecimentos Específicos', arquivo: 'flashcards-especificos.csv' }
+        };
+
+        // Dados embutidos com todos os cards (fallback)
+        const dadosEmbutidos = {
+            'portugues': [
+                { frente: 'O que é interpretação de texto?', verso: 'Capacidade de compreender o sentido global do texto' },
+                { frente: 'O que é uma ideia principal?', verso: 'É a mensagem central que o autor quer transmitir' },
+                { frente: 'O que são ideias secundárias?', verso: 'São informações que complementam a ideia principal' }
+            ],
+            'constitucional': [
+                { frente: 'O que são direitos fundamentais?', verso: 'Direitos básicos garantidos pela Constituição' },
+                { frente: 'Quais são os direitos individuais?', verso: 'Vida, liberdade, igualdade, segurança e propriedade' }
+            ],
+            'administrativo': [
+                { frente: 'O que é Direito Administrativo?', verso: 'Ramo do direito que regula a atividade da Administração Pública' }
+            ],
+            'etica': [
+                { frente: 'O que é o Código de Ética do Servidor Público?', verso: 'Decreto 1.171/94' }
+            ],
+            'logica': [
+                { frente: 'O que é uma proposição lógica?', verso: 'Frase que pode ser classificada como verdadeira ou falsa' }
+            ],
+            'informatica': [
+                { frente: 'O que é um sistema operacional?', verso: 'Software que gerencia os recursos do computador' }
+            ],
+            'especificos': [
+                { frente: 'O que é Seguridade Social?', verso: 'Conjunto de políticas públicas nas áreas de saúde, previdência e assistência' }
+            ]
+        };
+
+        let state = {
+            cards: [],
+            cardAtual: 0,
+            acertos: 0,
+            erros: 0,
+            revisados: 0,
+            total: 0
+        };
+
+        async function carregarFlashcards() {
+            try {
+                const response = await fetch(`/material/inss-2022/flashcards/${baralhos[baralhoId].arquivo}`);
+                if (!response.ok) {
+                    console.warn(`Arquivo ${baralhos[baralhoId].arquivo} não encontrado. Usando dados embutidos.`);
+                    return dadosEmbutidos[baralhoId] || [];
+                }
+                const text = await response.text();
+                const linhas = text.split('\n').filter(line => line.trim());
+                const cards = linhas.map((linha, index) => {
+                    const partes = linha.split(';');
+                    return { id: index + 1, frente: partes[0] || '', verso: partes[1] || '' };
+                });
+                return cards;
+            } catch (error) {
+                console.warn('Erro ao carregar:', error);
+                return dadosEmbutidos[baralhoId] || [];
+            }
+        }
+
+        async function iniciarEstudo() {
+            const container = document.getElementById('app');
+            
+            if (!baralhoId || !baralhos[baralhoId]) {
+                container.innerHTML = `
+                    <div class="erro">
+                        <h2>Baralho não encontrado</h2>
+                        <p>O baralho selecionado não existe.</p>
+                        <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="voltar">← Voltar</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const cards = await carregarFlashcards();
+            if (!cards || cards.length === 0) {
+                container.innerHTML = `
+                    <div class="erro">
+                        <h2>Nenhum card encontrado</h2>
+                        <p>O baralho "${baralhos[baralhoId].nome}" está vazio.</p>
+                        <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="voltar">← Voltar</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const progressoSalvo = localStorage.getItem(`flashcards_inss-2022_${baralhoId}`);
+            if (progressoSalvo) {
+                state.cards = JSON.parse(progressoSalvo);
+            } else {
+                state.cards = cards.map(c => ({ ...c, revisado: false }));
+            }
+
+            state.cardAtual = 0;
+            state.acertos = 0;
+            state.erros = 0;
+            state.revisados = 0;
+            state.total = state.cards.length;
+            mostrarCard();
+        }
+
+        function mostrarCard() {
+            const container = document.getElementById('app');
+            const card = state.cards[state.cardAtual];
+            if (!card) { mostrarFinalizado(); return; }
+
+            const progresso = state.total > 0 ? Math.round((state.revisados / state.total) * 100) : 0;
+
+            container.innerHTML = `
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Card ${state.revisados + 1} de ${state.total}</span>
+                        <span>${progresso}% concluído</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: ${progresso}%"></div>
+                    </div>
+                </div>
+
+                <div class="flashcard-container" id="flashcard" onclick="virarCard()">
+                    <div class="frente" id="frente">${card.frente}</div>
+                    <div class="verso" id="verso" style="display: none;">${card.verso}</div>
+                    <div class="dica" id="dica">👆 Clique para ver a resposta</div>
+                </div>
+
+                <div class="botoes" id="botoes" style="display: none;">
+                    <button class="btn btn-dificil" onclick="avaliar(0)">😰 Esqueci</button>
+                    <button class="btn btn-medio" onclick="avaliar(3)">🤔 Médio</button>
+                    <button class="btn btn-facil" onclick="avaliar(5)">😊 Fácil</button>
+                </div>
+
+                <div class="estatisticas">
+                    <span class="acertos">✅ Acertos: <span class="numero">${state.acertos}</span></span>
+                    <span class="erros">❌ Erros: <span class="numero">${state.erros}</span></span>
+                    <span>📊 Revisados: <span class="numero">${state.revisados}</span></span>
+                </div>
+
+                <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="voltar">← Voltar aos baralhos</a>
+            `;
+        }
+
+        function virarCard() {
+            const frente = document.getElementById('frente');
+            const verso = document.getElementById('verso');
+            const dica = document.getElementById('dica');
+            const botoes = document.getElementById('botoes');
+
+            if (frente && frente.style.display !== 'none') {
+                frente.style.display = 'none';
+                verso.style.display = 'block';
+                dica.textContent = '📝 Como você se saiu?';
+                botoes.style.display = 'flex';
+            }
+        }
+
+        function avaliar(nota) {
+            const card = state.cards[state.cardAtual];
+            card.revisado = true;
+            state.revisados++;
+
+            if (nota >= 4) { state.acertos++; card.acertos = (card.acertos || 0) + 1; } 
+            else { state.erros++; card.erros = (card.erros || 0) + 1; }
+
+            localStorage.setItem(`flashcards_inss-2022_${baralhoId}`, JSON.stringify(state.cards));
+            state.cardAtual++;
+
+            if (state.cardAtual >= state.cards.length) { mostrarFinalizado(); } 
+            else { mostrarCard(); }
+        }
+
+        function mostrarFinalizado() {
+            const container = document.getElementById('app');
+            const taxaAcerto = state.total > 0 ? Math.round((state.acertos / state.total) * 100) : 0;
+
+            container.innerHTML = `
+                <div class="finalizado">
+                    <h2>🎉 Estudo concluído!</h2>
+                    <p>Você revisou <strong>${state.total}</strong> cards.</p>
+                    <p>✅ Acertos: <strong>${state.acertos}</strong></p>
+                    <p>❌ Erros: <strong>${state.erros}</strong></p>
+                    <p>📊 Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
+                    <br>
+                    <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="btn btn-voltar">← Voltar aos baralhos</a>
+                    <a href="#" onclick="reiniciar()" class="btn btn-facil">🔄 Revisar novamente</a>
+                </div>
+            `;
+        }
+
+        function reiniciar() {
+            state.cards.forEach(c => c.revisado = false);
+            state.cardAtual = 0;
+            state.acertos = 0;
+            state.erros = 0;
+            state.revisados = 0;
+            localStorage.setItem(`flashcards_inss-2022_${baralhoId}`, JSON.stringify(state.cards));
+            mostrarCard();
+        }
+
+        // Exportar funções
+        window.virarCard = virarCard;
+        window.avaliar = avaliar;
+        window.reiniciar = reiniciar;
+
+        // Iniciar
+        iniciarEstudo();
+    </script>
+</body>
+</html>
