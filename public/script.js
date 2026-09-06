@@ -5,20 +5,20 @@
 // Carregar produtos na página inicial
 document.addEventListener('DOMContentLoaded', async () => {
     // Navegação por âncoras - apenas redireciona para a página inicial com a âncora
-    document.querySelectorAll('.nav-links a, [data-page]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Se for um link para âncora, apenas redireciona
-            if (this.getAttribute('href') && this.getAttribute('href').startsWith('/#')) {
-                // Não faz nada, deixa o navegador lidar com a âncora
-                return;
-            }
-            // Para links com data-page, redireciona para a página inicial com a âncora
-            const page = this.getAttribute('data-page');
-            if (page) {
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        // Ignora links que não são âncoras (ex: /contato.html)
+        if (link.getAttribute('href') && !link.getAttribute('href').startsWith('/#')) {
+            return;
+        }
+        
+        // Para links com data-page, redireciona para a página inicial com a âncora
+        const page = link.getAttribute('data-page');
+        if (page) {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.location.href = `/#${page}`;
-            }
-        });
+            });
+        }
     });
 
     // Fecha o menu mobile ao clicar em um link
