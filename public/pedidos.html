@@ -3,75 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Pedidos - Concurso Store</title>
+    <title>Acesso ao Material - Concurso Store</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
-        .pedidos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .pedido-card {
+        .access-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            text-align: center;
+            padding: 2rem;
             background: white;
-            padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid #e9ecef;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
         }
-        .pedido-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        .access-container h1 {
+            color: #0f0f1a;
+            margin-bottom: 1rem;
         }
-        .pedido-card .status {
+        .access-container p {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .btn {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .status-pago { background: #d4edda; color: #155724; }
-        .status-pendente { background: #fff3cd; color: #856404; }
-        .pedido-card .data {
-            color: #6c757d;
-            font-size: 0.85rem;
-            margin: 0.5rem 0;
-        }
-        .pedido-card .btn {
-            margin-top: 0.5rem;
-            width: 100%;
-        }
-        .empty-state {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #6c757d;
-        }
-        .empty-state h2 { color: #0f0f1a; margin-bottom: 0.5rem; }
-        .header-pedidos {
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            background: #e94560;
             color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            text-align: center;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
         }
-        .header-pedidos h1 { margin-bottom: 0.5rem; }
-        .header-pedidos p { opacity: 0.8; }
-        .breadcrumb { margin: 1rem 0; color: #6c757d; }
-        .breadcrumb a { color: #e94560; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .total-pedidos {
-            background: white;
-            padding: 1rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(233, 69, 96, 0.3);
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+            box-shadow: 0 4px 16px rgba(108, 117, 125, 0.3);
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #e94560;
+            text-align: left;
+        }
+        .info-box h3 {
+            color: #0f0f1a;
+            margin-bottom: 0.5rem;
+        }
+        .info-box p {
+            margin-bottom: 0.3rem;
+        }
+        .email-destaque {
+            background: #e9ecef;
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #0f0f1a;
         }
         @media (max-width: 768px) {
-            .pedidos-grid { grid-template-columns: 1fr; }
+            .access-container {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -87,7 +92,6 @@
                     <li><a href="/">Início</a></li>
                     <li><a href="/#produtos">Concursos</a></li>
                     <li><a href="/#metodo">Método</a></li>
-                    <li><a href="/pedidos.html">Meus Pedidos</a></li>
                 </ul>
             </div>
         </nav>
@@ -95,19 +99,26 @@
 
     <main>
         <div class="container">
-            <div class="breadcrumb">
-                <a href="/">Início</a> / <span style="color: #0f0f1a;">Meus Pedidos</span>
-            </div>
+            <div class="access-container">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">📚</div>
+                <h1>Acesse seu Material</h1>
+                <p>Seu material de estudo foi enviado para o e-mail informado no momento da compra.</p>
 
-            <div class="header-pedidos">
-                <h1>📦 Meus Pedidos</h1>
-                <p>Acompanhe seus materiais adquiridos</p>
-            </div>
-
-            <div id="pedidos-container">
-                <div style="text-align: center; padding: 2rem;">
-                    <p>Carregando seus pedidos...</p>
+                <div class="info-box">
+                    <h3>🔑 Como acessar:</h3>
+                    <p>1. Verifique seu e-mail <span class="email-destaque">(incluindo a pasta de spam)</span></p>
+                    <p>2. Clique no link enviado pela Concurso Store</p>
+                    <p>3. O link é pessoal e intransferível</p>
                 </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/#produtos" class="btn">Ver Concursos</a>
+                    <a href="/" class="btn btn-secondary">Voltar à Loja</a>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 0.85rem; color: #adb5bd;">
+                    Não recebeu o e-mail? Verifique a pasta de spam ou entre em contato.
+                </p>
             </div>
         </div>
     </main>
@@ -119,85 +130,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // ==========================================
-        // CARREGAR PEDIDOS DO USUÁRIO
-        // ==========================================
-        const urlParams = new URLSearchParams(window.location.search);
-        const sessionId = urlParams.get('session_id');
-
-        async function carregarPedidos() {
-            const container = document.getElementById('pedidos-container');
-            
-            // Se não tiver session_id, mostra mensagem
-            if (!sessionId) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <h2>🔒 Faça login para ver seus pedidos</h2>
-                        <p>Realize uma compra para acessar seus materiais.</p>
-                        <a href="/#produtos" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Ver Concursos</a>
-                    </div>
-                `;
-                return;
-            }
-
-            try {
-                // Busca a sessão no Stripe
-                const response = await fetch(`/api/check-session/${sessionId}`);
-                const data = await response.json();
-
-                if (data.status === 'paid') {
-                    // Produto comprado - aqui você pode buscar do banco de dados
-                    const produtosComprados = [
-                        { nome: 'Polícia Militar - SP (Soldado)', data: '06/09/2026', status: 'Pago', id: 'pm_sp' },
-                        { nome: 'Polícia Federal (Agente)', data: '06/09/2026', status: 'Pago', id: 'pf' },
-                        { nome: 'Tribunal de Justiça - SP (Escrevente)', data: '06/09/2026', status: 'Pago', id: 'tj_sp' }
-                    ];
-
-                    const pedidosHtml = produtosComprados.map(p => `
-                        <div class="pedido-card">
-                            <h3>${p.nome}</h3>
-                            <div class="data">📅 ${p.data}</div>
-                            <span class="status status-pago">✅ ${p.status}</span>
-                            <div style="margin-top: 0.8rem;">
-                                <a href="/material/${p.id}-2024/?session_id=${sessionId}" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
-                                    Acessar Material
-                                </a>
-                            </div>
-                        </div>
-                    `).join('');
-
-                    container.innerHTML = `
-                        <div class="total-pedidos">
-                            <span style="font-weight: 700; font-size: 1.2rem;">📊 Total: ${produtosComprados.length} pedidos</span>
-                        </div>
-                        <div class="pedidos-grid">
-                            ${pedidosHtml}
-                        </div>
-                    `;
-                } else {
-                    container.innerHTML = `
-                        <div class="empty-state">
-                            <h2>📭 Nenhum pedido encontrado</h2>
-                            <p>Você ainda não realizou nenhuma compra.</p>
-                            <a href="/#produtos" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Ver Concursos</a>
-                        </div>
-                    `;
-                }
-            } catch (error) {
-                console.error('Erro ao carregar pedidos:', error);
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <h2>⚠️ Erro ao carregar pedidos</h2>
-                        <p>Não foi possível carregar seus pedidos. Tente novamente.</p>
-                        <a href="/#produtos" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Ver Concursos</a>
-                    </div>
-                `;
-            }
-        }
-
-        carregarPedidos();
-    </script>
 </body>
 </html>
