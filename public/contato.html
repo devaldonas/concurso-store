@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contato - Concurso Store</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        .contato-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .contato-container h1 {
+            color: #0f0f1a;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .contato-container .subtitulo {
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #0f0f1a;
+            font-size: 0.9rem;
+        }
+        .form-group label .required {
+            color: #e94560;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group select {
+            appearance: auto;
+            background: white;
+        }
+        .btn-enviar {
+            width: 100%;
+            padding: 1rem;
+            background: #e94560;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-enviar:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(233, 69, 96, 0.3);
+        }
+        .btn-enviar:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .mensagem-sucesso {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+        .mensagem-erro {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #f5c6cb;
+            text-align: center;
+        }
+        .mensagem-suporte {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .mensagem-suporte strong {
+            color: #0f0f1a;
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #e94560;
+        }
+        .info-box h3 {
+            color: #0f0f1a;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .info-box p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+        .info-box .destaque {
+            color: #0f0f1a;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .contato-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="/images/concurso-store-icon.png" alt="Concurso Store" class="nav-logo">
+                    <span>Concurso Store</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/#produtos">Concursos</a></li>
+                    <li><a href="/#metodo">Método</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="contato-container">
+                <h1>📩 Fale Conosco</h1>
+                <p class="subtitulo">Dúvidas, sugestões ou problemas? Estamos aqui para ajudar!</p>
+
+                <div class="mensagem-sucesso" id="mensagemSucesso">
+                    ✅ Mensagem enviada com sucesso! Responderemos em breve.
+                </div>
+                <div class="mensagem-erro" id="mensagemErro">
+                    ❌ Erro ao enviar mensagem. Tente novamente.
+                </div>
+
+                <div class="info-box">
+                    <h3>⚡ Antes de enviar:</h3>
+                    <p>• Verifique seu e-mail (incluindo o spam) - o link do material foi enviado para lá</p>
+                    <p>• Tenha em mãos o <span class="destaque">ID da sua compra</span> (enviado no e-mail)</p>
+                    <p>• Descreva seu problema com o máximo de detalhes possível</p>
+                </div>
+
+                <form id="formContato" onsubmit="enviarMensagem(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome completo <span class="required">*</span></label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto <span class="required">*</span></label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione...</option>
+                            <option value="problema-acesso">Problema com acesso ao material</option>
+                            <option value="duvida-conteudo">Dúvida sobre o conteúdo</option>
+                            <option value="problema-pagamento">Problema com pagamento</option>
+                            <option value="sugestao">Sugestão de melhoria</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem <span class="required">*</span></label>
+                        <textarea id="mensagem" name="mensagem" required placeholder="Descreva sua dúvida ou problema em detalhes..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar" id="btnEnviar">
+                        📨 Enviar Mensagem
+                    </button>
+                </form>
+
+                <div class="mensagem-suporte">
+                    💡 Resposta em até <strong>24 horas úteis</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function enviarMensagem(event) {
+            event.preventDefault();
+
+            const btn = document.getElementById('btnEnviar');
+            const sucesso = document.getElementById('mensagemSucesso');
+            const erro = document.getElementById('mensagemErro');
+
+            // Esconde mensagens anteriores
+            sucesso.style.display = 'none';
+            erro.style.display = 'none';
+
+            // Desabilita botão
+            btn.disabled = true;
+            btn.textContent = '⏳ Enviando...';
+
+            // Coleta dados
+            const dados = {
+                nome: document.getElementById('nome').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                telefone: document.getElementById('telefone').value.trim(),
+                assunto: document.getElementById('assunto').value,
+                mensagem: document.getElementById('mensagem').value.trim(),
+                data: new Date().toISOString()
+            };
+
+            // Validação básica
+            if (!dados.nome || !dados.email || !dados.assunto || !dados.mensagem) {
+                erro.textContent = '❌ Preencha todos os campos obrigatórios.';
+                erro.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = '📨 Enviar Mensagem';
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/contato', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                });
+
+                if (response.ok) {
+                    sucesso.style.display = 'block';
+                    document.getElementById('formContato').reset();
+                    // Scroll para o topo
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    erro.textContent = '❌ Erro ao enviar mensagem. Tente novamente.';
+                    erro.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                erro.textContent = '❌ Erro ao enviar mensagem. Verifique sua conexão.';
+                erro.style.display = 'block';
+            }
+
+            btn.disabled = false;
+            btn.textContent = '📨 Enviar Mensagem';
+        }
+    </script>
+</body>
+</html>

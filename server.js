@@ -285,3 +285,151 @@ app.listen(PORT, () => {
     console.log(`📝 Use session_id=dev_test para testar sem pagamento`);
   }
 });
+// ==========================================
+// ROTA DE CONTATO
+// ==========================================
+
+const fs = require('fs');
+const pathData = path.join(__dirname, 'data');
+
+// Garante que a pasta data existe
+if (!fs.existsSync(pathData)) {
+    fs.mkdirSync(pathData, { recursive: true });
+}
+
+// Rota para receber mensagens de contato
+app.post('/api/contato', async (req, res) => {
+    try {
+        const { nome, email, telefone, assunto, mensagem, data } = req.body;
+
+        // Validação básica
+        if (!nome || !email || !assunto || !mensagem) {
+            return res.status(400).json({ error: 'Campos obrigatórios faltando' });
+        }
+
+        // Cria objeto da mensagem
+        const novaMensagem = {
+            id: Date.now(),
+            nome,
+            email,
+            telefone: telefone || 'Não informado',
+            assunto,
+            mensagem,
+            data: data || new Date().toISOString(),
+            status: 'Não lida',
+            lida_em: null,
+            respondida_em: null,
+            resposta: null
+        };
+
+        // Caminho do arquivo
+        const filePath = path.join(pathData, 'mensagens.json');
+
+        // Lê mensagens existentes ou cria array vazio
+        let mensagens = [];
+        if (fs.existsSync(filePath)) {
+            const conteudo = fs.readFileSync(filePath, 'utf8');
+            mensagens = JSON.parse(conteudo);
+        }
+
+        // Adiciona nova mensagem
+        mensagens.push(novaMensagem);
+
+        // Salva no arquivo
+        fs.writeFileSync(filePath, JSON.stringify(mensagens, null, 2), 'utf8');
+
+        console.log(`📩 Nova mensagem de ${nome} (${email}) - Assunto: ${assunto}`);
+
+        res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso!' });
+
+    } catch (error) {
+        console.error('❌ Erro ao salvar mensagem:', error);
+        res.status(500).json({ error: 'Erro interno ao processar mensagem' });
+    }
+});
+
+// Rota para buscar mensagens (apenas para admin)
+app.get('/api/admin/mensagens', (req, res) => {
+    try {
+        const filePath = path.join(pathData, 'mensagens.json');
+        if (!fs.existsSync(filePath)) {
+            return res.json([]);
+        }
+        const conteudo = fs.readFileSync(filePath, 'utf8');
+        const mensagens = JSON.parse(conteudo);
+        // Ordena por data decrescente (mais recentes primeiro)
+        mensagens.sort((a, b) => new Date(b.data) - new Date(a.data));
+        res.json(mensagens);
+    } catch (error) {
+        console.error('❌ Erro ao ler mensagens:', error);
+        res.status(500).json({ error: 'Erro ao carregar mensagens' });
+    }
+});
+
+// Rota para marcar mensagem como lida
+app.post('/api/admin/mensagens/:id/lida', (req, res) => {
+    try {
+        const { id } = req.params;
+        const filePath = path.join(pathData, 'mensagens.json');
+        
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({ error: 'Nenhuma mensagem encontrada' });
+        }
+
+        const conteudo = fs.readFileSync(filePath, 'utf8');
+        let mensagens = JSON.parse(conteudo);
+        
+        const index = mensagens.findIndex(m => m.id === parseInt(id));
+        if (index === -1) {
+            return res.status(404).json({ error: 'Mensagem não encontrada' });
+        }
+
+        mensagens[index].status = 'Lida';
+        mensagens[index].lida_em = new Date().toISOString();
+
+        fs.writeFileSync(filePath, JSON.stringify(mensagens, null, 2), 'utf8');
+        
+        res.json({ success: true });
+    } catch (error) {
+        console.error('❌ Erro ao marcar mensagem como lida:', error);
+        res.status(500).json({ error: 'Erro ao atualizar mensagem' });
+    }
+});
+
+// Rota para responder mensagem (admin)
+app.post('/api/admin/mensagens/:id/resposta', (req, res) => {
+    try {
+        const { id } = req.params;
+        const { resposta } = req.body;
+        
+        if (!resposta) {
+            return res.status(400).json({ error: 'Resposta é obrigatória' });
+        }
+
+        const filePath = path.join(pathData, 'mensagens.json');
+        
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({ error: 'Nenhuma mensagem encontrada' });
+        }
+
+        const conteudo = fs.readFileSync(filePath, 'utf8');
+        let mensagens = JSON.parse(conteudo);
+        
+        const index = mensagens.findIndex(m => m.id === parseInt(id));
+        if (index === -1) {
+            return res.status(404).json({ error: 'Mensagem não encontrada' });
+        }
+
+        mensagens[index].status = 'Respondida';
+        mensagens[index].respondida_em = new Date().toISOString();
+        mensagens[index].resposta = resposta;
+
+        fs.writeFileSync(filePath, JSON.stringify(mensagens, null, 2), 'utf8');
+        
+        console.log(`📨 Mensagem #${id} respondida.`);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('❌ Erro ao responder mensagem:', error);
+        res.status(500).json({ error: 'Erro ao responder mensagem' });
+    }
+});

@@ -33,6 +33,177 @@
             </div>
         </main>
     </div>
-    <script src="/admin/script.js"></script>
+    <script>
+        // ==========================================
+        // CARREGAR MENSAGENS DO SERVIDOR
+        // ==========================================
+        async function carregarMensagens() {
+            const container = document.getElementById('mensagens-container');
+            
+            try {
+                const response = await fetch('/api/admin/mensagens');
+                const mensagens = await response.json();
+
+                if (!mensagens || mensagens.length === 0) {
+                    container.innerHTML = `
+                        <div style="text-align: center; padding: 3rem; color: #6c757d;">
+                            <p>📭 Nenhuma mensagem recebida.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let html = `
+                    <div class="table-container">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h2>💬 Mensagens</h2>
+                            <span style="color: #6c757d; font-size: 0.9rem;">Total: ${mensagens.length} mensagens</span>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Remetente</th>
+                                    <th>Assunto</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+                mensagens.forEach(m => {
+                    const statusClass = m.status === 'Não lida' ? 'status-pendente' : 
+                                      m.status === 'Lida' ? 'status-pago' : 'status-pago';
+                    const statusIcon = m.status === 'Não lida' ? '🔴' : 
+                                      m.status === 'Lida' ? '🟢' : '✅';
+                    
+                    html += `
+                        <tr>
+                            <td>#${m.id}</td>
+                            <td><strong>${m.nome}</strong><br><small style="color: #6c757d;">${m.email}</small></td>
+                            <td>${m.assunto}</td>
+                            <td>${new Date(m.data).toLocaleDateString('pt-BR')}</td>
+                            <td><span class="status-badge ${statusClass}">${statusIcon} ${m.status}</span></td>
+                            <td>
+                                <button class="btn-admin btn-admin-primary" onclick="verMensagem(${m.id})">Ver</button>
+                                <button class="btn-admin btn-admin-success" onclick="responderMensagem(${m.id})">Responder</button>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                html += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+
+                container.innerHTML = html;
+
+            } catch (error) {
+                console.error('Erro ao carregar mensagens:', error);
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; color: #dc3545;">
+                        <p>❌ Erro ao carregar mensagens. Tente novamente.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // ==========================================
+        // FUNÇÕES AUXILIARES
+        // ==========================================
+        async function verMensagem(id) {
+            try {
+                // Marca como lida
+                await fetch(`/api/admin/mensagens/${id}/lida`, { method: 'POST' });
+                
+                // Busca a mensagem específica
+                const response = await fetch('/api/admin/mensagens');
+                const mensagens = await response.json();
+                const msg = mensagens.find(m => m.id === id);
+                
+                if (!msg) {
+                    alert('Mensagem não encontrada.');
+                    return;
+                }
+
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
+                    background: rgba(0,0,0,0.5); display: flex; align-items: center; 
+                    justify-content: center; z-index: 9999;
+                `;
+                modal.innerHTML = `
+                    <div style="background: white; max-width: 500px; width: 90%; padding: 2rem; 
+                         border-radius: 12px; max-height: 80vh; overflow-y: auto;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h2 style="margin: 0;">Mensagem #${msg.id}</h2>
+                            <button onclick="this.closest('div[style]').remove()" 
+                                    style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                        </div>
+                        <p><strong>De:</strong> ${msg.nome} (${msg.email})</p>
+                        <p><strong>Telefone:</strong> ${msg.telefone || 'Não informado'}</p>
+                        <p><strong>Assunto:</strong> ${msg.assunto}</p>
+                        <p><strong>Data:</strong> ${new Date(msg.data).toLocaleString('pt-BR')}</p>
+                        <hr style="margin: 1rem 0;">
+                        <p><strong>Mensagem:</strong></p>
+                        <p style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; white-space: pre-wrap;">${msg.mensagem}</p>
+                        ${msg.resposta ? `
+                            <hr style="margin: 1rem 0;">
+                            <p><strong>Resposta:</strong></p>
+                            <p style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; white-space: pre-wrap;">${msg.resposta}</p>
+                        ` : ''}
+                        <button onclick="this.closest('div[style]').remove()" 
+                                class="btn-admin btn-admin-primary" style="margin-top: 1rem; padding: 0.5rem 2rem;">
+                            Fechar
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                // Atualiza a lista
+                carregarMensagens();
+
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao abrir mensagem.');
+            }
+        }
+
+        function responderMensagem(id) {
+            const resposta = prompt('Digite sua resposta (esta resposta será salva no sistema):');
+            if (resposta && resposta.trim()) {
+                enviarResposta(id, resposta.trim());
+            }
+        }
+
+        async function enviarResposta(id, resposta) {
+            try {
+                const response = await fetch(`/api/admin/mensagens/${id}/resposta`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ resposta })
+                });
+
+                if (response.ok) {
+                    alert('✅ Resposta salva com sucesso!');
+                    carregarMensagens();
+                } else {
+                    alert('❌ Erro ao salvar resposta.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('❌ Erro ao enviar resposta.');
+            }
+        }
+
+        // ==========================================
+        // INICIALIZAÇÃO
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', carregarMensagens);
+    </script>
 </body>
 </html>
