@@ -1,0 +1,48 @@
+{
+  "nome": "CAIXA 2024 - Técnico Bancário",
+  "baralhos": {
+    "portugues": {
+      "nome": "Língua Portuguesa",
+      "cards": [
+        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto, identificando ideias principais e inferências", "dificuldade": 1},
+        {"id": 2, "frente": "O que são sinônimos?", "verso": "Palavras com significados semelhantes", "dificuldade": 1},
+        {"id": 3, "frente": "O que são antônimos?", "verso": "Palavras com significados opostos", "dificuldade": 1},
+        {"id": 4, "frente": "O que é uma figura de linguagem?", "verso": "Recurso estilístico que torna a mensagem mais expressiva", "dificuldade": 2},
+        {"id": 5, "frente": "O que é uma metáfora?", "verso": "Comparação implícita entre dois termos", "dificuldade": 2},
+        {"id": 6, "frente": "O que é denotação?", "verso": "Sentido literal da palavra", "dificuldade": 1},
+        {"id": 7, "frente": "O que é conotação?", "verso": "Sentido figurado da palavra", "dificuldade": 2},
+        {"id": 8, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome, verbo", "dificuldade": 1},
+        {"id": 9, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção, interjeição", "dificuldade": 1},
+        {"id": 10, "frente": "O que é concordância verbal?", "verso": "Flexão do verbo para concordar com o sujeito", "dificuldade": 2}
+      ]
+    },
+    "matematica": {
+      "nome": "Matemática",
+      "cards": [
+        {"id": 1, "frente": "O que é uma fração?", "verso": "Representação de uma parte de um todo", "dificuldade": 1},
+        {"id": 2, "frente": "O que é porcentagem?", "verso": "Razão centesimal representada por %", "dificuldade": 2},
+        {"id": 3, "frente": "O que é a regra de três?", "verso": "Método para resolver problemas de proporcionalidade", "dificuldade": 2},
+        {"id": 4, "frente": "O que é uma equação do 1º grau?", "verso": "Equação na forma ax + b = 0", "dificuldade": 2}
+      ]
+    },
+    "bancarios": {
+      "nome": "Conhecimentos Bancários",
+      "cards": [
+        {"id": 1, "frente": "O que é o Sistema Financeiro Nacional (SFN)?", "verso": "Conjunto de instituições e instrumentos financeiros", "dificuldade": 2},
+        {"id": 2, "frente": "Qual a função do Banco Central?", "verso": "Autoridade monetária que executa a política monetária", "dificuldade": 2},
+        {"id": 3, "frente": "O que é a taxa SELIC?", "verso": "Taxa básica de juros da economia", "dificuldade": 2},
+        {"id": 4, "frente": "O que é o cheque especial?", "verso": "Linha de crédito pré-aprovada", "dificuldade": 1},
+        {"id": 5, "frente": "O que é o Pix?", "verso": "Sistema de pagamentos instantâneos do Banco Central", "dificuldade": 1}
+      ]
+    },
+    "logica": {
+      "nome": "Raciocínio Lógico",
+      "cards": [
+        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser verdadeira ou falsa", "dificuldade": 1},
+        {"id": 2, "frente": "O que é uma conjunção (e)?", "verso": "Verdadeira apenas quando ambas são verdadeiras", "dificuldade": 2},
+        {"id": 3, "frente": "O que é uma disjunção (ou)?", "verso": "Verdadeira quando pelo menos uma é verdadeira", "dificuldade": 2},
+        {"id": 4, "frente": "O que é uma condicional (se...então)?", "verso": "Falsa apenas quando a primeira é verdadeira e a segunda falsa", "dificuldade": 3}
+      ]
+    }
+  }
+}

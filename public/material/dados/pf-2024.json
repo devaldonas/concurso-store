@@ -1,0 +1,38 @@
+{
+  "nome": "PF 2024 - Agente",
+  "baralhos": {
+    "portugues": {
+      "nome": "Língua Portuguesa",
+      "cards": [
+        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto", "dificuldade": 1},
+        {"id": 2, "frente": "O que são figuras de linguagem?", "verso": "Recursos estilísticos que tornam a mensagem mais expressiva", "dificuldade": 2},
+        {"id": 3, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome, verbo", "dificuldade": 1}
+      ]
+    },
+    "constitucional": {
+      "nome": "Direito Constitucional",
+      "cards": [
+        {"id": 1, "frente": "Quais são os princípios da Administração Pública?", "verso": "Legalidade, impessoalidade, moralidade, publicidade, eficiência", "dificuldade": 2},
+        {"id": 2, "frente": "O que é o habeas corpus?", "verso": "Garantia que protege a liberdade de locomoção", "dificuldade": 2}
+      ]
+    },
+    "administrativo": {
+      "nome": "Direito Administrativo",
+      "cards": [
+        {"id": 1, "frente": "O que é a Lei de Improbidade Administrativa?", "verso": "Lei 8.429/92 - define atos de improbidade", "dificuldade": 2}
+      ]
+    },
+    "logica": {
+      "nome": "Raciocínio Lógico",
+      "cards": [
+        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser verdadeira ou falsa", "dificuldade": 1}
+      ]
+    },
+    "informatica": {
+      "nome": "Noções de Informática",
+      "cards": [
+        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia recursos do computador", "dificuldade": 1}
+      ]
+    }
+  }
+}

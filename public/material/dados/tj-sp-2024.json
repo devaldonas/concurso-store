@@ -1,0 +1,29 @@
+{
+  "nome": "TJ/SP 2024 - Escrevente",
+  "baralhos": {
+    "portugues": {
+      "nome": "Língua Portuguesa",
+      "cards": [
+        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto", "dificuldade": 1}
+      ]
+    },
+    "direito": {
+      "nome": "Conhecimentos em Direito",
+      "cards": [
+        {"id": 1, "frente": "O que é o Código Civil?", "verso": "Conjunto de normas que regem as relações civis", "dificuldade": 2}
+      ]
+    },
+    "logica": {
+      "nome": "Raciocínio Lógico",
+      "cards": [
+        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser verdadeira ou falsa", "dificuldade": 1}
+      ]
+    },
+    "informatica": {
+      "nome": "Noções de Informática",
+      "cards": [
+        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia recursos do computador", "dificuldade": 1}
+      ]
+    }
+  }
+}
