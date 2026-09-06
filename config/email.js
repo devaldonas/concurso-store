@@ -26,7 +26,20 @@ const materialMap = {
     'memorizacao_tj_sp': {
         nome: 'TJ/SP',
         url: '/material/tj-sp-2024/'
-    }
+    },
+    'memorizacao_caixa': {
+    nome: 'CAIXA 2024',
+    url: '/material/caixa-2024/'
+},
+'memorizacao_pf': {
+    nome: 'Polícia Federal',
+    url: '/material/pf-2024/'
+},
+'memorizacao_tj_sp': {
+    nome: 'TJ/SP',
+    url: '/material/tj-sp-2024/'
+}
+
 };
 
 async function enviarMaterial(email, nomeProduto, sessionId, productId) {

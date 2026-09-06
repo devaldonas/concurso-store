@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Conhecimentos Bancários | CAIXA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .badge-caixa {
+            display: inline-block;
+            background: #004d8b;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #004d8b;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card h2 { color: #0f0f1a; font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #495057; border-bottom: 1px solid #f8f9fa; }
+        .card ul li::before { content: "▸"; color: #004d8b; position: absolute; left: 0; font-weight: bold; }
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li { border-bottom: none; font-size: 0.9rem; color: #6c757d; }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
+        @media (max-width: 768px) { body { padding: 1rem; } .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Conhecimentos Bancários - CAIXA</h1>
+            <p>Conteúdo programático - Edital CAIXA 2024</p>
+            <span class="badge-caixa">Conhecimentos Específicos</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h2>Sistema Financeiro Nacional (SFN)</h2>
+                <ul>
+                    <li>Órgãos normativos
+                        <ul>
+                            <li>CMN, CNSP, CNPC</li>
+                        </ul>
+                    </li>
+                    <li>Órgãos supervisores
+                        <ul>
+                            <li>BACEN, SUSEP, PREVIC</li>
+                        </ul>
+                    </li>
+                    <li>Instituições financeiras
+                        <ul>
+                            <li>Bancos, cooperativas, fintechs</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Produtos e Serviços</h2>
+                <ul>
+                    <li>Contas
+                        <ul>
+                            <li>Corrente, poupança, salário</li>
+                        </ul>
+                    </li>
+                    <li>Crédito
+                        <ul>
+                            <li>Cheque especial, consignado, financiamento</li>
+                        </ul>
+                    </li>
+                    <li>Pagamentos
+                        <ul>
+                            <li>Pix, TED, DOC, boleto</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Investimentos</h2>
+                <ul>
+                    <li>Renda fixa
+                        <ul>
+                            <li>CDB, LCI, LCA, Tesouro Direto</li>
+                        </ul>
+                    </li>
+                    <li>Renda variável
+                        <ul>
+                            <li>Ações, fundos imobiliários</li>
+                        </ul>
+                    </li>
+                    <li>Previdência
+                        <ul>
+                            <li>PGBL, VGBL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

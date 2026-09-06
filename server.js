@@ -89,6 +89,7 @@ const DEV_MODE = process.env.DEV_MODE === 'true' || true;
 // PRODUTOS
 // ==========================================
 const products = [
+  
   { 
     id: 'memorizacao_seduc_ms', 
     name: 'Secretaria de Educação - MS (Docência)', 
@@ -148,7 +149,38 @@ const products = [
     badge: '',
     category: 'Judiciário',
     features: ['Jurisprudência sistematizada', 'Flashcards legais', 'Revisão programada', 'Questões práticas']
-  }
+  },
+  { 
+  id: 'memorizacao_caixa', 
+  name: 'Caixa Econômica Federal', 
+  price: 2490, 
+  currency: 'brl', 
+  description: 'Concurso para cargos administrativos e técnicos',
+  badge: '',
+  category: 'Bancário',
+  features: ['Técnicas mnemônicas', 'Exercícios práticos', 'Revisão diária', 'Simulados cronometrados']
+},
+{ 
+  id: 'memorizacao_pf', 
+  name: 'Polícia Federal (Agente)', 
+  price: 2990, 
+  currency: 'brl', 
+  description: 'Concurso para o cargo de Agente da Polícia Federal',
+  badge: 'Premium',
+  category: 'Segurança',
+  features: ['Legislação memorizada', 'Casos práticos', 'Revisão estratégica', 'Testes de fixação']
+},
+{ 
+  id: 'memorizacao_tj_sp', 
+  name: 'Tribunal de Justiça - SP (Escrevente)', 
+  price: 2590, 
+  currency: 'brl', 
+  description: 'Concurso para o cargo de Escrevente do TJ/SP',
+  badge: '',
+  category: 'Judiciário',
+  features: ['Jurisprudência sistematizada', 'Flashcards legais', 'Revisão programada', 'Questões práticas']
+}
+  
 ];
 
 // ==========================================

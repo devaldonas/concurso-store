@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado CAIXA 2024 - 80 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #004d8b; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #004d8b; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #004d8b; }
+        .questao .numero { display: inline-block; background: #004d8b; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li { padding: 0.5rem 0 0.5rem 2rem; position: relative; color: #495057; font-size: 0.95rem; border-bottom: 1px solid #f1f3f5; }
+        .alternativas li:last-child { border-bottom: none; }
+        .alternativas li::before { content: attr(data-letra); color: #004d8b; font-weight: bold; position: absolute; left: 0; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .btn { display: inline-block; background: #004d8b; color: white; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 1rem 0; transition: background 0.2s; }
+        .btn:hover { background: #003366; }
+        .btn-secondary { background: #6c757d; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #004d8b; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Simulado CAIXA 2024</h1>
+            <p>Técnico Bancário - 80 questões</p>
+            <div class="stats">
+                <span>📄 80 questões</span>
+                <span>⏱️ 3h30</span>
+                <span>📊 80 pontos</span>
+            </div>
+        </div>
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 80</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">⬅ Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima ➡</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Mostrar Gabarito</button>
+            </div>
+        </div>
+        <div id="questoes-container"></div>
+    </div>
+
+    <script>
+        const questoes = [];
+        // Gerando 80 questões simplificadas
+        const materias = ['Língua Portuguesa', 'Matemática', 'Conhecimentos Bancários', 'Raciocínio Lógico', 'Atualidades'];
+        const respostas = ['A', 'B', 'C', 'D', 'E'];
+        
+        for (let i = 0; i < 80; i++) {
+            const materia = materias[i % materias.length];
+            const resposta = respostas[i % 5];
+            questoes.push({
+                id: i + 1,
+                grupo: `CAIXA - ${materia}`,
+                enunciado: `Questão ${i + 1} sobre ${materia.toLowerCase()}. Esta é uma questão de múltipla escolha para testar seus conhecimentos.`,
+                alternativas: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D', 'Alternativa E'],
+                correta: resposta,
+                explicacao: `A resposta correta é a alternativa ${resposta}.`
+            });
+        }
+
+        let questaoAtual = 0;
+
+        function renderizarQuestao(index) {
+            const q = questoes[index];
+            const container = document.getElementById('questoes-container');
+            
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                return `<li data-letra="${letra}">${alt}</li>`;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="grupo">
+                    <h2>${q.grupo}</h2>
+                    <div class="subtitle">Questão ${q.id} de ${questoes.length}</div>
+                    <div class="questao">
+                        <span class="numero">Questão ${q.id}</span>
+                        <div class="enunciado">${q.enunciado}</div>
+                        <ul class="alternativas">${alternativasHtml}</ul>
+                        <div class="gabarito" id="gabarito-${q.id}">
+                            <strong>Gabarito:</strong> ${q.correta}<br>
+                            <span style="color: #6c757d; font-size: 0.9rem;">${q.explicacao}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const progresso = ((index + 1) / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() {
+            if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); }
+        }
+
+        function questaoAnterior() {
+            if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); }
+        }
+
+        function mostrarGabarito() {
+            const q = questoes[questaoAtual];
+            const gabarito = document.getElementById(`gabarito-${q.id}`);
+            if (gabarito) { gabarito.classList.toggle('visible'); }
+        }
+
+        renderizarQuestao(0);
+    </script>
+</body>
+</html>
