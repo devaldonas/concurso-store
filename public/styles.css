@@ -551,3 +551,7 @@ link[rel="icon"] {
 .nav-links a[href="/#produtos"] {
     cursor: pointer;
 }
+/* Scroll suave para âncoras */
+html {
+    scroll-behavior: smooth;
+}

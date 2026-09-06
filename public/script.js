@@ -1,74 +1,58 @@
-// Navegação por páginas
-document.addEventListener('DOMContentLoaded', () => {
-    // Menu Mobile
+// ==========================================
+// NAVEGAÇÃO - CARREGAR PRODUTOS
+// ==========================================
+
+// Carregar produtos na página inicial
+document.addEventListener('DOMContentLoaded', async () => {
+    // Navegação por âncoras - apenas redireciona para a página inicial com a âncora
+    document.querySelectorAll('.nav-links a, [data-page]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Se for um link para âncora, apenas redireciona
+            if (this.getAttribute('href') && this.getAttribute('href').startsWith('/#')) {
+                // Não faz nada, deixa o navegador lidar com a âncora
+                return;
+            }
+            // Para links com data-page, redireciona para a página inicial com a âncora
+            const page = this.getAttribute('data-page');
+            if (page) {
+                e.preventDefault();
+                window.location.href = `/#${page}`;
+            }
+        });
+    });
+
+    // Fecha o menu mobile ao clicar em um link
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Navegação entre páginas
-    const pages = {
-        home: document.getElementById('page-home'),
-        concursos: document.getElementById('page-concursos'),
-        metodo: document.getElementById('page-metodo'),
-        pedidos: document.getElementById('page-pedidos')
-    };
-
-    // Links de navegação
-    const navItems = document.querySelectorAll('.nav-links a, [data-page]');
-    
-    navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = item.getAttribute('data-page');
-            if (page && pages[page]) {
-                navigateTo(page);
-                // Fecha menu mobile
+    if (menuToggle && navLinks) {
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
-            }
-        });
-    });
-
-    function navigateTo(pageName) {
-        // Esconde todas as páginas
-        Object.values(pages).forEach(page => {
-            page.classList.remove('active');
-        });
-        
-        // Mostra a página selecionada
-        if (pages[pageName]) {
-            pages[pageName].classList.add('active');
-        }
-        
-        // Atualiza links ativos
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('data-page') === pageName) {
-                link.classList.add('active');
-            }
+            });
         });
     }
 
-    // Carregar produtos na página de concursos
-    loadProducts();
+    // Carrega os produtos
+    await loadProducts();
 });
 
 // Carregar produtos
 async function loadProducts() {
     try {
         const response = await fetch('/api/products');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
         const products = await response.json();
         
         const container = document.getElementById('productsContainer');
+        if (!container) return;
+        
         container.innerHTML = '';
         
-        products.forEach((product) => {
+        products.forEach(product => {
             const priceFormatted = (product.price / 100).toFixed(2);
-            
             const featuresList = product.features.map(f => 
                 `<span class="feature-tag">${f}</span>`
             ).join('');
@@ -99,11 +83,14 @@ async function loadProducts() {
         });
     } catch (error) {
         console.error('Erro ao carregar produtos:', error);
-        document.getElementById('productsContainer').innerHTML = `
-            <div class="error-message">
-                <p>Não foi possível carregar os materiais.</p>
-            </div>
-        `;
+        const container = document.getElementById('productsContainer');
+        if (container) {
+            container.innerHTML = `
+                <div class="error-message">
+                    <p>Não foi possível carregar os materiais. Tente novamente.</p>
+                </div>
+            `;
+        }
     }
 }
 
@@ -114,7 +101,7 @@ async function buyProduct(productId) {
         let loadingBtn = null;
         
         buttons.forEach(btn => {
-            if (btn.textContent === 'Adquirir Material') {
+            if (btn.textContent === 'Adquirir Material' || btn.textContent === 'Comprar Agora') {
                 loadingBtn = btn;
             }
         });
@@ -156,3 +143,18 @@ async function buyProduct(productId) {
         });
     }
 }
+
+// ==========================================
+// FUNÇÃO PARA MENU MOBILE
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+});
