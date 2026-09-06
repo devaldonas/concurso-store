@@ -1,23 +1,15 @@
-const nodemailer = require('nodemailer');
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// Configuração do transporte (use seu provedor de e-mail)
-const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',  // Para Gmail
-    port: 587,
-    secure: false,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-});
-
-// Função para enviar e-mail com o material
 async function enviarMaterial(email, nomeProduto, sessionId) {
     const linkMaterial = `${process.env.BASE_URL}/flashcards/?session_id=${sessionId}`;
     
-    const mailOptions = {
-        from: process.env.EMAIL_USER,
+    const msg = {
         to: email,
+        from: {
+            email: 'devaldo.nas@gmail.com',
+            name: 'Concurso Store'
+        },
         subject: `Seu material - ${nomeProduto}`,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e9ecef; border-radius: 12px;">
@@ -38,11 +30,14 @@ async function enviarMaterial(email, nomeProduto, sessionId) {
     };
     
     try {
-        await transporter.sendMail(mailOptions);
-        console.log(`E-mail enviado para ${email}`);
+        await sgMail.send(msg);
+        console.log(`📧 E-mail enviado com sucesso para ${email}`);
         return true;
     } catch (error) {
-        console.error('Erro ao enviar e-mail:', error);
+        console.error('❌ Erro ao enviar e-mail:', error.message);
+        if (error.response) {
+            console.error('❌ Detalhes:', JSON.stringify(error.response.body, null, 2));
+        }
         return false;
     }
 }
