@@ -284,14 +284,22 @@ app.get('/material/*', (req, res) => {
 // INICIALIZAÇÃO
 // ==========================================
 
-app.listen(PORT, () => {
-  console.log(`🚀 Concurso Store rodando em: http://localhost:${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
-  if (DEV_MODE) {
-    console.log(`🔓 Modo de desenvolvimento ATIVADO`);
-    console.log(`📝 Use session_id=dev_test para testar sem pagamento`);
-  }
-});
+async function startServer() {
+  // Inicializa o banco de dados
+  await initDatabase();
+  
+  // Inicia o servidor
+  app.listen(PORT, () => {
+    console.log(`🚀 Concurso Store rodando em: http://localhost:${PORT}`);
+    console.log(`📊 Health check: http://localhost:${PORT}/health`);
+    if (DEV_MODE) {
+      console.log(`🔓 Modo de desenvolvimento ATIVADO`);
+      console.log(`📝 Use session_id=dev_test para testar sem pagamento`);
+    }
+  });
+}
+
+startServer();
 // ==========================================
 // ROTA DE CONTATO
 // ==========================================
