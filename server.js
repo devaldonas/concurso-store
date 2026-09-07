@@ -3,7 +3,6 @@ const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 const Stripe = require('stripe');
-const { query, initDatabase } = require('./config/database');
 
 // Verifica se a chave do Stripe está configurada
 if (!process.env.STRIPE_SECRET_KEY) {
@@ -89,6 +88,9 @@ const DEV_MODE = process.env.DEV_MODE === 'true' || true;
 // ==========================================
 // PRODUTOS (6 CONCURSOS)
 // ==========================================
+// ==========================================
+// PRODUTOS (hardcoded - sem banco de dados)
+// ==========================================
 const products = [
   { 
     id: 'memorizacao_seduc_ms', 
@@ -151,6 +153,13 @@ const products = [
     features: ['Jurisprudência sistematizada', 'Flashcards legais', 'Revisão programada', 'Questões práticas']
   }
 ];
+
+// ==========================================
+// ROTA PARA LISTAR PRODUTOS
+// ==========================================
+app.get('/api/products', (req, res) => {
+  res.json(products);
+});
 
 // ==========================================
 // ROTAS DA API
@@ -285,8 +294,6 @@ app.get('/material/*', (req, res) => {
 // ==========================================
 
 async function startServer() {
-  // Inicializa o banco de dados
-  await initDatabase();
   
   // Inicia o servidor
   app.listen(PORT, () => {
