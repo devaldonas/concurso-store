@@ -290,6 +290,30 @@ app.get('/material/*', (req, res) => {
 });
 
 // ==========================================
+// ROTAS DAS PÁGINAS
+// ==========================================
+
+// Página inicial
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Página Concursos
+app.get('/concursos', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'concursos.html'));
+});
+
+// Página Método
+app.get('/metodo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'metodo.html'));
+});
+
+// Página Contato
+app.get('/contato', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contato.html'));
+});
+
+// ==========================================
 // INICIALIZAÇÃO
 // ==========================================
 
