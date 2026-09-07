@@ -3,6 +3,7 @@ const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 const Stripe = require('stripe');
+const { query, initDatabase } = require('./config/database');
 
 // Verifica se a chave do Stripe está configurada
 if (!process.env.STRIPE_SECRET_KEY) {
@@ -156,8 +157,14 @@ const products = [
 // ==========================================
 
 // Listar produtos
-app.get('/api/products', (req, res) => {
-  res.json(products);
+app.get('/api/products', async (req, res) => {
+  try {
+    const result = await query('SELECT * FROM produtos WHERE ativo = true ORDER BY preco');
+    res.json(result.rows);
+  } catch (error) {
+    console.error('❌ Erro ao buscar produtos:', error);
+    res.status(500).json({ error: 'Erro ao carregar produtos' });
+  }
 });
 
 // Criar sessão de checkout Stripe
