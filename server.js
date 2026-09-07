@@ -100,7 +100,12 @@ const products = [
     description: 'Concurso para nível superior na carreira de docência',
     badge: 'Lançamento',
     category: 'Educação',
-    features: ['Mapas mentais', 'Flashcards digitais', 'Revisão programada', 'Simulados exclusivos']
+    features: [
+      '180 flashcards',
+      '3 mapas mentais',
+      'Guia de revisão 4 semanas',
+      '80 questões - 5h'
+    ]
   },
   { 
     id: 'memorizacao_pm_sp', 
@@ -110,17 +115,27 @@ const products = [
     description: 'Concurso para o cargo de Soldado da Polícia Militar',
     badge: 'Destaque',
     category: 'Segurança',
-    features: ['Técnicas de associação', 'Revisão espaçada', 'Questões comentadas', 'Acompanhamento de desempenho']
+    features: [
+      '115 flashcards',
+      '5 mapas mentais',
+      'Guia de revisão 4 semanas',
+      '60 questões - 5h'
+    ]
   },
   { 
     id: 'memorizacao_inss', 
     name: 'INSS - Instituto Nacional do Seguro Social', 
     price: 1990, 
     currency: 'brl', 
-    description: 'Um dos maiores concursos previstos com grande volume de vagas',
+    description: 'Concurso para Técnico do Seguro Social',
     badge: 'Mais Vendido',
     category: 'Federal',
-    features: ['Resumos estratégicos', 'Áudio revisão', 'Mapas conceituais', 'Banco de questões']
+    features: [
+      '295 flashcards',
+      '7 mapas mentais',
+      'Guia de revisão 4 semanas',
+      '120 questões - 3h30'
+    ]
   },
   { 
     id: 'memorizacao_caixa', 
@@ -130,7 +145,12 @@ const products = [
     description: 'Concurso para cargos administrativos e técnicos',
     badge: '',
     category: 'Bancário',
-    features: ['Técnicas mnemônicas', 'Exercícios práticos', 'Revisão diária', 'Simulados cronometrados']
+    features: [
+      '175 flashcards',
+      '1 mapa mental',
+      'Guia de revisão 4 semanas',
+      '80 questões - 3h30'
+    ]
   },
   { 
     id: 'memorizacao_pf', 
@@ -140,7 +160,12 @@ const products = [
     description: 'Concurso para o cargo de Agente da Polícia Federal',
     badge: 'Premium',
     category: 'Segurança',
-    features: ['Legislação memorizada', 'Casos práticos', 'Revisão estratégica', 'Testes de fixação']
+    features: [
+      '150 flashcards',
+      '1 mapa mental',
+      'Guia de revisão 4 semanas',
+      '80 questões - 4h'
+    ]
   },
   { 
     id: 'memorizacao_tj_sp', 
@@ -150,7 +175,12 @@ const products = [
     description: 'Concurso para o cargo de Escrevente do TJ/SP',
     badge: '',
     category: 'Judiciário',
-    features: ['Jurisprudência sistematizada', 'Flashcards legais', 'Revisão programada', 'Questões práticas']
+    features: [
+      '100 flashcards',
+      '1 mapa mental',
+      'Guia de revisão 4 semanas',
+      '80 questões - 4h'
+    ]
   }
 ];
 
