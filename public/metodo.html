@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Método - Concurso Store</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        .metodo-detalhado {
+            padding: 3rem 0;
+            background: #f8f9fa;
+        }
+        .metodo-detalhado .container {
+            max-width: 900px;
+        }
+        .metodo-detalhado .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #e94560;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .metodo-detalhado .step:hover {
+            transform: translateX(8px);
+        }
+        .metodo-detalhado .step .number {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .metodo-detalhado .step h2 {
+            color: #0f0f1a;
+            margin-bottom: 0.5rem;
+        }
+        .metodo-detalhado .step p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        .metodo-detalhado .step ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        .metodo-detalhado .step ul li {
+            padding: 0.3rem 0 0.3rem 1.5rem;
+            position: relative;
+            color: #495057;
+        }
+        .metodo-detalhado .step ul li::before {
+            content: "✓";
+            color: #28a745;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .metodo-detalhado .step .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .page-header p { opacity: 0.8; font-size: 1.1rem; }
+        .ciencia-box {
+            background: #e94560;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .ciencia-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .ciencia-box p { opacity: 0.9; font-size: 1rem; }
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .metodo-detalhado .step { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="/images/concurso-store-icon.png" alt="Concurso Store" class="nav-logo">
+                <span>Concurso Store</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Início</a></li>
+                <li><a href="/concursos">Concursos</a></li>
+                <li><a href="/metodo" class="active">Método</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>🧠 Nosso Método de Memorização</h1>
+                <p>Uma abordagem científica para fixar o conteúdo de forma definitiva</p>
+            </div>
+        </section>
+
+        <section class="metodo-detalhado">
+            <div class="container">
+
+                <div class="step">
+                    <div class="icon">🧩</div>
+                    <span class="number">Passo 1</span>
+                    <h2>Mapas Mentais</h2>
+                    <p>A organização visual do conteúdo é o primeiro passo para a compreensão profunda. Nossos mapas mentais conectam ideias e facilitam a visão geral do edital.</p>
+                    <ul>
+                        <li>Estrutura hierárquica do conteúdo</li>
+                        <li>Conexões entre temas e subtemas</li>
+                        <li>Visão panorâmica do edital</li>
+                        <li>Facilita a revisão rápida</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="icon">🃏</div>
+                    <span class="number">Passo 2</span>
+                    <h2>Flashcards Inteligentes</h2>
+                    <p>Baseado no sistema de repetição espaçada (SRS), nossos flashcards garantem que você revise o conteúdo no momento exato em que está prestes a esquecer.</p>
+                    <ul>
+                        <li>Repetição espaçada (Algoritmo SM-2)</li>
+                        <li>Perguntas e respostas objetivas</li>
+                        <li>Autoavaliação (Fácil/Médio/Difícil)</li>
+                        <li>Progresso salvo automaticamente</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="icon">📅</div>
+                    <span class="number">Passo 3</span>
+                    <h2>Revisão Programada</h2>
+                    <p>Um algoritmo inteligente define os melhores momentos para revisar cada conteúdo, maximizando a retenção e otimizando seu tempo de estudo.</p>
+                    <ul>
+                        <li>Cronograma personalizado de 4 semanas</li>
+                        <li>Revisões diárias focadas</li>
+                        <li>Acompanhamento de desempenho</li>
+                        <li>Adaptação ao seu ritmo</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <div class="icon">📝</div>
+                    <span class="number">Passo 4</span>
+                    <h2>Simulados Estratégicos</h2>
+                    <p>Treine com questões no formato da banca e acompanhe seu desempenho para identificar pontos de melhoria.</p>
+                    <ul>
+                        <li>Questões no formato real da prova</li>
+                        <li>Simulação do tempo de prova</li>
+                        <li>Correção detalhada com explicações</li>
+                        <li>Acompanhamento de evolução</li>
+                    </ul>
+                </div>
+
+                <div class="ciencia-box">
+                    <h3>🔬 Ciência por trás do método</h3>
+                    <p>Nosso método é baseado na <strong>Curva de Esquecimento de Ebbinghaus</strong> e no <strong>Algoritmo SM-2</strong>, utilizado pelo Anki, comprovado pela neurociência para otimizar a retenção de informações.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Concurso Store</h3>
+                    <p>Método de memorização para concursos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/concursos">Concursos</a>
+                    <a href="/metodo">Método</a>
+                    <a href="/contato.html">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

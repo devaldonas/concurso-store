@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Concursos - Concurso Store</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="/images/concurso-store-icon.png" alt="Concurso Store" class="nav-logo">
+                <span>Concurso Store</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Início</a></li>
+                <li><a href="/concursos" class="active">Concursos</a></li>
+                <li><a href="/metodo">Método</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>📚 Concursos Disponíveis</h1>
+                <p>Escolha seu concurso e comece a se preparar com o melhor método de memorização</p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="products-grid" id="productsContainer">
+                    <div style="text-align: center; padding: 2rem; color: #6c757d;">
+                        <p>Carregando produtos...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Concurso Store</h3>
+                    <p>Método de memorização para concursos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/concursos">Concursos</a>
+                    <a href="/metodo">Método</a>
+                    <a href="/contato.html">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // CARREGAR PRODUTOS
+        // ==========================================
+        async function loadProducts() {
+            const container = document.getElementById('productsContainer');
+            
+            try {
+                const response = await fetch('/api/products');
+                const products = await response.json();
+                
+                container.innerHTML = '';
+                
+                products.forEach(product => {
+                    const priceFormatted = (product.price / 100).toFixed(2);
+                    const featuresList = product.features.map(f => 
+                        `<span class="feature-tag">${f}</span>`
+                    ).join('');
+                    
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    
+                    let badgeHtml = '';
+                    if (product.badge) {
+                        badgeHtml = `<span class="product-badge">${product.badge}</span>`;
+                    }
+                    
+                    card.innerHTML = `
+                        ${badgeHtml}
+                        <span class="product-category">${product.category}</span>
+                        <h3>${product.name}</h3>
+                        <p class="description">${product.description}</p>
+                        <div class="product-features">${featuresList}</div>
+                        <div class="price">R$ ${priceFormatted}</div>
+                        <button onclick="buyProduct('${product.id}')" class="btn btn-primary">Adquirir Material</button>
+                    `;
+                    
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar produtos:', error);
+                container.innerHTML = `
+                    <div class="error-message">
+                        <p>Não foi possível carregar os materiais. Tente novamente.</p>
+                    </div>
+                `;
+            }
+        }
+
+        async function buyProduct(productId) {
+            try {
+                const response = await fetch('/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ productId })
+                });
+                const data = await response.json();
+                if (data.url) window.location.href = data.url;
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao processar pagamento. Tente novamente.');
+            }
+        }
+
+        // ==========================================
+        // MENU MOBILE
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+            
+            loadProducts();
+        });
+    </script>
+</body>
+</html>
