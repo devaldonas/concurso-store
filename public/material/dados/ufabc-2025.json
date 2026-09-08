@@ -1,0 +1,50 @@
+{
+  "nome": "UFABC 2025 - Assistente em Administração",
+  "baralhos": {
+    "portugues": {
+      "nome": "Língua Portuguesa",
+      "cards": [
+        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto, identificando ideias principais, inferências e intenções do autor", "dificuldade": 1},
+        {"id": 2, "frente": "Quais são os 5 tipos de texto quanto à tipologia?", "verso": "Narrativo, descritivo, dissertativo, injuntivo e expositivo", "dificuldade": 2},
+        {"id": 3, "frente": "O que são figuras de linguagem?", "verso": "Recursos estilísticos que tornam a mensagem mais expressiva", "dificuldade": 2},
+        {"id": 4, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome e verbo", "dificuldade": 1},
+        {"id": 5, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção e interjeição", "dificuldade": 1},
+        {"id": 6, "frente": "O que é regência verbal?", "verso": "É a relação entre o verbo e seus complementos. Pode ser direta (sem preposição) ou indireta (com preposição)", "dificuldade": 2},
+        {"id": 7, "frente": "Quando usar a crase?", "verso": "Fusão da preposição 'a' com o artigo 'a'. Usa-se em locuções adverbiais femininas, antes de palavras femininas e em indicações de horas", "dificuldade": 3},
+        {"id": 8, "frente": "Quais são os tipos de concordância?", "verso": "Verbal (verbo concorda com o sujeito) e nominal (artigo, adjetivo, numeral e pronome concordam com o substantivo)", "dificuldade": 2},
+        {"id": 9, "frente": "O que é sujeito na oração?", "verso": "É o termo sobre o qual se declara algo. Pode ser simples, composto, oculto ou indeterminado", "dificuldade": 1},
+        {"id": 10, "frente": "O que é intertextualidade?", "verso": "É a relação entre diferentes textos, onde um faz referência a outro", "dificuldade": 2}
+      ]
+    },
+    "matematica": {
+      "nome": "Matemática e Raciocínio Lógico",
+      "cards": [
+        {"id": 1, "frente": "Quais são os conjuntos numéricos?", "verso": "Naturais (N), Inteiros (Z), Racionais (Q), Irracionais (I) e Reais (R)", "dificuldade": 1},
+        {"id": 2, "frente": "O que é uma função linear?", "verso": "Função do tipo f(x) = ax + b, onde 'a' é a taxa de variação e 'b' é o coeficiente linear", "dificuldade": 2},
+        {"id": 3, "frente": "Como resolver uma equação do 2º grau?", "verso": "Usando a fórmula de Bhaskara: x = (-b ± √(b²-4ac))/2a", "dificuldade": 3},
+        {"id": 4, "frente": "Qual a fórmula para calcular área de um círculo?", "verso": "A = π × r², onde r é o raio do círculo", "dificuldade": 2},
+        {"id": 5, "frente": "O que é uma progressão aritmética (PA)?", "verso": "Sequência onde cada termo é igual ao anterior acrescido de um valor fixo chamado razão (r)", "dificuldade": 2},
+        {"id": 6, "frente": "O que é uma função quadrática?", "verso": "Função do tipo f(x) = ax² + bx + c, com gráfico em forma de parábola", "dificuldade": 2},
+        {"id": 7, "frente": "Como calcular a média aritmética?", "verso": "Soma de todos os valores dividida pelo número de valores", "dificuldade": 1},
+        {"id": 8, "frente": "Qual a fórmula do teorema de Pitágoras?", "verso": "a² = b² + c², onde 'a' é a hipotenusa", "dificuldade": 2},
+        {"id": 9, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser classificada como verdadeira ou falsa", "dificuldade": 1},
+        {"id": 10, "frente": "O que é porcentagem?", "verso": "Razão centesimal representada por %", "dificuldade": 1}
+      ]
+    },
+    "especificos": {
+      "nome": "Conhecimentos Específicos",
+      "cards": [
+        {"id": 1, "frente": "Quais são os princípios da Administração Pública?", "verso": "Legalidade, impessoalidade, moralidade, publicidade e eficiência", "dificuldade": 2},
+        {"id": 2, "frente": "O que é a Lei 8.112/90?", "verso": "Regime Jurídico Único dos Servidores Públicos Civis da União", "dificuldade": 2},
+        {"id": 3, "frente": "O que é a Lei de Improbidade Administrativa?", "verso": "Lei 8.429/92 - define atos de improbidade e suas penalidades", "dificuldade": 2},
+        {"id": 4, "frente": "O que é a Lei de Acesso à Informação?", "verso": "Lei 12.527/11 - garante acesso a informações públicas", "dificuldade": 2},
+        {"id": 5, "frente": "O que é administração direta?", "verso": "Órgãos diretamente ligados ao chefe do Executivo", "dificuldade": 2},
+        {"id": 6, "frente": "O que são autarquias?", "verso": "Entidades administrativas autônomas criadas por lei", "dificuldade": 2},
+        {"id": 7, "frente": "O que é o princípio da legalidade?", "verso": "O administrador só pode fazer o que a lei permite", "dificuldade": 1},
+        {"id": 8, "frente": "O que é o princípio da impessoalidade?", "verso": "A administração deve tratar todos igualmente", "dificuldade": 1},
+        {"id": 9, "frente": "O que é o princípio da moralidade?", "verso": "A administração deve agir com ética", "dificuldade": 1},
+        {"id": 10, "frente": "O que é o princípio da publicidade?", "verso": "Os atos administrativos devem ser divulgados", "dificuldade": 1}
+      ]
+    }
+  }
+}
