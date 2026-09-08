@@ -333,9 +333,17 @@ app.get('/flashcards/study', (req, res) => {
 // ROTAS DO MATERIAL
 // ==========================================
 
-app.get('/material/*', (req, res) => {
+app.get('/material/:concurso/', (req, res) => {
+  const concurso = req.params.concurso;
+  console.log(`📁 Servindo página do material: ${concurso}`);
+  res.sendFile(path.join(__dirname, 'public', 'material', concurso, 'index.html'));
+});
+
+app.get('/material/:concurso/*', (req, res) => {
+  const concurso = req.params.concurso;
   const filePath = req.params[0];
-  res.sendFile(path.join(__dirname, 'public', 'material', filePath));
+  console.log(`📁 Servindo arquivo: /material/${concurso}/${filePath}`);
+  res.sendFile(path.join(__dirname, 'public', 'material', concurso, filePath));
 });
 
 // ==========================================
