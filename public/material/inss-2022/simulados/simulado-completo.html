@@ -364,6 +364,52 @@
             { id: 120, grupo: 'P2 - Regimes Próprios', enunciado: 'A contagem recíproca não exige a comprovação do tempo de contribuição.', correta: false, explicacao: 'Contagem recíproca exige a comprovação do tempo de contribuição por meio da CTC.' }
         ];
 
+        // ==========================================
+// CONTROLE DE EVOLUÇÃO (localStorage)
+// ==========================================
+
+function carregarEvolucao() {
+    const dados = localStorage.getItem('simulado_evolucao');
+    if (dados) {
+        return JSON.parse(dados);
+    }
+    return [];
+}
+
+function salvarEvolucao(acertos, total, tempo) {
+    const evolucao = carregarEvolucao();
+    evolucao.push({
+        data: new Date().toISOString(),
+        acertos,
+        total,
+        tempo,
+        taxa: Math.round((acertos / total) * 100)
+    });
+    localStorage.setItem('simulado_evolucao', JSON.stringify(evolucao));
+}
+
+function mostrarEvolucao() {
+    const evolucao = carregarEvolucao();
+    if (evolucao.length === 0) {
+        return '<p style="color: #6c757d;">Nenhuma tentativa registrada ainda.</p>';
+    }
+    
+    let html = '<div style="display: flex; flex-direction: column; gap: 0.5rem;">';
+    evolucao.forEach((e, index) => {
+        const data = new Date(e.data).toLocaleDateString('pt-BR');
+        const cor = e.taxa >= 70 ? '#28a745' : e.taxa >= 50 ? '#ffc107' : '#dc3545';
+        html += `
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid ${cor};">
+                <span>#${index + 1} - ${data}</span>
+                <span>${e.acertos}/${e.total} (${e.taxa}%)</span>
+                <span style="color: #6c757d;">${e.tempo}</span>
+            </div>
+        `;
+    });
+    html += '</div>';
+    return html;
+}
+
         // ============================================
         // CONTROLE DA INTERFACE
         // ============================================
