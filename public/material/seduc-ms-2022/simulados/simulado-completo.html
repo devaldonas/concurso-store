@@ -85,6 +85,19 @@
         .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
         @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
         @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
     </style>
 </head>
 <body>
@@ -129,6 +142,7 @@
             <div style="text-align: center; margin-top: 1rem;">
                 <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
                 <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+    <a href="/material/seduc-ms-2022/" class="btn-voltar-material">← Voltar ao Material</a>
             </div>
         </div>
 
