@@ -7,50 +7,21 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
-        .material-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .material-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #e9ecef;
-            transition: transform 0.3s;
-            text-align: center;
-        }
-        .material-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        }
+        .material-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .material-card { background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid #e9ecef; transition: transform 0.3s; text-align: center; }
+        .material-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
         .material-card h3 { color: #0f0f1a; margin-bottom: 0.5rem; }
         .material-card p { color: #6c757d; font-size: 0.9rem; }
         .material-card .btn { margin-top: 1rem; width: 100%; }
-        .header-material {
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            text-align: center;
-        }
+        .header-material { background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%); color: white; padding: 2rem 0; margin-bottom: 2rem; border-radius: 12px; text-align: center; }
         .header-material h1 { margin-bottom: 0.5rem; }
         .header-material p { opacity: 0.8; }
-        .badge-concurso {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
+        .badge-concurso { display: inline-block; background: #e94560; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; }
         .breadcrumb { margin: 1rem 0; color: #6c757d; }
         .breadcrumb a { color: #e94560; text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
+        .btn-voltar { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.5rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.3s; }
+        .btn-voltar:hover { background: #5a6268; }
         @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -65,7 +36,6 @@
                 <ul class="nav-links">
                     <li><a href="/">Início</a></li>
                     <li><a href="/#produtos">Concursos</a></li>
-                    <li><a href="/contato.html">Contato</a></li>
                     <li><a href="/material/seduc-ms-2022/">Meu Material</a></li>
                 </ul>
             </div>
@@ -93,7 +63,7 @@
                 <div class="material-card">
                     <h3>🧠 Mapas Mentais</h3>
                     <p>3 mapas para visualização do conteúdo</p>
-                    <a href="/material/seduc-ms-2022/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                    <a href="/material/seduc-ms-2022/mapas-mentais/mapa-portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
                 </div>
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>
@@ -105,6 +75,10 @@
                     <p>80 questões - 5 horas</p>
                     <a href="/material/seduc-ms-2022/simulados/simulado-completo.html?session_id=<%= session_id %>" class="btn btn-primary">Fazer Simulado</a>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/#produtos" class="btn-voltar">← Voltar aos concursos</a>
             </div>
         </div>
     </main>

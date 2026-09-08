@@ -193,4 +193,19 @@
         </div>
     </div>
 </body>
-</html>
+</html>    <div style="text-align: center; margin-top: 2rem; padding: 1rem;">
+        <a href="/material/seduc-ms-2022/" class="btn-voltar" style="display: inline-block; padding: 0.6rem 1.5rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.3s;">← Voltar ao material</a>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        if (sessionId) {
+            document.querySelectorAll('a').forEach(link => {
+                if (link.href.includes('?')) {
+                    link.href += '&session_id=' + sessionId;
+                } else {
+                    link.href += '?session_id=' + sessionId;
+                }
+            });
+        }
+    </script>
