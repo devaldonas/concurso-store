@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado PM/SP - 60 Questões</title>
+    <title>Simulado PM/SP 2026 - 60 Questões</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6f9;
-            padding: 1.5rem;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
         .container { max-width: 900px; margin: 0 auto; }
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
@@ -22,159 +18,84 @@
         }
         .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
         .header p { opacity: 0.8; }
-        .header .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        .header .stats span {
-            background: rgba(255,255,255,0.1);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .grupo {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .grupo h2 {
-            color: #0f0f1a;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #e94560;
-        }
-        .grupo .subtitle {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-        .questao {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border-left: 3px solid #e94560;
-        }
-        .questao .numero {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        .questao .texto {
-            margin: 0.5rem 0 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            border-left: 3px solid #6c757d;
-            font-size: 0.95rem;
-        }
-        .alternativas {
-            list-style: none;
-            padding: 0;
-        }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #e94560; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #e94560; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #e94560; }
+        .questao .numero { display: inline-block; background: #e94560; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
         .alternativas li {
-            padding: 0.5rem 0 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
             position: relative;
             color: #495057;
             font-size: 0.95rem;
-            border-bottom: 1px solid #f1f3f5;
-        }
-        .alternativas li:last-child { border-bottom: none; }
-        .alternativas li::before {
-            content: attr(data-letra);
-            color: #e94560;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .gabarito {
-            background: #e9ecef;
-            padding: 1rem;
+            border: 2px solid transparent;
             border-radius: 8px;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        .gabarito.visible { display: block; }
-        .gabarito strong { color: #e94560; }
-        .btn {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            margin-bottom: 0.3rem;
             cursor: pointer;
-            margin: 1rem 0;
-            transition: background 0.2s;
-        }
-        .btn:hover { background: #c0392b; }
-        .btn-secondary { background: #6c757d; }
-        .btn-secondary:hover { background: #5a6268; }
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        .btn-success { background: #28a745; }
-        .btn-success:hover { background: #1e7e34; }
-        .progresso {
+            transition: all 0.2s;
             background: white;
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .progresso .barra {
-            width: 100%;
-            height: 8px;
-            background: #e9ecef;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 0.5rem;
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #e94560; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #e94560; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #e94560; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
+            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
         }
-        .progresso .barra-fill {
-            height: 100%;
-            background: #e94560;
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-        .progresso .info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        @media (max-width: 768px) {
-            body { padding: 1rem; }
-            .header .stats span { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
-            .questao { padding: 1rem; }
-            .btn-group { flex-direction: column; align-items: center; }
-            .btn { width: 100%; max-width: 250px; }
-        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #e94560; color: white; }
+        .btn-primary:hover { background: #c0392b; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #e94560; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #e94560; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
+        @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📝 Simulado PM/SP - 2026</h1>
-            <p>Concurso para Aluno-Soldado da Polícia Militar do Estado de São Paulo</p>
+            <h1>Simulado PM/SP 2026</h1>
+            <p>Soldado - 60 questões</p>
             <div class="stats">
-                <span>📄 60 questões</span>
-                <span>⏱️ 5 horas</span>
-                <span>📊 60 pontos</span>
+                <span>60 questões</span>
+                <span>5h</span>
+                <span>60 pontos</span>
             </div>
         </div>
 
@@ -187,162 +108,130 @@
                 <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
             </div>
             <div class="btn-group">
-                <button class="btn btn-secondary" onclick="questaoAnterior()">⬅ Anterior</button>
-                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima ➡</button>
-                <button class="btn btn-success" onclick="mostrarGabarito()">Mostrar Gabarito</button>
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
             </div>
         </div>
 
         <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
     </div>
 
     <script>
-        // ============================================
-        // 60 QUESTÕES - CONCURSO PM/SP
-        // ============================================
+        // ==========================================
+        // DADOS DO SIMULADO - 60 QUESTÕES PM/SP
+        // ==========================================
         const questoes = [
             // LÍNGUA PORTUGUESA (1-20)
-            { id: 1, grupo: 1, texto: '"A leitura amplia horizontes."', pergunta: 'Qual a classe gramatical da palavra "horizontes"?', alternativas: ['Substantivo', 'Adjetivo', 'Verbo', 'Advérbio', 'Preposição'], correta: 0, explicacao: '"Horizontes" é um substantivo.' },
-            { id: 2, grupo: 1, pergunta: 'O que são sinônimos?', alternativas: ['Palavras com significados opostos', 'Palavras com significados semelhantes', 'Palavras com mesma grafia', 'Palavras com mesma pronúncia', 'Palavras com significado único'], correta: 1, explicacao: 'Sinônimos são palavras com significados semelhantes.' },
-            { id: 3, grupo: 1, pergunta: 'Em "O soldado, corajoso, avançou", a vírgula separa:', alternativas: ['Aposto', 'Vocativo', 'Oração intercalada', 'Adjunto adverbial', 'Enumeração'], correta: 0, explicacao: 'A vírgula separa o aposto explicativo "corajoso".' },
-            { id: 4, grupo: 1, pergunta: 'Qual a função do sujeito na oração?', alternativas: ['Termo sobre o qual se declara algo', 'Termo que recebe a ação', 'Termo que modifica o verbo', 'Termo que indica posse', 'Termo que liga orações'], correta: 0, explicacao: 'Sujeito é o termo sobre o qual se declara algo.' },
-            { id: 5, grupo: 1, pergunta: 'O que é concordância verbal?', alternativas: ['Flexão do verbo para concordar com o sujeito', 'Flexão do verbo para concordar com o objeto', 'Concordância entre substantivo e adjetivo', 'Concordância entre artigo e substantivo', 'Concordância entre pronome e verbo'], correta: 0, explicacao: 'Concordância verbal é a flexão do verbo para concordar com o sujeito.' },
-            { id: 6, grupo: 1, pergunta: 'Quando usar crase?', alternativas: ['Antes de palavras masculinas', 'Antes de palavras femininas com artigo', 'Antes de verbos', 'Antes de advérbios', 'Antes de preposições'], correta: 1, explicacao: 'Usa-se crase antes de palavras femininas que admitem artigo.' },
-            { id: 7, grupo: 1, pergunta: 'O que é denotação?', alternativas: ['Sentido figurado', 'Sentido literal', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 1, explicacao: 'Denotação é o sentido literal da palavra.' },
-            { id: 8, grupo: 1, pergunta: 'O que é um período composto?', alternativas: ['Possui uma oração', 'Possui duas ou mais orações', 'Possui apenas sujeito simples', 'Possui apenas predicado nominal', 'Não possui verbo'], correta: 1, explicacao: 'Período composto possui duas ou mais orações.' },
-            { id: 9, grupo: 1, pergunta: 'O que é regência nominal?', alternativas: ['Relação entre verbo e complemento', 'Relação entre nome e complemento', 'Relação entre sujeito e predicado', 'Relação entre duas orações', 'Relação entre substantivo e adjetivo'], correta: 1, explicacao: 'Regência nominal é a relação entre um nome e seu complemento.' },
-            { id: 10, grupo: 1, pergunta: 'O que é um advérbio?', alternativas: ['Palavra que modifica o verbo', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que liga orações', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Advérbio modifica o verbo, o adjetivo ou outro advérbio.' },
-            { id: 11, grupo: 1, pergunta: 'O que é colocação pronominal?', alternativas: ['Posição dos pronomes oblíquos', 'Posição dos substantivos', 'Posição dos verbos', 'Posição dos adjetivos', 'Posição dos advérbios'], correta: 0, explicacao: 'Colocação pronominal é a posição dos pronomes oblíquos na frase.' },
-            { id: 12, grupo: 1, pergunta: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras da frase', 'Relação entre som e sentido', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
-            { id: 13, grupo: 1, pergunta: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Uso de conectivos', 'Divisão em parágrafos', 'Título adequado'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
-            { id: 14, grupo: 1, pergunta: 'O que é um pronome?', alternativas: ['Palavra que substitui ou acompanha o substantivo', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que liga orações'], correta: 0, explicacao: 'Pronome substitui ou acompanha o substantivo.' },
-            { id: 15, grupo: 1, pergunta: 'O que é um verbo?', alternativas: ['Palavra que expressa ação, estado ou fenômeno', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que liga orações'], correta: 0, explicacao: 'Verbo expressa ação, estado ou fenômeno da natureza.' },
-            { id: 16, grupo: 1, pergunta: 'O que é concordância nominal?', alternativas: ['Concordância entre substantivo e seus modificadores', 'Concordância entre verbo e sujeito', 'Concordância entre pronome e verbo', 'Concordância entre advérbio e adjetivo', 'Concordância entre preposição e substantivo'], correta: 0, explicacao: 'Concordância nominal é a concordância entre substantivo e seus modificadores.' },
-            { id: 17, grupo: 1, pergunta: 'O que é uma preposição?', alternativas: ['Palavra que liga termos', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Preposição é uma palavra que liga termos estabelecendo relação de sentido.' },
-            { id: 18, grupo: 1, pergunta: 'O que é uma conjunção?', alternativas: ['Palavra que liga orações ou termos', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Conjunção liga orações ou termos de mesma função.' },
-            { id: 19, grupo: 1, pergunta: 'O que é sentido figurado?', alternativas: ['Sentido literal', 'Sentido subjetivo e dependente do contexto', 'Sentido objetivo', 'Sentido técnico', 'Sentido formal'], correta: 1, explicacao: 'Sentido figurado é subjetivo e dependente do contexto.' },
-            { id: 20, grupo: 1, pergunta: 'O que é um período simples?', alternativas: ['Possui uma oração', 'Possui duas ou mais orações', 'Possui apenas sujeito composto', 'Possui apenas predicado verbal', 'Não possui verbo'], correta: 0, explicacao: 'Período simples possui apenas uma oração.' },
-
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A disciplina é fundamental para o trabalho policial."', alternativas: ['A disciplina é essencial para a polícia', 'A disciplina é opcional', 'A polícia não precisa de disciplina', 'A disciplina é prejudicial', 'A disciplina não tem importância'], correta: 0, explicacao: 'O texto indica que a disciplina é fundamental para o trabalho policial.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "A coragem é a força que move o soldado."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "coragem" e "força".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 3 anos que sirvo', 'Faz 3 anos que sirvo', 'Fazer 3 anos que sirvo', 'Fizeram 3 anos que sirvo', 'Fazem 3 ano que sirvo'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "soldado" é classificada como:', alternativas: ['Substantivo concreto', 'Substantivo abstrato', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Soldado" é um substantivo concreto.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a delegacia', 'Chegamos a conclusão', 'Referiu-se a aquela pessoa', 'Fui a São Paulo', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos a conclusão" - crase obrigatória antes de palavra feminina.' },
             // MATEMÁTICA (21-35)
-            { id: 21, grupo: 2, pergunta: 'Qual o valor de x na equação 3x + 7 = 22?', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
-            { id: 22, grupo: 2, pergunta: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
-            { id: 23, grupo: 2, pergunta: 'O que é porcentagem?', alternativas: ['Razão centesimal', 'Razão decimal', 'Razão fracionária', 'Razão inteira', 'Razão mista'], correta: 0, explicacao: 'Porcentagem é uma razão centesimal representada por %.' },
-            { id: 24, grupo: 2, pergunta: 'O que é regra de três simples?', alternativas: ['Método de proporcionalidade', 'Método de soma', 'Método de subtração', 'Método de multiplicação', 'Método de divisão'], correta: 0, explicacao: 'Regra de três simples é um método para resolver problemas de proporcionalidade.' },
-            { id: 25, grupo: 2, pergunta: 'Qual a fórmula do teorema de Pitágoras?', alternativas: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b × c', 'a² = b² × c²'], correta: 0, explicacao: 'Teorema de Pitágoras: a² = b² + c².' },
-            { id: 26, grupo: 2, pergunta: 'Qual a área de um retângulo de base 5 e altura 3?', alternativas: ['8', '10', '15', '20', '25'], correta: 2, explicacao: 'A = base × altura = 5 × 3 = 15' },
-            { id: 27, grupo: 2, pergunta: 'O que são números racionais?', alternativas: ['Números na forma a/b', 'Números inteiros', 'Números decimais', 'Números complexos', 'Números irracionais'], correta: 0, explicacao: 'Números racionais podem ser representados por a/b, b≠0.' },
-            { id: 28, grupo: 2, pergunta: 'O que é média aritmética simples?', alternativas: ['Soma dividida pela quantidade de valores', 'Produto dividido pela quantidade', 'Soma multiplicada pela quantidade', 'Diferença entre os valores', 'Valor central do conjunto'], correta: 0, explicacao: 'Média é a soma dos valores dividida pela quantidade.' },
-            { id: 29, grupo: 2, pergunta: 'O que é proporcionalidade direta?', alternativas: ['Grandezas aumentam/diminuem na mesma proporção', 'Grandezas aumentam na proporção inversa', 'Grandezas são independentes', 'Grandezas são fixas', 'Grandezas são aleatórias'], correta: 0, explicacao: 'Proporcionalidade direta: grandezas variam na mesma proporção.' },
-            { id: 30, grupo: 2, pergunta: 'Qual a área de um círculo com raio 3?', alternativas: ['3π', '6π', '9π', '12π', '15π'], correta: 2, explicacao: 'A = π × r² = π × 9 = 9π' },
-            { id: 31, grupo: 2, pergunta: 'O que é um sistema de equações?', alternativas: ['Conjunto de equações com as mesmas incógnitas', 'Conjunto de equações diferentes', 'Uma única equação', 'Duas equações sem relação', 'Equação com duas variáveis'], correta: 0, explicacao: 'Sistema de equações tem equações com as mesmas incógnitas.' },
-            { id: 32, grupo: 2, pergunta: 'Qual a área de um triângulo com base 4 e altura 3?', alternativas: ['6', '8', '10', '12', '14'], correta: 0, explicacao: 'A = (b × h)/2 = (4 × 3)/2 = 6' },
-            { id: 33, grupo: 2, pergunta: 'O que é MDC?', alternativas: ['Máximo Divisor Comum', 'Mínimo Divisor Comum', 'Máximo Múltiplo Comum', 'Mínimo Múltiplo Comum', 'Máximo Múltiplo Divisor'], correta: 0, explicacao: 'MDC é o Máximo Divisor Comum.' },
-            { id: 34, grupo: 2, pergunta: 'O que é razão?', alternativas: ['Comparação por divisão', 'Comparação por soma', 'Comparação por subtração', 'Comparação por multiplicação', 'Comparação por igualdade'], correta: 0, explicacao: 'Razão é uma comparação entre duas grandezas através de divisão.' },
-            { id: 35, grupo: 2, pergunta: 'Qual o volume de um cubo com aresta 3?', alternativas: ['9', '18', '27', '36', '45'], correta: 2, explicacao: 'V = a³ = 3³ = 27' },
-
+            { id: 21, grupo: 'Matemática', enunciado: 'Calcule o valor de x: 3x + 7 = 22', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
+            { id: 22, grupo: 'Matemática', enunciado: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
+            { id: 23, grupo: 'Matemática', enunciado: 'Qual a área de um círculo com raio 4?', alternativas: ['4π', '8π', '12π', '16π', '20π'], correta: 3, explicacao: 'A = π × r² = π × 16 = 16π' },
             // CONHECIMENTOS GERAIS (36-50)
-            { id: 36, grupo: 3, pergunta: 'O que foi a Primeira Guerra Mundial?', alternativas: ['Conflito global 1914-1918', 'Conflito global 1939-1945', 'Conflito na Europa 1945-1991', 'Conflito na Ásia 1950-1953', 'Conflito na África 1960-1970'], correta: 0, explicacao: 'A Primeira Guerra Mundial ocorreu entre 1914 e 1918.' },
-            { id: 37, grupo: 3, pergunta: 'O que foi a Segunda Guerra Mundial?', alternativas: ['Conflito global 1939-1945', 'Conflito global 1914-1918', 'Conflito na Europa 1945-1991', 'Conflito na Ásia 1950-1953', 'Conflito na África 1960-1970'], correta: 0, explicacao: 'A Segunda Guerra Mundial ocorreu entre 1939 e 1945.' },
-            { id: 38, grupo: 3, pergunta: 'O que foi a Guerra Fria?', alternativas: ['Tensão EUA e URSS 1947-1991', 'Guerra entre EUA e URSS', 'Guerra na Coreia', 'Guerra no Vietnã', 'Guerra no Afeganistão'], correta: 0, explicacao: 'A Guerra Fria foi a tensão geopolítica entre EUA e URSS (1947-1991).' },
-            { id: 39, grupo: 3, pergunta: 'O que foi a Revolução de 1930?', alternativas: ['Movimento que levou Vargas ao poder', 'Revolução Constitucionalista', 'Revolta da Armada', 'Revolta dos Tenentes', 'Revolução de 1932'], correta: 0, explicacao: 'A Revolução de 1930 levou Getúlio Vargas ao poder.' },
-            { id: 40, grupo: 3, pergunta: 'Qual é a capital do Brasil?', alternativas: ['Brasília', 'Rio de Janeiro', 'São Paulo', 'Salvador', 'Belo Horizonte'], correta: 0, explicacao: 'Brasília é a capital do Brasil desde 1960.' },
-            { id: 41, grupo: 3, pergunta: 'O que é globalização?', alternativas: ['Integração econômica e cultural entre países', 'Isolamento de países', 'Processo de fragmentação', 'Regionalização', 'Nacionalismo'], correta: 0, explicacao: 'Globalização é o processo de integração econômica, política e cultural entre países.' },
-            { id: 42, grupo: 3, pergunta: 'O que é o Cerrado?', alternativas: ['Vegetação do Centro-Oeste', 'Vegetação da Amazônia', 'Vegetação da Caatinga', 'Vegetação do Pantanal', 'Vegetação da Mata Atlântica'], correta: 0, explicacao: 'O Cerrado é a vegetação típica do Centro-Oeste brasileiro.' },
-            { id: 43, grupo: 3, pergunta: 'O que foi a Era Vargas?', alternativas: ['Período de governo de Getúlio Vargas', 'Período da Primeira República', 'Período da Ditadura Militar', 'Período da Redemocratização', 'Período da Nova República'], correta: 0, explicacao: 'A Era Vargas foi o período de governo de Getúlio Vargas.' },
-            { id: 44, grupo: 3, pergunta: 'O que são políticas neoliberais?', alternativas: ['Livre mercado e privatizações', 'Intervenção estatal', 'Nacionalismo', 'Protecionismo', 'Planejamento centralizado'], correta: 0, explicacao: 'Políticas neoliberais defendem livre mercado e privatizações.' },
-            { id: 45, grupo: 3, pergunta: 'Qual é a hidrografia do Brasil?', alternativas: ['12 regiões hidrográficas', '10 regiões hidrográficas', '8 regiões hidrográficas', '15 regiões hidrográficas', '20 regiões hidrográficas'], correta: 0, explicacao: 'O Brasil possui 12 regiões hidrográficas.' },
-            { id: 46, grupo: 3, pergunta: 'O que foi o nazifascismo?', alternativas: ['Ideologia totalitária', 'Ideologia liberal', 'Ideologia socialista', 'Ideologia comunista', 'Ideologia democrática'], correta: 0, explicacao: 'Nazifascismo foi uma ideologia totalitária na Alemanha e Itália.' },
-            { id: 47, grupo: 3, pergunta: 'O que são atualidades?', alternativas: ['Acontecimentos recentes de relevância', 'Acontecimentos históricos', 'Acontecimentos futuros', 'Acontecimentos fictícios', 'Acontecimentos locais'], correta: 0, explicacao: 'Atualidades são acontecimentos recentes de relevância nacional e internacional.' },
-            { id: 48, grupo: 3, pergunta: 'O que é a Amazônia?', alternativas: ['Maior floresta tropical do mundo', 'Maior floresta temperada', 'Maior floresta boreal', 'Maior floresta de coníferas', 'Maior floresta de mangue'], correta: 0, explicacao: 'A Amazônia é a maior floresta tropical do mundo.' },
-            { id: 49, grupo: 3, pergunta: 'O que foi a redemocratização?', alternativas: ['Retorno à democracia em 1985', 'Retorno à ditadura', 'Retorno à monarquia', 'Retorno ao império', 'Retorno à colônia'], correta: 0, explicacao: 'A redemocratização foi o retorno à democracia em 1985.' },
-            { id: 50, grupo: 3, pergunta: 'O que é urbanização?', alternativas: ['Crescimento das cidades', 'Crescimento do campo', 'Crescimento da população rural', 'Crescimento da população total', 'Crescimento da indústria'], correta: 0, explicacao: 'Urbanização é o processo de crescimento das cidades.' },
-
+            { id: 36, grupo: 'Conhecimentos Gerais', enunciado: 'O que foi a Primeira Guerra Mundial?', alternativas: ['Conflito global 1914-1918', 'Conflito global 1939-1945', 'Conflito na Europa 1945-1991', 'Conflito na Ásia 1950-1953', 'Conflito na África 1960-1970'], correta: 0, explicacao: 'A Primeira Guerra Mundial ocorreu entre 1914 e 1918.' },
             // INFORMÁTICA (51-55)
-            { id: 51, grupo: 4, pergunta: 'O que é o MS-Windows 10?', alternativas: ['Sistema operacional', 'Editor de texto', 'Planilha eletrônica', 'Apresentação de slides', 'Navegador de internet'], correta: 0, explicacao: 'Windows 10 é um sistema operacional da Microsoft.' },
-            { id: 52, grupo: 4, pergunta: 'O que é uma planilha no MS-Excel?', alternativas: ['Documento com linhas e colunas', 'Documento de texto', 'Documento de apresentação', 'Documento de banco de dados', 'Documento de e-mail'], correta: 0, explicacao: 'Planilha no Excel é um documento com linhas e colunas.' },
-            { id: 53, grupo: 4, pergunta: 'O que é o Google Drive?', alternativas: ['Armazenamento em nuvem', 'Editor de texto', 'Planilha eletrônica', 'Apresentação de slides', 'Navegador de internet'], correta: 0, explicacao: 'Google Drive é um serviço de armazenamento em nuvem.' },
-            { id: 54, grupo: 4, pergunta: 'O que é um slide no MS-PowerPoint?', alternativas: ['Página de uma apresentação', 'Linha de uma planilha', 'Coluna de uma tabela', 'Parágrafo de um texto', 'Célula de uma planilha'], correta: 0, explicacao: 'Slide é cada página de uma apresentação do PowerPoint.' },
-            { id: 55, grupo: 4, pergunta: 'O que é o Gmail?', alternativas: ['Serviço de e-mail do Google', 'Serviço de armazenamento do Google', 'Serviço de streaming do Google', 'Serviço de busca do Google', 'Serviço de mapas do Google'], correta: 0, explicacao: 'Gmail é o serviço de e-mail do Google.' },
-
+            { id: 51, grupo: 'Informática', enunciado: 'O que é um sistema operacional?', alternativas: ['Software que gerencia recursos do computador', 'Hardware', 'Um navegador', 'Um editor de texto', 'Uma planilha eletrônica'], correta: 0, explicacao: 'Sistema operacional é um software que gerencia os recursos de hardware e software do computador.' },
             // ADMINISTRAÇÃO PÚBLICA (56-60)
-            { id: 56, grupo: 5, pergunta: 'Quais são os poderes do Estado?', alternativas: ['Executivo, Legislativo e Judiciário', 'Executivo e Legislativo', 'Legislativo e Judiciário', 'Executivo e Judiciário', 'Federal, Estadual e Municipal'], correta: 0, explicacao: 'Os três poderes do Estado são Executivo, Legislativo e Judiciário.' },
-            { id: 57, grupo: 5, pergunta: 'O que é a Segurança Pública?', alternativas: ['Garantia da ordem e proteção da sociedade', 'Garantia da ordem fiscal', 'Garantia da ordem financeira', 'Garantia da ordem trabalhista', 'Garantia da ordem previdenciária'], correta: 0, explicacao: 'Segurança Pública garante a ordem e proteção da sociedade.' },
-            { id: 58, grupo: 5, pergunta: 'O que é a Polícia Militar?', alternativas: ['Força auxiliar e reserva do Exército', 'Polícia Civil', 'Polícia Federal', 'Força Nacional', 'Guarda Municipal'], correta: 0, explicacao: 'A Polícia Militar é uma força auxiliar e reserva do Exército.' },
-            { id: 59, grupo: 5, pergunta: 'O que é a Lei de Acesso à Informação?', alternativas: ['Lei 12.527/11', 'Lei 9.394/96', 'Lei 8.069/90', 'Lei 13.005/14', 'Lei 14.113/20'], correta: 0, explicacao: 'A Lei de Acesso à Informação é a Lei 12.527/11.' },
-            { id: 60, grupo: 5, pergunta: 'O que são servidores públicos militares?', alternativas: ['Servidores das Forças Armadas e Auxiliares', 'Servidores civis', 'Servidores federais', 'Servidores estaduais', 'Servidores municipais'], correta: 0, explicacao: 'Servidores públicos militares são das Forças Armadas e Auxiliares.' }
+            { id: 56, grupo: 'Administração Pública', enunciado: 'O que é a Segurança Pública?', alternativas: ['Garantia da ordem e proteção da sociedade', 'Garantia da ordem fiscal', 'Garantia da ordem financeira', 'Garantia da ordem trabalhista', 'Garantia da ordem previdenciária'], correta: 0, explicacao: 'Segurança Pública garante a ordem e proteção da sociedade.' }
         ];
 
-        // ============================================
-        // CONTROLE DA INTERFACE
-        // ============================================
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
         let questaoAtual = 0;
 
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_pmsp_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_pmsp_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_pmsp_respostas'); const e = localStorage.getItem('simulado_pmsp_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
+
         function renderizarQuestao(index) {
-            const q = questoes[index];
-            const container = document.getElementById('questoes-container');
-            
-            const grupos = {
-                1: 'Língua Portuguesa',
-                2: 'Matemática',
-                3: 'Conhecimentos Gerais',
-                4: 'Noções de Informática',
-                5: 'Noções de Administração Pública'
-            };
-            
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
             let alternativasHtml = q.alternativas.map((alt, i) => {
                 const letra = String.fromCharCode(65 + i);
-                return `<li data-letra="${letra}">${alt}</li>`;
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
             }).join('');
-
-            container.innerHTML = `
-                <div class="grupo">
-                    <h2>${grupos[q.grupo]}</h2>
-                    <div class="subtitle">Questão ${q.id} de 60</div>
-                    ${q.texto ? `<div class="texto destaque">📖 ${q.texto}</div>` : ''}
-                    <div class="questao">
-                        <span class="numero">Questão ${q.id}</span>
-                        <p style="margin: 0.5rem 0 1rem; font-weight: 500;">${q.pergunta}</p>
-                        <ul class="alternativas">
-                            ${alternativasHtml}
-                        </ul>
-                        <div class="gabarito" id="gabarito-${q.id}">
-                            <strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<br>
-                            <span style="color: #6c757d; font-size: 0.9rem;">${q.explicacao}</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 60</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
             document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
-            const progresso = ((index + 1) / questoes.length * 100);
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
             document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
             document.getElementById('barraProgresso').style.width = `${progresso}%`;
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function proximaQuestao() {
-            if (questaoAtual < questoes.length - 1) {
-                questaoAtual++;
-                renderizarQuestao(questaoAtual);
-            }
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function questaoAnterior() {
-            if (questaoAtual > 0) {
-                questaoAtual--;
-                renderizarQuestao(questaoAtual);
-            }
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_pmsp_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_pmsp_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
         }
 
-        function mostrarGabarito() {
-            const q = questoes[questaoAtual];
-            const gabarito = document.getElementById(`gabarito-${q.id}`);
-            if (gabarito) {
-                gabarito.classList.toggle('visible');
-            }
-        }
-
-        renderizarQuestao(0);
+        carregarEstado(); renderizarQuestao(0);
     </script>
 </body>
 </html>

@@ -3,22 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado #1 - SEDUC/MS 2022</title>
+    <title>Simulado SEDUC/MS 2022 - 80 Questões</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6f9;
-            padding: 1.5rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
@@ -27,238 +16,89 @@
             margin-bottom: 2rem;
             text-align: center;
         }
-        .header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .header p {
-            opacity: 0.8;
-        }
-        .header .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        .header .stats span {
-            background: rgba(255,255,255,0.1);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .grupo {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .grupo h2 {
-            color: #0f0f1a;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #e94560;
-        }
-        .grupo .subtitle {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-        .questao {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border-left: 3px solid #e94560;
-        }
-        .questao .numero {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        .questao .texto {
-            margin: 0.5rem 0 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            border-left: 3px solid #6c757d;
-            font-size: 0.95rem;
-        }
-        .questao .texto.destaque {
-            border-left-color: #e94560;
-            background: #fff5f5;
-        }
-        .alternativas {
-            list-style: none;
-            padding: 0;
-        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #6c5ce7; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #6c5ce7; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #6c5ce7; }
+        .questao .numero { display: inline-block; background: #6c5ce7; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
         .alternativas li {
-            padding: 0.5rem 0 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
             position: relative;
             color: #495057;
             font-size: 0.95rem;
-            border-bottom: 1px solid #f1f3f5;
-        }
-        .alternativas li:last-child {
-            border-bottom: none;
-        }
-        .alternativas li::before {
-            content: attr(data-letra);
-            color: #e94560;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .gabarito {
-            background: #e9ecef;
-            padding: 1rem;
+            border: 2px solid transparent;
             border-radius: 8px;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        .gabarito.visible {
-            display: block;
-        }
-        .gabarito strong {
-            color: #e94560;
-        }
-        .btn {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            margin-bottom: 0.3rem;
             cursor: pointer;
-            margin: 1rem 0;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: #c0392b;
-        }
-        .btn-secondary {
-            background: #6c757d;
-        }
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        .btn-success {
-            background: #28a745;
-        }
-        .btn-success:hover {
-            background: #1e7e34;
-        }
-        .btn-warning {
-            background: #ffc107;
-            color: #1a1a2e;
-        }
-        .btn-warning:hover {
-            background: #e0a800;
-        }
-        .btn-danger {
-            background: #dc3545;
-        }
-        .btn-danger:hover {
-            background: #c82333;
-        }
-        .feedback {
-            display: none;
-            padding: 0.8rem 1rem;
-            border-radius: 8px;
-            margin-top: 0.8rem;
-            font-weight: 500;
-        }
-        .feedback.certo {
-            display: block;
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        .feedback.errado {
-            display: block;
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        .progresso {
+            transition: all 0.2s;
             background: white;
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .progresso .barra {
-            width: 100%;
-            height: 8px;
-            background: #e9ecef;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 0.5rem;
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #6c5ce7; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #6c5ce7; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #6c5ce7; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
+            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
         }
-        .progresso .barra-fill {
-            height: 100%;
-            background: #e94560;
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-        .progresso .info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-            .header .stats {
-                gap: 0.5rem;
-            }
-            .header .stats span {
-                font-size: 0.8rem;
-                padding: 0.3rem 0.8rem;
-            }
-            .questao {
-                padding: 1rem;
-            }
-            .btn-group {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #6c5ce7; color: white; }
+        .btn-primary:hover { background: #5a4bd1; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #6c5ce7; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #6c5ce7; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
+        @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📝 Simulado Completo #1</h1>
-            <p>Secretaria de Educação - MS (Docência)</p>
+            <h1>Simulado SEDUC/MS 2022</h1>
+            <p>Professor - 80 questões</p>
             <div class="stats">
-                <span>📄 80 questões</span>
-                <span>⏱️ 5 horas</span>
-                <span>📊 80 pontos</span>
+                <span>80 questões</span>
+                <span>5h</span>
+                <span>80 pontos</span>
             </div>
         </div>
 
-        <!-- Controle de navegação -->
         <div class="progresso">
             <div class="info">
                 <span id="questaoAtual">Questão 1 de 80</span>
@@ -267,1129 +107,142 @@
             <div class="barra">
                 <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; flex-wrap: wrap;">
-                <button class="btn btn-secondary" onclick="questaoAnterior()">⬅ Anterior</button>
-                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima ➡</button>
-                <button class="btn btn-success" onclick="mostrarGabarito()">Mostrar Gabarito</button>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
             </div>
         </div>
 
-        <div id="questoes-container">
-            <!-- As questões serão inseridas aqui pelo JavaScript -->
+        <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
         </div>
     </div>
 
     <script>
-        // ============================================
-        // DADOS DAS QUESTÕES (80 questões completas)
-        // ============================================
+        // ==========================================
+        // DADOS DO SIMULADO - 80 QUESTÕES SEDUC/MS
+        // ==========================================
         const questoes = [
-            // ========================================
-            // GRUPO 1: LÍNGUA PORTUGUESA (Questões 1-20)
-            // ========================================
-            {
-                id: 1,
-                grupo: 1,
-                texto: '"A educação é a base para o desenvolvimento social e individual. Através dela, construímos cidadãos críticos."',
-                pergunta: 'Qual a função sintática da palavra "educação" na primeira frase?',
-                alternativas: ['Objeto direto', 'Sujeito da oração', 'Predicativo do sujeito', 'Adjunto adnominal', 'Núcleo do predicado'],
-                correta: 1,
-                explicacao: '"Educação" é o sujeito da oração, pois é o termo sobre o qual se declara algo.'
-            },
-            {
-                id: 2,
-                grupo: 1,
-                texto: '"A vida é uma jornada cheia de desafios."',
-                pergunta: 'Identifique a figura de linguagem presente na frase:',
-                alternativas: ['Comparação', 'Metáfora', 'Personificação', 'Hipérbole', 'Ironia'],
-                correta: 1,
-                explicacao: 'Metáfora é uma comparação implícita entre "vida" e "jornada".'
-            },
-            {
-                id: 3,
-                grupo: 1,
-                pergunta: 'Assinale a frase que contém concordância verbal correta:',
-                alternativas: [
-                    'Fazem 10 anos que estudo para concursos',
-                    'Faz 10 anos que estudo para concursos',
-                    'Fazem 10 ano que estudo para concursos',
-                    'Fazer 10 anos que estudo para concursos',
-                    'Fizeram 10 anos que estudo para concursos'
-                ],
-                correta: 1,
-                explicacao: 'O verbo "fazer" indicando tempo é impessoal, permanecendo no singular.'
-            },
-            {
-                id: 4,
-                grupo: 1,
-                texto: '"O aluno, que estudou muito, foi aprovado no concurso."',
-                pergunta: 'A oração "que estudou muito" classifica-se como:',
-                alternativas: ['Oração coordenada', 'Oração subordinada adjetiva', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Oração coordenada sindética'],
-                correta: 1,
-                explicacao: 'É uma oração subordinada adjetiva restritiva, pois especifica o termo "aluno".'
-            },
-            {
-                id: 5,
-                grupo: 1,
-                pergunta: 'Qual das seguintes palavras é um advérbio?',
-                alternativas: ['Feliz', 'Felizmente', 'Felizardo', 'Felicidade', 'Felicitado'],
-                correta: 1,
-                explicacao: '"Felizmente" é advérbio de modo, modificando o verbo.'
-            },
-            {
-                id: 6,
-                grupo: 1,
-                pergunta: 'Em qual alternativa a crase é obrigatória?',
-                alternativas: [
-                    'Fui a escola',
-                    'Vou a Paris',
-                    'Chegamos a conclusão',
-                    'Referiu-se a aquela pessoa',
-                    'Entreguei a carta a ela'
-                ],
-                correta: 2,
-                explicacao: '"Chegamos a conclusão" - crase obrigatória antes de palavra feminina.'
-            },
-            {
-                id: 7,
-                grupo: 1,
-                pergunta: 'O que é um período composto?',
-                alternativas: [
-                    'Possui uma única oração',
-                    'Possui duas ou mais orações',
-                    'Possui apenas um verbo',
-                    'Possui apenas sujeito simples',
-                    'Não possui verbo'
-                ],
-                correta: 1,
-                explicacao: 'Período composto é aquele que possui duas ou mais orações.'
-            },
-            {
-                id: 8,
-                grupo: 1,
-                texto: '"O sol brilhava forte, mas o vento gelado cortava a pele."',
-                pergunta: 'Qual a classificação da conjunção "mas"?',
-                alternativas: ['Aditiva', 'Adversativa', 'Conclusiva', 'Explicativa', 'Alternativa'],
-                correta: 1,
-                explicacao: '"Mas" é uma conjunção coordenativa adversativa, indicando oposição.'
-            },
-            {
-                id: 9,
-                grupo: 1,
-                pergunta: 'Qual a diferença entre denotação e conotação?',
-                alternativas: [
-                    'Denotação é figurada, conotação é literal',
-                    'Denotação é literal, conotação é figurada',
-                    'Denotação é subjetiva, conotação é objetiva',
-                    'Denotação é poética, conotação é técnica',
-                    'Denotação é formal, conotação é informal'
-                ],
-                correta: 1,
-                explicacao: 'Denotação é o sentido literal da palavra; conotação é o sentido figurado.'
-            },
-            {
-                id: 10,
-                grupo: 1,
-                pergunta: 'O que é intertextualidade?',
-                alternativas: [
-                    'Relação entre palavras da mesma frase',
-                    'Relação entre diferentes textos',
-                    'Relação entre som e sentido',
-                    'Relação entre autor e leitor',
-                    'Relação entre língua e cultura'
-                ],
-                correta: 1,
-                explicacao: 'Intertextualidade é a relação entre diferentes textos, onde um faz referência a outro.'
-            },
-            {
-                id: 11,
-                grupo: 1,
-                pergunta: 'Assinale a alternativa em que o acento gráfico está correto:',
-                alternativas: ['Heroico', 'Jóia', 'Péla', 'Séde', 'Côr'],
-                correta: 0,
-                explicacao: 'A palavra "heroico" é acentuada corretamente na forma paroxítona terminada em ditongo.'
-            },
-            {
-                id: 12,
-                grupo: 1,
-                pergunta: 'O que é polissemia?',
-                alternativas: [
-                    'Palavras com significados opostos',
-                    'Palavras com múltiplos significados',
-                    'Palavras com mesma escrita e som',
-                    'Palavras com mesma escrita e som diferentes',
-                    'Palavras com significado único'
-                ],
-                correta: 1,
-                explicacao: 'Polissemia é a propriedade de uma palavra ter múltiplos significados.'
-            },
-            {
-                id: 13,
-                grupo: 1,
-                pergunta: 'Qual a função da vírgula na frase: "João, o melhor aluno, foi aprovado."?',
-                alternativas: ['Separar aposto', 'Separar vocativo', 'Indicar enumeração', 'Separar orações', 'Indicar omissão'],
-                correta: 0,
-                explicacao: 'A vírgula separa o aposto explicativo "o melhor aluno".'
-            },
-            {
-                id: 14,
-                grupo: 1,
-                pergunta: 'O que é regência nominal?',
-                alternativas: [
-                    'Relação entre verbo e complemento',
-                    'Relação entre nome e complemento',
-                    'Relação entre sujeito e predicado',
-                    'Relação entre duas orações',
-                    'Relação entre substantivo e adjetivo'
-                ],
-                correta: 1,
-                explicacao: 'Regência nominal é a relação entre um nome (substantivo, adjetivo ou advérbio) e seu complemento.'
-            },
-            {
-                id: 15,
-                grupo: 1,
-                pergunta: 'Em qual alternativa ocorre variação linguística?',
-                alternativas: [
-                    '"Oxente, que calor!"',
-                    '"Vou à escola."',
-                    '"Ele foi ao mercado."',
-                    '"Estudo pela manhã."',
-                    '"Comprei um livro."'
-                ],
-                correta: 0,
-                explicacao: '"Oxente" é uma expressão regional (Nordeste), representando variação diatópica.'
-            },
-            {
-                id: 16,
-                grupo: 1,
-                pergunta: 'O que é um vocativo?',
-                alternativas: [
-                    'Termo que explica outro',
-                    'Termo usado para chamar o interlocutor',
-                    'Termo que indica posse',
-                    'Termo que modifica o verbo',
-                    'Termo que liga orações'
-                ],
-                correta: 1,
-                explicacao: 'Vocativo é o termo usado para invocar ou chamar o interlocutor.'
-            },
-            {
-                id: 17,
-                grupo: 1,
-                pergunta: 'O que é eufemismo?',
-                alternativas: [
-                    'Exagero intencional',
-                    'Suavização de ideia desagradável',
-                    'Comparação implícita',
-                    'Atribuição de características humanas',
-                    'Afirmação do contrário'
-                ],
-                correta: 1,
-                explicacao: 'Eufemismo é a suavização de uma ideia desagradável usando termos mais amenos.'
-            },
-            {
-                id: 18,
-                grupo: 1,
-                pergunta: 'Qual das palavras é formada por composição?',
-                alternativas: ['Infeliz', 'Desleal', 'Guarda-chuva', 'Inútil', 'Desfazer'],
-                correta: 2,
-                explicacao: '"Guarda-chuva" é formado por composição (justaposição) de dois radicais.'
-            },
-            {
-                id: 19,
-                grupo: 1,
-                pergunta: 'O que é uma oração subordinada?',
-                alternativas: [
-                    'Oração independente',
-                    'Oração que depende sintaticamente de outra',
-                    'Oração que expressa dúvida',
-                    'Oração que indica ordem',
-                    'Oração que expressa desejo'
-                ],
-                correta: 1,
-                explicacao: 'Oração subordinada é aquela que depende sintaticamente de outra oração para fazer sentido.'
-            },
-            {
-                id: 20,
-                grupo: 1,
-                texto: '"Os alunos, que se prepararam bem, foram aprovados."',
-                pergunta: 'A oração "que se prepararam bem" classifica-se como:',
-                alternativas: ['Oração coordenada', 'Oração subordinada adjetiva', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Oração absoluta'],
-                correta: 1,
-                explicacao: 'É uma oração subordinada adjetiva restritiva, especificando quais alunos foram aprovados.'
-            },
-
-            // ========================================
-            // GRUPO 2: CONHECIMENTOS PEDAGÓGICOS (Questões 21-40)
-            // ========================================
-            {
-                id: 21,
-                grupo: 2,
-                pergunta: 'O que é a BNCC?',
-                alternativas: [
-                    'Base Nacional Comum Curricular',
-                    'Base Nacional Curricular Comum',
-                    'Bases Nacionais Curriculares Comuns',
-                    'Base Nacional de Conteúdos Curriculares',
-                    'Base Normativa Comum Curricular'
-                ],
-                correta: 0,
-                explicacao: 'BNCC é a sigla para Base Nacional Comum Curricular.'
-            },
-            {
-                id: 22,
-                grupo: 2,
-                pergunta: 'Quantas competências gerais tem a BNCC?',
-                alternativas: ['8', '9', '10', '11', '12'],
-                correta: 2,
-                explicacao: 'A BNCC estabelece 10 competências gerais para a Educação Básica.'
-            },
-            {
-                id: 23,
-                grupo: 2,
-                pergunta: 'Qual a principal função da BNCC?',
-                alternativas: [
-                    'Definir o currículo mínimo nacional',
-                    'Estabelecer diretrizes para o ensino',
-                    'Orientar a formação de professores',
-                    'Todas as alternativas',
-                    'Nenhuma das alternativas'
-                ],
-                correta: 3,
-                explicacao: 'A BNCC define o currículo, estabelece diretrizes e orienta a formação de professores.'
-            },
-            {
-                id: 24,
-                grupo: 2,
-                pergunta: 'Segundo a LDB (Lei 9.394/96), quais são os níveis da Educação Básica?',
-                alternativas: [
-                    'Educação Infantil, Ensino Fundamental e Ensino Médio',
-                    'Educação Infantil e Ensino Fundamental',
-                    'Ensino Fundamental e Ensino Médio',
-                    'Educação Infantil, Ensino Fundamental, Ensino Médio e Superior',
-                    'Apenas Ensino Médio'
-                ],
-                correta: 0,
-                explicacao: 'A LDB define a Educação Básica como composta por Educação Infantil, Ensino Fundamental e Ensino Médio.'
-            },
-            {
-                id: 25,
-                grupo: 2,
-                pergunta: 'O que é o PNE?',
-                alternativas: [
-                    'Plano Nacional de Educação',
-                    'Programa Nacional de Ensino',
-                    'Plano Nacional de Ensino',
-                    'Programa Nacional de Educação',
-                    'Plano Nacional Educacional'
-                ],
-                correta: 0,
-                explicacao: 'PNE é o Plano Nacional de Educação (Lei 13.005/2014).'
-            },
-            {
-                id: 26,
-                grupo: 2,
-                pergunta: 'Qual a função do FUNDEB?',
-                alternativas: [
-                    'Financiar a educação superior',
-                    'Financiar a educação básica pública',
-                    'Financiar a educação privada',
-                    'Financiar a educação infantil apenas',
-                    'Financiar o ensino médio apenas'
-                ],
-                correta: 1,
-                explicacao: 'O FUNDEB financia a educação básica pública, valorizando os profissionais da educação.'
-            },
-            {
-                id: 27,
-                grupo: 2,
-                pergunta: 'O que o ECA (Lei 8.069/90) protege?',
-                alternativas: [
-                    'Os direitos dos idosos',
-                    'Os direitos das crianças e adolescentes',
-                    'Os direitos dos trabalhadores',
-                    'Os direitos dos estudantes universitários',
-                    'Os direitos dos professores'
-                ],
-                correta: 1,
-                explicacao: 'O ECA protege os direitos fundamentais de crianças e adolescentes.'
-            },
-            {
-                id: 28,
-                grupo: 2,
-                pergunta: 'O que são Diretrizes Curriculares Nacionais?',
-                alternativas: [
-                    'Normas para o currículo na Educação Básica',
-                    'Regras para a formação de professores',
-                    'Diretrizes para a educação superior',
-                    'Normas para a educação infantil',
-                    'Diretrizes para o ensino médio'
-                ],
-                correta: 0,
-                explicacao: 'São normas que orientam a organização e execução do currículo na Educação Básica.'
-            },
-            {
-                id: 29,
-                grupo: 2,
-                pergunta: 'Qual a Deliberação que estabelece normas para educação básica em MS?',
-                alternativas: [
-                    'Deliberação CEE/MS n. 10.814/2016',
-                    'Deliberação CEE/MS n. 10.815/2016',
-                    'Deliberação CEE/MS n. 10.814/2017',
-                    'Deliberação CEE/MS n. 10.815/2017',
-                    'Deliberação CEE/MS n. 10.814/2018'
-                ],
-                correta: 0,
-                explicacao: 'A Deliberação CEE/MS n. 10.814/2016 estabelece normas para a educação básica no MS.'
-            },
-            {
-                id: 30,
-                grupo: 2,
-                pergunta: 'O que estabelece a Lei 13.415/2017?',
-                alternativas: [
-                    'Reforma do Ensino Médio',
-                    'Reforma do Ensino Fundamental',
-                    'Criação do FUNDEB',
-                    'Instituição da BNCC',
-                    'Reforma da Educação Infantil'
-                ],
-                correta: 0,
-                explicacao: 'A Lei 13.415/2017 institui a Reforma do Ensino Médio.'
-            },
-            {
-                id: 31,
-                grupo: 2,
-                pergunta: 'O que é avaliação formativa?',
-                alternativas: [
-                    'Avaliação contínua que acompanha o processo de aprendizagem',
-                    'Avaliação ao final do período',
-                    'Avaliação aplicada pelo governo',
-                    'Avaliação apenas com notas',
-                    'Avaliação sem critérios'
-                ],
-                correta: 0,
-                explicacao: 'Avaliação formativa acompanha o processo de aprendizagem, identificando dificuldades e promovendo melhorias.'
-            },
-            {
-                id: 32,
-                grupo: 2,
-                pergunta: 'O que são competências socioemocionais?',
-                alternativas: [
-                    'Habilidades técnicas',
-                    'Habilidades como empatia, autoconhecimento e responsabilidade',
-                    'Habilidades cognitivas',
-                    'Habilidades motoras',
-                    'Habilidades acadêmicas'
-                ],
-                correta: 1,
-                explicacao: 'Competências socioemocionais incluem empatia, autoconhecimento, resiliência, colaboração e responsabilidade.'
-            },
-            {
-                id: 33,
-                grupo: 2,
-                pergunta: 'O que é Educação Integral?',
-                alternativas: [
-                    'Apenas aulas em tempo integral',
-                    'Formação que considera todas as dimensões do aluno',
-                    'Apenas educação física',
-                    'Apenas educação artística',
-                    'Apenas educação moral'
-                ],
-                correta: 1,
-                explicacao: 'Educação Integral considera todas as dimensões do aluno: intelectual, social, emocional, física, cultural e ética.'
-            },
-            {
-                id: 34,
-                grupo: 2,
-                pergunta: 'O que é gestão democrática na educação?',
-                alternativas: [
-                    'Gestão autoritária',
-                    'Participação da comunidade escolar',
-                    'Gestão centralizada',
-                    'Gestão apenas dos professores',
-                    'Gestão apenas da direção'
-                ],
-                correta: 1,
-                explicacao: 'Gestão democrática é a participação da comunidade escolar (pais, alunos, professores, funcionários) nas decisões da escola.'
-            },
-            {
-                id: 35,
-                grupo: 2,
-                pergunta: 'O que são tecnologias educacionais?',
-                alternativas: [
-                    'Ferramentas digitais que potencializam o ensino',
-                    'Apenas computadores',
-                    'Apenas softwares',
-                    'Apenas internet',
-                    'Apenas celulares'
-                ],
-                correta: 0,
-                explicacao: 'Tecnologias educacionais são ferramentas digitais e metodologias que potencializam o ensino e a aprendizagem.'
-            },
-            {
-                id: 36,
-                grupo: 2,
-                pergunta: 'O que é o projeto político-pedagógico?',
-                alternativas: [
-                    'Documento que orienta as ações da escola',
-                    'Apenas o currículo escolar',
-                    'Apenas o plano de aulas',
-                    'Apenas o regimento interno',
-                    'Apenas as metas da escola'
-                ],
-                correta: 0,
-                explicacao: 'O projeto político-pedagógico é o documento que orienta as ações da escola, definindo objetivos, metas e estratégias.'
-            },
-            {
-                id: 37,
-                grupo: 2,
-                pergunta: 'O que é interdisciplinaridade?',
-                alternativas: [
-                    'Estudo de uma única disciplina',
-                    'Integração de diferentes disciplinas para abordar um tema',
-                    'Apenas matemática e português',
-                    'Apenas ciências e história',
-                    'Apenas educação física e artes'
-                ],
-                correta: 1,
-                explicacao: 'Interdisciplinaridade é a abordagem que integra diferentes disciplinas para abordar um tema de forma ampla e contextualizada.'
-            },
-            {
-                id: 38,
-                grupo: 2,
-                pergunta: 'O que é a Resolução CNE/CP n. 2/2017?',
-                alternativas: [
-                    'Institui a BNCC',
-                    'Institui o PNE',
-                    'Institui o FUNDEB',
-                    'Institui a LDB',
-                    'Institui o ECA'
-                ],
-                correta: 0,
-                explicacao: 'A Resolução CNE/CP n. 2/2017 institui e orienta a implantação da BNCC.'
-            },
-            {
-                id: 39,
-                grupo: 2,
-                pergunta: 'O que é a Resolução CNE/CEB n. 3/2018?',
-                alternativas: [
-                    'Diretrizes para Educação Infantil',
-                    'Diretrizes para Ensino Médio',
-                    'Diretrizes para Educação Especial',
-                    'Diretrizes para EJA',
-                    'Diretrizes para Educação Profissional'
-                ],
-                correta: 1,
-                explicacao: 'A Resolução CNE/CEB n. 3/2018 atualiza as Diretrizes Curriculares Nacionais para o Ensino Médio.'
-            },
-            {
-                id: 40,
-                grupo: 2,
-                pergunta: 'Quais são as modalidades da Educação Básica?',
-                alternativas: [
-                    'Educação Especial, EJA, Educação Profissional e Educação a Distância',
-                    'Apenas Educação Especial e EJA',
-                    'Apenas Educação Profissional',
-                    'Apenas Educação a Distância',
-                    'Apenas Educação Especial'
-                ],
-                correta: 0,
-                explicacao: 'As modalidades da Educação Básica incluem Educação Especial, EJA, Educação Profissional e Educação a Distância.'
-            },
-
-            // ========================================
-            // GRUPO 3: CONHECIMENTOS ESPECÍFICOS (Questões 41-80)
-            // MATEMÁTICA (41-50)
-            // ========================================
-            {
-                id: 41,
-                grupo: 3,
-                pergunta: 'Calcule o valor da expressão: (2³ + 4²) / 8',
-                alternativas: ['2', '3', '4', '5', '6'],
-                correta: 1,
-                explicacao: '(8 + 16) / 8 = 24/8 = 3'
-            },
-            {
-                id: 42,
-                grupo: 3,
-                pergunta: 'Qual o valor de f(x) = 2x + 3 para x = 5?',
-                alternativas: ['10', '13', '15', '20', '25'],
-                correta: 1,
-                explicacao: 'f(5) = 2(5) + 3 = 10 + 3 = 13'
-            },
-            {
-                id: 43,
-                grupo: 3,
-                pergunta: 'Qual o valor de x na equação: 3x + 7 = 22?',
-                alternativas: ['3', '4', '5', '6', '7'],
-                correta: 2,
-                explicacao: '3x = 22 - 7 → 3x = 15 → x = 5'
-            },
-            {
-                id: 44,
-                grupo: 3,
-                pergunta: 'Quais são os conjuntos numéricos?',
-                alternativas: [
-                    'Naturais, Inteiros e Reais',
-                    'Naturais, Inteiros, Racionais, Irracionais e Reais',
-                    'Naturais, Inteiros e Racionais',
-                    'Inteiros, Reais e Irracionais',
-                    'Racionais, Irracionais e Reais'
-                ],
-                correta: 1,
-                explicacao: 'Os conjuntos numéricos são: Naturais (N), Inteiros (Z), Racionais (Q), Irracionais (I) e Reais (R).'
-            },
-            {
-                id: 45,
-                grupo: 3,
-                pergunta: 'Qual a fórmula para calcular a área de um círculo?',
-                alternativas: ['A = π × r', 'A = 2π × r', 'A = π × r²', 'A = π × d', 'A = d²'],
-                correta: 2,
-                explicacao: 'A área de um círculo é calculada por A = π × r².'
-            },
-            {
-                id: 46,
-                grupo: 3,
-                pergunta: 'O que é uma progressão aritmética (PA)?',
-                alternativas: [
-                    'Sequência onde cada termo é multiplicado por um valor fixo',
-                    'Sequência onde cada termo é somado a um valor fixo',
-                    'Sequência onde cada termo é dividido por um valor fixo',
-                    'Sequência onde os termos são aleatórios',
-                    'Sequência onde os termos são iguais'
-                ],
-                correta: 1,
-                explicacao: 'PA é uma sequência onde cada termo é igual ao anterior acrescido de um valor fixo (razão r).'
-            },
-            {
-                id: 47,
-                grupo: 3,
-                pergunta: 'Qual a fórmula do teorema de Pitágoras?',
-                alternativas: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b × c', 'a² = b² × c²'],
-                correta: 0,
-                explicacao: 'O teorema de Pitágoras é a² = b² + c², onde a é a hipotenusa.'
-            },
-            {
-                id: 48,
-                grupo: 3,
-                pergunta: 'Como calcular a média aritmética?',
-                alternativas: [
-                    'Soma dos valores dividida pelo número de valores',
-                    'Produto dos valores dividido pelo número de valores',
-                    'Soma dos valores multiplicada pelo número de valores',
-                    'Diferença entre os valores',
-                    'Valor central do conjunto'
-                ],
-                correta: 0,
-                explicacao: 'Média aritmética = soma de todos os valores / número de valores.'
-            },
-            {
-                id: 49,
-                grupo: 3,
-                pergunta: 'O que é um número primo?',
-                alternativas: [
-                    'Número que é divisível por 2',
-                    'Número que tem mais de dois divisores',
-                    'Número que tem apenas dois divisores: 1 e ele mesmo',
-                    'Número que é divisível por 3',
-                    'Número que é negativo'
-                ],
-                correta: 2,
-                explicacao: 'Número primo é aquele que tem apenas dois divisores: 1 e ele mesmo.'
-            },
-            {
-                id: 50,
-                grupo: 3,
-                pergunta: 'Qual a fórmula para calcular juros simples?',
-                alternativas: ['J = C × i × t', 'J = C × i', 'J = C × t', 'J = i × t', 'J = C + i + t'],
-                correta: 0,
-                explicacao: 'Juros simples: J = C × i × t, onde C é capital, i é a taxa e t é o tempo.'
-            },
-
-            // PORTUGUÊS (51-60)
-            {
-                id: 51,
-                grupo: 3,
-                texto: '"O menino, que estudou muito, foi aprovado."',
-                pergunta: 'Classifique a oração "que estudou muito":',
-                alternativas: ['Oração coordenada', 'Oração subordinada adjetiva', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Oração absoluta'],
-                correta: 1,
-                explicacao: 'É uma oração subordinada adjetiva restritiva.'
-            },
-            {
-                id: 52,
-                grupo: 3,
-                pergunta: 'Qual a regência do verbo "assistir" no sentido de "ver"?',
-                alternativas: ['Direta', 'Indireta (preposição "a")', 'Indireta (preposição "para")', 'Indireta (preposição "em")', 'Não tem regência'],
-                correta: 1,
-                explicacao: '"Assistir" no sentido de "ver" tem regência indireta com a preposição "a".'
-            },
-            {
-                id: 53,
-                grupo: 3,
-                pergunta: 'Qual a diferença entre "por que" e "porque"?',
-                alternativas: [
-                    '"Por que" é usado em perguntas; "porque" é usado em respostas',
-                    '"Por que" é usado em respostas; "porque" é usado em perguntas',
-                    'São sinônimos',
-                    '"Por que" é uma palavra; "porque" são duas palavras',
-                    '"Por que" é usado no início; "porque" no final'
-                ],
-                correta: 0,
-                explicacao: '"Por que" é usado em perguntas, enquanto "porque" é usado em respostas (explicações).'
-            },
-            {
-                id: 54,
-                grupo: 3,
-                pergunta: 'O que é função textual dos vocábulos?',
-                alternativas: [
-                    'Papel de cada palavra no texto para garantir coesão e coerência',
-                    'Função gramatical apenas',
-                    'Significado isolado das palavras',
-                    'Posição das palavras na frase',
-                    'Apenas função sintática'
-                ],
-                correta: 0,
-                explicacao: 'Função textual dos vocábulos é o papel que cada palavra desempenha no texto para garantir sua coesão e coerência.'
-            },
-            {
-                id: 55,
-                grupo: 3,
-                pergunta: 'Quais são os elementos da comunicação?',
-                alternativas: [
-                    'Emissor, receptor, mensagem, código, canal e contexto',
-                    'Emissor e receptor apenas',
-                    'Mensagem e código apenas',
-                    'Canal e contexto apenas',
-                    'Emissor, mensagem e receptor'
-                ],
-                correta: 0,
-                explicacao: 'Os elementos da comunicação são: emissor, receptor, mensagem, código, canal e contexto.'
-            },
-            {
-                id: 56,
-                grupo: 3,
-                pergunta: 'O que é variação linguística?',
-                alternativas: [
-                    'Diferenças no uso da língua por região, classe social e situação',
-                    'Erros na língua',
-                    'Apenas variação regional',
-                    'Apenas variação social',
-                    'Apenas variação histórica'
-                ],
-                correta: 0,
-                explicacao: 'Variação linguística são as diferenças no uso da língua por região, classe social, idade, gênero e situação de comunicação.'
-            },
-            {
-                id: 57,
-                grupo: 3,
-                pergunta: 'O que é fonética?',
-                alternativas: [
-                    'Estudo dos sons da fala',
-                    'Estudo da escrita',
-                    'Estudo do significado das palavras',
-                    'Estudo da estrutura das palavras',
-                    'Estudo da origem das palavras'
-                ],
-                correta: 0,
-                explicacao: 'Fonética é o estudo dos sons da fala (fonemas) e sua produção.'
-            },
-            {
-                id: 58,
-                grupo: 3,
-                pergunta: 'O que é fonologia?',
-                alternativas: [
-                    'Estudo dos fonemas e suas funções na língua',
-                    'Estudo dos sons da fala',
-                    'Estudo da escrita',
-                    'Estudo do significado',
-                    'Estudo da estrutura'
-                ],
-                correta: 0,
-                explicacao: 'Fonologia é o estudo dos fonemas e suas funções na língua.'
-            },
-            {
-                id: 59,
-                grupo: 3,
-                pergunta: 'Quais são as funções do "que" na língua portuguesa?',
-                alternativas: [
-                    'Pronome relativo, conjunção integrante, conjunção consecutiva',
-                    'Apenas pronome relativo',
-                    'Apenas conjunção',
-                    'Apenas interjeição',
-                    'Apenas advérbio'
-                ],
-                correta: 0,
-                explicacao: 'O "que" pode ser pronome relativo, conjunção integrante, conjunção consecutiva, conjunção comparativa ou interjeição.'
-            },
-            {
-                id: 60,
-                grupo: 3,
-                pergunta: 'O que é colocação pronominal?',
-                alternativas: [
-                    'Posição dos pronomes oblíquos na frase',
-                    'Posição dos substantivos',
-                    'Posição dos verbos',
-                    'Posição dos adjetivos',
-                    'Posição dos advérbios'
-                ],
-                correta: 0,
-                explicacao: 'Colocação pronominal é a posição dos pronomes oblíquos na frase: próclise (antes), mesóclise (meio) e ênclise (depois).'
-            },
-
-            // LEGISLAÇÃO (61-70)
-            {
-                id: 61,
-                grupo: 3,
-                pergunta: 'O que é a LDB?',
-                alternativas: [
-                    'Lei de Diretrizes e Bases da Educação Nacional',
-                    'Lei de Diretrizes da Educação Básica',
-                    'Lei de Diretrizes e Bases da Educação Básica',
-                    'Lei de Diretrizes da Educação Nacional',
-                    'Lei de Diretrizes e Bases Curriculares'
-                ],
-                correta: 0,
-                explicacao: 'LDB é a Lei de Diretrizes e Bases da Educação Nacional (Lei 9.394/96).'
-            },
-            {
-                id: 62,
-                grupo: 3,
-                pergunta: 'Qual a Lei que institui o FUNDEB?',
-                alternativas: [
-                    'Lei 14.113/2020',
-                    'Lei 13.005/2014',
-                    'Lei 9.394/96',
-                    'Lei 8.069/90',
-                    'Lei 12.965/2014'
-                ],
-                correta: 0,
-                explicacao: 'O FUNDEB foi instituído pela Lei 14.113/2020.'
-            },
-            {
-                id: 63,
-                grupo: 3,
-                pergunta: 'O que estabelece a Lei 12.965/2014?',
-                alternativas: [
-                    'Marco Civil da Internet',
-                    'Estatuto da Criança',
-                    'LDB',
-                    'PNE',
-                    'FUNDEB'
-                ],
-                correta: 0,
-                explicacao: 'A Lei 12.965/2014 estabelece o Marco Civil da Internet.'
-            },
-            {
-                id: 64,
-                grupo: 3,
-                pergunta: 'O que são metodologias ativas?',
-                alternativas: [
-                    'Estratégias que colocam o aluno como protagonista',
-                    'Apenas aulas expositivas',
-                    'Apenas trabalhos em grupo',
-                    'Apenas exercícios escritos',
-                    'Apenas provas orais'
-                ],
-                correta: 0,
-                explicacao: 'Metodologias ativas são estratégias que colocam o aluno como protagonista do processo de aprendizagem.'
-            },
-            {
-                id: 65,
-                grupo: 3,
-                pergunta: 'O que é sala de aula invertida?',
-                alternativas: [
-                    'Aluno estuda em casa e faz exercícios em sala',
-                    'Apenas aulas online',
-                    'Apenas aulas presenciais',
-                    'Aluno estuda em sala e faz exercícios em casa',
-                    'Apenas aulas práticas'
-                ],
-                correta: 0,
-                explicacao: 'Sala de aula invertida é uma metodologia onde o aluno estuda o conteúdo em casa e faz exercícios em sala.'
-            },
-            {
-                id: 66,
-                grupo: 3,
-                pergunta: 'O que é gamificação na educação?',
-                alternativas: [
-                    'Uso de elementos de jogos em contextos educacionais',
-                    'Apenas jogos educacionais',
-                    'Apenas competições',
-                    'Apenas prêmios',
-                    'Apenas pontos'
-                ],
-                correta: 0,
-                explicacao: 'Gamificação é o uso de elementos de jogos (pontos, níveis, desafios) em contextos educacionais.'
-            },
-            {
-                id: 67,
-                grupo: 3,
-                pergunta: 'O que é o Currículo de Referência de MS?',
-                alternativas: [
-                    'Documento que organiza o currículo das escolas estaduais de MS',
-                    'Apenas o currículo de Campo Grande',
-                    'Apenas o currículo de Dourados',
-                    'Documento que organiza o currículo federal',
-                    'Documento que organiza o currículo municipal'
-                ],
-                correta: 0,
-                explicacao: 'O Currículo de Referência de MS é o documento que organiza e orienta o currículo das escolas da rede estadual de MS.'
-            },
-            {
-                id: 68,
-                grupo: 3,
-                pergunta: 'O que é avaliação externa?',
-                alternativas: [
-                    'Avaliação aplicada por órgãos externos à escola',
-                    'Avaliação aplicada pelo professor',
-                    'Avaliação aplicada pelos alunos',
-                    'Avaliação aplicada pela direção',
-                    'Avaliação aplicada pela coordenação'
-                ],
-                correta: 0,
-                explicacao: 'Avaliação externa é aplicada por órgãos externos à escola, como SAEB e Prova Brasil.'
-            },
-            {
-                id: 69,
-                grupo: 3,
-                pergunta: 'O que é o SAEB?',
-                alternativas: [
-                    'Sistema de Avaliação da Educação Básica',
-                    'Sistema de Avaliação do Ensino Básico',
-                    'Sistema de Avaliação da Educação Brasileira',
-                    'Sistema de Avaliação do Ensino Brasileiro',
-                    'Sistema de Avaliação da Educação Básica Brasileira'
-                ],
-                correta: 0,
-                explicacao: 'SAEB é o Sistema de Avaliação da Educação Básica, aplicado pelo MEC.'
-            },
-            {
-                id: 70,
-                grupo: 3,
-                pergunta: 'O que é a Prova Brasil?',
-                alternativas: [
-                    'Avaliação externa que avalia a qualidade do ensino',
-                    'Prova de português',
-                    'Prova de matemática',
-                    'Prova de ciências',
-                    'Prova de história'
-                ],
-                correta: 0,
-                explicacao: 'A Prova Brasil é uma avaliação externa que avalia a qualidade do ensino nas escolas públicas.'
-            },
-
-            // PEDAGOGIA (71-80)
-            {
-                id: 71,
-                grupo: 3,
-                pergunta: 'O que é letramento?',
-                alternativas: [
-                    'Capacidade de usar a leitura e escrita em contextos sociais',
-                    'Apenas saber ler e escrever',
-                    'Apenas saber ler',
-                    'Apenas saber escrever',
-                    'Capacidade de entender apenas textos literários'
-                ],
-                correta: 0,
-                explicacao: 'Letramento é a capacidade de usar a leitura e a escrita em contextos sociais.'
-            },
-            {
-                id: 72,
-                grupo: 3,
-                pergunta: 'O que é multiletramento?',
-                alternativas: [
-                    'Capacidade de interpretar múltiplas linguagens',
-                    'Apenas linguagem verbal',
-                    'Apenas linguagem visual',
-                    'Apenas linguagem digital',
-                    'Apenas linguagem escrita'
-                ],
-                correta: 0,
-                explicacao: 'Multiletramento é a capacidade de interpretar e produzir textos em múltiplas linguagens (verbal, visual, digital).'
-            },
-            {
-                id: 73,
-                grupo: 3,
-                pergunta: 'O que é educação inclusiva?',
-                alternativas: [
-                    'Modelo que garante acesso e permanência de todos os alunos',
-                    'Apenas alunos com deficiência',
-                    'Apenas alunos superdotados',
-                    'Apenas alunos em vulnerabilidade social',
-                    'Apenas alunos estrangeiros'
-                ],
-                correta: 0,
-                explicacao: 'Educação inclusiva é o modelo educacional que garante acesso e permanência de todos os alunos na escola.'
-            },
-            {
-                id: 74,
-                grupo: 3,
-                pergunta: 'O que é autonomia escolar?',
-                alternativas: [
-                    'Capacidade da escola de tomar decisões sobre seu projeto pedagógico',
-                    'Apenas autonomia financeira',
-                    'Apenas autonomia administrativa',
-                    'Apenas autonomia curricular',
-                    'Apenas autonomia dos professores'
-                ],
-                correta: 0,
-                explicacao: 'Autonomia escolar é a capacidade da escola de tomar decisões sobre seu projeto pedagógico.'
-            },
-            {
-                id: 75,
-                grupo: 3,
-                pergunta: 'Qual o papel do professor na BNCC?',
-                alternativas: [
-                    'Mediar o processo de aprendizagem',
-                    'Apenas transmitir conteúdo',
-                    'Apenas aplicar provas',
-                    'Apenas corrigir exercícios',
-                    'Apenas dar notas'
-                ],
-                correta: 0,
-                explicacao: 'Na BNCC, o professor deve mediar o processo de aprendizagem, desenvolvendo as competências dos alunos.'
-            },
-            {
-                id: 76,
-                grupo: 3,
-                pergunta: 'O que são habilidades na BNCC?',
-                alternativas: [
-                    'Capacidades práticas para aplicar os conhecimentos',
-                    'Apenas conhecimento teórico',
-                    'Apenas conteúdo programático',
-                    'Apenas objetivos de ensino',
-                    'Apenas conteúdos curriculares'
-                ],
-                correta: 0,
-                explicacao: 'Habilidades são capacidades práticas que os alunos devem desenvolver para aplicar os conhecimentos aprendidos.'
-            },
-            {
-                id: 77,
-                grupo: 3,
-                pergunta: 'Como a BNCC influencia o currículo?',
-                alternativas: [
-                    'Define as aprendizagens essenciais para todas as escolas',
-                    'Define apenas para escolas públicas',
-                    'Define apenas para escolas privadas',
-                    'Define apenas para o ensino fundamental',
-                    'Define apenas para o ensino médio'
-                ],
-                correta: 0,
-                explicacao: 'A BNCC define as aprendizagens essenciais que devem ser garantidas em todas as escolas do país.'
-            },
-            {
-                id: 78,
-                grupo: 3,
-                pergunta: 'O que é a educação de jovens e adultos (EJA)?',
-                alternativas: [
-                    'Modalidade para quem não concluiu a educação básica na idade regular',
-                    'Apenas para adultos',
-                    'Apenas para jovens',
-                    'Apenas para idosos',
-                    'Apenas para trabalhadores'
-                ],
-                correta: 0,
-                explicacao: 'EJA é a modalidade de ensino para jovens e adultos que não concluíram a educação básica na idade regular.'
-            },
-            {
-                id: 79,
-                grupo: 3,
-                pergunta: 'O que é a educação especial?',
-                alternativas: [
-                    'Modalidade para alunos com deficiência, transtornos e altas habilidades',
-                    'Apenas para alunos com deficiência',
-                    'Apenas para alunos superdotados',
-                    'Apenas para alunos com transtornos',
-                    'Apenas para alunos em vulnerabilidade'
-                ],
-                correta: 0,
-                explicacao: 'A educação especial atende alunos com deficiência, transtornos globais do desenvolvimento e altas habilidades.'
-            },
-            {
-                id: 80,
-                grupo: 3,
-                pergunta: 'O que é o Plano Estadual de Educação de MS?',
-                alternativas: [
-                    'Lei 4.621/2014 - plano com metas educacionais para MS',
-                    'Apenas o plano de Campo Grande',
-                    'Apenas o plano de Dourados',
-                    'Apenas o plano federal',
-                    'Apenas o plano municipal'
-                ],
-                correta: 0,
-                explicacao: 'O Plano Estadual de Educação de MS (Lei 4.621/2014) estabelece metas e estratégias educacionais para o estado.'
-            }
+            // LÍNGUA PORTUGUESA (1-20)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A educação é a base para o desenvolvimento social."', alternativas: ['A educação é fundamental para a sociedade', 'A educação é irrelevante', 'O desenvolvimento não depende da educação', 'A educação é opcional', 'A educação é prejudicial'], correta: 0, explicacao: 'O texto indica que a educação é a base para o desenvolvimento social.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "O conhecimento é a luz que ilumina o caminho."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "conhecimento" e "luz".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 5 anos que estudo', 'Faz 5 anos que estudo', 'Fazer 5 anos que estudo', 'Fizeram 5 anos que estudo', 'Fazem 5 ano que estudo'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "educação" é classificada como:', alternativas: ['Substantivo abstrato', 'Substantivo concreto', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Educação" é um substantivo abstrato, pois nomeia um conceito.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a escola', 'Chegamos a conclusão', 'Referiu-se a aquela pessoa', 'Fui a Brasília', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos a conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Divisão em parágrafos', 'Presença de títulos', 'Uso de conectivos'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'Qual a função sintática do termo destacado: "Os alunos, que estudaram muito, foram aprovados."', alternativas: ['Oração subordinada adjetiva', 'Oração coordenada', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Aposto'], correta: 0, explicacao: 'A oração "que estudaram muito" é uma subordinada adjetiva restritiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras', 'Relação entre sons', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa com erro de regência:', alternativas: ['Assisti ao filme', 'Prefiro estudar a trabalhar', 'Obedeço ao chefe', 'Namoro com ela', 'Cheguei em casa'], correta: 4, explicacao: 'O correto é "Cheguei a casa" (regência do verbo chegar).' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'O que é denotação?', alternativas: ['Sentido literal da palavra', 'Sentido figurado da palavra', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 0, explicacao: 'Denotação é o sentido literal da palavra.' },
+            // CONHECIMENTOS PEDAGÓGICOS (21-40)
+            { id: 21, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O que é a BNCC?', alternativas: ['Base Nacional Comum Curricular', 'Base Nacional Curricular Comum', 'Bases Nacionais Curriculares Comuns', 'Base Nacional de Conteúdos Curriculares', 'Base Normativa Comum Curricular'], correta: 0, explicacao: 'BNCC é a sigla para Base Nacional Comum Curricular.' },
+            { id: 22, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Quantas competências gerais tem a BNCC?', alternativas: ['8', '9', '10', '11', '12'], correta: 2, explicacao: 'A BNCC estabelece 10 competências gerais.' },
+            { id: 23, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Qual a principal função da BNCC?', alternativas: ['Definir o currículo mínimo nacional', 'Estabelecer diretrizes para o ensino', 'Orientar a formação de professores', 'Todas as anteriores', 'Nenhuma das anteriores'], correta: 3, explicacao: 'A BNCC define o currículo, estabelece diretrizes e orienta a formação de professores.' },
+            { id: 24, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Segundo a LDB (Lei 9.394/96), quais são os níveis da Educação Básica?', alternativas: ['Educação Infantil, Ensino Fundamental e Ensino Médio', 'Educação Infantil e Ensino Fundamental', 'Ensino Fundamental e Ensino Médio', 'Educação Infantil, Ensino Fundamental, Ensino Médio e Superior', 'Apenas Ensino Médio'], correta: 0, explicacao: 'A LDB define a Educação Básica como composta por Educação Infantil, Ensino Fundamental e Ensino Médio.' },
+            { id: 25, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O que é avaliação formativa?', alternativas: ['Avaliação contínua que acompanha o processo de aprendizagem', 'Avaliação ao final do período', 'Avaliação aplicada pelo governo', 'Avaliação apenas com notas', 'Avaliação sem critérios'], correta: 0, explicacao: 'Avaliação formativa acompanha o processo de aprendizagem, identificando dificuldades e promovendo melhorias.' },
+            // MATEMÁTICA (41-55)
+            { id: 41, grupo: 'Matemática', enunciado: 'Calcule o valor de x: 3x + 7 = 22', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
+            { id: 42, grupo: 'Matemática', enunciado: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
+            { id: 43, grupo: 'Matemática', enunciado: 'Qual a área de um círculo com raio 4?', alternativas: ['4π', '8π', '12π', '16π', '20π'], correta: 3, explicacao: 'A = π × r² = π × 16 = 16π' },
+            // LEGISLAÇÃO (56-70)
+            { id: 56, grupo: 'Legislação Educacional', enunciado: 'Qual o objetivo da LDB (Lei 9.394/96)?', alternativas: ['Estabelecer as diretrizes e bases da educação nacional', 'Definir o currículo escolar', 'Regular a formação de professores', 'Todas as anteriores', 'Nenhuma das anteriores'], correta: 0, explicacao: 'A LDB estabelece as diretrizes e bases da educação nacional.' },
+            { id: 57, grupo: 'Legislação Educacional', enunciado: 'O que a BNCC estabelece?', alternativas: ['Define as aprendizagens essenciais para a Educação Básica', 'Define apenas o currículo do Ensino Médio', 'Define apenas o currículo do Ensino Fundamental', 'Define apenas a Educação Infantil', 'Não define aprendizagens'], correta: 0, explicacao: 'A BNCC define as aprendizagens essenciais para toda a Educação Básica.' },
+            // CONHECIMENTOS ESPECÍFICOS (71-80)
+            { id: 71, grupo: 'Conhecimentos Específicos', enunciado: 'O que é uma função linear?', alternativas: ['f(x) = ax + b', 'f(x) = ax² + bx + c', 'f(x) = a^x', 'f(x) = log_a(x)', 'f(x) = sen(x)'], correta: 0, explicacao: 'Função linear é do tipo f(x) = ax + b.' },
+            { id: 72, grupo: 'Conhecimentos Específicos', enunciado: 'Qual a média aritmética de 4, 6, 8 e 10?', alternativas: ['6', '7', '8', '9', '10'], correta: 1, explicacao: '(4+6+8+10)/4 = 28/4 = 7' }
         ];
 
-        // ============================================
-        // CONTROLE DA INTERFACE
-        // ============================================
-        let questaoAtual = 0;
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
         let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_seduc_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_seduc_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_seduc_respostas'); const e = localStorage.getItem('simulado_seduc_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
 
         function renderizarQuestao(index) {
-            const q = questoes[index];
-            const container = document.getElementById('questoes-container');
-            
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
             let alternativasHtml = q.alternativas.map((alt, i) => {
                 const letra = String.fromCharCode(65 + i);
-                return `<li data-letra="${letra}">${alt}</li>`;
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
             }).join('');
-
-            container.innerHTML = `
-                <div class="grupo">
-                    <h2>${q.grupo === 1 ? 'Grupo 1 - Língua Portuguesa' : q.grupo === 2 ? 'Grupo 2 - Conhecimentos Pedagógicos' : 'Grupo 3 - Conhecimentos Específicos'}</h2>
-                    <div class="subtitle">Questão ${q.id} de 80</div>
-                    ${q.texto ? `<div class="texto destaque">📖 ${q.texto}</div>` : ''}
-                    <div class="questao">
-                        <span class="numero">Questão ${q.id}</span>
-                        <p style="margin: 0.5rem 0 1rem; font-weight: 500;">${q.pergunta}</p>
-                        <ul class="alternativas">
-                            ${alternativasHtml}
-                        </ul>
-                        <div class="gabarito" id="gabarito-${q.id}">
-                            <strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<br>
-                            <span style="color: #6c757d; font-size: 0.9rem;">${q.explicacao}</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            // Atualiza progresso
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 80</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
             document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
-            const progresso = ((index + 1) / questoes.length * 100);
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
             document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
             document.getElementById('barraProgresso').style.width = `${progresso}%`;
-
-            // Scroll para o topo
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function proximaQuestao() {
-            if (questaoAtual < questoes.length - 1) {
-                questaoAtual++;
-                renderizarQuestao(questaoAtual);
-            }
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function questaoAnterior() {
-            if (questaoAtual > 0) {
-                questaoAtual--;
-                renderizarQuestao(questaoAtual);
-            }
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_seduc_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_seduc_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
         }
 
-        function mostrarGabarito() {
-            const q = questoes[questaoAtual];
-            const gabarito = document.getElementById(`gabarito-${q.id}`);
-            if (gabarito) {
-                gabarito.classList.toggle('visible');
-            }
-        }
-
-        // Inicializa
-        renderizarQuestao(0);
+        carregarEstado(); renderizarQuestao(0);
     </script>
 </body>
 </html>
