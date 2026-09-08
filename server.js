@@ -110,7 +110,7 @@ const products = [
   { 
     id: 'memorizacao_pm_sp', 
     name: 'Polícia Militar - SP (Soldado)', 
-    price: 1990, 
+    price: 2990, 
     currency: 'brl', 
     description: 'Concurso para o cargo de Soldado da Polícia Militar',
     badge: 'Destaque',
@@ -125,7 +125,7 @@ const products = [
   { 
     id: 'memorizacao_inss', 
     name: 'INSS - Instituto Nacional do Seguro Social', 
-    price: 1990, 
+    price: 3990, 
     currency: 'brl', 
     description: 'Concurso para Técnico do Seguro Social',
     badge: 'Mais Vendido',
@@ -140,7 +140,7 @@ const products = [
   { 
     id: 'memorizacao_caixa', 
     name: 'Caixa Econômica Federal', 
-    price: 2490, 
+    price: 3990, 
     currency: 'brl', 
     description: 'Concurso para cargos administrativos e técnicos',
     badge: '',
@@ -155,7 +155,7 @@ const products = [
   { 
     id: 'memorizacao_pf', 
     name: 'Polícia Federal (Agente)', 
-    price: 2990, 
+    price: 3990, 
     currency: 'brl', 
     description: 'Concurso para o cargo de Agente da Polícia Federal',
     badge: 'Premium',
@@ -170,7 +170,7 @@ const products = [
   { 
     id: 'memorizacao_tj_sp', 
     name: 'Tribunal de Justiça - SP (Escrevente)', 
-    price: 2590, 
+    price: 2990, 
     currency: 'brl', 
     description: 'Concurso para o cargo de Escrevente do TJ/SP',
     badge: '',
