@@ -38,6 +38,11 @@ const materialMap = {
 'memorizacao_tj_sp': {
     nome: 'TJ/SP',
     url: '/material/tj-sp-2024/'
+},
+
+'memorizacao_ufabc': {
+    nome: 'UFABC 2025',
+    url: '/material/ufabc-2025/'
 }
 
 };

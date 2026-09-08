@@ -181,7 +181,17 @@ const products = [
       'Guia de revisão 4 semanas',
       '80 questões - 4h'
     ]
-  }
+  },
+  { 
+  id: 'memorizacao_ufabc', 
+  name: 'UFABC - Assistente em Administração', 
+  price: 1990, 
+  currency: 'brl', 
+  description: 'Concurso para Assistente em Administração da UFABC',
+  badge: 'Novo',
+  category: 'Educação',
+  features: ['Mapas mentais', 'Flashcards digitais', 'Revisão programada', 'Simulados exclusivos']
+}
 ];
 
 // ==========================================
