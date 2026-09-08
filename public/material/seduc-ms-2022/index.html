@@ -22,6 +22,14 @@
         .breadcrumb a:hover { text-decoration: underline; }
         .btn-voltar { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.5rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.3s; }
         .btn-voltar:hover { background: #5a6268; }
+        .btn-mapa { font-size: 0.85rem; padding: 0.5rem; margin-top: 0.3rem; width: 100%; display: inline-block; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn-mapa-portugues { background: #e94560; color: white; }
+        .btn-mapa-portugues:hover { background: #c0392b; }
+        .btn-mapa-pedagogia { background: #6c5ce7; color: white; }
+        .btn-mapa-pedagogia:hover { background: #5a4bd1; }
+        .btn-mapa-especificos { background: #2d7d46; color: white; }
+        .btn-mapa-especificos:hover { background: #1e5e34; }
+        .mapas-container { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
         @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -60,16 +68,23 @@
                     <p>180 cards para memorização</p>
                     <a href="/material/flashcards.html?concurso=seduc-ms-2022&session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
                 </div>
+
                 <div class="material-card">
                     <h3>🧠 Mapas Mentais</h3>
                     <p>3 mapas para visualização do conteúdo</p>
-                    <a href="/material/seduc-ms-2022/mapas-mentais/mapa-portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                    <div class="mapas-container">
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-conhecimentos-pedagogicos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-pedagogia">📗 Conhecimentos Pedagógicos</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-especificos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-especificos">📙 Conhecimentos Específicos</a>
+                    </div>
                 </div>
+
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>
                     <p>Cronograma de 4 semanas</p>
                     <a href="/material/seduc-ms-2022/guias/revisao.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Guia</a>
                 </div>
+
                 <div class="material-card">
                     <h3>📝 Simulado</h3>
                     <p>80 questões - 5 horas</p>
