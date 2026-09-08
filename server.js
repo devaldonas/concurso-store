@@ -220,6 +220,8 @@ app.get('/api/products', async (req, res) => {
 app.post('/create-checkout-session', async (req, res) => {
   console.log('📥 POST /create-checkout-session recebido');
   console.log('📦 Body:', req.body);
+  console.log('🔑 Stripe Key configurada:', process.env.STRIPE_SECRET_KEY ? '✅ Sim' : '❌ Não');
+  console.log('🔑 Stripe Key prefixo:', process.env.STRIPE_SECRET_KEY ? process.env.STRIPE_SECRET_KEY.substring(0, 8) : 'não configurada');
   
   const { productId } = req.body;
   
@@ -263,9 +265,16 @@ app.post('/create-checkout-session', async (req, res) => {
     console.log(`✅ Sessão criada: ${session.id}`);
     res.json({ id: session.id, url: session.url });
   } catch (err) {
-    console.error('❌ Erro ao criar sessão:', err);
-    res.status(500).json({ error: 'Erro ao criar sessão de pagamento' });
-  }
+    console.error('❌ Erro detalhado ao criar sessão:', err);
+    console.error('❌ Mensagem:', err.message);
+    console.error('❌ Tipo:', err.type);
+    console.error('❌ Código:', err.code);
+    console.error('❌ Stack:', err.stack);
+    res.status(500).json({ 
+        error: 'Erro ao criar sessão de pagamento',
+        detalhe: err.message 
+    });
+}
 });
 
 // Verificar status do pagamento (COM MODO DE TESTE)
