@@ -203,13 +203,8 @@
         </div>
 
         <div class="evolucao-box">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="margin: 0;">Sua Evolução</h3>
-                <button class="btn-evolucao" onclick="mostrarEvolucao()">Ver Histórico</button>
-            </div>
-            <div id="evolucaoContainer">
-                <p style="color: #6c757d; font-size: 0.9rem;">Complete o simulado para ver seu histórico.</p>
-            </div>
+            <h3 style="margin-bottom: 1rem;">✅ Simulado Concluído</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
         </div>
     </div>
 
@@ -464,57 +459,14 @@
             });
             localStorage.setItem('simulado_caixa_evolucao', JSON.stringify(evolucao));
             alert('✅ Evolução salva com sucesso!');
-            mostrarEvolucao();
             fecharResumo();
         }
-
-        function mostrarEvolucao() {
-    const evolucao = JSON.parse(localStorage.getItem('simulado_caixa_evolucao') || '[]');
-    const container = document.getElementById('evolucaoContainer');
-    
-    if (evolucao.length === 0) {
-        container.innerHTML = '<p style="color: #6c757d; font-size: 0.9rem;">Nenhum histórico encontrado. Complete um simulado e salve sua evolução.</p>';
-        return;
-    }
-
-    let html = '';
-    evolucao.forEach((e, i) => {
-        const data = new Date(e.data).toLocaleDateString('pt-BR');
-        const hora = new Date(e.data).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-        const taxa = Math.round((e.acertos / e.total) * 100);
-        const taxaClass = taxa >= 70 ? 'taxa-alta' : taxa >= 50 ? 'taxa-media' : 'taxa-baixa';
-        const statusIcon = taxa >= 70 ? '✅' : taxa >= 50 ? '📈' : '📉';
-        html += `
-            <div class="evolucao-item">
-                <span class="data">${statusIcon} #${i + 1} - ${data} ${hora}</span>
-                <span class="resultado">${e.acertos}/${e.total} acertos</span>
-                <span class="${taxaClass}">${taxa}%</span>
-            </div>
-        `;
-    });
-    
-    // Mostra um resumo estatístico
-    const ultimo = evolucao[evolucao.length - 1];
-    const primeiro = evolucao[0];
-    const evolucaoPercentual = ultimo.acertos / ultimo.total - primeiro.acertos / primeiro.total;
-    const evolucaoTexto = evolucaoPercentual > 0 ? '📈 Melhorando!' : evolucaoPercentual < 0 ? '📉 Precisa melhorar' : '🔄 Estável';
-    
-    container.innerHTML = `
-        <div style="background: #e9ecef; padding: 0.8rem; border-radius: 8px; margin-bottom: 1rem; text-align: center;">
-            <strong>Total de tentativas:</strong> ${evolucao.length} | 
-            <strong>Melhor taxa:</strong> ${Math.max(...evolucao.map(e => Math.round((e.acertos / e.total) * 100)))}% |
-            <strong>${evolucaoTexto}</strong>
-        </div>
-        ${html}
-    `;
-}
 
         // ==========================================
         // INICIALIZAÇÃO
         // ==========================================
         carregarEstado();
         renderizarQuestao(0);
-        mostrarEvolucao();
     </script>
 </body>
 </html>
