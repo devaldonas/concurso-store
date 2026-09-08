@@ -6,12 +6,32 @@
     <title>Flashcards - Concurso Store</title>
     <link rel="stylesheet" href="/flashcards/css/style.css">
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
+        .footer-actions {
+            text-align: center;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <h1>Flashcards</h1>
-            <a href="/">Voltar à loja</a>
+            <a href="/" id="linkVoltarLoja">Voltar à loja</a>
         </div>
     </header>
 
@@ -19,8 +39,35 @@
         <div class="container" id="app">
             <!-- Conteúdo renderizado pelo JavaScript -->
         </div>
+        
+        <!-- Botão Voltar ao Material (fora do #app) -->
+        <div class="footer-actions">
+            <a href="#" class="btn-voltar-material" id="linkVoltarMaterial">
+                ← Voltar ao Material
+            </a>
+        </div>
     </main>
 
     <script src="/flashcards/js/script.js"></script>
+    <script>
+        // Adiciona o session_id e concurso aos links
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id');
+            const concurso = urlParams.get('concurso') || 'seduc-ms-2022';
+            
+            // Atualiza o link "Voltar ao Material"
+            const linkMaterial = document.getElementById('linkVoltarMaterial');
+            if (linkMaterial) {
+                linkMaterial.href = `/material/${concurso}/?session_id=${sessionId || 'dev_test'}`;
+            }
+            
+            // Atualiza o link "Voltar à loja"
+            const linkLoja = document.getElementById('linkVoltarLoja');
+            if (linkLoja && sessionId) {
+                linkLoja.href = `/?session_id=${sessionId}`;
+            }
+        });
+    </script>
 </body>
 </html>
