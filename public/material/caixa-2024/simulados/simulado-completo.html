@@ -27,7 +27,7 @@
         .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
         .alternativas { list-style: none; padding: 0; }
         .alternativas li {
-            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            padding: 0.8rem 2.8rem 0.8rem 2.5rem;
             position: relative;
             color: #495057;
             font-size: 0.95rem;
@@ -37,68 +37,41 @@
             cursor: pointer;
             transition: all 0.2s;
             background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li .texto { flex: 1; }
+        .alternativas li .letra { font-weight: 700; color: #004d8b; margin-right: 0.5rem; }
         .alternativas li.selected {
             border-color: #004d8b;
             background: #e8f0fe;
         }
-        .alternativas li.selected::before {
-            content: "✓";
-            color: #004d8b;
-            font-weight: bold;
-            position: absolute;
-            left: 0.8rem;
-            font-size: 1.2rem;
-        }
+        .alternativas li.selected .letra { color: #004d8b; }
         .alternativas li.eliminated {
             text-decoration: line-through;
             opacity: 0.4;
             background: #f8d7da;
             border-color: #dc3545;
         }
-        .alternativas li.eliminated::before {
-            content: "✗";
+        .alternativas li .btn-eliminar {
+            background: none;
+            border: none;
+            color: #adb5bd;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem 0.5rem;
+            transition: color 0.2s;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .alternativas li .btn-eliminar:hover {
             color: #dc3545;
-            font-weight: bold;
-            position: absolute;
-            left: 0.8rem;
-            font-size: 1.2rem;
-        }
-        .alternativas li.correct {
-            border-color: #28a745;
-            background: #d4edda;
-        }
-        .alternativas li.correct::before {
-            content: "✓";
-            color: #28a745;
-            font-weight: bold;
-            position: absolute;
-            left: 0.8rem;
-            font-size: 1.2rem;
-        }
-        .alternativas li.wrong {
-            border-color: #dc3545;
             background: #f8d7da;
         }
-        .alternativas li.wrong::before {
-            content: "✗";
+        .alternativas li .btn-eliminar.eliminado {
             color: #dc3545;
-            font-weight: bold;
-            position: absolute;
-            left: 0.8rem;
-            font-size: 1.2rem;
-        }
-        .alternativas li .eliminar-hint {
-            font-size: 0.7rem;
-            color: #adb5bd;
-            display: block;
-            margin-top: 0.2rem;
-        }
-        .alternativas li .letra {
-            font-weight: 700;
-            color: #004d8b;
-            margin-right: 0.5rem;
         }
         .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
         .gabarito.visible { display: block; }
@@ -110,8 +83,6 @@
         .btn-secondary:hover { background: #5a6268; }
         .btn-success { background: #28a745; color: white; }
         .btn-success:hover { background: #1e7e34; }
-        .btn-danger { background: #dc3545; color: white; }
-        .btn-danger:hover { background: #c82333; }
         .btn-warning { background: #ffc107; color: #1a1a2e; }
         .btn-warning:hover { background: #e0a800; }
         .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
@@ -119,16 +90,6 @@
         .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
         .progresso .barra-fill { height: 100%; background: #004d8b; border-radius: 4px; transition: width 0.3s ease; }
         .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
-        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
-        .evolucao-item { display: flex; justify-content: space-between; padding: 0.5rem 1rem; background: #f8f9fa; border-radius: 8px; margin-bottom: 0.3rem; border-left: 4px solid #28a745; }
-        .evolucao-item .data { color: #6c757d; font-size: 0.85rem; }
-        .evolucao-item .resultado { font-weight: 600; }
-        .evolucao-item .taxa-alta { color: #28a745; }
-        .evolucao-item .taxa-media { color: #ffc107; }
-        .evolucao-item .taxa-baixa { color: #dc3545; }
-        .btn-evolucao { background: #17a2b8; color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; }
-        .btn-evolucao:hover { background: #138496; }
         .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
         .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
         .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
@@ -138,6 +99,15 @@
         .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
         .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
         .resumo-box .resumo-item .numero.azul { color: #004d8b; }
+        .dica-mobile {
+            font-size: 0.75rem;
+            color: #adb5bd;
+            text-align: center;
+            margin-top: 0.5rem;
+            background: #f8f9fa;
+            padding: 0.3rem;
+            border-radius: 4px;
+        }
         @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } }
     </style>
 </head>
@@ -200,11 +170,6 @@
                 <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
                 <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
             </div>
-        </div>
-
-        <div class="evolucao-box">
-            <h3 style="margin-bottom: 1rem;">✅ Simulado Concluído</h3>
-            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
         </div>
     </div>
 
@@ -295,7 +260,9 @@
             renderizarQuestao(questaoAtual);
         }
 
-        function eliminarAlternativa(questaoId, index) {
+        function eliminarAlternativa(questaoId, index, event) {
+            if (event) event.stopPropagation();
+            
             const key = `q${questaoId}`;
             if (!eliminacoes[key]) eliminacoes[key] = [];
             const idx = eliminacoes[key].indexOf(index);
@@ -304,7 +271,6 @@
                 if (eliminacoes[key].length === 0) delete eliminacoes[key];
             } else {
                 eliminacoes[key].push(index);
-                // Se já tinha esta alternativa selecionada, desmarca
                 if (respostas[key] === index) {
                     delete respostas[key];
                 }
@@ -343,10 +309,12 @@
                 
                 return `
                     <li class="${classes}" 
-                        onclick="selecionarAlternativa(${q.id}, ${i})"
-                        oncontextmenu="eliminarAlternativa(${q.id}, ${i}); return false;">
-                        <span class="letra">${letra}</span> ${alt}
-                        <span class="eliminar-hint">(clique para selecionar | clique com direito para eliminar)</span>
+                        onclick="selecionarAlternativa(${q.id}, ${i})">
+                        <span class="texto"><span class="letra">${letra}</span> ${alt}</span>
+                        <button class="btn-eliminar ${isEliminated ? 'eliminado' : ''}" 
+                                onclick="eliminarAlternativa(${q.id}, ${i}, event)">
+                            ✕
+                        </button>
                     </li>
                 `;
             }).join('');
@@ -359,6 +327,7 @@
                         <span class="numero">Questão ${q.id}</span>
                         <div class="enunciado">${q.enunciado}</div>
                         <ul class="alternativas">${alternativasHtml}</ul>
+                        <div class="dica-mobile">💡 Clique no ✕ para eliminar uma alternativa | Clique na alternativa para selecionar</div>
                         <div class="gabarito" id="gabarito-${q.id}">
                             <strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}
                             <div class="explicacao">${q.explicacao}</div>
@@ -394,7 +363,7 @@
         }
 
         // ==========================================
-        // RESULTADO E EVOLUÇÃO
+        // RESULTADO
         // ==========================================
 
         function finalizarSimulado() {
