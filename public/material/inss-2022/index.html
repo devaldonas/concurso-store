@@ -29,7 +29,6 @@
         .material-card p { color: #6c757d; font-size: 0.9rem; }
         .material-card .btn { margin-top: 1rem; width: 100%; }
         
-        /* Header padrão Concurso Store */
         .header-material {
             background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
             color: white;
@@ -103,23 +102,44 @@
             text-decoration: none !important;
         }
 
-        .mapas-lista {
-            margin-top: 1rem;
-            text-align: left;
+        /* Botões dos mapas - mesmo padrão do SEDUC/MS */
+        .mapas-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
         }
-        .mapas-lista li {
-            list-style: none;
-            padding: 0.3rem 0 0.3rem 1.5rem;
-            position: relative;
-            color: #495057;
-            font-size: 0.9rem;
+        .btn-mapa {
+            font-size: 0.85rem;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+            width: 100%;
+            display: inline-block;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
         }
-        .mapas-lista li::before {
-            content: "•";
-            color: #e94560;
-            position: absolute;
-            left: 0;
-        }
+        .btn-mapa-portugues { background: #e94560; color: white; }
+        .btn-mapa-portugues:hover { background: #c0392b; }
+        
+        .btn-mapa-constitucional { background: #2d7d46; color: white; }
+        .btn-mapa-constitucional:hover { background: #1e5e34; }
+        
+        .btn-mapa-administrativo { background: #6c5ce7; color: white; }
+        .btn-mapa-administrativo:hover { background: #5a4bd1; }
+        
+        .btn-mapa-etica { background: #f39c12; color: white; }
+        .btn-mapa-etica:hover { background: #d68910; }
+        
+        .btn-mapa-logica { background: #2980b9; color: white; }
+        .btn-mapa-logica:hover { background: #1f6d9e; }
+        
+        .btn-mapa-informatica { background: #8e44ad; color: white; }
+        .btn-mapa-informatica:hover { background: #6c3483; }
+        
+        .btn-mapa-especificos { background: #1a8a5c; color: white; }
+        .btn-mapa-especificos:hover { background: #146b47; }
 
         .breadcrumb { margin: 1rem 0; color: #6c757d; }
         .breadcrumb a { color: #e94560; text-decoration: none; }
@@ -160,20 +180,19 @@
                 <a href="/material/inss-2022/flashcards.html?session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
             </div>
 
-            <!-- Mapas Mentais - Agora com a lista dos 7 mapas -->
+            <!-- Mapas Mentais - Agora com botões individuais como no SEDUC -->
             <div class="material-card">
                 <h3>🧠 Mapas Mentais</h3>
                 <p>7 mapas para visualização do conteúdo</p>
-                <ul class="mapas-lista">
-                    <li>Língua Portuguesa</li>
-                    <li>Direito Constitucional</li>
-                    <li>Direito Administrativo</li>
-                    <li>Ética no Serviço Público</li>
-                    <li>Raciocínio Lógico-Matemático</li>
-                    <li>Noções de Informática</li>
-                    <li>Conhecimentos Específicos</li>
-                </ul>
-                <a href="/material/inss-2022/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                <div class="mapas-container">
+                    <a href="/material/inss-2022/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa</a>
+                    <a href="/material/inss-2022/mapas-mentais/constitucional.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-constitucional">📗 Direito Constitucional</a>
+                    <a href="/material/inss-2022/mapas-mentais/administrativo.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-administrativo">📙 Direito Administrativo</a>
+                    <a href="/material/inss-2022/mapas-mentais/etica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-etica">⚖️ Ética no Serviço Público</a>
+                    <a href="/material/inss-2022/mapas-mentais/logica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-logica">🧩 Raciocínio Lógico-Matemático</a>
+                    <a href="/material/inss-2022/mapas-mentais/informatica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-informatica">💻 Noções de Informática</a>
+                    <a href="/material/inss-2022/mapas-mentais/especificos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-especificos">📚 Conhecimentos Específicos</a>
+                </div>
             </div>
 
             <!-- Guia de Revisão -->
