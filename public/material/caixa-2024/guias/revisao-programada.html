@@ -4,80 +4,310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Revisão - CAIXA 2024</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
-        .container { max-width: 1000px; margin: 0 auto; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        
+        /* Header padrão da Concurso Store */
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.8; }
-        .badge-caixa { display: inline-block; background: #004d8b; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; margin-top: 0.5rem; }
-        .semana { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .semana h2 { color: #004d8b; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
-        .dias { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-        .dia { background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 3px solid #004d8b; }
-        .dia h3 { color: #0f0f1a; font-size: 1rem; margin-bottom: 0.5rem; }
-        .dia ul { list-style: none; padding: 0; }
-        .dia ul li { padding: 0.3rem 0 0.3rem 1.2rem; position: relative; font-size: 0.9rem; color: #495057; border-bottom: 1px solid #e9ecef; }
-        .dia ul li:last-child { border-bottom: none; }
-        .dia ul li::before { content: "•"; color: #004d8b; position: absolute; left: 0; }
-        .dica { background: #004d8b; color: white; padding: 1.5rem; border-radius: 12px; text-align: center; margin-top: 2rem; }
-        @media (max-width: 768px) { body { padding: 1rem; } }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
         .btn-voltar-material {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #6c757d;
-            color: white;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
-        .btn-voltar-material:hover { background: #5a6268; }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
+
+        .badge-caixa { 
+            display: inline-block; 
+            background: #004d8b; 
+            color: white; 
+            padding: 4px 16px; 
+            border-radius: 20px; 
+            font-size: 0.8rem; 
+        }
+        
+        .semana { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+        }
+        .semana h2 { 
+            color: #004d8b; 
+            margin-bottom: 1rem; 
+            padding-bottom: 0.5rem; 
+            border-bottom: 2px solid #f1f3f5; 
+        }
+        .dias { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1rem; 
+        }
+        .dia { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            border-left: 3px solid #004d8b; 
+        }
+        .dia h3 { 
+            color: #0f0f1a; 
+            font-size: 1rem; 
+            margin-bottom: 0.5rem; 
+        }
+        .dia ul { 
+            list-style: none; 
+            padding: 0; 
+        }
+        .dia ul li { 
+            padding: 0.3rem 0 0.3rem 1.2rem; 
+            position: relative; 
+            font-size: 0.9rem; 
+            color: #495057; 
+            border-bottom: 1px solid #e9ecef; 
+        }
+        .dia ul li:last-child { border-bottom: none; }
+        .dia ul li::before { 
+            content: "•"; 
+            color: #004d8b; 
+            position: absolute; 
+            left: 0; 
+        }
+        
+        .dica { 
+            background: #004d8b; 
+            color: white; 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin-top: 2rem; 
+        }
+        .dica h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
+        .btn-voltar-material-footer {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-material-footer:hover {
+            background: #c73e54;
+            text-decoration: none !important;
+        }
+        .btn-voltar-loja {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-loja:hover {
+            background: #5a6268;
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 768px) { 
+            body { padding: 0; }
+            .container { padding: 1rem; }
+            .header { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📅 Guia de Revisão Programada</h1>
-            <p>CAIXA 2024 - Técnico Bancário</p>
+            <div>
+                <h1>📅 Guia de Revisão</h1>
+                <small>CAIXA 2024 - Técnico Bancário</small>
+            </div>
+            <div class="header-actions">
+                <a href="/material/caixa-2024/?session_id=<%= session_id %>" class="btn-voltar-material" id="linkVoltarMaterial">
+                    📖 Voltar aos materiais
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
             <span class="badge-caixa">4 semanas • 80+ flashcards</span>
         </div>
+
         <div class="semana">
             <h2>Semana 1 - Fundamentos</h2>
             <div class="dias">
-                <div class="dia"><h3>Dia 1</h3><ul><li>📘 Língua Portuguesa - Interpretação</li><li>🔄 30 min de leitura</li><li>🃏 Criar 15 flashcards</li></ul></div>
-                <div class="dia"><h3>Dia 2</h3><ul><li>📘 Língua Portuguesa - Morfologia</li><li>🔄 Revisão Dia 1</li><li>📝 Exercícios (20 questões)</li></ul></div>
-                <div class="dia"><h3>Dia 3</h3><ul><li>📘 Conhecimentos Bancários - SFN</li><li>🔄 Revisão Dia 1 e 2</li><li>🃏 Criar 15 flashcards</li></ul></div>
-                <div class="dia"><h3>Dia 4</h3><ul><li>📘 Conhecimentos Bancários - Produtos</li><li>🔄 Revisão Dia 3</li><li>📝 Exercícios (15 questões)</li></ul></div>
-                <div class="dia"><h3>Dia 5</h3><ul><li>📘 Raciocínio Lógico - Proposições</li><li>🔄 Revisão Geral (30min)</li><li>🧠 Mapa Mental</li></ul></div>
-                <div class="dia"><h3>Dia 6</h3><ul><li>🔄 Revisão completa da semana</li><li>🎯 Foco nos pontos fracos</li><li>📊 Autoavaliação</li></ul></div>
+                <div class="dia">
+                    <h3>Dia 1</h3>
+                    <ul>
+                        <li>📘 Língua Portuguesa - Interpretação</li>
+                        <li>🔄 30 min de leitura</li>
+                        <li>🃏 Criar 15 flashcards</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 2</h3>
+                    <ul>
+                        <li>📘 Língua Portuguesa - Morfologia</li>
+                        <li>🔄 Revisão Dia 1</li>
+                        <li>📝 Exercícios (20 questões)</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 3</h3>
+                    <ul>
+                        <li>📘 Conhecimentos Bancários - SFN</li>
+                        <li>🔄 Revisão Dia 1 e 2</li>
+                        <li>🃏 Criar 15 flashcards</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 4</h3>
+                    <ul>
+                        <li>📘 Conhecimentos Bancários - Produtos</li>
+                        <li>🔄 Revisão Dia 3</li>
+                        <li>📝 Exercícios (15 questões)</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 5</h3>
+                    <ul>
+                        <li>📘 Raciocínio Lógico - Proposições</li>
+                        <li>🔄 Revisão Geral (30min)</li>
+                        <li>🧠 Mapa Mental</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 6</h3>
+                    <ul>
+                        <li>🔄 Revisão completa da semana</li>
+                        <li>🎯 Foco nos pontos fracos</li>
+                        <li>📊 Autoavaliação</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="semana">
             <h2>Semana 2 - Aprofundamento</h2>
             <div class="dias">
-                <div class="dia"><h3>Dia 8</h3><ul><li>📘 Língua Portuguesa - Sintaxe</li><li>🔄 Revisão semana 1</li><li>🃏 Criar 15 flashcards</li></ul></div>
-                <div class="dia"><h3>Dia 9</h3><ul><li>📘 Conhecimentos Bancários - Investimentos</li><li>🔄 Revisão Dia 8</li><li>📝 Exercícios (20 questões)</li></ul></div>
-                <div class="dia"><h3>Dia 10</h3><ul><li>📘 Raciocínio Lógico - Conjuntos</li><li>🔄 Revisão Dia 8 e 9</li><li>📝 Exercícios (15 questões)</li></ul></div>
-                <div class="dia"><h3>Dia 11</h3><ul><li>📘 Atualidades - Economia</li><li>🔄 Revisão Geral (30min)</li><li>🧠 Mapa Mental</li></ul></div>
-                <div class="dia"><h3>Dia 12</h3><ul><li>📝 Simulado Parcial (30 questões)</li><li>⏰ 2h30</li><li>📊 Correção e análise</li></ul></div>
-                <div class="dia"><h3>Dia 13</h3><ul><li>🔄 Revisão semana 2</li><li>🎯 Foco nos erros</li><li>📊 Autoavaliação</li></ul></div>
+                <div class="dia">
+                    <h3>Dia 8</h3>
+                    <ul>
+                        <li>📘 Língua Portuguesa - Sintaxe</li>
+                        <li>🔄 Revisão semana 1</li>
+                        <li>🃏 Criar 15 flashcards</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 9</h3>
+                    <ul>
+                        <li>📘 Conhecimentos Bancários - Investimentos</li>
+                        <li>🔄 Revisão Dia 8</li>
+                        <li>📝 Exercícios (20 questões)</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 10</h3>
+                    <ul>
+                        <li>📘 Raciocínio Lógico - Conjuntos</li>
+                        <li>🔄 Revisão Dia 8 e 9</li>
+                        <li>📝 Exercícios (15 questões)</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 11</h3>
+                    <ul>
+                        <li>📘 Atualidades - Economia</li>
+                        <li>🔄 Revisão Geral (30min)</li>
+                        <li>🧠 Mapa Mental</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 12</h3>
+                    <ul>
+                        <li>📝 Simulado Parcial (30 questões)</li>
+                        <li>⏰ 2h30</li>
+                        <li>📊 Correção e análise</li>
+                    </ul>
+                </div>
+                <div class="dia">
+                    <h3>Dia 13</h3>
+                    <ul>
+                        <li>🔄 Revisão semana 2</li>
+                        <li>🎯 Foco nos erros</li>
+                        <li>📊 Autoavaliação</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="dica">
             <h3>🎯 Dica de Ouro</h3>
             <p>Mantenha o foco! Dedique 2 horas por dia, 4 horas nos sábados.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">A revisão programada é a chave para a aprovação!</p>
+        </div>
+
+        <div class="footer-actions">
+            <a href="/material/caixa-2024/?session_id=<%= session_id %>" class="btn-voltar-material-footer">
+                📖 Voltar aos materiais
+            </a>
+            <a href="/" class="btn-voltar-loja">
+                ← Voltar à loja
+            </a>
         </div>
     </div>
+
+    <script>
+        // Atualiza o link com o session_id da URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id') || '';
+            
+            // Atualiza todos os links que contêm session_id
+            document.querySelectorAll('a[href*="session_id"]').forEach(link => {
+                link.href = link.href.replace(/session_id=[^&]*/, `session_id=${sessionId}`);
+            });
+        });
+    </script>
 </body>
 </html>

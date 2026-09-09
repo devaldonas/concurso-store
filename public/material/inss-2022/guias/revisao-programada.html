@@ -3,196 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Revisão - INSS 2022</title>
+    <title>Guia de Revisão - INSS 2026</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f8f9fa;
-            padding: 2rem;
-        }
-        .container { max-width: 1000px; margin: 0 auto; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        
+        /* Header padrão da Concurso Store */
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            text-align: center;
-        }
-        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.8; }
-        .badge-inss {
-            display: inline-block;
-            background: #e94560;
-            color: white;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-        }
-        .semana {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .semana h2 {
-            color: #e94560;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #f1f3f5;
-        }
-        .dias {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 1rem;
         }
-        .dia {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 3px solid #e94560;
-        }
-        .dia h3 { color: #0f0f1a; font-size: 1rem; margin-bottom: 0.5rem; }
-        .dia ul { list-style: none; padding: 0; }
-        .dia ul li {
-            padding: 0.3rem 0 0.3rem 1.2rem;
-            position: relative;
-            font-size: 0.9rem;
-            color: #495057;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .dia ul li:last-child { border-bottom: none; }
-        .dia ul li::before {
-            content: "•";
-            color: #e94560;
-            position: absolute;
-            left: 0;
-        }
-        .dia .badge-mat {
-            display: inline-block;
-            font-size: 0.65rem;
-            padding: 1px 8px;
-            border-radius: 10px;
-            margin-top: 0.3rem;
-            font-weight: 600;
-        }
-        .badge-basico { background: #17a2b8; color: white; }
-        .badge-especifico { background: #e94560; color: white; }
-        .badge-logica { background: #ffc107; color: #1a1a2e; }
-        .dica {
-            background: #e94560;
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .dica h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .legenda {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-            font-size: 0.85rem;
-        }
-        .legenda span { display: flex; align-items: center; gap: 0.3rem; }
-        .legenda .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        .dot-basico { background: #17a2b8; }
-        .dot-especifico { background: #e94560; }
-        .dot-logica { background: #ffc107; }
-        @media (max-width: 768px) { body { padding: 1rem; } }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
         .btn-voltar-material {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #6c757d;
-            color: white;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
-        .btn-voltar-material:hover { background: #5a6268; }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
+
+        .badge-inss { 
+            display: inline-block; 
+            background: #1a8a5c; 
+            color: white; 
+            padding: 4px 16px; 
+            border-radius: 20px; 
+            font-size: 0.8rem; 
+        }
+        
+        .semana { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+        }
+        .semana h2 { 
+            color: #1a8a5c; 
+            margin-bottom: 1rem; 
+            padding-bottom: 0.5rem; 
+            border-bottom: 2px solid #f1f3f5; 
+        }
+        .dias { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1rem; 
+        }
+        .dia { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            border-left: 3px solid #1a8a5c; 
+        }
+        .dia h3 { 
+            color: #0f0f1a; 
+            font-size: 1rem; 
+            margin-bottom: 0.5rem; 
+        }
+        .dia ul { 
+            list-style: none; 
+            padding: 0; 
+        }
+        .dia ul li { 
+            padding: 0.3rem 0 0.3rem 1.2rem; 
+            position: relative; 
+            font-size: 0.9rem; 
+            color: #495057; 
+            border-bottom: 1px solid #e9ecef; 
+        }
+        .dia ul li:last-child { border-bottom: none; }
+        .dia ul li::before { 
+            content: "•"; 
+            color: #1a8a5c; 
+            position: absolute; 
+            left: 0; 
+        }
+        
+        .dica { 
+            background: #1a8a5c; 
+            color: white; 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin-top: 2rem; 
+        }
+        .dica h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
+        .btn-voltar-material-footer {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-material-footer:hover {
+            background: #c73e54;
+            text-decoration: none !important;
+        }
+        .btn-voltar-loja {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-loja:hover {
+            background: #5a6268;
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 768px) { 
+            body { padding: 0; }
+            .container { padding: 1rem; }
+            .header { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📅 Guia de Revisão Programada</h1>
-            <p>INSS 2022 - Técnico do Seguro Social</p>
-            <span class="badge-inss">295 flashcards • 7 matérias • 4 semanas</span>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Dedique 2h/dia nos dias úteis e 4h nos sábados</p>
+            <div>
+                <h1>📅 Guia de Revisão</h1>
+                <small>INSS 2026 - Técnico do Seguro Social</small>
+            </div>
+            <div class="header-actions">
+                <a href="/material/inss-2026/?session_id=<%= session_id %>" class="btn-voltar-material" id="linkVoltarMaterial">
+                    📖 Voltar aos materiais
+                </a>
+            </div>
         </div>
 
-        <div class="legenda">
-            <span><span class="dot dot-basico"></span> Conhecimentos Básicos (P1)</span>
-            <span><span class="dot dot-especifico"></span> Conhecimentos Específicos (P2)</span>
-            <span><span class="dot dot-logica"></span> Raciocínio Lógico-Matemático</span>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="badge-inss">4 semanas • 120+ flashcards</span>
         </div>
 
-        <!-- Semana 1 -->
         <div class="semana">
             <h2>Semana 1 - Fundamentos</h2>
             <div class="dias">
                 <div class="dia">
                     <h3>Dia 1</h3>
                     <ul>
-                        <li>📘 Língua Portuguesa - Compreensão e interpretação</li>
-                        <li>📘 Língua Portuguesa - Tipologia textual</li>
+                        <li>📘 Língua Portuguesa - Interpretação</li>
                         <li>🔄 30 min de leitura</li>
                         <li>🃏 Criar 15 flashcards</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 2</h3>
                     <ul>
-                        <li>📘 Língua Portuguesa - Ortografia e acentuação</li>
                         <li>📘 Língua Portuguesa - Morfologia</li>
-                        <li>🔄 Revisão Dia 1 (15min)</li>
+                        <li>🔄 Revisão Dia 1</li>
                         <li>📝 Exercícios (20 questões)</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 3</h3>
                     <ul>
-                        <li>📘 Direito Constitucional - Direitos fundamentais</li>
-                        <li>📘 Direito Constitucional - Administração Pública</li>
-                        <li>🔄 Revisão Dia 1 e 2 (15min)</li>
+                        <li>📘 Direito Previdenciário - RGPS</li>
+                        <li>🔄 Revisão Dia 1 e 2</li>
                         <li>🃏 Criar 15 flashcards</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 4</h3>
                     <ul>
-                        <li>📘 Direito Administrativo - Conceitos e princípios</li>
-                        <li>📘 Direito Administrativo - Atos administrativos</li>
-                        <li>🔄 Revisão Dia 3 (15min)</li>
+                        <li>📘 Direito Previdenciário - Benefícios</li>
+                        <li>🔄 Revisão Dia 3</li>
                         <li>📝 Exercícios (15 questões)</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 5</h3>
                     <ul>
-                        <li>📘 Língua Portuguesa - Sintaxe e pontuação</li>
-                        <li>📘 Língua Portuguesa - Redação oficial</li>
+                        <li>📘 Raciocínio Lógico</li>
                         <li>🔄 Revisão Geral (30min)</li>
                         <li>🧠 Mapa Mental</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 6</h3>
@@ -201,64 +223,52 @@
                         <li>🎯 Foco nos pontos fracos</li>
                         <li>📊 Autoavaliação</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
             </div>
         </div>
 
-        <!-- Semana 2 -->
         <div class="semana">
             <h2>Semana 2 - Aprofundamento</h2>
             <div class="dias">
                 <div class="dia">
                     <h3>Dia 8</h3>
                     <ul>
-                        <li>📘 Língua Portuguesa - Crase</li>
-                        <li>📘 Língua Portuguesa - Concordância e regência</li>
-                        <li>🔄 Revisão semana 1 (20min)</li>
+                        <li>📘 Língua Portuguesa - Sintaxe</li>
+                        <li>🔄 Revisão semana 1</li>
                         <li>🃏 Criar 15 flashcards</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 9</h3>
                     <ul>
-                        <li>📘 Direito Administrativo - Controle e responsabilização</li>
-                        <li>📘 Direito Administrativo - Lei 8.429/92</li>
-                        <li>🔄 Revisão Dia 8 (15min)</li>
+                        <li>📘 Direito Previdenciário - Custeio</li>
+                        <li>🔄 Revisão Dia 8</li>
                         <li>📝 Exercícios (20 questões)</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 10</h3>
                     <ul>
-                        <li>📘 Ética no Serviço Público - Decreto 1.171/94</li>
-                        <li>📘 Ética no Serviço Público - Deveres e proibições</li>
-                        <li>🔄 Revisão Dia 8 e 9 (15min)</li>
+                        <li>📘 Direito Administrativo</li>
+                        <li>🔄 Revisão Dia 8 e 9</li>
                         <li>📝 Exercícios (15 questões)</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 11</h3>
                     <ul>
-                        <li>📘 Noções de Informática - SO e redes</li>
-                        <li>📘 Noções de Informática - Segurança</li>
+                        <li>📘 Conhecimentos Específicos</li>
                         <li>🔄 Revisão Geral (30min)</li>
                         <li>🧠 Mapa Mental</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 12</h3>
                     <ul>
-                        <li>📘 Raciocínio Lógico-Matemático - Proposições</li>
-                        <li>📘 Raciocínio Lógico-Matemático - Conectivos</li>
-                        <li>📝 Exercícios (20 questões)</li>
-                        <li>🔄 Revisão Geral (20min)</li>
+                        <li>📝 Simulado Parcial (30 questões)</li>
+                        <li>⏰ 2h30</li>
+                        <li>📊 Correção e análise</li>
                     </ul>
-                    <span class="badge-mat badge-logica">Lógica</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 13</h3>
@@ -267,64 +277,52 @@
                         <li>🎯 Foco nos erros</li>
                         <li>📊 Autoavaliação</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
             </div>
         </div>
 
-        <!-- Semana 3 -->
         <div class="semana">
             <h2>Semana 3 - Prática</h2>
             <div class="dias">
                 <div class="dia">
                     <h3>Dia 15</h3>
                     <ul>
-                        <li>📘 Conhecimentos Específicos - Seguridade Social</li>
-                        <li>📘 Conhecimentos Específicos - RGPS</li>
-                        <li>🃏 Criar 20 flashcards</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>📝 Simulado - Língua Portuguesa</li>
+                        <li>20 questões - 1h30</li>
+                        <li>📊 Correção e revisão</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 16</h3>
                     <ul>
-                        <li>📘 Conhecimentos Específicos - Benefícios</li>
-                        <li>📘 Conhecimentos Específicos - Aposentadorias</li>
-                        <li>🔄 Revisão Dia 15 (15min)</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>🔄 Revisão de erros</li>
+                        <li>🃏 Flashcard - Fixação</li>
+                        <li>📝 Exercícios adicionais</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 17</h3>
                     <ul>
-                        <li>📘 Conhecimentos Específicos - Legislação (Lei 8.212/91)</li>
-                        <li>📘 Conhecimentos Específicos - Legislação (Lei 8.213/91)</li>
-                        <li>🔄 Revisão Dia 15 e 16 (15min)</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>📝 Simulado - Direito Previdenciário</li>
+                        <li>20 questões - 1h30</li>
+                        <li>📊 Correção e revisão</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 18</h3>
                     <ul>
-                        <li>📘 Conhecimentos Específicos - LOAS e BPC</li>
-                        <li>📘 Conhecimentos Específicos - Benefícios especiais</li>
-                        <li>🔄 Revisão Geral (30min)</li>
-                        <li>🧠 Mapa Mental</li>
+                        <li>🔄 Revisão de erros</li>
+                        <li>🃏 Flashcard - Fixação</li>
+                        <li>📝 Exercícios adicionais</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 19</h3>
                     <ul>
-                        <li>📘 Conhecimentos Específicos - Decreto 3.048/99</li>
-                        <li>📘 Conhecimentos Específicos - IN 128/2022</li>
-                        <li>📝 Exercícios (30 questões)</li>
-                        <li>🔄 Revisão Geral (20min)</li>
+                        <li>📝 Simulado - Raciocínio Lógico</li>
+                        <li>15 questões - 1h</li>
+                        <li>📊 Correção e revisão</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 20</h3>
@@ -333,73 +331,60 @@
                         <li>🎯 Foco nos erros</li>
                         <li>📊 Autoavaliação</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
             </div>
         </div>
 
-        <!-- Semana 4 -->
         <div class="semana">
             <h2>Semana 4 - Estratégia</h2>
             <div class="dias">
                 <div class="dia">
                     <h3>Dia 22</h3>
                     <ul>
-                        <li>📘 Revisão - Língua Portuguesa (completo)</li>
-                        <li>📘 Revisão - Direito Constitucional</li>
-                        <li>🔄 Flashcard intensivo (30min)</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>📝 Simulado Completo</li>
+                        <li>80 questões - 5h</li>
+                        <li>🎯 Simulação real da prova</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 23</h3>
                     <ul>
-                        <li>📘 Revisão - Direito Administrativo</li>
-                        <li>📘 Revisão - Ética no Serviço Público</li>
-                        <li>🔄 Flashcard intensivo (30min)</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>📊 Correção detalhada</li>
+                        <li>📊 Análise de desempenho</li>
+                        <li>🎯 Identificar pontos fracos</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Básico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 24</h3>
                     <ul>
-                        <li>📘 Revisão - Raciocínio Lógico-Matemático</li>
-                        <li>📘 Revisão - Noções de Informática</li>
-                        <li>🔄 Flashcard intensivo (30min)</li>
-                        <li>📝 Exercícios (20 questões)</li>
+                        <li>🔄 Revisão dos pontos fracos</li>
+                        <li>🃏 Flashcard intensivo</li>
+                        <li>📝 Exercícios focados</li>
                     </ul>
-                    <span class="badge-mat badge-logica">Lógica</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 25</h3>
                     <ul>
-                        <li>📘 Revisão - Conhecimentos Específicos (Parte 1)</li>
-                        <li>📘 Revisão - Conhecimentos Específicos (Parte 2)</li>
-                        <li>🔄 Flashcard intensivo (30min)</li>
+                        <li>🔄 Revisão Geral</li>
                         <li>🧠 Mapas Mentais</li>
+                        <li>🃏 Flashcard (todos)</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Específico</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 26</h3>
                     <ul>
-                        <li>📘 Simulado Completo</li>
-                        <li>⏰ 120 questões - 3h30</li>
-                        <li>📊 Correção e análise</li>
+                        <li>📝 Simulado Completo</li>
+                        <li>80 questões - 5h</li>
+                        <li>📊 Correção</li>
                     </ul>
-                    <span class="badge-mat badge-especifico">Simulado</span>
                 </div>
                 <div class="dia">
                     <h3>Dia 27</h3>
                     <ul>
                         <li>🔄 Revisão Final</li>
-                        <li>📘 Foco nos erros do simulado</li>
                         <li>🧠 Revisão de mapas</li>
-                        <li>🎯 Preparação mental</li>
+                        <li>💪 Preparação mental</li>
                     </ul>
-                    <span class="badge-mat badge-basico">Final</span>
                 </div>
             </div>
         </div>
@@ -407,8 +392,30 @@
         <div class="dica">
             <h3>🎯 Dica de Ouro</h3>
             <p>A constância é a chave para a aprovação! Mantenha o foco e siga o cronograma.</p>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Lembre-se: 2 horas por dia, 4 horas nos sábados</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Dedique 2 horas por dia, 4 horas nos sábados</p>
+        </div>
+
+        <div class="footer-actions">
+            <a href="/material/inss-2026/?session_id=<%= session_id %>" class="btn-voltar-material-footer">
+                📖 Voltar aos materiais
+            </a>
+            <a href="/" class="btn-voltar-loja">
+                ← Voltar à loja
+            </a>
         </div>
     </div>
+
+    <script>
+        // Atualiza o link com o session_id da URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id') || '';
+            
+            // Atualiza todos os links que contêm session_id
+            document.querySelectorAll('a[href*="session_id"]').forEach(link => {
+                link.href = link.href.replace(/session_id=[^&]*/, `session_id=${sessionId}`);
+            });
+        });
+    </script>
 </body>
 </html>
