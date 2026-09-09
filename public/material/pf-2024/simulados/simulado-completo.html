@@ -21,9 +21,9 @@
         .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
         .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
         .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .grupo h2 { color: #1a5276; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #1a5276; }
-        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #1a5276; }
-        .questao .numero { display: inline-block; background: #1a5276; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .grupo h2 { color: #f39c12; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #f39c12; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #f39c12; }
+        .questao .numero { display: inline-block; background: #f39c12; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
         .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
         .alternativas { list-style: none; padding: 0; }
         .alternativas li {
@@ -42,11 +42,24 @@
         }
         .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
         .alternativas li:hover { background: #f1f3f5; }
-        .alternativas li.selected { border-color: #1a5276; background: #e8f0fe; }
-        .alternativas li.selected::before { content: "✓"; color: #1a5276; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
-        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
-        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
-        .alternativas li .letra { font-weight: 700; color: #1a5276; margin-right: 0.5rem; }
+        .alternativas li.selected { border-color: #f39c12; background: #fff3e0; }
+        .alternativas li.selected::before { content: "✓"; color: #f39c12; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #f39c12; margin-right: 0.5rem; }
+        .alternativas li.eliminated {
+            text-decoration: line-through;
+            opacity: 0.5;
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        .alternativas li.eliminated::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.eliminated .letra { color: #dc3545; }
         .btn-eliminar {
             background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
             font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
@@ -59,8 +72,8 @@
         .gabarito.visible { display: block; }
         .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
         .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
-        .btn-primary { background: #1a5276; color: white; }
-        .btn-primary:hover { background: #1a5276_DARK; }
+        .btn-primary { background: #f39c12; color: white; }
+        .btn-primary:hover { background: #d68910; }
         .btn-secondary { background: #6c757d; color: white; }
         .btn-secondary:hover { background: #5a6268; }
         .btn-success { background: #28a745; color: white; }
@@ -70,7 +83,7 @@
         .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
         .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
-        .progresso .barra-fill { height: 100%; background: #1a5276; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .barra-fill { height: 100%; background: #f39c12; border-radius: 4px; transition: width 0.3s ease; }
         .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
         .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
         .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
@@ -80,7 +93,7 @@
         .resumo-box .resumo-item .numero.verde { color: #28a745; }
         .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
         .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
-        .resumo-box .resumo-item .numero.azul { color: #1a5276; }
+        .resumo-box .resumo-item .numero.azul { color: #f39c12; }
         .btn-voltar-material {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -103,8 +116,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Simulado PF 2024</h1>
-            <p>SUBPF 2024 - 80 questões</p>
+            <h1>📝 Simulado PF 2024</h1>
+            <p>Agente de Polícia Federal - 80 questões</p>
             <div class="stats">
                 <span>80 questões</span>
                 <span>4h</span>
@@ -131,7 +144,7 @@
         <div id="questoes-container"></div>
 
         <div class="resumo-box" id="resumoBox">
-            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">📊 Resumo do Simulado</h2>
             <div class="resumo-grid" id="resumoGrid">
                 <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
                 <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
@@ -140,7 +153,7 @@
                 <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
             </div>
             <div style="text-align: center; margin-top: 1rem;">
-                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-primary" onclick="salvarEvolucao()">💾 Salvar Evolução</button>
                 <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
                 <a href="/material/pf-2024/" class="btn-voltar-material">← Voltar ao Material</a>
             </div>
@@ -153,28 +166,114 @@
     </div>
 
     <script>
-        // ==========================================
-        // DADOS DO SIMULADO - 80 QUESTÕES
-        // ==========================================
-        const questoes = [];
-        const materias = ['Língua Portuguesa', 'Matemática', 'Conhecimentos Específicos', 'Raciocínio Lógico', 'Legislação'];
-        const totalQuestoes = 80;
-        
-        for (let i = 0; i < totalQuestoes; i++) {
-            const materia = materias[i % materias.length];
-            const correta = i % 5;
-            questoes.push({
-                id: i + 1,
-                grupo: materia,
-                enunciado: `Questão ${i + 1} sobre ${materia.toLowerCase()}. Esta é uma questão de múltipla escolha para testar seus conhecimentos.`,
-                alternativas: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D', 'Alternativa E'],
-                correta: correta,
-                explicacao: `A resposta correta é a alternativa ${String.fromCharCode(65 + correta)}.`
-            });
-        }
+        // ============================================
+        // 80 QUESTÕES REAIS - PF 2024
+        // Baseado no edital da PF 2024
+        // ============================================
+        const questoes = [
+            // ========================================
+            // LÍNGUA PORTUGUESA (1-20)
+            // ========================================
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa em que a palavra está corretamente acentuada:', alternativas: ['A) História', 'B) Ideia', 'C) Heroico', 'D) Feiura'], correta: 0, explicacao: '"História" é acentuada por ser proparoxítona.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'A crase é corretamente utilizada na alternativa:', alternativas: ['A) Vou à São Paulo.', 'B) Ele se referiu a aquela situação.', 'C) Chegamos à conclusão correta.', 'D) Fomos a pé até a escola.'], correta: 2, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: '"Os policiais investigaram o crime." - O termo "Os policiais" exerce função de:', alternativas: ['A) Sujeito', 'B) Objeto direto', 'C) Objeto indireto', 'D) Predicativo do sujeito'], correta: 0, explicacao: '"Os policiais" é o sujeito da oração.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "se" em "ele se feriu" é classificada como:', alternativas: ['A) Pronome possessivo', 'B) Pronome demonstrativo', 'C) Pronome reflexivo', 'D) Conjunção condicional'], correta: 2, explicacao: '"Se" é pronome reflexivo indicando ação que recai sobre o sujeito.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'Qual das palavras é classificada como advérbio?', alternativas: ['A) Feliz', 'B) Rapidamente', 'C) Cidade', 'D) Correr'], correta: 1, explicacao: '"Rapidamente" é advérbio de modo.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'A concordância verbal está correta em:', alternativas: ['A) Fazem cinco anos que trabalho aqui.', 'B) Haviam muitos policiais.', 'C) Mais de um policial chegou.', 'D) Existiam várias provas.'], correta: 2, explicacao: '"Mais de um" exige verbo no singular.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'A conjunção "portanto" estabelece relação de:', alternativas: ['A) Adição', 'B) Oposição', 'C) Conclusão', 'D) Explicação'], correta: 2, explicacao: '"Portanto" é conjunção conclusiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'Na frase "O delegado permaneceu calado", o termo "calado" é:', alternativas: ['A) Sujeito', 'B) Predicativo do sujeito', 'C) Objeto direto', 'D) Adjunto adnominal'], correta: 1, explicacao: '"Calado" caracteriza o sujeito "delegado".' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'A figura de linguagem em "A justiça é cega" é:', alternativas: ['A) Metáfora', 'B) Prosopopeia', 'C) Ironia', 'D) Hipérbole'], correta: 1, explicacao: 'Prosopopeia atribui características humanas à justiça.' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'A redação oficial deve ser:', alternativas: ['A) Impessoal, clara e precisa', 'B) Pessoal e subjetiva', 'C) Informal e coloquial', 'D) Poética e literária'], correta: 0, explicacao: 'Redação oficial exige impessoalidade, clareza e precisão.' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'A palavra "desleal" é formada por:', alternativas: ['A) Composição', 'B) Derivação prefixal', 'C) Derivação sufixal', 'D) Derivação parassintética'], correta: 1, explicacao: '"Desleal" = prefixo "des-" + radical "leal".' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'O plural de "cidadão" é:', alternativas: ['A) Cidadãos', 'B) Cidadões', 'C) Cidadães', 'D) Cidadãos'], correta: 0, explicacao: 'Palavras terminadas em "-ão" podem ter plural "-ãos".' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com erro de pontuação:', alternativas: ['A) O policial foi ao local, e prendeu o suspeito.', 'B) Gosto de investigar, mas preciso descansar.', 'C) Chegamos tarde, portanto não vimos o crime.', 'D) O delegado disse que, viria amanhã.'], correta: 3, explicacao: 'Não se usa vírgula antes de "que" como conjunção integrante.' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'Na frase "Ele foi investigar", o verbo é:', alternativas: ['A) Transitivo direto', 'B) Transitivo indireto', 'C) Intransitivo', 'D) Verbo de ligação'], correta: 2, explicacao: '"Foi investigar" - verbo intransitivo.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'A intertextualidade ocorre quando:', alternativas: ['A) Um texto faz referência a outro', 'B) Há erro de concordância', 'C) O texto é muito longo', 'D) O texto é muito curto'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 16, grupo: 'Língua Portuguesa', enunciado: 'O termo "lhe" em "Entregue-lhe o relatório" é:', alternativas: ['A) Objeto direto', 'B) Objeto indireto', 'C) Sujeito', 'D) Adjunto adverbial'], correta: 1, explicacao: '"Lhe" é objeto indireto (entregue a ele).' },
+            { id: 17, grupo: 'Língua Portuguesa', enunciado: 'Assinale a opção com derivação sufixal:', alternativas: ['A) Refazer', 'B) Livro', 'C) Rapidamente', 'D) Infeliz'], correta: 2, explicacao: '"Rapidamente" = rápido + sufixo "-mente".' },
+            { id: 18, grupo: 'Língua Portuguesa', enunciado: 'A palavra "café" é acentuada por ser:', alternativas: ['A) Oxítona terminada em "e"', 'B) Paroxítona', 'C) Proparoxítona', 'D) Monossílaba tônica'], correta: 0, explicacao: '"Café" é oxítona terminada em "e", portanto acentuada.' },
+            { id: 19, grupo: 'Língua Portuguesa', enunciado: 'A denotação é o sentido:', alternativas: ['A) Literal da palavra', 'B) Figurado da palavra', 'C) Subjetivo', 'D) Metafórico'], correta: 0, explicacao: 'Denotação é o sentido literal, objetivo da palavra.' },
+            { id: 20, grupo: 'Língua Portuguesa', enunciado: 'No ofício, a identificação do remetente deve ser feita por meio de:', alternativas: ['A) Rubrica manual', 'B) Carimbo ou identificação impressa', 'C) Assinatura com caneta', 'D) Carimbo digital'], correta: 1, explicacao: 'No ofício, usa-se carimbo ou identificação impressa.' },
+
+            // ========================================
+            // RACIOCÍNIO LÓGICO (21-35)
+            // ========================================
+            { id: 21, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Se chove, então a rua fica molhada" é verdadeira quando:', alternativas: ['A) Chove e a rua fica molhada', 'B) Chove e a rua não fica molhada', 'C) Não chove e a rua fica molhada', 'D) Não chove e a rua não fica molhada'], correta: 0, explicacao: 'Na condicional, a proposição é falsa apenas quando a primeira é verdadeira e a segunda é falsa.' },
+            { id: 22, grupo: 'Raciocínio Lógico', enunciado: 'A negação de "Todos os policiais são honestos" é:', alternativas: ['A) Nenhum policial é honesto', 'B) Algum policial não é honesto', 'C) Todos os policiais não são honestos', 'D) Algum policial é honesto'], correta: 1, explicacao: 'A negação de "Todos" é "Algum não" ou "Nem todos".' },
+            { id: 23, grupo: 'Raciocínio Lógico', enunciado: 'Em uma tabela-verdade com 3 proposições simples, o número de linhas é:', alternativas: ['A) 4', 'B) 6', 'C) 8', 'D) 10'], correta: 2, explicacao: '2³ = 8 linhas para 3 proposições simples.' },
+            { id: 24, grupo: 'Raciocínio Lógico', enunciado: 'A interseção de dois conjuntos é o conjunto de elementos que:', alternativas: ['A) Pertencem a ambos os conjuntos', 'B) Pertencem a pelo menos um conjunto', 'C) Não pertencem a nenhum conjunto', 'D) Pertencem a apenas um conjunto'], correta: 0, explicacao: 'A interseção contém apenas os elementos comuns aos dois conjuntos.' },
+            { id: 25, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Investigo e prendo o criminoso" é falsa quando:', alternativas: ['A) Investigo e prendo', 'B) Investigo e não prendo', 'C) Não investigo e prendo', 'D) Não investigo e não prendo'], correta: 1, explicacao: 'Na conjunção (E), a proposição é falsa quando pelo menos uma é falsa.' },
+            { id: 26, grupo: 'Raciocínio Lógico', enunciado: 'A negação de uma disjunção é uma conjunção de negações (Lei de De Morgan):', alternativas: ['A) ¬(P∨Q) = ¬P∧¬Q', 'B) ¬(P∨Q) = ¬P∨¬Q', 'C) ¬(P∨Q) = P∧Q', 'D) ¬(P∨Q) = P∨Q'], correta: 0, explicacao: '¬(P∨Q) = ¬P∧¬Q é uma das Leis de De Morgan.' },
+            { id: 27, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Ou investigo ou vou ao cinema" é uma:', alternativas: ['A) Disjunção exclusiva', 'B) Conjunção', 'C) Condicional', 'D) Bicondicional'], correta: 0, explicacao: '"Ou...ou..." indica disjunção exclusiva (ou um, ou outro).' },
+            { id: 28, grupo: 'Raciocínio Lógico', enunciado: 'A negação de "Alguns suspeitos são culpados" é:', alternativas: ['A) Nenhum suspeito é culpado', 'B) Todos os suspeitos são culpados', 'C) Alguns suspeitos não são culpados', 'D) Todos os suspeitos não são culpados'], correta: 0, explicacao: 'A negação de "Alguns" é "Nenhum".' },
+            { id: 29, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "se e somente se" é verdadeiro quando:', alternativas: ['A) Ambas são verdadeiras', 'B) Ambas são falsas', 'C) Ambas têm o mesmo valor lógico', 'D) Pelo menos uma é verdadeira'], correta: 2, explicacao: 'Bicondicional é verdadeiro quando ambas têm o mesmo valor lógico.' },
+            { id: 30, grupo: 'Raciocínio Lógico', enunciado: 'Se 2x + 3 = 11, então o valor de x é:', alternativas: ['A) 3', 'B) 4', 'C) 5', 'D) 6'], correta: 1, explicacao: '2x = 8 → x = 4.' },
+            { id: 31, grupo: 'Raciocínio Lógico', enunciado: 'Um número é divisível por 5 quando:', alternativas: ['A) É par', 'B) Termina em 0 ou 5', 'C) A soma dos algarismos é divisível por 5', 'D) É múltiplo de 10'], correta: 1, explicacao: 'Um número é divisível por 5 quando termina em 0 ou 5.' },
+            { id: 32, grupo: 'Raciocínio Lógico', enunciado: 'A negação de "Algum policial não prendeu" é:', alternativas: ['A) Todos os policiais prenderam', 'B) Nenhum policial prendeu', 'C) Algum policial prendeu', 'D) Todos os policiais não prenderam'], correta: 0, explicacao: 'A negação de "Algum não" é "Todos sim".' },
+            { id: 33, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "P → Q" é equivalente a:', alternativas: ['A) ¬Q → ¬P', 'B) Q → P', 'C) ¬P → ¬Q', 'D) P → ¬Q'], correta: 0, explicacao: 'Contrapositiva de P→Q é ¬Q→¬P.' },
+            { id: 34, grupo: 'Raciocínio Lógico', enunciado: 'Em uma investigação, 40% dos suspeitos confessaram. Se 50 suspeitos foram interrogados, quantos confessaram?', alternativas: ['A) 15', 'B) 20', 'C) 25', 'D) 30'], correta: 1, explicacao: '50 × 40% = 20.' },
+            { id: 35, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "P ∧ Q" é verdadeira quando:', alternativas: ['A) P é verdadeira e Q é verdadeira', 'B) P é verdadeira e Q é falsa', 'C) P é falsa e Q é verdadeira', 'D) P é falsa e Q é falsa'], correta: 0, explicacao: 'Conjunção (E) só é verdadeira quando ambas são verdadeiras.' },
+
+            // ========================================
+            // DIREITO (36-55)
+            // ========================================
+            { id: 36, grupo: 'Direito', enunciado: 'O Direito Penal é o ramo do direito que:', alternativas: ['A) Regula as relações de trabalho', 'B) Define crimes e penas', 'C) Regula a família', 'D) Trata de contratos'], correta: 1, explicacao: 'Direito Penal define crimes e penas.' },
+            { id: 37, grupo: 'Direito', enunciado: 'O princípio da legalidade no Direito Penal significa:', alternativas: ['A) Não há crime sem lei anterior que o defina', 'B) O juiz pode criar crimes', 'C) A lei penal pode ser retroativa', 'D) O crime pode ser definido por costume'], correta: 0, explicacao: 'O princípio da legalidade garante que não há crime sem lei anterior.' },
+            { id: 38, grupo: 'Direito', enunciado: 'A prisão em flagrante ocorre quando:', alternativas: ['A) O suspeito é encontrado após o crime', 'B) O suspeito é pego cometendo o crime', 'C) O suspeito é denunciado', 'D) O suspeito confessa'], correta: 1, explicacao: 'Prisão em flagrante ocorre quando o suspeito é pego cometendo o crime.' },
+            { id: 39, grupo: 'Direito', enunciado: 'A Constituição Federal de 1988 estabelece que a segurança pública é dever do:', alternativas: ['A) Estado', 'B) Cidadão', 'C) Judiciário', 'D) Legislativo'], correta: 0, explicacao: 'A segurança pública é dever do Estado.' },
+            { id: 40, grupo: 'Direito', enunciado: 'O Habeas Corpus é uma garantia que protege:', alternativas: ['A) A liberdade de locomoção', 'B) O direito à informação', 'C) O direito à propriedade', 'D) O direito ao trabalho'], correta: 0, explicacao: 'Habeas corpus protege a liberdade de locomoção.' },
+            { id: 41, grupo: 'Direito', enunciado: 'O inquérito policial é presidido pelo:', alternativas: ['A) Juiz', 'B) Delegado de Polícia', 'C) Promotor', 'D) Defensor'], correta: 1, explicacao: 'O inquérito policial é presidido pelo Delegado de Polícia.' },
+            { id: 42, grupo: 'Direito', enunciado: 'A Lei de Abuso de Autoridade (Lei 13.869/2019) define:', alternativas: ['A) Crimes praticados por civis', 'B) Crimes praticados por autoridades contra cidadãos', 'C) Crimes ambientais', 'D) Crimes eleitorais'], correta: 1, explicacao: 'A Lei de Abuso de Autoridade trata de crimes praticados por autoridades.' },
+            { id: 43, grupo: 'Direito', enunciado: 'O princípio da presunção de inocência garante que:', alternativas: ['A) O réu é considerado culpado até prova em contrário', 'B) O réu é considerado inocente até prova em contrário', 'C) O réu não tem direito à defesa', 'D) O réu pode ser preso sem provas'], correta: 1, explicacao: 'A presunção de inocência garante que o réu é inocente até prova em contrário.' },
+            { id: 44, grupo: 'Direito', enunciado: 'O crime de homicídio está previsto no Código Penal no artigo:', alternativas: ['A) 121', 'B) 155', 'C) 171', 'D) 213'], correta: 0, explicacao: 'O homicídio está previsto no art. 121 do Código Penal.' },
+            { id: 45, grupo: 'Direito', enunciado: 'A fiança é um instrumento que permite:', alternativas: ['A) A liberdade provisória mediante pagamento', 'B) A prisão preventiva', 'C) A condenação antecipada', 'D) O arquivamento do processo'], correta: 0, explicacao: 'A fiança permite a liberdade provisória mediante pagamento.' },
+            { id: 46, grupo: 'Direito', enunciado: 'O Mandado de Segurança é uma garantia para:', alternativas: ['A) Proteger direito líquido e certo', 'B) Proteger a liberdade', 'C) Proteger a propriedade', 'D) Proteger a vida'], correta: 0, explicacao: 'Mandado de Segurança protege direito líquido e certo.' },
+            { id: 47, grupo: 'Direito', enunciado: 'O Código Penal Brasileiro foi instituído pelo Decreto-Lei:', alternativas: ['A) 2.848/40', 'B) 3.689/41', 'C) 1.001/69', 'D) 2.000/41'], correta: 0, explicacao: 'O Código Penal foi instituído pelo Decreto-Lei 2.848/40.' },
+            { id: 48, grupo: 'Direito', enunciado: 'A legítima defesa é uma excludente de:', alternativas: ['A) Culpabilidade', 'B) Ilicitude', 'C) Punibilidade', 'D) Tipicidade'], correta: 1, explicacao: 'A legítima defesa exclui a ilicitude do ato.' },
+            { id: 49, grupo: 'Direito', enunciado: 'O crime de roubo é caracterizado por:', alternativas: ['A) Subtração de coisa mediante violência ou grave ameaça', 'B) Subtração de coisa sem violência', 'C) Danificação de patrimônio', 'D) Estelionato'], correta: 0, explicacao: 'Roubo é subtração mediante violência ou grave ameaça.' },
+            { id: 50, grupo: 'Direito', enunciado: 'A prisão preventiva pode ser decretada:', alternativas: ['A) Para garantir a aplicação da lei penal', 'B) Por qualquer crime', 'C) Apenas para crimes hediondos', 'D) Apenas para crimes de menor potencial'], correta: 0, explicacao: 'A prisão preventiva garante a aplicação da lei penal.' },
+            { id: 51, grupo: 'Direito', enunciado: 'O crime de tráfico de drogas está previsto na Lei:', alternativas: ['A) 11.343/06', 'B) 8.069/90', 'C) 9.613/98', 'D) 13.869/19'], correta: 0, explicacao: 'A Lei 11.343/06 trata do tráfico de drogas.' },
+            { id: 52, grupo: 'Direito', enunciado: 'A transação penal é um instituto que permite:', alternativas: ['A) A suspensão do processo mediante acordo', 'B) A prisão imediata', 'C) A condenação sumária', 'D) O arquivamento definitivo'], correta: 0, explicacao: 'A transação penal permite a suspensão do processo mediante acordo.' },
+            { id: 53, grupo: 'Direito', enunciado: 'O princípio da ampla defesa garante:', alternativas: ['A) O direito de se defender no processo', 'B) O direito de não se defender', 'C) O direito de ser condenado', 'D) O direito de não ser ouvido'], correta: 0, explicacao: 'Ampla defesa garante o direito de se defender no processo.' },
+            { id: 54, grupo: 'Direito', enunciado: 'O crime de estupro está previsto no artigo:', alternativas: ['A) 213', 'B) 121', 'C) 155', 'D) 171'], correta: 0, explicacao: 'O estupro está previsto no art. 213 do Código Penal.' },
+            { id: 55, grupo: 'Direito', enunciado: 'A Lei Maria da Penha (Lei 11.340/06) protege:', alternativas: ['A) Crianças', 'B) Mulheres em situação de violência doméstica', 'C) Idosos', 'D) Trabalhadores'], correta: 1, explicacao: 'A Lei Maria da Penha protege mulheres em situação de violência doméstica.' },
+
+            // ========================================
+            // INFORMÁTICA (56-70)
+            // ========================================
+            { id: 56, grupo: 'Informática', enunciado: 'O sistema operacional é um software que:', alternativas: ['A) Gerencia os recursos do computador', 'B) É usado para escrever textos', 'C) É um navegador de internet', 'D) É um antivírus'], correta: 0, explicacao: 'Sistema operacional gerencia os recursos do computador.' },
+            { id: 57, grupo: 'Informática', enunciado: 'A Internet é uma rede:', alternativas: ['A) Privada', 'B) Pública mundial', 'C) Local', 'D) Nacional'], correta: 1, explicacao: 'Internet é uma rede pública mundial.' },
+            { id: 58, grupo: 'Informática', enunciado: 'O Windows é um sistema operacional:', alternativas: ['A) Proprietário', 'B) De código aberto', 'C) Gratuito', 'D) Exclusivo para servidores'], correta: 0, explicacao: 'Windows é um sistema operacional proprietário.' },
+            { id: 59, grupo: 'Informática', enunciado: 'Firewall é um sistema que:', alternativas: ['A) Bloqueia acessos não autorizados', 'B) Acelera a internet', 'C) Compacta arquivos', 'D) Edita imagens'], correta: 0, explicacao: 'Firewall bloqueia acessos não autorizados à rede.' },
+            { id: 60, grupo: 'Informática', enunciado: 'O phishing é uma técnica de:', alternativas: ['A) Segurança', 'B) Fraude', 'C) Aceleração', 'D) Backup'], correta: 1, explicacao: 'Phishing é uma técnica de fraude para obter dados pessoais.' },
+            { id: 61, grupo: 'Informática', enunciado: 'O LibreOffice Calc é um software de:', alternativas: ['A) Planilhas eletrônicas', 'B) Textos', 'C) Apresentações', 'D) Banco de dados'], correta: 0, explicacao: 'Calc é o aplicativo de planilhas do LibreOffice.' },
+            { id: 62, grupo: 'Informática', enunciado: 'A criptografia é uma técnica para:', alternativas: ['A) Codificar informações', 'B) Excluir arquivos', 'C) Formatar discos', 'D) Navegar na internet'], correta: 0, explicacao: 'Criptografia codifica informações para proteger dados.' },
+            { id: 63, grupo: 'Informática', enunciado: 'O armazenamento em nuvem permite:', alternativas: ['A) Guardar arquivos online', 'B) Imprimir documentos', 'C) Criar vídeos', 'D) Editar imagens'], correta: 0, explicacao: 'Armazenamento em nuvem permite guardar arquivos online.' },
+            { id: 64, grupo: 'Informática', enunciado: 'Um vírus de computador é:', alternativas: ['A) Um programa malicioso', 'B) Um software de edição', 'C) Um jogo', 'D) Um navegador'], correta: 0, explicacao: 'Vírus é um programa malicioso que infecta computadores.' },
+            { id: 65, grupo: 'Informática', enunciado: 'O Google Chrome é um:', alternativas: ['A) Navegador de internet', 'B) Sistema operacional', 'C) Editor de textos', 'D) Antivírus'], correta: 0, explicacao: 'Chrome é um navegador de internet.' },
+            { id: 66, grupo: 'Informática', enunciado: 'O backup é a cópia de:', alternativas: ['A) Segurança dos dados', 'B) Arquivos temporários', 'C) Programas inativos', 'D) Lixeira'], correta: 0, explicacao: 'Backup é a cópia de segurança dos dados.' },
+            { id: 67, grupo: 'Informática', enunciado: 'O Linux é um sistema operacional:', alternativas: ['A) De código aberto', 'B) Proprietário', 'C) Pago', 'D) Exclusivo para servidores'], correta: 0, explicacao: 'Linux é um sistema operacional de código aberto.' },
+            { id: 68, grupo: 'Informática', enunciado: 'A URL é o endereço de:', alternativas: ['A) Um site na internet', 'B) Um arquivo local', 'C) Um programa', 'D) Um documento'], correta: 0, explicacao: 'URL é o endereço de um site na internet.' },
+            { id: 69, grupo: 'Informática', enunciado: 'O spam é:', alternativas: ['A) Mensagem não solicitada', 'B) Um vírus', 'C) Um programa', 'D) Um antivírus'], correta: 0, explicacao: 'Spam é mensagem não solicitada enviada em massa.' },
+            { id: 70, grupo: 'Informática', enunciado: 'A senha forte deve conter:', alternativas: ['A) Letras, números e símbolos', 'B) Apenas números', 'C) Apenas letras', 'D) Apenas símbolos'], correta: 0, explicacao: 'Senha forte deve conter letras, números e símbolos.' },
+
+            // ========================================
+            // CONHECIMENTOS ESPECÍFICOS (71-80)
+            // ========================================
+            { id: 71, grupo: 'Conhecimentos Específicos', enunciado: 'A Polícia Federal é responsável por investigar:', alternativas: ['A) Crimes estaduais', 'B) Crimes federais', 'C) Crimes municipais', 'D) Crimes internacionais'], correta: 1, explicacao: 'A PF investiga crimes federais.' },
+            { id: 72, grupo: 'Conhecimentos Específicos', enunciado: 'O inquérito policial tem prazo máximo para conclusão de:', alternativas: ['A) 10 dias', 'B) 15 dias', 'C) 30 dias', 'D) 60 dias'], correta: 2, explicacao: 'O inquérito policial tem prazo de 30 dias (réu preso) ou 60 dias (réu solto).' },
+            { id: 73, grupo: 'Conhecimentos Específicos', enunciado: 'A prova pericial no inquérito policial é:', alternativas: ['A) Dispensável', 'B) Obrigatória para crimes que deixam vestígios', 'C) Opcional', 'D) Proibida'], correta: 1, explicacao: 'A prova pericial é obrigatória para crimes que deixam vestígios.' },
+            { id: 74, grupo: 'Conhecimentos Específicos', enunciado: 'A Polícia Federal tem competência para apurar:', alternativas: ['A) Crimes ambientais', 'B) Crimes de trânsito', 'C) Crimes de menor potencial', 'D) Crimes municipais'], correta: 0, explicacao: 'A PF apura crimes ambientais federais.' },
+            { id: 75, grupo: 'Conhecimentos Específicos', enunciado: 'O Sistema Nacional de Polícia é regulado pela Lei:', alternativas: ['A) 8.069/90', 'B) 12.681/12', 'C) 11.343/06', 'D) 13.869/19'], correta: 1, explicacao: 'A Lei 12.681/12 trata do Sistema Nacional de Polícia.' },
+            { id: 76, grupo: 'Conhecimentos Específicos', enunciado: 'A polícia judiciária é exercida:', alternativas: ['A) Apenas pela Polícia Federal', 'B) Pelas polícias civis e federal', 'C) Apenas pela Polícia Militar', 'D) Apenas pela Guarda Municipal'], correta: 1, explicacao: 'A polícia judiciária é exercida pelas polícias civis e federal.' },
+            { id: 77, grupo: 'Conhecimentos Específicos', enunciado: 'A prisão temporária tem prazo máximo de:', alternativas: ['A) 5 dias', 'B) 10 dias', 'C) 15 dias', 'D) 30 dias'], correta: 0, explicacao: 'A prisão temporária tem prazo máximo de 5 dias.' },
+            { id: 78, grupo: 'Conhecimentos Específicos', enunciado: 'A Lei de Execução Penal (LEP) é a Lei:', alternativas: ['A) 7.210/84', 'B) 8.069/90', 'C) 9.613/98', 'D) 11.343/06'], correta: 0, explicacao: 'A LEP é a Lei 7.210/84.' },
+            { id: 79, grupo: 'Conhecimentos Específicos', enunciado: 'A Polícia Federal tem atuação em:', alternativas: ['A) Todo o território nacional', 'B) Apenas no Distrito Federal', 'C) Apenas nos estados', 'D) Apenas nas fronteiras'], correta: 0, explicacao: 'A PF tem atuação em todo o território nacional.' },
+            { id: 80, grupo: 'Conhecimentos Específicos', enunciado: 'O crime de lavagem de dinheiro é investigado pela:', alternativas: ['A) Polícia Federal', 'B) Polícia Militar', 'C) Guarda Municipal', 'D) Polícia Civil'], correta: 0, explicacao: 'A PF investiga crimes de lavagem de dinheiro.' }
+        ];
 
         // ==========================================
-        // ESTADO DO SIMULADO
+        // CONTROLE DO SIMULADO
         // ==========================================
         let respostas = {};
         let eliminacoes = {};
@@ -215,9 +314,11 @@
                 const letra = String.fromCharCode(65 + i);
                 const isSelected = respostas[`q${q.id}`] === i;
                 const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
-                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                let classes = ''; 
+                if (isSelected) classes += ' selected'; 
+                if (isEliminated) classes += ' eliminated';
                 const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
-                const btnText = isEliminated ? '✓' : '✕';
+                const btnText = isEliminated ? '↩' : '✕';
                 return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
             }).join('');
             container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de ${questoes.length}</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
@@ -236,8 +337,13 @@
         function finalizarSimulado() {
             const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
-            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
-            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('totalRespondidas').textContent = respondidas; 
+            document.getElementById('totalAcertos').textContent = acertos; 
+            document.getElementById('totalErros').textContent = erros; 
+            document.getElementById('totalEliminacoes').textContent = totalEliminacoes;
+            document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; 
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
@@ -247,7 +353,7 @@
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
             if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
             const evolucao = JSON.parse(localStorage.getItem('simulado_pf-2024_evolucao') || '[]');
-            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas });
             localStorage.setItem('simulado_pf-2024_evolucao', JSON.stringify(evolucao));
             alert('✅ Evolução salva com sucesso!'); fecharResumo();
         }
