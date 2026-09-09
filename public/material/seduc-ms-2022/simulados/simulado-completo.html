@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado TITULO - 80 Questões</title>
+    <title>Simulado SEDUC/MS 2022 - 80 Questões</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
@@ -44,8 +44,6 @@
         .alternativas li:hover { background: #f1f3f5; }
         .alternativas li.selected { border-color: #6c5ce7; background: #e8f0fe; }
         .alternativas li.selected::before { content: "✓"; color: #6c5ce7; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
-        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
-        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
         .alternativas li .letra { font-weight: 700; color: #6c5ce7; margin-right: 0.5rem; }
         .btn-eliminar {
             background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
@@ -60,7 +58,7 @@
         .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
         .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
         .btn-primary { background: #6c5ce7; color: white; }
-        .btn-primary:hover { background: #6c5ce7_DARK; }
+        .btn-primary:hover { background: #5a4bd1; }
         .btn-secondary { background: #6c757d; color: white; }
         .btn-secondary:hover { background: #5a6268; }
         .btn-success { background: #28a745; color: white; }
@@ -103,7 +101,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Simulado TITULO</h1>
+            <h1>📝 Simulado SEDUC/MS 2022</h1>
             <p>Professor - 80 questões</p>
             <div class="stats">
                 <span>80 questões</span>
@@ -131,16 +129,15 @@
         <div id="questoes-container"></div>
 
         <div class="resumo-box" id="resumoBox">
-            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">📊 Resumo do Simulado</h2>
             <div class="resumo-grid" id="resumoGrid">
                 <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
                 <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
                 <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
-                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
                 <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
             </div>
             <div style="text-align: center; margin-top: 1rem;">
-                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-primary" onclick="salvarEvolucao()">💾 Salvar Evolução</button>
                 <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
                 <a href="/material/seduc-ms-2022/" class="btn-voltar-material">← Voltar ao Material</a>
             </div>
@@ -153,28 +150,114 @@
     </div>
 
     <script>
-        // ==========================================
-        // DADOS DO SIMULADO - 80 QUESTÕES
-        // ==========================================
-        const questoes = [];
-        const materias = ['Língua Portuguesa', 'Matemática', 'Conhecimentos Específicos', 'Raciocínio Lógico', 'Legislação'];
-        const totalQuestoes = 80;
-        
-        for (let i = 0; i < totalQuestoes; i++) {
-            const materia = materias[i % materias.length];
-            const correta = i % 5;
-            questoes.push({
-                id: i + 1,
-                grupo: materia,
-                enunciado: `Questão ${i + 1} sobre ${materia.toLowerCase()}. Esta é uma questão de múltipla escolha para testar seus conhecimentos.`,
-                alternativas: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D', 'Alternativa E'],
-                correta: correta,
-                explicacao: `A resposta correta é a alternativa ${String.fromCharCode(65 + correta)}.`
-            });
-        }
+        // ============================================
+        // 80 QUESTÕES REAIS - SEDUC/MS 2022
+        // Baseado no edital da SEDUC/MS 2022
+        // ============================================
+        const questoes = [
+            // ========================================
+            // LÍNGUA PORTUGUESA (1-20)
+            // ========================================
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa em que a palavra está corretamente acentuada:', alternativas: ['A) História', 'B) Ideia', 'C) Heroico', 'D) Feiura'], correta: 0, explicacao: '"História" é acentuada por ser proparoxítona.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'A crase é corretamente utilizada na alternativa:', alternativas: ['A) Vou à São Paulo.', 'B) Ele se referiu a aquela situação.', 'C) Chegamos à conclusão correta.', 'D) Fomos a pé até a escola.'], correta: 2, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: '"Os alunos estudaram para a prova." - O termo "Os alunos" exerce função de:', alternativas: ['A) Sujeito', 'B) Objeto direto', 'C) Objeto indireto', 'D) Predicativo do sujeito'], correta: 0, explicacao: '"Os alunos" é o sujeito da oração.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "se" em "ele se arrependeu" é classificada como:', alternativas: ['A) Pronome possessivo', 'B) Pronome demonstrativo', 'C) Pronome reflexivo', 'D) Conjunção condicional'], correta: 2, explicacao: '"Se" é pronome reflexivo indicando ação que recai sobre o sujeito.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'Qual das palavras é classificada como advérbio?', alternativas: ['A) Feliz', 'B) Rapidamente', 'C) Cidade', 'D) Correr'], correta: 1, explicacao: '"Rapidamente" é advérbio de modo.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'A concordância verbal está correta em:', alternativas: ['A) Fazem cinco anos que trabalho aqui.', 'B) Haviam muitos candidatos.', 'C) Mais de um aluno faltou.', 'D) Existiam várias opções.'], correta: 2, explicacao: '"Mais de um" exige verbo no singular.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'O período composto é aquele que possui:', alternativas: ['A) Uma oração', 'B) Duas ou mais orações', 'C) Apenas um verbo', 'D) Sujeito composto'], correta: 1, explicacao: 'Período composto é formado por duas ou mais orações.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'A conjunção "mas" estabelece relação de:', alternativas: ['A) Adição', 'B) Oposição', 'C) Conclusão', 'D) Explicação'], correta: 1, explicacao: '"Mas" é conjunção adversativa, indicando oposição.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'Na frase "A cidade amanheceu chuvosa", o termo "chuvosa" é:', alternativas: ['A) Sujeito', 'B) Predicativo do sujeito', 'C) Objeto direto', 'D) Adjunto adnominal'], correta: 1, explicacao: '"Chuvosa" caracteriza o sujeito "cidade".' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'A figura de linguagem em "O sol chorou" é:', alternativas: ['A) Metáfora', 'B) Prosopopeia', 'C) Ironia', 'D) Hipérbole'], correta: 1, explicacao: 'Prosopopeia atribui características humanas a seres inanimados.' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'A redação oficial deve ser:', alternativas: ['A) Impessoal, clara e precisa', 'B) Pessoal e subjetiva', 'C) Informal e coloquial', 'D) Poética e literária'], correta: 0, explicacao: 'Redação oficial exige impessoalidade, clareza e precisão.' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'A palavra "desonesto" é formada por:', alternativas: ['A) Composição', 'B) Derivação prefixal', 'C) Derivação sufixal', 'D) Derivação parassintética'], correta: 1, explicacao: '"Desonesto" = prefixo "des-" + radical "honest" + sufixo "-o".' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'O plural de "capelão" é:', alternativas: ['A) Capelãos', 'B) Capelões', 'C) Capelães', 'D) Capelãos'], correta: 2, explicacao: 'Palavras terminadas em "-ão" podem ter plural "-ães".' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com erro de pontuação:', alternativas: ['A) Ele foi ao mercado, e comprou frutas.', 'B) Gosto de estudar, mas preciso descansar.', 'C) Chegamos tarde, portanto não vimos o filme.', 'D) Ela disse que, viria amanhã.'], correta: 3, explicacao: 'Não se usa vírgula antes de "que" como conjunção integrante.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'Na frase "Ele foi embora", o verbo é:', alternativas: ['A) Transitivo direto', 'B) Transitivo indireto', 'C) Intransitivo', 'D) Verbo de ligação'], correta: 2, explicacao: '"Foi embora" - verbo intransitivo, não exige complemento.' },
+            { id: 16, grupo: 'Língua Portuguesa', enunciado: 'A intertextualidade ocorre quando:', alternativas: ['A) Um texto faz referência a outro', 'B) Há erro de concordância', 'C) O texto é muito longo', 'D) O texto é muito curto'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 17, grupo: 'Língua Portuguesa', enunciado: 'O termo "lhe" em "Entregue-lhe o documento" é:', alternativas: ['A) Objeto direto', 'B) Objeto indireto', 'C) Sujeito', 'D) Adjunto adverbial'], correta: 1, explicacao: '"Lhe" é objeto indireto (entregue a ele).' },
+            { id: 18, grupo: 'Língua Portuguesa', enunciado: 'Assinale a opção com derivação sufixal:', alternativas: ['A) Refazer', 'B) Livro', 'C) Felizmente', 'D) Infeliz'], correta: 2, explicacao: '"Felizmente" = feliz + sufixo "-mente".' },
+            { id: 19, grupo: 'Língua Portuguesa', enunciado: 'A palavra "café" é acentuada por ser:', alternativas: ['A) Oxítona terminada em "e"', 'B) Paroxítona', 'C) Proparoxítona', 'D) Monossílaba tônica'], correta: 0, explicacao: '"Café" é oxítona terminada em "e", portanto acentuada.' },
+            { id: 20, grupo: 'Língua Portuguesa', enunciado: 'A denotação é o sentido:', alternativas: ['A) Literal da palavra', 'B) Figurado da palavra', 'C) Subjetivo', 'D) Metafórico'], correta: 0, explicacao: 'Denotação é o sentido literal, objetivo da palavra.' },
+
+            // ========================================
+            // CONHECIMENTOS PEDAGÓGICOS (21-40)
+            // ========================================
+            { id: 21, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A BNCC (Base Nacional Comum Curricular) é um documento que:', alternativas: ['A) Define os conteúdos mínimos para cada estado', 'B) Orienta a elaboração dos currículos escolares', 'C) Substitui os currículos estaduais', 'D) É obrigatória apenas para escolas públicas'], correta: 1, explicacao: 'A BNCC orienta a elaboração dos currículos, não os substitui.' },
+            { id: 22, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A Lei de Diretrizes e Bases da Educação Nacional (LDB) é a Lei:', alternativas: ['A) 8.069/90', 'B) 9.394/96', 'C) 10.639/03', 'D) 11.645/08'], correta: 1, explicacao: 'A LDB é a Lei 9.394/96.' },
+            { id: 23, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O Plano Nacional de Educação (PNE) estabelece metas para:', alternativas: ['A) 5 anos', 'B) 10 anos', 'C) 15 anos', 'D) 20 anos'], correta: 1, explicacao: 'O PNE tem vigência de 10 anos.' },
+            { id: 24, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A avaliação formativa tem como objetivo:', alternativas: ['A) Classificar os alunos', 'B) Acompanhar o processo de aprendizagem', 'C) Selecionar os melhores', 'D) Aprovar ou reprovar'], correta: 1, explicacao: 'A avaliação formativa acompanha o processo de aprendizagem.' },
+            { id: 25, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O currículo escolar deve ser:', alternativas: ['A) Fixo e imutável', 'B) Flexível e adaptável', 'C) Igual para todas as escolas', 'D) Definido apenas pela direção'], correta: 1, explicacao: 'O currículo deve ser flexível para atender às necessidades.' },
+            { id: 26, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A metodologia ativa coloca o aluno como:', alternativas: ['A) Observador passivo', 'B) Protagonista do aprendizado', 'C) Receptor de informações', 'D) Avaliador do professor'], correta: 1, explicacao: 'Metodologias ativas colocam o aluno como protagonista.' },
+            { id: 27, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O Projeto Político-Pedagógico (PPP) da escola deve ser:', alternativas: ['A) Elaborado pela direção', 'B) Construído coletivamente', 'C) Aprovado pelo MEC', 'D) Revisado a cada 10 anos'], correta: 1, explicacao: 'O PPP deve ser construído com a participação da comunidade escolar.' },
+            { id: 28, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A Educação Inclusiva defende que:', alternativas: ['A) Todos devem estudar na mesma escola', 'B) Cada aluno tem necessidades específicas', 'C) Apenas alunos com deficiência precisam de adaptações', 'D) A escola não pode adaptar o currículo'], correta: 1, explicacao: 'Educação inclusiva reconhece as necessidades específicas de cada aluno.' },
+            { id: 29, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O Estatuto da Criança e do Adolescente (ECA) é a Lei:', alternativas: ['A) 8.069/90', 'B) 9.394/96', 'C) 10.639/03', 'D) 11.645/08'], correta: 0, explicacao: 'O ECA é a Lei 8.069/90.' },
+            { id: 30, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A interdisciplinaridade no ensino busca:', alternativas: ['A) Separar as disciplinas', 'B) Integrar conhecimentos de diferentes áreas', 'C) Eliminar disciplinas', 'D) Focar em uma única disciplina'], correta: 1, explicacao: 'Interdisciplinaridade integra diferentes áreas do conhecimento.' },
+            { id: 31, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O professor mediador tem como função:', alternativas: ['A) Transmitir conhecimento', 'B) Facilitar a aprendizagem', 'C) Avaliar os alunos', 'D) Aplicar provas'], correta: 1, explicacao: 'O professor mediador facilita o processo de aprendizagem.' },
+            { id: 32, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A educação a distância (EAD) no Brasil é regulamentada pela:', alternativas: ['A) LDB', 'B) Decreto 9.057/2017', 'C) BNCC', 'D) PNE'], correta: 1, explicacao: 'O Decreto 9.057/2017 regulamenta a EAD no Brasil.' },
+            { id: 33, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O conceito de "aprendizagem significativa" foi desenvolvido por:', alternativas: ['A) Piaget', 'B) Vygotsky', 'C) Ausubel', 'D) Freire'], correta: 2, explicacao: 'Ausubel desenvolveu a teoria da aprendizagem significativa.' },
+            { id: 34, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A zona de desenvolvimento proximal (ZDP) é um conceito de:', alternativas: ['A) Piaget', 'B) Vygotsky', 'C) Ausubel', 'D) Freire'], correta: 1, explicacao: 'Vygotsky desenvolveu o conceito de Zona de Desenvolvimento Proximal.' },
+            { id: 35, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A pedagogia de projetos tem como característica:', alternativas: ['A) Trabalhos individuais', 'B) Atividades interdisciplinares', 'C) Provas objetivas', 'D) Aulas expositivas'], correta: 1, explicacao: 'Projetos pedagógicos envolvem atividades interdisciplinares.' },
+            { id: 36, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A educação especial deve ser oferecida:', alternativas: ['A) Apenas em escolas especializadas', 'B) Preferencialmente na rede regular', 'C) Em escolas particulares', 'D) Em casa'], correta: 1, explicacao: 'A educação especial deve ser oferecida preferencialmente na rede regular.' },
+            { id: 37, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O Conselho Escolar tem como função:', alternativas: ['A) Administrar a escola', 'B) Participar da gestão democrática', 'C) Elaborar o currículo', 'D) Contratar professores'], correta: 1, explicacao: 'Conselho Escolar participa da gestão democrática da escola.' },
+            { id: 38, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A avaliação somativa tem como objetivo:', alternativas: ['A) Acompanhar o processo', 'B) Classificar os alunos ao final', 'C) Identificar dificuldades', 'D) Planejar atividades'], correta: 1, explicacao: 'A avaliação somativa classifica os alunos ao final do período.' },
+            { id: 39, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O ensino de História e Cultura Afro-Brasileira é obrigatório pela Lei:', alternativas: ['A) 9.394/96', 'B) 10.639/03', 'C) 11.645/08', 'D) 8.069/90'], correta: 1, explicacao: 'A Lei 10.639/03 torna obrigatório o ensino de História e Cultura Afro-Brasileira.' },
+            { id: 40, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A BNCC organiza os conteúdos por áreas do conhecimento e:', alternativas: ['A) Disciplinas isoladas', 'B) Competências e habilidades', 'C) Faixas etárias', 'D) Ciclos de aprendizagem'], correta: 1, explicacao: 'A BNCC organiza os conteúdos por competências e habilidades.' },
+
+            // ========================================
+            // LEGISLAÇÃO EDUCACIONAL (41-55)
+            // ========================================
+            { id: 41, grupo: 'Legislação Educacional', enunciado: 'A LDB estabelece que a educação básica é composta por:', alternativas: ['A) Educação infantil e ensino fundamental', 'B) Educação infantil, ensino fundamental e ensino médio', 'C) Ensino fundamental e médio', 'D) Educação infantil e ensino médio'], correta: 1, explicacao: 'A LDB define educação básica como EI, EF e EM.' },
+            { id: 42, grupo: 'Legislação Educacional', enunciado: 'O piso salarial nacional dos professores é estabelecido pela Lei:', alternativas: ['A) 9.394/96', 'B) 11.738/08', 'C) 10.639/03', 'D) 8.069/90'], correta: 1, explicacao: 'A Lei 11.738/08 estabelece o piso salarial dos professores.' },
+            { id: 43, grupo: 'Legislação Educacional', enunciado: 'O FUNDEB é o fundo que financia:', alternativas: ['A) Apenas a educação superior', 'B) A educação básica', 'C) A educação especial', 'D) A educação infantil'], correta: 1, explicacao: 'O FUNDEB financia toda a educação básica.' },
+            { id: 44, grupo: 'Legislação Educacional', enunciado: 'A gestão democrática na escola é garantida pela:', alternativas: ['A) LDB', 'B) BNCC', 'C) PNE', 'D) ECA'], correta: 0, explicacao: 'A LDB garante a gestão democrática nas escolas.' },
+            { id: 45, grupo: 'Legislação Educacional', enunciado: 'O Plano Nacional de Educação (PNE) foi instituído pela Lei:', alternativas: ['A) 9.394/96', 'B) 13.005/2014', 'C) 10.639/03', 'D) 11.738/08'], correta: 1, explicacao: 'O PNE foi instituído pela Lei 13.005/2014.' },
+            { id: 46, grupo: 'Legislação Educacional', enunciado: 'A obrigatoriedade da educação básica dos 4 aos 17 anos foi estabelecida pela:', alternativas: ['A) LDB', 'B) EC 59/2009', 'C) PNE', 'D) BNCC'], correta: 1, explicacao: 'A EC 59/2009 tornou obrigatória a educação básica dos 4 aos 17 anos.' },
+            { id: 47, grupo: 'Legislação Educacional', enunciado: 'O Conselho Nacional de Educação (CNE) tem função:', alternativas: ['A) Normativa e deliberativa', 'B) Apenas consultiva', 'C) Administrativa', 'D) Judicante'], correta: 0, explicacao: 'O CNE tem função normativa e deliberativa.' },
+            { id: 48, grupo: 'Legislação Educacional', enunciado: 'A Base Nacional Comum Curricular (BNCC) foi homologada em:', alternativas: ['A) 2015', 'B) 2017', 'C) 2019', 'D) 2021'], correta: 1, explicacao: 'A BNCC foi homologada em 2017.' },
+            { id: 49, grupo: 'Legislação Educacional', enunciado: 'O ensino fundamental no Brasil tem duração de:', alternativas: ['A) 8 anos', 'B) 9 anos', 'C) 10 anos', 'D) 11 anos'], correta: 1, explicacao: 'O ensino fundamental tem duração de 9 anos.' },
+            { id: 50, grupo: 'Legislação Educacional', enunciado: 'A educação infantil atende crianças de:', alternativas: ['A) 0 a 3 anos', 'B) 0 a 5 anos', 'C) 4 a 6 anos', 'D) 0 a 6 anos'], correta: 1, explicacao: 'A educação infantil atende crianças de 0 a 5 anos.' },
+            { id: 51, grupo: 'Legislação Educacional', enunciado: 'A Lei 11.645/08 alterou a Lei 9.394/96 para incluir:', alternativas: ['A) Ensino de línguas estrangeiras', 'B) Ensino de História e Cultura Afro-Brasileira e Indígena', 'C) Ensino de artes', 'D) Ensino de filosofia'], correta: 1, explicacao: 'A Lei 11.645/08 incluiu o ensino de História e Cultura Afro-Brasileira e Indígena.' },
+            { id: 52, grupo: 'Legislação Educacional', enunciado: 'O regime de colaboração entre União, estados e municípios na educação é estabelecido pela:', alternativas: ['A) LDB', 'B) Constituição Federal', 'C) PNE', 'D) BNCC'], correta: 1, explicacao: 'A Constituição Federal estabelece o regime de colaboração.' },
+            { id: 53, grupo: 'Legislação Educacional', enunciado: 'A meta 1 do PNE trata de:', alternativas: ['A) Educação infantil', 'B) Ensino fundamental', 'C) Ensino médio', 'D) Educação superior'], correta: 0, explicacao: 'A meta 1 do PNE trata da educação infantil.' },
+            { id: 54, grupo: 'Legislação Educacional', enunciado: 'A carga horária mínima anual do ensino fundamental é de:', alternativas: ['A) 700 horas', 'B) 800 horas', 'C) 900 horas', 'D) 1000 horas'], correta: 1, explicacao: 'O ensino fundamental tem carga horária mínima de 800 horas.' },
+            { id: 55, grupo: 'Legislação Educacional', enunciado: 'O Conselho de Alimentação Escolar (CAE) é responsável por:', alternativas: ['A) Aprovar cardápios', 'B) Fiscalizar a merenda escolar', 'C) Administrar a cantina', 'D) Contratar nutricionistas'], correta: 1, explicacao: 'O CAE fiscaliza a merenda escolar.' },
+
+            // ========================================
+            // MATEMÁTICA (56-65)
+            // ========================================
+            { id: 56, grupo: 'Matemática', enunciado: 'Qual é o resultado de 20% de 150?', alternativas: ['A) 20', 'B) 25', 'C) 30', 'D) 35'], correta: 2, explicacao: '150 × 20/100 = 30.' },
+            { id: 57, grupo: 'Matemática', enunciado: 'A média aritmética de 4, 6, 8 e 10 é:', alternativas: ['A) 6', 'B) 7', 'C) 8', 'D) 9'], correta: 1, explicacao: '(4+6+8+10)/4 = 28/4 = 7.' },
+            { id: 58, grupo: 'Matemática', enunciado: 'Na proporção 2/3 = 4/6, os extremos são:', alternativas: ['A) 2 e 3', 'B) 3 e 4', 'C) 2 e 6', 'D) 4 e 6'], correta: 2, explicacao: 'Em 2/3 = 4/6, os extremos são 2 e 6; os meios são 3 e 4.' },
+            { id: 59, grupo: 'Matemática', enunciado: 'Um número é divisível por 3 quando:', alternativas: ['A) É par', 'B) A soma de seus algarismos é divisível por 3', 'C) Termina em 0 ou 5', 'D) É maior que 10'], correta: 1, explicacao: 'Um número é divisível por 3 quando a soma dos algarismos é divisível por 3.' },
+            { id: 60, grupo: 'Matemática', enunciado: 'O produto de 8 e 12 é:', alternativas: ['A) 80', 'B) 86', 'C) 92', 'D) 96'], correta: 3, explicacao: '8 × 12 = 96.' },
+            { id: 61, grupo: 'Matemática', enunciado: 'Um triângulo equilátero tem todos os lados:', alternativas: ['A) Diferentes', 'B) Iguais', 'C) Opcionais', 'D) Complementares'], correta: 1, explicacao: 'Triângulo equilátero tem todos os lados iguais.' },
+            { id: 62, grupo: 'Matemática', enunciado: 'O perímetro de um quadrado de lado 5 cm é:', alternativas: ['A) 10 cm', 'B) 15 cm', 'C) 20 cm', 'D) 25 cm'], correta: 2, explicacao: 'Perímetro = 4 × 5 = 20 cm.' },
+            { id: 63, grupo: 'Matemática', enunciado: 'A fração 3/4 em porcentagem é:', alternativas: ['A) 50%', 'B) 60%', 'C) 75%', 'D) 80%'], correta: 2, explicacao: '3/4 = 0,75 = 75%.' },
+            { id: 64, grupo: 'Matemática', enunciado: 'O resultado de 2³ + 3² é:', alternativas: ['A) 13', 'B) 15', 'C) 17', 'D) 19'], correta: 2, explicacao: '2³ = 8, 3² = 9, 8 + 9 = 17.' },
+            { id: 65, grupo: 'Matemática', enunciado: 'Uma hora tem quantos segundos?', alternativas: ['A) 3.000', 'B) 3.600', 'C) 4.000', 'D) 4.200'], correta: 1, explicacao: '1 hora = 60 minutos × 60 segundos = 3.600 segundos.' },
+
+            // ========================================
+            // CONHECIMENTOS ESPECÍFICOS (66-80)
+            // ========================================
+            { id: 66, grupo: 'Conhecimentos Específicos', enunciado: 'A Educação de Jovens e Adultos (EJA) é uma modalidade da:', alternativas: ['A) Educação infantil', 'B) Educação básica', 'C) Educação superior', 'D) Educação especial'], correta: 1, explicacao: 'A EJA é uma modalidade da educação básica.' },
+            { id: 67, grupo: 'Conhecimentos Específicos', enunciado: 'O ensino médio no Brasil tem duração de:', alternativas: ['A) 2 anos', 'B) 3 anos', 'C) 4 anos', 'D) 5 anos'], correta: 1, explicacao: 'O ensino médio tem duração de 3 anos.' },
+            { id: 68, grupo: 'Conhecimentos Específicos', enunciado: 'A Lei 13.005/2014 instituiu:', alternativas: ['A) O FUNDEB', 'B) O PNE', 'C) A BNCC', 'D) A LDB'], correta: 1, explicacao: 'A Lei 13.005/2014 instituiu o Plano Nacional de Educação.' },
+            { id: 69, grupo: 'Conhecimentos Específicos', enunciado: 'O Projeto Político-Pedagógico deve ser elaborado:', alternativas: ['A) Pela direção da escola', 'B) Com participação da comunidade escolar', 'C) Pelo MEC', 'D) Pela secretaria de educação'], correta: 1, explicacao: 'O PPP deve ser elaborado com participação da comunidade escolar.' },
+            { id: 70, grupo: 'Conhecimentos Específicos', enunciado: 'O conceito de "letramento" refere-se à:', alternativas: ['A) Capacidade de ler e escrever', 'B) Capacidade de usar a leitura e escrita na prática social', 'C) Capacidade de produzir textos', 'D) Capacidade de interpretar textos'], correta: 1, explicacao: 'Letramento é o uso da leitura e escrita na prática social.' },
+            { id: 71, grupo: 'Conhecimentos Específicos', enunciado: 'A educação inclusiva é garantida pela:', alternativas: ['A) Constituição Federal', 'B) LDB', 'C) BNCC', 'D) PNE'], correta: 0, explicacao: 'A educação inclusiva é garantida pela Constituição Federal.' },
+            { id: 72, grupo: 'Conhecimentos Específicos', enunciado: 'O Atendimento Educacional Especializado (AEE) é oferecido:', alternativas: ['A) Apenas em escolas especiais', 'B) Preferencialmente na rede regular', 'C) Em clínicas particulares', 'D) Em casa'], correta: 1, explicacao: 'O AEE é oferecido preferencialmente na rede regular.' },
+            { id: 73, grupo: 'Conhecimentos Específicos', enunciado: 'A metodologia de projetos no ensino fundamental:', alternativas: ['A) Desconsidera as disciplinas', 'B) Integra diferentes áreas do conhecimento', 'C) Apenas avalia os alunos', 'D) Substitui as provas'], correta: 1, explicacao: 'Projetos integram diferentes áreas do conhecimento.' },
+            { id: 74, grupo: 'Conhecimentos Específicos', enunciado: 'O Currículo Escolar deve considerar:', alternativas: ['A) Apenas o conteúdo programático', 'B) As diversidades e necessidades dos alunos', 'C) Apenas as avaliações', 'D) Apenas a BNCC'], correta: 1, explicacao: 'O currículo deve considerar as diversidades e necessidades dos alunos.' },
+            { id: 75, grupo: 'Conhecimentos Específicos', enunciado: 'A avaliação na educação infantil deve ser:', alternativas: ['A) Classificatória', 'B) Formativa e contínua', 'C) Somativa', 'D) Exclusivamente numérica'], correta: 1, explicacao: 'A avaliação na educação infantil é formativa e contínua.' },
+            { id: 76, grupo: 'Conhecimentos Específicos', enunciado: 'O ensino de Arte é obrigatório na:', alternativas: ['A) Educação infantil apenas', 'B) Educação básica', 'C) Ensino médio apenas', 'D) Educação superior'], correta: 1, explicacao: 'O ensino de Arte é obrigatório em toda a educação básica.' },
+            { id: 77, grupo: 'Conhecimentos Específicos', enunciado: 'A educação ambiental é um tema:', alternativas: ['A) Transversal', 'B) Exclusivo de uma disciplina', 'C) Opcional', 'D) Extraclasse'], correta: 0, explicacao: 'A educação ambiental é um tema transversal.' },
+            { id: 78, grupo: 'Conhecimentos Específicos', enunciado: 'O ensino de história do Brasil deve considerar:', alternativas: ['A) Apenas a versão oficial', 'B) As diferentes culturas e povos formadores', 'C) Apenas a colonização', 'D) Apenas a república'], correta: 1, explicacao: 'O ensino de história deve considerar as diferentes culturas e povos formadores.' },
+            { id: 79, grupo: 'Conhecimentos Específicos', enunciado: 'A Lei 11.769/08 tornou obrigatória:', alternativas: ['A) A educação infantil', 'B) A música na educação básica', 'C) O ensino de filosofia', 'D) A educação a distância'], correta: 1, explicacao: 'A Lei 11.769/08 tornou obrigatória a música na educação básica.' },
+            { id: 80, grupo: 'Conhecimentos Específicos', enunciado: 'A formação continuada dos professores é:', alternativas: ['A) Opcional', 'B) Direito e dever do professor', 'C) Apenas para professores da rede pública', 'D) Exclusiva da pós-graduação'], correta: 1, explicacao: 'A formação continuada é direito e dever do professor.' }
+        ];
 
         // ==========================================
-        // ESTADO DO SIMULADO
+        // CONTROLE DO SIMULADO
         // ==========================================
         let respostas = {};
         let eliminacoes = {};
