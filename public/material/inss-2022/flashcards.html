@@ -22,10 +22,23 @@
             padding: 1rem 0;
             border-bottom: 2px solid #e94560;
         }
-        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
         .header h1 { font-size: 1.5rem; font-weight: 700; }
-        .header a { color: #e94560; text-decoration: none; font-weight: 500; }
-        .header a:hover { text-decoration: underline; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-voltar-material {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
 
         .baralhos-grid {
             display: grid;
@@ -59,6 +72,31 @@
         .badge-especifico { display: inline-block; background: #e94560; color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.65rem; margin-top: 0.3rem; font-weight: 600; text-transform: uppercase; }
         .voltar { display: inline-block; margin-top: 1rem; color: #e94560; text-decoration: none; }
         .voltar:hover { text-decoration: underline; }
+        
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
+        .btn-voltar-material-footer {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-material-footer:hover {
+            background: #c73e54;
+            text-decoration: none !important;
+        }
+        
         footer {
             background: #0f0f1a;
             color: #c8c8d4;
@@ -69,14 +107,20 @@
         @media (max-width: 768px) {
             .baralhos-grid { grid-template-columns: 1fr; }
             .header h1 { font-size: 1.2rem; }
+            .header .container { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>Flashcards - INSS</h1>
-            <a href="/" id="linkVoltar">Voltar à loja</a>
+            <h1>🃏 Flashcards - INSS</h1>
+            <div class="header-actions">
+                <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material">
+                    📖 Voltar ao Material
+                </a>
+            </div>
         </div>
     </header>
 
@@ -234,7 +278,11 @@
                     <p>Clique em um baralho para começar a estudar</p>
                     <p style="font-size: 0.8rem; margin-top: 0.5rem;">Seu progresso é salvo automaticamente</p>
                 </div>
-                <a href="/" class="voltar">← Voltar à loja</a>
+                <div class="footer-actions">
+                    <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material-footer">
+                        📖 Voltar ao Material
+                    </a>
+                </div>
             `;
             
             container.innerHTML = html;
