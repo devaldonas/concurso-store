@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Mental - Direito Administrativo | INSS</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -15,13 +17,32 @@
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.8; }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-voltar-material {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
         .badge-inss {
             display: inline-block;
             background: #e94560;
@@ -73,6 +94,8 @@
         .card ul ul li::before { content: "◦"; color: #adb5bd; }
         @media (max-width: 768px) {
             body { padding: 1rem; }
+            .header { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
             .grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -80,10 +103,20 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Direito Administrativo - INSS</h1>
-            <p>Conteúdo programático - Edital INSS 2022</p>
+            <div>
+                <h1>📙 Direito Administrativo</h1>
+                <small>INSS 2022 - Técnico do Seguro Social</small>
+            </div>
+            <div class="header-actions">
+                <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material">
+                    📖 Voltar ao Material
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 1rem;">
             <span class="badge-inss">Conhecimentos Básicos (P1)</span>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Cerca de 6 questões | Peso 1,0</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6c757d;">Cerca de 6 questões | Peso 1,0</p>
         </div>
 
         <div class="grid">
@@ -157,5 +190,14 @@
             </div>
         </div>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        if (sessionId) {
+            document.querySelectorAll('a[href*="session_id"]').forEach(link => {
+                link.href = link.href.replace(/session_id=[^&]*/, `session_id=${sessionId}`);
+            });
+        }
+    </script>
 </body>
 </html>
