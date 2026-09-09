@@ -3,188 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSS 2026 - Concurso Store</title>
+    <title>Material - INSS 2022</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
-        
-        .header {
-            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
-            color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .header h1 { font-size: 1.8rem; }
-        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
-        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-        .btn-voltar-loja {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .btn-voltar-loja:hover {
-            background: rgba(255,255,255,0.25);
-            text-decoration: none !important;
-        }
-
-        .badge-inss { 
-            display: inline-block; 
-            background: #1a8a5c; 
-            color: white; 
-            padding: 4px 16px; 
-            border-radius: 20px; 
-            font-size: 0.8rem; 
-        }
-
-        .materiais-grid {
+        .material-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
         .material-card {
             background: white;
             padding: 1.5rem;
             border-radius: 12px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            cursor: pointer;
-            border: 2px solid transparent;
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
         .material-card:hover {
             transform: translateY(-4px);
-            border-color: #1a8a5c;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         }
-        .material-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .material-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #1a1a2e; }
+        .material-card h3 { color: #0f0f1a; margin-bottom: 0.5rem; }
         .material-card p { color: #6c757d; font-size: 0.9rem; }
-        .material-card .badge {
-            display: inline-block;
-            background: #1a8a5c;
+        .material-card .btn { margin-top: 1rem; width: 100%; }
+        .header-material {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
             color: white;
-            padding: 2px 12px;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .header-material h1 { margin-bottom: 0.5rem; }
+        .header-material p { opacity: 0.8; }
+        .badge-concurso {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 4px 16px;
             border-radius: 20px;
             font-size: 0.8rem;
+            font-weight: 600;
             margin-top: 0.5rem;
         }
-
-        .footer-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e9ecef;
-        }
-        .btn-voltar-loja-footer {
-            display: inline-block;
-            background: #6c757d;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
-        .btn-voltar-loja-footer:hover {
-            background: #5a6268;
-            text-decoration: none !important;
-        }
-
-        @media (max-width: 768px) { 
-            body { padding: 0; }
-            .container { padding: 1rem; }
-            .header { flex-direction: column; text-align: center; }
-            .header-actions { justify-content: center; width: 100%; }
-            .materiais-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-        }
+        .breadcrumb { margin: 1rem 0; color: #6c757d; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div>
-                <h1>📚 Material INSS 2026</h1>
-                <small>Instituto Nacional do Seguro Social</small>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="/images/concurso-store-icon.png" alt="Concurso Store" class="nav-logo">
+                    <span>Concurso Store</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/#produtos">Concursos</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                    <li><a href="/material/inss-2022/">Meu Material</a></li>
+                </ul>
             </div>
-            <div class="header-actions">
-                <a href="/" class="btn-voltar-loja">← Voltar à loja</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Início</a> / <a href="/#produtos">Concursos</a> / <span style="color: #0f0f1a;">INSS 2022</span>
+            </div>
+
+            <div class="header-material">
+                <h1>📚 Material INSS 2022</h1>
+                <p>Técnico do Seguro Social</p>
+                <span class="badge-concurso">✓ Material liberado</span>
+            </div>
+
+            <div class="material-grid">
+                <div class="material-card">
+                    <h3>🃏 Flashcards</h3>
+                    <p>295 cards para memorização</p>
+                    <a href="/material/inss-2022/flashcards.html?session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
+                </div>
+                <div class="material-card">
+                    <h3>🧠 Mapas Mentais</h3>
+                    <p>7 mapas para visualização do conteúdo</p>
+                    <a href="/material/inss-2022/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                </div>
+                <div class="material-card">
+                    <h3>📅 Guia de Revisão</h3>
+                    <p>Cronograma de 4 semanas</p>
+                    <a href="/material/inss-2022/guias/revisao-programada.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Guia</a>
+                </div>
+                <div class="material-card">
+                    <h3>📝 Simulado</h3>
+                    <p>120 questões - 3h30</p>
+                    <a href="/material/inss-2022/simulados/simulado-completo.html?session_id=<%= session_id %>" class="btn btn-primary">Fazer Simulado</a>
+                </div>
             </div>
         </div>
+    </main>
 
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
-            <span class="badge-inss">✓ Material liberado</span>
-            <span style="color: #6c757d; font-size: 0.9rem;">Técnico do Seguro Social</span>
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Concurso Store. Todos os direitos reservados.</p>
+            </div>
         </div>
-
-        <div class="materiais-grid">
-            <a href="/material/inss-2026/flashcards/?session_id=<%= session_id %>" class="material-card">
-                <div class="icon">🃏</div>
-                <h3>Flashcards</h3>
-                <p>120+ cards para memorização</p>
-                <span class="badge">Estudar Flashcards</span>
-            </a>
-
-            <a href="/material/inss-2026/mapas-mentais/?session_id=<%= session_id %>" class="material-card">
-                <div class="icon">🧠</div>
-                <h3>Mapas Mentais</h3>
-                <p>5 mapas para visualização</p>
-                <span class="badge">Ver Mapas</span>
-            </a>
-
-            <a href="/material/inss-2026/guias/revisao-programada.html?session_id=<%= session_id %>" class="material-card">
-                <div class="icon">📅</div>
-                <h3>Guia de Revisão</h3>
-                <p>Cronograma de 4 semanas</p>
-                <span class="badge">Ver Guia</span>
-            </a>
-
-            <a href="/material/inss-2026/simulados/simulado-completo.html?session_id=<%= session_id %>" class="material-card">
-                <div class="icon">📝</div>
-                <h3>Simulado</h3>
-                <p>80 questões - 5 horas</p>
-                <span class="badge">Fazer Simulado</span>
-            </a>
-        </div>
-
-        <div style="text-align: center; color: #6c757d; font-size: 0.9rem; margin-top: 1rem;">
-            <p>Material completo para sua preparação</p>
-        </div>
-
-        <div class="footer-actions">
-            <a href="/" class="btn-voltar-loja-footer">← Voltar à loja</a>
-        </div>
-    </div>
+    </footer>
 
     <script>
-        // Atualiza o link com o session_id da URL
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const sessionId = urlParams.get('session_id') || '';
-            
-            document.querySelectorAll('a[href*="session_id"]').forEach(link => {
-                link.href = link.href.replace(/session_id=[^&]*/, `session_id=${sessionId}`);
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        if (sessionId) {
+            document.querySelectorAll('a').forEach(link => {
+                if (link.href.includes('?')) {
+                    link.href += '&session_id=' + sessionId;
+                } else {
+                    link.href += '?session_id=' + sessionId;
+                }
             });
-        });
+        }
     </script>
 </body>
 </html>
