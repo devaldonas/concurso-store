@@ -45,14 +45,57 @@
         .alternativas li.selected { border-color: #6c5ce7; background: #e8f0fe; }
         .alternativas li.selected::before { content: "✓"; color: #6c5ce7; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
         .alternativas li .letra { font-weight: 700; color: #6c5ce7; margin-right: 0.5rem; }
+        
+        /* Estilo para alternativa ELIMINADA */
+        .alternativas li.eliminated {
+            text-decoration: line-through;
+            opacity: 0.5;
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        .alternativas li.eliminated::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.eliminated .letra {
+            color: #dc3545;
+        }
+        
         .btn-eliminar {
-            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
-            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
-            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 0.8rem;
         }
         .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
-        .btn-eliminar.eliminado { background: #28a745; }
+        /* Quando a alternativa está eliminada, o botão fica verde para indicar que pode ser desfeito */
+        .btn-eliminar.eliminado {
+            background: #28a745;
+        }
         .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .btn-eliminar.eliminado::after {
+            content: "↩";
+            font-size: 14px;
+        }
+        .btn-eliminar.eliminado .btn-text {
+            display: none;
+        }
+        
         .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
         .gabarito.visible { display: block; }
         .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
@@ -153,7 +196,6 @@
     <script>
         // ============================================
         // 80 QUESTÕES REAIS - SEDUC/MS 2022
-        // Baseado no edital da SEDUC/MS 2022
         // ============================================
         const questoes = [
             // LÍNGUA PORTUGUESA (1-20)
@@ -289,9 +331,11 @@
                 const letra = String.fromCharCode(65 + i);
                 const isSelected = respostas[`q${q.id}`] === i;
                 const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
-                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                let classes = ''; 
+                if (isSelected) classes += ' selected'; 
+                if (isEliminated) classes += ' eliminated';
                 const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
-                const btnText = isEliminated ? '✓' : '✕';
+                const btnText = isEliminated ? '↩' : '✕';
                 return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
             }).join('');
             container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de ${questoes.length}</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
