@@ -134,6 +134,7 @@
                 <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
                 <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
                 <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
                 <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
             </div>
             <div style="text-align: center; margin-top: 1rem;">
@@ -155,9 +156,7 @@
         // Baseado no edital da SEDUC/MS 2022
         // ============================================
         const questoes = [
-            // ========================================
             // LÍNGUA PORTUGUESA (1-20)
-            // ========================================
             { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa em que a palavra está corretamente acentuada:', alternativas: ['A) História', 'B) Ideia', 'C) Heroico', 'D) Feiura'], correta: 0, explicacao: '"História" é acentuada por ser proparoxítona.' },
             { id: 2, grupo: 'Língua Portuguesa', enunciado: 'A crase é corretamente utilizada na alternativa:', alternativas: ['A) Vou à São Paulo.', 'B) Ele se referiu a aquela situação.', 'C) Chegamos à conclusão correta.', 'D) Fomos a pé até a escola.'], correta: 2, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
             { id: 3, grupo: 'Língua Portuguesa', enunciado: '"Os alunos estudaram para a prova." - O termo "Os alunos" exerce função de:', alternativas: ['A) Sujeito', 'B) Objeto direto', 'C) Objeto indireto', 'D) Predicativo do sujeito'], correta: 0, explicacao: '"Os alunos" é o sujeito da oração.' },
@@ -179,9 +178,7 @@
             { id: 19, grupo: 'Língua Portuguesa', enunciado: 'A palavra "café" é acentuada por ser:', alternativas: ['A) Oxítona terminada em "e"', 'B) Paroxítona', 'C) Proparoxítona', 'D) Monossílaba tônica'], correta: 0, explicacao: '"Café" é oxítona terminada em "e", portanto acentuada.' },
             { id: 20, grupo: 'Língua Portuguesa', enunciado: 'A denotação é o sentido:', alternativas: ['A) Literal da palavra', 'B) Figurado da palavra', 'C) Subjetivo', 'D) Metafórico'], correta: 0, explicacao: 'Denotação é o sentido literal, objetivo da palavra.' },
 
-            // ========================================
             // CONHECIMENTOS PEDAGÓGICOS (21-40)
-            // ========================================
             { id: 21, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A BNCC (Base Nacional Comum Curricular) é um documento que:', alternativas: ['A) Define os conteúdos mínimos para cada estado', 'B) Orienta a elaboração dos currículos escolares', 'C) Substitui os currículos estaduais', 'D) É obrigatória apenas para escolas públicas'], correta: 1, explicacao: 'A BNCC orienta a elaboração dos currículos, não os substitui.' },
             { id: 22, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A Lei de Diretrizes e Bases da Educação Nacional (LDB) é a Lei:', alternativas: ['A) 8.069/90', 'B) 9.394/96', 'C) 10.639/03', 'D) 11.645/08'], correta: 1, explicacao: 'A LDB é a Lei 9.394/96.' },
             { id: 23, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O Plano Nacional de Educação (PNE) estabelece metas para:', alternativas: ['A) 5 anos', 'B) 10 anos', 'C) 15 anos', 'D) 20 anos'], correta: 1, explicacao: 'O PNE tem vigência de 10 anos.' },
@@ -203,9 +200,7 @@
             { id: 39, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O ensino de História e Cultura Afro-Brasileira é obrigatório pela Lei:', alternativas: ['A) 9.394/96', 'B) 10.639/03', 'C) 11.645/08', 'D) 8.069/90'], correta: 1, explicacao: 'A Lei 10.639/03 torna obrigatório o ensino de História e Cultura Afro-Brasileira.' },
             { id: 40, grupo: 'Conhecimentos Pedagógicos', enunciado: 'A BNCC organiza os conteúdos por áreas do conhecimento e:', alternativas: ['A) Disciplinas isoladas', 'B) Competências e habilidades', 'C) Faixas etárias', 'D) Ciclos de aprendizagem'], correta: 1, explicacao: 'A BNCC organiza os conteúdos por competências e habilidades.' },
 
-            // ========================================
             // LEGISLAÇÃO EDUCACIONAL (41-55)
-            // ========================================
             { id: 41, grupo: 'Legislação Educacional', enunciado: 'A LDB estabelece que a educação básica é composta por:', alternativas: ['A) Educação infantil e ensino fundamental', 'B) Educação infantil, ensino fundamental e ensino médio', 'C) Ensino fundamental e médio', 'D) Educação infantil e ensino médio'], correta: 1, explicacao: 'A LDB define educação básica como EI, EF e EM.' },
             { id: 42, grupo: 'Legislação Educacional', enunciado: 'O piso salarial nacional dos professores é estabelecido pela Lei:', alternativas: ['A) 9.394/96', 'B) 11.738/08', 'C) 10.639/03', 'D) 8.069/90'], correta: 1, explicacao: 'A Lei 11.738/08 estabelece o piso salarial dos professores.' },
             { id: 43, grupo: 'Legislação Educacional', enunciado: 'O FUNDEB é o fundo que financia:', alternativas: ['A) Apenas a educação superior', 'B) A educação básica', 'C) A educação especial', 'D) A educação infantil'], correta: 1, explicacao: 'O FUNDEB financia toda a educação básica.' },
@@ -222,9 +217,7 @@
             { id: 54, grupo: 'Legislação Educacional', enunciado: 'A carga horária mínima anual do ensino fundamental é de:', alternativas: ['A) 700 horas', 'B) 800 horas', 'C) 900 horas', 'D) 1000 horas'], correta: 1, explicacao: 'O ensino fundamental tem carga horária mínima de 800 horas.' },
             { id: 55, grupo: 'Legislação Educacional', enunciado: 'O Conselho de Alimentação Escolar (CAE) é responsável por:', alternativas: ['A) Aprovar cardápios', 'B) Fiscalizar a merenda escolar', 'C) Administrar a cantina', 'D) Contratar nutricionistas'], correta: 1, explicacao: 'O CAE fiscaliza a merenda escolar.' },
 
-            // ========================================
             // MATEMÁTICA (56-65)
-            // ========================================
             { id: 56, grupo: 'Matemática', enunciado: 'Qual é o resultado de 20% de 150?', alternativas: ['A) 20', 'B) 25', 'C) 30', 'D) 35'], correta: 2, explicacao: '150 × 20/100 = 30.' },
             { id: 57, grupo: 'Matemática', enunciado: 'A média aritmética de 4, 6, 8 e 10 é:', alternativas: ['A) 6', 'B) 7', 'C) 8', 'D) 9'], correta: 1, explicacao: '(4+6+8+10)/4 = 28/4 = 7.' },
             { id: 58, grupo: 'Matemática', enunciado: 'Na proporção 2/3 = 4/6, os extremos são:', alternativas: ['A) 2 e 3', 'B) 3 e 4', 'C) 2 e 6', 'D) 4 e 6'], correta: 2, explicacao: 'Em 2/3 = 4/6, os extremos são 2 e 6; os meios são 3 e 4.' },
@@ -236,9 +229,7 @@
             { id: 64, grupo: 'Matemática', enunciado: 'O resultado de 2³ + 3² é:', alternativas: ['A) 13', 'B) 15', 'C) 17', 'D) 19'], correta: 2, explicacao: '2³ = 8, 3² = 9, 8 + 9 = 17.' },
             { id: 65, grupo: 'Matemática', enunciado: 'Uma hora tem quantos segundos?', alternativas: ['A) 3.000', 'B) 3.600', 'C) 4.000', 'D) 4.200'], correta: 1, explicacao: '1 hora = 60 minutos × 60 segundos = 3.600 segundos.' },
 
-            // ========================================
             // CONHECIMENTOS ESPECÍFICOS (66-80)
-            // ========================================
             { id: 66, grupo: 'Conhecimentos Específicos', enunciado: 'A Educação de Jovens e Adultos (EJA) é uma modalidade da:', alternativas: ['A) Educação infantil', 'B) Educação básica', 'C) Educação superior', 'D) Educação especial'], correta: 1, explicacao: 'A EJA é uma modalidade da educação básica.' },
             { id: 67, grupo: 'Conhecimentos Específicos', enunciado: 'O ensino médio no Brasil tem duração de:', alternativas: ['A) 2 anos', 'B) 3 anos', 'C) 4 anos', 'D) 5 anos'], correta: 1, explicacao: 'O ensino médio tem duração de 3 anos.' },
             { id: 68, grupo: 'Conhecimentos Específicos', enunciado: 'A Lei 13.005/2014 instituiu:', alternativas: ['A) O FUNDEB', 'B) O PNE', 'C) A BNCC', 'D) A LDB'], correta: 1, explicacao: 'A Lei 13.005/2014 instituiu o Plano Nacional de Educação.' },
@@ -319,8 +310,13 @@
         function finalizarSimulado() {
             const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
-            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
-            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('totalRespondidas').textContent = respondidas; 
+            document.getElementById('totalAcertos').textContent = acertos; 
+            document.getElementById('totalErros').textContent = erros; 
+            document.getElementById('totalEliminacoes').textContent = totalEliminacoes;
+            document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; 
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
@@ -330,7 +326,7 @@
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
             if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
             const evolucao = JSON.parse(localStorage.getItem('simulado_seduc-ms-2022_evolucao') || '[]');
-            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas });
             localStorage.setItem('simulado_seduc-ms-2022_evolucao', JSON.stringify(evolucao));
             alert('✅ Evolução salva com sucesso!'); fecharResumo();
         }
