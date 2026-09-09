@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado TJ/SP 2024 - 80 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #6c3483; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #6c3483; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #6c3483; }
+        .questao .numero { display: inline-block; background: #6c3483; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #6c3483; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #6c3483; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #6c3483; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
+            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
+        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #6c3483; color: white; }
+        .btn-primary:hover { background: #5a2d75; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #6c3483; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #6c3483; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
+        @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simulado TJ/SP 2024</h1>
+            <p>Escrevente - 80 questões</p>
+            <div class="stats">
+                <span>80 questões</span>
+                <span>4h</span>
+                <span>80 pontos</span>
+            </div>
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 80</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+    <a href="/material/tj-sp-2024/" class="btn-voltar-material">← Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DADOS DO SIMULADO - 80 QUESTÕES TJ/SP
+        // ==========================================
+        const questoes = [
+            // LÍNGUA PORTUGUESA (1-25)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A justiça é a base de uma sociedade democrática."', alternativas: ['A justiça é importante para a democracia', 'A justiça é irrelevante', 'A democracia não depende da justiça', 'A justiça é opcional', 'A justiça é prejudicial'], correta: 0, explicacao: 'O texto indica que a justiça é fundamental para a democracia.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "A lei é a luz que guia a sociedade."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "lei" e "luz".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 10 anos que trabalho', 'Faz 10 anos que trabalho', 'Fazer 10 anos que trabalho', 'Fizeram 10 anos que trabalho', 'Fazem 10 ano que trabalho'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "justiça" é classificada como:', alternativas: ['Substantivo abstrato', 'Substantivo concreto', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Justiça" é um substantivo abstrato.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a escola', 'Chegamos à conclusão', 'Referiu-se a aquela pessoa', 'Fui a São Paulo', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Divisão em parágrafos', 'Presença de títulos', 'Uso de conectivos'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'Qual a função sintática do termo destacado: "O juiz, que analisou o caso, proferiu a sentença."', alternativas: ['Oração subordinada adjetiva', 'Oração coordenada', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Aposto'], correta: 0, explicacao: 'A oração "que analisou o caso" é uma subordinada adjetiva restritiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras', 'Relação entre sons', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa com erro de regência:', alternativas: ['Assisti ao filme', 'Prefiro estudar a trabalhar', 'Obedeço ao chefe', 'Namoro com ela', 'Cheguei em casa'], correta: 4, explicacao: 'O correto é "Cheguei a casa" (regência do verbo chegar).' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'O que é denotação?', alternativas: ['Sentido literal da palavra', 'Sentido figurado da palavra', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 0, explicacao: 'Denotação é o sentido literal da palavra.' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'Em "João, o juiz, analisou o caso", a vírgula separa:', alternativas: ['Aposto', 'Vocativo', 'Oração intercalada', 'Adjunto adverbial', 'Enumeração'], correta: 0, explicacao: 'A vírgula separa o aposto explicativo "o juiz".' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'O que é um período composto?', alternativas: ['Possui duas ou mais orações', 'Possui apenas uma oração', 'Possui um único verbo', 'Possui apenas sujeito simples', 'Não possui verbo'], correta: 0, explicacao: 'Período composto possui duas ou mais orações.' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'Qual a classificação da palavra "rapidamente"?', alternativas: ['Advérbio de modo', 'Advérbio de tempo', 'Advérbio de lugar', 'Adjetivo', 'Substantivo'], correta: 0, explicacao: '"Rapidamente" é advérbio de modo.' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'O que é uma conjunção?', alternativas: ['Palavra que liga orações', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Conjunção liga orações ou termos de mesma função.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'O que é redação oficial?', alternativas: ['Forma padronizada de escrever documentos oficiais', 'Texto literário', 'Poesia', 'Texto publicitário', 'Texto informal'], correta: 0, explicacao: 'Redação oficial é a forma padronizada de escrever documentos oficiais.' },
+            // CONHECIMENTOS EM DIREITO (26-50)
+            { id: 26, grupo: 'Conhecimentos em Direito', enunciado: 'O que é o Código Civil?', alternativas: ['Conjunto de normas que regem as relações civis', 'Conjunto de normas penais', 'Conjunto de normas trabalhistas', 'Conjunto de normas tributárias', 'Conjunto de normas administrativas'], correta: 0, explicacao: 'Código Civil rege as relações civis entre pessoas.' },
+            { id: 27, grupo: 'Conhecimentos em Direito', enunciado: 'O que é um contrato?', alternativas: ['Acordo entre partes com efeitos jurídicos', 'Uma lei', 'Um crime', 'Uma sentença', 'Um ato unilateral'], correta: 0, explicacao: 'Contrato é um acordo entre partes com efeitos jurídicos.' },
+            { id: 28, grupo: 'Conhecimentos em Direito', enunciado: 'O que é a prescrição?', alternativas: ['Perda do direito pelo decurso do tempo', 'Perda do direito pela inércia', 'Perda do direito pela morte', 'Perda do direito pela renúncia', 'Perda do direito pela cessão'], correta: 0, explicacao: 'Prescrição é a perda do direito pelo decurso do tempo.' },
+            { id: 29, grupo: 'Conhecimentos em Direito', enunciado: 'O que é a posse?', alternativas: ['Exercício de fato de um direito de propriedade', 'A propriedade', 'A compra de um bem', 'A venda de um bem', 'A doação de um bem'], correta: 0, explicacao: 'Posse é o exercício de fato de um direito de propriedade.' },
+            { id: 30, grupo: 'Conhecimentos em Direito', enunciado: 'O que é o direito de propriedade?', alternativas: ['Direito de usar, gozar e dispor de um bem', 'Direito de viver', 'Direito de trabalhar', 'Direito de estudar', 'Direito de votar'], correta: 0, explicacao: 'Propriedade é o direito de usar, gozar e dispor de um bem.' },
+            // RACIOCÍNIO LÓGICO (51-65)
+            { id: 51, grupo: 'Raciocínio Lógico', enunciado: 'O que é uma proposição lógica?', alternativas: ['Frase que pode ser verdadeira ou falsa', 'Frase interrogativa', 'Frase exclamativa', 'Frase imperativa', 'Frase declarativa'], correta: 0, explicacao: 'Proposição é uma frase que pode ser classificada como verdadeira ou falsa.' },
+            { id: 52, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "e" (∧) é verdadeiro quando:', alternativas: ['Ambas proposições são verdadeiras', 'Pelo menos uma é verdadeira', 'A primeira é verdadeira', 'A segunda é verdadeira', 'Nenhuma é verdadeira'], correta: 0, explicacao: 'A conjunção é verdadeira apenas quando ambas proposições são verdadeiras.' },
+            // INFORMÁTICA (66-80)
+            { id: 66, grupo: 'Informática', enunciado: 'O que é um sistema operacional?', alternativas: ['Software que gerencia recursos do computador', 'Hardware', 'Um navegador', 'Um editor de texto', 'Uma planilha eletrônica'], correta: 0, explicacao: 'Sistema operacional é um software que gerencia os recursos de hardware e software do computador.' },
+            { id: 67, grupo: 'Informática', enunciado: 'O que é o Windows 10?', alternativas: ['Sistema operacional da Microsoft', 'Um navegador', 'Um editor de texto', 'Uma planilha', 'Um antivírus'], correta: 0, explicacao: 'Windows 10 é um sistema operacional da Microsoft.' }
+        ];
+
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_tjsp_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_tjsp_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_tjsp_respostas'); const e = localStorage.getItem('simulado_tjsp_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
+
+        function renderizarQuestao(index) {
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
+            }).join('');
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 80</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_tjsp_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_tjsp_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
+        }
+
+        carregarEstado(); renderizarQuestao(0);
+    </script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado CAIXA 2024 - 80 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #004d8b; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #004d8b; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #004d8b; }
+        .questao .numero { display: inline-block; background: #004d8b; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .alternativas li .texto-alternativa {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected {
+            border-color: #004d8b;
+            background: #e8f0fe;
+        }
+        .alternativas li.selected::before {
+            content: "✓";
+            color: #004d8b;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.eliminated {
+            text-decoration: line-through;
+            opacity: 0.4;
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        .alternativas li.eliminated::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.correct {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+        .alternativas li.correct::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.wrong {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+        .alternativas li.wrong::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li .letra {
+            font-weight: 700;
+            color: #004d8b;
+            margin-right: 0.5rem;
+        }
+        .btn-eliminar {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 0.8rem;
+            line-height: 1;
+        }
+        .btn-eliminar:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+        .btn-eliminar.eliminado {
+            background: #28a745;
+        }
+        .btn-eliminar.eliminado:hover {
+            background: #1e7e34;
+        }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #004d8b; color: white; }
+        .btn-primary:hover { background: #003366; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-danger:hover { background: #c82333; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #004d8b; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #004d8b; }
+        @media (max-width: 768px) { 
+            body { padding: 1rem; } 
+            .btn { width: 100%; max-width: 250px; }
+            .btn-eliminar {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .alternativas li {
+                padding: 0.6rem 0.6rem 0.6rem 2.5rem;
+                font-size: 0.85rem;
+            }
+            .btn-eliminar {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simulado CAIXA 2024</h1>
+            <p>Técnico Bancário - 80 questões</p>
+            <div class="stats">
+                <span>80 questões</span>
+                <span>3h30</span>
+                <span>80 pontos</span>
+            </div>
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 80</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+
+        <!-- Resumo do Simulado -->
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item">
+                    <div class="numero azul" id="totalRespondidas">0</div>
+                    <div class="label">Respondidas</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="numero verde" id="totalAcertos">0</div>
+                    <div class="label">Acertos</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="numero vermelho" id="totalErros">0</div>
+                    <div class="label">Erros</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="numero amarelo" id="totalEliminacoes">0</div>
+                    <div class="label">Eliminações</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="numero azul" id="totalTaxa">0%</div>
+                    <div class="label">Taxa de Acerto</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+                <a href="/material/caixa-2024/" class="btn btn-voltar-material">← Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3 style="margin-bottom: 1rem;">✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DADOS DO SIMULADO - 80 QUESTÕES
+        // ==========================================
+        const questoes = [
+            // LÍNGUA PORTUGUESA (1-20)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa que apresenta a correta classificação da palavra "educação" na frase: "A educação transforma vidas."', alternativas: ['Sujeito simples', 'Objeto direto', 'Predicativo do sujeito', 'Adjunto adnominal', 'Núcleo do predicado'], correta: 0, explicacao: '"Educação" é o sujeito da oração, pois é o termo sobre o qual se declara algo.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem presente em: "O tempo voa."', alternativas: ['Metáfora', 'Personificação', 'Hipérbole', 'Comparação', 'Ironia'], correta: 1, explicacao: 'Personificação atribui características humanas a um ser inanimado (o tempo).' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 10 anos que estudo', 'Faz 10 anos que estudo', 'Fazer 10 anos que estudo', 'Fizeram 10 anos que estudo', 'Fazem 10 ano que estudo'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "inaceitável" é formada pelo processo de:', alternativas: ['Derivação prefixal', 'Derivação sufixal', 'Derivação parassintética', 'Composição', 'Derivação regressiva'], correta: 0, explicacao: '"Inaceitável" é formada pelo prefixo "in-" + "aceitável".' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a escola', 'Chegamos à conclusão', 'Referiu-se a aquela pessoa', 'Fui a Paris', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Divisão em parágrafos', 'Presença de títulos', 'Uso de conectivos'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'A palavra "amor" é classificada como:', alternativas: ['Substantivo abstrato', 'Substantivo concreto', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Amor" é um substantivo abstrato, pois nomeia um sentimento.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'Qual a função sintática do termo destacado: "Os alunos, que estudaram muito, foram aprovados."', alternativas: ['Oração subordinada adjetiva', 'Oração coordenada', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Aposto'], correta: 0, explicacao: 'A oração "que estudaram muito" é uma subordinada adjetiva restritiva.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras', 'Relação entre sons', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa que apresenta erro de regência:', alternativas: ['Assisti ao filme', 'Prefiro estudar a trabalhar', 'Obedeço ao chefe', 'Namoro com ela', 'Cheguei em casa'], correta: 4, explicacao: 'O correto é "Cheguei a casa" (regência do verbo chegar).' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'O que é denotação?', alternativas: ['Sentido literal da palavra', 'Sentido figurado da palavra', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 0, explicacao: 'Denotação é o sentido literal da palavra.' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'Em "João, o melhor aluno, foi premiado", a vírgula separa:', alternativas: ['Aposto', 'Vocativo', 'Oração intercalada', 'Adjunto adverbial', 'Enumeração'], correta: 0, explicacao: 'A vírgula separa o aposto explicativo "o melhor aluno".' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'O que é um período composto?', alternativas: ['Possui duas ou mais orações', 'Possui apenas uma oração', 'Possui um único verbo', 'Possui apenas sujeito simples', 'Não possui verbo'], correta: 0, explicacao: 'Período composto possui duas ou mais orações.' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'Qual a classificação da palavra "felizmente"?', alternativas: ['Advérbio de modo', 'Advérbio de tempo', 'Advérbio de lugar', 'Adjetivo', 'Substantivo'], correta: 0, explicacao: '"Felizmente" é advérbio de modo, modificando o verbo.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'O que é uma conjunção?', alternativas: ['Palavra que liga orações', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Conjunção liga orações ou termos de mesma função.' },
+            // MATEMÁTICA (21-35)
+            { id: 21, grupo: 'Matemática', enunciado: 'Calcule o valor de x: 3x + 7 = 22', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
+            { id: 22, grupo: 'Matemática', enunciado: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
+            { id: 23, grupo: 'Matemática', enunciado: 'Qual a área de um círculo com raio 4?', alternativas: ['4π', '8π', '12π', '16π', '20π'], correta: 3, explicacao: 'A = π × r² = π × 16 = 16π' },
+            { id: 24, grupo: 'Matemática', enunciado: 'O que é porcentagem?', alternativas: ['Razão centesimal', 'Razão decimal', 'Razão fracionária', 'Razão inteira', 'Razão mista'], correta: 0, explicacao: 'Porcentagem é uma razão centesimal representada por %.' },
+            { id: 25, grupo: 'Matemática', enunciado: 'Qual a fórmula do teorema de Pitágoras?', alternativas: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b × c', 'a² = b² × c²'], correta: 0, explicacao: 'Teorema de Pitágoras: a² = b² + c².' },
+            { id: 26, grupo: 'Matemática', enunciado: 'Qual a área de um triângulo com base 4 e altura 3?', alternativas: ['6', '8', '10', '12', '14'], correta: 0, explicacao: 'A = (b × h)/2 = (4 × 3)/2 = 6' },
+            { id: 27, grupo: 'Matemática', enunciado: 'O que é uma função linear?', alternativas: ['f(x) = ax + b', 'f(x) = ax² + bx + c', 'f(x) = a^x', 'f(x) = log_a(x)', 'f(x) = sen(x)'], correta: 0, explicacao: 'Função linear é do tipo f(x) = ax + b.' },
+            { id: 28, grupo: 'Matemática', enunciado: 'Qual a média aritmética de 4, 6, 8 e 10?', alternativas: ['6', '7', '8', '9', '10'], correta: 1, explicacao: '(4+6+8+10)/4 = 28/4 = 7' },
+            { id: 29, grupo: 'Matemática', enunciado: 'O que é regra de três simples?', alternativas: ['Método de proporcionalidade', 'Método de soma', 'Método de subtração', 'Método de multiplicação', 'Método de divisão'], correta: 0, explicacao: 'Regra de três simples é um método para resolver problemas de proporcionalidade.' },
+            { id: 30, grupo: 'Matemática', enunciado: 'Qual o volume de um cubo com aresta 3?', alternativas: ['9', '18', '27', '36', '45'], correta: 2, explicacao: 'V = a³ = 3³ = 27' },
+            // CONHECIMENTOS BANCÁRIOS (36-55)
+            { id: 36, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o Sistema Financeiro Nacional (SFN)?', alternativas: ['Conjunto de instituições e instrumentos financeiros', 'Apenas o Banco Central', 'Apenas os bancos comerciais', 'Apenas a CVM', 'Apenas a Susep'], correta: 0, explicacao: 'SFN é o conjunto de instituições e instrumentos financeiros que viabilizam a transferência de recursos.' },
+            { id: 37, grupo: 'Conhecimentos Bancários', enunciado: 'Qual a função do Banco Central (BACEN)?', alternativas: ['Executar a política monetária', 'Fiscalizar bancos', 'Emitir moeda', 'Todas as anteriores', 'Nenhuma das anteriores'], correta: 3, explicacao: 'BACEN executa a política monetária, fiscaliza os bancos e emite moeda.' },
+            { id: 38, grupo: 'Conhecimentos Bancários', enunciado: 'O que é a taxa SELIC?', alternativas: ['Taxa básica de juros da economia', 'Taxa de juros dos bancos', 'Taxa de câmbio', 'Taxa de inflação', 'Taxa de lucro'], correta: 0, explicacao: 'SELIC é a taxa básica de juros da economia.' },
+            { id: 39, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o PIX?', alternativas: ['Sistema de pagamentos instantâneos', 'Sistema de transferência bancária', 'Sistema de cartão de crédito', 'Sistema de investimento', 'Sistema de empréstimo'], correta: 0, explicacao: 'PIX é o sistema de pagamentos instantâneos do Banco Central.' },
+            { id: 40, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o CDB?', alternativas: ['Certificado de Depósito Bancário', 'Certificado de Débito Bancário', 'Certificado de Direito Bancário', 'Certificado de Dívida Bancária', 'Certificado de Desconto Bancário'], correta: 0, explicacao: 'CDB é o Certificado de Depósito Bancário, um título de renda fixa.' },
+            { id: 41, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o LCI?', alternativas: ['Letra de Crédito Imobiliário', 'Letra de Câmbio Imobiliário', 'Letra de Crédito Internacional', 'Letra de Câmbio Internacional', 'Letra de Crédito Industrial'], correta: 0, explicacao: 'LCI é a Letra de Crédito Imobiliário, isenta de IR para PF.' },
+            { id: 42, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o spread bancário?', alternativas: ['Diferença entre taxa de captação e empréstimo', 'Taxa de juros', 'Taxa de inflação', 'Imposto bancário', 'Tarifa bancária'], correta: 0, explicacao: 'Spread é a diferença entre a taxa que o banco paga e a que cobra.' },
+            { id: 43, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o FGTS?', alternativas: ['Fundo de Garantia do Tempo de Serviço', 'Fundo de Garantia do Trabalhador', 'Fundo de Garantia do Salário', 'Fundo de Garantia do Serviço', 'Fundo de Garantia do Tempo'], correta: 0, explicacao: 'FGTS é o Fundo de Garantia do Tempo de Serviço.' },
+            { id: 44, grupo: 'Conhecimentos Bancários', enunciado: 'O que é a inflação?', alternativas: ['Aumento generalizado dos preços', 'Diminuição dos preços', 'Aumento do PIB', 'Diminuição do PIB', 'Aumento do desemprego'], correta: 0, explicacao: 'Inflação é o aumento generalizado e contínuo dos preços.' },
+            { id: 45, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o IPCA?', alternativas: ['Índice de Preços ao Consumidor Amplo', 'Índice de Preços ao Consumidor', 'Índice de Preços ao Atacado', 'Índice de Preços ao Consumidor Amplo', 'Índice de Preços ao Produtor'], correta: 0, explicacao: 'IPCA é o Índice de Preços ao Consumidor Amplo.' },
+            { id: 46, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o cheque especial?', alternativas: ['Linha de crédito pré-aprovada', 'Empréstimo com garantia', 'Financiamento imobiliário', 'Cartão de crédito', 'Conta poupança'], correta: 0, explicacao: 'Cheque especial é uma linha de crédito pré-aprovada para PF.' },
+            { id: 47, grupo: 'Conhecimentos Bancários', enunciado: 'O que é o TED?', alternativas: ['Transferência Eletrônica Disponível', 'Transferência de Débito', 'Transferência de Crédito', 'Transferência Eletrônica de Dinheiro', 'Transferência Eletrônica de Documentos'], correta: 0, explicacao: 'TED é a Transferência Eletrônica Disponível.' },
+            // RACIOCÍNIO LÓGICO (56-70)
+            { id: 56, grupo: 'Raciocínio Lógico', enunciado: 'O que é uma proposição lógica?', alternativas: ['Frase que pode ser verdadeira ou falsa', 'Frase interrogativa', 'Frase exclamativa', 'Frase imperativa', 'Frase declarativa'], correta: 0, explicacao: 'Proposição é uma frase que pode ser classificada como verdadeira ou falsa.' },
+            { id: 57, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "e" (∧) é verdadeiro quando:', alternativas: ['Ambas proposições são verdadeiras', 'Pelo menos uma é verdadeira', 'A primeira é verdadeira', 'A segunda é verdadeira', 'Nenhuma é verdadeira'], correta: 0, explicacao: 'A conjunção é verdadeira apenas quando ambas proposições são verdadeiras.' },
+            { id: 58, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "ou" (∨) é falso quando:', alternativas: ['Ambas proposições são falsas', 'Ambas proposições são verdadeiras', 'A primeira é falsa', 'A segunda é falsa', 'Pelo menos uma é falsa'], correta: 0, explicacao: 'A disjunção é falsa apenas quando ambas proposições são falsas.' },
+            { id: 59, grupo: 'Raciocínio Lógico', enunciado: 'O que é uma tautologia?', alternativas: ['Proposição sempre verdadeira', 'Proposição sempre falsa', 'Proposição que pode ser verdadeira ou falsa', 'Proposição com uma variável', 'Proposição com duas variáveis'], correta: 0, explicacao: 'Tautologia é uma proposição composta sempre verdadeira.' },
+            { id: 60, grupo: 'Raciocínio Lógico', enunciado: 'O que é um conjunto?', alternativas: ['Agrupamento de elementos', 'Agrupamento de números', 'Agrupamento de letras', 'Agrupamento de palavras', 'Agrupamento de símbolos'], correta: 0, explicacao: 'Conjunto é um agrupamento de elementos com características comuns.' },
+            { id: 61, grupo: 'Raciocínio Lógico', enunciado: 'Qual a negação de "Todos os alunos passaram"?', alternativas: ['Nenhum aluno passou', 'Algum aluno não passou', 'Algum aluno passou', 'Todos os alunos não passaram', 'Os alunos passaram'], correta: 1, explicacao: 'A negação de "todos" é "algum não".' },
+            // ATUALIDADES (71-80)
+            { id: 71, grupo: 'Atualidades', enunciado: 'O que é o PIB?', alternativas: ['Produto Interno Bruto', 'Produto Interno Líquido', 'Produto Nacional Bruto', 'Produto Nacional Líquido', 'Produto Interno Total'], correta: 0, explicacao: 'PIB é o Produto Interno Bruto, soma de todos os bens e serviços produzidos no país.' },
+            { id: 72, grupo: 'Atualidades', enunciado: 'O que é a inflação?', alternativas: ['Aumento generalizado dos preços', 'Diminuição dos preços', 'Aumento do PIB', 'Diminuição do PIB', 'Aumento do desemprego'], correta: 0, explicacao: 'Inflação é o aumento generalizado e contínuo dos preços.' },
+            { id: 73, grupo: 'Atualidades', enunciado: 'O que é o IPCA?', alternativas: ['Índice Nacional de Preços ao Consumidor Amplo', 'Índice de Preços ao Consumidor', 'Índice de Preços ao Atacado', 'Índice de Preços ao Produtor', 'Índice Nacional de Preços'], correta: 0, explicacao: 'IPCA é o Índice Nacional de Preços ao Consumidor Amplo.' },
+            { id: 74, grupo: 'Atualidades', enunciado: 'O que é a taxa SELIC?', alternativas: ['Taxa básica de juros da economia', 'Taxa de juros dos bancos', 'Taxa de câmbio', 'Taxa de inflação', 'Taxa de lucro'], correta: 0, explicacao: 'SELIC é a taxa básica de juros da economia.' },
+            { id: 75, grupo: 'Atualidades', enunciado: 'O que é o desemprego?', alternativas: ['Pessoas sem trabalho que procuram emprego', 'Pessoas sem trabalho', 'Pessoas aposentadas', 'Pessoas estudantes', 'Pessoas em idade escolar'], correta: 0, explicacao: 'Desemprego são pessoas que estão sem trabalho e procuram emprego.' },
+            { id: 76, grupo: 'Atualidades', enunciado: 'O que é a renda per capita?', alternativas: ['Renda média por pessoa', 'Renda total do país', 'Renda do governo', 'Renda das empresas', 'Renda do setor externo'], correta: 0, explicacao: 'Renda per capita é a renda média por pessoa em um país ou região.' },
+            { id: 77, grupo: 'Atualidades', enunciado: 'O que é a balança comercial?', alternativas: ['Diferença entre exportações e importações', 'Diferença entre receitas e despesas', 'Diferença entre ativos e passivos', 'Diferença entre PIB e PNB', 'Diferença entre despesas e receitas'], correta: 0, explicacao: 'Balança comercial é a diferença entre exportações e importações.' },
+            { id: 78, grupo: 'Atualidades', enunciado: 'O que é a dívida pública?', alternativas: ['Total de débitos do governo', 'Total de débitos dos bancos', 'Total de débitos das empresas', 'Total de débitos das famílias', 'Total de débitos do setor externo'], correta: 0, explicacao: 'Dívida pública é o total de débitos do governo.' },
+            { id: 79, grupo: 'Atualidades', enunciado: 'O que é o PIB per capita?', alternativas: ['PIB dividido pela população', 'PIB total', 'PIB do governo', 'PIB das empresas', 'PIB do setor externo'], correta: 0, explicacao: 'PIB per capita é o PIB dividido pela população.' },
+            { id: 80, grupo: 'Atualidades', enunciado: 'O que é o superávit primário?', alternativas: ['Economia do governo para pagar juros', 'Economia das empresas', 'Economia das famílias', 'Economia do setor externo', 'Economia dos bancos'], correta: 0, explicacao: 'Superávit primário é a economia do governo para pagar juros da dívida.' }
+        ];
+
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        // ==========================================
+        // FUNÇÕES DE INTERAÇÃO
+        // ==========================================
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) {
+                delete respostas[key];
+            } else {
+                respostas[key] = index;
+                // Se a alternativa estiver eliminada, remove a eliminação
+                if (eliminacoes[key] && eliminacoes[key].includes(index)) {
+                    const idx = eliminacoes[key].indexOf(index);
+                    eliminacoes[key].splice(idx, 1);
+                    if (eliminacoes[key].length === 0) delete eliminacoes[key];
+                }
+            }
+            salvarEstado();
+            renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation(); // Impede que o clique no botão selecione a alternativa
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) {
+                eliminacoes[key].splice(idx, 1);
+                if (eliminacoes[key].length === 0) delete eliminacoes[key];
+            } else {
+                eliminacoes[key].push(index);
+                // Se já tinha esta alternativa selecionada, desmarca
+                if (respostas[key] === index) {
+                    delete respostas[key];
+                }
+            }
+            salvarEstado();
+            renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() {
+            localStorage.setItem('simulado_caixa_respostas', JSON.stringify(respostas));
+            localStorage.setItem('simulado_caixa_eliminacoes', JSON.stringify(eliminacoes));
+        }
+
+        function carregarEstado() {
+            const r = localStorage.getItem('simulado_caixa_respostas');
+            const e = localStorage.getItem('simulado_caixa_eliminacoes');
+            if (r) respostas = JSON.parse(r);
+            if (e) eliminacoes = JSON.parse(e);
+        }
+
+        // ==========================================
+        // RENDERIZAÇÃO
+        // ==========================================
+
+        function renderizarQuestao(index) {
+            const q = questoes[index];
+            const container = document.getElementById('questoes-container');
+            
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = '';
+                if (isSelected) classes += ' selected';
+                if (isEliminated) classes += ' eliminated';
+                
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                
+                return `
+                    <li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})">
+                        <span class="texto-alternativa">
+                            <span class="letra">${letra}</span> ${alt}
+                        </span>
+                        <button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)" title="${isEliminated ? 'Remover eliminação' : 'Eliminar alternativa'}">
+                            ${btnText}
+                        </button>
+                    </li>
+                `;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="grupo">
+                    <h2>${q.grupo}</h2>
+                    <div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 80</div>
+                    <div class="questao">
+                        <span class="numero">Questão ${q.id}</span>
+                        <div class="enunciado">${q.enunciado}</div>
+                        <ul class="alternativas">${alternativasHtml}</ul>
+                        <div class="gabarito" id="gabarito-${q.id}">
+                            <strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}
+                            <div class="explicacao">${q.explicacao}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ==========================================
+        // NAVEGAÇÃO
+        // ==========================================
+
+        function proximaQuestao() {
+            if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); }
+        }
+
+        function questaoAnterior() {
+            if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); }
+        }
+
+        function mostrarGabarito() {
+            const q = questoes[questaoAtual];
+            const gabarito = document.getElementById(`gabarito-${q.id}`);
+            if (gabarito) { gabarito.classList.toggle('visible'); }
+        }
+
+        // ==========================================
+        // RESULTADO E EVOLUÇÃO
+        // ==========================================
+
+        function finalizarSimulado() {
+            const total = questoes.length;
+            const respondidas = Object.keys(respostas).length;
+            let acertos = 0;
+            let erros = 0;
+            let totalEliminacoes = 0;
+
+            for (const q of questoes) {
+                const key = `q${q.id}`;
+                if (respostas[key] !== undefined) {
+                    if (respostas[key] === q.correta) acertos++;
+                    else erros++;
+                }
+                if (eliminacoes[key]) {
+                    totalEliminacoes += eliminacoes[key].length;
+                }
+            }
+
+            document.getElementById('totalRespondidas').textContent = respondidas;
+            document.getElementById('totalAcertos').textContent = acertos;
+            document.getElementById('totalErros').textContent = erros;
+            document.getElementById('totalEliminacoes').textContent = totalEliminacoes;
+            document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+
+            document.getElementById('resumoBox').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function fecharResumo() {
+            document.getElementById('resumoBox').style.display = 'none';
+        }
+
+        function salvarEvolucao() {
+            const total = questoes.length;
+            let acertos = 0;
+            let respondidas = 0;
+            let erros = 0;
+
+            for (const q of questoes) {
+                const key = `q${q.id}`;
+                if (respostas[key] !== undefined) {
+                    respondidas++;
+                    if (respostas[key] === q.correta) acertos++;
+                    else erros++;
+                }
+            }
+
+            if (respondidas === 0) {
+                alert('Responda pelo menos uma questão antes de salvar!');
+                return;
+            }
+
+            const evolucao = JSON.parse(localStorage.getItem('simulado_caixa_evolucao') || '[]');
+            evolucao.push({
+                data: new Date().toISOString(),
+                acertos: acertos,
+                erros: erros,
+                total: respondidas,
+                eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0)
+            });
+            localStorage.setItem('simulado_caixa_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!');
+            fecharResumo();
+        }
+
+        // ==========================================
+        // INICIALIZAÇÃO
+        // ==========================================
+        carregarEstado();
+        renderizarQuestao(0);
+    </script>
+</body>
+</html>

@@ -54,19 +54,60 @@
         .voltar:hover {
             text-decoration: underline;
         }
+        .header-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .header-actions a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        .header-actions a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .btn-voltar-material {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
         .estudo-container {
             display: none;
         }
         .estudo-container.active {
             display: block;
         }
+        .botoes-rodape {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <h1>📚 Flashcards</h1>
-            <a href="/" id="linkVoltar">← Voltar à loja</a>
+            <div class="header-actions">
+                <a href="/material/${CONCURSO_ID}/?session_id=${SESSION_ID}" id="linkVoltarMaterial" class="btn-voltar-material">📖 Voltar aos materiais</a>
+                <a href="/" id="linkVoltar">← Voltar à loja</a>
+            </div>
         </div>
     </header>
 
@@ -82,6 +123,14 @@
         // ==========================================
         const CONCURSO_ID = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
         const SESSION_ID = new URLSearchParams(window.location.search).get('session_id');
+
+        // Atualiza o link "Voltar aos materiais" no header
+        document.addEventListener('DOMContentLoaded', function() {
+            const linkVoltarMaterial = document.getElementById('linkVoltarMaterial');
+            if (linkVoltarMaterial) {
+                linkVoltarMaterial.href = `/material/${CONCURSO_ID}/?session_id=${SESSION_ID || ''}`;
+            }
+        });
 
         // ==========================================
         // ESTADO
@@ -159,7 +208,12 @@
                     <p style="font-size: 0.8rem; margin-top: 0.5rem;">Total: ${totalCards} cards disponíveis</p>
                     <p style="font-size: 0.8rem;">Seu progresso é salvo automaticamente</p>
                 </div>
-                <a href="/" class="voltar">← Voltar à loja</a>
+                <div class="botoes-rodape">
+                    <a href="/material/${CONCURSO_ID}/?session_id=${SESSION_ID || ''}" class="btn-voltar-material" style="background: #e94560; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">
+                        📖 Voltar aos materiais
+                    </a>
+                    <a href="/" class="voltar" style="margin-top: 0;">← Voltar à loja</a>
+                </div>
             `;
 
             container.innerHTML = html;
@@ -261,7 +315,12 @@
                     <span>📊 Revisados: <span class="numero">${state.revisados}</span></span>
                 </div>
 
-                <a href="#" onclick="paginaInicial()" class="voltar">← Voltar aos baralhos</a>
+                <div class="botoes-rodape">
+                    <a href="/material/${CONCURSO_ID}/?session_id=${SESSION_ID || ''}" class="btn-voltar-material" style="background: #e94560; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">
+                        📖 Voltar aos materiais
+                    </a>
+                    <a href="#" onclick="paginaInicial()" class="voltar" style="margin-top: 0;">← Voltar aos baralhos</a>
+                </div>
             `;
         }
 
@@ -320,8 +379,13 @@
                     <p>❌ Erros: <strong>${state.erros}</strong></p>
                     <p>📊 Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
                     <br>
-                    <a href="#" onclick="paginaInicial()" class="btn btn-voltar">← Voltar aos baralhos</a>
-                    <a href="#" onclick="reiniciar()" class="btn btn-facil">🔄 Revisar novamente</a>
+                    <div class="botoes-rodape">
+                        <a href="/material/${CONCURSO_ID}/?session_id=${SESSION_ID || ''}" class="btn-voltar-material" style="background: #e94560; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">
+                            📖 Voltar aos materiais
+                        </a>
+                        <a href="#" onclick="paginaInicial()" class="btn btn-voltar">← Voltar aos baralhos</a>
+                        <a href="#" onclick="reiniciar()" class="btn btn-facil">🔄 Revisar novamente</a>
+                    </div>
                 </div>
             `;
         }

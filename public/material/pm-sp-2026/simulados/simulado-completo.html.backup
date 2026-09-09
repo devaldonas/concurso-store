@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado PM/SP 2026 - 60 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #e94560; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #e94560; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #e94560; }
+        .questao .numero { display: inline-block; background: #e94560; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #e94560; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #e94560; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #e94560; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
+            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
+        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #e94560; color: white; }
+        .btn-primary:hover { background: #c0392b; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #e94560; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #e94560; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
+        @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simulado PM/SP 2026</h1>
+            <p>Soldado - 60 questões</p>
+            <div class="stats">
+                <span>60 questões</span>
+                <span>5h</span>
+                <span>60 pontos</span>
+            </div>
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 60</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+    <a href="/material/pm-sp-2026/" class="btn-voltar-material">← Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DADOS DO SIMULADO - 60 QUESTÕES PM/SP
+        // ==========================================
+        const questoes = [
+            // LÍNGUA PORTUGUESA (1-20)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A disciplina é fundamental para o trabalho policial."', alternativas: ['A disciplina é essencial para a polícia', 'A disciplina é opcional', 'A polícia não precisa de disciplina', 'A disciplina é prejudicial', 'A disciplina não tem importância'], correta: 0, explicacao: 'O texto indica que a disciplina é fundamental para o trabalho policial.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "A coragem é a força que move o soldado."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "coragem" e "força".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 3 anos que sirvo', 'Faz 3 anos que sirvo', 'Fazer 3 anos que sirvo', 'Fizeram 3 anos que sirvo', 'Fazem 3 ano que sirvo'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "soldado" é classificada como:', alternativas: ['Substantivo concreto', 'Substantivo abstrato', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Soldado" é um substantivo concreto.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a delegacia', 'Chegamos à conclusão', 'Referiu-se a aquela pessoa', 'Fui a São Paulo', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            // MATEMÁTICA (21-35)
+            { id: 21, grupo: 'Matemática', enunciado: 'Calcule o valor de x: 3x + 7 = 22', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
+            { id: 22, grupo: 'Matemática', enunciado: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
+            { id: 23, grupo: 'Matemática', enunciado: 'Qual a área de um círculo com raio 4?', alternativas: ['4π', '8π', '12π', '16π', '20π'], correta: 3, explicacao: 'A = π × r² = π × 16 = 16π' },
+            // CONHECIMENTOS GERAIS (36-50)
+            { id: 36, grupo: 'Conhecimentos Gerais', enunciado: 'O que foi a Primeira Guerra Mundial?', alternativas: ['Conflito global 1914-1918', 'Conflito global 1939-1945', 'Conflito na Europa 1945-1991', 'Conflito na Ásia 1950-1953', 'Conflito na África 1960-1970'], correta: 0, explicacao: 'A Primeira Guerra Mundial ocorreu entre 1914 e 1918.' },
+            // INFORMÁTICA (51-55)
+            { id: 51, grupo: 'Informática', enunciado: 'O que é um sistema operacional?', alternativas: ['Software que gerencia recursos do computador', 'Hardware', 'Um navegador', 'Um editor de texto', 'Uma planilha eletrônica'], correta: 0, explicacao: 'Sistema operacional é um software que gerencia os recursos de hardware e software do computador.' },
+            // ADMINISTRAÇÃO PÚBLICA (56-60)
+            { id: 56, grupo: 'Administração Pública', enunciado: 'O que é a Segurança Pública?', alternativas: ['Garantia da ordem e proteção da sociedade', 'Garantia da ordem fiscal', 'Garantia da ordem financeira', 'Garantia da ordem trabalhista', 'Garantia da ordem previdenciária'], correta: 0, explicacao: 'Segurança Pública garante a ordem e proteção da sociedade.' }
+        ];
+
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_pmsp_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_pmsp_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_pmsp_respostas'); const e = localStorage.getItem('simulado_pmsp_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
+
+        function renderizarQuestao(index) {
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
+            }).join('');
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 60</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_pmsp_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_pmsp_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
+        }
+
+        carregarEstado(); renderizarQuestao(0);
+    </script>
+</body>
+</html>

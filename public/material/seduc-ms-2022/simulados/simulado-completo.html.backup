@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado SEDUC/MS 2022 - 80 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #6c5ce7; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #6c5ce7; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #6c5ce7; }
+        .questao .numero { display: inline-block; background: #6c5ce7; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #6c5ce7; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #6c5ce7; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #6c5ce7; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
+            font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0.8rem;
+        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #6c5ce7; color: white; }
+        .btn-primary:hover { background: #5a4bd1; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #6c5ce7; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #6c5ce7; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { body { padding: 1rem; } .btn { width: 100%; max-width: 250px; } .btn-eliminar { width: 32px; height: 32px; font-size: 16px; } }
+        @media (max-width: 480px) { .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; } .btn-eliminar { width: 28px; height: 28px; font-size: 14px; } }
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simulado SEDUC/MS 2022</h1>
+            <p>Professor - 80 questões</p>
+            <div class="stats">
+                <span>80 questões</span>
+                <span>5h</span>
+                <span>80 pontos</span>
+            </div>
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 80</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+    <a href="/material/seduc-ms-2022/" class="btn-voltar-material">← Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DADOS DO SIMULADO - 80 QUESTÕES SEDUC/MS
+        // ==========================================
+        const questoes = [
+            // LÍNGUA PORTUGUESA (1-20)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A educação é a base para o desenvolvimento social."', alternativas: ['A educação é fundamental para a sociedade', 'A educação é irrelevante', 'O desenvolvimento não depende da educação', 'A educação é opcional', 'A educação é prejudicial'], correta: 0, explicacao: 'O texto indica que a educação é a base para o desenvolvimento social.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "O conhecimento é a luz que ilumina o caminho."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "conhecimento" e "luz".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 5 anos que estudo', 'Faz 5 anos que estudo', 'Fazer 5 anos que estudo', 'Fizeram 5 anos que estudo', 'Fazem 5 ano que estudo'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "educação" é classificada como:', alternativas: ['Substantivo abstrato', 'Substantivo concreto', 'Adjetivo', 'Verbo', 'Advérbio'], correta: 0, explicacao: '"Educação" é um substantivo abstrato, pois nomeia um conceito.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a escola', 'Chegamos à conclusão', 'Referiu-se a aquela pessoa', 'Fui a Brasília', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Divisão em parágrafos', 'Presença de títulos', 'Uso de conectivos'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'Qual a função sintática do termo destacado: "Os alunos, que estudaram muito, foram aprovados."', alternativas: ['Oração subordinada adjetiva', 'Oração coordenada', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Aposto'], correta: 0, explicacao: 'A oração "que estudaram muito" é uma subordinada adjetiva restritiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras', 'Relação entre sons', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa com erro de regência:', alternativas: ['Assisti ao filme', 'Prefiro estudar a trabalhar', 'Obedeço ao chefe', 'Namoro com ela', 'Cheguei em casa'], correta: 4, explicacao: 'O correto é "Cheguei a casa" (regência do verbo chegar).' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'O que é denotação?', alternativas: ['Sentido literal da palavra', 'Sentido figurado da palavra', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 0, explicacao: 'Denotação é o sentido literal da palavra.' },
+            // CONHECIMENTOS PEDAGÓGICOS (21-40)
+            { id: 21, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O que é a BNCC?', alternativas: ['Base Nacional Comum Curricular', 'Base Nacional Curricular Comum', 'Bases Nacionais Curriculares Comuns', 'Base Nacional de Conteúdos Curriculares', 'Base Normativa Comum Curricular'], correta: 0, explicacao: 'BNCC é a sigla para Base Nacional Comum Curricular.' },
+            { id: 22, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Quantas competências gerais tem a BNCC?', alternativas: ['8', '9', '10', '11', '12'], correta: 2, explicacao: 'A BNCC estabelece 10 competências gerais.' },
+            { id: 23, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Qual a principal função da BNCC?', alternativas: ['Definir o currículo mínimo nacional', 'Estabelecer diretrizes para o ensino', 'Orientar a formação de professores', 'Todas as anteriores', 'Nenhuma das anteriores'], correta: 3, explicacao: 'A BNCC define o currículo, estabelece diretrizes e orienta a formação de professores.' },
+            { id: 24, grupo: 'Conhecimentos Pedagógicos', enunciado: 'Segundo a LDB (Lei 9.394/96), quais são os níveis da Educação Básica?', alternativas: ['Educação Infantil, Ensino Fundamental e Ensino Médio', 'Educação Infantil e Ensino Fundamental', 'Ensino Fundamental e Ensino Médio', 'Educação Infantil, Ensino Fundamental, Ensino Médio e Superior', 'Apenas Ensino Médio'], correta: 0, explicacao: 'A LDB define a Educação Básica como composta por Educação Infantil, Ensino Fundamental e Ensino Médio.' },
+            { id: 25, grupo: 'Conhecimentos Pedagógicos', enunciado: 'O que é avaliação formativa?', alternativas: ['Avaliação contínua que acompanha o processo de aprendizagem', 'Avaliação ao final do período', 'Avaliação aplicada pelo governo', 'Avaliação apenas com notas', 'Avaliação sem critérios'], correta: 0, explicacao: 'Avaliação formativa acompanha o processo de aprendizagem, identificando dificuldades e promovendo melhorias.' },
+            // MATEMÁTICA (41-55)
+            { id: 41, grupo: 'Matemática', enunciado: 'Calcule o valor de x: 3x + 7 = 22', alternativas: ['3', '4', '5', '6', '7'], correta: 2, explicacao: '3x = 22 - 7 → 3x = 15 → x = 5' },
+            { id: 42, grupo: 'Matemática', enunciado: 'O que é MMC?', alternativas: ['Mínimo Múltiplo Comum', 'Máximo Múltiplo Comum', 'Mínimo Divisor Comum', 'Máximo Divisor Comum', 'Mínimo Múltiplo Divisor'], correta: 0, explicacao: 'MMC é o Mínimo Múltiplo Comum.' },
+            { id: 43, grupo: 'Matemática', enunciado: 'Qual a área de um círculo com raio 4?', alternativas: ['4π', '8π', '12π', '16π', '20π'], correta: 3, explicacao: 'A = π × r² = π × 16 = 16π' },
+            // LEGISLAÇÃO (56-70)
+            { id: 56, grupo: 'Legislação Educacional', enunciado: 'Qual o objetivo da LDB (Lei 9.394/96)?', alternativas: ['Estabelecer as diretrizes e bases da educação nacional', 'Definir o currículo escolar', 'Regular a formação de professores', 'Todas as anteriores', 'Nenhuma das anteriores'], correta: 0, explicacao: 'A LDB estabelece as diretrizes e bases da educação nacional.' },
+            { id: 57, grupo: 'Legislação Educacional', enunciado: 'O que a BNCC estabelece?', alternativas: ['Define as aprendizagens essenciais para a Educação Básica', 'Define apenas o currículo do Ensino Médio', 'Define apenas o currículo do Ensino Fundamental', 'Define apenas a Educação Infantil', 'Não define aprendizagens'], correta: 0, explicacao: 'A BNCC define as aprendizagens essenciais para toda a Educação Básica.' },
+            // CONHECIMENTOS ESPECÍFICOS (71-80)
+            { id: 71, grupo: 'Conhecimentos Específicos', enunciado: 'O que é uma função linear?', alternativas: ['f(x) = ax + b', 'f(x) = ax² + bx + c', 'f(x) = a^x', 'f(x) = log_a(x)', 'f(x) = sen(x)'], correta: 0, explicacao: 'Função linear é do tipo f(x) = ax + b.' },
+            { id: 72, grupo: 'Conhecimentos Específicos', enunciado: 'Qual a média aritmética de 4, 6, 8 e 10?', alternativas: ['6', '7', '8', '9', '10'], correta: 1, explicacao: '(4+6+8+10)/4 = 28/4 = 7' }
+        ];
+
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_seduc_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_seduc_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_seduc_respostas'); const e = localStorage.getItem('simulado_seduc_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
+
+        function renderizarQuestao(index) {
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
+            }).join('');
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 80</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_seduc_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_seduc_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
+        }
+
+        carregarEstado(); renderizarQuestao(0);
+    </script>
+</body>
+</html>

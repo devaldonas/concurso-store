@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado PF 2024 - 80 Questões</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
+        .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
+        .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .grupo h2 { color: #1a5276; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #1a5276; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #1a5276; }
+        .questao .numero { display: inline-block; background: #1a5276; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
+        .questao .texto-apoio { background: #f1f3f5; padding: 1rem; border-radius: 8px; margin: 0.5rem 0 1rem; font-size: 0.95rem; border-left: 3px solid #6c757d; }
+        .alternativas { list-style: none; padding: 0; }
+        .alternativas li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            position: relative;
+            color: #495057;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
+        .alternativas li:hover { background: #f1f3f5; }
+        .alternativas li.selected { border-color: #1a5276; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #1a5276; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
+        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #1a5276; margin-right: 0.5rem; }
+        .btn-eliminar {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 0.8rem;
+            line-height: 1;
+        }
+        .btn-eliminar:hover { background: #c82333; transform: scale(1.05); }
+        .btn-eliminar.eliminado { background: #28a745; }
+        .btn-eliminar.eliminado:hover { background: #1e7e34; }
+        .gabarito { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-top: 0.5rem; display: none; }
+        .gabarito.visible { display: block; }
+        .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
+        .btn-primary { background: #1a5276; color: white; }
+        .btn-primary:hover { background: #154360; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: #1a1a2e; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progresso .barra-fill { height: 100%; background: #1a5276; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
+        .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
+        .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
+        .resumo-box .resumo-item { text-align: center; padding: 1rem; background: white; border-radius: 8px; }
+        .resumo-box .resumo-item .numero { font-size: 2rem; font-weight: 700; }
+        .resumo-box .resumo-item .label { color: #6c757d; font-size: 0.85rem; }
+        .resumo-box .resumo-item .numero.verde { color: #28a745; }
+        .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
+        .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
+        .resumo-box .resumo-item .numero.azul { color: #1a5276; }
+        .evolucao-box { background: white; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .evolucao-box h3 { color: #0f0f1a; margin-bottom: 1rem; }
+        @media (max-width: 768px) { 
+            body { padding: 1rem; } 
+            .btn { width: 100%; max-width: 250px; }
+            .btn-eliminar { width: 32px; height: 32px; font-size: 16px; }
+        }
+        @media (max-width: 480px) {
+            .alternativas li { padding: 0.6rem 0.6rem 0.6rem 2.5rem; font-size: 0.85rem; }
+            .btn-eliminar { width: 28px; height: 28px; font-size: 14px; }
+        }
+        .btn-voltar-material {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #6c757d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-voltar-material:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simulado PF 2024</h1>
+            <p>Agente - 80 questões</p>
+            <div class="stats">
+                <span>80 questões</span>
+                <span>4h</span>
+                <span>80 pontos</span>
+            </div>
+        </div>
+
+        <div class="progresso">
+            <div class="info">
+                <span id="questaoAtual">Questão 1 de 80</span>
+                <span id="progressoTexto">0% concluído</span>
+            </div>
+            <div class="barra">
+                <div class="barra-fill" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="questaoAnterior()">Anterior</button>
+                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima</button>
+                <button class="btn btn-success" onclick="mostrarGabarito()">Gabarito</button>
+                <button class="btn btn-warning" onclick="finalizarSimulado()">Finalizar</button>
+            </div>
+        </div>
+
+        <div id="questoes-container"></div>
+
+        <div class="resumo-box" id="resumoBox">
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <div class="resumo-grid" id="resumoGrid">
+                <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
+                <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
+                <div class="resumo-item"><div class="numero vermelho" id="totalErros">0</div><div class="label">Erros</div></div>
+                <div class="resumo-item"><div class="numero amarelo" id="totalEliminacoes">0</div><div class="label">Eliminações</div></div>
+                <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
+    <a href="/material/pf-2024/" class="btn-voltar-material">← Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="evolucao-box">
+            <h3>✅ Ao concluir o simulado</h3>
+            <p style="color: #6c757d; font-size: 0.9rem;">Seu desempenho é salvo automaticamente. Use o botão "Finalizar" para ver seu resumo completo.</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DADOS DO SIMULADO - 80 QUESTÕES PF
+        // ==========================================
+        const questoes = [
+            // LÍNGUA PORTUGUESA (1-20)
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa correta sobre a interpretação do texto: "A segurança pública é dever do Estado, direito e responsabilidade de todos."', alternativas: ['A segurança pública é responsabilidade exclusiva do Estado', 'A segurança pública é dever do Estado e direito de todos', 'A segurança pública é responsabilidade apenas da polícia', 'A segurança pública não é um direito fundamental', 'A segurança pública é dever exclusivo do cidadão'], correta: 1, explicacao: 'A frase indica que a segurança pública é dever do Estado e direito de todos os cidadãos.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'Identifique a figura de linguagem: "A lei é uma muralha que protege os fracos."', alternativas: ['Metáfora', 'Comparação', 'Personificação', 'Hipérbole', 'Ironia'], correta: 0, explicacao: 'Metáfora é a comparação implícita entre "lei" e "muralha".' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com concordância verbal correta:', alternativas: ['Fazem 5 anos que trabalho na polícia', 'Faz 5 anos que trabalho na polícia', 'Fazer 5 anos que trabalho na polícia', 'Fizeram 5 anos que trabalho na polícia', 'Fazem 5 ano que trabalho na polícia'], correta: 1, explicacao: 'O verbo "fazer" indicando tempo é impessoal e permanece no singular.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "investigação" é formada pelo processo de:', alternativas: ['Derivação sufixal', 'Derivação prefixal', 'Derivação parassintética', 'Composição', 'Derivação regressiva'], correta: 0, explicacao: '"Investigação" é formada pelo sufixo "-ção" a partir do verbo "investigar".' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'O uso da crase está correto em:', alternativas: ['Vou a delegacia', 'Chegamos à conclusão', 'Referiu-se a aquela pessoa', 'Fui a Brasília', 'Entreguei a carta a ela'], correta: 1, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'O que é coerência textual?', alternativas: ['Harmonia lógica entre as ideias', 'Uso correto da gramática', 'Divisão em parágrafos', 'Presença de títulos', 'Uso de conectivos'], correta: 0, explicacao: 'Coerência é a harmonia lógica entre as ideias do texto.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'Qual a função sintática do termo destacado: "O delegado, que investigou o caso, foi homenageado."', alternativas: ['Oração subordinada adjetiva', 'Oração coordenada', 'Oração subordinada adverbial', 'Oração subordinada substantiva', 'Aposto'], correta: 0, explicacao: 'A oração "que investigou o caso" é uma subordinada adjetiva restritiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'O que é intertextualidade?', alternativas: ['Relação entre diferentes textos', 'Relação entre palavras', 'Relação entre sons', 'Relação entre autor e leitor', 'Relação entre língua e cultura'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa com erro de regência:', alternativas: ['Assisti ao filme', 'Prefiro estudar a trabalhar', 'Obedeço ao chefe', 'Namoro com ela', 'Cheguei em casa'], correta: 4, explicacao: 'O correto é "Cheguei a casa" (regência do verbo chegar).' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'O que é denotação?', alternativas: ['Sentido literal da palavra', 'Sentido figurado da palavra', 'Sentido subjetivo', 'Sentido poético', 'Sentido informal'], correta: 0, explicacao: 'Denotação é o sentido literal da palavra.' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'Em "João, o delegado, investigou o caso", a vírgula separa:', alternativas: ['Aposto', 'Vocativo', 'Oração intercalada', 'Adjunto adverbial', 'Enumeração'], correta: 0, explicacao: 'A vírgula separa o aposto explicativo "o delegado".' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'O que é um período composto?', alternativas: ['Possui duas ou mais orações', 'Possui apenas uma oração', 'Possui um único verbo', 'Possui apenas sujeito simples', 'Não possui verbo'], correta: 0, explicacao: 'Período composto possui duas ou mais orações.' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'Qual a classificação da palavra "rapidamente"?', alternativas: ['Advérbio de modo', 'Advérbio de tempo', 'Advérbio de lugar', 'Adjetivo', 'Substantivo'], correta: 0, explicacao: '"Rapidamente" é advérbio de modo.' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'O que é uma conjunção?', alternativas: ['Palavra que liga orações', 'Palavra que nomeia seres', 'Palavra que caracteriza o substantivo', 'Palavra que modifica o verbo', 'Palavra que substitui o substantivo'], correta: 0, explicacao: 'Conjunção liga orações ou termos de mesma função.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'Qual a função do sujeito na oração?', alternativas: ['Termo sobre o qual se declara algo', 'Termo que recebe a ação', 'Termo que modifica o verbo', 'Termo que indica posse', 'Termo que liga orações'], correta: 0, explicacao: 'Sujeito é o termo sobre o qual se declara algo.' },
+            // DIREITO CONSTITUCIONAL (21-35)
+            { id: 21, grupo: 'Direito Constitucional', enunciado: 'O que são direitos fundamentais?', alternativas: ['Direitos básicos garantidos pela Constituição', 'Direitos concedidos pelo governo', 'Direitos adquiridos por lei ordinária', 'Direitos exclusivos dos servidores públicos', 'Direitos apenas para cidadãos brasileiros'], correta: 0, explicacao: 'Direitos fundamentais são os direitos básicos garantidos pela Constituição Federal.' },
+            { id: 22, grupo: 'Direito Constitucional', enunciado: 'O habeas corpus protege qual direito?', alternativas: ['Liberdade de locomoção', 'Acesso à informação', 'Propriedade', 'Sigilo bancário', 'Liberdade de expressão'], correta: 0, explicacao: 'Habeas corpus protege a liberdade de locomoção.' },
+            { id: 23, grupo: 'Direito Constitucional', enunciado: 'Quais são os princípios da Administração Pública?', alternativas: ['Legalidade, impessoalidade, moralidade, publicidade, eficiência', 'Legalidade, pessoalidade, moralidade, publicidade, eficiência', 'Legalidade, impessoalidade, imoralidade, publicidade, eficiência', 'Legalidade, impessoalidade, moralidade, sigilo, eficiência', 'Legalidade, pessoalidade, moralidade, sigilo, eficiência'], correta: 0, explicacao: 'Os princípios são os do art. 37 da CF/88: legalidade, impessoalidade, moralidade, publicidade e eficiência.' },
+            { id: 24, grupo: 'Direito Constitucional', enunciado: 'O que é o princípio da legalidade?', alternativas: ['O administrador só pode fazer o que a lei permite', 'O administrador pode fazer o que quiser', 'A lei pode ser ignorada pela administração', 'A administração não precisa seguir leis', 'O administrador pode criar leis'], correta: 0, explicacao: 'Legalidade significa que o administrador só pode fazer o que a lei permite.' },
+            { id: 25, grupo: 'Direito Constitucional', enunciado: 'O que é o princípio da impessoalidade?', alternativas: ['A administração deve tratar todos igualmente', 'A administração deve favorecer amigos', 'A administração deve punir todos igualmente', 'A administração pode ser pessoal', 'A administração deve agir com emoção'], correta: 0, explicacao: 'Impessoalidade significa tratamento igual a todos.' },
+            { id: 26, grupo: 'Direito Constitucional', enunciado: 'O que é o princípio da moralidade?', alternativas: ['A administração deve agir com ética', 'A administração pode agir com imoralidade', 'A administração não precisa de ética', 'A administração deve agir com ilegalidade', 'A administração pode agir com desonestidade'], correta: 0, explicacao: 'Moralidade significa que a administração deve agir com ética e honestidade.' },
+            { id: 27, grupo: 'Direito Constitucional', enunciado: 'O que é o princípio da publicidade?', alternativas: ['Os atos administrativos devem ser divulgados', 'Os atos administrativos devem ser sigilosos', 'A administração não precisa divulgar seus atos', 'A publicidade é opcional', 'Os atos devem ser divulgados apenas internamente'], correta: 0, explicacao: 'Publicidade significa que os atos administrativos devem ser divulgados.' },
+            { id: 28, grupo: 'Direito Constitucional', enunciado: 'O que é o princípio da eficiência?', alternativas: ['A administração deve buscar os melhores resultados', 'A administração pode ser ineficiente', 'A eficiência não é um princípio', 'A administração deve ser lenta', 'A administração deve gastar mais recursos'], correta: 0, explicacao: 'Eficiência significa que a administração deve buscar os melhores resultados com os recursos disponíveis.' },
+            { id: 29, grupo: 'Direito Constitucional', enunciado: 'O que é o mandado de segurança?', alternativas: ['Protege direito líquido e certo', 'Protege a liberdade de locomoção', 'Protege o acesso à informação', 'Protege a propriedade', 'Protege o sigilo bancário'], correta: 0, explicacao: 'Mandado de segurança protege direito líquido e certo, quando não há habeas corpus ou habeas data.' },
+            { id: 30, grupo: 'Direito Constitucional', enunciado: 'O que é o habeas data?', alternativas: ['Garantia para acessar informações pessoais', 'Garantia para proteger a liberdade', 'Garantia para proteger a propriedade', 'Garantia para proteger o sigilo', 'Garantia para proteger a vida'], correta: 0, explicacao: 'Habeas data é a garantia para acessar informações pessoais constantes em bancos de dados públicos.' },
+            // DIREITO ADMINISTRATIVO (36-50)
+            { id: 36, grupo: 'Direito Administrativo', enunciado: 'O que é um ato administrativo?', alternativas: ['Declaração do Estado ou de seus agentes', 'Um crime', 'Um acordo entre particulares', 'Uma lei', 'Uma sentença judicial'], correta: 0, explicacao: 'Ato administrativo é a declaração do Estado ou de seus agentes, no exercício de funções administrativas.' },
+            { id: 37, grupo: 'Direito Administrativo', enunciado: 'Quais são os atributos do ato administrativo?', alternativas: ['Presunção de legitimidade, imperatividade, autoexecutoriedade, tipicidade', 'Presunção de legitimidade, imperatividade, autoexecutoriedade, atipicidade', 'Presunção de ilegitimidade, imperatividade, autoexecutoriedade, tipicidade', 'Presunção de legitimidade, imperatividade, não execução, tipicidade', 'Presunção de legitimidade, imperatividade, autoexecutoriedade, exceção'], correta: 0, explicacao: 'Os atributos são: presunção de legitimidade, imperatividade, autoexecutoriedade e tipicidade.' },
+            { id: 38, grupo: 'Direito Administrativo', enunciado: 'O que é a Lei de Improbidade Administrativa?', alternativas: ['Lei 8.429/92', 'Lei 9.784/99', 'Lei 8.112/90', 'Lei 12.527/11', 'Lei 10.826/03'], correta: 0, explicacao: 'A Lei de Improbidade Administrativa é a Lei 8.429/92.' },
+            { id: 39, grupo: 'Direito Administrativo', enunciado: 'O que é a Lei 9.784/99?', alternativas: ['Lei do Processo Administrativo', 'Lei de Improbidade', 'Lei do Servidor Público', 'Lei de Acesso à Informação', 'Lei do Estatuto do Desarmamento'], correta: 0, explicacao: 'A Lei 9.784/99 regula o processo administrativo na administração pública federal.' },
+            { id: 40, grupo: 'Direito Administrativo', enunciado: 'O que é poder de polícia?', alternativas: ['Poder de limitar direitos para o bem público', 'Poder de punir servidores', 'Poder de editar normas', 'Poder de organizar a administração', 'Poder de fazer leis'], correta: 0, explicacao: 'Poder de polícia é o poder de limitar direitos para o bem público.' },
+            { id: 41, grupo: 'Direito Administrativo', enunciado: 'O que é poder hierárquico?', alternativas: ['Poder de organizar e coordenar a administração', 'Poder de punir servidores', 'Poder de editar normas', 'Poder de limitar direitos', 'Poder de fazer leis'], correta: 0, explicacao: 'Poder hierárquico é o poder de organizar e coordenar a administração.' },
+            { id: 42, grupo: 'Direito Administrativo', enunciado: 'O que é poder disciplinar?', alternativas: ['Poder de punir servidores e particulares', 'Poder de organizar a administração', 'Poder de editar normas', 'Poder de limitar direitos', 'Poder de fazer leis'], correta: 0, explicacao: 'Poder disciplinar é o poder de punir servidores e particulares por infrações.' },
+            { id: 43, grupo: 'Direito Administrativo', enunciado: 'O que é poder regulamentar?', alternativas: ['Poder de editar normas para complementar leis', 'Poder de punir servidores', 'Poder de organizar a administração', 'Poder de limitar direitos', 'Poder de fazer leis'], correta: 0, explicacao: 'Poder regulamentar é o poder de editar normas para complementar as leis.' },
+            { id: 44, grupo: 'Direito Administrativo', enunciado: 'O que é a administração direta?', alternativas: ['Órgãos diretamente ligados ao chefe do Executivo', 'Órgãos indiretos do governo', 'Empresas públicas', 'Autarquias', 'Fundações públicas'], correta: 0, explicacao: 'Administração direta é composta por órgãos diretamente ligados ao chefe do Executivo.' },
+            { id: 45, grupo: 'Direito Administrativo', enunciado: 'O que são autarquias?', alternativas: ['Entidades administrativas autônomas criadas por lei', 'Empresas públicas', 'Órgãos da administração direta', 'Fundações privadas', 'Sociedades de economia mista'], correta: 0, explicacao: 'Autarquias são entidades administrativas autônomas criadas por lei.' },
+            // RACIOCÍNIO LÓGICO (51-65)
+            { id: 51, grupo: 'Raciocínio Lógico', enunciado: 'O que é uma proposição lógica?', alternativas: ['Frase que pode ser verdadeira ou falsa', 'Frase interrogativa', 'Frase exclamativa', 'Frase imperativa', 'Frase declarativa'], correta: 0, explicacao: 'Proposição é uma frase que pode ser classificada como verdadeira ou falsa.' },
+            { id: 52, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "e" (∧) é verdadeiro quando:', alternativas: ['Ambas proposições são verdadeiras', 'Pelo menos uma é verdadeira', 'A primeira é verdadeira', 'A segunda é verdadeira', 'Nenhuma é verdadeira'], correta: 0, explicacao: 'A conjunção é verdadeira apenas quando ambas proposições são verdadeiras.' },
+            { id: 53, grupo: 'Raciocínio Lógico', enunciado: 'O conectivo "ou" (∨) é falso quando:', alternativas: ['Ambas proposições são falsas', 'Ambas proposições são verdadeiras', 'A primeira é falsa', 'A segunda é falsa', 'Pelo menos uma é falsa'], correta: 0, explicacao: 'A disjunção é falsa apenas quando ambas proposições são falsas.' },
+            { id: 54, grupo: 'Raciocínio Lógico', enunciado: 'O que é uma tautologia?', alternativas: ['Proposição sempre verdadeira', 'Proposição sempre falsa', 'Proposição que pode ser verdadeira ou falsa', 'Proposição com uma variável', 'Proposição com duas variáveis'], correta: 0, explicacao: 'Tautologia é uma proposição composta sempre verdadeira.' },
+            { id: 55, grupo: 'Raciocínio Lógico', enunciado: 'O que é um conjunto?', alternativas: ['Agrupamento de elementos', 'Agrupamento de números', 'Agrupamento de letras', 'Agrupamento de palavras', 'Agrupamento de símbolos'], correta: 0, explicacao: 'Conjunto é um agrupamento de elementos com características comuns.' },
+            { id: 56, grupo: 'Raciocínio Lógico', enunciado: 'Qual a negação de "Todos os policiais são honestos"?', alternativas: ['Nenhum policial é honesto', 'Algum policial não é honesto', 'Algum policial é honesto', 'Todos os policiais não são honestos', 'Os policiais são honestos'], correta: 1, explicacao: 'A negação de "todos" é "algum não".' },
+            // INFORMÁTICA (66-80)
+            { id: 66, grupo: 'Informática', enunciado: 'O que é um sistema operacional?', alternativas: ['Software que gerencia recursos do computador', 'Hardware', 'Um navegador', 'Um editor de texto', 'Uma planilha eletrônica'], correta: 0, explicacao: 'Sistema operacional é um software que gerencia os recursos de hardware e software do computador.' },
+            { id: 67, grupo: 'Informática', enunciado: 'Quais são os sistemas operacionais mais comuns?', alternativas: ['Windows, Linux, macOS', 'Windows, Android, iOS', 'Linux, Unix, Windows', 'macOS, Linux, Unix', 'Windows, macOS, Unix'], correta: 0, explicacao: 'Os sistemas operacionais mais comuns são Windows, Linux e macOS.' },
+            { id: 68, grupo: 'Informática', enunciado: 'O que é uma rede de computadores?', alternativas: ['Conjunto de computadores interligados', 'Um único computador', 'Um software', 'Um hardware', 'Uma impressora'], correta: 0, explicacao: 'Rede de computadores é o conjunto de computadores interligados para compartilhar informações.' },
+            { id: 69, grupo: 'Informática', enunciado: 'O que é um firewall?', alternativas: ['Sistema que bloqueia acessos não autorizados', 'Um vírus', 'Um navegador', 'Um editor de texto', 'Uma planilha'], correta: 0, explicacao: 'Firewall é um sistema que bloqueia acessos não autorizados à rede.' },
+            { id: 70, grupo: 'Informática', enunciado: 'O que é criptografia?', alternativas: ['Técnica para codificar informações', 'Um vírus', 'Um navegador', 'Um editor de texto', 'Uma planilha'], correta: 0, explicacao: 'Criptografia é uma técnica para codificar informações, garantindo a segurança dos dados.' },
+            { id: 71, grupo: 'Informática', enunciado: 'O que é um backup?', alternativas: ['Cópia de segurança de dados', 'Um vírus', 'Um navegador', 'Um editor de texto', 'Uma planilha'], correta: 0, explicacao: 'Backup é uma cópia de segurança de dados.' },
+            { id: 72, grupo: 'Informática', enunciado: 'O que é a nuvem (cloud computing)?', alternativas: ['Armazenamento e processamento pela internet', 'Um hardware', 'Um software', 'Um vírus', 'Uma impressora'], correta: 0, explicacao: 'A nuvem é o armazenamento e processamento de dados pela internet.' },
+            { id: 73, grupo: 'Informática', enunciado: 'O que é um vírus de computador?', alternativas: ['Programa malicioso que se replica', 'Um hardware', 'Um software legítimo', 'Um navegador', 'Uma planilha'], correta: 0, explicacao: 'Vírus de computador é um programa malicioso que se replica e pode causar danos.' },
+            { id: 74, grupo: 'Informática', enunciado: 'O que é phishing?', alternativas: ['Tentativa de obter informações pessoais fraudulentamente', 'Um vírus', 'Um navegador', 'Um editor de texto', 'Uma planilha'], correta: 0, explicacao: 'Phishing é uma tentativa de obter informações pessoais fraudulentamente.' },
+            { id: 75, grupo: 'Informática', enunciado: 'O que é um navegador?', alternativas: ['Software para acessar páginas na internet', 'Um vírus', 'Um sistema operacional', 'Um editor de texto', 'Uma planilha'], correta: 0, explicacao: 'Navegador é um software para acessar páginas na internet.' }
+        ];
+
+        // ==========================================
+        // ESTADO DO SIMULADO
+        // ==========================================
+        let respostas = {};
+        let eliminacoes = {};
+        let questaoAtual = 0;
+
+        function selecionarAlternativa(questaoId, index) {
+            const key = `q${questaoId}`;
+            if (respostas[key] === index) { delete respostas[key]; } 
+            else { respostas[key] = index; if (eliminacoes[key] && eliminacoes[key].includes(index)) { const idx = eliminacoes[key].indexOf(index); eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function eliminarAlternativa(questaoId, index, event) {
+            event.stopPropagation();
+            const key = `q${questaoId}`;
+            if (!eliminacoes[key]) eliminacoes[key] = [];
+            const idx = eliminacoes[key].indexOf(index);
+            if (idx > -1) { eliminacoes[key].splice(idx, 1); if (eliminacoes[key].length === 0) delete eliminacoes[key]; } 
+            else { eliminacoes[key].push(index); if (respostas[key] === index) delete respostas[key]; }
+            salvarEstado(); renderizarQuestao(questaoAtual);
+        }
+
+        function salvarEstado() { localStorage.setItem('simulado_pf_respostas', JSON.stringify(respostas)); localStorage.setItem('simulado_pf_eliminacoes', JSON.stringify(eliminacoes)); }
+        function carregarEstado() { const r = localStorage.getItem('simulado_pf_respostas'); const e = localStorage.getItem('simulado_pf_eliminacoes'); if (r) respostas = JSON.parse(r); if (e) eliminacoes = JSON.parse(e); }
+
+        function renderizarQuestao(index) {
+            const q = questoes[index]; const container = document.getElementById('questoes-container');
+            let alternativasHtml = q.alternativas.map((alt, i) => {
+                const letra = String.fromCharCode(65 + i);
+                const isSelected = respostas[`q${q.id}`] === i;
+                const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
+                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
+                const btnText = isEliminated ? '✓' : '✕';
+                return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
+            }).join('');
+            container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de 80</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
+            document.getElementById('questaoAtual').textContent = `Questão ${index + 1} de ${questoes.length}`;
+            const respondidas = Object.keys(respostas).length;
+            const progresso = (respondidas / questoes.length * 100);
+            document.getElementById('progressoTexto').textContent = `${Math.round(progresso)}% concluído`;
+            document.getElementById('barraProgresso').style.width = `${progresso}%`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function proximaQuestao() { if (questaoAtual < questoes.length - 1) { questaoAtual++; renderizarQuestao(questaoAtual); } }
+        function questaoAnterior() { if (questaoAtual > 0) { questaoAtual--; renderizarQuestao(questaoAtual); } }
+        function mostrarGabarito() { const q = questoes[questaoAtual]; const gabarito = document.getElementById(`gabarito-${q.id}`); if (gabarito) { gabarito.classList.toggle('visible'); } }
+
+        function finalizarSimulado() {
+            const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
+            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
+
+        function salvarEvolucao() {
+            let acertos = 0, respondidas = 0, erros = 0;
+            for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
+            if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
+            const evolucao = JSON.parse(localStorage.getItem('simulado_pf_evolucao') || '[]');
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            localStorage.setItem('simulado_pf_evolucao', JSON.stringify(evolucao));
+            alert('✅ Evolução salva com sucesso!'); fecharResumo();
+        }
+
+        carregarEstado(); renderizarQuestao(0);
+    </script>
+</body>
+</html>
