@@ -8,22 +8,53 @@
     <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         .btn-voltar-material {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #6c757d;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
+            display: inline-block !important;
+            padding: 0.8rem 2rem !important;
+            background: #6c757d !important;
+            color: white !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            transition: background 0.3s !important;
+            border: none !important;
+            cursor: pointer !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
-        .btn-voltar-material:hover { background: #5a6268; }
+        .btn-voltar-material:hover {
+            background: #5a6268 !important;
+        }
         .footer-actions {
             text-align: center;
             margin-top: 2rem;
-            padding-bottom: 2rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e9ecef;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .header-actions a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        .header-actions a:hover {
+            background: rgba(233, 69, 96, 0.1);
+        }
+        .header-actions .btn-voltar-material-header {
+            color: #6c757d;
+        }
+        .header-actions .btn-voltar-material-header:hover {
+            background: rgba(108, 117, 125, 0.1);
         }
     </style>
 </head>
@@ -31,7 +62,9 @@
     <header class="header">
         <div class="container">
             <h1>Flashcards</h1>
-            <a href="/" id="linkVoltarLoja">Voltar à loja</a>
+            <div class="header-actions">
+            <a href="#" id="linkVoltarMaterial" class="btn-voltar-material-header">← Voltar ao Material</a>
+            </div>
         </div>
     </header>
 
@@ -39,34 +72,33 @@
         <div class="container" id="app">
             <!-- Conteúdo renderizado pelo JavaScript -->
         </div>
-        
-        <!-- Botão Voltar ao Material (fora do #app) -->
-        <div class="footer-actions">
-            <a href="#" class="btn-voltar-material" id="linkVoltarMaterial">
-                ← Voltar ao Material
-            </a>
+
+        <!-- Botão Voltar ao Material (fora do #app, sempre visível) -->
+        <div class="container">
+            <div class="footer-actions">
+                <a href="#" id="linkVoltarMaterialFooter" class="btn-voltar-material">
+                    ← Voltar ao Material
+                </a>
+            </div>
         </div>
     </main>
 
     <script src="/flashcards/js/script.js"></script>
     <script>
-        // Adiciona o session_id e concurso aos links
+        // Atualiza os links com session_id e concurso
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const sessionId = urlParams.get('session_id');
+            const sessionId = urlParams.get('session_id') || 'dev_test';
             const concurso = urlParams.get('concurso') || 'seduc-ms-2022';
-            
-            // Atualiza o link "Voltar ao Material"
-            const linkMaterial = document.getElementById('linkVoltarMaterial');
-            if (linkMaterial) {
-                linkMaterial.href = `/material/${concurso}/?session_id=${sessionId || 'dev_test'}`;
-            }
-            
-            // Atualiza o link "Voltar à loja"
-            const linkLoja = document.getElementById('linkVoltarLoja');
-            if (linkLoja && sessionId) {
-                linkLoja.href = `/?session_id=${sessionId}`;
-            }
+
+            // Atualiza todos os links "Voltar ao Material"
+            const links = document.querySelectorAll('#linkVoltarMaterial, #linkVoltarMaterialFooter');
+            links.forEach(link => {
+                if (link) {
+                    link.href = `/material/${concurso}/?session_id=${sessionId}`;
+                }
+            });
+
         });
     </script>
 </body>
