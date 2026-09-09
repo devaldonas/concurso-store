@@ -157,7 +157,7 @@ async function carregarFlashcards() {
     }
 }
 
-// Selecionar baralho
+/// Selecionar baralho
 async function selecionarBaralho(concursoId, baralhoId) {
     // Verifica acesso
     const temAcesso = await verificarAcesso();
@@ -236,10 +236,12 @@ function iniciarEstudo() {
     mostrarCard();
 }
 
-// Mostrar card atual
+// Mostrar card atual (COM BOTÃO VOLTAR AO MATERIAL)
 function mostrarCard() {
     const container = document.getElementById('app');
     const card = state.cards[state.cardAtual];
+    const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
+    const concurso = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
     
     if (!card) {
         mostrarParabens();
@@ -280,6 +282,14 @@ function mostrarCard() {
             <span class="erros">Erros: <span class="numero">${state.erros}</span></span>
             <span>Revisados: <span class="numero">${state.revisados}</span></span>
         </div>
+
+        <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; border-top: 1px solid #e9ecef;">
+            <a href="/material/${concurso}/?session_id=${sessionId}" 
+               style="display: inline-block; padding: 0.8rem 2rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+               ← Voltar ao Material
+            </a>
+        </div>
+        <a href="#" onclick="paginaInicial()" class="voltar">← Voltar aos baralhos</a>
     `;
 }
 
@@ -334,9 +344,11 @@ function avaliar(nota) {
     }
 }
 
-// Mostrar tela de finalizado
+// Mostrar tela de finalizado (COM BOTÃO VOLTAR AO MATERIAL)
 function mostrarFinalizado() {
     const container = document.getElementById('app');
+    const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
+    const concurso = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
     
     const taxaAcerto = state.total > 0 ? Math.round((state.acertos / state.total) * 100) : 0;
     
@@ -348,22 +360,36 @@ function mostrarFinalizado() {
             <p>Erros: <strong>${state.erros}</strong></p>
             <p>Taxa de acerto: <strong>${taxaAcerto}%</strong></p>
             <br>
-            <a href="/flashcards/" class="btn btn-voltar">Voltar aos baralhos</a>
-            <a href="#" class="btn btn-facil" onclick="reiniciar()">Revisar novamente</a>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" onclick="reiniciar()" class="btn btn-facil">Revisar novamente</a>
+                <a href="/material/${concurso}/?session_id=${sessionId}" 
+                   style="display: inline-block; padding: 0.8rem 2rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                   ← Voltar ao Material
+                </a>
+            </div>
         </div>
     `;
 }
 
-// Mostrar parabéns (todos os cards revisados)
+// Mostrar parabéns (todos os cards revisados) (COM BOTÃO VOLTAR AO MATERIAL)
 function mostrarParabens() {
     const container = document.getElementById('app');
+    const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
+    const concurso = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
+    
     container.innerHTML = `
         <div class="finalizado">
             <h2>Parabéns!</h2>
             <p>Você já revisou todos os cards deste baralho.</p>
             <p>Volte amanhã para mais revisões.</p>
             <br>
-            <a href="/flashcards/" class="btn btn-voltar">Voltar aos baralhos</a>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" onclick="paginaInicial()" class="btn btn-voltar">← Voltar aos baralhos</a>
+                <a href="/material/${concurso}/?session_id=${sessionId}" 
+                   style="display: inline-block; padding: 0.8rem 2rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                   ← Voltar ao Material
+                </a>
+            </div>
         </div>
     `;
 }
@@ -383,6 +409,9 @@ function reiniciar() {
 // Mostrar acesso negado
 function mostrarAcessoNegado() {
     const container = document.getElementById('app');
+    const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
+    const concurso = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
+    
     container.innerHTML = `
         <div class="acesso-negado">
             <h2>Acesso restrito</h2>
@@ -392,6 +421,11 @@ function mostrarAcessoNegado() {
             <p style="font-size: 0.9rem; color: #6c757d;">
                 Já comprou? Acesse pelo link enviado no e-mail de confirmação.
             </p>
+            <br>
+            <a href="/material/${concurso}/?session_id=${sessionId}" 
+               style="display: inline-block; padding: 0.8rem 2rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+               ← Voltar ao Material
+            </a>
         </div>
     `;
 }
@@ -399,60 +433,58 @@ function mostrarAcessoNegado() {
 // Página inicial - listar baralhos
 async function paginaInicial() {
     const container = document.getElementById('app');
+    const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
+    const concurso = new URLSearchParams(window.location.search).get('concurso') || 'seduc-ms-2022';
     
-    // Verifica acesso
-    const temAcesso = await verificarAcesso();
-    if (!temAcesso) {
-        mostrarAcessoNegado();
-        return;
-    }
+    const dados = await carregarDados();
     
-    const data = await carregarFlashcards();
-    
-    if (!data) {
+    if (!dados) {
         container.innerHTML = `
-            <div class="finalizado">
-                <h2>Erro ao carregar</h2>
+            <div style="text-align: center; padding: 2rem;">
+                <h2>Erro ao carregar dados</h2>
                 <p>Não foi possível carregar os flashcards.</p>
             </div>
         `;
         return;
     }
-    
-    // Pega o primeiro concurso (seduc-ms-2022)
-    const concursoId = Object.keys(data)[0];
-    const concurso = data[concursoId];
-    
+
+    let totalCards = 0;
     let html = `
-        <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">${concurso.nome}</h2>
+        <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">${dados.nome}</h2>
         <p style="color: #6c757d; margin-bottom: 1rem;">Escolha uma matéria para estudar</p>
         <div class="baralhos-grid">
     `;
-    
-    for (const [id, baralho] of Object.entries(concurso.baralhos)) {
-        // Verifica progresso salvo para mostrar status
-        const progresso = carregarProgresso(concursoId, id);
-        const total = baralho.cards.length;
-        const revisados = progresso ? progresso.cards.filter(c => c.revisado).length : 0;
-        const status = revisados > 0 ? `${revisados}/${total} revisados` : `${total} cards`;
-        
+
+    for (const [id, baralho] of Object.entries(dados.baralhos)) {
+        totalCards += baralho.cards.length;
+        const progresso = localStorage.getItem(`flashcards_${CONCURSO_ID}_${id}`);
+        const revisados = progresso ? JSON.parse(progresso).filter(c => c.revisado).length : 0;
+        const status = revisados > 0 ? `${revisados}/${baralho.cards.length} revisados` : `${baralho.cards.length} cards`;
+
         html += `
-            <div class="baralho-card" onclick="selecionarBaralho('${concursoId}', '${id}')">
+            <div class="baralho-card" onclick="selecionarBaralho('${id}')">
                 <h3>${baralho.nome}</h3>
                 <p>${status}</p>
-                <span class="qtd">${total} questões</span>
+                <span class="qtd">${baralho.cards.length} questões</span>
             </div>
         `;
     }
-    
+
     html += `
         </div>
         <div style="margin-top: 2rem; text-align: center; color: #6c757d; font-size: 0.9rem;">
             <p>Clique em um baralho para começar a estudar</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Seu progresso é salvo automaticamente</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Total: ${totalCards} cards disponíveis</p>
         </div>
+        <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; border-top: 1px solid #e9ecef;">
+            <a href="/material/${concurso}/?session_id=${sessionId}" 
+               style="display: inline-block; padding: 0.8rem 2rem; background: #6c757d; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+               ← Voltar ao Material
+            </a>
+        </div>
+        <a href="/" class="voltar">← Voltar à loja</a>
     `;
-    
+
     container.innerHTML = html;
 }
 
