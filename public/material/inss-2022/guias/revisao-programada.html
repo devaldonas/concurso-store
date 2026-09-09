@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Revisão - INSS 2022</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,16 +14,38 @@
             padding: 2rem;
         }
         .container { max-width: 1000px; margin: 0 auto; }
+        
+        /* Header padrão Concurso Store */
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.8; }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-voltar-material {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
+        
         .badge-inss {
             display: inline-block;
             background: #e94560;
@@ -109,29 +133,70 @@
         .dot-basico { background: #17a2b8; }
         .dot-especifico { background: #e94560; }
         .dot-logica { background: #ffc107; }
-        @media (max-width: 768px) { body { padding: 1rem; } }
-        .btn-voltar-material {
+        
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
+        .btn-voltar-material-footer {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #6c757d;
+            background: #e94560;
             color: white;
+            padding: 10px 20px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: background 0.3s;
-            border: none;
-            cursor: pointer;
         }
-        .btn-voltar-material:hover { background: #5a6268; }
+        .btn-voltar-material-footer:hover {
+            background: #c73e54;
+            text-decoration: none !important;
+        }
+        .btn-voltar-loja {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-loja:hover {
+            background: #5a6268;
+            text-decoration: none !important;
+        }
+        
+        @media (max-width: 768px) { 
+            body { padding: 1rem; }
+            .header { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📅 Guia de Revisão Programada</h1>
-            <p>INSS 2022 - Técnico do Seguro Social</p>
+            <div>
+                <h1>📅 Guia de Revisão</h1>
+                <small>INSS 2022 - Técnico do Seguro Social</small>
+            </div>
+            <div class="header-actions">
+                <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material">
+                    📖 Voltar ao material
+                </a>
+            </div>
+        </div>
+
+        <!-- TODO O CONTEÚDO ORIGINAL PERMANECE IGUAL -->
+        <div style="text-align: center; margin-bottom: 1rem;">
             <span class="badge-inss">295 flashcards • 7 matérias • 4 semanas</span>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Dedique 2h/dia nos dias úteis e 4h nos sábados</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6c757d;">Dedique 2h/dia nos dias úteis e 4h nos sábados</p>
         </div>
 
         <div class="legenda">
@@ -409,6 +474,23 @@
             <p>A constância é a chave para a aprovação! Mantenha o foco e siga o cronograma.</p>
             <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Lembre-se: 2 horas por dia, 4 horas nos sábados</p>
         </div>
+
+        <div class="footer-actions">
+            <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material-footer">
+                📖 Voltar ao material
+            </a>
+            <a href="/" class="btn-voltar-loja">← Voltar à loja</a>
+        </div>
     </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        if (sessionId) {
+            document.querySelectorAll('a[href*="session_id"]').forEach(link => {
+                link.href = link.href.replace(/session_id=[^&]*/, `session_id=${sessionId}`);
+            });
+        }
+    </script>
 </body>
 </html>

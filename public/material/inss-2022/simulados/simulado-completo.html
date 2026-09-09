@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulado INSS 2022 - 120 Questões</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,16 +14,38 @@
             padding: 1.5rem;
         }
         .container { max-width: 900px; margin: 0 auto; }
+        
+        /* Header padrão Concurso Store */
         .header {
             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .header p { opacity: 0.8; }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-voltar-material {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .btn-voltar-material:hover {
+            background: rgba(255,255,255,0.25);
+            text-decoration: none !important;
+        }
+        
         .header .stats {
             display: flex;
             justify-content: center;
@@ -167,38 +191,74 @@
             margin: 1rem 0;
             text-align: center;
         }
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+        }
+        .btn-voltar-material-footer {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-material-footer:hover {
+            background: #c73e54;
+            text-decoration: none !important;
+        }
+        .btn-voltar-loja {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn-voltar-loja:hover {
+            background: #5a6268;
+            text-decoration: none !important;
+        }
+        
         @media (max-width: 768px) {
             body { padding: 1rem; }
             .header .stats span { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
             .questao { padding: 1rem; }
             .btn-group { flex-direction: column; align-items: center; }
             .btn { width: 100%; max-width: 250px; }
+            .header { flex-direction: column; text-align: center; }
+            .header-actions { justify-content: center; width: 100%; }
         }
-        .btn-voltar-material {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #6c757d;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn-voltar-material:hover { background: #5a6268; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📝 Simulado INSS 2022</h1>
-            <p>Técnico do Seguro Social - 120 questões</p>
-            <div class="stats">
-                <span>📄 120 questões</span>
-                <span>⏱️ 3h30</span>
-                <span>📊 120 pontos</span>
+            <div>
+                <h1>📝 Simulado</h1>
+                <small>INSS 2022 - Técnico do Seguro Social</small>
             </div>
+            <div class="header-actions">
+                <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material">
+                    📖 Voltar ao material
+                </a>
+            </div>
+        </div>
+
+        <!-- TODO O CONTEÚDO ORIGINAL PERMANECE IGUAL -->
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span style="background: #e94560; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem;">📄 120 questões</span>
+            <span style="background: #e94560; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem;">⏱️ 3h30</span>
+            <span style="background: #e94560; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem;">📊 120 pontos</span>
         </div>
 
         <div class="dica-tempo">
@@ -215,12 +275,19 @@
             </div>
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="questaoAnterior()">⬅ Anterior</button>
-                <button class="btn btn-primary" onclick="proximaQuestao()">Próxima ➡</button>
-                <button class="btn btn-success" onclick="mostrarGabarito()">Mostrar Gabarito</button>
+                <button class="btn" onclick="proximaQuestao()">Próxima ➡</button>
+                <button class="btn btn-secondary" onclick="mostrarGabarito()">Mostrar Gabarito</button>
             </div>
         </div>
 
         <div id="questoes-container"></div>
+
+        <div class="footer-actions">
+            <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material-footer">
+                📖 Voltar ao material
+            </a>
+            <a href="/" class="btn-voltar-loja">← Voltar à loja</a>
+        </div>
     </div>
 
     <script>
@@ -378,50 +445,50 @@
         ];
 
         // ==========================================
-// CONTROLE DE EVOLUÇÃO (localStorage)
-// ==========================================
+        // CONTROLE DE EVOLUÇÃO (localStorage)
+        // ==========================================
 
-function carregarEvolucao() {
-    const dados = localStorage.getItem('simulado_evolucao');
-    if (dados) {
-        return JSON.parse(dados);
-    }
-    return [];
-}
+        function carregarEvolucao() {
+            const dados = localStorage.getItem('simulado_evolucao');
+            if (dados) {
+                return JSON.parse(dados);
+            }
+            return [];
+        }
 
-function salvarEvolucao(acertos, total, tempo) {
-    const evolucao = carregarEvolucao();
-    evolucao.push({
-        data: new Date().toISOString(),
-        acertos,
-        total,
-        tempo,
-        taxa: Math.round((acertos / total) * 100)
-    });
-    localStorage.setItem('simulado_evolucao', JSON.stringify(evolucao));
-}
+        function salvarEvolucao(acertos, total, tempo) {
+            const evolucao = carregarEvolucao();
+            evolucao.push({
+                data: new Date().toISOString(),
+                acertos,
+                total,
+                tempo,
+                taxa: Math.round((acertos / total) * 100)
+            });
+            localStorage.setItem('simulado_evolucao', JSON.stringify(evolucao));
+        }
 
-function mostrarEvolucao() {
-    const evolucao = carregarEvolucao();
-    if (evolucao.length === 0) {
-        return '<p style="color: #6c757d;">Nenhuma tentativa registrada ainda.</p>';
-    }
-    
-    let html = '<div style="display: flex; flex-direction: column; gap: 0.5rem;">';
-    evolucao.forEach((e, index) => {
-        const data = new Date(e.data).toLocaleDateString('pt-BR');
-        const cor = e.taxa >= 70 ? '#28a745' : e.taxa >= 50 ? '#ffc107' : '#dc3545';
-        html += `
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid ${cor};">
-                <span>#${index + 1} - ${data}</span>
-                <span>${e.acertos}/${e.total} (${e.taxa}%)</span>
-                <span style="color: #6c757d;">${e.tempo}</span>
-            </div>
-        `;
-    });
-    html += '</div>';
-    return html;
-}
+        function mostrarEvolucao() {
+            const evolucao = carregarEvolucao();
+            if (evolucao.length === 0) {
+                return '<p style="color: #6c757d;">Nenhuma tentativa registrada ainda.</p>';
+            }
+            
+            let html = '<div style="display: flex; flex-direction: column; gap: 0.5rem;">';
+            evolucao.forEach((e, index) => {
+                const data = new Date(e.data).toLocaleDateString('pt-BR');
+                const cor = e.taxa >= 70 ? '#28a745' : e.taxa >= 50 ? '#ffc107' : '#dc3545';
+                html += `
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid ${cor};">
+                        <span>#${index + 1} - ${data}</span>
+                        <span>${e.acertos}/${e.total} (${e.taxa}%)</span>
+                        <span style="color: #6c757d;">${e.tempo}</span>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            return html;
+        }
 
         // ============================================
         // CONTROLE DA INTERFACE
