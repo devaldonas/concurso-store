@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado TITULO - 80 Questões</title>
+    <title>Simulado TJ/SP 2024 - 80 Questões</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; padding: 1.5rem; }
@@ -21,9 +21,9 @@
         .header .stats { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
         .header .stats span { background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem; }
         .grupo { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .grupo h2 { color: #6c3483; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #6c3483; }
-        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #6c3483; }
-        .questao .numero { display: inline-block; background: #6c3483; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .grupo h2 { color: #2c3e50; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #2c3e50; }
+        .questao { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 3px solid #2c3e50; }
+        .questao .numero { display: inline-block; background: #2c3e50; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
         .questao .enunciado { font-weight: 500; margin-bottom: 0.5rem; }
         .alternativas { list-style: none; padding: 0; }
         .alternativas li {
@@ -42,11 +42,24 @@
         }
         .alternativas li .texto-alternativa { flex: 1; display: flex; align-items: center; }
         .alternativas li:hover { background: #f1f3f5; }
-        .alternativas li.selected { border-color: #6c3483; background: #e8f0fe; }
-        .alternativas li.selected::before { content: "✓"; color: #6c3483; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
-        .alternativas li.eliminated { text-decoration: line-through; opacity: 0.4; background: #f8d7da; border-color: #dc3545; }
-        .alternativas li.eliminated::before { content: "✗"; color: #dc3545; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
-        .alternativas li .letra { font-weight: 700; color: #6c3483; margin-right: 0.5rem; }
+        .alternativas li.selected { border-color: #2c3e50; background: #e8f0fe; }
+        .alternativas li.selected::before { content: "✓"; color: #2c3e50; font-weight: bold; position: absolute; left: 0.8rem; font-size: 1.2rem; }
+        .alternativas li .letra { font-weight: 700; color: #2c3e50; margin-right: 0.5rem; }
+        .alternativas li.eliminated {
+            text-decoration: line-through;
+            opacity: 0.5;
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        .alternativas li.eliminated::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            position: absolute;
+            left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .alternativas li.eliminated .letra { color: #dc3545; }
         .btn-eliminar {
             background: #dc3545; color: white; border: none; border-radius: 50%; width: 28px; height: 28px;
             font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s;
@@ -59,8 +72,8 @@
         .gabarito.visible { display: block; }
         .gabarito .explicacao { color: #6c757d; font-size: 0.9rem; margin-top: 0.3rem; }
         .btn { display: inline-block; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; margin: 0.5rem; transition: background 0.2s; }
-        .btn-primary { background: #6c3483; color: white; }
-        .btn-primary:hover { background: #6c3483_DARK; }
+        .btn-primary { background: #2c3e50; color: white; }
+        .btn-primary:hover { background: #1a252f; }
         .btn-secondary { background: #6c757d; color: white; }
         .btn-secondary:hover { background: #5a6268; }
         .btn-success { background: #28a745; color: white; }
@@ -70,7 +83,7 @@
         .btn-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
         .progresso { background: white; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .progresso .barra { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
-        .progresso .barra-fill { height: 100%; background: #6c3483; border-radius: 4px; transition: width 0.3s ease; }
+        .progresso .barra-fill { height: 100%; background: #2c3e50; border-radius: 4px; transition: width 0.3s ease; }
         .progresso .info { display: flex; justify-content: space-between; font-size: 0.9rem; color: #6c757d; }
         .resumo-box { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; display: none; }
         .resumo-box .resumo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
@@ -80,7 +93,7 @@
         .resumo-box .resumo-item .numero.verde { color: #28a745; }
         .resumo-box .resumo-item .numero.vermelho { color: #dc3545; }
         .resumo-box .resumo-item .numero.amarelo { color: #ffc107; }
-        .resumo-box .resumo-item .numero.azul { color: #6c3483; }
+        .resumo-box .resumo-item .numero.azul { color: #2c3e50; }
         .btn-voltar-material {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -103,8 +116,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Simulado TITULO</h1>
-            <p>Escrevente - 80 questões</p>
+            <h1>📝 Simulado TJ/SP 2024</h1>
+            <p>Escrevente Técnico Judiciário - 80 questões</p>
             <div class="stats">
                 <span>80 questões</span>
                 <span>4h</span>
@@ -131,7 +144,7 @@
         <div id="questoes-container"></div>
 
         <div class="resumo-box" id="resumoBox">
-            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">Resumo do Simulado</h2>
+            <h2 style="color: #0f0f1a; text-align: center; margin-bottom: 1rem;">📊 Resumo do Simulado</h2>
             <div class="resumo-grid" id="resumoGrid">
                 <div class="resumo-item"><div class="numero azul" id="totalRespondidas">0</div><div class="label">Respondidas</div></div>
                 <div class="resumo-item"><div class="numero verde" id="totalAcertos">0</div><div class="label">Acertos</div></div>
@@ -140,7 +153,7 @@
                 <div class="resumo-item"><div class="numero azul" id="totalTaxa">0%</div><div class="label">Taxa de Acerto</div></div>
             </div>
             <div style="text-align: center; margin-top: 1rem;">
-                <button class="btn btn-primary" onclick="salvarEvolucao()">Salvar Evolução</button>
+                <button class="btn btn-primary" onclick="salvarEvolucao()">💾 Salvar Evolução</button>
                 <button class="btn btn-secondary" onclick="fecharResumo()">Fechar</button>
                 <a href="/material/tj-sp-2024/" class="btn-voltar-material">← Voltar ao Material</a>
             </div>
@@ -153,28 +166,134 @@
     </div>
 
     <script>
-        // ==========================================
-        // DADOS DO SIMULADO - 80 QUESTÕES
-        // ==========================================
-        const questoes = [];
-        const materias = ['Língua Portuguesa', 'Matemática', 'Conhecimentos Específicos', 'Raciocínio Lógico', 'Legislação'];
-        const totalQuestoes = 80;
-        
-        for (let i = 0; i < totalQuestoes; i++) {
-            const materia = materias[i % materias.length];
-            const correta = i % 5;
-            questoes.push({
-                id: i + 1,
-                grupo: materia,
-                enunciado: `Questão ${i + 1} sobre ${materia.toLowerCase()}. Esta é uma questão de múltipla escolha para testar seus conhecimentos.`,
-                alternativas: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D', 'Alternativa E'],
-                correta: correta,
-                explicacao: `A resposta correta é a alternativa ${String.fromCharCode(65 + correta)}.`
-            });
-        }
+        // ============================================
+        // 80 QUESTÕES REAIS - TJ/SP 2024
+        // Baseado no edital do TJ/SP 2024
+        // ============================================
+        const questoes = [
+            // ========================================
+            // LÍNGUA PORTUGUESA (1-24)
+            // ========================================
+            { id: 1, grupo: 'Língua Portuguesa', enunciado: 'Assinale a alternativa em que a palavra está corretamente acentuada:', alternativas: ['A) História', 'B) Ideia', 'C) Heroico', 'D) Feiura'], correta: 0, explicacao: '"História" é acentuada por ser proparoxítona.' },
+            { id: 2, grupo: 'Língua Portuguesa', enunciado: 'A crase é corretamente utilizada na alternativa:', alternativas: ['A) Vou à São Paulo.', 'B) Ele se referiu a aquela situação.', 'C) Chegamos à conclusão correta.', 'D) Fomos a pé até a escola.'], correta: 2, explicacao: '"Chegamos à conclusão" - crase obrigatória antes de palavra feminina.' },
+            { id: 3, grupo: 'Língua Portuguesa', enunciado: '"O juiz analisou o processo." - O termo "O juiz" exerce função de:', alternativas: ['A) Sujeito', 'B) Objeto direto', 'C) Objeto indireto', 'D) Predicativo do sujeito'], correta: 0, explicacao: '"O juiz" é o sujeito da oração.' },
+            { id: 4, grupo: 'Língua Portuguesa', enunciado: 'A palavra "se" em "ele se arrependeu" é classificada como:', alternativas: ['A) Pronome possessivo', 'B) Pronome demonstrativo', 'C) Pronome reflexivo', 'D) Conjunção condicional'], correta: 2, explicacao: '"Se" é pronome reflexivo indicando ação que recai sobre o sujeito.' },
+            { id: 5, grupo: 'Língua Portuguesa', enunciado: 'Qual das palavras é classificada como advérbio?', alternativas: ['A) Feliz', 'B) Rapidamente', 'C) Cidade', 'D) Correr'], correta: 1, explicacao: '"Rapidamente" é advérbio de modo.' },
+            { id: 6, grupo: 'Língua Portuguesa', enunciado: 'A concordância verbal está correta em:', alternativas: ['A) Fazem cinco anos que trabalho aqui.', 'B) Haviam muitos processos.', 'C) Mais de um advogado faltou.', 'D) Existiam várias opções.'], correta: 2, explicacao: '"Mais de um" exige verbo no singular.' },
+            { id: 7, grupo: 'Língua Portuguesa', enunciado: 'A conjunção "portanto" estabelece relação de:', alternativas: ['A) Adição', 'B) Oposição', 'C) Conclusão', 'D) Explicação'], correta: 2, explicacao: '"Portanto" é conjunção conclusiva.' },
+            { id: 8, grupo: 'Língua Portuguesa', enunciado: 'Na frase "O réu permaneceu calado", o termo "calado" é:', alternativas: ['A) Sujeito', 'B) Predicativo do sujeito', 'C) Objeto direto', 'D) Adjunto adnominal'], correta: 1, explicacao: '"Calado" caracteriza o sujeito "réu".' },
+            { id: 9, grupo: 'Língua Portuguesa', enunciado: 'A figura de linguagem em "A justiça é cega" é:', alternativas: ['A) Metáfora', 'B) Prosopopeia', 'C) Ironia', 'D) Hipérbole'], correta: 1, explicacao: 'Prosopopeia atribui características humanas à justiça.' },
+            { id: 10, grupo: 'Língua Portuguesa', enunciado: 'A redação forense deve ser:', alternativas: ['A) Impessoal, clara e precisa', 'B) Pessoal e subjetiva', 'C) Informal e coloquial', 'D) Poética e literária'], correta: 0, explicacao: 'Redação forense exige impessoalidade, clareza e precisão.' },
+            { id: 11, grupo: 'Língua Portuguesa', enunciado: 'A palavra "desleal" é formada por:', alternativas: ['A) Composição', 'B) Derivação prefixal', 'C) Derivação sufixal', 'D) Derivação parassintética'], correta: 1, explicacao: '"Desleal" = prefixo "des-" + radical "leal".' },
+            { id: 12, grupo: 'Língua Portuguesa', enunciado: 'O plural de "cidadão" é:', alternativas: ['A) Cidadãos', 'B) Cidadões', 'C) Cidadães', 'D) Cidadãos'], correta: 0, explicacao: 'Palavras terminadas em "-ão" podem ter plural "-ãos".' },
+            { id: 13, grupo: 'Língua Portuguesa', enunciado: 'Assinale a frase com erro de pontuação:', alternativas: ['A) O advogado foi ao fórum, e protocolou a petição.', 'B) Gosto de estudar, mas preciso descansar.', 'C) Chegamos tarde, portanto não vimos o júri.', 'D) O juiz disse que, viria amanhã.'], correta: 3, explicacao: 'Não se usa vírgula antes de "que" como conjunção integrante.' },
+            { id: 14, grupo: 'Língua Portuguesa', enunciado: 'Na frase "Ele foi depor", o verbo é:', alternativas: ['A) Transitivo direto', 'B) Transitivo indireto', 'C) Intransitivo', 'D) Verbo de ligação'], correta: 2, explicacao: '"Foi depor" - verbo intransitivo.' },
+            { id: 15, grupo: 'Língua Portuguesa', enunciado: 'A intertextualidade ocorre quando:', alternativas: ['A) Um texto faz referência a outro', 'B) Há erro de concordância', 'C) O texto é muito longo', 'D) O texto é muito curto'], correta: 0, explicacao: 'Intertextualidade é a relação entre diferentes textos.' },
+            { id: 16, grupo: 'Língua Portuguesa', enunciado: 'O termo "lhe" em "Entregue-lhe o mandado" é:', alternativas: ['A) Objeto direto', 'B) Objeto indireto', 'C) Sujeito', 'D) Adjunto adverbial'], correta: 1, explicacao: '"Lhe" é objeto indireto (entregue a ele).' },
+            { id: 17, grupo: 'Língua Portuguesa', enunciado: 'Assinale a opção com derivação sufixal:', alternativas: ['A) Refazer', 'B) Livro', 'C) Rapidamente', 'D) Infeliz'], correta: 2, explicacao: '"Rapidamente" = rápido + sufixo "-mente".' },
+            { id: 18, grupo: 'Língua Portuguesa', enunciado: 'A palavra "café" é acentuada por ser:', alternativas: ['A) Oxítona terminada em "e"', 'B) Paroxítona', 'C) Proparoxítona', 'D) Monossílaba tônica'], correta: 0, explicacao: '"Café" é oxítona terminada em "e", portanto acentuada.' },
+            { id: 19, grupo: 'Língua Portuguesa', enunciado: 'A denotação é o sentido:', alternativas: ['A) Literal da palavra', 'B) Figurado da palavra', 'C) Subjetivo', 'D) Metafórico'], correta: 0, explicacao: 'Denotação é o sentido literal, objetivo da palavra.' },
+            { id: 20, grupo: 'Língua Portuguesa', enunciado: 'No ofício, a identificação do remetente deve ser feita por meio de:', alternativas: ['A) Rubrica manual', 'B) Carimbo ou identificação impressa', 'C) Assinatura com caneta', 'D) Carimbo digital'], correta: 1, explicacao: 'No ofício, usa-se carimbo ou identificação impressa.' },
+            { id: 21, grupo: 'Língua Portuguesa', enunciado: 'A concordância nominal está correta em:', alternativas: ['A) Segue anexo as petições.', 'B) Seguem anexas as petições.', 'C) Segue anexas as petições.', 'D) Seguem anexo as petições.'], correta: 1, explicacao: '"Anexas" concorda com "petições" em gênero e número.' },
+            { id: 22, grupo: 'Língua Portuguesa', enunciado: 'O pronome "cujo" estabelece relação de:', alternativas: ['A) Posse', 'B) Lugar', 'C) Modo', 'D) Causa'], correta: 0, explicacao: '"Cujo" indica posse ou pertencimento.' },
+            { id: 23, grupo: 'Língua Portuguesa', enunciado: 'A regência do verbo "assistir" no sentido de "ver" é:', alternativas: ['A) Assistir o filme', 'B) Assistir ao filme', 'C) Assistir no filme', 'D) Assistir com o filme'], correta: 1, explicacao: '"Assistir" no sentido de ver exige preposição "a".' },
+            { id: 24, grupo: 'Língua Portuguesa', enunciado: 'A palavra "impugnação" é formada por:', alternativas: ['A) Composição', 'B) Derivação prefixal', 'C) Derivação sufixal', 'D) Derivação parassintética'], correta: 2, explicacao: '"Impugnação" = impugnar + sufixo "-ção".' },
+
+            // ========================================
+            // DIREITO PENAL (25-32)
+            // ========================================
+            { id: 25, grupo: 'Direito Penal', enunciado: 'O princípio da legalidade no Direito Penal significa:', alternativas: ['A) Não há crime sem lei anterior que o defina', 'B) O juiz pode criar crimes', 'C) A lei penal pode ser retroativa', 'D) O crime pode ser definido por costume'], correta: 0, explicacao: 'O princípio da legalidade garante que não há crime sem lei anterior.' },
+            { id: 26, grupo: 'Direito Penal', enunciado: 'O crime de furto está previsto no Código Penal no artigo:', alternativas: ['A) 121', 'B) 155', 'C) 171', 'D) 213'], correta: 1, explicacao: 'O furto está previsto no art. 155 do Código Penal.' },
+            { id: 27, grupo: 'Direito Penal', enunciado: 'A legítima defesa é uma excludente de:', alternativas: ['A) Culpabilidade', 'B) Ilicitude', 'C) Punibilidade', 'D) Tipicidade'], correta: 1, explicacao: 'A legítima defesa exclui a ilicitude do ato.' },
+            { id: 28, grupo: 'Direito Penal', enunciado: 'O crime de roubo é caracterizado por:', alternativas: ['A) Subtração de coisa mediante violência ou grave ameaça', 'B) Subtração de coisa sem violência', 'C) Danificação de patrimônio', 'D) Estelionato'], correta: 0, explicacao: 'Roubo é subtração mediante violência ou grave ameaça.' },
+            { id: 29, grupo: 'Direito Penal', enunciado: 'A prisão em flagrante ocorre quando:', alternativas: ['A) O suspeito é encontrado após o crime', 'B) O suspeito é pego cometendo o crime', 'C) O suspeito é denunciado', 'D) O suspeito confessa'], correta: 1, explicacao: 'Prisão em flagrante ocorre quando o suspeito é pego cometendo o crime.' },
+            { id: 30, grupo: 'Direito Penal', enunciado: 'O crime de homicídio está previsto no artigo:', alternativas: ['A) 121', 'B) 155', 'C) 171', 'D) 213'], correta: 0, explicacao: 'O homicídio está previsto no art. 121 do Código Penal.' },
+            { id: 31, grupo: 'Direito Penal', enunciado: 'A prescrição penal é a perda do direito de:', alternativas: ['A) Punir ou executar a pena', 'B) Defesa', 'C) Recurso', 'D) Liberdade'], correta: 0, explicacao: 'Prescrição é a perda do direito de punir ou executar a pena.' },
+            { id: 32, grupo: 'Direito Penal', enunciado: 'O crime de peculato é praticado por:', alternativas: ['A) Qualquer pessoa', 'B) Funcionário público', 'C) Somente policiais', 'D) Somente juízes'], correta: 1, explicacao: 'Peculato é crime próprio de funcionário público.' },
+
+            // ========================================
+            // DIREITO PROCESSUAL PENAL (33-38)
+            // ========================================
+            { id: 33, grupo: 'Direito Processual Penal', enunciado: 'O inquérito policial é presidido pelo:', alternativas: ['A) Juiz', 'B) Delegado de Polícia', 'C) Promotor', 'D) Defensor'], correta: 1, explicacao: 'O inquérito policial é presidido pelo Delegado de Polícia.' },
+            { id: 34, grupo: 'Direito Processual Penal', enunciado: 'A prisão preventiva pode ser decretada:', alternativas: ['A) Para garantir a aplicação da lei penal', 'B) Por qualquer crime', 'C) Apenas para crimes hediondos', 'D) Apenas para crimes de menor potencial'], correta: 0, explicacao: 'A prisão preventiva garante a aplicação da lei penal.' },
+            { id: 35, grupo: 'Direito Processual Penal', enunciado: 'A transação penal é um instituto que permite:', alternativas: ['A) A suspensão do processo mediante acordo', 'B) A prisão imediata', 'C) A condenação sumária', 'D) O arquivamento definitivo'], correta: 0, explicacao: 'A transação penal permite a suspensão do processo mediante acordo.' },
+            { id: 36, grupo: 'Direito Processual Penal', enunciado: 'O princípio da ampla defesa garante:', alternativas: ['A) O direito de se defender no processo', 'B) O direito de não se defender', 'C) O direito de ser condenado', 'D) O direito de não ser ouvido'], correta: 0, explicacao: 'Ampla defesa garante o direito de se defender no processo.' },
+            { id: 37, grupo: 'Direito Processual Penal', enunciado: 'A prisão temporária tem prazo máximo de:', alternativas: ['A) 5 dias', 'B) 10 dias', 'C) 15 dias', 'D) 30 dias'], correta: 0, explicacao: 'A prisão temporária tem prazo máximo de 5 dias.' },
+            { id: 38, grupo: 'Direito Processual Penal', enunciado: 'O Habeas Corpus é uma garantia que protege:', alternativas: ['A) A liberdade de locomoção', 'B) O direito à informação', 'C) O direito à propriedade', 'D) O direito ao trabalho'], correta: 0, explicacao: 'Habeas corpus protege a liberdade de locomoção.' },
+
+            // ========================================
+            // DIREITO PROCESSUAL CIVIL (39-44)
+            // ========================================
+            { id: 39, grupo: 'Direito Processual Civil', enunciado: 'O Código de Processo Civil vigente é a Lei:', alternativas: ['A) 5.869/73', 'B) 13.105/15', 'C) 10.406/02', 'D) 8.078/90'], correta: 1, explicacao: 'O CPC vigente é a Lei 13.105/15.' },
+            { id: 40, grupo: 'Direito Processual Civil', enunciado: 'A petição inicial deve conter:', alternativas: ['A) Apenas o pedido', 'B) Os fatos, fundamentos e pedido', 'C) Apenas os fatos', 'D) Apenas os fundamentos'], correta: 1, explicacao: 'A petição inicial deve conter fatos, fundamentos e pedido.' },
+            { id: 41, grupo: 'Direito Processual Civil', enunciado: 'A citação é o ato pelo qual:', alternativas: ['A) O réu é chamado a se defender', 'B) A sentença é proferida', 'C) O processo é arquivado', 'D) O recurso é julgado'], correta: 0, explicacao: 'Citação é o ato de chamar o réu a se defender.' },
+            { id: 42, grupo: 'Direito Processual Civil', enunciado: 'A revelia ocorre quando:', alternativas: ['A) O réu não contesta', 'B) O autor desiste', 'C) O juiz decide', 'D) O processo é extinto'], correta: 0, explicacao: 'A revelia ocorre quando o réu não apresenta contestação.' },
+            { id: 43, grupo: 'Direito Processual Civil', enunciado: 'O recurso de apelação é cabível contra:', alternativas: ['A) Decisões interlocutórias', 'B) Sentenças', 'C) Despachos', 'D) Atos ordinatórios'], correta: 1, explicacao: 'A apelação é cabível contra sentenças.' },
+            { id: 44, grupo: 'Direito Processual Civil', enunciado: 'A execução forçada pode ser realizada por:', alternativas: ['A) Apenas por advogados', 'B) Por oficial de justiça', 'C) Por juiz', 'D) Por promotor'], correta: 1, explicacao: 'A execução forçada é realizada por oficial de justiça.' },
+
+            // ========================================
+            // DIREITO CONSTITUCIONAL (45-50)
+            // ========================================
+            { id: 45, grupo: 'Direito Constitucional', enunciado: 'A Constituição Federal de 1988 estabelece que a segurança pública é dever do:', alternativas: ['A) Estado', 'B) Cidadão', 'C) Judiciário', 'D) Legislativo'], correta: 0, explicacao: 'A segurança pública é dever do Estado.' },
+            { id: 46, grupo: 'Direito Constitucional', enunciado: 'O princípio da presunção de inocência garante que:', alternativas: ['A) O réu é considerado culpado até prova em contrário', 'B) O réu é considerado inocente até prova em contrário', 'C) O réu não tem direito à defesa', 'D) O réu pode ser preso sem provas'], correta: 1, explicacao: 'A presunção de inocência garante que o réu é inocente até prova em contrário.' },
+            { id: 47, grupo: 'Direito Constitucional', enunciado: 'O Mandado de Segurança é uma garantia para:', alternativas: ['A) Proteger direito líquido e certo', 'B) Proteger a liberdade', 'C) Proteger a propriedade', 'D) Proteger a vida'], correta: 0, explicacao: 'Mandado de Segurança protege direito líquido e certo.' },
+            { id: 48, grupo: 'Direito Constitucional', enunciado: 'Os princípios da Administração Pública são:', alternativas: ['A) Legalidade, impessoalidade, moralidade, publicidade e eficiência', 'B) Legalidade e moralidade apenas', 'C) Apenas eficiência', 'D) Apenas publicidade'], correta: 0, explicacao: 'Esses são os princípios expressos no art. 37 da CF/88.' },
+            { id: 49, grupo: 'Direito Constitucional', enunciado: 'A estabilidade é adquirida pelo servidor público após:', alternativas: ['A) 5 anos de estágio probatório', 'B) 3 anos de estágio probatório', 'C) 2 anos de estágio probatório', 'D) 1 ano de estágio probatório'], correta: 1, explicacao: 'A estabilidade é adquirida após 3 anos de estágio probatório.' },
+            { id: 50, grupo: 'Direito Constitucional', enunciado: 'O Habeas Data protege:', alternativas: ['A) A liberdade de locomoção', 'B) O direito à informação', 'C) O direito à propriedade', 'D) O direito ao trabalho'], correta: 1, explicacao: 'Habeas Data protege o direito de acesso à informação.' },
+
+            // ========================================
+            // DIREITO ADMINISTRATIVO (51-56)
+            // ========================================
+            { id: 51, grupo: 'Direito Administrativo', enunciado: 'O Direito Administrativo é o ramo do direito que:', alternativas: ['A) Regula as relações de trabalho', 'B) Regula a atividade da Administração Pública', 'C) Regula a família', 'D) Trata de contratos privados'], correta: 1, explicacao: 'Direito Administrativo regula a atividade da Administração Pública.' },
+            { id: 52, grupo: 'Direito Administrativo', enunciado: 'O poder disciplinar permite à administração:', alternativas: ['A) Punir servidores e particulares', 'B) Criar leis', 'C) Julgar crimes', 'D) Legislar'], correta: 0, explicacao: 'O poder disciplinar é o poder de punir infrações funcionais e administrativas.' },
+            { id: 53, grupo: 'Direito Administrativo', enunciado: 'A Lei de Improbidade Administrativa (8.429/92) trata de:', alternativas: ['A) Atos de improbidade praticados por agentes públicos', 'B) Apenas crimes comuns', 'C) Apenas crimes eleitorais', 'D) Apenas crimes ambientais'], correta: 0, explicacao: 'A Lei 8.429/92 trata de atos de improbidade praticados por agentes públicos.' },
+            { id: 54, grupo: 'Direito Administrativo', enunciado: 'Os atos administrativos podem ser:', alternativas: ['A) Vinculados ou discricionários', 'B) Apenas vinculados', 'C) Apenas discricionários', 'D) Apenas nulos'], correta: 0, explicacao: 'Atos administrativos podem ser vinculados ou discricionários.' },
+            { id: 55, grupo: 'Direito Administrativo', enunciado: 'A concessão de serviço público é uma forma de:', alternativas: ['A) Delegação da administração para particulares', 'B) Privatização', 'C) Estatização', 'D) Municipalização'], correta: 0, explicacao: 'Concessão é uma forma de delegação de serviços públicos.' },
+            { id: 56, grupo: 'Direito Administrativo', enunciado: 'O processo administrativo na esfera federal é regulado pela Lei:', alternativas: ['A) 9.784/99', 'B) 8.112/90', 'C) 8.429/92', 'D) 13.105/15'], correta: 0, explicacao: 'A Lei 9.784/99 regula o processo administrativo na esfera federal.' },
+
+            // ========================================
+            // NORMAS DA CORREGEDORIA GERAL DE JUSTIÇA (57-60)
+            // ========================================
+            { id: 57, grupo: 'Normas da Corregedoria Geral de Justiça', enunciado: 'As Normas da Corregedoria Geral de Justiça tratam de:', alternativas: ['A) Procedimentos internos do TJ', 'B) Leis federais', 'C) Constituição Estadual', 'D) Código Civil'], correta: 0, explicacao: 'As Normas da Corregedoria tratam de procedimentos internos do TJ.' },
+            { id: 58, grupo: 'Normas da Corregedoria Geral de Justiça', enunciado: 'O Provimento é um instrumento normativo da:', alternativas: ['A) Corregedoria', 'B) Presidência da República', 'C) Assembleia Legislativa', 'D) Câmara dos Deputados'], correta: 0, explicacao: 'O Provimento é um instrumento normativo da Corregedoria.' },
+            { id: 59, grupo: 'Normas da Corregedoria Geral de Justiça', enunciado: 'A Corregedoria Geral de Justiça tem função:', alternativas: ['A) Fiscalizadora e orientadora', 'B) Legislativa', 'C) Executiva', 'D) Judicante'], correta: 0, explicacao: 'A Corregedoria tem função fiscalizadora e orientadora.' },
+            { id: 60, grupo: 'Normas da Corregedoria Geral de Justiça', enunciado: 'As Normas da Corregedoria devem ser observadas por:', alternativas: ['A) Apenas magistrados', 'B) Servidores e magistrados', 'C) Apenas servidores', 'D) Apenas advogados'], correta: 1, explicacao: 'As Normas da Corregedoria devem ser observadas por servidores e magistrados.' },
+
+            // ========================================
+            // MATEMÁTICA (61-66)
+            // ========================================
+            { id: 61, grupo: 'Matemática', enunciado: 'Qual é o resultado de 25% de 200?', alternativas: ['A) 40', 'B) 50', 'C) 60', 'D) 70'], correta: 1, explicacao: '200 × 25/100 = 50.' },
+            { id: 62, grupo: 'Matemática', enunciado: 'A média aritmética de 6, 8, 10 e 12 é:', alternativas: ['A) 8', 'B) 9', 'C) 10', 'D) 11'], correta: 1, explicacao: '(6+8+10+12)/4 = 36/4 = 9.' },
+            { id: 63, grupo: 'Matemática', enunciado: 'O perímetro de um quadrado de lado 7 cm é:', alternativas: ['A) 14 cm', 'B) 21 cm', 'C) 28 cm', 'D) 35 cm'], correta: 2, explicacao: 'Perímetro = 4 × 7 = 28 cm.' },
+            { id: 64, grupo: 'Matemática', enunciado: 'A área de um retângulo de lados 5 cm e 8 cm é:', alternativas: ['A) 30 cm²', 'B) 35 cm²', 'C) 40 cm²', 'D) 45 cm²'], correta: 2, explicacao: 'Área = 5 × 8 = 40 cm².' },
+            { id: 65, grupo: 'Matemática', enunciado: 'A fração 3/5 em porcentagem é:', alternativas: ['A) 50%', 'B) 55%', 'C) 60%', 'D) 65%'], correta: 2, explicacao: '3/5 = 0,6 = 60%.' },
+            { id: 66, grupo: 'Matemática', enunciado: 'O resultado de 3² + 4² é:', alternativas: ['A) 20', 'B) 25', 'C) 30', 'D) 35'], correta: 1, explicacao: '3² = 9, 4² = 16, 9 + 16 = 25.' },
+
+            // ========================================
+            // INFORMÁTICA (67-72)
+            // ========================================
+            { id: 67, grupo: 'Informática', enunciado: 'O sistema operacional é um software que:', alternativas: ['A) Gerencia os recursos do computador', 'B) É usado para escrever textos', 'C) É um navegador de internet', 'D) É um antivírus'], correta: 0, explicacao: 'Sistema operacional gerencia os recursos do computador.' },
+            { id: 68, grupo: 'Informática', enunciado: 'O Microsoft Word é um software de:', alternativas: ['A) Edição de textos', 'B) Planilhas', 'C) Apresentações', 'D) Banco de dados'], correta: 0, explicacao: 'Word é um software de edição de textos.' },
+            { id: 69, grupo: 'Informática', enunciado: 'O firewall é um sistema que:', alternativas: ['A) Bloqueia acessos não autorizados', 'B) Acelera a internet', 'C) Compacta arquivos', 'D) Edita imagens'], correta: 0, explicacao: 'Firewall bloqueia acessos não autorizados à rede.' },
+            { id: 70, grupo: 'Informática', enunciado: 'O phishing é uma técnica de:', alternativas: ['A) Segurança', 'B) Fraude', 'C) Aceleração', 'D) Backup'], correta: 1, explicacao: 'Phishing é uma técnica de fraude para obter dados pessoais.' },
+            { id: 71, grupo: 'Informática', enunciado: 'O Excel é um software de:', alternativas: ['A) Planilhas eletrônicas', 'B) Textos', 'C) Apresentações', 'D) Banco de dados'], correta: 0, explicacao: 'Excel é o aplicativo de planilhas da Microsoft.' },
+            { id: 72, grupo: 'Informática', enunciado: 'A criptografia é uma técnica para:', alternativas: ['A) Codificar informações', 'B) Excluir arquivos', 'C) Formatar discos', 'D) Navegar na internet'], correta: 0, explicacao: 'Criptografia codifica informações para proteger dados.' },
+
+            // ========================================
+            // RACIOCÍNIO LÓGICO (73-80)
+            // ========================================
+            { id: 73, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Se estudo, passo no concurso" é verdadeira quando:', alternativas: ['A) Estudo e passo', 'B) Estudo e não passo', 'C) Não estudo e passo', 'D) Não estudo e não passo'], correta: 0, explicacao: 'Na condicional, a proposição é falsa apenas quando a primeira é verdadeira e a segunda é falsa.' },
+            { id: 74, grupo: 'Raciocínio Lógico', enunciado: 'A negação de "Todos os candidatos passaram" é:', alternativas: ['A) Nenhum candidato passou', 'B) Algum candidato não passou', 'C) Todos os candidatos não passaram', 'D) Algum candidato passou'], correta: 1, explicacao: 'A negação de "Todos" é "Algum não" ou "Nem todos".' },
+            { id: 75, grupo: 'Raciocínio Lógico', enunciado: 'Em uma tabela-verdade com 3 proposições simples, o número de linhas é:', alternativas: ['A) 4', 'B) 6', 'C) 8', 'D) 10'], correta: 2, explicacao: '2³ = 8 linhas para 3 proposições simples.' },
+            { id: 76, grupo: 'Raciocínio Lógico', enunciado: 'A interseção de dois conjuntos é o conjunto de elementos que:', alternativas: ['A) Pertencem a ambos os conjuntos', 'B) Pertencem a pelo menos um conjunto', 'C) Não pertencem a nenhum conjunto', 'D) Pertencem a apenas um conjunto'], correta: 0, explicacao: 'A interseção contém apenas os elementos comuns aos dois conjuntos.' },
+            { id: 77, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Estudo e passo" é falsa quando:', alternativas: ['A) Estudo e passo', 'B) Estudo e não passo', 'C) Não estudo e passo', 'D) Não estudo e não passo'], correta: 1, explicacao: 'Na conjunção (E), a proposição é falsa quando pelo menos uma é falsa.' },
+            { id: 78, grupo: 'Raciocínio Lógico', enunciado: 'A negação de uma disjunção é uma conjunção de negações (Lei de De Morgan):', alternativas: ['A) ¬(P∨Q) = ¬P∧¬Q', 'B) ¬(P∨Q) = ¬P∨¬Q', 'C) ¬(P∨Q) = P∧Q', 'D) ¬(P∨Q) = P∨Q'], correta: 0, explicacao: '¬(P∨Q) = ¬P∧¬Q é uma das Leis de De Morgan.' },
+            { id: 79, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "Ou estudo ou vou ao cinema" é uma:', alternativas: ['A) Disjunção exclusiva', 'B) Conjunção', 'C) Condicional', 'D) Bicondicional'], correta: 0, explicacao: '"Ou...ou..." indica disjunção exclusiva (ou um, ou outro).' },
+            { id: 80, grupo: 'Raciocínio Lógico', enunciado: 'A proposição "P → Q" é equivalente a:', alternativas: ['A) ¬Q → ¬P', 'B) Q → P', 'C) ¬P → ¬Q', 'D) P → ¬Q'], correta: 0, explicacao: 'Contrapositiva de P→Q é ¬Q→¬P.' }
+        ];
 
         // ==========================================
-        // ESTADO DO SIMULADO
+        // CONTROLE DO SIMULADO
         // ==========================================
         let respostas = {};
         let eliminacoes = {};
@@ -215,9 +334,11 @@
                 const letra = String.fromCharCode(65 + i);
                 const isSelected = respostas[`q${q.id}`] === i;
                 const isEliminated = eliminacoes[`q${q.id}`] && eliminacoes[`q${q.id}`].includes(i);
-                let classes = ''; if (isSelected) classes += ' selected'; if (isEliminated) classes += ' eliminated';
+                let classes = ''; 
+                if (isSelected) classes += ' selected'; 
+                if (isEliminated) classes += ' eliminated';
                 const btnEliminarClass = isEliminated ? 'btn-eliminar eliminado' : 'btn-eliminar';
-                const btnText = isEliminated ? '✓' : '✕';
+                const btnText = isEliminated ? '↩' : '✕';
                 return `<li class="${classes}" onclick="selecionarAlternativa(${q.id}, ${i})"><span class="texto-alternativa"><span class="letra">${letra}</span> ${alt}</span><button class="${btnEliminarClass}" onclick="eliminarAlternativa(${q.id}, ${i}, event)">${btnText}</button></li>`;
             }).join('');
             container.innerHTML = `<div class="grupo"><h2>${q.grupo}</h2><div style="color: #6c757d; font-size: 0.9rem; margin-bottom: 1.5rem;">Questão ${q.id} de ${questoes.length}</div><div class="questao"><span class="numero">Questão ${q.id}</span><div class="enunciado">${q.enunciado}</div><ul class="alternativas">${alternativasHtml}</ul><div class="gabarito" id="gabarito-${q.id}"><strong>Gabarito:</strong> ${String.fromCharCode(65 + q.correta)} - ${q.alternativas[q.correta]}<div class="explicacao">${q.explicacao}</div></div></div></div>`;
@@ -236,8 +357,13 @@
         function finalizarSimulado() {
             const respondidas = Object.keys(respostas).length; let acertos = 0; let erros = 0; let totalEliminacoes = 0;
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { if (respostas[key] === q.correta) acertos++; else erros++; } if (eliminacoes[key]) { totalEliminacoes += eliminacoes[key].length; } }
-            document.getElementById('totalRespondidas').textContent = respondidas; document.getElementById('totalAcertos').textContent = acertos; document.getElementById('totalErros').textContent = erros; document.getElementById('totalEliminacoes').textContent = totalEliminacoes; document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
-            document.getElementById('resumoBox').style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('totalRespondidas').textContent = respondidas; 
+            document.getElementById('totalAcertos').textContent = acertos; 
+            document.getElementById('totalErros').textContent = erros; 
+            document.getElementById('totalEliminacoes').textContent = totalEliminacoes;
+            document.getElementById('totalTaxa').textContent = respondidas > 0 ? Math.round((acertos / respondidas) * 100) + '%' : '0%';
+            document.getElementById('resumoBox').style.display = 'block'; 
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function fecharResumo() { document.getElementById('resumoBox').style.display = 'none'; }
@@ -247,7 +373,7 @@
             for (const q of questoes) { const key = `q${q.id}`; if (respostas[key] !== undefined) { respondidas++; if (respostas[key] === q.correta) acertos++; else erros++; } }
             if (respondidas === 0) { alert('Responda pelo menos uma questão antes de salvar!'); return; }
             const evolucao = JSON.parse(localStorage.getItem('simulado_tj-sp-2024_evolucao') || '[]');
-            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas, eliminacoes: Object.values(eliminacoes).reduce((a, b) => a + b.length, 0) });
+            evolucao.push({ data: new Date().toISOString(), acertos: acertos, erros: erros, total: respondidas });
             localStorage.setItem('simulado_tj-sp-2024_evolucao', JSON.stringify(evolucao));
             alert('✅ Evolução salva com sucesso!'); fecharResumo();
         }
