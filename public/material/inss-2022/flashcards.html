@@ -142,120 +142,60 @@
 
     <script>
         // ==========================================
-        // TODOS OS 7 BARALHOS DO INSS
+        // FLASHCARDS INSS 2022 — lê direto do JSON
         // ==========================================
-        const baralhos = {
-            'portugues': { 
-                nome: 'Língua Portuguesa', 
-                arquivo: 'flashcards-portugues.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'constitucional': { 
-                nome: 'Direito Constitucional', 
-                arquivo: 'flashcards-constitucional.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'administrativo': { 
-                nome: 'Direito Administrativo', 
-                arquivo: 'flashcards-administrativo.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'etica': { 
-                nome: 'Ética no Serviço Público', 
-                arquivo: 'flashcards-etica.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'logica': { 
-                nome: 'Raciocínio Lógico-Matemático', 
-                arquivo: 'flashcards-logica.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'informatica': { 
-                nome: 'Noções de Informática', 
-                arquivo: 'flashcards-informatica.csv',
-                badge: 'Básico',
-                badgeClass: 'badge-basico'
-            },
-            'especificos': { 
-                nome: 'Conhecimentos Específicos', 
-                arquivo: 'flashcards-especificos.csv',
-                badge: 'Específico',
-                badgeClass: 'badge-especifico'
-            }
-        };
-
-        // Dados embutidos (fallback caso os CSVs não carreguem)
-        const dadosEmbutidos = {
-            'portugues': 60,
-            'constitucional': 35,
-            'administrativo': 35,
-            'etica': 25,
-            'logica': 35,
-            'informatica': 25,
-            'especificos': 80
-        };
-
-        async function carregarFlashcards(baralhoId) {
-            try {
-                // Tenta carregar do CSV primeiro
-                const response = await fetch(`/material/inss-2022/flashcards/${baralhos[baralhoId].arquivo}`);
-                if (!response.ok) {
-                    console.warn(`Arquivo ${baralhos[baralhoId].arquivo} não encontrado. Usando dados embutidos.`);
-                    return dadosEmbutidos[baralhoId] || 0;
-                }
-                const text = await response.text();
-                const linhas = text.split('\n').filter(line => line.trim());
-                return linhas.length;
-            } catch (error) {
-                console.warn('Erro ao carregar:', error);
-                // Fallback para dados embutidos
-                return dadosEmbutidos[baralhoId] || 0;
-            }
+        
+        async function carregarDados() {
+            const response = await fetch('/material/dados/inss-2022.json');
+            if (!response.ok) throw new Error('Falha ao carregar JSON');
+            return response.json();
         }
 
         async function paginaInicial() {
             const container = document.getElementById('app');
             
-            // Carrega todos os cards para contar
+            let dados;
+            try {
+                dados = await carregarDados();
+            } catch (e) {
+                container.innerHTML = '<p style="text-align:center;padding:2rem;">Erro ao carregar flashcards: ' + e.message + '</p>';
+                return;
+            }
+
+            const baralhos = dados.baralhos || {};
             let totalCards = 0;
             let totalBasico = 0;
             let totalEspecifico = 0;
+
+            // Mapear baralhos básicos e específicos (com base no nome/ordem)
+            const basicos = ['portugues', 'etica', 'logica', 'informatica', 'constitucional', 'administrativo'];
             
-            // Primeiro, vamos usar os dados embutidos para mostrar rápido
             let html = `
                 <h2 style="margin: 1rem 0 0.5rem; color: #1a1a2e;">INSS 2022 - Técnico do Seguro Social</h2>
                 <p style="color: #6c757d; margin-bottom: 0.5rem;">Conhecimentos Básicos (P1) e Específicos (P2)</p>
                 <div class="baralhos-grid">
             `;
-            
-            let cardCounts = {};
-            for (const id of Object.keys(baralhos)) {
-                const count = await carregarFlashcards(id);
-                cardCounts[id] = count;
-                totalCards += count;
-                if (baralhos[id].badge === 'Básico') totalBasico += count;
-                else totalEspecifico += count;
-            }
-            
+
             for (const [id, baralho] of Object.entries(baralhos)) {
-                const count = cardCounts[id] || 0;
-                const status = count > 0 ? `${count} cards` : `${count} cards`;
+                const count = baralho.cards ? baralho.cards.length : 0;
+                const ehBasico = basicos.includes(id);
+                const badge = ehBasico ? 'Básico' : 'Específico';
+                const badgeClass = ehBasico ? 'badge-basico' : 'badge-especifico';
                 
+                totalCards += count;
+                if (ehBasico) totalBasico += count;
+                else totalEspecifico += count;
+
                 html += `
                     <div class="baralho-card" onclick="selecionarBaralho('${id}')">
                         <h3>${baralho.nome}</h3>
-                        <span class="${baralho.badgeClass}">${baralho.badge}</span>
-                        <p>${status}</p>
-                        <span class="qtd">${count} questões</span>
+                        <span class="${badgeClass}">${badge}</span>
+                        <p>${count} cards</p>
+                        <span class="qtd">${count} cards</span>
                     </div>
                 `;
             }
-            
+
             html += `
                 </div>
                 <div style="margin-top: 2rem; padding: 1rem; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
@@ -289,15 +229,11 @@
         }
 
         function selecionarBaralho(baralhoId) {
-            // Redireciona para a página de estudo com o baralho selecionado
             const sessionId = new URLSearchParams(window.location.search).get('session_id') || 'dev_test';
             window.location.href = `/material/inss-2022/study.html?baralho=${baralhoId}&session_id=${sessionId}`;
         }
 
-        // Inicializa
         paginaInicial();
-
-        // Exportar para uso global
         window.selecionarBaralho = selecionarBaralho;
     </script>
 </body>

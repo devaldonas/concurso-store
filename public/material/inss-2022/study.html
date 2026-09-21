@@ -139,52 +139,11 @@
     </footer>
 
     <script>
-        // ==========================================
-        // CONFIGURAÇÃO
-        // ==========================================
         const urlParams = new URLSearchParams(window.location.search);
         const baralhoId = urlParams.get('baralho');
         const sessionId = urlParams.get('session_id') || 'dev_test';
 
-        const baralhos = {
-            'portugues': { nome: 'Língua Portuguesa', arquivo: 'flashcards-portugues.csv' },
-            'constitucional': { nome: 'Direito Constitucional', arquivo: 'flashcards-constitucional.csv' },
-            'administrativo': { nome: 'Direito Administrativo', arquivo: 'flashcards-administrativo.csv' },
-            'etica': { nome: 'Ética no Serviço Público', arquivo: 'flashcards-etica.csv' },
-            'logica': { nome: 'Raciocínio Lógico-Matemático', arquivo: 'flashcards-logica.csv' },
-            'informatica': { nome: 'Noções de Informática', arquivo: 'flashcards-informatica.csv' },
-            'especificos': { nome: 'Conhecimentos Específicos', arquivo: 'flashcards-especificos.csv' }
-        };
-
-        // Dados embutidos com todos os cards (fallback)
-        const dadosEmbutidos = {
-            'portugues': [
-                { frente: 'O que é interpretação de texto?', verso: 'Capacidade de compreender o sentido global do texto' },
-                { frente: 'O que é uma ideia principal?', verso: 'É a mensagem central que o autor quer transmitir' },
-                { frente: 'O que são ideias secundárias?', verso: 'São informações que complementam a ideia principal' }
-            ],
-            'constitucional': [
-                { frente: 'O que são direitos fundamentais?', verso: 'Direitos básicos garantidos pela Constituição' },
-                { frente: 'Quais são os direitos individuais?', verso: 'Vida, liberdade, igualdade, segurança e propriedade' }
-            ],
-            'administrativo': [
-                { frente: 'O que é Direito Administrativo?', verso: 'Ramo do direito que regula a atividade da Administração Pública' }
-            ],
-            'etica': [
-                { frente: 'O que é o Código de Ética do Servidor Público?', verso: 'Decreto 1.171/94' }
-            ],
-            'logica': [
-                { frente: 'O que é uma proposição lógica?', verso: 'Frase que pode ser classificada como verdadeira ou falsa' }
-            ],
-            'informatica': [
-                { frente: 'O que é um sistema operacional?', verso: 'Software que gerencia os recursos do computador' }
-            ],
-            'especificos': [
-                { frente: 'O que é Seguridade Social?', verso: 'Conjunto de políticas públicas nas áreas de saúde, previdência e assistência' }
-            ]
-        };
-
-        let state = {
+        const state = {
             cards: [],
             cardAtual: 0,
             acertos: 0,
@@ -193,57 +152,42 @@
             total: 0
         };
 
-        async function carregarFlashcards() {
-            try {
-                const response = await fetch(`/material/inss-2022/flashcards/${baralhos[baralhoId].arquivo}`);
-                if (!response.ok) {
-                    console.warn(`Arquivo ${baralhos[baralhoId].arquivo} não encontrado. Usando dados embutidos.`);
-                    return dadosEmbutidos[baralhoId] || [];
-                }
-                const text = await response.text();
-                const linhas = text.split('\n').filter(line => line.trim());
-                const cards = linhas.map((linha, index) => {
-                    const partes = linha.split(';');
-                    return { id: index + 1, frente: partes[0] || '', verso: partes[1] || '' };
-                });
-                return cards;
-            } catch (error) {
-                console.warn('Erro ao carregar:', error);
-                return dadosEmbutidos[baralhoId] || [];
+        async function carregarCards() {
+            const response = await fetch('/material/dados/inss-2022.json');
+            if (!response.ok) throw new Error('Falha ao carregar JSON');
+            const dados = await response.json();
+            
+            if (!baralhoId || !dados.baralhos || !dados.baralhos[baralhoId]) {
+                throw new Error('Baralho não encontrado: ' + baralhoId);
             }
+            
+            return {
+                nome: dados.baralhos[baralhoId].nome,
+                cards: dados.baralhos[baralhoId].cards || []
+            };
         }
 
         async function iniciarEstudo() {
             const container = document.getElementById('app');
+            let dados;
             
-            if (!baralhoId || !baralhos[baralhoId]) {
-                container.innerHTML = `
-                    <div class="erro">
-                        <h2>Baralho não encontrado</h2>
-                        <p>O baralho selecionado não existe.</p>
-                        <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="voltar">← Voltar</a>
-                    </div>
-                `;
+            try {
+                dados = await carregarCards();
+            } catch (e) {
+                container.innerHTML = '<div style="text-align:center;padding:2rem;"><p>Erro: ' + e.message + '</p><a href="/material/inss-2022/flashcards.html?session_id=' + sessionId + '" class="voltar">← Voltar aos baralhos</a></div>';
                 return;
             }
 
-            const cards = await carregarFlashcards();
-            if (!cards || cards.length === 0) {
-                container.innerHTML = `
-                    <div class="erro">
-                        <h2>Nenhum card encontrado</h2>
-                        <p>O baralho "${baralhos[baralhoId].nome}" está vazio.</p>
-                        <a href="/material/inss-2022/flashcards.html?session_id=${sessionId}" class="voltar">← Voltar</a>
-                    </div>
-                `;
+            if (!dados.cards || dados.cards.length === 0) {
+                container.innerHTML = '<div style="text-align:center;padding:2rem;"><p>O baralho "' + dados.nome + '" está vazio.</p><a href="/material/inss-2022/flashcards.html?session_id=' + sessionId + '" class="voltar">← Voltar aos baralhos</a></div>';
                 return;
             }
 
-            const progressoSalvo = localStorage.getItem(`flashcards_inss-2022_${baralhoId}`);
+            const progressoSalvo = localStorage.getItem('flashcards_inss-2022_' + baralhoId);
             if (progressoSalvo) {
                 state.cards = JSON.parse(progressoSalvo);
             } else {
-                state.cards = cards.map(c => ({ ...c, revisado: false }));
+                state.cards = dados.cards.map(c => ({ ...c, revisado: false }));
             }
 
             state.cardAtual = 0;
@@ -316,7 +260,7 @@
             if (nota >= 4) { state.acertos++; card.acertos = (card.acertos || 0) + 1; } 
             else { state.erros++; card.erros = (card.erros || 0) + 1; }
 
-            localStorage.setItem(`flashcards_inss-2022_${baralhoId}`, JSON.stringify(state.cards));
+            localStorage.setItem('flashcards_inss-2022_' + baralhoId, JSON.stringify(state.cards));
             state.cardAtual++;
 
             if (state.cardAtual >= state.cards.length) { mostrarFinalizado(); } 
@@ -347,16 +291,14 @@
             state.acertos = 0;
             state.erros = 0;
             state.revisados = 0;
-            localStorage.setItem(`flashcards_inss-2022_${baralhoId}`, JSON.stringify(state.cards));
+            localStorage.setItem('flashcards_inss-2022_' + baralhoId, JSON.stringify(state.cards));
             mostrarCard();
         }
 
-        // Exportar funções
         window.virarCard = virarCard;
         window.avaliar = avaliar;
         window.reiniciar = reiniciar;
 
-        // Iniciar
         iniciarEstudo();
     </script>
 </body>
