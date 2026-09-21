@@ -1134,6 +1134,366 @@
           "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 4."
         }
       ]
+    },
+    "seguridade-social": {
+      "nome": "Seguridade Social",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Seguridade Social compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social.",
+          "verso": "CERTO. Art. 194, caput, CF/88. A Seguridade Social abrange três pilares: Saúde, Previdência e Assistência Social.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Incluir 'educação' ou 'moradia' como pilares da Seguridade.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A saúde, a previdência e a assistência social são os três pilares da Seguridade Social.",
+          "verso": "CERTO. Art. 194, CF/88. São os três componentes da Seguridade Social.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'assistência social' por 'educação' ou 'trabalho'.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A Seguridade Social será financiada por toda a sociedade, de forma direta e indireta, mediante recursos provenientes dos orçamentos da União, dos Estados, do Distrito Federal e dos Municípios, e de contribuições sociais.",
+          "verso": "CERTO. Art. 195, caput, CF/88. O financiamento é tripartite: União, Estados/DF/Municípios e contribuições sociais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que só a União financia ou excluir os Municípios.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A Seguridade Social tem como objetivo a universalidade da cobertura e do atendimento.",
+          "verso": "CERTO. Art. 194, parágrafo único, I, CF/88. A universalidade da cobertura e do atendimento é um dos objetivos da Seguridade Social.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com 'uniformidade e equivalência dos benefícios'.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A diversidade da base de financiamento é um dos objetivos da Seguridade Social.",
+          "verso": "CERTO. Art. 194, parágrafo único, VI, CF/88. A diversidade da base de financiamento é um dos objetivos.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com princípios ou com objetivos de outra natureza.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A irredutibilidade do valor dos benefícios é um dos objetivos da Seguridade Social.",
+          "verso": "CERTO. Art. 194, parágrafo único, IV, CF/88. A irredutibilidade do valor dos benefícios é um objetivo (garante o valor real).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir 'irredutibilidade do valor' com 'irredutibilidade nominal' (é real).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A gestão quadripartite da Seguridade Social é composta por representantes dos trabalhadores, dos empregadores, dos aposentados e do Governo.",
+          "verso": "CERTO. Art. 194, parágrafo único, VII, CF/88. A gestão é quadripartite: trabalhadores, empregadores, aposentados e Governo.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir quadripartite (4) com tripartite (3).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A previdência social será organizada sob a forma de regime geral, de caráter contributivo e de filiação obrigatória.",
+          "verso": "CERTO. Art. 201, caput, CF/88. O RGPS é contributivo e de filiação obrigatória (para quem exerce atividade remunerada).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o RGPS é facultativo.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A assistência social será prestada a quem dela necessitar, independentemente de contribuição à Seguridade Social.",
+          "verso": "CERTO. Art. 203, caput, CF/88. A assistência social é prestada a quem necessitar, sem exigência de contribuição.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Exigir contribuição para assistência (não exige).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos.",
+          "verso": "CERTO. Art. 196, CF/88. A saúde é direito de todos e dever do Estado.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que é dever apenas da família ou do setor privado.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A Previdência Social atende a todos os brasileiros, independentemente de contribuição, incluindo os que nunca contribuíram.",
+          "verso": "ERRADO. A Previdência Social é CONTRIBUTIVA e exige filiação e contribuição. Quem atende sem contribuição é a ASSISTÊNCIA SOCIAL (ex.: BPC/LOAS).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir previdência (contributiva) com assistência (não contributiva).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.3."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A Seguridade Social foi instituída no Brasil pela Constituição Federal de 1988, que a organizou em três pilares.",
+          "verso": "CERTO. A CF/88 inaugurou o conceito de Seguridade Social no Brasil, unificando saúde, previdência e assistência.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a Seguridade existe desde a CLT (1943) ou desde a Lei Eloy Chaves (1923).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.1."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A Lei Eloy Chaves (1923) é considerada o marco inicial da Previdência Social no Brasil.",
+          "verso": "CERTO. A Lei Eloy Chaves (Decreto Legislativo 4.682/1923) criou as Caixas de Aposentadorias e Pensões (CAPs) dos ferroviários, sendo o marco inicial da Previdência no Brasil.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a CF/88 ou com a CLT.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 1.1."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A Seguridade Social é organizada sob a forma de regime geral, de caráter contributivo e de filiação obrigatória.",
+          "verso": "ERRADO. Essa é a definição da PREVIDÊNCIA SOCIAL (art. 201), não da Seguridade Social como um todo. A Seguridade inclui saúde e assistência, que não têm filiação obrigatória.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir o regime geral (previdência) com a Seguridade como um todo.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópicos 1.3 e 3."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) A Seguridade Social pode ser organizada em regime de repartição simples ou de capitalização.",
+          "verso": "ERRADO. O RGPS brasileiro adota o regime de REPARTIÇÃO SIMPLES (solidário, entre gerações). O regime de capitalização é usado em previdência complementar (RPC).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir RGPS (repartição) com RPC (capitalização).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3."
+        }
+      ]
+    },
+    "legislacao-previdenciaria": {
+      "nome": "Legislação Previdenciária",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Lei 8.212/1991 dispõe sobre a organização da Seguridade Social e institui o Plano de Custeio.",
+          "verso": "CERTO. A Lei 8.212/91 trata do custeio (financiamento) da Seguridade Social.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 8.213/91 (benefícios).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 18."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A Lei 8.213/1991 dispõe sobre os Planos de Benefícios da Previdência Social.",
+          "verso": "CERTO. A Lei 8.213/91 trata dos benefícios do RGPS.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 8.212/91 (custeio).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 19."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O Decreto 3.048/1999 aprova o Regulamento da Previdência Social (RPS).",
+          "verso": "CERTO. O Decreto 3.048/99 aprova o Regulamento da Previdência Social, regulamentando as Leis 8.212/91 e 8.213/91.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com outro decreto ou com a IN.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 20."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A Instrução Normativa PRES/INSS 128/2022 disciplina procedimentos operacionais no âmbito do INSS.",
+          "verso": "CERTO. A IN 128/2022 estabelece procedimentos e rotinas operacionais no âmbito do INSS, incluindo reconhecimento de direitos previdenciários.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é uma lei (é instrução normativa).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 21."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O segurado empregado é aquele que presta serviço de natureza urbana ou rural à empresa, em caráter não eventual, sob sua subordinação e mediante remuneração.",
+          "verso": "CERTO. Art. 12, I, 'a', da Lei 8.212/91. O empregado presta serviço com subordinação, não eventualidade e remuneração.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o empregado doméstico está nessa mesma categoria (é categoria própria).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.3."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O empregado doméstico é aquele que presta serviço de natureza contínua à pessoa ou família, no âmbito residencial, sem finalidade lucrativa.",
+          "verso": "CERTO. Art. 12, II, da Lei 8.212/91. O doméstico presta serviço no âmbito residencial, sem finalidade lucrativa.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com empregado comum (subordinação + não eventualidade + remuneração).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.3."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O contribuinte individual é aquele que presta serviço a empresas, sem relação de emprego, mas com remuneração.",
+          "verso": "CERTO. Art. 12, V, da Lei 8.212/91. O contribuinte individual presta serviço sem relação de emprego (ex.: autônomos, diretores não empregados).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com empregado (que tem subordinação).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.3."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O trabalhador avulso é aquele que presta serviço a diversas empresas, sem vínculo empregatício, com intermediação de sindicato ou órgão gestor de mão de obra.",
+          "verso": "CERTO. Art. 12, VI, da Lei 8.212/91. O avulso presta serviço com intermediação obrigatória (ex.: estivadores, portuários).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com contribuinte individual (que não tem intermediação).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.3."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O segurado especial é aquele que exerce atividade rural em regime de economia familiar, sem empregados permanentes.",
+          "verso": "CERTO. Art. 12, VII, da Lei 8.212/91. O segurado especial é o produtor rural em economia familiar, sem empregados permanentes.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer trabalhador rural é segurado especial (só em economia familiar).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.3."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) O segurado facultativo é aquele que contribui para o RGPS sem exercer atividade remunerada.",
+          "verso": "CERTO. O segurado facultativo é maior de 16 anos que contribui sem exercer atividade remunerada (ex.: estudante, dona de casa).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com segurado obrigatório.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.4."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A filiação à Previdência Social é automática para o segurado obrigatório, decorrendo do exercício de atividade remunerada.",
+          "verso": "CERTO. Art. 20, Lei 8.212/91. A filiação do segurado obrigatório é automática, decorrente do exercício da atividade remunerada.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a filiação depende de inscrição formal.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.2."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A inscrição do segurado obrigatório é automática, independentemente de ato formal.",
+          "verso": "ERRADO. A FILIAÇÃO é automática (decorre do exercício da atividade). A INSCRIÇÃO é formal (CADASTRO), feita perante o INSS. São conceitos distintos.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir filiação (automática) com inscrição (formal).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 3.2."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O salário de contribuição é a base de cálculo das contribuições previdenciárias.",
+          "verso": "CERTO. O salário de contribuição é a base de cálculo das contribuições devidas à Previdência Social.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com salário de benefício (base de cálculo dos benefícios).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.3."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O décimo terceiro salário integra o salário de contribuição para fins de contribuição previdenciária.",
+          "verso": "ERRADO. O 13º salário NÃO integra o salário de contribuição. Ele tem contribuição específica e cálculo apartado.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o 13º integra o SC (não integra).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.3.2."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O salário de contribuição tem limite mínimo (salário mínimo) e limite máximo (teto do RGPS).",
+          "verso": "CERTO. O SC tem piso (salário mínimo) e teto (valor máximo do RGPS, atualmente R$ 8.157,41 desde jan/2025).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o teto é ilimitado ou que o piso é o salário mínimo por lei específica.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.3.3."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A contribuição do empregado doméstico é de 8% sobre o salário de contribuição.",
+          "verso": "ERRADO. A contribuição do empregado doméstico é de 8% (até o teto). A do empregado comum é de 8%, 9% ou 11%, conforme a faixa salarial (após a Reforma, alíquotas progressivas).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar alíquotas ou confundir categorias.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.2."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Após a EC 103/2019, a alíquota de contribuição do empregado passou a ser progressiva, variando de 7,5% a 14%, conforme a faixa salarial.",
+          "verso": "CERTO. A EC 103/2019 introduziu alíquotas progressivas (7,5%, 9%, 12%, 14%) para o empregado, celetista e avulso.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que continua sendo 8%, 9% ou 11%.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.2."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A competência para arrecadar e fiscalizar as contribuições previdenciárias é da Secretaria da Receita Federal do Brasil.",
+          "verso": "CERTO. A competência para arrecadar, fiscalizar e cobrar as contribuições sociais é da RFB (Secretaria Especial da Receita Federal do Brasil).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é do INSS (o INSS reconhece benefícios; a RFB arrecada).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 5.4.1."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A decadência é a perda do direito de a Fazenda Pública constituir o crédito previdenciário pelo decurso do prazo de 5 anos.",
+          "verso": "CERTO. A decadência (art. 173 do CTN) atinge o direito de CONSTITUIR o crédito tributário. Prazo: 5 anos.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir decadência (constituir) com prescrição (cobrar).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 6."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A prescrição é a perda do direito de a Fazenda Pública cobrar o crédito previdenciário já constituído.",
+          "verso": "CERTO. A prescrição (art. 174 do CTN) atinge o direito de COBRAR o crédito tributário já constituído. Prazo: 5 anos.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir prescrição (cobrar) com decadência (constituir).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 6."
+        }
+      ]
     }
   }
 }
