@@ -1494,6 +1494,366 @@
           "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 6."
         }
       ]
+    },
+    "rgps-beneficios": {
+      "nome": "RGPS - Benefícios",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A aposentadoria por idade, após a EC 103/2019, exige idade mínima de 65 anos para homens e 62 anos para mulheres, além de carência de 180 contribuições.",
+          "verso": "CERTO. EC 103/2019 fixou 65 anos (homens) e 62 anos (mulheres) para a aposentadoria por idade urbana, com carência de 180 contribuições (15 anos).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar idades ou carência.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A aposentadoria por tempo de contribuição foi extinta pela EC 103/2019, mas há regras de transição para quem já era filiado antes da reforma.",
+          "verso": "CERTO. A EC 103/2019 extinguiu a aposentadoria por tempo de contribuição, mas criou regras de transição (pedágio, pontos, idade mínima progressiva) para filiados antes de 13/11/2019.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a transição vale para todos (só para filiados antes da reforma).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 16."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez) exige carência de 12 contribuições mensais, salvo nos casos de acidente de qualquer natureza ou doença profissional.",
+          "verso": "CERTO. Carência de 12 contribuições, dispensada em caso de acidente de qualquer natureza, doença profissional ou doença grave listada em lei.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a carência é de 180 contribuições ou que nunca é dispensada.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) O auxílio por incapacidade temporária (antigo auxílio-doença) exige carência de 12 contribuições mensais.",
+          "verso": "CERTO. Carência de 12 contribuições, dispensada nas mesmas hipóteses da aposentadoria por incapacidade permanente.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir carência do auxílio com a da aposentadoria (é a mesma: 12).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O auxílio-acidente é devido ao segurado que, após consolidação de lesões decorrentes de acidente de qualquer natureza, apresenta sequelas que impliquem redução da capacidade para o trabalho habitual.",
+          "verso": "CERTO. Indenização mensal devida após consolidação de sequelas. Não exige carência e pode ser acumulado com o salário.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que exige carência (não exige).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A pensão por morte, após a EC 103/2019, exige carência de 18 contribuições mensais, dispensada em caso de acidente ou doença ocupacional.",
+          "verso": "CERTO. Regra geral: 18 contribuições. Dispensada se o óbito decorrer de acidente de qualquer natureza ou doença ocupacional, ou se o segurado já era aposentado.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalizar a carência para 'todos os casos'.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A pensão por morte, após a EC 103/2019, é devida ao cônjuge por tempo determinado quando o óbito ocorrer antes de 18 meses de casamento ou união estável.",
+          "verso": "CERTO. Regra da EC 103/2019: se o óbito ocorrer antes de 18 meses de casamento/união, a pensão é temporária (4 meses para cônjuge sem filhos).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que toda pensão é vitalícia.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9 e 16."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O salário-família é devido ao segurado empregado, exceto o doméstico, e ao trabalhador avulso, na proporção do respectivo número de filhos.",
+          "verso": "CERTO. Art. 65, Lei 8.213/91. Devido ao empregado (exceto doméstico), avulso e ao segurado especial, com base na renda e no número de filhos.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Incluir o doméstico (não recebe salário-família).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O salário-maternidade é devido à segurada empregada, contribuinte individual, facultativa, avulsa e especial, pelo prazo de 120 dias.",
+          "verso": "CERTO. Art. 71, Lei 8.213/91. Prazo de 120 dias, para todas as categorias de seguradas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir alguma categoria ou trocar o prazo.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A carência do salário-maternidade é de 10 contribuições mensais para a segurada contribuinte individual e facultativa.",
+          "verso": "CERTO. Art. 25, III, Lei 8.213/91. Para a empregada e avulsa, a carência é zero; para contribuinte individual e facultativa, 10 contribuições.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que todas as categorias têm a mesma carência.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) O salário de benefício é a base de cálculo dos benefícios previdenciários, sendo apurado a partir da média aritmética simples dos salários de contribuição.",
+          "verso": "ERRADO. Após a EC 103/2019, o salário de benefício é apurado pela média aritmética SIMPLES de TODOS os salários de contribuição desde julho/1994 (não mais 80% dos maiores).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a regra antiga (80% dos maiores salários).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9 e 16."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A renda mensal inicial (RMI) do auxílio por incapacidade temporária é de 91% do salário de benefício.",
+          "verso": "CERTO. Art. 61, Lei 8.213/91. A RMI do auxílio-doença (incapacidade temporária) é de 91% do salário de benefício.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar o percentual (100%, 80%, etc.).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A RMI da aposentadoria por idade, após a EC 103/2019, é de 60% do salário de benefício, mais 2% para cada ano de contribuição que exceder 20 anos (homens) ou 15 anos (mulheres).",
+          "verso": "CERTO. Regra da EC 103/2019. Para homens: 60% + 2% por ano acima de 20. Para mulheres: 60% + 2% por ano acima de 15.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 15/20 anos ou 60%/2%.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 16."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O segurado que deixar de contribuir por mais de 12 meses sem perder a qualidade de segurado perderá essa qualidade imediatamente.",
+          "verso": "ERRADO. A perda da qualidade de segurado depende do 'período de graça', que varia conforme o tempo de contribuição e o número de contribuições. Após 12 meses sem contribuir, o segurado ainda pode manter a qualidade por mais tempo, dependendo do caso.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Simplificar a regra do período de graça.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 10."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O período de graça é o prazo durante o qual o segurado pode manter a qualidade de segurado mesmo sem contribuir.",
+          "verso": "CERTO. Art. 15, Lei 8.213/91. O período de graça é de 12 meses (prorrogável para 24 ou 36 em hipóteses específicas) após a cessação das contribuições.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o período é sempre o mesmo, sem exceções.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 10."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) Os crimes contra a seguridade social estão previstos na Lei 8.212/91 e na Lei 8.213/91, com penas de reclusão e multa.",
+          "verso": "CERTO. As Leis 8.212/91 (arts. 106 a 109) e 8.213/91 (art. 126) tipificam crimes contra a seguridade social (ex.: apropriação indébita previdenciária, sonegação, falsificação de documento).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só o Código Penal tipifica esses crimes.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 7."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Aquele que deixar de recolher contribuição previdenciária descontada do empregado comete o crime de apropriação indébita previdenciária.",
+          "verso": "CERTO. Art. 168-A do Código Penal. Deixar de repassar à Previdência Social as contribuições arrecadadas do trabalhador configura apropriação indébita previdenciária.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com sonegação fiscal (que é não recolher a própria contribuição).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 7."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) O recurso contra decisão do INSS em processo administrativo previdenciário pode ser interposto à Junta de Recursos ou ao Conselho de Recursos da Previdência Social (CRPS).",
+          "verso": "CERTO. O CRPS é o órgão de julgamento recursal administrativo, composto pela Junta de Recursos (1ª instância) e pela Câmara de Julgamento (2ª instância).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o recurso vai direto ao Judiciário.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 8."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) O prazo para interpor recurso contra decisão do INSS é de 30 dias, contados da ciência da decisão.",
+          "verso": "CERTO. Art. 305 do Decreto 3.048/99. O prazo é de 30 dias da ciência da decisão.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar o prazo (10, 15, 60 dias).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 8."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) O benefício da aposentadoria por idade pode ser requerido a partir de 180 dias antes de o segurado completar a idade mínima, desde que cumprida a carência.",
+          "verso": "CERTO. Art. 51 do Decreto 3.048/99. O segurado pode requerer com até 180 dias de antecedência ao cumprimento da idade mínima.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só pode requerer no dia em que completa a idade.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 9."
+        }
+      ]
+    },
+    "loas-outros": {
+      "nome": "LOAS, Regimes Próprios e Legislações Especiais",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Lei Orgânica da Assistência Social (LOAS) é a Lei 8.742/1993.",
+          "verso": "CERTO. A Lei 8.742/93 é a LOAS, que organiza a Assistência Social no Brasil.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 8.213/91 (benefícios) ou 8.212/91 (custeio).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O Benefício de Prestação Continuada (BPC/LOAS) é devido ao idoso com 65 anos ou mais e à pessoa com deficiência, que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família.",
+          "verso": "CERTO. Art. 203, V, CF/88 e art. 20 da LOAS. BPC é devido ao idoso 65+ e à PCD, em situação de miserabilidade.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar a idade (60, 70) ou incluir outras categorias.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O BPC/LOAS exige contribuição ao INSS para ser concedido.",
+          "verso": "ERRADO. O BPC é benefício ASSISTENCIAL, não previdenciário. NÃO exige contribuição. Basta comprovar a situação de miserabilidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que exige contribuição (não exige).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) O critério de renda per capita familiar para o BPC é de 1/4 do salário mínimo, podendo ser ampliado para 1/2 em casos específicos.",
+          "verso": "CERTO. A Lei 14.176/2021 ampliou o critério: 1/4 do salário mínimo (regra geral) e até 1/2 em casos específicos, mediante avaliação.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o critério é fixo em 1/4 (a Lei 14.176/2021 permite até 1/2).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.4."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O BPC/LOAS pode ser acumulado com outro benefício previdenciário.",
+          "verso": "ERRADO. O BPC NÃO pode ser acumulado com outro benefício previdenciário ou assistencial, salvo assistência médica e pensão especial de natureza indenizatória.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que pode acumular com aposentadoria.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.1."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O Auxílio-Inclusão é um benefício assistencial devido à pessoa com deficiência que exerça atividade remunerada com remuneração de até 2 salários mínimos.",
+          "verso": "CERTO. Lei 14.176/2021. O Auxílio-Inclusão é pago à PCD que recebe BPC e passa a exercer atividade remunerada (até 2 salários mínimos).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com BPC ou achar que não há limite de renda.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.2."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O Auxílio-Inclusão é devido à PCD que recebe BPC e passa a exercer atividade remunerada.",
+          "verso": "CERTO. O Auxílio-Inclusão foi criado pela Lei 14.176/2021 justamente para estimular a inclusão da PCD no mercado de trabalho, sem perda imediata do BPC.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com BPC (são benefícios distintos).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 14.2."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) Os Regimes Próprios de Previdência Social (RPPS) são aplicáveis aos servidores públicos titulares de cargo efetivo da União, dos Estados, do DF e dos Municípios.",
+          "verso": "CERTO. Art. 40, CF/88. Os RPPS são destinados aos servidores efetivos, com regras próprias de aposentadoria.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que servidor efetivo se filia ao RGPS.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 15."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A contagem recíproca é a soma do tempo de contribuição no RGPS com o tempo no RPPS para fins de aposentadoria.",
+          "verso": "CERTO. A contagem recíproca permite somar tempos de RGPS e RPPS, com posterior compensação financeira entre os regimes.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir contagem recíproca com compensação previdenciária.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 15.2."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A compensação previdenciária é o acerto financeiro entre o RGPS e os RPPS por tempo de contribuição recíproco.",
+          "verso": "CERTO. Lei 9.796/1999. Compensação previdenciária é o acerto entre regimes (RGPS ↔ RPPS) quando há contagem recíproca.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com contagem recíproca (soma de tempo x acerto financeiro).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 15.3."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A Certidão de Tempo de Contribuição (CTC) é o documento que comprova o tempo de contribuição do segurado para fins de contagem recíproca.",
+          "verso": "CERTO. A CTC é emitida pelo regime de origem e apresentada ao regime de destino para contagem recíproca.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir CTC com CNIS.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 15.1."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A pensão especial destinada a crianças com Síndrome Congênita do Zika Vírus foi instituída pela Lei 13.985/2020.",
+          "verso": "CERTO. Lei 13.985/2020. Pensão especial vitalícia para crianças com microcefalia decorrente do Zika.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com outras pensões especiais (Talidomida, Césio 137).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 12.8."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O seguro-defeso é devido ao pescador artesanal durante o período de proibição da pesca para preservação da espécie.",
+          "verso": "CERTO. Lei 10.779/2003. Seguro-defeso é pago ao pescador artesanal no período de defeso (paralisação obrigatória).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer pescador tem direito (só o artesanal, com registro).",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 13."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A Lei Complementar 142/2013 trata da aposentadoria da pessoa com deficiência segurada do RGPS.",
+          "verso": "CERTO. A LC 142/2013 estabelece regras específicas para aposentadoria da PCD no RGPS (tempo de contribuição e idade, conforme o grau de deficiência).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com o BPC/LOAS (assistencial) ou com o Auxílio-Inclusão.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 17."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O servidor público é agente de desenvolvimento social, devendo atuar com ética e compromisso com a cidadania.",
+          "verso": "CERTO. O servidor público, especialmente o do INSS, atua diretamente com direitos sociais, sendo agente de desenvolvimento social.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é apenas executor de tarefas técnicas.",
+          "fundamento": "Edital INSS 2022, item 14.2.3, Conhecimentos Específicos, tópico 22."
+        }
+      ]
     }
   }
 }

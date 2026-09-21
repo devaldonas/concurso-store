@@ -131,7 +131,7 @@ const products = [
     badge: 'Mais Vendido',
     category: 'Federal',
     features: [
-      '295 flashcards',
+      '180 flashcards',
       '7 mapas mentais',
       'Guia de revisão 4 semanas',
       '120 questões - 3h30'
