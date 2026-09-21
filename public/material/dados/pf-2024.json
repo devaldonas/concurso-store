@@ -1,179 +1,2113 @@
 {
-  "nome": "PF 2024 - Agente",
+  "nome": "PF 2025 - Agente Administrativo",
+  "banca": "Cebraspe",
+  "cargo": "Agente Administrativo",
+  "nivel": "medio",
+  "edital_ref": "Edital nº 1/2025 - DGP/PF, de 25/04/2025",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto, identificando ideias principais e inferências", "dificuldade": 1},
-        {"id": 2, "frente": "O que são figuras de linguagem?", "verso": "Recursos estilísticos que tornam a mensagem mais expressiva", "dificuldade": 2},
-        {"id": 3, "frente": "O que é uma metáfora?", "verso": "Comparação implícita entre dois termos", "dificuldade": 2},
-        {"id": 4, "frente": "O que é uma hipérbole?", "verso": "Exagero intencional para enfatizar uma ideia", "dificuldade": 2},
-        {"id": 5, "frente": "O que é eufemismo?", "verso": "Suavização de uma ideia desagradável", "dificuldade": 2},
-        {"id": 6, "frente": "O que é ironia?", "verso": "Afirmação do contrário do que se quer dizer", "dificuldade": 2},
-        {"id": 7, "frente": "O que é denotação?", "verso": "Sentido literal da palavra", "dificuldade": 1},
-        {"id": 8, "frente": "O que é conotação?", "verso": "Sentido figurado da palavra", "dificuldade": 2},
-        {"id": 9, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome, verbo", "dificuldade": 1},
-        {"id": 10, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção, interjeição", "dificuldade": 1},
-        {"id": 11, "frente": "O que é um substantivo?", "verso": "Palavra que nomeia seres, objetos, sentimentos, lugares e ideias", "dificuldade": 1},
-        {"id": 12, "frente": "O que é um adjetivo?", "verso": "Palavra que caracteriza ou qualifica o substantivo", "dificuldade": 1},
-        {"id": 13, "frente": "O que é um verbo?", "verso": "Palavra que expressa ação, estado ou fenômeno da natureza", "dificuldade": 1},
-        {"id": 14, "frente": "O que é um advérbio?", "verso": "Palavra que modifica o verbo, o adjetivo ou outro advérbio", "dificuldade": 1},
-        {"id": 15, "frente": "O que é concordância verbal?", "verso": "Flexão do verbo para concordar em número e pessoa com o sujeito", "dificuldade": 2},
-        {"id": 16, "frente": "O que é concordância nominal?", "verso": "Concordância entre o substantivo e seus modificadores em gênero e número", "dificuldade": 2},
-        {"id": 17, "frente": "O que é regência verbal?", "verso": "Relação entre o verbo e seus complementos (direta ou indireta)", "dificuldade": 2},
-        {"id": 18, "frente": "O que é regência nominal?", "verso": "Relação entre um nome e seu complemento, mediada por preposição", "dificuldade": 2},
-        {"id": 19, "frente": "O que é crase?", "verso": "Fusão da preposição 'a' com o artigo 'a'", "dificuldade": 3},
-        {"id": 20, "frente": "Quando usar crase?", "verso": "Em locuções adverbiais femininas, antes de palavras femininas e em horas", "dificuldade": 3},
-        {"id": 21, "frente": "O que é um período simples?", "verso": "Possui apenas uma oração, com um único verbo", "dificuldade": 1},
-        {"id": 22, "frente": "O que é um período composto?", "verso": "Possui duas ou mais orações, com dois ou mais verbos", "dificuldade": 2},
-        {"id": 23, "frente": "O que é coesão textual?", "verso": "Conexão entre as partes do texto usando elementos coesivos", "dificuldade": 2},
-        {"id": 24, "frente": "O que é coerência textual?", "verso": "Harmonia lógica entre as ideias do texto", "dificuldade": 2},
-        {"id": 25, "frente": "O que é intertextualidade?", "verso": "Relação entre diferentes textos", "dificuldade": 2},
-        {"id": 26, "frente": "O que é pontuação?", "verso": "Uso de sinais gráficos para estruturar o texto", "dificuldade": 2},
-        {"id": 27, "frente": "Como usar a vírgula?", "verso": "Separa elementos, isola aposto e vocativo, separa orações", "dificuldade": 2},
-        {"id": 28, "frente": "O que é um sujeito na oração?", "verso": "Termo sobre o qual se declara algo", "dificuldade": 1},
-        {"id": 29, "frente": "O que é um predicado na oração?", "verso": "Parte da oração que contém informação sobre o sujeito", "dificuldade": 1},
-        {"id": 30, "frente": "O que é um aposto?", "verso": "Termo que explica ou especifica outro termo da oração", "dificuldade": 2},
-        {"id": 31, "frente": "O que é um vocativo?", "verso": "Termo usado para chamar o interlocutor", "dificuldade": 1},
-        {"id": 32, "frente": "O que é polissemia?", "verso": "Propriedade de uma palavra ter múltiplos significados", "dificuldade": 2},
-        {"id": 33, "frente": "O que é sinonímia?", "verso": "Relação entre palavras de significados semelhantes", "dificuldade": 1},
-        {"id": 34, "frente": "O que é antonímia?", "verso": "Relação entre palavras de significados opostos", "dificuldade": 1},
-        {"id": 35, "frente": "O que é variação linguística?", "verso": "Diferenças no uso da língua por região, classe social, situação", "dificuldade": 2},
-        {"id": 36, "frente": "O que é uma conjunção?", "verso": "Palavra que liga orações ou termos de mesma função", "dificuldade": 1},
-        {"id": 37, "frente": "O que é uma preposição?", "verso": "Palavra que liga termos estabelecendo relação de sentido", "dificuldade": 1},
-        {"id": 38, "frente": "O que é um artigo?", "verso": "Palavra que determina o substantivo", "dificuldade": 1},
-        {"id": 39, "frente": "O que é um numeral?", "verso": "Palavra que indica quantidade, ordem ou posição", "dificuldade": 1},
-        {"id": 40, "frente": "O que é um pronome?", "verso": "Palavra que substitui ou acompanha o substantivo", "dificuldade": 1},
-        {"id": 41, "frente": "O que é uma oração coordenada?", "verso": "Oração independente que se liga a outra por conjunção", "dificuldade": 2},
-        {"id": 42, "frente": "O que é uma oração subordinada?", "verso": "Oração que depende sintaticamente de outra", "dificuldade": 2},
-        {"id": 43, "frente": "O que é a redação oficial?", "verso": "Forma padronizada de escrever documentos oficiais", "dificuldade": 2},
-        {"id": 44, "frente": "Quais são os atributos da redação oficial?", "verso": "Clareza, precisão, objetividade, concisão, coesão, coerência, impessoalidade", "dificuldade": 2},
-        {"id": 45, "frente": "O que é impessoalidade na redação?", "verso": "Texto sem marcas de opinião pessoal", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(C/E) Na frase 'O agente administrativo cumpriu as normas, porém não obteve êxito', a conjunção 'porém' estabelece relação de oposição entre as orações.",
+          "verso": "CERTO. 'Porém' é conjunção coordenativa adversativa, que expressa contraste/oposição entre as orações coordenadas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'porém' por 'portanto' (conclusiva) ou 'pois' (explicativa).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 9 - Relações de coordenação entre orações."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) Em 'Faz dez anos que a Polícia Federal modernizou o atendimento', o verbo 'fazer' está corretamente flexionado no singular.",
+          "verso": "CERTO. Indicando tempo decorrido, 'fazer' é impessoal e fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Pluralizar para 'Fazem dez anos' por atração do termo 'dez anos'.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 12 - Concordância verbal e nominal."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) Em 'Haviam muitos candidatos na fila do concurso', o verbo 'haver' está corretamente empregado.",
+          "verso": "ERRADO. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular: 'Havia muitos candidatos'. O correto seria 'Existiam muitos candidatos' se fosse o verbo 'existir'.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Pluralizar 'haver' por atração do sujeito, confundindo com 'existir'.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 12 - Concordância verbal e nominal."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) Em 'Refiro-me à candidata que solicitou o cargo', o acento grave está corretamente empregado.",
+          "verso": "CERTO. 'Referir-se' é transitivo indireto (exige 'a') e 'candidata' é substantivo feminino determinado → a + a = à. Crase obrigatória.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'referir-se a' não admite artigo ou confundir com 'a' simples.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 13 - Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) Em 'O cargo foi concedido a uma candidata idosa', o uso da crase seria obrigatório se escrevêssemos 'à uma candidata idosa'.",
+          "verso": "ERRADO. Não se usa crase antes de artigo indefinido ('uma'). O correto é 'a uma candidata idosa', sem acento grave.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Induzir o candidato a achar que a crase é obrigatória antes de qualquer palavra feminina.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 13 - Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) Em 'Vendem-se cargos públicos', o 'se' é partícula apassivadora.",
+          "verso": "CERTO. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética, equivalente a 'Cargos públicos são vendidos'.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito (que ocorre com VTI).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6.2 - Relações de subordinação entre orações."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Em 'Trata-se de questões complexas', o 'se' é índice de indeterminação do sujeito.",
+          "verso": "CERTO. O verbo 'tratar-se' é transitivo indireto (exige a preposição 'de'). Nesse caso, o 'se' indetermina o sujeito e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com partícula apassivadora (VTD).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6.2 - Relações de subordinação entre orações."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) Em 'O candidato que estudou por 3 anos será aprovado', a oração 'que estudou por 3 anos' é subordinada adjetiva explicativa.",
+          "verso": "ERRADO. É subordinada adjetiva RESTRITIVA, pois não está entre vírgulas e restringe o sentido de 'candidato'. Explicativa viria entre vírgulas.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar restritiva (sem vírgula) por explicativa (com vírgula).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6.2 - Relações de subordinação entre orações."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) Em 'O servidor, que é dedicado, foi promovido', a oração destacada é subordinada adjetiva explicativa.",
+          "verso": "CERTO. Está isolada por vírgulas e explica uma característica do antecedente 'servidor', sem restringir o sentido.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a vírgula não muda a classificação da oração.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 11 - Emprego dos sinais de pontuação."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) Em 'Não me disse a verdade', a próclise é obrigatória por causa do advérbio de negação 'não'.",
+          "verso": "CERTO. Palavras atrativas (como 'não', 'nunca', 'jamais', 'que', 'quem') atraem o pronome oblíquo para antes do verbo (próclise).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 14 - Colocação dos pronomes átonos."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) Em 'Entreguei-lhe o processo', o pronome 'lhe' funciona como objeto direto.",
+          "verso": "ERRADO. O pronome 'lhe' é objeto INDIRETO (complementa verbo transitivo indireto). O objeto direto seria 'o' (Entreguei-o). Aqui 'o processo' é o OD e 'lhe' é o OI.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar as funções de 'lhe' (OI) e 'o/a' (OD).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6 - Domínio da estrutura morfossintática do período."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A palavra 'benefício' está corretamente grafada segundo o Novo Acordo Ortográfico.",
+          "verso": "CERTO. A grafia 'benefício' (com 'i' tônico) está correta. Não confundir com 'beneficiente' ou 'beneficência'.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 'benefício' (errado) ou 'beneficio' sem acento.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 3 - Domínio da ortografia oficial."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A palavra 'concurso' está corretamente acentuada.",
+          "verso": "CERTO. 'Concurso' não tem acento gráfico. É paroxítona terminada em '-o', não acentuada.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Colocar acento em 'cóncurso' ou 'concúrso'.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 3.1 - Emprego da acentuação gráfica."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O texto dissertativo-argumentativo tem como característica principal a defesa de um ponto de vista com argumentos organizados.",
+          "verso": "CERTO. O texto dissertativo-argumentativo apresenta tese + argumentos + conclusão, visando convencer o leitor.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com dissertativo-expositivo (que apenas informa, sem defender tese).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 2 - Tipologia textual."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) Na redação oficial, o padrão ofício admite o uso de linguagem coloquial e marcas de opinião pessoal.",
+          "verso": "ERRADO. A redação oficial exige impessoalidade, formalidade, clareza, concisão, precisão e uso da norma-padrão. Não admite coloquialismo nem opinião pessoal.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'linguagem simples' autoriza informalidade.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 15 - Correspondência oficial."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) Segundo o Manual de Redação da Presidência da República, o fecho 'Respeitosamente' é usado para autoridades superiores.",
+          "verso": "CERTO. 'Respeitosamente' é usado para autoridades superiores; 'Atenciosamente' para autoridades de mesma hierarquia ou inferiores.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter os fechos ou criar fórmulas antigas (ex.: 'Cordialmente').",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 15 - Correspondência oficial."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Em 'O INSS, órgão federal, atende milhões de brasileiros', o termo 'órgão federal' é aposto explicativo.",
+          "verso": "CERTO. 'Órgão federal' explica/especifica o antecedente 'INSS', isolado por vírgulas → aposto explicativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com vocativo (chamamento) ou predicativo.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6 - Domínio da estrutura morfossintática do período."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) Em 'Preciso de que o servidor compareça à perícia', o 'que' é conjunção integrante.",
+          "verso": "CERTO. 'Que' introduz oração subordinada substantiva completiva nominal (complementa 'de'), sendo conjunção integrante.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 4 - Emprego das classes de palavras."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) Em 'A perícia médica foi realizada ontem', o termo 'ontem' é adjunto adverbial de tempo.",
+          "verso": "CERTO. 'Ontem' indica circunstância de tempo, modificando o verbo 'foi realizada'. É adjunto adverbial.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com aposto, predicativo ou objeto indireto.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 6 - Domínio da estrutura morfossintática do período."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A coesão textual é garantida exclusivamente pelo uso de conjunções, não podendo ser realizada por pronomes ou sinônimos.",
+          "verso": "ERRADO. A coesão pode ser referencial (pronomes, sinônimos, elipses, numerais) OU sequencial (conjunções, conectivos). Não se limita a conjunções.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir a coesão a apenas um mecanismo.",
+          "fundamento": "Edital PF 2025, item 14.2, Língua Portuguesa, tópico 5 - Domínio dos mecanismos de coesão textual."
+        }
       ]
     },
-    "constitucional": {
-      "nome": "Direito Constitucional",
-      "cards": [
-        {"id": 1, "frente": "Quais são os direitos fundamentais?", "verso": "Direito à vida, liberdade, igualdade, segurança e propriedade", "dificuldade": 1},
-        {"id": 2, "frente": "O que é o habeas corpus?", "verso": "Garantia que protege a liberdade de locomoção", "dificuldade": 2},
-        {"id": 3, "frente": "O que é o habeas data?", "verso": "Garantia para acessar informações pessoais", "dificuldade": 2},
-        {"id": 4, "frente": "O que é o mandado de segurança?", "verso": "Garantia para proteger direito líquido e certo", "dificuldade": 2},
-        {"id": 5, "frente": "O que é o mandado de injunção?", "verso": "Garantia para quando falta norma regulamentadora", "dificuldade": 2},
-        {"id": 6, "frente": "Quais são os princípios da Administração Pública?", "verso": "Legalidade, impessoalidade, moralidade, publicidade e eficiência", "dificuldade": 1},
-        {"id": 7, "frente": "O que é o princípio da legalidade?", "verso": "O administrador só pode fazer o que a lei permite", "dificuldade": 1},
-        {"id": 8, "frente": "O que é o princípio da impessoalidade?", "verso": "A administração deve tratar todos igualmente", "dificuldade": 1},
-        {"id": 9, "frente": "O que é o princípio da moralidade?", "verso": "A administração deve agir com ética", "dificuldade": 1},
-        {"id": 10, "frente": "O que é o princípio da publicidade?", "verso": "Os atos administrativos devem ser divulgados", "dificuldade": 1},
-        {"id": 11, "frente": "O que é o princípio da eficiência?", "verso": "A administração deve buscar os melhores resultados", "dificuldade": 1},
-        {"id": 12, "frente": "O que é a administração direta?", "verso": "Órgãos diretamente ligados ao chefe do Executivo", "dificuldade": 2},
-        {"id": 13, "frente": "O que é a administração indireta?", "verso": "Entidades com personalidade jurídica própria (autarquias, fundações, etc.)", "dificuldade": 2},
-        {"id": 14, "frente": "O que são servidores públicos?", "verso": "Pessoas que exercem funções públicas", "dificuldade": 1},
-        {"id": 15, "frente": "O que é estabilidade?", "verso": "Direito do servidor após 3 anos de estágio probatório", "dificuldade": 2},
-        {"id": 16, "frente": "O que é a Lei 8.112/90?", "verso": "Regime Jurídico Único dos Servidores Civis da União", "dificuldade": 2},
-        {"id": 17, "frente": "O que é nacionalidade?", "verso": "Vínculo jurídico entre a pessoa e o Estado", "dificuldade": 2},
-        {"id": 18, "frente": "O que é cidadania?", "verso": "Conjunto de direitos e deveres de um cidadão", "dificuldade": 2},
-        {"id": 19, "frente": "Quais são os direitos sociais?", "verso": "Educação, saúde, trabalho, moradia, lazer, etc.", "dificuldade": 1},
-        {"id": 20, "frente": "O que é a Emenda Constitucional 103/2019?", "verso": "Reforma da Previdência", "dificuldade": 2},
-        {"id": 21, "frente": "O que é a Constituição Federal?", "verso": "Lei maior do Brasil, que estabelece os direitos e deveres dos cidadãos", "dificuldade": 1},
-        {"id": 22, "frente": "O que é a Defesa do Estado?", "verso": "Garantia da soberania e integridade territorial", "dificuldade": 2},
-        {"id": 23, "frente": "O que é a Segurança Pública?", "verso": "Garantia da ordem e proteção da sociedade", "dificuldade": 2},
-        {"id": 24, "frente": "O que é o Poder Executivo?", "verso": "Responsável pela administração e execução das leis", "dificuldade": 1},
-        {"id": 25, "frente": "O que é o Poder Legislativo?", "verso": "Responsável pela elaboração das leis", "dificuldade": 1},
-        {"id": 26, "frente": "O que é o Poder Judiciário?", "verso": "Responsável pela aplicação das leis", "dificuldade": 1},
-        {"id": 27, "frente": "O que é a Justiça Federal?", "verso": "Tribunal para julgamento de causas da União", "dificuldade": 2},
-        {"id": 28, "frente": "O que é a Justiça Eleitoral?", "verso": "Tribunal para julgamento de questões eleitorais", "dificuldade": 2},
-        {"id": 29, "frente": "O que é a Justiça do Trabalho?", "verso": "Tribunal para julgamento de questões trabalhistas", "dificuldade": 2},
-        {"id": 30, "frente": "O que é a Justiça Militar?", "verso": "Tribunal para julgamento de militares", "dificuldade": 2}
-      ]
-    },
-    "administrativo": {
-      "nome": "Direito Administrativo",
-      "cards": [
-        {"id": 1, "frente": "O que é Direito Administrativo?", "verso": "Ramo do direito que regula a atividade da Administração Pública", "dificuldade": 1},
-        {"id": 2, "frente": "Quais são os poderes administrativos?", "verso": "Hierárquico, disciplinar, regulamentar e de polícia", "dificuldade": 2},
-        {"id": 3, "frente": "O que é poder hierárquico?", "verso": "Poder de organizar e coordenar a administração", "dificuldade": 2},
-        {"id": 4, "frente": "O que é poder disciplinar?", "verso": "Poder de punir servidores e particulares", "dificuldade": 2},
-        {"id": 5, "frente": "O que é poder regulamentar?", "verso": "Poder de editar normas para complementar leis", "dificuldade": 2},
-        {"id": 6, "frente": "O que é poder de polícia?", "verso": "Poder de limitar direitos para o bem público", "dificuldade": 2},
-        {"id": 7, "frente": "O que é um ato administrativo?", "verso": "Declaração do Estado ou de seus agentes", "dificuldade": 2},
-        {"id": 8, "frente": "Quais são os atributos do ato administrativo?", "verso": "Presunção de legitimidade, imperatividade, autoexecutoriedade, tipicidade", "dificuldade": 2},
-        {"id": 9, "frente": "O que é a Lei de Improbidade Administrativa?", "verso": "Lei 8.429/92 - define atos de improbidade e suas penalidades", "dificuldade": 2},
-        {"id": 10, "frente": "O que é a Lei 9.784/99?", "verso": "Lei que regula o processo administrativo na administração pública federal", "dificuldade": 2},
-        {"id": 11, "frente": "O que é processo administrativo?", "verso": "Conjunto de procedimentos para decisões administrativas", "dificuldade": 2},
-        {"id": 12, "frente": "O que é controle da administração?", "verso": "Fiscalização dos atos da administração", "dificuldade": 2},
-        {"id": 13, "frente": "Quais são os tipos de controle?", "verso": "Controle administrativo, judicial e legislativo", "dificuldade": 2},
-        {"id": 14, "frente": "O que é responsabilidade civil do Estado?", "verso": "Dever de reparar danos causados pela administração", "dificuldade": 2},
-        {"id": 15, "frente": "O que é serviço público?", "verso": "Atividade prestada pelo Estado para satisfazer necessidades coletivas", "dificuldade": 2},
-        {"id": 16, "frente": "O que é concessão de serviço público?", "verso": "Delegação da prestação de serviço público a particulares", "dificuldade": 2},
-        {"id": 17, "frente": "O que é permissão de serviço público?", "verso": "Delegação a título precário de serviço público", "dificuldade": 2},
-        {"id": 18, "frente": "O que é autorização de serviço público?", "verso": "Delegação para prestação de serviço público", "dificuldade": 2},
-        {"id": 19, "frente": "O que é licitação?", "verso": "Procedimento para contratação de obras e serviços pela administração", "dificuldade": 2},
-        {"id": 20, "frente": "Quais são os princípios da licitação?", "verso": "Legalidade, impessoalidade, moralidade, igualdade, publicidade, probidade administrativa", "dificuldade": 2},
-        {"id": 21, "frente": "O que é pregão?", "verso": "Modalidade de licitação para aquisição de bens e serviços comuns", "dificuldade": 2},
-        {"id": 22, "frente": "O que é a Lei 8.666/93?", "verso": "Lei de Licitações e Contratos Administrativos", "dificuldade": 2},
-        {"id": 23, "frente": "O que é a Lei 14.133/2021?", "verso": "Nova Lei de Licitações e Contratos Administrativos", "dificuldade": 2},
-        {"id": 24, "frente": "O que é o regime disciplinar?", "verso": "Normas sobre punições para servidores", "dificuldade": 2},
-        {"id": 25, "frente": "O que é provimento de cargo?", "verso": "Atribuição de cargo público a uma pessoa", "dificuldade": 2},
-        {"id": 26, "frente": "O que é vacância de cargo?", "verso": "Desocupação de cargo público", "dificuldade": 2},
-        {"id": 27, "frente": "O que é remoção?", "verso": "Mudança de localidade de servidor", "dificuldade": 2},
-        {"id": 28, "frente": "O que é redistribuição?", "verso": "Transferência de servidor entre órgãos", "dificuldade": 2},
-        {"id": 29, "frente": "O que é substituição?", "verso": "Servidor que assume função de outro", "dificuldade": 2},
-        {"id": 30, "frente": "O que são direitos dos servidores?", "verso": "Vencimentos, licenças, aposentadoria, etc.", "dificuldade": 2}
-      ]
-    },
-    "logica": {
+    "raciocinio-logico": {
       "nome": "Raciocínio Lógico",
       "cards": [
-        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser verdadeira ou falsa", "dificuldade": 1},
-        {"id": 2, "frente": "O que é uma proposição simples?", "verso": "Frase com uma única afirmação", "dificuldade": 1},
-        {"id": 3, "frente": "O que é uma proposição composta?", "verso": "Frase com mais de uma afirmação", "dificuldade": 2},
-        {"id": 4, "frente": "O que é uma conjunção (e)?", "verso": "Verdadeira apenas quando ambas são verdadeiras", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma disjunção (ou)?", "verso": "Verdadeira quando pelo menos uma é verdadeira", "dificuldade": 2},
-        {"id": 6, "frente": "O que é uma condicional (se...então)?", "verso": "Falsa apenas quando a primeira é verdadeira e a segunda falsa", "dificuldade": 3},
-        {"id": 7, "frente": "O que é uma bicondicional (se e somente se)?", "verso": "Verdadeira quando ambas têm o mesmo valor", "dificuldade": 3},
-        {"id": 8, "frente": "O que é a negação?", "verso": "Inverte o valor lógico", "dificuldade": 2},
-        {"id": 9, "frente": "O que é uma tautologia?", "verso": "Proposição sempre verdadeira", "dificuldade": 2},
-        {"id": 10, "frente": "O que é contradição?", "verso": "Proposição sempre falsa", "dificuldade": 2},
-        {"id": 11, "frente": "O que é um conjunto?", "verso": "Agrupamento de elementos", "dificuldade": 1},
-        {"id": 12, "frente": "O que é união de conjuntos?", "verso": "Reunião de elementos de dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 13, "frente": "O que é interseção de conjuntos?", "verso": "Elementos comuns a dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 14, "frente": "O que é diferença de conjuntos?", "verso": "Elementos de um que não estão no outro", "dificuldade": 2},
-        {"id": 15, "frente": "O que é um diagrama lógico?", "verso": "Representação visual de conjuntos", "dificuldade": 1},
-        {"id": 16, "frente": "O que é a Lei de De Morgan?", "verso": "¬(P∧Q) = ¬P∨¬Q", "dificuldade": 3},
-        {"id": 17, "frente": "O que é um argumento lógico?", "verso": "Sequência de proposições com conclusão", "dificuldade": 2},
-        {"id": 18, "frente": "O que é um silogismo?", "verso": "Argumento com duas premissas e uma conclusão", "dificuldade": 2},
-        {"id": 19, "frente": "O que é equivalência lógica?", "verso": "Duas proposições com a mesma tabela-verdade", "dificuldade": 3},
-        {"id": 20, "frente": "O que é uma sentença aberta?", "verso": "Frase com variável", "dificuldade": 2},
-        {"id": 21, "frente": "O que é um quantificador universal?", "verso": "∀ - para todos", "dificuldade": 2},
-        {"id": 22, "frente": "O que é um quantificador existencial?", "verso": "∃ - existe pelo menos um", "dificuldade": 2},
-        {"id": 23, "frente": "O que é negação de proposição composta?", "verso": "Negar uma conjunção, disjunção ou condicional", "dificuldade": 3},
-        {"id": 24, "frente": "O que é a negação de 'P → Q'?", "verso": "P ∧ ¬Q", "dificuldade": 3},
-        {"id": 25, "frente": "O que é raciocínio dedutivo?", "verso": "Do geral para o particular", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(C/E) A proposição 'Todo servidor do PF é concursado' é uma proposição simples.",
+          "verso": "ERRADO. É uma proposição CATEGÓRICA (com quantificador universal), que expressa uma relação entre conjuntos. Proposição simples é aquela sem conectivos nem quantificadores.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir proposição categórica com proposição simples.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.1 - Proposições simples e compostas."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A condicional 'Se P, então Q' é falsa apenas quando P é verdadeiro e Q é falso.",
+          "verso": "CERTO. Na condicional (P → Q), o único caso em que é falsa é V → F. Nos demais (V→V, F→V, F→F), é verdadeira.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que F→V ou F→F são falsas.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.2 - Tabelas-verdade."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A negação da proposição 'Todos os candidatos foram aprovados' é 'Nenhum candidato foi aprovado'.",
+          "verso": "ERRADO. A negação de 'Todos' é 'Algum não' (ou 'Pelo menos um não'). 'Nenhum' é a negação de 'Algum'. Negação correta: 'Algum candidato não foi aprovado'.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.3 - Equivalências."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A negação de 'P e Q' é 'não P ou não Q'.",
+          "verso": "CERTO. Pela Lei de De Morgan, ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'ou' por 'e' na negação.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.4 - Leis de De Morgan."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A negação de 'P ou Q' é 'não P e não Q'.",
+          "verso": "CERTO. Pela Lei de De Morgan, ¬(P ∨ Q) = ¬P ∧ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'e' por 'ou' na negação.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.4 - Leis de De Morgan."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) Uma tabela-verdade com 3 proposições simples tem 8 linhas.",
+          "verso": "CERTO. O número de linhas é 2^n, onde n é o número de proposições. 2³ = 8.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com 2×3=6 ou 3²=9.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.2 - Tabelas-verdade."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Uma tautologia é uma proposição composta que é sempre verdadeira, independentemente dos valores lógicos das proposições simples que a compõem.",
+          "verso": "CERTO. Tautologia = proposição sempre verdadeira (ex.: P ∨ ¬P).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com contradição (sempre falsa).",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.3 - Equivalências."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) Contradição é uma proposição composta que é sempre falsa, independentemente dos valores lógicos das proposições simples.",
+          "verso": "CERTO. Contradição = proposição sempre falsa (ex.: P ∧ ¬P).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com tautologia (sempre verdadeira).",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.3 - Equivalências."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A união de dois conjuntos A e B contém todos os elementos que pertencem a A ou a B (ou a ambos).",
+          "verso": "CERTO. A ∪ B = {x | x ∈ A ou x ∈ B}. Inclui elementos exclusivos de A, exclusivos de B e os comuns aos dois.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir união (∪) com interseção (∩).",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 6 - Operações com conjuntos."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A interseção de dois conjuntos A e B contém apenas os elementos comuns aos dois conjuntos.",
+          "verso": "CERTO. A ∩ B = {x | x ∈ A e x ∈ B}. Contém apenas os elementos que pertencem simultaneamente a A e a B.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com união.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 6 - Operações com conjuntos."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) Se 40% dos candidatos são homens e 25% são maiores de 30 anos, então necessariamente 10% são homens E maiores de 30 anos.",
+          "verso": "ERRADO. A interseção entre os dois conjuntos não pode ser inferida apenas com os percentuais isolados. Poderia ser de 0% a 25%, dependendo da sobreposição.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Somar ou subtrair percentuais sem considerar a interseção.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 6 - Operações com conjuntos."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) Um aumento de 20% seguido de um desconto de 20% resulta no valor original.",
+          "verso": "ERRADO. Ex.: 100 × 1,20 = 120; 120 × 0,80 = 96. Resultado final: 96, ou seja, 4% MENOR que o original. Os percentuais não se cancelam.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que +20% e −20% se anulam.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 7 - Raciocínio lógico envolvendo problemas aritméticos."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) Se um salário de R$ 2.000 sofre aumento de 15%, o novo valor é R$ 2.300.",
+          "verso": "CERTO. 2.000 × 1,15 = 2.300. O aumento é de R$ 300.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Calcular 15% de 2.000 = 300 e esquecer de somar (deixando 300).",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 7 - Raciocínio lógico envolvendo problemas aritméticos."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A proposição 'Se o candidato estudou, então foi aprovado' é logicamente equivalente a 'Se o candidato não foi aprovado, então não estudou'.",
+          "verso": "CERTO. A equivalência da condicional P → Q é a contrapositiva ¬Q → ¬P.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a recíproca (Q → P) ou inversa (¬P → ¬Q).",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 3.3 - Equivalências."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) Se em um grupo de 100 candidatos, 60 têm menos de 30 anos, pode-se concluir que 40 têm 30 anos ou mais.",
+          "verso": "CERTO. 100 − 60 = 40. Se 60 têm menos de 30 anos, o restante (40) tem 30 anos ou mais.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Complicar um cálculo direto de complementar.",
+          "fundamento": "Edital PF 2025, item 14.2, Raciocínio Lógico, tópico 7 - Raciocínio lógico envolvendo problemas aritméticos."
+        }
+      ]
+    },
+    "etica": {
+      "nome": "Ética no Serviço Público",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) O Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal foi instituído pelo Decreto nº 1.171/1994.",
+          "verso": "CERTO. O Decreto nº 1.171/1994 aprovou o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 6.029/2007 (que criou a Comissão de Ética Pública).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O Decreto nº 6.029/2007 instituiu o Sistema de Gestão da Ética do Poder Executivo Federal.",
+          "verso": "CERTO. O Decreto nº 6.029/2007 criou o Sistema de Gestão da Ética do Poder Executivo Federal, integrado pela Comissão de Ética Pública e pelas Comissões de Ética setoriais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 1.171/1994 (que instituiu o Código de Ética).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O servidor público pode aceitar presentes de fornecedores, desde que de pequeno valor.",
+          "verso": "ERRADO. O Código de Ética veda expressamente o recebimento de presentes de qualquer valor de fornecedores, independentemente da quantia.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Introduzir exceção inexistente ('pequeno valor').",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A moralidade administrativa é princípio expresso da Administração Pública na Constituição Federal de 1988.",
+          "verso": "CERTO. O art. 37, caput, da CF/88 prevê os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir moralidade ou incluir princípio implícito como 'razoabilidade'.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 4."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O servidor pode usar o cargo público para obter favorecimento pessoal, desde que não haja prejuízo ao erário.",
+          "verso": "ERRADO. O Código de Ética veda o uso do cargo para obter favorecimento pessoal, independentemente de haver prejuízo ao erário.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Criar exceção condicionada ('desde que não haja prejuízo').",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O servidor público tem o dever de comunicar à autoridade competente qualquer ato ilícito de que tenha conhecimento em razão do cargo.",
+          "verso": "CERTO. O art. 116, inciso VI, da Lei 8.112/1990 prevê o dever de representar contra ilegalidade, omissão ou abuso de poder.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o sigilo funcional impede a denúncia (não impede).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 6."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O dever de sigilo impede que o servidor denuncie irregularidades de que tenha conhecimento.",
+          "verso": "ERRADO. O sigilo profissional não impede a denúncia de irregularidades. O servidor tem o DEVER de comunicar atos ilícitos à autoridade competente.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir sigilo funcional com omissão.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 6."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A Comissão de Ética Pública é vinculada à Presidência da República.",
+          "verso": "CERTO. A Comissão de Ética Pública (CEP) é vinculada à Presidência da República e tem como função orientar e avaliar a conduta ética dos agentes públicos federais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é vinculada ao Ministério da Justiça ou ao TCU.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O servidor que se recusar a prestar informações ao cidadão, quando devidas, comete ato de improbidade administrativa.",
+          "verso": "CERTO. A negativa injustificada de prestar informações configura ato de improbidade administrativa (art. 11, II, da Lei 8.429/1992).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é apenas infração administrativa leve.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 7."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) O Código de Ética do Servidor Público se aplica exclusivamente aos servidores efetivos, não alcançando os ocupantes de cargos em comissão.",
+          "verso": "ERRADO. O Código de Ética se aplica a TODOS os servidores públicos civis do Poder Executivo Federal, incluindo efetivos e comissionados.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir o alcance do Código a apenas servidores efetivos.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 5."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A Lei de Conflito de Interesses (Lei 12.813/2013) dispõe sobre o conflito de interesses no exercício de cargo ou emprego do Poder Executivo federal.",
+          "verso": "CERTO. A LCI (Lei 12.813/2013) estabelece as situações que configuram conflito de interesses no âmbito do Poder Executivo federal.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei de Improbidade Administrativa (8.429/92).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 7."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) O conflito de interesses é a situação gerada pelo confronto entre interesses públicos e privados que possa comprometer o interesse coletivo.",
+          "verso": "CERTO. Definição da Lei 12.813/2013. O conflito ocorre quando interesses privados podem influenciar o desempenho da função pública.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só há conflito quando há dano efetivo ao erário (basta a possibilidade).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 7."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou de processo administrativo disciplinar com ampla defesa.",
+          "verso": "ERRADO. Além dessas duas hipóteses, também perderá o cargo mediante procedimento de avaliação periódica de desempenho (art. 41, III, CF/88).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Omitir a terceira hipótese (avaliação periódica de desempenho).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 6."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A improbidade administrativa, após a Lei 14.230/2021, exige dolo específico para a configuração de todos os atos de improbidade.",
+          "verso": "CERTO. A Lei 14.230/2021 alterou a Lei 8.429/92 para exigir DOLO específico em todas as modalidades de improbidade, afastando a modalidade culposa.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que ainda existe improbidade culposa.",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 7."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O servidor público responde civil, penal e administrativamente pelo exercício irregular de suas atribuições.",
+          "verso": "CERTO. Art. 121 da Lei 8.112/90. As três esferas são independentes entre si.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a absolvição penal sempre absolve na esfera administrativa (não necessariamente).",
+          "fundamento": "Edital PF 2025, item 14.2, Ética no Serviço Público, tópico 6."
+        }
       ]
     },
     "informatica": {
       "nome": "Noções de Informática",
       "cards": [
-        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia recursos do computador", "dificuldade": 1},
-        {"id": 2, "frente": "Quais são os sistemas operacionais?", "verso": "Windows, Linux, macOS", "dificuldade": 1},
-        {"id": 3, "frente": "O que é o Windows 10?", "verso": "Sistema operacional da Microsoft", "dificuldade": 1},
-        {"id": 4, "frente": "O que é o Linux?", "verso": "Sistema operacional de código aberto", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma rede de computadores?", "verso": "Conjunto de computadores interligados", "dificuldade": 1},
-        {"id": 6, "frente": "O que é a Internet?", "verso": "Rede mundial de computadores", "dificuldade": 1},
-        {"id": 7, "frente": "O que é intranet?", "verso": "Rede privada dentro de uma organização", "dificuldade": 2},
-        {"id": 8, "frente": "O que é um navegador?", "verso": "Software para acessar páginas na internet", "dificuldade": 1},
-        {"id": 9, "frente": "Quais são os navegadores?", "verso": "Chrome, Firefox, Edge, Opera, Safari", "dificuldade": 1},
-        {"id": 10, "frente": "O que é segurança da informação?", "verso": "Medidas para proteger dados e sistemas", "dificuldade": 2},
-        {"id": 11, "frente": "O que é um vírus de computador?", "verso": "Programa malicioso que se replica", "dificuldade": 1},
-        {"id": 12, "frente": "O que é um firewall?", "verso": "Sistema que bloqueia acessos não autorizados", "dificuldade": 2},
-        {"id": 13, "frente": "O que é criptografia?", "verso": "Técnica para codificar informações", "dificuldade": 2},
-        {"id": 14, "frente": "O que é backup?", "verso": "Cópia de segurança de dados", "dificuldade": 1},
-        {"id": 15, "frente": "O que é o LibreOffice?", "verso": "Suíte de escritório gratuita", "dificuldade": 2},
-        {"id": 16, "frente": "O que é o MS Office?", "verso": "Suíte de escritório da Microsoft", "dificuldade": 1},
-        {"id": 17, "frente": "O que é a nuvem (cloud computing)?", "verso": "Armazenamento e processamento pela internet", "dificuldade": 2},
-        {"id": 18, "frente": "Quais são os serviços de nuvem?", "verso": "Google Drive, OneDrive, Dropbox, iCloud", "dificuldade": 2},
-        {"id": 19, "frente": "O que é um arquivo?", "verso": "Unidade de armazenamento de dados", "dificuldade": 1},
-        {"id": 20, "frente": "O que é um banco de dados?", "verso": "Conjunto organizado de dados", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(C/E) A intranet é uma rede pública, acessível a qualquer usuário da internet.",
+          "verso": "ERRADO. A intranet é uma rede PRIVADA, restrita a uma organização, que usa a mesma tecnologia da internet (TCP/IP) mas com acesso controlado.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'privada' por 'pública'.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 3.1 - Internet e intranet."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A internet é uma rede mundial de computadores baseada no protocolo TCP/IP.",
+          "verso": "CERTO. A internet é uma rede mundial que interliga milhões de dispositivos, usando o conjunto de protocolos TCP/IP.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que usa apenas HTTP ou FTP.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 3.1 - Internet e intranet."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) No Microsoft Excel, a fórmula =SOMA(A1:A10) soma os valores das células A1 até A10.",
+          "verso": "CERTO. O operador ':' (dois-pontos) indica intervalo. =SOMA(A1:A10) soma todos os valores de A1 a A10.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com ';' (separador de argumentos).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 2 - Edição de textos, planilhas e apresentações."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) No Microsoft Word, o atalho Ctrl+B salva o documento.",
+          "verso": "ERRADO. No Word, Ctrl+B NEGRITA o texto. Salvar é Ctrl+S (Save). No Word, Ctrl+B também é negrito.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir Ctrl+B (bold/negrito) com Ctrl+S (save/salvar).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 2 - Edição de textos, planilhas e apresentações."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) No Windows 10, o atalho Win+E abre o Explorador de Arquivos.",
+          "verso": "CERTO. Win+E abre o Windows Explorer (Explorador de Arquivos).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Win+R (Executar) ou Win+L (bloquear).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 1 - Sistema operacional Windows."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) No Windows, a tecla F5 atualiza a janela ativa.",
+          "verso": "CERTO. F5 é o atalho de atualização (refresh) no Windows e na maioria dos navegadores.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por F2 (renomear) ou F3 (buscar).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 1 - Sistema operacional Windows."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Vírus, worms e trojans são exemplos de malwares.",
+          "verso": "CERTO. Malware é qualquer software malicioso. Vírus, worms, trojans, ransomware, spyware são tipos de malware.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só vírus é malware.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5.2 - Noções de malware."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O phishing é uma técnica que explora exclusivamente falhas técnicas em sistemas, sem envolver o usuário.",
+          "verso": "ERRADO. Phishing é engenharia social: induz o USUÁRIO a fornecer dados por meio de mensagens/sites falsos. Não explora só falhas técnicas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir phishing a falha técnica.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5.2 - Noções de malware."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O firewall é um software ou hardware que filtra o tráfego de rede, bloqueando acessos não autorizados.",
+          "verso": "CERTO. Firewall monitora e controla o tráfego de entrada e saída da rede com base em regras de segurança.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que firewall substitui antivírus (são camadas diferentes).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5.3 - Aplicativos para segurança."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) Backup incremental copia todos os arquivos do sistema, independentemente de terem sido alterados.",
+          "verso": "ERRADO. Backup incremental copia apenas os arquivos alterados desde o último backup. O que copia tudo é o backup COMPLETO.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir backup completo, incremental e diferencial.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5.4 - Procedimentos de backup."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) No correio eletrônico, o campo 'Cc' significa 'cópia carbono' e envia uma cópia visível a todos os destinatários.",
+          "verso": "CERTO. Cc (carbon copy) envia cópia do e-mail, e todos os destinatários veem quem mais recebeu. Cco (bcc) é a cópia oculta.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir Cc com Cco.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 3 - Redes de computadores."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) No Microsoft PowerPoint, é possível criar apresentações de slides.",
+          "verso": "CERTO. PowerPoint é o aplicativo de apresentações da suíte Office.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Word (texto) ou Excel (planilha).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 2 - Edição de textos, planilhas e apresentações."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O Microsoft Office é uma suíte de escritório gratuita e de código aberto.",
+          "verso": "ERRADO. O Microsoft Office é uma suíte PAGA e de código fechado. O LibreOffice é que é gratuito e de código aberto.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir Office (pago) com LibreOffice (gratuito).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 2 - Edição de textos, planilhas e apresentações."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) No Windows, o arquivo é excluído permanentemente ao ser enviado para a Lixeira.",
+          "verso": "ERRADO. A Lixeira armazena temporariamente os arquivos excluídos. Só há exclusão permanente se o usuário esvaziar a Lixeira ou usar Shift+Delete.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que Lixeira = exclusão definitiva.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 1 - Sistema operacional Windows."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O atalho Ctrl+Z desfaz a última ação realizada.",
+          "verso": "CERTO. Ctrl+Z é o atalho universal de 'desfazer' na maioria dos aplicativos.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Ctrl+Y (refazer) ou Ctrl+X (recortar).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 2 - Edição de textos, planilhas e apresentações."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A computação em nuvem permite armazenar e processar dados em servidores remotos acessados pela internet.",
+          "verso": "CERTO. Cloud computing oferece recursos de TI sob demanda via internet, como armazenamento, processamento e software.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'nuvem' exige hardware local.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5 - Computação na nuvem (cloud computing)."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Um ataque de ransomware criptografa os dados da vítima e exige pagamento de resgate para liberá-los.",
+          "verso": "CERTO. Ransomware é um tipo de malware que sequestra os dados por meio de criptografia e exige resgate para liberar o acesso.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com spyware (espionagem) ou adware (anúncios).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 5.2 - Noções de malware."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) No Windows 10, o Painel de Controle foi completamente substituído pelo aplicativo Configurações.",
+          "verso": "ERRADO. No Windows 10, ambos coexistem: o Painel de Controle (legado) e o aplicativo Configurações (moderno). Não houve substituição total.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalizar afirmando substituição completa.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 1 - Sistema operacional Windows."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A extensão .pdf indica um arquivo de documento portátil, que preserva a formatação original.",
+          "verso": "CERTO. PDF (Portable Document Format) mantém a formatação independentemente do sistema operacional ou aplicativo.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com .docx (editável) ou .txt (texto puro).",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 4 - Conceitos de organização e de gerenciamento de informações."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) Um navegador web (browser) é um software que permite acessar e visualizar páginas da internet.",
+          "verso": "CERTO. Navegadores como Chrome, Firefox, Edge e Safari interpretam HTML e exibem páginas web.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que navegador é o mesmo que provedor de internet.",
+          "fundamento": "Edital PF 2025, item 14.2, Informática, tópico 3.2 - Programas de navegação."
+        }
+      ]
+    },
+    "constitucional": {
+      "nome": "Noções de Direito Constitucional",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) O habeas corpus protege o direito de acesso à informação pessoal do cidadão.",
+          "verso": "ERRADO. O habeas corpus protege a LIBERDADE DE LOCOMOÇÃO. Para acesso à informação pessoal, o instrumento é o HABEAS DATA.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar HC (locomoção) por HD (informação).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O mandado de segurança pode ser impetrado para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data.",
+          "verso": "CERTO. Art. 5º, LXIX, CF/88. O MS é residual: cabe quando não for caso de HC nem HD.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que MS cabe para qualquer situação, inclusive locomoção.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O mandado de injunção é cabível quando a falta de norma regulamentadora torna inviável o exercício dos direitos e liberdades constitucionais.",
+          "verso": "CERTO. Art. 5º, LXXI, CF/88. MI serve para viabilizar direitos constitucionais dependentes de regulamentação.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com ação direta de inconstitucionalidade por omissão (ADO).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A prática do racismo constitui crime inafiançável e imprescritível.",
+          "verso": "CERTO. Art. 5º, XLII, CF/88. Racismo é crime inafiançável e imprescritível, sujeito à pena de reclusão.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com outros crimes inafiançáveis (3T + hediondos).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A tortura, o tráfico ilícito de entorpecentes e o terrorismo são crimes inafiançáveis e insuscetíveis de graça ou anistia.",
+          "verso": "CERTO. Art. 5º, XLIII, CF/88. Os '3T' (Tortura, Tráfico, Terrorismo) + hediondos são inafiançáveis e insuscetíveis de graça ou anistia.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que são imprescritíveis (só racismo e ação de grupos armados são imprescritíveis).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A casa é asilo inviolável do indivíduo, podendo ser penetrada à noite por determinação judicial.",
+          "verso": "ERRADO. A determinação judicial só autoriza entrada na casa DURANTE O DIA. À noite, só com consentimento do morador, flagrante delito ou desastre.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'durante o dia' por 'à noite' na hipótese de ordem judicial.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Todos os direitos e garantias fundamentais previstos na CF/88 são absolutos, não admitindo qualquer restrição.",
+          "verso": "ERRADO. Nenhum direito fundamental é absoluto. Todos podem sofrer restrições em casos específicos, respeitando a proporcionalidade e a razoabilidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalização absoluta ('todos são absolutos').",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A nacionalidade brasileira pode ser originária (natos) ou derivada (naturalizados).",
+          "verso": "CERTO. Nacionalidade originária = brasileiros natos (art. 12, I). Nacionalidade derivada = naturalizados (art. 12, II).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com cidadania (que é o exercício dos direitos políticos).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A cidadania é um direito social previsto no art. 6º da CF/88.",
+          "verso": "ERRADO. Cidadania é um direito FUNDAMENTAL (art. 5º, caput). Direitos sociais (art. 6º) são: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância, assistência aos desamparados.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir direitos fundamentais (art. 5º) com direitos sociais (art. 6º).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A educação, a saúde, a alimentação, o trabalho e a moradia são direitos sociais previstos na Constituição Federal.",
+          "verso": "CERTO. Art. 6º, CF/88, com redação atualizada por emendas (EC 26/2000, EC 64/2010, EC 90/2015, EC 108/2020).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir itens acrescentados por emendas (ex.: alimentação, transporte, moradia).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 3.1."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A Administração Pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+          "verso": "CERTO. Art. 37, caput, CF/88. Mnemônico: LIMPE.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A investidura em cargo ou emprego público depende de aprovação prévia em concurso público, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.",
+          "verso": "CERTO. Art. 37, II, CF/88. Concurso público é a regra; cargos em comissão são a exceção.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que TODO cargo em comissão dispensa concurso (só os de livre nomeação e exoneração).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período.",
+          "verso": "CERTO. Art. 37, III, CF/88. Validade de até 2 anos, prorrogável uma vez por igual período.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'dois anos' por 'um ano' ou dizer que é prorrogável duas vezes.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) É permitida a acumulação de dois cargos públicos de professor, desde que haja compatibilidade de horários e respeito ao teto remuneratório.",
+          "verso": "CERTO. Art. 37, XVI, 'a', CF/88. A acumulação de 2 cargos de professor é permitida com compatibilidade de horários.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer acumulação é proibida.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) É permitida a acumulação de dois cargos públicos de médico com dois cargos de professor.",
+          "verso": "ERRADO. A CF/88 permite acumulação de: (a) 2 cargos de professor; (b) 1 cargo de professor + 1 de técnico/científico; (c) 2 cargos privativos de profissionais de saúde. Não permite 2 médicos + 2 professores.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir as hipóteses de acumulação.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou de processo administrativo disciplinar com ampla defesa.",
+          "verso": "ERRADO. Além dessas duas hipóteses, também perderá o cargo mediante procedimento de avaliação periódica de desempenho (art. 41, III, CF/88).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Omitir a terceira hipótese (avaliação periódica de desempenho).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 5.1."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) A segurança pública é dever do Estado, direito e responsabilidade de todos, sendo exercida pelos órgãos previstos no art. 144 da CF/88.",
+          "verso": "CERTO. Art. 144, caput, CF/88. A segurança pública é dever do Estado, direito e responsabilidade de todos.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que é apenas dever do Estado (é também responsabilidade de todos).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 9 - Segurança Pública (art. 144)."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A Polícia Federal é órgão permanente, organizado e mantido pela União e estruturado em carreira.",
+          "verso": "CERTO. Art. 144, §1º, CF/88. A Polícia Federal é órgão permanente, organizado e mantido pela União e estruturado em carreira.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que é órgão dos Estados ou do Distrito Federal.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 9 - Segurança Pública (art. 144)."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) À Polícia Federal compete, entre outras atribuições, apurar infrações penais contra a ordem política e social ou em detrimento de bens, serviços e interesses da União.",
+          "verso": "CERTO. Art. 144, §1º, I, CF/88. A PF apura infrações contra a ordem política e social ou em detrimento de bens, serviços e interesses da União.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com atribuições da Polícia Civil ou Federal Rodoviária.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 9 - Segurança Pública (art. 144)."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A Polícia Federal é subordinada ao Ministério da Justiça e Segurança Pública.",
+          "verso": "CERTO. A Polícia Federal é órgão do Poder Executivo Federal, vinculado ao Ministério da Justiça e Segurança Pública.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é vinculada ao Ministério da Defesa ou à Presidência.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Constitucional, tópico 9 - Segurança Pública (art. 144)."
+        }
+      ]
+    },
+    "administrativo": {
+      "nome": "Noções de Direito Administrativo",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A presunção de legitimidade do ato administrativo é absoluta, não admitindo prova em contrário.",
+          "verso": "ERRADO. A presunção de legitimidade é RELATIVA (juris tantum), admitindo prova em contrário. É um dos atributos do ato administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'relativa' por 'absoluta'.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 2 - Ato administrativo."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O poder hierárquico é aquele que permite à Administração punir servidores e particulares que descumprem normas.",
+          "verso": "ERRADO. Poder HIERÁRQUICO = organizar, coordenar e subordinar. Poder DISCIPLINAR = punir. Poder de POLÍCIA = restringir direitos. Poder REGULAMENTAR = editar normas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar as definições dos poderes administrativos.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 4 - Poderes administrativos."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O poder de polícia permite ao Estado condicionar e restringir o uso de bens e o exercício de direitos em benefício do interesse público.",
+          "verso": "CERTO. Poder de polícia = faculdade de condicionar e restringir o uso de bens e o exercício de direitos individuais em prol do interesse público.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com poder disciplinar.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 4 - Poderes administrativos."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A administração indireta é composta por autarquias, fundações públicas, empresas públicas e sociedades de economia mista.",
+          "verso": "CERTO. Art. 4º, II, do Decreto-Lei 200/1967. São entidades da administração indireta com personalidade jurídica própria.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Incluir 'órgãos públicos' (que são da administração DIRETA).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 1.2 - Administração direta e indireta."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) As autarquias são entidades administrativas autônomas, criadas por lei, com personalidade jurídica de direito público.",
+          "verso": "CERTO. Autarquias são criadas por lei, têm personalidade jurídica de direito público e capacidade de autoadministração.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que autarquia é criada por decreto.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 1.3 - Autarquias."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) As empresas públicas e as sociedades de economia mista são pessoas jurídicas de direito público.",
+          "verso": "ERRADO. Empresas públicas e SEM são pessoas jurídicas de DIREITO PRIVADO. As autarquias e fundações públicas é que são de direito público.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'privado' por 'público'.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 1.3."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A responsabilidade civil do Estado por atos comissivos é objetiva, fundada na teoria do risco administrativo.",
+          "verso": "CERTO. Art. 37, §6º, CF/88. Responsabilidade objetiva (independe de dolo/culpa), baseada na teoria do risco administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 'subjetiva' ou 'teoria da culpa administrativa'.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 6 - Responsabilidade civil do Estado."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A responsabilidade civil do Estado por atos omissivos é sempre objetiva.",
+          "verso": "ERRADO. Em regra, a responsabilidade por omissão é SUBJETIVA (culpa do serviço). Excepcionalmente, é objetiva quando o Estado tem o dever específico de agir (ex.: preso sob custódia).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalizar como objetiva para todos os casos.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 6 - Responsabilidade civil do Estado."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O prazo para a Administração anular seus próprios atos, salvo comprovada má-fé, é de 5 anos, contado da data do ato.",
+          "verso": "CERTO. Art. 54 da Lei 9.784/99. A Súmula 633 do STJ estendeu o prazo de 5 anos aos estados e municípios.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar '5 anos' por '10 anos' ou 'prazo prescricional'.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 11 - Lei 9.784/1999."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A autotutela administrativa permite à Administração rever seus próprios atos, anulando os ilegais e revogando os inconvenientes.",
+          "verso": "CERTO. Súmulas 346 e 473 do STF. Anulação = ilegalidade. Revogação = conveniência e oportunidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir anulação (ilegal) com revogação (mérito).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Controle da administração pública."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) O ato administrativo discricionário pode ser revogado pela própria Administração, mas não pode ser anulado pelo Poder Judiciário quanto ao mérito.",
+          "verso": "CERTO. O Judiciário não pode revogar ato discricionário (mérito administrativo), mas pode anulá-lo por ilegalidade.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o Judiciário pode revogar ato administrativo.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Controle da administração pública."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) O ato administrativo vinculado não admite juízo de conveniência e oportunidade pelo administrador.",
+          "verso": "CERTO. No ato vinculado, a lei define todos os elementos; no discricionário, há margem para conveniência e oportunidade (mérito).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir vinculado com discricionário.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 2 - Ato administrativo."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A licitação é inexigível quando há inviabilidade de competição.",
+          "verso": "CERTO. Art. 74 da Lei 14.133/2021. Ex.: contratação de artista consagrado, fornecedor exclusivo.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inexigibilidade (impossível competir) com dispensa (possível competir, mas lei dispensa).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Licitação."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A licitação é dispensável quando há inviabilidade de competição.",
+          "verso": "ERRADO. Inviabilidade de competição gera INEXIGIBILIDADE. A DISPENSA ocorre quando a competição é possível, mas a lei autoriza a não realização (ex.: compra de pequeno valor).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar dispensa por inexigibilidade.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Licitação."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) A Lei 14.133/2021 é a nova Lei de Licitações e Contratos Administrativos, que substituiu a Lei 8.666/93.",
+          "verso": "CERTO. A Lei 14.133/2021 substituiu a Lei 8.666/93 (licitações), a Lei 10.520/2002 (pregão) e o RDC (Lei 12.462/2011).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a 8.666/93 ainda está em vigor plenamente (foi revogada).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Licitação."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) O servidor público responde civil, penal e administrativamente pelo exercício irregular de suas atribuições.",
+          "verso": "CERTO. Art. 121 da Lei 8.112/90. As três esferas são independentes entre si.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a absolvição penal sempre absolve na esfera administrativa (não necessariamente).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 3 - Agentes públicos."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) O servidor público estável pode perder o cargo por decisão de comissão de inquérito administrativo, sem necessidade de processo administrativo disciplinar.",
+          "verso": "ERRADO. A perda do cargo por PAD exige processo administrativo com ampla defesa e contraditório (art. 41, §1º, II, CF/88). Não basta inquérito.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inquérito administrativo com PAD.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 3 - Agentes públicos."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A Lei 8.112/90 estabelece que o servidor responde civilmente por danos causados à Administração em razão de dolo ou culpa.",
+          "verso": "CERTO. Art. 122 da Lei 8.112/90. A responsabilidade civil do servidor perante a Administração exige dolo ou culpa.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a responsabilidade do servidor é objetiva (é subjetiva).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 3 - Agentes públicos."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A Lei 8.429/92 (Improbidade Administrativa), após a Lei 14.230/2021, exige dolo específico para a configuração de todos os atos de improbidade.",
+          "verso": "CERTO. A Lei 14.230/2021 alterou a Lei 8.429/92 para exigir DOLO específico em todas as modalidades de improbidade, afastando a modalidade culposa.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que ainda existe improbidade culposa.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 3 - Agentes públicos."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A Lei 9.784/99 regula o processo administrativo no âmbito da Administração Pública Federal.",
+          "verso": "CERTO. A Lei 9.784/99 disciplina o processo administrativo federal, estabelecendo princípios, prazos e procedimentos.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que se aplica a todos os entes federativos (é federal).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 11 - Lei 9.784/1999."
+        },
+        {
+          "id": 21,
+          "frente": "(C/E) A Administração pode revogar ato administrativo por motivo de ilegalidade, a qualquer tempo.",
+          "verso": "ERRADO. Ilegalidade gera ANULAÇÃO (não revogação), com prazo de 5 anos (art. 54 da Lei 9.784/99), salvo má-fé. Revogação é por conveniência e oportunidade.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar anulação (ilegalidade) por revogação (mérito).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Controle da administração pública."
+        },
+        {
+          "id": 22,
+          "frente": "(C/E) O poder regulamentar é privativo do Chefe do Poder Executivo, que edita decretos para fiel execução da lei.",
+          "verso": "CERTO. O poder regulamentar é exercido pelo Chefe do Executivo (Presidente, Governadores, Prefeitos) por meio de decretos.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer servidor pode editar decretos regulamentares.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 4 - Poderes administrativos."
+        },
+        {
+          "id": 23,
+          "frente": "(C/E) O controle judicial da Administração Pública pode analisar tanto a legalidade quanto o mérito dos atos administrativos.",
+          "verso": "ERRADO. O Judiciário só analisa a LEGALIDADE dos atos administrativos. O MÉRITO (conveniência e oportunidade) é reservado à Administração.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o Judiciário pode revogar ato por mérito.",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 5 - Controle da administração pública."
+        },
+        {
+          "id": 24,
+          "frente": "(C/E) O ato administrativo goza de presunção de legitimidade e veracidade, que pode ser afastada por prova em contrário.",
+          "verso": "CERTO. A presunção é relativa (juris tantum): admite prova em contrário. É um dos atributos do ato administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é presunção absoluta (juris et de jure).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 2 - Ato administrativo."
+        },
+        {
+          "id": 25,
+          "frente": "(C/E) A Lei 13.709/2018 (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil.",
+          "verso": "CERTO. A LGPD disciplina o tratamento de dados pessoais por pessoas físicas e jurídicas, de direito público e privado.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a LGPD se aplica apenas a dados digitais (aplica-se a dados físicos e digitais).",
+          "fundamento": "Edital PF 2025, item 14.2, Direito Administrativo, tópico 9 - Lei 13.709/2018."
+        }
+      ]
+    },
+    "administracao-publica": {
+      "nome": "Noções de Administração Pública",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Administração Pública, em sentido formal, considera o conjunto de órgãos e agentes que exercem a função administrativa, independentemente do conteúdo da atividade.",
+          "verso": "CERTO. Sentido FORMAL/SUBJETIVO: conjunto de órgãos e agentes. Sentido MATERIAL/OBJETIVO: a atividade administrativa em si.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir sentido formal (órgãos) com material (atividade).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A administração pública direta é composta por órgãos ligados diretamente ao chefe do Poder Executivo, enquanto a indireta é composta por entidades com personalidade jurídica própria.",
+          "verso": "CERTO. Administração direta = órgãos (União, Estados, DF, Municípios). Administração indireta = autarquias, fundações, empresas públicas e SEM.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar as composições (órgãos x entidades).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A centralização administrativa ocorre quando o Estado executa suas tarefas por meio de órgãos e agentes da administração direta.",
+          "verso": "CERTO. Centralização = execução direta pelo Estado (administração direta). Descentralização = execução por entidades da administração indireta.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir centralização com concentração.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A desconcentração administrativa é a distribuição de competências dentro da mesma pessoa jurídica, criando órgãos internos.",
+          "verso": "CERTO. Desconcentração = distribuição interna de competências (criação de órgãos). Descentralização = distribuição entre pessoas jurídicas distintas.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir desconcentração (órgãos) com descentralização (entidades).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A governança pública pode ser definida como o conjunto de mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a gestão.",
+          "verso": "CERTO. Decreto 9.203/2017. Governança pública = mecanismos de liderança, estratégia e controle para avaliar, direcionar e monitorar a gestão.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir governança (direção) com gestão (execução).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 4."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A governança pública no Brasil é disciplinada pelo Decreto 9.203/2017.",
+          "verso": "CERTO. O Decreto 9.203/2017 dispõe sobre a política de governança da administração pública federal direta, autárquica e fundacional.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com o Decreto 9.830/2019 (motivação de decisão).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 4."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O planejamento estratégico é o processo de definição de objetivos de longo prazo e das estratégias para alcançá-los.",
+          "verso": "CERTO. Planejamento estratégico = longo prazo, definição de objetivos, missão, visão, valores, análise SWOT, metas.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com planejamento tático (médio prazo) ou operacional (curto prazo).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 5."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A análise SWOT é uma ferramenta de planejamento estratégico que avalia forças, fraquezas, oportunidades e ameaças.",
+          "verso": "CERTO. SWOT = Strengths (forças), Weaknesses (fraquezas), Opportunities (oportunidades), Threats (ameaças).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir SWOT com BSC ou Matriz GUT.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 5."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O Balanced Scorecard (BSC) é uma ferramenta de gestão estratégica que traduz a missão e a estratégia em objetivos e medidas organizadas em perspectivas.",
+          "verso": "CERTO. BSC (Kaplan e Norton) organiza objetivos em 4 perspectivas: financeira, clientes, processos internos e aprendizado/crescimento.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que BSC é apenas financeiro (abrange 4 perspectivas).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 5."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A gestão por processos tem foco na melhoria contínua e na entrega de valor ao cliente, por meio do mapeamento e redesenho de processos.",
+          "verso": "CERTO. Gestão por processos (BPM) foca em mapear, analisar, redesenhar e monitorar processos, buscando eficiência e valor ao cliente.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com gestão por funções (verticalizada).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 8."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) O ciclo PDCA (Plan, Do, Check, Act) é uma ferramenta de melhoria contínua aplicável à gestão de processos.",
+          "verso": "CERTO. PDCA = Planejar, Executar, Verificar, Agir. Ferramenta clássica de melhoria contínua.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com SDCA (padronização) ou DMAIC (Six Sigma).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 8."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A gestão de projetos envolve a aplicação de conhecimentos, habilidades e técnicas para atingir objetivos dentro de prazo, custo e qualidade definidos.",
+          "verso": "CERTO. Gestão de projetos (PMBOK) envolve escopo, prazo, custo, qualidade, riscos, comunicação, entre outras áreas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir projeto (temporário) com processo (contínuo).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 9."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) Um projeto é um esforço temporário empreendido para criar um produto, serviço ou resultado exclusivo.",
+          "verso": "CERTO. Definição do PMBOK. Projeto = temporário (início e fim definidos) e exclusivo (resultado único).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que projeto é contínuo (é temporário).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 9."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A excelência nos serviços públicos é avaliada por meio de critérios como liderança, estratégias e planos, clientes, sociedade, informações e conhecimento, pessoas, processos e resultados.",
+          "verso": "CERTO. Modelo de Excelência em Gestão Pública (MEGP) - baseado no GESPÚBLICA - avalia a gestão por meio desses critérios.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é apenas 'atender o cidadão'.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 10."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) A sustentabilidade na gestão pública envolve a integração de aspectos econômicos, sociais e ambientais nas decisões administrativas.",
+          "verso": "CERTO. Sustentabilidade = tripé econômico, social e ambiental (triple bottom line), aplicado também à gestão pública.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que sustentabilidade é só ambiental.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 11."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A acessibilidade na gestão pública é uma exigência legal que visa garantir o acesso de pessoas com deficiência aos serviços e espaços públicos.",
+          "verso": "CERTO. A Lei 13.146/2015 (LBI) e o Decreto 5.296/2004 estabelecem regras de acessibilidade na administração pública.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que acessibilidade se limita a rampas e elevadores.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 12."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) O Design Thinking é uma abordagem de inovação centrada no ser humano, que combina empatia, criatividade e racionalidade para resolver problemas complexos.",
+          "verso": "CERTO. Design Thinking = abordagem centrada no usuário, com etapas de imersão, ideação, prototipação e teste.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é só 'brainstorm' (envolve prototipação e teste).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 13.1."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A inteligência artificial pode ser aplicada na gestão pública para automatizar processos, analisar dados e melhorar a tomada de decisão.",
+          "verso": "CERTO. IA na gestão pública: chatbots, análise preditiva, automação de processos, detecção de fraudes, entre outras aplicações.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que IA substitui completamente o servidor público (é ferramenta de apoio).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 13.2."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A transparência na administração pública é um princípio expresso na Constituição Federal e na Lei de Acesso à Informação.",
+          "verso": "CERTO. A transparência é princípio expresso (art. 37, caput, CF/88 - publicidade) e regulamentada pela LAI (Lei 12.527/2011).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que transparência é só divulgar atos no DOU.",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 15."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A integridade na administração pública está relacionada à adoção de medidas para prevenir, detectar e punir atos de corrupção e desvios de conduta.",
+          "verso": "CERTO. Integridade = conjunto de medidas institucionais para prevenir, detectar e remediar fraudes, corrupção e desvios éticos.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir integridade com compliance (são complementares).",
+          "fundamento": "Edital PF 2025, item 14.2, Administração Pública, tópico 15."
+        }
+      ]
+    },
+    "gestao-pessoas": {
+      "nome": "Noções de Gestão de Pessoas nas Organizações",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A gestão estratégica de pessoas é aquela que alinha as práticas de RH às estratégias organizacionais, buscando vantagem competitiva.",
+          "verso": "CERTO. Gestão estratégica de pessoas = alinhamento das políticas de RH à estratégia da organização.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com administração de pessoal (foco operacional).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A administração de pessoal tem foco operacional, enquanto a gestão estratégica de pessoas tem foco no alinhamento com os objetivos organizacionais.",
+          "verso": "CERTO. Administração de pessoal: foco em rotinas trabalhistas e operacionais. Gestão estratégica: foco em resultados e alinhamento estratégico.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que são sinônimos.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O recrutamento é o processo de atrair candidatos para preencher uma vaga, podendo ser interno ou externo.",
+          "verso": "CERTO. Recrutamento interno = busca dentro da organização. Recrutamento externo = busca no mercado.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir recrutamento (atrair) com seleção (escolher).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 2.1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A seleção é o processo de escolher, entre os candidatos recrutados, aquele que melhor se adequa ao cargo.",
+          "verso": "CERTO. Seleção = escolha do candidato mais adequado. Envolve técnicas como entrevistas, testes, dinâmicas.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir seleção (escolher) com recrutamento (atrair).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 2.1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O treinamento é um processo de curto prazo focado em melhorar o desempenho em tarefas específicas do cargo atual.",
+          "verso": "CERTO. Treinamento = curto prazo, foco no cargo atual, tarefas específicas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir treinamento (curto prazo) com desenvolvimento (longo prazo).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 2.2."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O desenvolvimento é um processo de longo prazo focado em preparar o colaborador para assumir posições mais complexas no futuro.",
+          "verso": "CERTO. Desenvolvimento = longo prazo, foco em competências futuras, crescimento profissional.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir desenvolvimento (longo prazo) com treinamento (curto prazo).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 2.2."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A gestão de desempenho é o processo de avaliar o rendimento do colaborador e fornecer feedback para melhorar os resultados.",
+          "verso": "CERTO. Gestão de desempenho = avaliação contínua + feedback + plano de desenvolvimento.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que avaliação de desempenho é apenas anual.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 2.3."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A motivação intrínseca está relacionada ao prazer e à satisfação pessoal na execução da própria atividade.",
+          "verso": "CERTO. Motivação intrínseca = interna, prazer pela atividade em si. Motivação extrínseca = externa, recompensas (salário, prêmios).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter intrínseca (interna) com extrínseca (externa).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 3."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A Pirâmide de Maslow organiza as necessidades humanas em 5 níveis: fisiológicas, segurança, sociais, estima e autorrealização.",
+          "verso": "CERTO. Maslow: base (fisiológicas) → topo (autorrealização). Necessidades inferiores devem ser atendidas antes das superiores.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter a ordem da pirâmide.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 3."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A Teoria dos Dois Fatores de Herzberg divide os fatores em higiênicos (evitam insatisfação) e motivacionais (geram satisfação).",
+          "verso": "CERTO. Herzberg: fatores higiênicos (salário, condições) evitam insatisfação; motivacionais (reconhecimento, crescimento) geram satisfação.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que fatores higiênicos geram motivação (só evitam insatisfação).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 3."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A gestão por competências busca alinhar as competências dos colaboradores às necessidades estratégicas da organização.",
+          "verso": "CERTO. Gestão por competências = identificar, desenvolver e avaliar conhecimentos, habilidades e atitudes (CHA) alinhados à estratégia.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Reduzir competência a 'conhecimento' (inclui habilidade e atitude).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 4."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) As competências são compostas por conhecimentos (saber), habilidades (saber fazer) e atitudes (querer fazer) - o modelo CHA.",
+          "verso": "CERTO. CHA = Conhecimento (saber), Habilidade (saber fazer), Atitude (querer fazer).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Esquecer a Atitude (só conhecimento e habilidade).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 4."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A satisfação no trabalho é um estado emocional positivo resultante da avaliação do indivíduo sobre seu trabalho ou experiência profissional.",
+          "verso": "CERTO. Satisfação no trabalho = avaliação afetiva positiva do trabalho. Relaciona-se a comprometimento, produtividade e retenção.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que satisfação = motivação (são conceitos distintos).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 5.1."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O comprometimento organizacional é o grau de identificação e envolvimento do colaborador com a organização.",
+          "verso": "CERTO. Comprometimento = identificação, envolvimento e lealdade à organização. Pode ser afetivo, normativo ou instrumental.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com satisfação (satisfação é avaliação; comprometimento é vínculo).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 5.1."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) As equipes de trabalho são grupos com objetivos comuns, interdependência e responsabilidade compartilhada pelos resultados.",
+          "verso": "CERTO. Equipe = objetivos comuns + interdependência + responsabilidade compartilhada. Grupo = indivíduos que trabalham juntos, mas sem interdependência.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir grupo (agrupamento) com equipe (interdependência).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 5.2."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A competência interpessoal é a habilidade de lidar com outras pessoas de forma adequada às necessidades de cada uma e às exigências da situação.",
+          "verso": "CERTO. Competência interpessoal = habilidade de interagir de forma eficaz, considerando necessidades e contexto.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com competência técnica.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 5.3."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) O gerenciamento de conflitos busca eliminar todos os conflitos na organização.",
+          "verso": "ERRADO. O gerenciamento de conflitos busca administrar os conflitos de forma construtiva. Nem todo conflito é negativo - o conflito funcional pode gerar inovação.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que todo conflito deve ser eliminado.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 5.4."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A gestão do conhecimento busca criar, compartilhar e aplicar o conhecimento organizacional para gerar vantagem competitiva.",
+          "verso": "CERTO. Gestão do conhecimento = processos de criação, armazenamento, compartilhamento e aplicação do conhecimento.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com gestão da informação (foco em dados).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 6."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) O conhecimento tácito é aquele que pode ser facilmente codificado e transmitido por manuais e documentos.",
+          "verso": "ERRADO. O conhecimento TÁCITO é pessoal, difícil de codificar (experiência, intuição). O EXPLÍCITO é que pode ser codificado e transmitido formalmente.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter tácito (pessoal) com explícito (formal).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 6."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A qualidade de vida no trabalho (QVT) envolve aspectos físicos, psicológicos e sociais do ambiente de trabalho que afetam o bem-estar do colaborador.",
+          "verso": "CERTO. QVT = bem-estar físico, psicológico e social no trabalho. Inclui ergonomia, clima, relações interpessoais, equilíbrio trabalho-vida.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Reduzir QVT a 'salário' ou 'benefícios'.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Pessoas, tópico 7."
+        }
+      ]
+    },
+    "gestao-contratos": {
+      "nome": "Noções de Gestão de Contratos e Recursos Materiais",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Lei 14.133/2021 é a nova Lei de Licitações e Contratos Administrativos, que substituiu a Lei 8.666/93.",
+          "verso": "CERTO. A Lei 14.133/2021 substituiu a Lei 8.666/93 (licitações), a Lei 10.520/2002 (pregão) e o RDC (Lei 12.462/2011).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a 8.666/93 ainda está em vigor plenamente (foi revogada).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A licitação é inexigível quando há inviabilidade de competição.",
+          "verso": "CERTO. Art. 74 da Lei 14.133/2021. Ex.: contratação de artista consagrado, fornecedor exclusivo.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inexigibilidade (impossível competir) com dispensa (possível competir, mas lei dispensa).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A licitação é dispensável quando há inviabilidade de competição.",
+          "verso": "ERRADO. Inviabilidade de competição gera INEXIGIBILIDADE. A DISPENSA ocorre quando a competição é possível, mas a lei autoriza a não realização (ex.: compra de pequeno valor).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar dispensa por inexigibilidade.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A concorrência é a modalidade de licitação para contratação de bens e serviços especiais e de obras e serviços comuns e especiais de engenharia.",
+          "verso": "CERTO. Art. 29, Lei 14.133/2021. Concorrência é a modalidade mais ampla, usada para obras, serviços de engenharia e bens especiais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir concorrência com pregão (que é para bens e serviços comuns).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O pregão é a modalidade de licitação obrigatória para aquisição de bens e serviços comuns.",
+          "verso": "CERTO. Art. 29, Lei 14.133/2021. O pregão é obrigatório para bens e serviços comuns, podendo ser eletrônico ou presencial.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o pregão é opcional (é obrigatório para bens comuns).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O diálogo competitivo é uma modalidade de licitação nova trazida pela Lei 14.133/2021, aplicável quando a Administração precisa desenvolver alternativas técnicas com o setor privado.",
+          "verso": "CERTO. Art. 32, Lei 14.133/2021. Diálogo competitivo é modalidade nova, para inovação e desenvolvimento de soluções.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é só uma fase do pregão (é modalidade autônoma).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O leilão é a modalidade de licitação para alienação de bens móveis inservíveis ou de bens imóveis adquiridos por meio de procedimento judicial ou dação em pagamento.",
+          "verso": "CERTO. Art. 31, Lei 14.133/2021. Leilão é para venda de bens (móveis inservíveis ou imóveis).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir leilão (venda) com concorrência (compra).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O contrato administrativo pode ser alterado unilateralmente pela Administração, por motivo de interesse público, desde que respeitados os limites legais.",
+          "verso": "CERTO. Art. 124, Lei 14.133/2021. A Administração pode alterar unilateralmente o contrato (acréscimos ou supressões de até 25% ou 50%, conforme o caso).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o contrato é imutável.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O fiscal do contrato é o servidor designado pela Administração para acompanhar a execução contratual e registrar ocorrências.",
+          "verso": "CERTO. Art. 117, Lei 14.133/2021. O fiscal do contrato acompanha a execução, registra ocorrências e reporta ao gestor.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir fiscal (acompanha) com gestor (coordena).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 2."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) O preposto da contratada é o representante da empresa responsável por acompanhar a execução do contrato no local.",
+          "verso": "CERTO. Art. 118, Lei 14.133/2021. O preposto é o representante da contratada no local de execução.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir preposto (contratada) com fiscal (contratante).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 2.3."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A classificação de materiais é o processo de agrupar itens com características semelhantes, facilitando a gestão de estoques.",
+          "verso": "CERTO. Classificação de materiais = agrupamento por características (natureza, uso, criticidade, etc.).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que classificação é só por preço.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 3."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A curva ABC é uma ferramenta de gestão de estoques que classifica os itens em A (maior valor), B (valor intermediário) e C (menor valor).",
+          "verso": "CERTO. Curva ABC: A = itens de maior valor/importância; B = intermediários; C = menor valor. Foco de gestão nos itens A.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter a ordem (A é o mais importante, não o menos).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 3."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O inventário é o procedimento de verificação física dos bens patrimoniais, comparando o físico com o registrado.",
+          "verso": "CERTO. Inventário = conferência física dos bens, comparando com os registros contábeis e patrimoniais.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inventário (verificação) com baixa (exclusão).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 6.2."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A baixa de bens patrimoniais é o procedimento de exclusão definitiva do bem do patrimônio da organização.",
+          "verso": "CERTO. Baixa = exclusão do bem (por venda, doação, inservibilidade, etc.).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir baixa (exclusão) com transferência (mudança de local).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 6.3."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O Decreto 11.531/2023 dispõe sobre convênios e instrumentos congêneres no âmbito da administração pública federal.",
+          "verso": "CERTO. O Decreto 11.531/2023 regulamenta a celebração de convênios e instrumentos congêneres.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com o Decreto 11.462/2023.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1.1."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A IN/SEGES/ME nº 98/2022 dispõe sobre procedimentos de pesquisa de preços para contratações públicas.",
+          "verso": "CERTO. A IN 98/2022 estabelece procedimentos para pesquisa de preços em contratações públicas.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com IN 5/2017 (que trata de terceirização).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1.3."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) A pesquisa de preços é etapa obrigatória na contratação pública, visando garantir a economicidade da proposta.",
+          "verso": "CERTO. A pesquisa de preços é obrigatória (art. 23, Lei 14.133/2021) para estimar o valor da contratação e garantir economicidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é opcional.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1.3."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) O termo de referência é o documento que define o objeto da contratação, com especificações técnicas e requisitos.",
+          "verso": "CERTO. Art. 6º, XXIII, Lei 14.133/2021. TR define o objeto, especificações, prazo, local, etc. Obrigatório para bens e serviços.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com projeto básico (obras de engenharia).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 1."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) O gestor de contratos é o servidor designado para coordenar e supervisionar as atividades relacionadas à execução contratual.",
+          "verso": "CERTO. O gestor coordena as ações do fiscal e responde pela execução geral do contrato.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir gestor (coordena) com fiscal (acompanha).",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 2."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A penalidade de advertência pode ser aplicada à contratada que descumprir obrigações contratuais, conforme a gravidade da infração.",
+          "verso": "CERTO. Art. 156, Lei 14.133/2021. Penalidades: advertência, multa, impedimento de contratar e declaração de inidoneidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só há multa como penalidade.",
+          "fundamento": "Edital PF 2025, item 14.2, Gestão de Contratos, tópico 2.6."
+        }
+      ]
+    },
+    "legislacao-pf": {
+      "nome": "Legislação Aplicada à Polícia Federal",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A Lei 7.102/1983 dispõe sobre segurança para estabelecimentos financeiros e estabelece normas para constituição e funcionamento das empresas particulares que exploram serviços de vigilância e transporte de valores.",
+          "verso": "CERTO. A Lei 7.102/83 é a base legal para segurança bancária e empresas de vigilância/transporte de valores.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 10.357/2001 (produtos químicos).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A Lei 7.102/1983 prevê que os estabelecimentos financeiros devem dispor de sistemas de segurança, como alarmes e vigilância, conforme sua classificação.",
+          "verso": "CERTO. A Lei 7.102/83 exige sistemas de segurança (alarmes, câmeras, vigilância) conforme o porte do estabelecimento.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só bancos grandes precisam (todos, conforme classificação).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A Lei 10.357/2001 estabelece normas de controle e fiscalização sobre produtos químicos que possam ser destinados à elaboração ilícita de substâncias entorpecentes.",
+          "verso": "CERTO. A Lei 10.357/2001 trata do controle de produtos químicos para prevenir desvio para produção de drogas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 7.102/83 (segurança bancária).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 2."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A Lei 10.357/2001 exige que as empresas que comercializam produtos químicos controlados mantenham registros e prestem informações ao órgão competente.",
+          "verso": "CERTO. A Lei 10.357/2001 exige registros de operações e informações periódicas ao DPF (Departamento de Polícia Federal).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só produtos finais são controlados (insumos também).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 2."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A Lei 6.815/1980 define a situação jurídica do estrangeiro no Brasil e cria o Conselho Nacional de Imigração.",
+          "verso": "CERTO. A Lei 6.815/80 (Estatuto do Estrangeiro) foi REVOGADA pela Lei 13.445/2017 (Lei de Migração), mas o edital PF 2025 ainda a cobra literalmente. A Lei 13.445/2017 é a atual.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a Lei 6.815/80 ainda está vigente (foi revogada pela Lei 13.445/2017).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 3."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A Lei 13.445/2017 é a atual Lei de Migração, que substituiu o Estatuto do Estrangeiro (Lei 6.815/80).",
+          "verso": "CERTO. A Lei 13.445/2017 (Lei de Migração) revogou o Estatuto do Estrangeiro e trouxe nova disciplina sobre migração.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a Lei 6.815/80 ainda está em vigor plenamente (foi revogada).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 3."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A Lei 10.826/2003 é o Estatuto do Desarmamento.",
+          "verso": "CERTO. A Lei 10.826/2003 é o Estatuto do Desarmamento, que regula registro, posse, porte e comercialização de armas de fogo.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 7.102/83 (segurança bancária).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 4."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A Lei 10.826/2003 prevê que o porte de arma de fogo é, em regra, proibido, sendo permitido apenas nas hipóteses legais.",
+          "verso": "CERTO. O porte é excepcional, permitido apenas para categorias específicas (policiais, militares, etc.) e mediante autorização.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer cidadão pode portar arma.",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 4."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A Lei 12.830/2013 dispõe sobre a investigação criminal conduzida pelo delegado de polícia.",
+          "verso": "CERTO. A Lei 12.830/2013 trata da investigação criminal conduzida pelo delegado de polícia, garantindo autonomia funcional.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a Lei 10.357/2001 (produtos químicos).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 5."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A Lei 12.830/2013 estabelece que o delegado de polícia tem autonomia funcional para conduzir a investigação criminal.",
+          "verso": "CERTO. A Lei 12.830/2013 garante ao delegado autonomia funcional, técnico-científica e jurídica na condução da investigação.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o delegado não tem autonomia (tem, conforme a lei).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 5."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A Lei 7.102/1983 aplica-se apenas a bancos públicos, não alcançando instituições financeiras privadas.",
+          "verso": "ERRADO. A Lei 7.102/83 aplica-se a TODOS os estabelecimentos financeiros (públicos e privados), conforme classificação.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir a lei a bancos públicos.",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 1."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) O transporte de valores no Brasil só pode ser realizado por empresas especializadas autorizadas pelo Departamento de Polícia Federal.",
+          "verso": "CERTO. A Lei 7.102/83 exige autorização do DPF para empresas de transporte de valores.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer empresa pode transportar valores.",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 1."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A Lei 10.357/2001 prevê sanções penais e administrativas para quem descumprir as normas de controle de produtos químicos.",
+          "verso": "CERTO. A lei prevê sanções para quem descumprir as obrigações de controle, incluindo penas de detenção e multa.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só há sanção administrativa.",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 2."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O porte de arma de fogo para policiais federais é regulamentado pelo Estatuto do Desarmamento.",
+          "verso": "CERTO. A Lei 10.826/2003 (Estatuto do Desarmamento) regulamenta o porte para policiais federais, com regras específicas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que policiais federais não precisam de autorização (têm porte funcional, mas a lei regula).",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 4."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) A Lei 12.830/2013 garante ao delegado de polícia a prerrogativa de requisitar diligências e perícias necessárias à investigação.",
+          "verso": "CERTO. A Lei 12.830/2013 prevê que o delegado pode requisitar diligências, perícias e documentos para a investigação criminal.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o delegado depende de autorização judicial para requisitar perícias.",
+          "fundamento": "Edital PF 2025, item 14.2, Legislação Aplicada à PF, tópico 5."
+        }
+      ]
+    },
+    "afo-arquivologia": {
+      "nome": "Noções de Administração Financeira e Orçamentária e Arquivologia",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) O orçamento público no Brasil é disciplinado pela Lei 4.320/1964, pela Constituição Federal e pela Lei de Responsabilidade Fiscal.",
+          "verso": "CERTO. O arcabouço legal do orçamento público inclui a Lei 4.320/1964 (normas gerais), a CF/88 (arts. 165-169) e a LRF (LC 101/2000).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir as normas (a CF traz as diretrizes; a 4.320 detalha).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A Lei Orçamentária Anual (LOA) é o instrumento que estima as receitas e fixa as despesas para o exercício financeiro.",
+          "verso": "CERTO. A LOA estima receitas e fixa despesas para o ano, conforme a CF/88 (art. 165, III).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir LOA (orçamento) com LDO (diretrizes).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 3."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A Lei de Diretrizes Orçamentárias (LDO) compreende as metas e prioridades da administração pública, orientando a elaboração da LOA.",
+          "verso": "CERTO. A LDO (art. 165, II, CF/88) estabelece metas e prioridades, orienta a LOA e dispõe sobre alterações tributárias.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir LDO (diretrizes) com LOA (orçamento).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 3."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) O Plano Plurianual (PPA) estabelece as diretrizes, objetivos e metas da administração pública para um período de 4 anos.",
+          "verso": "CERTO. O PPA (art. 165, I, CF/88) tem duração de 4 anos (do 2º ano do mandato ao 1º do mandato seguinte).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o PPA dura 1 ano (é 4).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 3."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O ciclo orçamentário compreende as etapas de elaboração, aprovação, execução e avaliação do orçamento.",
+          "verso": "CERTO. Ciclo orçamentário: elaboração (Executivo) → aprovação (Legislativo) → execução → avaliação/controle.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Pular a etapa de avaliação.",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 3."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A receita pública pode ser classificada em receitas correntes e receitas de capital.",
+          "verso": "CERTO. Receitas correntes (tributárias, contribuições, patrimoniais) e receitas de capital (operações de crédito, alienação de bens, amortização).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir receita corrente com receita de capital.",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 4."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A despesa pública passa pelos estágios de empenho, liquidação e pagamento.",
+          "verso": "CERTO. Estágios da despesa: empenho (reserva), liquidação (verificação) e pagamento (quitação).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter a ordem (empenho → liquidação → pagamento).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 4."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O empenho é o primeiro estágio da despesa pública, no qual a Administração reserva dotação orçamentária para uma despesa específica.",
+          "verso": "CERTO. Empenho = reserva de dotação. É o primeiro estágio da execução da despesa.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o empenho é o pagamento (não é).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 4."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A Lei de Responsabilidade Fiscal (LRF) estabelece normas de finanças públicas voltadas para a responsabilidade na gestão fiscal.",
+          "verso": "CERTO. A LRF (LC 101/2000) estabelece normas de planejamento, transparência, controle e responsabilidade na gestão fiscal.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a LRF é uma lei ordinária (é complementar).",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 7."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A LRF veda a criação de despesa continuada sem a correspondente fonte de custeio.",
+          "verso": "CERTO. A LRF exige que toda despesa continuada tenha previsão de receita correspondente (art. 17).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a LRF permite despesa sem custeio.",
+          "fundamento": "Edital PF 2025, item 14.2, AFO, tópico 7."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) A arquivologia estuda a organização, o funcionamento e a gestão de arquivos e documentos.",
+          "verso": "CERTO. Arquivologia = ciência que estuda a gestão de documentos e arquivos, suas funções e ciclo de vida.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir arquivologia (documentos) com biblioteconomia (livros).",
+          "fundamento": "Edital PF 2025, item 14.2, Arquivologia, tópico 1."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) O ciclo vital dos documentos compreende as idades corrente, intermediária e permanente.",
+          "verso": "CERTO. Teoria das três idades: corrente (uso frequente), intermediária (uso eventual) e permanente (guarda definitiva).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir intermediária (eventual) com permanente (definitiva).",
+          "fundamento": "Edital PF 2025, item 14.2, Arquivologia, tópico 1."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A tabela de temporalidade é o instrumento que define os prazos de guarda e a destinação final dos documentos.",
+          "verso": "CERTO. Tabela de temporalidade = prazos de guarda nos arquivos corrente e intermediário + destinação final (eliminação ou guarda permanente).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só define prazos (define também destinação).",
+          "fundamento": "Edital PF 2025, item 14.2, Arquivologia, tópico 1."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A digitalização de documentos é uma prática que substitui completamente a guarda física dos documentos originais.",
+          "verso": "ERRADO. A digitalização NÃO substitui automaticamente a guarda física. Documentos de valor permanente exigem guarda do original, salvo legislação específica.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que digitalizar elimina o original.",
+          "fundamento": "Edital PF 2025, item 14.2, Arquivologia, tópico 1."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O princípio da proveniência ou do respeito aos fundos determina que os documentos devem ser arquivados de acordo com a sua origem.",
+          "verso": "CERTO. Princípio da proveniência = documentos de uma mesma origem devem ser mantidos juntos, sem mistura com outros fundos.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir proveniência (origem) com ordem original (ordem de produção).",
+          "fundamento": "Edital PF 2025, item 14.2, Arquivologia, tópico 1."
+        }
       ]
     }
   }

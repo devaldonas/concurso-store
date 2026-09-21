@@ -6,3 +6,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.bak
+*.bak-antes-do-patch
