@@ -674,6 +674,466 @@
           "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 5."
         }
       ]
+    },
+    "constitucional": {
+      "nome": "Noções de Direito Constitucional",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) O habeas corpus protege o direito de acesso à informação pessoal do cidadão.",
+          "verso": "ERRADO. O habeas corpus protege a LIBERDADE DE LOCOMOÇÃO. Para acesso à informação pessoal, o instrumento é o HABEAS DATA.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar HC (locomoção) por HD (informação).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O mandado de segurança pode ser impetrado para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data.",
+          "verso": "CERTO. Art. 5º, LXIX, CF/88. O MS é residual: cabe quando não for caso de HC nem HD.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que MS cabe para qualquer situação, inclusive locomoção.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O mandado de injunção é cabível quando a falta de norma regulamentadora torna inviável o exercício dos direitos e liberdades constitucionais.",
+          "verso": "CERTO. Art. 5º, LXXI, CF/88. MI serve para viabilizar direitos constitucionais dependentes de regulamentação.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com ação direta de inconstitucionalidade por omissão (ADO).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A prática do racismo constitui crime inafiançável e imprescritível.",
+          "verso": "CERTO. Art. 5º, XLII, CF/88. Racismo é crime inafiançável e imprescritível, sujeito à pena de reclusão.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com outros crimes inafiançáveis (3T + hediondos).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A tortura, o tráfico ilícito de entorpecentes e o terrorismo são crimes inafiançáveis e insuscetíveis de graça ou anistia.",
+          "verso": "CERTO. Art. 5º, XLIII, CF/88. Os '3T' (Tortura, Tráfico, Terrorismo) + hediondos são inafiançáveis e insuscetíveis de graça ou anistia.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que são imprescritíveis (só racismo e ação de grupos armados são imprescritíveis).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) A casa é asilo inviolável do indivíduo, podendo ser penetrada à noite por determinação judicial.",
+          "verso": "ERRADO. A determinação judicial só autoriza entrada na casa DURANTE O DIA. À noite, só com consentimento do morador, flagrante delito ou desastre.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'durante o dia' por 'à noite' na hipótese de ordem judicial.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Todos os direitos e garantias fundamentais previstos na CF/88 são absolutos, não admitindo qualquer restrição.",
+          "verso": "ERRADO. Nenhum direito fundamental é absoluto. Todos podem sofrer restrições em casos específicos, respeitando a proporcionalidade e a razoabilidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalização absoluta ('todos são absolutos').",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A nacionalidade brasileira pode ser originária (natos) ou derivada (naturalizados).",
+          "verso": "CERTO. Nacionalidade originária = brasileiros natos (art. 12, I). Nacionalidade derivada = naturalizados (art. 12, II).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com cidadania (que é o exercício dos direitos políticos).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A cidadania é um direito social previsto no art. 6º da CF/88.",
+          "verso": "ERRADO. Cidadania é um direito FUNDAMENTAL (art. 5º, caput). Direitos sociais (art. 6º) são: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância, assistência aos desamparados.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir direitos fundamentais (art. 5º) com direitos sociais (art. 6º).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A educação, a saúde, a alimentação, o trabalho e a moradia são direitos sociais previstos na Constituição Federal.",
+          "verso": "CERTO. Art. 6º, CF/88, com redação atualizada por emendas (EC 26/2000, EC 64/2010, EC 90/2015, EC 108/2020).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir itens acrescentados por emendas (ex.: alimentação, transporte, moradia).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) O transporte é um direito social expressamente previsto no art. 6º da CF/88.",
+          "verso": "CERTO. O transporte foi incluído como direito social pela EC 90/2015.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir 'transporte' por ser inclusão recente.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 1."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A Administração Pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+          "verso": "CERTO. Art. 37, caput, CF/88. Mnemônico: LIMPE.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A investidura em cargo ou emprego público depende de aprovação prévia em concurso público, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.",
+          "verso": "CERTO. Art. 37, II, CF/88. Concurso público é a regra; cargos em comissão são a exceção.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que TODO cargo em comissão dispensa concurso (só os de livre nomeação e exoneração).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período.",
+          "verso": "CERTO. Art. 37, III, CF/88. Validade de até 2 anos, prorrogável uma vez por igual período.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'dois anos' por 'um ano' ou dizer que é prorrogável duas vezes.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) É permitida a acumulação de dois cargos públicos de professor, desde que haja compatibilidade de horários e respeito ao teto remuneratório.",
+          "verso": "CERTO. Art. 37, XVI, 'a', CF/88. A acumulação de 2 cargos de professor é permitida com compatibilidade de horários.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer acumulação é proibida.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) É permitida a acumulação de dois cargos públicos de médico com dois cargos de professor.",
+          "verso": "ERRADO. A CF/88 permite acumulação de: (a) 2 cargos de professor; (b) 1 cargo de professor + 1 de técnico/científico; (c) 2 cargos privativos de profissionais de saúde. Não permite 2 médicos + 2 professores.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir as hipóteses de acumulação.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou de processo administrativo disciplinar com ampla defesa.",
+          "verso": "ERRADO. Além dessas duas hipóteses, também perderá o cargo mediante procedimento de avaliação periódica de desempenho (art. 41, III, CF/88).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Omitir a terceira hipótese (avaliação periódica de desempenho).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A estabilidade do servidor público é adquirida após 3 anos de efetivo exercício.",
+          "verso": "CERTO. Art. 41, CF/88. O servidor nomeado para cargo de provimento efetivo em virtude de concurso público adquire estabilidade após 3 anos de efetivo exercício.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar '3 anos' por '2 anos' ou confundir com o estágio probatório.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A aposentadoria por tempo de contribuição foi extinta pela EC 103/2019, que passou a exigir idade mínima.",
+          "verso": "CERTO. A EC 103/2019 extinguiu a aposentadoria por tempo de contribuição para os novos segurados, exigindo idade mínima (65 anos para homens, 62 para mulheres no RGPS).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a EC 103 acabou com a aposentadoria por idade (não acabou).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A assessoria jurídica das unidades do INSS é atribuição do Advogado-Geral da União, sendo vedada a contratação de escritórios de advocacia privados para defesa do órgão.",
+          "verso": "CERTO. A AGU exerce a representação judicial e extrajudicial da União e de suas autarquias (como o INSS), sendo vedada a contratação de escritórios privados para esse fim.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o INSS pode contratar advogado particular.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Constitucional, tópico 2."
+        }
+      ]
+    },
+    "administrativo": {
+      "nome": "Noções de Direito Administrativo",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(C/E) A presunção de legitimidade do ato administrativo é absoluta, não admitindo prova em contrário.",
+          "verso": "ERRADO. A presunção de legitimidade é RELATIVA (juris tantum), admitindo prova em contrário. É um dos atributos do ato administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'relativa' por 'absoluta'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O poder hierárquico é aquele que permite à Administração punir servidores e particulares que descumprem normas.",
+          "verso": "ERRADO. Poder HIERÁRQUICO = organizar, coordenar e subordinar. Poder DISCIPLINAR = punir. Poder de POLÍCIA = restringir direitos. Poder REGULAMENTAR = editar normas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar as definições dos poderes administrativos.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 5."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O poder de polícia permite ao Estado condicionar e restringir o uso de bens e o exercício de direitos em benefício do interesse público.",
+          "verso": "CERTO. Poder de polícia = faculdade de condicionar e restringir o uso de bens e o exercício de direitos individuais em prol do interesse público.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com poder disciplinar.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 5."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A administração indireta é composta por autarquias, fundações públicas, empresas públicas e sociedades de economia mista.",
+          "verso": "CERTO. Art. 4º, II, do Decreto-Lei 200/1967. São entidades da administração indireta com personalidade jurídica própria.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Incluir 'órgãos públicos' (que são da administração DIRETA).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 3."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) As autarquias são entidades administrativas autônomas, criadas por lei, com personalidade jurídica de direito público.",
+          "verso": "CERTO. Autarquias são criadas por lei, têm personalidade jurídica de direito público e capacidade de autoadministração.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que autarquia é criada por decreto.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 3."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) As empresas públicas e as sociedades de economia mista são pessoas jurídicas de direito público.",
+          "verso": "ERRADO. Empresas públicas e SEM são pessoas jurídicas de DIREITO PRIVADO. As autarquias e fundações públicas é que são de direito público.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'privado' por 'público'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 3."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) A responsabilidade civil do Estado por atos comissivos é objetiva, fundada na teoria do risco administrativo.",
+          "verso": "CERTO. Art. 37, §6º, CF/88. Responsabilidade objetiva (independe de dolo/culpa), baseada na teoria do risco administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 'subjetiva' ou 'teoria da culpa administrativa'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 8."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A responsabilidade civil do Estado por atos omissivos é sempre objetiva.",
+          "verso": "ERRADO. Em regra, a responsabilidade por omissão é SUBJETIVA (culpa do serviço). Excepcionalmente, é objetiva quando o Estado tem o dever específico de agir (ex.: preso sob custódia).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalizar como objetiva para todos os casos.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 8."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O prazo para a Administração anular seus próprios atos, salvo comprovada má-fé, é de 5 anos, contado da data do ato.",
+          "verso": "CERTO. Art. 54 da Lei 9.784/99. A Súmula 633 do STJ estendeu o prazo de 5 anos aos estados e municípios.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar '5 anos' por '10 anos' ou 'prazo prescricional'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6 e 9."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A autotutela administrativa permite à Administração rever seus próprios atos, anulando os ilegais e revogando os inconvenientes.",
+          "verso": "CERTO. Súmulas 346 e 473 do STF. Anulação = ilegalidade. Revogação = conveniência e oportunidade.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir anulação (ilegal) com revogação (mérito).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) O ato administrativo discricionário pode ser revogado pela própria Administração, mas não pode ser anulado pelo Poder Judiciário quanto ao mérito.",
+          "verso": "CERTO. O Judiciário não pode revogar ato discricionário (mérito administrativo), mas pode anulá-lo por ilegalidade.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o Judiciário pode revogar ato administrativo.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6 e 8."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) O ato administrativo vinculado não admite juízo de conveniência e oportunidade pelo administrador.",
+          "verso": "CERTO. No ato vinculado, a lei define todos os elementos; no discricionário, há margem para conveniência e oportunidade (mérito).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir vinculado com discricionário.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A licitação é inexigível quando há inviabilidade de competição.",
+          "verso": "CERTO. Art. 74 da Lei 14.133/2021 (antigo art. 25 da Lei 8.666/93). Ex.: contratação de artista consagrado, fornecedor exclusivo.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inexigibilidade (impossível competir) com dispensa (possível competir, mas lei dispensa).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 7."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A licitação é dispensável quando há inviabilidade de competição.",
+          "verso": "ERRADO. Inviabilidade de competição gera INEXIGIBILIDADE. A DISPENSA ocorre quando a competição é possível, mas a lei autoriza a não realização (ex.: compra de pequeno valor).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar dispensa por inexigibilidade.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 7."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) A Lei 14.133/2021 é a nova Lei de Licitações e Contratos Administrativos, que substituiu a Lei 8.666/93.",
+          "verso": "CERTO. A Lei 14.133/2021 substituiu a Lei 8.666/93 (licitações), a Lei 10.520/2002 (pregão) e o RDC (Lei 12.462/2011).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a 8.666/93 ainda está em vigor plenamente (foi revogada).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 7."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) O servidor público responde civil, penal e administrativamente pelo exercício irregular de suas atribuições.",
+          "verso": "CERTO. Art. 121 da Lei 8.112/90. As três esferas são independentes entre si.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a absolvição penal sempre absolve na esfera administrativa (não necessariamente).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 4."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) O servidor público estável pode perder o cargo por decisão de comissão de inquérito administrativo, sem necessidade de processo administrativo disciplinar.",
+          "verso": "ERRADO. A perda do cargo por PAD exige processo administrativo com ampla defesa e contraditório (art. 41, §1º, II, CF/88). Não basta inquérito.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir inquérito administrativo com PAD.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 4."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) A Lei 8.112/90 estabelece que o servidor responde civilmente por danos causados à Administração em razão de dolo ou culpa.",
+          "verso": "CERTO. Art. 122 da Lei 8.112/90. A responsabilidade civil do servidor perante a Administração exige dolo ou culpa.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a responsabilidade do servidor é objetiva (é subjetiva).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 4."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A Lei 8.429/92 (Improbidade Administrativa), após a Lei 14.230/2021, exige dolo específico para a configuração de todos os atos de improbidade.",
+          "verso": "CERTO. A Lei 14.230/2021 alterou a Lei 8.429/92 para exigir DOLO específico em todas as modalidades de improbidade, afastando a modalidade culposa.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que ainda existe improbidade culposa.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 8."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A Lei 9.784/99 regula o processo administrativo no âmbito da Administração Pública Federal.",
+          "verso": "CERTO. A Lei 9.784/99 disciplina o processo administrativo federal, estabelecendo princípios, prazos e procedimentos.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que se aplica a todos os entes federativos (é federal).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 9."
+        },
+        {
+          "id": 21,
+          "frente": "(C/E) A Administração pode revogar ato administrativo por motivo de ilegalidade, a qualquer tempo.",
+          "verso": "ERRADO. Ilegalidade gera ANULAÇÃO (não revogação), com prazo de 5 anos (art. 54 da Lei 9.784/99), salvo má-fé. Revogação é por conveniência e oportunidade.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar anulação (ilegalidade) por revogação (mérito).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6."
+        },
+        {
+          "id": 22,
+          "frente": "(C/E) O poder regulamentar é privativo do Chefe do Poder Executivo, que edita decretos para fiel execução da lei.",
+          "verso": "CERTO. O poder regulamentar é exercido pelo Chefe do Executivo (Presidente, Governadores, Prefeitos) por meio de decretos.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que qualquer servidor pode editar decretos regulamentares.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 5."
+        },
+        {
+          "id": 23,
+          "frente": "(C/E) O controle judicial da Administração Pública pode analisar tanto a legalidade quanto o mérito dos atos administrativos.",
+          "verso": "ERRADO. O Judiciário só analisa a LEGALIDADE dos atos administrativos. O MÉRITO (conveniência e oportunidade) é reservado à Administração.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o Judiciário pode revogar ato por mérito.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 8."
+        },
+        {
+          "id": 24,
+          "frente": "(C/E) O ato administrativo goza de presunção de legitimidade e veracidade, que pode ser afastada por prova em contrário.",
+          "verso": "CERTO. A presunção é relativa (juris tantum): admite prova em contrário. É um dos atributos do ato administrativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é presunção absoluta (juris et de jure).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 6."
+        },
+        {
+          "id": 25,
+          "frente": "(C/E) O servidor público em estágio probatório pode ser exonerado sem processo administrativo, desde que a Administração motive o ato.",
+          "verso": "CERTO. O servidor em estágio probatório pode ser exonerado (não demitido) se não atender aos requisitos de avaliação, desde que respeitados o contraditório e a ampla defesa (Súmula 21 do STF: exige motivação).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a exoneração no estágio probatório dispensa qualquer procedimento.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Direito Administrativo, tópico 4."
+        }
+      ]
     }
   }
 }
