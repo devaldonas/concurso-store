@@ -1,109 +1,678 @@
 {
   "nome": "INSS 2022 - Técnico do Seguro Social",
+  "banca": "Cebraspe",
+  "cargo": "Técnico do Seguro Social",
+  "nivel": "medio",
+  "edital_ref": "Edital nº 1/2022 (base) + legislação atual pós-EC 103/2019",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "Em 'A educação transforma vidas', qual a função sintática de 'vidas'?", "verso": "Objeto direto do verbo transitivo direto 'transforma'.", "dificuldade": 1},
-        {"id": 2, "frente": "A frase 'Fazem dez anos que trabalho' está correta quanto à concordância verbal?", "verso": "NÃO. O verbo 'fazer' indicando tempo é impessoal: 'Faz dez anos'.", "dificuldade": 2},
-        {"id": 3, "frente": "Em 'Chegamos à conclusão', a crase é obrigatória?", "verso": "SIM. 'Conclusão' é substantivo feminino que admite artigo 'a'.", "dificuldade": 2},
-        {"id": 4, "frente": "O pronome 'se' em 'Vendem-se casas' é partícula apassivadora?", "verso": "SIM. O verbo é transitivo direto e o 'se' indica voz passiva sintética.", "dificuldade": 3},
-        {"id": 5, "frente": "Em 'Trata-se de questões polêmicas', o 'se' é índice de indeterminação do sujeito?", "verso": "SIM. O verbo 'tratar-se' é transitivo indireto.", "dificuldade": 3},
-        {"id": 6, "frente": "A oração 'que estudaram muito' em 'Os alunos, que estudaram muito, foram aprovados' é explicativa?", "verso": "SIM. A vírgula isola oração subordinada adjetiva explicativa.", "dificuldade": 2},
-        {"id": 7, "frente": "O verbo 'haver' em 'Havia muitos suspeitos' é impessoal?", "verso": "SIM. No sentido de existir, 'haver' é impessoal (3ª pessoa do singular).", "dificuldade": 2},
-        {"id": 8, "frente": "Em 'Ainda que chova, irei ao trabalho', a oração expressa concessão?", "verso": "SIM. 'Ainda que' é conjunção subordinativa concessiva.", "dificuldade": 3},
-        {"id": 9, "frente": "A conjunção 'portanto' introduz ideia de conclusão?", "verso": "SIM. É conjunção coordenativa conclusiva.", "dificuldade": 1},
-        {"id": 10, "frente": "A vírgula em 'João, o melhor aluno, foi aprovado' isola aposto?", "verso": "SIM. 'O melhor aluno' é aposto explicativo.", "dificuldade": 2}
-      ]
-    },
-    "constitucional": {
-      "nome": "Direito Constitucional",
-      "cards": [
-        {"id": 1, "frente": "O habeas corpus protege o direito de acesso à informação?", "verso": "NÃO. Protege a liberdade de locomoção. Habeas data é para informação.", "dificuldade": 2},
-        {"id": 2, "frente": "Quais são os princípios expressos da Administração Pública no art. 37 da CF/88?", "verso": "Legalidade, impessoalidade, moralidade, publicidade e eficiência.", "dificuldade": 1},
-        {"id": 3, "frente": "O servidor estável perde o cargo apenas por sentença judicial ou PAD?", "verso": "NÃO. Também por avaliação periódica de desempenho (art. 41, III).", "dificuldade": 3},
-        {"id": 4, "frente": "É permitida a acumulação de dois cargos de professor?", "verso": "SIM. Desde que haja compatibilidade de horários (art. 37, XVI, a).", "dificuldade": 2},
-        {"id": 5, "frente": "A nacionalidade é um direito social previsto no art. 6º?", "verso": "NÃO. Nacionalidade é direito fundamental (art. 12).", "dificuldade": 2},
-        {"id": 6, "frente": "O mandado de segurança coletivo pode ser impetrado por partido político?", "verso": "SIM. Partido com representação no CN pode impetrar MS coletivo.", "dificuldade": 2},
-        {"id": 7, "frente": "Tortura, tráfico e terrorismo são crimes inafiançáveis?", "verso": "SIM. São equiparados a hediondos (art. 5º, XLIII).", "dificuldade": 2},
-        {"id": 8, "frente": "A prática de racismo é crime inafiançável e imprescritível?", "verso": "SIM. Conforme art. 5º, XLII, da CF/88.", "dificuldade": 1},
-        {"id": 9, "frente": "A casa é asilo inviolável, podendo ser penetrada à noite por determinação judicial?", "verso": "NÃO. A determinação judicial só permite entrada durante o dia.", "dificuldade": 3},
-        {"id": 10, "frente": "Nenhum direito fundamental é absoluto?", "verso": "SIM. Todos os direitos podem sofrer restrições em casos específicos.", "dificuldade": 2}
-      ]
-    },
-    "administrativo": {
-      "nome": "Direito Administrativo",
-      "cards": [
-        {"id": 1, "frente": "A presunção de legitimidade do ato administrativo é absoluta?", "verso": "NÃO. É relativa (juris tantum), admitindo prova em contrário.", "dificuldade": 2},
-        {"id": 2, "frente": "O que é o poder de polícia?", "verso": "Faculdade de condicionar e restringir o uso de bens e o exercício de direitos.", "dificuldade": 1},
-        {"id": 3, "frente": "A licitação é inexigível quando há inviabilidade de competição?", "verso": "SIM. Como na contratação de artista consagrado.", "dificuldade": 2},
-        {"id": 4, "frente": "O que é a autotutela administrativa?", "verso": "Poder-dever de a Administração rever seus próprios atos, anulando ilegais e revogando inconvenientes.", "dificuldade": 2},
-        {"id": 5, "frente": "A responsabilidade civil do Estado por atos comissivos é objetiva?", "verso": "SIM. Fundada na teoria do risco administrativo (art. 37, §6º, CF).", "dificuldade": 2},
-        {"id": 6, "frente": "Qual o prazo para a Administração anular seus próprios atos?", "verso": "5 anos (art. 54 da Lei 9.784/99), salvo comprovada má-fé.", "dificuldade": 3},
-        {"id": 7, "frente": "Após a Lei 14.230/2021, a improbidade administrativa exige dolo?", "verso": "SIM. Exige dolo específico para todas as modalidades.", "dificuldade": 3},
-        {"id": 8, "frente": "O pregão é obrigatório para bens e serviços comuns?", "verso": "SIM. Conforme art. 29 da Lei 14.133/2021.", "dificuldade": 2},
-        {"id": 9, "frente": "Qual o âmbito de aplicação da Lei 8.112/90?", "verso": "Servidores civis da União, autarquias e fundações públicas federais.", "dificuldade": 1},
-        {"id": 10, "frente": "A administração indireta é composta por quais entidades?", "verso": "Autarquias, fundações públicas, empresas públicas e sociedades de economia mista.", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(C/E) Na frase 'O servidor cumpriu as normas, porém não obteve êxito', a conjunção 'porém' estabelece relação de oposição entre as orações.",
+          "verso": "CERTO. 'Porém' é conjunção coordenativa adversativa, que expressa contraste/oposição entre as orações coordenadas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'porém' por 'portanto' (conclusiva) ou 'pois' (explicativa).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) Em 'Faz dez anos que o INSS modernizou o atendimento', o verbo 'fazer' está corretamente flexionado no singular.",
+          "verso": "CERTO. Indicando tempo decorrido, 'fazer' é impessoal e fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Pluralizar para 'Fazem dez anos' por atração do termo 'dez anos'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 9 - Concordância nominal e verbal."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) Em 'Haviam muitos segurados na fila da agência', o verbo 'haver' está corretamente empregado.",
+          "verso": "ERRADO. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular: 'Havia muitos segurados'. O correto seria 'Existiam muitos segurados' se fosse o verbo 'existir'.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Pluralizar 'haver' por atração do sujeito, confundindo com 'existir'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 9 - Concordância nominal e verbal."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) Em 'Refiro-me à segurada que solicitou o benefício', o acento grave está corretamente empregado.",
+          "verso": "CERTO. 'Referir-se' é transitivo indireto (exige 'a') e 'segurada' é substantivo feminino determinado → a + a = à. Crase obrigatória.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'referir-se a' não admite artigo ou confundir com 'a' simples.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 6 - Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) Em 'O benefício foi concedido a uma segurada idosa', o uso da crase seria obrigatório se escrevêssemos 'à uma segurada idosa'.",
+          "verso": "ERRADO. Não se usa crase antes de artigo indefinido ('uma'). O correto é 'a uma segurada idosa', sem acento grave.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Induzir o candidato a achar que a crase é obrigatória antes de qualquer palavra feminina.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 6 - Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) Em 'Vendem-se benefícios previdenciários', o 'se' é partícula apassivadora.",
+          "verso": "CERTO. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética, equivalente a 'Benefícios previdenciários são vendidos'.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito (que ocorre com VTI).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Em 'Trata-se de questões complexas', o 'se' é índice de indeterminação do sujeito.",
+          "verso": "CERTO. O verbo 'tratar-se' é transitivo indireto (exige a preposição 'de'). Nesse caso, o 'se' indetermina o sujeito e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com partícula apassivadora (VTD).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) Em 'O segurado que trabalhou por 30 anos requererá aposentadoria', a oração 'que trabalhou por 30 anos' é subordinada adjetiva explicativa.",
+          "verso": "ERRADO. É subordinada adjetiva RESTRITIVA, pois não está entre vírgulas e restringe o sentido de 'segurado'. Explicativa viria entre vírgulas.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar restritiva (sem vírgula) por explicativa (com vírgula).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) Em 'O servidor, que é dedicado, foi promovido', a oração destacada é subordinada adjetiva explicativa.",
+          "verso": "CERTO. Está isolada por vírgulas e explica uma característica do antecedente 'servidor', sem restringir o sentido.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que a vírgula não muda a classificação da oração.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 8 - Pontuação."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) Em 'Não me disse a verdade', a próclise é obrigatória por causa do advérbio de negação 'não'.",
+          "verso": "CERTO. Palavras atrativas (como 'não', 'nunca', 'jamais', 'que', 'quem') atraem o pronome oblíquo para antes do verbo (próclise).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 5 - Emprego das classes de palavras."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) Em 'Entreguei-lhe o processo', o pronome 'lhe' funciona como objeto direto.",
+          "verso": "ERRADO. O pronome 'lhe' é objeto INDIRETO (complementa verbo transitivo indireto). O objeto direto seria 'o' (Entreguei-o). Aqui 'o processo' é o OD e 'lhe' é o OI.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar as funções de 'lhe' (OI) e 'o/a' (OD).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) A palavra 'benefício' está corretamente grafada segundo o Novo Acordo Ortográfico.",
+          "verso": "CERTO. A grafia 'benefício' (com 'i' tônico) está correta. Não confundir com 'beneficiente' ou 'beneficência'.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 'benefício' (errado) ou 'beneficio' sem acento.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 3 - Ortografia oficial."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) A palavra 'previdenciário' está corretamente acentuada.",
+          "verso": "CERTO. 'Previdenciário' tem acento agudo no 'i' da sílaba tônica 'á' (paroxítona terminada em ditongo '-rio').",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Tirar o acento (virando 'previdenciario') ou acentuar a sílaba errada.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 4 - Acentuação gráfica."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) O texto dissertativo-argumentativo tem como característica principal a defesa de um ponto de vista com argumentos organizados.",
+          "verso": "CERTO. O texto dissertativo-argumentativo apresenta tese + argumentos + conclusão, visando convencer o leitor.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com dissertativo-expositivo (que apenas informa, sem defender tese).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 2 - Tipologia textual."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) Na redação oficial, o padrão ofício admite o uso de linguagem coloquial e marcas de opinião pessoal.",
+          "verso": "ERRADO. A redação oficial exige impessoalidade, formalidade, clareza, concisão, precisão e uso da norma-padrão. Não admite coloquialismo nem opinião pessoal.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'linguagem simples' autoriza informalidade.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 12 - Redação de correspondências oficiais."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) Segundo o Manual de Redação da Presidência da República, o fecho 'Respeitosamente' é usado para autoridades superiores.",
+          "verso": "CERTO. 'Respeitosamente' é usado para autoridades superiores; 'Atenciosamente' para autoridades de mesma hierarquia ou inferiores.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Inverter os fechos ou criar fórmulas antigas (ex.: 'Cordialmente').",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 12 - Redação de correspondências oficiais."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Em 'O INSS, órgão federal, atende milhões de brasileiros', o termo 'órgão federal' é aposto explicativo.",
+          "verso": "CERTO. 'Órgão federal' explica/especifica o antecedente 'INSS', isolado por vírgulas → aposto explicativo.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com vocativo (chamamento) ou predicativo.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) Em 'Preciso de que o servidor compareça à perícia', o 'que' é conjunção integrante.",
+          "verso": "CERTO. 'Que' introduz oração subordinada substantiva completiva nominal (complementa 'de'), sendo conjunção integrante.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 5 - Emprego das classes de palavras."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) Em 'A perícia médica foi realizada ontem', o termo 'ontem' é adjunto adverbial de tempo.",
+          "verso": "CERTO. 'Ontem' indica circunstância de tempo, modificando o verbo 'foi realizada'. É adjunto adverbial.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com aposto, predicativo ou objeto indireto.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 7 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) A coesão textual é garantida exclusivamente pelo uso de conjunções, não podendo ser realizada por pronomes ou sinônimos.",
+          "verso": "ERRADO. A coesão pode ser referencial (pronomes, sinônimos, elipses, numerais) OU sequencial (conjunções, conectivos). Não se limita a conjunções.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir a coesão a apenas um mecanismo.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Língua Portuguesa, tópico 1 - Compreensão e interpretação de textos."
+        }
       ]
     },
     "etica": {
       "nome": "Ética no Serviço Público",
       "cards": [
-        {"id": 1, "frente": "Qual decreto instituiu o Código de Ética do Servidor Público?", "verso": "Decreto 1.171/1994.", "dificuldade": 1},
-        {"id": 2, "frente": "A moralidade administrativa está expressa na CF/88?", "verso": "SIM. É princípio expresso no art. 37, caput.", "dificuldade": 1},
-        {"id": 3, "frente": "O servidor pode aceitar presentes de fornecedores?", "verso": "NÃO. O Código de Ética veda, independentemente do valor.", "dificuldade": 2},
-        {"id": 4, "frente": "Qual decreto instituiu a Comissão de Ética Pública?", "verso": "Decreto 6.029/2007.", "dificuldade": 2},
-        {"id": 5, "frente": "O nepotismo é vedado pela Súmula Vinculante 13?", "verso": "SIM. Abrange cargos em comissão e funções de confiança.", "dificuldade": 2},
-        {"id": 6, "frente": "O dever de sigilo impede que o servidor denuncie irregularidades?", "verso": "NÃO. O servidor tem o dever de comunicar atos ilícitos.", "dificuldade": 2},
-        {"id": 7, "frente": "Qual o princípio fundamental do serviço público?", "verso": "A moralidade administrativa.", "dificuldade": 1},
-        {"id": 8, "frente": "O que é o conflito de interesses?", "verso": "Situação onde interesses pessoais se opõem ao interesse público.", "dificuldade": 2},
-        {"id": 9, "frente": "Quais as responsabilidades do servidor público?", "verso": "Civil, criminal e administrativa.", "dificuldade": 1},
-        {"id": 10, "frente": "O que é improbidade administrativa?", "verso": "Conduta desonesta que causa dano ao erário, enriquecimento ilícito ou violação de princípios.", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(C/E) O Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal foi instituído pelo Decreto nº 1.171/1994.",
+          "verso": "CERTO. O Decreto nº 1.171/1994 aprovou o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 6.029/2007 (que criou a Comissão de Ética Pública).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) O Decreto nº 6.029/2007 instituiu o Sistema de Gestão da Ética do Poder Executivo Federal.",
+          "verso": "CERTO. O Decreto nº 6.029/2007 criou o Sistema de Gestão da Ética do Poder Executivo Federal, integrado pela Comissão de Ética Pública e pelas Comissões de Ética setoriais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por 1.171/1994 (que instituiu o Código de Ética).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) O servidor público pode aceitar presentes de fornecedores, desde que de pequeno valor.",
+          "verso": "ERRADO. O Código de Ética veda expressamente o recebimento de presentes de qualquer valor de fornecedores, independentemente da quantia.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Introduzir exceção inexistente ('pequeno valor').",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A moralidade administrativa é princípio expresso da Administração Pública na Constituição Federal de 1988.",
+          "verso": "CERTO. O art. 37, caput, da CF/88 prevê os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE).",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Excluir moralidade ou incluir princípio implícito como 'razoabilidade'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) O servidor pode usar o cargo público para obter favorecimento pessoal, desde que não haja prejuízo ao erário.",
+          "verso": "ERRADO. O Código de Ética veda o uso do cargo para obter favorecimento pessoal, independentemente de haver prejuízo ao erário.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Criar exceção condicionada ('desde que não haja prejuízo').",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) O servidor público tem o dever de comunicar à autoridade competente qualquer ato ilícito de que tenha conhecimento em razão do cargo.",
+          "verso": "CERTO. O art. 116, inciso VI, da Lei 8.112/1990 prevê o dever de representar contra ilegalidade, omissão ou abuso de poder.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que o sigilo funcional impede a denúncia (não impede).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) O dever de sigilo impede que o servidor denuncie irregularidades de que tenha conhecimento.",
+          "verso": "ERRADO. O sigilo profissional não impede a denúncia de irregularidades. O servidor tem o DEVER de comunicar atos ilícitos à autoridade competente.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir sigilo funcional com omissão.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) A Comissão de Ética Pública é vinculada à Presidência da República.",
+          "verso": "CERTO. A Comissão de Ética Pública (CEP) é vinculada à Presidência da República e tem como função orientar e avaliar a conduta ética dos agentes públicos federais.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é vinculada ao Ministério da Justiça ou ao TCU.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O servidor que se recusar a prestar informações ao cidadão, quando devidas, comete ato de improbidade administrativa.",
+          "verso": "CERTO. A negativa injustificada de prestar informações configura ato de improbidade administrativa (art. 11, II, da Lei 8.429/1992).",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é apenas infração administrativa leve.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) O Código de Ética do Servidor Público se aplica exclusivamente aos servidores efetivos, não alcançando os ocupantes de cargos em comissão.",
+          "verso": "ERRADO. O Código de Ética se aplica a TODOS os servidores públicos civis do Poder Executivo Federal, incluindo efetivos e comissionados.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir o alcance do Código a apenas servidores efetivos.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Ética no Serviço Público, tópico 1."
+        }
       ]
     },
     "logica": {
-      "nome": "Raciocínio Lógico",
+      "nome": "Raciocínio Lógico-Matemático",
       "cards": [
-        {"id": 1, "frente": "Quando a condicional 'Se P, então Q' é falsa?", "verso": "Apenas quando P é verdadeiro e Q é falso.", "dificuldade": 2},
-        {"id": 2, "frente": "Qual a negação de 'Todos os alunos passaram'?", "verso": "'Algum aluno não passou' (ou 'Pelo menos um não passou').", "dificuldade": 2},
-        {"id": 3, "frente": "Quantas linhas tem uma tabela-verdade com 4 proposições?", "verso": "16 linhas (2⁴ = 16).", "dificuldade": 2},
-        {"id": 4, "frente": "O que é a interseção de conjuntos?", "verso": "Conjunto de elementos que pertencem a ambos os conjuntos.", "dificuldade": 1},
-        {"id": 5, "frente": "Qual a negação de 'P e Q' pela Lei de De Morgan?", "verso": "'não P ou não Q' (¬P ∨ ¬Q).", "dificuldade": 3},
-        {"id": 6, "frente": "O que é uma tautologia?", "verso": "Proposição composta sempre verdadeira.", "dificuldade": 2},
-        {"id": 7, "frente": "O que é contradição em lógica?", "verso": "Proposição composta sempre falsa.", "dificuldade": 2},
-        {"id": 8, "frente": "Qual a negação de 'P → Q'?", "verso": "'P e não Q' (P ∧ ¬Q).", "dificuldade": 3},
-        {"id": 9, "frente": "O que é um argumento dedutivo?", "verso": "Raciocínio que parte do geral para o particular.", "dificuldade": 2},
-        {"id": 10, "frente": "O que é o quantificador universal?", "verso": "Indica que a proposição vale para todos os elementos (∀).", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(C/E) A proposição 'Todo servidor do INSS é concursado' é uma proposição simples.",
+          "verso": "ERRADO. É uma proposição CATEGÓRICA (com quantificador universal), que expressa uma relação entre conjuntos. Proposição simples é aquela sem conectivos nem quantificadores.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir proposição categórica com proposição simples.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Proposições."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A condicional 'Se P, então Q' é falsa apenas quando P é verdadeiro e Q é falso.",
+          "verso": "CERTO. Na condicional (P → Q), o único caso em que é falsa é V → F. Nos demais (V→V, F→V, F→F), é verdadeira.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que F→V ou F→F são falsas.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Conectivos."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) A negação da proposição 'Todos os segurados têm direito ao benefício' é 'Nenhum segurado tem direito ao benefício'.",
+          "verso": "ERRADO. A negação de 'Todos' é 'Algum não' (ou 'Pelo menos um não'). 'Nenhum' é a negação de 'Algum'. Negação correta: 'Algum segurado não tem direito ao benefício'.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Proposições."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) A negação de 'P e Q' é 'não P ou não Q'.",
+          "verso": "CERTO. Pela Lei de De Morgan, ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'ou' por 'e' na negação.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Conectivos."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) A negação de 'P ou Q' é 'não P e não Q'.",
+          "verso": "CERTO. Pela Lei de De Morgan, ¬(P ∨ Q) = ¬P ∧ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'e' por 'ou' na negação.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Conectivos."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) Uma tabela-verdade com 3 proposições simples tem 8 linhas.",
+          "verso": "CERTO. O número de linhas é 2^n, onde n é o número de proposições. 2³ = 8.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com 2×3=6 ou 3²=9.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Tabela-verdade."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Uma tautologia é uma proposição composta que é sempre verdadeira, independentemente dos valores lógicos das proposições simples que a compõem.",
+          "verso": "CERTO. Tautologia = proposição sempre verdadeira (ex.: P ∨ ¬P).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com contradição (sempre falsa).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 2 - Tautologia."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) Contradição é uma proposição composta que é sempre falsa, independentemente dos valores lógicos das proposições simples.",
+          "verso": "CERTO. Contradição = proposição sempre falsa (ex.: P ∧ ¬P).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com tautologia (sempre verdadeira).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 2 - Tautologia."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) A união de dois conjuntos A e B contém todos os elementos que pertencem a A ou a B (ou a ambos).",
+          "verso": "CERTO. A ∪ B = {x | x ∈ A ou x ∈ B}. Inclui elementos exclusivos de A, exclusivos de B e os comuns aos dois.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir união (∪) com interseção (∩).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 3 - Operação com conjuntos."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) A interseção de dois conjuntos A e B contém apenas os elementos comuns aos dois conjuntos.",
+          "verso": "CERTO. A ∩ B = {x | x ∈ A e x ∈ B}. Contém apenas os elementos que pertencem simultaneamente a A e a B.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com união.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 3 - Operação com conjuntos."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) Se 40% dos segurados de uma agência são idosos e 25% são deficientes, então necessariamente 10% são idosos E deficientes.",
+          "verso": "ERRADO. A interseção entre os dois conjuntos não pode ser inferida apenas com os percentuais isolados. Poderia ser de 0% a 25%, dependendo da sobreposição.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Somar ou subtrair percentuais sem considerar a interseção.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 3 - Operação com conjuntos."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) Um aumento de 20% seguido de um desconto de 20% resulta no valor original.",
+          "verso": "ERRADO. Ex.: 100 × 1,20 = 120; 120 × 0,80 = 96. Resultado final: 96, ou seja, 4% MENOR que o original. Os percentuais não se cancelam.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que +20% e −20% se anulam.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 4 - Cálculos com porcentagens."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) Se um benefício de R$ 2.000 sofre aumento de 15%, o novo valor é R$ 2.300.",
+          "verso": "CERTO. 2.000 × 1,15 = 2.300. O aumento é de R$ 300.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Calcular 15% de 2.000 = 300 e esquecer de somar (deixando 300).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 4 - Cálculos com porcentagens."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) A proposição 'Se o segurado contribuiu por 15 anos, então tem direito à aposentadoria por idade' é logicamente equivalente a 'Se o segurado não tem direito à aposentadoria por idade, então não contribuiu por 15 anos'.",
+          "verso": "CERTO. A equivalência da condicional P → Q é a contrapositiva ¬Q → ¬P.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com a recíproca (Q → P) ou inversa (¬P → ¬Q).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 1 - Conectivos."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) Se em um grupo de 100 segurados, 60 têm menos de 60 anos, pode-se concluir que 40 têm 60 anos ou mais.",
+          "verso": "CERTO. 100 − 60 = 40. Se 60 têm menos de 60 anos, o restante (40) tem 60 anos ou mais.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Complicar um cálculo direto de complementar.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, RLM, tópico 4 - Cálculos com porcentagens."
+        }
       ]
     },
     "informatica": {
       "nome": "Noções de Informática",
       "cards": [
-        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia os recursos de hardware e software do computador.", "dificuldade": 1},
-        {"id": 2, "frente": "Qual a diferença entre Internet e intranet?", "verso": "Internet é rede mundial; intranet é rede privada organizacional.", "dificuldade": 1},
-        {"id": 3, "frente": "O que é firewall?", "verso": "Sistema que bloqueia acessos não autorizados à rede.", "dificuldade": 1},
-        {"id": 4, "frente": "O que é phishing?", "verso": "Fraude que visa obter dados pessoais por meio de mensagens/sites falsos.", "dificuldade": 2},
-        {"id": 5, "frente": "O que é criptografia simétrica?", "verso": "Técnica que usa a mesma chave para cifrar e decifrar mensagens.", "dificuldade": 2},
-        {"id": 6, "frente": "O que é backup incremental?", "verso": "Cópia que registra apenas arquivos alterados desde o último backup.", "dificuldade": 2},
-        {"id": 7, "frente": "O que é o LibreOffice Calc?", "verso": "Aplicativo de planilhas eletrônicas da suíte LibreOffice.", "dificuldade": 1},
-        {"id": 8, "frente": "O que é a computação em nuvem?", "verso": "Armazenamento e processamento de dados pela internet.", "dificuldade": 1},
-        {"id": 9, "frente": "Qual a função da memória RAM?", "verso": "Armazenar temporariamente dados em uso pela CPU.", "dificuldade": 2},
-        {"id": 10, "frente": "O que é autenticação de dois fatores?", "verso": "Método de segurança que combina dois meios de autenticação.", "dificuldade": 2}
-      ]
-    },
-    "especificos": {
-      "nome": "Conhecimentos Específicos",
-      "cards": [
-        {"id": 1, "frente": "Quais áreas compreendem a Seguridade Social?", "verso": "Saúde, previdência e assistência social (art. 194, CF).", "dificuldade": 1},
-        {"id": 2, "frente": "Quais são os segurados obrigatórios do RGPS?", "verso": "Empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial.", "dificuldade": 2},
-        {"id": 3, "frente": "O que é salário de contribuição?", "verso": "Base de cálculo das contribuições previdenciárias.", "dificuldade": 2},
-        {"id": 4, "frente": "O 13º salário integra o salário de contribuição?", "verso": "NÃO. Tem contribuição específica.", "dificuldade": 3},
-        {"id": 5, "frente": "O que é carência previdenciária?", "verso": "Número mínimo de contribuições mensais para ter direito a benefícios.", "dificuldade": 2},
-        {"id": 6, "frente": "Qual a idade mínima para aposentadoria por idade após EC 103/2019?", "verso": "65 anos (homens) e 62 anos (mulheres).", "dificuldade": 2},
-        {"id": 7, "frente": "A pensão por morte é paga aos dependentes do segurado falecido?", "verso": "SIM. É benefício destinado aos dependentes.", "dificuldade": 1},
-        {"id": 8, "frente": "O que é o BPC/LOAS?", "verso": "Benefício assistencial para idosos 65+ e PCD de baixa renda.", "dificuldade": 2},
-        {"id": 9, "frente": "O BPC exige contribuição ao INSS?", "verso": "NÃO. É benefício assistencial, não previdenciário.", "dificuldade": 2},
-        {"id": 10, "frente": "O que é a compensação previdenciária?", "verso": "Acerto financeiro entre RGPS e RPPS por tempo de contribuição recíproco.", "dificuldade": 3}
+        {
+          "id": 1,
+          "frente": "(C/E) A intranet é uma rede pública, acessível a qualquer usuário da internet.",
+          "verso": "ERRADO. A intranet é uma rede PRIVADA, restrita a uma organização, que usa a mesma tecnologia da internet (TCP/IP) mas com acesso controlado.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar 'privada' por 'pública'.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 1."
+        },
+        {
+          "id": 2,
+          "frente": "(C/E) A internet é uma rede mundial de computadores baseada no protocolo TCP/IP.",
+          "verso": "CERTO. A internet é uma rede mundial que interliga milhões de dispositivos, usando o conjunto de protocolos TCP/IP.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Dizer que usa apenas HTTP ou FTP.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 1."
+        },
+        {
+          "id": 3,
+          "frente": "(C/E) No LibreOffice Calc, a fórmula =SOMA(A1:A10) soma os valores das células A1 até A10.",
+          "verso": "CERTO. O operador ':' (dois-pontos) indica intervalo. =SOMA(A1:A10) soma todos os valores de A1 a A10.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com ';' (separador de argumentos).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 3."
+        },
+        {
+          "id": 4,
+          "frente": "(C/E) No LibreOffice Writer, o atalho Ctrl+B salva o documento.",
+          "verso": "ERRADO. No LibreOffice, Ctrl+B NEGRITA o texto. Salvar é Ctrl+S (Save). No Word, Ctrl+B também é negrito.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir Ctrl+B (bold/negrito) com Ctrl+S (save/salvar).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 3."
+        },
+        {
+          "id": 5,
+          "frente": "(C/E) No Windows 10, o atalho Win+E abre o Explorador de Arquivos.",
+          "verso": "CERTO. Win+E abre o Windows Explorer (Explorador de Arquivos).",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Win+R (Executar) ou Win+L (bloquear).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 4."
+        },
+        {
+          "id": 6,
+          "frente": "(C/E) No Windows, a tecla F5 atualiza a janela ativa.",
+          "verso": "CERTO. F5 é o atalho de atualização (refresh) no Windows e na maioria dos navegadores.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por F2 (renomear) ou F3 (buscar).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 4."
+        },
+        {
+          "id": 7,
+          "frente": "(C/E) Vírus, worms e trojans são exemplos de malwares.",
+          "verso": "CERTO. Malware é qualquer software malicioso. Vírus, worms, trojans, ransomware, spyware são tipos de malware.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que só vírus é malware.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 6."
+        },
+        {
+          "id": 8,
+          "frente": "(C/E) O phishing é uma técnica que explora exclusivamente falhas técnicas em sistemas, sem envolver o usuário.",
+          "verso": "ERRADO. Phishing é engenharia social: induz o USUÁRIO a fornecer dados por meio de mensagens/sites falsos. Não explora só falhas técnicas.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Restringir phishing a falha técnica.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 6."
+        },
+        {
+          "id": 9,
+          "frente": "(C/E) O firewall é um software ou hardware que filtra o tráfego de rede, bloqueando acessos não autorizados.",
+          "verso": "CERTO. Firewall monitora e controla o tráfego de entrada e saída da rede com base em regras de segurança.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que firewall substitui antivírus (são camadas diferentes).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 6."
+        },
+        {
+          "id": 10,
+          "frente": "(C/E) Backup incremental copia todos os arquivos do sistema, independentemente de terem sido alterados.",
+          "verso": "ERRADO. Backup incremental copia apenas os arquivos alterados desde o último backup. O que copia tudo é o backup COMPLETO.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir backup completo, incremental e diferencial.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 6."
+        },
+        {
+          "id": 11,
+          "frente": "(C/E) No correio eletrônico, o campo 'Cc' significa 'cópia carbono' e envia uma cópia visível a todos os destinatários.",
+          "verso": "CERTO. Cc (carbon copy) envia cópia do e-mail, e todos os destinatários veem quem mais recebeu. Cco (bcc) é a cópia oculta.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir Cc com Cco.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 5."
+        },
+        {
+          "id": 12,
+          "frente": "(C/E) No LibreOffice Impress, é possível criar apresentações de slides.",
+          "verso": "CERTO. LibreOffice Impress é o aplicativo de apresentações da suíte, equivalente ao PowerPoint.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Writer (texto) ou Calc (planilha).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 3."
+        },
+        {
+          "id": 13,
+          "frente": "(C/E) O LibreOffice é uma suíte de escritório gratuita e de código aberto.",
+          "verso": "CERTO. O LibreOffice é software livre, de código aberto e gratuito, mantido pela The Document Foundation.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que é pago ou que é da Microsoft.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 3."
+        },
+        {
+          "id": 14,
+          "frente": "(C/E) No Windows, o arquivo é excluído permanentemente ao ser enviado para a Lixeira.",
+          "verso": "ERRADO. A Lixeira armazena temporariamente os arquivos excluídos. Só há exclusão permanente se o usuário esvaziar a Lixeira ou usar Shift+Delete.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que Lixeira = exclusão definitiva.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 4."
+        },
+        {
+          "id": 15,
+          "frente": "(C/E) O atalho Ctrl+Z desfaz a última ação realizada.",
+          "verso": "CERTO. Ctrl+Z é o atalho universal de 'desfazer' na maioria dos aplicativos.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Trocar por Ctrl+Y (refazer) ou Ctrl+X (recortar).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 2."
+        },
+        {
+          "id": 16,
+          "frente": "(C/E) A computação em nuvem permite armazenar e processar dados em servidores remotos acessados pela internet.",
+          "verso": "CERTO. Cloud computing oferece recursos de TI sob demanda via internet, como armazenamento, processamento e software.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que 'nuvem' exige hardware local.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 2."
+        },
+        {
+          "id": 17,
+          "frente": "(C/E) Um ataque de ransomware criptografa os dados da vítima e exige pagamento de resgate para liberá-los.",
+          "verso": "CERTO. Ransomware é um tipo de malware que sequestra os dados por meio de criptografia e exige resgate para liberar o acesso.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com spyware (espionagem) ou adware (anúncios).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 6."
+        },
+        {
+          "id": 18,
+          "frente": "(C/E) No Windows 10, o Painel de Controle foi completamente substituído pelo aplicativo Configurações.",
+          "verso": "ERRADO. No Windows 10, ambos coexistem: o Painel de Controle (legado) e o aplicativo Configurações (moderno). Não houve substituição total.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Generalizar afirmando substituição completa.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 4."
+        },
+        {
+          "id": 19,
+          "frente": "(C/E) A extensão .pdf indica um arquivo de documento portátil, que preserva a formatação original.",
+          "verso": "CERTO. PDF (Portable Document Format) mantém a formatação independentemente do sistema operacional ou aplicativo.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Confundir com .docx (editável) ou .txt (texto puro).",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 2."
+        },
+        {
+          "id": 20,
+          "frente": "(C/E) Um navegador web (browser) é um software que permite acessar e visualizar páginas da internet.",
+          "verso": "CERTO. Navegadores como Chrome, Firefox, Edge e Safari interpretam HTML e exibem páginas web.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cebraspe",
+          "pegadinha": "Achar que navegador é o mesmo que provedor de internet.",
+          "fundamento": "Edital INSS 2022, item 14.2.2, Informática, tópico 5."
+        }
       ]
     }
   }
