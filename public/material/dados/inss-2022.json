@@ -1,0 +1,110 @@
+{
+  "nome": "INSS 2022 - Técnico do Seguro Social",
+  "baralhos": {
+    "portugues": {
+      "nome": "Língua Portuguesa",
+      "cards": [
+        {"id": 1, "frente": "Em 'A educação transforma vidas', qual a função sintática de 'vidas'?", "verso": "Objeto direto do verbo transitivo direto 'transforma'.", "dificuldade": 1},
+        {"id": 2, "frente": "A frase 'Fazem dez anos que trabalho' está correta quanto à concordância verbal?", "verso": "NÃO. O verbo 'fazer' indicando tempo é impessoal: 'Faz dez anos'.", "dificuldade": 2},
+        {"id": 3, "frente": "Em 'Chegamos à conclusão', a crase é obrigatória?", "verso": "SIM. 'Conclusão' é substantivo feminino que admite artigo 'a'.", "dificuldade": 2},
+        {"id": 4, "frente": "O pronome 'se' em 'Vendem-se casas' é partícula apassivadora?", "verso": "SIM. O verbo é transitivo direto e o 'se' indica voz passiva sintética.", "dificuldade": 3},
+        {"id": 5, "frente": "Em 'Trata-se de questões polêmicas', o 'se' é índice de indeterminação do sujeito?", "verso": "SIM. O verbo 'tratar-se' é transitivo indireto.", "dificuldade": 3},
+        {"id": 6, "frente": "A oração 'que estudaram muito' em 'Os alunos, que estudaram muito, foram aprovados' é explicativa?", "verso": "SIM. A vírgula isola oração subordinada adjetiva explicativa.", "dificuldade": 2},
+        {"id": 7, "frente": "O verbo 'haver' em 'Havia muitos suspeitos' é impessoal?", "verso": "SIM. No sentido de existir, 'haver' é impessoal (3ª pessoa do singular).", "dificuldade": 2},
+        {"id": 8, "frente": "Em 'Ainda que chova, irei ao trabalho', a oração expressa concessão?", "verso": "SIM. 'Ainda que' é conjunção subordinativa concessiva.", "dificuldade": 3},
+        {"id": 9, "frente": "A conjunção 'portanto' introduz ideia de conclusão?", "verso": "SIM. É conjunção coordenativa conclusiva.", "dificuldade": 1},
+        {"id": 10, "frente": "A vírgula em 'João, o melhor aluno, foi aprovado' isola aposto?", "verso": "SIM. 'O melhor aluno' é aposto explicativo.", "dificuldade": 2}
+      ]
+    },
+    "constitucional": {
+      "nome": "Direito Constitucional",
+      "cards": [
+        {"id": 1, "frente": "O habeas corpus protege o direito de acesso à informação?", "verso": "NÃO. Protege a liberdade de locomoção. Habeas data é para informação.", "dificuldade": 2},
+        {"id": 2, "frente": "Quais são os princípios expressos da Administração Pública no art. 37 da CF/88?", "verso": "Legalidade, impessoalidade, moralidade, publicidade e eficiência.", "dificuldade": 1},
+        {"id": 3, "frente": "O servidor estável perde o cargo apenas por sentença judicial ou PAD?", "verso": "NÃO. Também por avaliação periódica de desempenho (art. 41, III).", "dificuldade": 3},
+        {"id": 4, "frente": "É permitida a acumulação de dois cargos de professor?", "verso": "SIM. Desde que haja compatibilidade de horários (art. 37, XVI, a).", "dificuldade": 2},
+        {"id": 5, "frente": "A nacionalidade é um direito social previsto no art. 6º?", "verso": "NÃO. Nacionalidade é direito fundamental (art. 12).", "dificuldade": 2},
+        {"id": 6, "frente": "O mandado de segurança coletivo pode ser impetrado por partido político?", "verso": "SIM. Partido com representação no CN pode impetrar MS coletivo.", "dificuldade": 2},
+        {"id": 7, "frente": "Tortura, tráfico e terrorismo são crimes inafiançáveis?", "verso": "SIM. São equiparados a hediondos (art. 5º, XLIII).", "dificuldade": 2},
+        {"id": 8, "frente": "A prática de racismo é crime inafiançável e imprescritível?", "verso": "SIM. Conforme art. 5º, XLII, da CF/88.", "dificuldade": 1},
+        {"id": 9, "frente": "A casa é asilo inviolável, podendo ser penetrada à noite por determinação judicial?", "verso": "NÃO. A determinação judicial só permite entrada durante o dia.", "dificuldade": 3},
+        {"id": 10, "frente": "Nenhum direito fundamental é absoluto?", "verso": "SIM. Todos os direitos podem sofrer restrições em casos específicos.", "dificuldade": 2}
+      ]
+    },
+    "administrativo": {
+      "nome": "Direito Administrativo",
+      "cards": [
+        {"id": 1, "frente": "A presunção de legitimidade do ato administrativo é absoluta?", "verso": "NÃO. É relativa (juris tantum), admitindo prova em contrário.", "dificuldade": 2},
+        {"id": 2, "frente": "O que é o poder de polícia?", "verso": "Faculdade de condicionar e restringir o uso de bens e o exercício de direitos.", "dificuldade": 1},
+        {"id": 3, "frente": "A licitação é inexigível quando há inviabilidade de competição?", "verso": "SIM. Como na contratação de artista consagrado.", "dificuldade": 2},
+        {"id": 4, "frente": "O que é a autotutela administrativa?", "verso": "Poder-dever de a Administração rever seus próprios atos, anulando ilegais e revogando inconvenientes.", "dificuldade": 2},
+        {"id": 5, "frente": "A responsabilidade civil do Estado por atos comissivos é objetiva?", "verso": "SIM. Fundada na teoria do risco administrativo (art. 37, §6º, CF).", "dificuldade": 2},
+        {"id": 6, "frente": "Qual o prazo para a Administração anular seus próprios atos?", "verso": "5 anos (art. 54 da Lei 9.784/99), salvo comprovada má-fé.", "dificuldade": 3},
+        {"id": 7, "frente": "Após a Lei 14.230/2021, a improbidade administrativa exige dolo?", "verso": "SIM. Exige dolo específico para todas as modalidades.", "dificuldade": 3},
+        {"id": 8, "frente": "O pregão é obrigatório para bens e serviços comuns?", "verso": "SIM. Conforme art. 29 da Lei 14.133/2021.", "dificuldade": 2},
+        {"id": 9, "frente": "Qual o âmbito de aplicação da Lei 8.112/90?", "verso": "Servidores civis da União, autarquias e fundações públicas federais.", "dificuldade": 1},
+        {"id": 10, "frente": "A administração indireta é composta por quais entidades?", "verso": "Autarquias, fundações públicas, empresas públicas e sociedades de economia mista.", "dificuldade": 1}
+      ]
+    },
+    "etica": {
+      "nome": "Ética no Serviço Público",
+      "cards": [
+        {"id": 1, "frente": "Qual decreto instituiu o Código de Ética do Servidor Público?", "verso": "Decreto 1.171/1994.", "dificuldade": 1},
+        {"id": 2, "frente": "A moralidade administrativa está expressa na CF/88?", "verso": "SIM. É princípio expresso no art. 37, caput.", "dificuldade": 1},
+        {"id": 3, "frente": "O servidor pode aceitar presentes de fornecedores?", "verso": "NÃO. O Código de Ética veda, independentemente do valor.", "dificuldade": 2},
+        {"id": 4, "frente": "Qual decreto instituiu a Comissão de Ética Pública?", "verso": "Decreto 6.029/2007.", "dificuldade": 2},
+        {"id": 5, "frente": "O nepotismo é vedado pela Súmula Vinculante 13?", "verso": "SIM. Abrange cargos em comissão e funções de confiança.", "dificuldade": 2},
+        {"id": 6, "frente": "O dever de sigilo impede que o servidor denuncie irregularidades?", "verso": "NÃO. O servidor tem o dever de comunicar atos ilícitos.", "dificuldade": 2},
+        {"id": 7, "frente": "Qual o princípio fundamental do serviço público?", "verso": "A moralidade administrativa.", "dificuldade": 1},
+        {"id": 8, "frente": "O que é o conflito de interesses?", "verso": "Situação onde interesses pessoais se opõem ao interesse público.", "dificuldade": 2},
+        {"id": 9, "frente": "Quais as responsabilidades do servidor público?", "verso": "Civil, criminal e administrativa.", "dificuldade": 1},
+        {"id": 10, "frente": "O que é improbidade administrativa?", "verso": "Conduta desonesta que causa dano ao erário, enriquecimento ilícito ou violação de princípios.", "dificuldade": 2}
+      ]
+    },
+    "logica": {
+      "nome": "Raciocínio Lógico",
+      "cards": [
+        {"id": 1, "frente": "Quando a condicional 'Se P, então Q' é falsa?", "verso": "Apenas quando P é verdadeiro e Q é falso.", "dificuldade": 2},
+        {"id": 2, "frente": "Qual a negação de 'Todos os alunos passaram'?", "verso": "'Algum aluno não passou' (ou 'Pelo menos um não passou').", "dificuldade": 2},
+        {"id": 3, "frente": "Quantas linhas tem uma tabela-verdade com 4 proposições?", "verso": "16 linhas (2⁴ = 16).", "dificuldade": 2},
+        {"id": 4, "frente": "O que é a interseção de conjuntos?", "verso": "Conjunto de elementos que pertencem a ambos os conjuntos.", "dificuldade": 1},
+        {"id": 5, "frente": "Qual a negação de 'P e Q' pela Lei de De Morgan?", "verso": "'não P ou não Q' (¬P ∨ ¬Q).", "dificuldade": 3},
+        {"id": 6, "frente": "O que é uma tautologia?", "verso": "Proposição composta sempre verdadeira.", "dificuldade": 2},
+        {"id": 7, "frente": "O que é contradição em lógica?", "verso": "Proposição composta sempre falsa.", "dificuldade": 2},
+        {"id": 8, "frente": "Qual a negação de 'P → Q'?", "verso": "'P e não Q' (P ∧ ¬Q).", "dificuldade": 3},
+        {"id": 9, "frente": "O que é um argumento dedutivo?", "verso": "Raciocínio que parte do geral para o particular.", "dificuldade": 2},
+        {"id": 10, "frente": "O que é o quantificador universal?", "verso": "Indica que a proposição vale para todos os elementos (∀).", "dificuldade": 2}
+      ]
+    },
+    "informatica": {
+      "nome": "Noções de Informática",
+      "cards": [
+        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia os recursos de hardware e software do computador.", "dificuldade": 1},
+        {"id": 2, "frente": "Qual a diferença entre Internet e intranet?", "verso": "Internet é rede mundial; intranet é rede privada organizacional.", "dificuldade": 1},
+        {"id": 3, "frente": "O que é firewall?", "verso": "Sistema que bloqueia acessos não autorizados à rede.", "dificuldade": 1},
+        {"id": 4, "frente": "O que é phishing?", "verso": "Fraude que visa obter dados pessoais por meio de mensagens/sites falsos.", "dificuldade": 2},
+        {"id": 5, "frente": "O que é criptografia simétrica?", "verso": "Técnica que usa a mesma chave para cifrar e decifrar mensagens.", "dificuldade": 2},
+        {"id": 6, "frente": "O que é backup incremental?", "verso": "Cópia que registra apenas arquivos alterados desde o último backup.", "dificuldade": 2},
+        {"id": 7, "frente": "O que é o LibreOffice Calc?", "verso": "Aplicativo de planilhas eletrônicas da suíte LibreOffice.", "dificuldade": 1},
+        {"id": 8, "frente": "O que é a computação em nuvem?", "verso": "Armazenamento e processamento de dados pela internet.", "dificuldade": 1},
+        {"id": 9, "frente": "Qual a função da memória RAM?", "verso": "Armazenar temporariamente dados em uso pela CPU.", "dificuldade": 2},
+        {"id": 10, "frente": "O que é autenticação de dois fatores?", "verso": "Método de segurança que combina dois meios de autenticação.", "dificuldade": 2}
+      ]
+    },
+    "especificos": {
+      "nome": "Conhecimentos Específicos",
+      "cards": [
+        {"id": 1, "frente": "Quais áreas compreendem a Seguridade Social?", "verso": "Saúde, previdência e assistência social (art. 194, CF).", "dificuldade": 1},
+        {"id": 2, "frente": "Quais são os segurados obrigatórios do RGPS?", "verso": "Empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial.", "dificuldade": 2},
+        {"id": 3, "frente": "O que é salário de contribuição?", "verso": "Base de cálculo das contribuições previdenciárias.", "dificuldade": 2},
+        {"id": 4, "frente": "O 13º salário integra o salário de contribuição?", "verso": "NÃO. Tem contribuição específica.", "dificuldade": 3},
+        {"id": 5, "frente": "O que é carência previdenciária?", "verso": "Número mínimo de contribuições mensais para ter direito a benefícios.", "dificuldade": 2},
+        {"id": 6, "frente": "Qual a idade mínima para aposentadoria por idade após EC 103/2019?", "verso": "65 anos (homens) e 62 anos (mulheres).", "dificuldade": 2},
+        {"id": 7, "frente": "A pensão por morte é paga aos dependentes do segurado falecido?", "verso": "SIM. É benefício destinado aos dependentes.", "dificuldade": 1},
+        {"id": 8, "frente": "O que é o BPC/LOAS?", "verso": "Benefício assistencial para idosos 65+ e PCD de baixa renda.", "dificuldade": 2},
+        {"id": 9, "frente": "O BPC exige contribuição ao INSS?", "verso": "NÃO. É benefício assistencial, não previdenciário.", "dificuldade": 2},
+        {"id": 10, "frente": "O que é a compensação previdenciária?", "verso": "Acerto financeiro entre RGPS e RPPS por tempo de contribuição recíproco.", "dificuldade": 3}
+      ]
+    }
+  }
+}
