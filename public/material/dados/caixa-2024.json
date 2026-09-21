@@ -1,204 +1,1703 @@
 {
-  "nome": "CAIXA 2024 - Técnico Bancário",
+  "nome": "CAIXA 2024 - Técnico Bancário Novo",
+  "banca": "Cesgranrio",
+  "cargo": "Técnico Bancário Novo",
+  "nivel": "medio",
+  "edital_ref": "Edital nº 01/2024/NM (base) + projeção 2026",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto, identificando ideias principais e inferências", "dificuldade": 1},
-        {"id": 2, "frente": "O que são sinônimos?", "verso": "Palavras com significados semelhantes", "dificuldade": 1},
-        {"id": 3, "frente": "O que são antônimos?", "verso": "Palavras com significados opostos", "dificuldade": 1},
-        {"id": 4, "frente": "O que é uma figura de linguagem?", "verso": "Recurso estilístico que torna a mensagem mais expressiva", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma metáfora?", "verso": "Comparação implícita entre dois termos", "dificuldade": 2},
-        {"id": 6, "frente": "O que é uma comparação?", "verso": "Relação explícita entre dois termos usando 'como' ou 'tal qual'", "dificuldade": 2},
-        {"id": 7, "frente": "O que é personificação?", "verso": "Atribuição de características humanas a seres inanimados", "dificuldade": 2},
-        {"id": 8, "frente": "O que é hipérbole?", "verso": "Exagero intencional para enfatizar uma ideia", "dificuldade": 2},
-        {"id": 9, "frente": "O que é eufemismo?", "verso": "Suavização de uma ideia desagradável", "dificuldade": 2},
-        {"id": 10, "frente": "O que é ironia?", "verso": "Afirmação do contrário do que se quer dizer", "dificuldade": 2},
-        {"id": 11, "frente": "O que é denotação?", "verso": "Sentido literal da palavra", "dificuldade": 1},
-        {"id": 12, "frente": "O que é conotação?", "verso": "Sentido figurado da palavra", "dificuldade": 2},
-        {"id": 13, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome, verbo", "dificuldade": 1},
-        {"id": 14, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção, interjeição", "dificuldade": 1},
-        {"id": 15, "frente": "O que é um substantivo?", "verso": "Palavra que nomeia seres, objetos, sentimentos, lugares e ideias", "dificuldade": 1},
-        {"id": 16, "frente": "O que é um adjetivo?", "verso": "Palavra que caracteriza ou qualifica o substantivo", "dificuldade": 1},
-        {"id": 17, "frente": "O que é um verbo?", "verso": "Palavra que expressa ação, estado ou fenômeno da natureza", "dificuldade": 1},
-        {"id": 18, "frente": "O que é um advérbio?", "verso": "Palavra que modifica o verbo, o adjetivo ou outro advérbio", "dificuldade": 1},
-        {"id": 19, "frente": "O que é concordância verbal?", "verso": "Flexão do verbo para concordar em número e pessoa com o sujeito", "dificuldade": 2},
-        {"id": 20, "frente": "O que é concordância nominal?", "verso": "Concordância entre o substantivo e seus modificadores em gênero e número", "dificuldade": 2},
-        {"id": 21, "frente": "O que é regência verbal?", "verso": "Relação entre o verbo e seus complementos (direta ou indireta)", "dificuldade": 2},
-        {"id": 22, "frente": "O que é regência nominal?", "verso": "Relação entre um nome e seu complemento, mediada por preposição", "dificuldade": 2},
-        {"id": 23, "frente": "O que é crase?", "verso": "Fusão da preposição 'a' com o artigo 'a'", "dificuldade": 3},
-        {"id": 24, "frente": "Quando usar crase?", "verso": "Em locuções adverbiais femininas, antes de palavras femininas e em horas", "dificuldade": 3},
-        {"id": 25, "frente": "O que é pontuação?", "verso": "Uso de sinais gráficos (vírgula, ponto, etc.) para estruturar o texto", "dificuldade": 2},
-        {"id": 26, "frente": "Como usar a vírgula corretamente?", "verso": "Separa elementos, isola aposto e vocativo, separa orações", "dificuldade": 2},
-        {"id": 27, "frente": "O que é um período simples?", "verso": "Possui apenas uma oração, com um único verbo", "dificuldade": 1},
-        {"id": 28, "frente": "O que é um período composto?", "verso": "Possui duas ou mais orações, com dois ou mais verbos", "dificuldade": 2},
-        {"id": 29, "frente": "O que é coesão textual?", "verso": "Conexão entre as partes do texto usando elementos coesivos", "dificuldade": 2},
-        {"id": 30, "frente": "O que é coerência textual?", "verso": "Harmonia lógica entre as ideias do texto", "dificuldade": 2},
-        {"id": 31, "frente": "O que é intertextualidade?", "verso": "Relação entre diferentes textos", "dificuldade": 2},
-        {"id": 32, "frente": "O que é polissemia?", "verso": "Propriedade de uma palavra ter múltiplos significados", "dificuldade": 2},
-        {"id": 33, "frente": "O que é redação oficial?", "verso": "Forma padronizada de escrever documentos oficiais", "dificuldade": 2},
-        {"id": 34, "frente": "Quais são os atributos da redação oficial?", "verso": "Clareza, precisão, objetividade, concisão, coesão, coerência, impessoalidade", "dificuldade": 2},
-        {"id": 35, "frente": "O que é clareza na redação?", "verso": "Texto que não gera dúvidas de interpretação", "dificuldade": 2},
-        {"id": 36, "frente": "O que é precisão na redação?", "verso": "Uso de termos específicos para evitar ambiguidades", "dificuldade": 2},
-        {"id": 37, "frente": "O que é objetividade na redação?", "verso": "Texto direto, sem rodeios ou informações desnecessárias", "dificuldade": 2},
-        {"id": 38, "frente": "O que é concisão na redação?", "verso": "Texto com o mínimo de palavras necessárias", "dificuldade": 2},
-        {"id": 39, "frente": "O que é impessoalidade na redação?", "verso": "Texto sem marcas de opinião pessoal", "dificuldade": 2},
-        {"id": 40, "frente": "O que é um sujeito na oração?", "verso": "Termo sobre o qual se declara algo", "dificuldade": 1},
-        {"id": 41, "frente": "O que é um predicado na oração?", "verso": "Parte da oração que contém informação sobre o sujeito", "dificuldade": 1},
-        {"id": 42, "frente": "O que são tipos de sujeito?", "verso": "Simples, composto, oculto ou indeterminado", "dificuldade": 2},
-        {"id": 43, "frente": "O que é um aposto?", "verso": "Termo que explica ou especifica outro termo da oração", "dificuldade": 2},
-        {"id": 44, "frente": "O que é um vocativo?", "verso": "Termo usado para chamar o interlocutor", "dificuldade": 1},
-        {"id": 45, "frente": "O que é um conector textual?", "verso": "Palavra que estabelece relação entre ideias no texto", "dificuldade": 2},
-        {"id": 46, "frente": "O que é variação linguística?", "verso": "Diferenças no uso da língua por região, classe social, situação", "dificuldade": 2},
-        {"id": 47, "frente": "O que é uma conjunção?", "verso": "Palavra que liga orações ou termos de mesma função", "dificuldade": 1},
-        {"id": 48, "frente": "O que é uma preposição?", "verso": "Palavra que liga termos estabelecendo relação de sentido", "dificuldade": 1},
-        {"id": 49, "frente": "O que é um artigo?", "verso": "Palavra que determina o substantivo (definido ou indefinido)", "dificuldade": 1},
-        {"id": 50, "frente": "O que é um numeral?", "verso": "Palavra que indica quantidade, ordem ou posição", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "Na frase 'O gerente informou aos clientes que as taxas seriam reduzidas', qual a função sintática de 'aos clientes'?",
+          "verso": "Objeto indireto do verbo 'informar' (VTDI). O verbo 'informar' admite dupla transitividade: informa-se algo (OD) a alguém (OI).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Trocar por 'objeto direto' para confundir com o termo 'que as taxas seriam reduzidas'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 10 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 2,
+          "frente": "Assinale a alternativa em que o uso da crase está CORRETO:\na) Refiro-me à pessoas educadas.\nb) Cheguei à casa de meus pais.\nc) Entreguei o relatório à diretora.\nd) Vou à Brasília amanhã.\ne) Estou disposto à ajudar.",
+          "verso": "Letra C. 'Entreguei o relatório à diretora' — preposição 'a' + artigo 'a' antes de substantivo feminino determinado. A: 'a pessoas' (plural, sem artigo definido). B: 'casa' no sentido de lar (sem artigo). D: 'Brasília' é nome de cidade sem artigo. E: verbo 'ajudar' não admite artigo.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Casos proibidos de crase (antes de verbo, palavra masculina, nome de cidade sem artigo).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 9 - Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": 3,
+          "frente": "Na frase 'Vendem-se casas na praia', qual o valor do 'se'?",
+          "verso": "Partícula apassivadora. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética. Equivale a 'Casas são vendidas na praia'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito, que ocorre com verbos transitivos indiretos (ex.: 'Trata-se de problemas').",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 10 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 4,
+          "frente": "Em 'Trata-se de questões polêmicas', o 'se' é partícula apassivadora?",
+          "verso": "NÃO. O verbo 'tratar-se' é transitivo indireto (exige preposição 'de'). Nesse caso, o 'se' é ÍNDICE DE INDETERMINAÇÃO DO SUJEITO e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Trocar os dois casos: apassivadora (VTD) x indeterminação (VTI).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 10 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 5,
+          "frente": "Qual a colocação pronominal correta em 'Não ___ disse a verdade' (me)?",
+          "verso": "'Não me disse a verdade'. Próclise obrigatória porque a palavra atrativa 'não' (advérbio de negação) atrai o pronome para antes do verbo.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 15 - Colocação do pronome átono."
+        },
+        {
+          "id": 6,
+          "frente": "Em 'Ela se machucou', o 'se' é pronome reflexivo?",
+          "verso": "SIM. A ação recai sobre o próprio sujeito ('ela machucou a si mesma'). É pronome reflexivo.",
+          "dificuldade": 1,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com partícula expletiva ou com voz passiva sintética.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 15 - Colocação do pronome átono."
+        },
+        {
+          "id": 7,
+          "frente": "Assinale a alternativa em que TODAS as palavras estão corretas segundo o Novo Acordo Ortográfico:\na) idéia, vôo, enjôo\nb) ideia, voo, enjoo\nc) idéia, voo, enjôo\nd) ideia, vôo, enjoo\ne) ideia, voo, enjôo",
+          "verso": "Letra B. O Novo Acordo Ortográfico (Decreto 6.583/2008) eliminou o acento circunflexo em 'voo' e 'enjoo', e o acento agudo em 'ideia'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Manter acentos abolidos pelo Acordo.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 17 - Novo Acordo Ortográfico."
+        },
+        {
+          "id": 8,
+          "frente": "Em 'Faz dez anos que trabalho na CAIXA', o verbo 'fazer' está corretamente empregado?",
+          "verso": "SIM. Indicando tempo decorrido, 'fazer' é impessoal e fica na 3ª pessoa do singular. 'Fazem dez anos' está ERRADO.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Pluralizar o verbo por atração do 'dez anos'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 12 - Concordância nominal e verbal."
+        },
+        {
+          "id": 9,
+          "frente": "Em 'Havia muitos clientes na fila', o verbo 'haver' está corretamente empregado?",
+          "verso": "SIM. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular. 'Haviam muitos clientes' está ERRADO.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'existir', que flexiona normalmente ('Existiam muitos clientes').",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 12 - Concordância nominal e verbal."
+        },
+        {
+          "id": 10,
+          "frente": "O que é coesão referencial?",
+          "verso": "É o mecanismo textual que retoma ou antecipa termos por meio de pronomes, sinônimos, elipses ou numerais, evitando repetições desnecessárias.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com coesão sequencial (conjunções, conectivos).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 5 - Coesão e coerência."
+        },
+        {
+          "id": 11,
+          "frente": "Qual a função dos conectivos 'portanto', 'logo' e 'assim' em um texto argumentativo?",
+          "verso": "Introduzem CONCLUSÃO. São conjunções coordenativas conclusivas, fechando o raciocínio argumentativo.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com explicação ('pois') ou adição ('além disso').",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 5 - Coesão e coerência."
+        },
+        {
+          "id": 12,
+          "frente": "O que é tipologia textual?",
+          "verso": "É a classificação dos textos segundo sua estrutura e finalidade: narrativo, descritivo, dissertativo (expositivo/argumentativo) e injuntivo (instrucional).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir tipologia (estrutura) com gênero textual (função social: e-mail, receita, edital).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 6 - Tipologia textual."
+        },
+        {
+          "id": 13,
+          "frente": "Um texto dissertativo-argumentativo tem qual característica principal?",
+          "verso": "Defende um ponto de vista (tese) com argumentos organizados de forma lógica, visando convencer o leitor. Estrutura típica: introdução, desenvolvimento e conclusão.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com dissertativo-expositivo (apenas informa, sem defender tese).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 2 e 6 - Argumentação e persuasão / Tipologia textual."
+        },
+        {
+          "id": 14,
+          "frente": "O que caracteriza a linguagem simples e objetiva exigida pela comunicação assertiva no serviço público?",
+          "verso": "Frases curtas, ordem direta (sujeito-verbo-complemento), vocabulário acessível, ausência de ambiguidade e de rebuscamento desnecessário.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir 'simples' com 'informal' ou 'coloquial'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 3 - Comunicação assertiva."
+        },
+        {
+          "id": 15,
+          "frente": "Segundo o Manual de Redação da Presidência da República, quais são os atributos da redação oficial?",
+          "verso": "Clareza, precisão, objetividade, concisão, coesão, coerência, impessoalidade e formalidade. Não se admite marcas de opinião pessoal.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Excluir 'impessoalidade' ou incluir 'criatividade' e 'subjetividade'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 16 - Redação oficial."
+        },
+        {
+          "id": 16,
+          "frente": "No padrão ofício do Manual de Redação da Presidência, qual a forma correta de tratamento a um Ministro de Estado?",
+          "verso": "'Vossa Excelência' (vocativo: 'Excelentíssimo Senhor Ministro'). No corpo, usar 'Vossa Excelência'; na terceira pessoa, 'Sua Excelência'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir 'Vossa' (tratamento direto) com 'Sua' (referência na 3ª pessoa).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 16 - Redação oficial."
+        },
+        {
+          "id": 17,
+          "frente": "Em um ofício, qual o fecho adequado segundo o Manual de Redação?",
+          "verso": "'Respeitosamente' para autoridades superiores; 'Atenciosamente' para autoridades de mesma hierarquia ou inferiores. Não se usa mais 'Cordialmente' nem fórmulas longas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar fechos abolidos (ex.: 'Sem mais para o momento').",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 16 - Redação oficial."
+        },
+        {
+          "id": 18,
+          "frente": "Qual a função do 'que' em 'É necessário que você estude'?",
+          "verso": "Conjunção integrante. Introduz oração subordinada substantiva subjetiva, completando o sentido da oração principal.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 10 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 19,
+          "frente": "Em 'O livro que comprei é ótimo', o 'que' é pronome relativo?",
+          "verso": "SIM. Retoma o antecedente 'livro' e introduz oração subordinada adjetiva restritiva.",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com conjunção integrante.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 10 - Sintaxe da oração e do período."
+        },
+        {
+          "id": 20,
+          "frente": "Em 'Estudei muito, portanto passei', a vírgula está corretamente empregada?",
+          "verso": "SIM. A vírgula separa oração coordenada sindética conclusiva (conjunção 'portanto').",
+          "dificuldade": 2,
+          "tipo": "certo_errado",
+          "banca": "Cesgranrio",
+          "pegadinha": "Suprimir a vírgula antes de 'portanto'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 11 - Pontuação."
+        },
+        {
+          "id": 21,
+          "frente": "Em 'João, o gerente da agência, chegou cedo', as vírgulas isolam qual termo?",
+          "verso": "Aposto explicativo ('o gerente da agência'). O aposto explica ou especifica o termo anterior.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com vocativo (chamamento) ou com oração adjetiva explicativa.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 11 - Pontuação."
+        },
+        {
+          "id": 22,
+          "frente": "Qual a regência correta do verbo 'obedecer'?",
+          "verso": "'Obedecer' é transitivo indireto (exige preposição 'a'): 'Obedeço às leis'. O mesmo vale para 'desobedecer'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar sem preposição ('Obedeço as leis') ou sem crase.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 13 - Regência nominal e verbal."
+        },
+        {
+          "id": 23,
+          "frente": "Qual a regência correta do verbo 'assistir' no sentido de 'ver'?",
+          "verso": "'Assistir' no sentido de 'ver/presenciar' é transitivo indireto (exige 'a'): 'Assisti ao filme'. No sentido de 'ajudar', é transitivo direto: 'O médico assistiu o paciente'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar 'assistir o filme' (sem preposição) no sentido de ver.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 13 - Regência nominal e verbal."
+        },
+        {
+          "id": 24,
+          "frente": "O que é argumentação por exemplificação?",
+          "verso": "É o tipo de argumento que usa casos concretos, dados ou situações específicas para comprovar a tese defendida.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com argumento de autoridade (citação de especialistas).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 2 - Argumentação e persuasão."
+        },
+        {
+          "id": 25,
+          "frente": "Em 'Ele disse que viria, mas não veio', o 'mas' introduz qual relação de sentido?",
+          "verso": "Oposição/contraste. É conjunção coordenativa adversativa.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com adição ('e') ou conclusão ('portanto').",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, item 5 - Coesão e coerência."
+        }
       ]
     },
-    "matematica": {
-      "nome": "Matemática",
+    "ingles": {
+      "nome": "Língua Inglesa",
       "cards": [
-        {"id": 1, "frente": "Quais são os conjuntos numéricos?", "verso": "Naturais, Inteiros, Racionais, Irracionais e Reais", "dificuldade": 1},
-        {"id": 2, "frente": "O que é uma fração?", "verso": "Representação de uma parte de um todo, na forma a/b", "dificuldade": 1},
-        {"id": 3, "frente": "O que é MMC?", "verso": "Mínimo Múltiplo Comum - o menor múltiplo comum a dois números", "dificuldade": 2},
-        {"id": 4, "frente": "O que é MDC?", "verso": "Máximo Divisor Comum - o maior divisor comum a dois números", "dificuldade": 2},
-        {"id": 5, "frente": "O que é razão?", "verso": "Comparação entre duas grandezas através de divisão", "dificuldade": 1},
-        {"id": 6, "frente": "O que é proporção?", "verso": "Igualdade entre duas razões", "dificuldade": 1},
-        {"id": 7, "frente": "O que é porcentagem?", "verso": "Razão centesimal representada por %", "dificuldade": 1},
-        {"id": 8, "frente": "Como calcular porcentagem?", "verso": "Valor × (percentual/100)", "dificuldade": 2},
-        {"id": 9, "frente": "O que é regra de três simples?", "verso": "Método para resolver problemas de proporcionalidade direta ou inversa", "dificuldade": 2},
-        {"id": 10, "frente": "O que é regra de três composta?", "verso": "Método para resolver problemas com mais de duas grandezas", "dificuldade": 3},
-        {"id": 11, "frente": "O que é média aritmética simples?", "verso": "Soma dos valores dividida pela quantidade de valores", "dificuldade": 1},
-        {"id": 12, "frente": "O que é média ponderada?", "verso": "Média onde os valores têm pesos diferentes", "dificuldade": 2},
-        {"id": 13, "frente": "O que é uma equação do 1º grau?", "verso": "Equação na forma ax + b = 0", "dificuldade": 2},
-        {"id": 14, "frente": "O que é uma equação do 2º grau?", "verso": "Equação na forma ax² + bx + c = 0", "dificuldade": 3},
-        {"id": 15, "frente": "O que é um sistema de equações?", "verso": "Conjunto de duas ou mais equações com as mesmas incógnitas", "dificuldade": 2},
-        {"id": 16, "frente": "Quais são as medidas de comprimento?", "verso": "km, hm, dam, m, dm, cm, mm", "dificuldade": 1},
-        {"id": 17, "frente": "Quais são as medidas de superfície?", "verso": "km², hm², dam², m², dm², cm², mm²", "dificuldade": 2},
-        {"id": 18, "frente": "Quais são as medidas de capacidade?", "verso": "kl, hl, dal, l, dl, cl, ml", "dificuldade": 1},
-        {"id": 19, "frente": "Qual a fórmula do teorema de Pitágoras?", "verso": "a² = b² + c², onde a é a hipotenusa", "dificuldade": 2},
-        {"id": 20, "frente": "Qual a área de um retângulo?", "verso": "A = base × altura", "dificuldade": 1},
-        {"id": 21, "frente": "Qual a área de um triângulo?", "verso": "A = (base × altura) / 2", "dificuldade": 1},
-        {"id": 22, "frente": "Qual a área de um círculo?", "verso": "A = π × r²", "dificuldade": 2},
-        {"id": 23, "frente": "Qual o volume de um cubo?", "verso": "V = a³", "dificuldade": 1},
-        {"id": 24, "frente": "Qual o perímetro de um retângulo?", "verso": "P = 2 × (base + altura)", "dificuldade": 1},
-        {"id": 25, "frente": "O que é um gráfico?", "verso": "Representação visual de dados", "dificuldade": 1},
-        {"id": 26, "frente": "O que é uma tabela?", "verso": "Organização de dados em linhas e colunas", "dificuldade": 1},
-        {"id": 27, "frente": "O que é proporcionalidade direta?", "verso": "Quando duas grandezas aumentam ou diminuem na mesma proporção", "dificuldade": 2},
-        {"id": 28, "frente": "O que é proporcionalidade inversa?", "verso": "Quando uma grandeza aumenta e a outra diminui na mesma proporção", "dificuldade": 2},
-        {"id": 29, "frente": "O que é juros simples?", "verso": "J = C × i × t, onde C é capital, i é taxa, t é tempo", "dificuldade": 2},
-        {"id": 30, "frente": "O que é juros compostos?", "verso": "M = C × (1 + i)^t", "dificuldade": 3},
-        {"id": 31, "frente": "O que é desconto?", "verso": "Abatimento no valor de um título pago antes do vencimento", "dificuldade": 2},
-        {"id": 32, "frente": "O que é razão e proporção?", "verso": "Razão: comparação por divisão. Proporção: igualdade entre razões", "dificuldade": 1},
-        {"id": 33, "frente": "O que é regra de três?", "verso": "Método para resolver problemas de proporcionalidade", "dificuldade": 2},
-        {"id": 34, "frente": "O que é um número primo?", "verso": "Número natural maior que 1 que tem apenas dois divisores: 1 e ele mesmo", "dificuldade": 1},
-        {"id": 35, "frente": "O que é um número composto?", "verso": "Número natural que tem mais de dois divisores", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "O que significa 'savings account'?",
+          "verso": "Conta poupança. É o tipo de conta bancária destinada a guardar dinheiro com rendimento, geralmente com menor liquidez que a conta corrente.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'checking account' (conta corrente).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 2,
+          "frente": "O que significa 'checking account'?",
+          "verso": "Conta corrente. Conta bancária de movimentação diária, com depósitos à vista e saques.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'savings account' (poupança).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 3,
+          "frente": "O que significa 'to withdraw'?",
+          "verso": "Sacar (dinheiro). Ex.: 'I need to withdraw $100 from my account.'",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'to deposit' (depositar).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 4,
+          "frente": "O que significa 'to deposit'?",
+          "verso": "Depositar (dinheiro). Ex.: 'She deposited a check at the bank.'",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'to withdraw' (sacar).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 5,
+          "frente": "O que significa 'loan'?",
+          "verso": "Empréstimo. Valor emprestado por um banco a um cliente, com juros e prazo de pagamento.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'mortgage' (financiamento imobiliário).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 6,
+          "frente": "O que significa 'interest rate'?",
+          "verso": "Taxa de juros. Percentual aplicado sobre um valor emprestado ou investido.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir 'interest' (juros) com 'interest' (interesse).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 7,
+          "frente": "O que significa 'fee' no contexto bancário?",
+          "verso": "Tarifa. Valor cobrado pela prestação de serviços bancários (ex.: 'monthly fee' = tarifa mensal).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'fine' (multa).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 8,
+          "frente": "O que significa 'statement' no contexto bancário?",
+          "verso": "Extrato bancário. Documento com o registro das movimentações da conta em um período.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'invoice' (fatura).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 9,
+          "frente": "O que significa 'to afford'?",
+          "verso": "Poder pagar / ter recursos para. Ex.: 'I can't afford a new car.' (Não posso pagar um carro novo.)",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'to borrow' (pegar emprestado).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 10,
+          "frente": "Complete: 'She ___ working at the bank for five years.'\na) is\nb) has been\nc) was\nd) will be\ne) had",
+          "verso": "Letra B. 'Has been working' é present perfect continuous, usado para ações que começaram no passado e continuam no presente.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar 'is working' (presente simples) ou 'was working' (passado).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - aspectos gramaticais básicos."
+        },
+        {
+          "id": 11,
+          "frente": "Complete: 'If I ___ more money, I would travel.'\na) have\nb) had\nc) will have\nd) would have\ne) has",
+          "verso": "Letra B. Segundo condicional (if + past simple, would + infinitive) expressa hipótese irreal no presente.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar 'will have' ou 'would have' na oração com 'if'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - aspectos gramaticais básicos."
+        },
+        {
+          "id": 12,
+          "frente": "Leia: 'The bank announced that interest rates will rise next month. Customers should review their loans.'\n\nSegundo o texto, o que os clientes devem fazer?",
+          "verso": "Revisar seus empréstimos ('customers should review their loans'). O aumento das taxas de juros pode impactar as parcelas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Escolher alternativa que fala de 'savings' em vez de 'loans'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - compreensão de textos."
+        },
+        {
+          "id": 13,
+          "frente": "Leia: 'Due to the high inflation, the Central Bank decided to increase the basic interest rate.'\n\nQual foi a razão da decisão do Banco Central?",
+          "verso": "A alta inflação ('due to the high inflation'). 'Due to' introduz causa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Marcar 'aumento do desemprego' ou 'crise cambial', que não estão no texto.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - compreensão de textos."
+        },
+        {
+          "id": 14,
+          "frente": "O que significa a expressão 'to pay off a debt'?",
+          "verso": "Quitar uma dívida. Pagar integralmente o valor devido.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'to pay for' (pagar por algo) ou 'to pay back' (devolver dinheiro a alguém).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        },
+        {
+          "id": 15,
+          "frente": "O que significa 'mortgage'?",
+          "verso": "Financiamento imobiliário / hipoteca. Empréstimo de longo prazo para compra de imóvel, com o próprio imóvel como garantia.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'loan' (empréstimo genérico).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Língua Inglesa - vocabulário fundamental."
+        }
       ]
     },
-    "bancarios": {
+    "matematica-financeira": {
+      "nome": "Matemática Financeira",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "O que é valor presente (VP)?",
+          "verso": "É o valor atual de um fluxo de caixa futuro, trazido a valor de hoje por meio de uma taxa de desconto. Também chamado de valor atual.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com valor futuro (VF).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 1."
+        },
+        {
+          "id": 2,
+          "frente": "O que é valor futuro (VF)?",
+          "verso": "É o valor de um capital ou fluxo de caixa em uma data futura, após a incidência de juros. Também chamado de montante.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com valor presente.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 1."
+        },
+        {
+          "id": 3,
+          "frente": "Qual a fórmula dos juros simples?",
+          "verso": "J = C × i × t, onde J = juros, C = capital, i = taxa (decimal) e t = tempo. Montante: M = C + J = C(1 + i·t).",
+          "dificuldade": 2,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Aplicar juros compostos quando o problema pede simples.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 2."
+        },
+        {
+          "id": 4,
+          "frente": "Qual a fórmula dos juros compostos?",
+          "verso": "M = C × (1 + i)^t, onde M = montante, C = capital, i = taxa (decimal) e t = tempo. J = M − C.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar a fórmula de juros simples (M = C(1+it)) em problemas de compostos.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 3."
+        },
+        {
+          "id": 5,
+          "frente": "Um capital de R$ 5.000 é aplicado a juros simples de 2% ao mês por 6 meses. Qual o montante?",
+          "verso": "J = 5000 × 0,02 × 6 = R$ 600. M = 5000 + 600 = R$ 5.600,00.",
+          "dificuldade": 2,
+          "tipo": "calculo",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar juros compostos por engano.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 2."
+        },
+        {
+          "id": 6,
+          "frente": "Um capital de R$ 2.000 é aplicado a juros compostos de 10% ao mês por 2 meses. Qual o montante?",
+          "verso": "M = 2000 × (1,10)^2 = 2000 × 1,21 = R$ 2.420,00.",
+          "dificuldade": 3,
+          "tipo": "calculo",
+          "banca": "Cesgranrio",
+          "pegadinha": "Calcular 2000 × 1,20 = 2400 (juros simples) por engano.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 3."
+        },
+        {
+          "id": 7,
+          "frente": "O que é uma série uniforme de pagamentos?",
+          "verso": "É uma sequência de pagamentos iguais, em intervalos regulares de tempo. Pode ser antecipada (primeiro pagamento no ato) ou postecipada (primeiro pagamento no fim do primeiro período).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir série antecipada com postecipada.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 4."
+        },
+        {
+          "id": 8,
+          "frente": "O que é o Sistema de Amortização Constante (SAC)?",
+          "verso": "Sistema em que a amortização é constante ao longo do tempo. As prestações são decrescentes, pois os juros caem a cada período. Amortização = Saldo devedor inicial / n.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o sistema Francês (PRICE), onde a prestação é constante.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 6."
+        },
+        {
+          "id": 9,
+          "frente": "O que é o Sistema Francês de Amortização (PRICE)?",
+          "verso": "Sistema em que a PRESTAÇÃO é constante. A amortização é crescente e os juros são decrescentes. Muito usado em financiamentos imobiliários.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com SAC (amortização constante).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 6."
+        },
+        {
+          "id": 10,
+          "frente": "No SAC, como se calcula a amortização mensal?",
+          "verso": "Amortização = Valor do empréstimo / número de parcelas. É constante. Os juros de cada período incidem sobre o saldo devedor, que diminui a cada mês.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Calcular a amortização como diferença entre prestação e juros.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 6."
+        },
+        {
+          "id": 11,
+          "frente": "O que é desconto comercial simples (desconto por fora)?",
+          "verso": "É o desconto calculado sobre o VALOR NOMINAL (valor futuro) do título: D = VN × i × t. O valor atual é VA = VN × (1 − i·t).",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Calcular o desconto sobre o valor atual (isso seria desconto racional).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 7."
+        },
+        {
+          "id": 12,
+          "frente": "O que é desconto racional composto (desconto por dentro)?",
+          "verso": "É o desconto calculado sobre o VALOR ATUAL, com juros compostos: VA = VN / (1 + i)^t. D = VN − VA.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar juros simples ou aplicar sobre o valor nominal.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 7."
+        },
+        {
+          "id": 13,
+          "frente": "O que é uma progressão aritmética (PA)?",
+          "verso": "Sequência em que cada termo é obtido somando uma constante (razão r) ao termo anterior. Termo geral: an = a1 + (n−1)·r.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com PG (multiplicação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 8."
+        },
+        {
+          "id": 14,
+          "frente": "O que é uma progressão geométrica (PG)?",
+          "verso": "Sequência em que cada termo é obtido multiplicando o anterior por uma constante (razão q). Termo geral: an = a1 · q^(n−1).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com PA (adição).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 8."
+        },
+        {
+          "id": 15,
+          "frente": "Qual a soma dos termos de uma PA finita?",
+          "verso": "Sn = (a1 + an) · n / 2, onde n é o número de termos.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar a fórmula da soma da PG.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 8."
+        },
+        {
+          "id": 16,
+          "frente": "Um título de R$ 10.000 é descontado 3 meses antes do vencimento, a juros simples de 2% ao mês, pelo desconto comercial simples. Qual o valor atual?",
+          "verso": "D = 10000 × 0,02 × 3 = R$ 600. VA = 10000 − 600 = R$ 9.400,00.",
+          "dificuldade": 3,
+          "tipo": "calculo",
+          "banca": "Cesgranrio",
+          "pegadinha": "Usar desconto racional (sobre o valor atual) em vez de comercial.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 7."
+        },
+        {
+          "id": 17,
+          "frente": "O que é equivalência de capitais?",
+          "verso": "Dois ou mais capitais são equivalentes quando, trazidos para uma mesma data focal (com a mesma taxa), têm o mesmo valor. Permite comparar fluxos de caixa em datas diferentes.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Comparar valores em datas diferentes sem trazê-los à mesma data.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 5."
+        },
+        {
+          "id": 18,
+          "frente": "Qual a diferença entre taxa de juros nominal e taxa efetiva?",
+          "verso": "Nominal é a taxa contratada sem considerar a capitalização; efetiva é a taxa realmente aplicada no período de capitalização. Ex.: 12% ao ano com capitalização mensal → taxa efetiva mensal de 1%.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Tratar nominal e efetiva como iguais.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 1."
+        },
+        {
+          "id": 19,
+          "frente": "Um empréstimo de R$ 12.000 será pago em 12 parcelas mensais pelo SAC. Qual o valor da amortização mensal?",
+          "verso": "Amortização = 12000 / 12 = R$ 1.000,00 por mês. É constante no SAC.",
+          "dificuldade": 2,
+          "tipo": "calculo",
+          "banca": "Cesgranrio",
+          "pegadinha": "Calcular prestação em vez de amortização.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, item 6."
+        },
+        {
+          "id": 20,
+          "frente": "Qual a diferença entre juros simples e juros compostos?",
+          "verso": "Nos juros simples, os juros incidem sempre sobre o capital inicial. Nos compostos, incidem sobre o montante acumulado (juros sobre juros). A longo prazo, os compostos crescem muito mais.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o resultado é o mesmo para prazos longos.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Matemática Financeira, itens 2 e 3."
+        }
+      ]
+    },
+    "probabilidade-estatistica": {
+      "nome": "Noções de Probabilidade e Estatística",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "O que é população em estatística?",
+          "verso": "É o conjunto completo de elementos (pessoas, objetos, eventos) que se deseja estudar. Todos os elementos compartilham ao menos uma característica em comum.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com amostra.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 1."
+        },
+        {
+          "id": 2,
+          "frente": "O que é amostra em estatística?",
+          "verso": "É um subconjunto representativo da população, selecionado para estudo. Quando bem selecionada, permite inferir características da população.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que amostra é a população inteira.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 1."
+        },
+        {
+          "id": 3,
+          "frente": "O que é frequência absoluta?",
+          "verso": "É o número de vezes que um determinado valor aparece em um conjunto de dados. Também chamada de frequência simples.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com frequência relativa.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 1."
+        },
+        {
+          "id": 4,
+          "frente": "O que é frequência relativa?",
+          "verso": "É a razão entre a frequência absoluta de um valor e o total de observações. Pode ser expressa em decimal ou porcentagem. Soma das frequências relativas = 1 (ou 100%).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Não somar a 1 ou 100%.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 1."
+        },
+        {
+          "id": 5,
+          "frente": "Como se calcula a média aritmética simples?",
+          "verso": "Soma de todos os valores dividida pelo número de valores: x̄ = (Σxi) / n.",
+          "dificuldade": 1,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com média ponderada.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 2."
+        },
+        {
+          "id": 6,
+          "frente": "Como se calcula a média ponderada?",
+          "verso": "x̄ = (Σ xi·pi) / (Σ pi), onde pi são os pesos de cada valor. Usada quando os valores têm importâncias diferentes.",
+          "dificuldade": 2,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Esquecer de dividir pela soma dos pesos.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 2."
+        },
+        {
+          "id": 7,
+          "frente": "O que é mediana?",
+          "verso": "É o valor central de um conjunto de dados ordenados. Se o número de elementos for ímpar, é o valor do meio. Se for par, é a média dos dois valores centrais.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Esquecer de ordenar os dados antes.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 2."
+        },
+        {
+          "id": 8,
+          "frente": "O que é moda?",
+          "verso": "É o valor que aparece com maior frequência em um conjunto de dados. Uma distribuição pode ser amodal (sem moda), unimodal, bimodal ou multimodal.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que sempre existe uma moda.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 2."
+        },
+        {
+          "id": 9,
+          "frente": "O que são quartis?",
+          "verso": "São valores que dividem um conjunto ordenado em quatro partes iguais: Q1 (25%), Q2 (50%, que é a mediana), Q3 (75%).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir Q2 com a média.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 3."
+        },
+        {
+          "id": 10,
+          "frente": "O que são percentis?",
+          "verso": "São valores que dividem um conjunto ordenado em 100 partes iguais. O percentil 50 (P50) é a mediana. O P25 é o Q1 e o P75 é o Q3.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir percentil com quartil sem fazer a conversão.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 3."
+        },
+        {
+          "id": 11,
+          "frente": "O que é desvio padrão?",
+          "verso": "É a raiz quadrada da variância. Mede a dispersão dos dados em relação à média, na mesma unidade dos dados originais.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com variância (que é o quadrado).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 4."
+        },
+        {
+          "id": 12,
+          "frente": "O que é coeficiente de variação (CV)?",
+          "verso": "É a razão entre o desvio padrão e a média: CV = (s / x̄) × 100%. Mede a dispersão relativa, permitindo comparar conjuntos com unidades diferentes.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Esquecer de multiplicar por 100%.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 4."
+        },
+        {
+          "id": 13,
+          "frente": "O que é probabilidade de Laplace?",
+          "verso": "Em espaços equiprováveis, P(A) = número de casos favoráveis / número de casos possíveis. Ex.: probabilidade de tirar 6 em um dado = 1/6.",
+          "dificuldade": 2,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Aplicar em espaços NÃO equiprováveis.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 5."
+        },
+        {
+          "id": 14,
+          "frente": "O que é probabilidade condicional?",
+          "verso": "É a probabilidade de um evento A ocorrer dado que B já ocorreu: P(A|B) = P(A ∩ B) / P(B), com P(B) > 0.",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com probabilidade da interseção.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 5."
+        },
+        {
+          "id": 15,
+          "frente": "O que é distribuição binomial?",
+          "verso": "Modelo de probabilidade para experimentos com n tentativas independentes, cada uma com apenas dois resultados (sucesso/fracasso), com probabilidade p constante. P(X=k) = C(n,k) · p^k · (1−p)^(n−k).",
+          "dificuldade": 3,
+          "tipo": "formula",
+          "banca": "Cesgranrio",
+          "pegadinha": "Aplicar quando há mais de dois resultados possíveis ou tentativas dependentes.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Noções de Probabilidade e Estatística, item 5."
+        }
+      ]
+    },
+    "comportamentos-eticos": {
+      "nome": "Comportamentos Éticos e Compliance",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "Qual lei dispõe sobre os crimes de lavagem de dinheiro no Brasil?",
+          "verso": "Lei nº 9.613/1998. Também conhecida como Lei de Lavagem de Capitais ou Lei de PLD/FT (Prevenção à Lavagem de Dinheiro e ao Financiamento do Terrorismo). Foi alterada pela Lei 12.683/2012, que ampliou os tipos penais.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Lei 12.846/2013 (anticorrupção).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 1."
+        },
+        {
+          "id": 2,
+          "frente": "O que é a Circular nº 3.978/2020 do BACEN?",
+          "verso": "É a norma que dispõe sobre a política, os procedimentos e os controles internos a serem adotados pelas instituições financeiras para prevenir a lavagem de dinheiro e o financiamento do terrorismo (PLD/FT).",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Carta Circular 4.001/2020, que complementa a 3.978.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 1."
+        },
+        {
+          "id": 3,
+          "frente": "O que é a Carta Circular nº 4.001/2020?",
+          "verso": "É a norma do BACEN que complementa a Circular 3.978/2020, detalhando procedimentos operacionais de PLD/FT, como a comunicação de operações suspeitas ao COAF.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que substitui a Circular 3.978.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 1."
+        },
+        {
+          "id": 4,
+          "frente": "O que é o COAF?",
+          "verso": "Conselho de Controle de Atividades Financeiras. Órgão ligado ao BACEN que recebe, analisa e encaminha comunicações de operações suspeitas de lavagem de dinheiro.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o COAF é vinculado ao Ministério da Justiça (era, mas hoje é ao BACEN).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 1."
+        },
+        {
+          "id": 5,
+          "frente": "O que é assédio moral no ambiente de trabalho?",
+          "verso": "É a exposição repetitiva e prolongada do trabalhador a situações humilhantes, constrangedoras ou degradantes durante o exercício de suas funções. Caracteriza-se pela repetição e intencionalidade.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que uma única situação já configura assédio moral (não configura).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 2."
+        },
+        {
+          "id": 6,
+          "frente": "O que é assédio sexual?",
+          "verso": "É a conduta de conotação sexual praticada no ambiente de trabalho contra a vontade da vítima, com o objetivo de obter vantagem ou favorecimento sexual. Pode ser por chantagem (superior hierárquico) ou por intimidação (colegas).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir assédio sexual (conotação sexual) com assédio moral (humilhação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 2."
+        },
+        {
+          "id": 7,
+          "frente": "O que é o Código de Ética, Conduta e Integridade da CAIXA?",
+          "verso": "É o documento que estabelece os princípios, valores e normas de conduta esperados dos empregados da CAIXA, orientando o comportamento ético e profissional no ambiente de trabalho.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o Código de Ética do Servidor Público (Decreto 1.171/94), que se aplica a servidores, não a empregados celetistas.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 3."
+        },
+        {
+          "id": 8,
+          "frente": "Quais são os princípios constitucionais da Administração Pública expressos no art. 37 da CF/88?",
+          "verso": "Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (mnemônico: LIMPE).",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98) ou incluir 'razoabilidade' (não é expresso).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 5."
+        },
+        {
+          "id": 9,
+          "frente": "O que é sigilo bancário?",
+          "verso": "É o dever das instituições financeiras de manter em sigilo as operações ativas e passivas e os serviços prestados a seus clientes, salvo nas hipóteses legais de quebra (ex.: ordem judicial).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o sigilo é absoluto — pode ser quebrado por ordem judicial, CPI, ou por requisição do Fisco (LC 105/2001).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 6."
+        },
+        {
+          "id": 10,
+          "frente": "Qual a lei complementar que trata do sigilo das operações bancárias?",
+          "verso": "Lei Complementar nº 105/2001. Estabelece que as instituições financeiras devem manter sigilo de suas operações, mas autoriza a quebra em hipóteses específicas (Judiciário, CPI, Fisco, BACEN).",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Lei 9.613/98 (PLD).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 6."
+        },
+        {
+          "id": 11,
+          "frente": "O que é a LGPD?",
+          "verso": "Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Estabelece regras para o tratamento de dados pessoais no Brasil, garantindo direitos aos titulares e impondo obrigações a quem trata os dados.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que se aplica apenas a dados digitais — aplica-se a dados digitais e físicos.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 7."
+        },
+        {
+          "id": 12,
+          "frente": "Quais são os princípios da LGPD?",
+          "verso": "Finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação, responsabilização e prestação de contas.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com os princípios da Administração Pública.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 7."
+        },
+        {
+          "id": 13,
+          "frente": "O que é a Lei nº 12.846/2013 (Lei Anticorrupção)?",
+          "verso": "Também conhecida como Lei da Empresa Limpa. Responsabiliza administrativa e civilmente pessoas jurídicas por atos lesivos à Administração Pública, nacional ou estrangeira.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que se aplica a pessoas físicas — é voltada a pessoas jurídicas.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 8."
+        },
+        {
+          "id": 14,
+          "frente": "O que é governança corporativa?",
+          "verso": "É o conjunto de práticas, processos e estruturas que direcionam e monitoram a gestão de uma empresa, visando equilibrar os interesses dos stakeholders, garantir transparência e prestar contas.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Reduzir governança a 'conselho de administração' ou 'auditoria'.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 10."
+        },
+        {
+          "id": 15,
+          "frente": "O que é a Resolução CMN nº 4.893/2021?",
+          "verso": "Resolução do Conselho Monetário Nacional que dispõe sobre a política de segurança cibernética e os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem pelas instituições financeiras.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Circular 3.978 (PLD).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Éticos e Compliance, item 4."
+        }
+      ]
+    },
+    "conhecimentos-bancarios": {
       "nome": "Conhecimentos Bancários",
       "cards": [
-        {"id": 1, "frente": "O que é o Sistema Financeiro Nacional (SFN)?", "verso": "Conjunto de instituições e instrumentos financeiros que viabilizam a transferência de recursos", "dificuldade": 2},
-        {"id": 2, "frente": "Quais são os órgãos normativos do SFN?", "verso": "CMN (Conselho Monetário Nacional), CNSP e CNPC", "dificuldade": 2},
-        {"id": 3, "frente": "Qual a função do Banco Central (BACEN)?", "verso": "Autoridade monetária responsável pela execução da política monetária e supervisão do SFN", "dificuldade": 2},
-        {"id": 4, "frente": "O que é a taxa SELIC?", "verso": "Taxa básica de juros da economia, usada como referência para outras taxas", "dificuldade": 2},
-        {"id": 5, "frente": "O que é a taxa CDI?", "verso": "Taxa média de juros das operações interbancárias", "dificuldade": 2},
-        {"id": 6, "frente": "O que é o cheque especial?", "verso": "Linha de crédito pré-aprovada para pessoa física", "dificuldade": 1},
-        {"id": 7, "frente": "O que é um empréstimo consignado?", "verso": "Empréstimo com desconto em folha de pagamento, com taxas reduzidas", "dificuldade": 2},
-        {"id": 8, "frente": "O que é o cartão de crédito?", "verso": "Instrumento de pagamento que permite compras a prazo", "dificuldade": 1},
-        {"id": 9, "frente": "O que é o Pix?", "verso": "Sistema de pagamentos instantâneos do Banco Central", "dificuldade": 1},
-        {"id": 10, "frente": "O que é uma conta corrente?", "verso": "Conta bancária de depósito à vista", "dificuldade": 1},
-        {"id": 11, "frente": "O que é uma conta poupança?", "verso": "Conta bancária com rendimento e baixa liquidez", "dificuldade": 1},
-        {"id": 12, "frente": "O que é o FGTS?", "verso": "Fundo de Garantia do Tempo de Serviço", "dificuldade": 1},
-        {"id": 13, "frente": "O que é o PIS/PASEP?", "verso": "Programa de Integração Social e Programa de Formação do Patrimônio do Servidor Público", "dificuldade": 2},
-        {"id": 14, "frente": "O que é o CDB?", "verso": "Certificado de Depósito Bancário - título emitido por bancos", "dificuldade": 2},
-        {"id": 15, "frente": "O que é o LCI?", "verso": "Letra de Crédito Imobiliário - título emitido por bancos", "dificuldade": 2},
-        {"id": 16, "frente": "O que é o LCA?", "verso": "Letra de Crédito do Agronegócio - título emitido por bancos", "dificuldade": 2},
-        {"id": 17, "frente": "O que é a inflação?", "verso": "Aumento generalizado e contínuo dos preços", "dificuldade": 2},
-        {"id": 18, "frente": "O que é o IPCA?", "verso": "Índice de Preços ao Consumidor Amplo, usado como referência de inflação", "dificuldade": 2},
-        {"id": 19, "frente": "O que é o CDI?", "verso": "Certificado de Depósito Interbancário, referência para investimentos", "dificuldade": 2},
-        {"id": 20, "frente": "O que é a liquidez?", "verso": "Capacidade de converter um ativo em dinheiro rapidamente", "dificuldade": 2},
-        {"id": 21, "frente": "O que é o crédito rural?", "verso": "Linha de crédito destinada a produtores rurais", "dificuldade": 2},
-        {"id": 22, "frente": "O que é a tarifa bancária?", "verso": "Valor cobrado pela prestação de serviços bancários", "dificuldade": 1},
-        {"id": 23, "frente": "O que é o TED?", "verso": "Transferência Eletrônica Disponível - transferência de valores", "dificuldade": 1},
-        {"id": 24, "frente": "O que é o DOC?", "verso": "Documento de Ordem de Crédito - transferência de valores", "dificuldade": 1},
-        {"id": 25, "frente": "O que é o spread bancário?", "verso": "Diferença entre a taxa que o banco paga e a que cobra", "dificuldade": 2},
-        {"id": 26, "frente": "O que é a cesta de serviços?", "verso": "Pacote com serviços bancários incluídos", "dificuldade": 1},
-        {"id": 27, "frente": "O que é o extrato bancário?", "verso": "Registro das movimentações da conta", "dificuldade": 1},
-        {"id": 28, "frente": "O que é a autenticação bancária?", "verso": "Processo de verificação de identidade para transações", "dificuldade": 2},
-        {"id": 29, "frente": "O que é o internet banking?", "verso": "Serviço de acesso a conta pela internet", "dificuldade": 1},
-        {"id": 30, "frente": "O que é o BACEN?", "verso": "Banco Central do Brasil - autoridade monetária", "dificuldade": 1},
-        {"id": 31, "frente": "O que é a CMN?", "verso": "Conselho Monetário Nacional - órgão normativo do SFN", "dificuldade": 2},
-        {"id": 32, "frente": "O que é o Tesouro Direto?", "verso": "Programa de compra de títulos públicos pela internet", "dificuldade": 2},
-        {"id": 33, "frente": "O que é o CDB?", "verso": "Certificado de Depósito Bancário - renda fixa", "dificuldade": 2},
-        {"id": 34, "frente": "O que é o LCI?", "verso": "Letra de Crédito Imobiliário - renda fixa isenta de IR para PF", "dificuldade": 2},
-        {"id": 35, "frente": "O que é o LCA?", "verso": "Letra de Crédito do Agronegócio - renda fixa isenta de IR para PF", "dificuldade": 2},
-        {"id": 36, "frente": "O que é o CDI?", "verso": "Taxa média de juros interbancários, referência para investimentos", "dificuldade": 2},
-        {"id": 37, "frente": "O que é o spread bancário?", "verso": "Diferença entre a taxa de captação e a taxa de empréstimo", "dificuldade": 2},
-        {"id": 38, "frente": "O que é o PIX?", "verso": "Sistema de pagamentos instantâneos do BACEN", "dificuldade": 1},
-        {"id": 39, "frente": "O que é o FGTS?", "verso": "Fundo de Garantia do Tempo de Serviço - direito do trabalhador", "dificuldade": 1},
-        {"id": 40, "frente": "O que é o PIS?", "verso": "Programa de Integração Social - direito do trabalhador", "dificuldade": 1},
-        {"id": 41, "frente": "O que é o PASEP?", "verso": "Programa de Formação do Patrimônio do Servidor Público", "dificuldade": 1},
-        {"id": 42, "frente": "O que é a poupança?", "verso": "Conta de depósito com rendimento e baixo risco", "dificuldade": 1},
-        {"id": 43, "frente": "O que é a conta corrente?", "verso": "Conta de depósito à vista para movimentação diária", "dificuldade": 1},
-        {"id": 44, "frente": "O que é o TED?", "verso": "Transferência Eletrônica Disponível - transferência de valores", "dificuldade": 1},
-        {"id": 45, "frente": "O que é o DOC?", "verso": "Documento de Ordem de Crédito - transferência de valores", "dificuldade": 1},
-        {"id": 46, "frente": "O que é o cartão de crédito?", "verso": "Instrumento de pagamento com limite de crédito", "dificuldade": 1},
-        {"id": 47, "frente": "O que é o cartão de débito?", "verso": "Instrumento de pagamento que debita diretamente da conta", "dificuldade": 1},
-        {"id": 48, "frente": "O que é o Saque?", "verso": "Retirada de dinheiro da conta", "dificuldade": 1},
-        {"id": 49, "frente": "O que é o Depósito?", "verso": "Colocação de dinheiro na conta", "dificuldade": 1},
-        {"id": 50, "frente": "O que é o Tarifa bancária?", "verso": "Valor cobrado por serviços bancários", "dificuldade": 1},
-        {"id": 51, "frente": "O que é o Crédito?", "verso": "Empréstimo de dinheiro pelo banco", "dificuldade": 1},
-        {"id": 52, "frente": "O que é o Débito?", "verso": "Retirada de dinheiro da conta", "dificuldade": 1},
-        {"id": 53, "frente": "O que é o Juros?", "verso": "Remuneração do capital emprestado", "dificuldade": 2},
-        {"id": 54, "frente": "O que é a Taxa de juros?", "verso": "Percentual aplicado sobre o valor emprestado", "dificuldade": 2},
-        {"id": 55, "frente": "O que é o Cheque?", "verso": "Ordem de pagamento à vista", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "O que é o Sistema Financeiro Nacional (SFN)?",
+          "verso": "É o conjunto de órgãos, entidades e instituições que regulam, supervisionam e executam as operações financeiras no Brasil, promovendo a intermediação de recursos entre poupadores e tomadores.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir SFN com BACEN (o BACEN é apenas um dos integrantes).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 2."
+        },
+        {
+          "id": 2,
+          "frente": "Quais são os órgãos normativos do SFN?",
+          "verso": "CMN (Conselho Monetário Nacional), CNSP (Conselho Nacional de Seguros Privados) e CNPC (Conselho Nacional de Previdência Complementar). Eles editam normas, mas não fiscalizam.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Incluir BACEN, CVM ou SUSEP como normativos (são supervisores).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 2."
+        },
+        {
+          "id": 3,
+          "frente": "Quais são os órgãos supervisores do SFN?",
+          "verso": "BACEN (bancos), CVM (mercado de capitais), SUSEP (seguros) e PREVIC (previdência complementar). Fiscalizam e punem, mas não editam normas.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com órgãos normativos (CMN, CNSP, CNPC).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 2."
+        },
+        {
+          "id": 4,
+          "frente": "O que é o CMN?",
+          "verso": "Conselho Monetário Nacional. É o órgão máximo do SFN, responsável por fixar as diretrizes da política monetária, cambial e creditícia. Composto por: Ministro da Fazenda (presidente), Ministro do Planejamento e Presidente do BACEN.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o BACEN preside o CMN (quem preside é o Ministro da Fazenda).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 2."
+        },
+        {
+          "id": 5,
+          "frente": "O que é o BACEN?",
+          "verso": "Banco Central do Brasil. Autarquia federal responsável por executar a política monetária, emitir moeda, controlar o crédito e supervisionar as instituições financeiras.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o BACEN é um banco comercial.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 2."
+        },
+        {
+          "id": 6,
+          "frente": "O que é a taxa SELIC?",
+          "verso": "É a taxa básica de juros da economia brasileira, definida pelo COPOM a cada 45 dias. Serve de referência para todas as demais taxas de juros do mercado.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir SELIC meta (definida pelo COPOM) com SELIC efetiva (calculada diariamente).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 17."
+        },
+        {
+          "id": 7,
+          "frente": "O que é o COPOM?",
+          "verso": "Comitê de Política Monetária do BACEN. Reúne-se a cada 45 dias para definir a meta da taxa SELIC, com o objetivo de controlar a inflação.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o COPOM define o IPCA (quem mede é o IBGE).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 17."
+        },
+        {
+          "id": 8,
+          "frente": "O que é o mercado monetário?",
+          "verso": "Segmento do mercado financeiro em que se negociam títulos de curto prazo e de alta liquidez, como os títulos públicos federais. O BACEN atua para regular a liquidez da economia.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com mercado de capitais (longo prazo).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 3."
+        },
+        {
+          "id": 9,
+          "frente": "O que é o mercado de crédito?",
+          "verso": "Segmento em que instituições financeiras concedem empréstimos e financiamentos a pessoas físicas e jurídicas, com prazos e taxas definidos.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com mercado de capitais (financiamento via títulos).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 3."
+        },
+        {
+          "id": 10,
+          "frente": "O que é o mercado de capitais?",
+          "verso": "Segmento em que empresas e governos captam recursos de longo prazo por meio da emissão de títulos (ações, debêntures). É regulado pela CVM.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que é regulado pelo BACEN (quem regula é a CVM).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 3 e 20."
+        },
+        {
+          "id": 11,
+          "frente": "O que é o mercado cambial?",
+          "verso": "Segmento em que se negociam moedas estrangeiras. Envolve operações de compra e venda de divisas, com taxas de câmbio definidas pelo mercado (regime flutuante) ou pelo governo.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o Brasil adota câmbio fixo (adota flutuante desde 1999).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 3 e 22."
+        },
+        {
+          "id": 12,
+          "frente": "O que é o PIX?",
+          "verso": "Sistema de pagamentos instantâneos do BACEN, disponível 24h por dia, 7 dias por semana. Permite transferências em segundos, com identificação por chave (CPF, e-mail, telefone ou chave aleatória).",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o PIX tem custo para pessoa física (é gratuito por regulação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 12."
+        },
+        {
+          "id": 13,
+          "frente": "O que é Open Finance?",
+          "verso": "Evolução do Open Banking. É o sistema de compartilhamento de dados e serviços financeiros entre instituições autorizadas, mediante consentimento do cliente, ampliando a concorrência e a inovação.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir Open Finance (dados + serviços) com Open Banking (só dados bancários).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 13."
+        },
+        {
+          "id": 14,
+          "frente": "O que é o DREX (Real Digital)?",
+          "verso": "É a moeda digital do Banco Central do Brasil. Diferente do PIX, o DREX é uma CBDC (Central Bank Digital Currency), ou seja, uma representação digital do real emitida pelo BACEN.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o DREX é a mesma coisa que PIX ou que criptomoeda (não é).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 14."
+        },
+        {
+          "id": 15,
+          "frente": "O que são fintechs?",
+          "verso": "Empresas de tecnologia que oferecem serviços financeiros de forma inovadora e digital, desafiando o modelo tradicional dos bancos. Ex.: Nubank, PagSeguro, Stone.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir fintech (tecnologia financeira) com startup (empresa jovem, pode ou não ser do setor financeiro).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 8."
+        },
+        {
+          "id": 16,
+          "frente": "O que é shadow banking (bancos-sombra)?",
+          "verso": "É o sistema de intermediação de crédito realizado por instituições não bancárias, que atuam como bancos mas não têm a mesma regulação e supervisão. Ex.: fundos de investimento, securitizadoras.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que 'sombra' significa ilegal (não é — é não regulado como banco).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 9."
+        },
+        {
+          "id": 17,
+          "frente": "O que é blockchain?",
+          "verso": "É um registro digital descentralizado e imutável de transações, organizado em blocos encadeados. É a tecnologia por trás do bitcoin e das criptomoedas.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que blockchain e bitcoin são a mesma coisa (blockchain é a tecnologia; bitcoin é uma aplicação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 10."
+        },
+        {
+          "id": 18,
+          "frente": "O que são correspondentes bancários?",
+          "verso": "São empresas ou pessoas físicas contratadas por instituições financeiras para prestar serviços como abertura de contas, recebimento de pagamentos e concessão de crédito, em locais sem agência bancária.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o correspondente pode realizar todas as operações de um banco (há limites).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 11."
+        },
+        {
+          "id": 19,
+          "frente": "O que é o FGTS?",
+          "verso": "Fundo de Garantia do Tempo de Serviço (Lei nº 8.036/1990). Depósito mensal de 8% do salário do trabalhador celetista, feito pelo empregador, em conta vinculada. Pode ser sacado em hipóteses específicas (demissão sem justa causa, compra de casa, aposentadoria).",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o FGTS é descontado do salário do trabalhador (quem deposita é o empregador).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 32."
+        },
+        {
+          "id": 20,
+          "frente": "O que é o Certificado de Regularidade do FGTS (CRF)?",
+          "verso": "Documento que comprova que o empregador está em dia com os depósitos do FGTS. É exigido em licitações, contratações e emissão de certidões.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a GRF (Guia de Recolhimento do FGTS).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 33."
+        },
+        {
+          "id": 21,
+          "frente": "O que é a GRF?",
+          "verso": "Guia de Recolhimento do FGTS. Documento usado pelo empregador para efetuar o depósito mensal do FGTS dos trabalhadores.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a GRFC (usada em rescisão).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 34."
+        },
+        {
+          "id": 22,
+          "frente": "O que é o Bolsa Família?",
+          "verso": "Programa de transferência de renda do Governo Federal (Lei nº 10.836/2004) que atende famílias em situação de pobreza e extrema pobreza, com condicionalidades nas áreas de saúde e educação.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com BPC/LOAS (benefício assistencial para idosos e PCD).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 35."
+        },
+        {
+          "id": 23,
+          "frente": "O que é o Programa Desemprego (Seguro-Desemprego)?",
+          "verso": "Benefício pago ao trabalhador demitido sem justa causa (Lei nº 7.998/1990). O trabalhador recebe de 3 a 5 parcelas, conforme o tempo trabalhado e o número de vezes que já recebeu o benefício.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o trabalhador demitido por justa causa tem direito.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 39."
+        },
+        {
+          "id": 24,
+          "frente": "O que é o Abono Salarial (PIS/PASEP)?",
+          "verso": "Benefício anual pago ao trabalhador que recebe até 2 salários mínimos e trabalhou pelo menos 30 dias no ano-base. O valor é proporcional aos meses trabalhados.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o Seguro-Desemprego.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 39."
+        },
+        {
+          "id": 25,
+          "frente": "O que é o Sistema de Pagamentos Brasileiro (SPB)?",
+          "verso": "É o conjunto de procedimentos, regras e sistemas que garantem a transferência de recursos entre os agentes econômicos no Brasil. Inclui o STR (Sistema de Transferência de Reservas), a CIP (Câmara Interbancária de Pagamentos) e o PIX.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o SPB se limita ao PIX.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos Bancários, item 38."
+        }
       ]
     },
-    "logica": {
-      "nome": "Raciocínio Lógico",
+    "ti-comunicacao": {
+      "nome": "Conhecimentos de Tecnologia da Informação e Comunicação",
       "cards": [
-        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser classificada como verdadeira ou falsa", "dificuldade": 1},
-        {"id": 2, "frente": "O que é uma proposição simples?", "verso": "Frase com uma única afirmação", "dificuldade": 1},
-        {"id": 3, "frente": "O que é uma proposição composta?", "verso": "Frase com mais de uma afirmação ligadas por conectivos", "dificuldade": 2},
-        {"id": 4, "frente": "O que é o conectivo 'e' (∧)?", "verso": "Conjunção - verdadeira apenas quando ambas proposições são verdadeiras", "dificuldade": 2},
-        {"id": 5, "frente": "O que é o conectivo 'ou' (∨)?", "verso": "Disjunção - verdadeira quando pelo menos uma proposição é verdadeira", "dificuldade": 2},
-        {"id": 6, "frente": "O que é o conectivo 'se...então' (→)?", "verso": "Condicional - falsa apenas quando primeira é verdadeira e segunda falsa", "dificuldade": 3},
-        {"id": 7, "frente": "O que é o conectivo 'se e somente se' (↔)?", "verso": "Bicondicional - verdadeira quando ambas têm o mesmo valor", "dificuldade": 3},
-        {"id": 8, "frente": "O que é a negação (¬)?", "verso": "Inverte o valor lógico da proposição", "dificuldade": 2},
-        {"id": 9, "frente": "O que é uma tautologia?", "verso": "Proposição composta sempre verdadeira", "dificuldade": 2},
-        {"id": 10, "frente": "O que é contradição?", "verso": "Proposição composta sempre falsa", "dificuldade": 2},
-        {"id": 11, "frente": "O que é uma contingência?", "verso": "Proposição que pode ser verdadeira ou falsa", "dificuldade": 2},
-        {"id": 12, "frente": "O que é um conjunto?", "verso": "Agrupamento de elementos com características comuns", "dificuldade": 1},
-        {"id": 13, "frente": "O que é união de conjuntos?", "verso": "Reunião de todos os elementos de dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 14, "frente": "O que é interseção de conjuntos?", "verso": "Elementos comuns a dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 15, "frente": "O que é diferença de conjuntos?", "verso": "Elementos de um conjunto que não estão no outro", "dificuldade": 2},
-        {"id": 16, "frente": "O que é um diagrama lógico?", "verso": "Representação visual de conjuntos e relações", "dificuldade": 1},
-        {"id": 17, "frente": "O que é a Lei de De Morgan?", "verso": "¬(P∧Q) = ¬P∨¬Q e ¬(P∨Q) = ¬P∧¬Q", "dificuldade": 3},
-        {"id": 18, "frente": "O que é um argumento lógico?", "verso": "Sequência de proposições onde uma conclusão é derivada das premissas", "dificuldade": 2},
-        {"id": 19, "frente": "O que é um silogismo?", "verso": "Argumento com duas premissas e uma conclusão", "dificuldade": 2},
-        {"id": 20, "frente": "O que é equivalência lógica?", "verso": "Duas proposições com a mesma tabela-verdade", "dificuldade": 3},
-        {"id": 21, "frente": "O que é uma sentença aberta?", "verso": "Frase com variável que pode ser verdadeira ou falsa", "dificuldade": 2},
-        {"id": 22, "frente": "O que é um quantificador universal?", "verso": "Indica que a proposição vale para todos os elementos (∀)", "dificuldade": 2},
-        {"id": 23, "frente": "O que é um quantificador existencial?", "verso": "Indica que existe pelo menos um elemento (∃)", "dificuldade": 2},
-        {"id": 24, "frente": "O que é negação de proposição composta?", "verso": "Negar uma conjunção, disjunção ou condicional", "dificuldade": 3},
-        {"id": 25, "frente": "O que é a negação de 'P → Q'?", "verso": "P ∧ ¬Q", "dificuldade": 3}
+        {
+          "id": 1,
+          "frente": "No Microsoft Word 365, qual a função do atalho Ctrl+Shift+C?",
+          "verso": "Copiar formatação. Para colar a formatação copiada, usa-se Ctrl+Shift+V. Diferente de Ctrl+C (copiar texto) e Ctrl+V (colar texto).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir Ctrl+Shift+C (copia formatação) com Ctrl+C (copia texto).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 1."
+        },
+        {
+          "id": 2,
+          "frente": "No Microsoft Excel 365, qual a função da fórmula =SOMASE(intervalo; critério; intervalo_soma)?",
+          "verso": "Soma os valores de um intervalo que atendem a um critério. Ex.: =SOMASE(A1:A10; \">100\"; B1:B10) soma os valores de B1:B10 cujos correspondentes em A1:A10 sejam maiores que 100.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com =SOMARPRODUTO ou =CONT.SE.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 1."
+        },
+        {
+          "id": 3,
+          "frente": "O que é a NBR ISO/IEC 27001:2022?",
+          "verso": "É a norma internacional que estabelece os requisitos para um Sistema de Gestão de Segurança da Informação (SGSI). Define como proteger os dados de uma organização de forma sistemática.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a 27002 (que é o código de práticas, não requisitos).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 4,
+          "frente": "O que é a NBR ISO/IEC 27002:2022?",
+          "verso": "É a norma que fornece um código de práticas para controles de segurança da informação. Complementa a 27001, detalhando como implementar os controles.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a 27001 (requisitos do SGSI).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 5,
+          "frente": "O que é a Resolução CMN nº 4.893/2021?",
+          "verso": "Dispõe sobre a política de segurança cibernética e os requisitos para contratação de serviços de processamento, armazenamento de dados e computação em nuvem pelas instituições financeiras.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Circular 3.978 (PLD/FT).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 6,
+          "frente": "O que é um firewall?",
+          "verso": "É um dispositivo ou software que monitora e controla o tráfego de rede, bloqueando acessos não autorizados com base em regras de segurança predefinidas.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o firewall substitui um antivírus (são camadas diferentes).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 7,
+          "frente": "O que é criptografia simétrica?",
+          "verso": "É a técnica que usa a MESMA chave para cifrar e decifrar a mensagem. É mais rápida que a assimétrica, mas exige compartilhamento seguro da chave.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com criptografia assimétrica (chaves pública e privada distintas).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 8,
+          "frente": "O que é criptografia assimétrica?",
+          "verso": "É a técnica que usa DUAS chaves: uma pública (para cifrar) e uma privada (para decifrar). Garante confidencialidade sem precisar compartilhar a chave secreta.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Inverter as funções das chaves pública e privada.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 9,
+          "frente": "O que é phishing?",
+          "verso": "É uma fraude que usa mensagens, e-mails ou sites falsos para induzir a vítima a fornecer dados pessoais, senhas ou informações bancárias. É uma forma de engenharia social.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que phishing explora apenas falhas técnicas (explora a confiança da vítima).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 2."
+        },
+        {
+          "id": 10,
+          "frente": "O que é backup incremental?",
+          "verso": "É a cópia de segurança que registra apenas os arquivos alterados ou criados desde o último backup (completo ou incremental). É mais rápido e ocupa menos espaço que o backup completo.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com backup diferencial (copia desde o último backup completo).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 3."
+        },
+        {
+          "id": 11,
+          "frente": "O que é a computação em nuvem (cloud computing)?",
+          "verso": "É o modelo de fornecimento de recursos de TI (armazenamento, processamento, software) pela internet, sob demanda. Modelos: IaaS, PaaS e SaaS.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir IaaS (infraestrutura) com SaaS (software pronto).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 11."
+        },
+        {
+          "id": 12,
+          "frente": "O que é inteligência artificial generativa?",
+          "verso": "É a categoria de IA capaz de criar novos conteúdos (textos, imagens, áudios, vídeos) a partir de padrões aprendidos. Ex.: ChatGPT, Midjourney, DALL-E.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que IA generativa é apenas chatbot (abrange outras mídias).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 11.1."
+        },
+        {
+          "id": 13,
+          "frente": "O que é machine learning?",
+          "verso": "É um subcampo da IA que permite que sistemas aprendam com dados, sem serem explicitamente programados para cada tarefa. Pode ser supervisionado, não supervisionado ou por reforço.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que machine learning e IA são sinônimos (ML é um subconjunto da IA).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 11."
+        },
+        {
+          "id": 14,
+          "frente": "O que é o paradigma ágil?",
+          "verso": "É uma abordagem de gestão de projetos que valoriza entregas incrementais, colaboração com o cliente, adaptação a mudanças e times auto-organizados. Baseia-se no Manifesto Ágil (2001).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir ágil (mentalidade) com Scrum (framework específico).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 15."
+        },
+        {
+          "id": 15,
+          "frente": "O que é o SCRUM?",
+          "verso": "É um framework ágil para gestão de projetos complexos. Organiza o trabalho em Sprints (ciclos curtos), com papéis definidos (Product Owner, Scrum Master, Time de Desenvolvimento) e cerimônias (Planning, Daily, Review, Retrospectiva).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que Scrum é metodologia (é framework).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Conhecimentos de TI e Comunicação, item 15."
+        }
       ]
     },
-    "atualidades": {
-      "nome": "Atualidades",
+    "comportamentos-digitais": {
+      "nome": "Conhecimentos e Comportamentos Digitais",
       "cards": [
-        {"id": 1, "frente": "O que é o PIB?", "verso": "Produto Interno Bruto - soma de todos os bens e serviços produzidos no país", "dificuldade": 2},
-        {"id": 2, "frente": "O que é a inflação?", "verso": "Aumento generalizado e contínuo dos preços", "dificuldade": 1},
-        {"id": 3, "frente": "O que é o IPCA?", "verso": "Índice Nacional de Preços ao Consumidor Amplo", "dificuldade": 2},
-        {"id": 4, "frente": "O que é a taxa Selic?", "verso": "Taxa básica de juros da economia", "dificuldade": 2},
-        {"id": 5, "frente": "O que é o desemprego?", "verso": "Situação de pessoas que estão sem trabalho e procuram emprego", "dificuldade": 1},
-        {"id": 6, "frente": "O que é a renda per capita?", "verso": "Renda média por pessoa em um país ou região", "dificuldade": 2},
-        {"id": 7, "frente": "O que é a balança comercial?", "verso": "Diferença entre exportações e importações", "dificuldade": 2},
-        {"id": 8, "frente": "O que é a dívida pública?", "verso": "Total de débitos do governo", "dificuldade": 2},
-        {"id": 9, "frente": "O que é o PIB per capita?", "verso": "PIB dividido pela população", "dificuldade": 2},
-        {"id": 10, "frente": "O que é o superávit primário?", "verso": "Economia do governo para pagar juros da dívida", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "O que é mindset de crescimento (growth mindset)?",
+          "verso": "É a crença de que habilidades e inteligência podem ser desenvolvidas com esforço, aprendizado e feedback. Contrapõe-se ao mindset fixo, que acredita em talento inato.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com mindset fixo.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 1."
+        },
+        {
+          "id": 2,
+          "frente": "O que é intraempreendedorismo?",
+          "verso": "É o comportamento empreendedor dentro de uma organização existente. O colaborador identifica oportunidades, inova e assume riscos calculados em prol da empresa.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com empreendedorismo externo (criar o próprio negócio).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 2."
+        },
+        {
+          "id": 3,
+          "frente": "O que é Design Thinking?",
+          "verso": "É uma abordagem de inovação centrada no ser humano, que combina empatia, criatividade e racionalidade para resolver problemas complexos. Etapas: imersão, ideação, prototipação e teste.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que é só 'brainstorm' (envolve prototipação e teste com usuários).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 3."
+        },
+        {
+          "id": 4,
+          "frente": "O que é Design de Serviço?",
+          "verso": "É a aplicação do Design Thinking para projetar serviços, considerando a jornada do cliente, os pontos de contato e a experiência completa, com foco no valor percebido.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com design de produto (foco em serviço, não em objeto).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 3."
+        },
+        {
+          "id": 5,
+          "frente": "O que é Lean Manufacturing?",
+          "verso": "É o sistema de gestão focado na eliminação de desperdícios e na melhoria contínua, originado no Sistema Toyota de Produção. Busca entregar valor ao cliente com o mínimo de recursos.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com Six Sigma (foco em redução de variabilidade).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 4."
+        },
+        {
+          "id": 6,
+          "frente": "O que é o OKR?",
+          "verso": "Objectives and Key Results. Metodologia de definição de metas em que se estabelece um objetivo qualitativo (O) e de 3 a 5 resultados-chave quantitativos (KRs) para medi-lo.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir OKR com KPI (KPI é indicador contínuo; OKR é meta com prazo).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 15."
+        },
+        {
+          "id": 7,
+          "frente": "O que é Customer Experience (CX)?",
+          "verso": "É a experiência global do cliente com uma marca, produto ou serviço em todos os pontos de contato. Envolve percepções, emoções e expectativas antes, durante e depois da compra.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Reduzir CX a 'atendimento' (abrange toda a jornada).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 12."
+        },
+        {
+          "id": 8,
+          "frente": "O que é inteligência emocional?",
+          "verso": "É a capacidade de reconhecer, compreender e gerenciar as próprias emoções e as dos outros. Envolve autoconsciência, autorregulação, empatia, motivação e habilidades sociais.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Reduzir a 'saber controlar a raiva' (abrange empatia e motivação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 13."
+        },
+        {
+          "id": 9,
+          "frente": "O que é pensamento computacional?",
+          "verso": "É a capacidade de formular problemas e soluções de forma que possam ser processadas por humanos ou máquinas. Envolve decomposição, reconhecimento de padrões, abstração e algoritmos.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que é só 'programar' (vai além da codificação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 8."
+        },
+        {
+          "id": 10,
+          "frente": "O que é análise de negócios (Business Analysis)?",
+          "verso": "É a disciplina que identifica necessidades de negócio e recomenda soluções que entreguem valor aos stakeholders. Envolve elicitação de requisitos, análise e validação.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com gestão de projetos (foco em necessidades, não em prazos).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 9."
+        },
+        {
+          "id": 11,
+          "frente": "O que são os Objetivos de Desenvolvimento Sustentável (ODS)?",
+          "verso": "São 17 objetivos globais estabelecidos pela ONU na Agenda 2030, que buscam erradicar a pobreza, proteger o planeta e garantir paz e prosperidade. Ex.: ODS 1 (erradicação da pobreza), ODS 5 (igualdade de gênero).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que são 8 (são 17; os 8 eram os ODM, anteriores).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 14."
+        },
+        {
+          "id": 12,
+          "frente": "O que é o Pacto Global da ONU?",
+          "verso": "É uma iniciativa que orienta empresas a alinhar suas estratégias a 10 princípios universais nas áreas de direitos humanos, trabalho, meio ambiente e anticorrupção.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com os ODS (o Pacto é a iniciativa; os ODS são as metas).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 14."
+        },
+        {
+          "id": 13,
+          "frente": "O que é liderança situacional?",
+          "verso": "É a abordagem que defende que o estilo de liderança deve se adaptar ao nível de maturidade e competência da equipe. O líder alterna entre dirigir, treinar, apoiar e delegar.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que existe um único estilo ideal de liderança.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 10."
+        },
+        {
+          "id": 14,
+          "frente": "O que é lifelong learning (aprendizagem contínua)?",
+          "verso": "É a prática de buscar aprendizado constante ao longo da vida, atualizando conhecimentos e habilidades para se manter relevante pessoal e profissionalmente.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que se limita à educação formal.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 18."
+        },
+        {
+          "id": 15,
+          "frente": "O que é autoliderança?",
+          "verso": "É a capacidade de liderar a si mesmo, assumindo responsabilidade pelas próprias ações, decisões e desenvolvimento. Envolve autoconhecimento, disciplina e automotivação.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com liderança de equipes (foco em si mesmo).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Comportamentos Digitais, item 10."
+        }
+      ]
+    },
+    "atendimento-bancario": {
+      "nome": "Atendimento Bancário",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "O que é clientecentrismo?",
+          "verso": "É a abordagem que coloca o cliente no centro das decisões e processos da empresa, buscando entender e atender suas necessidades e expectativas de forma personalizada.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com foco em produto (empurrar produto x resolver necessidade).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 6."
+        },
+        {
+          "id": 2,
+          "frente": "O que é escuta ativa?",
+          "verso": "É a técnica de ouvir com atenção plena, sem interromper, demonstrando interesse e compreendendo não só o conteúdo, mas também as emoções e intenções do interlocutor.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com 'ouvir' (escuta ativa exige feedback e validação).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 7."
+        },
+        {
+          "id": 3,
+          "frente": "O que é empatia no atendimento?",
+          "verso": "É a capacidade de se colocar no lugar do cliente, compreendendo suas emoções e perspectivas, e respondendo de forma acolhedora e adequada.",
+          "dificuldade": 1,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir empatia (compreender) com simpatia (agradar).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 7."
+        },
+        {
+          "id": 4,
+          "frente": "Quais são as etapas do processo de vendas, da pré-abordagem ao pós-vendas?",
+          "verso": "1) Pré-abordagem (prospecção); 2) Abordagem; 3) Identificação de necessidades; 4) Apresentação do produto; 5) Contorno de objeções; 6) Fechamento; 7) Pós-vendas (acompanhamento e fidelização).",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Pular o pós-vendas (essencial para fidelização).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 3."
+        },
+        {
+          "id": 5,
+          "frente": "O que é uma objeção de venda?",
+          "verso": "É a resistência ou dúvida apresentada pelo cliente em relação ao produto ou serviço. Não é rejeição, mas oportunidade de esclarecimento e de reforço de valor.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Tratar objeção como 'não' definitivo.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 3."
+        },
+        {
+          "id": 6,
+          "frente": "O que é inbound marketing?",
+          "verso": "É a estratégia de marketing que atrai o cliente por meio de conteúdo relevante e útil, em vez de interrompê-lo com anúncios. Envolve SEO, blog, redes sociais e materiais ricos.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com outbound marketing (interrupção).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 4."
+        },
+        {
+          "id": 7,
+          "frente": "O que é copywriting?",
+          "verso": "É a técnica de escrita persuasiva usada em marketing e vendas para levar o leitor a uma ação específica (comprar, cadastrar, clicar).",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que é só 'escrever bonito' (foco em conversão).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 4."
+        },
+        {
+          "id": 8,
+          "frente": "O que são gatilhos mentais?",
+          "verso": "São estímulos psicológicos que influenciam a decisão de compra de forma subconsciente. Ex.: escassez, urgência, prova social, autoridade, reciprocidade, afinidade.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que gatilho é manipulação (uso ético é persuasão).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 4."
+        },
+        {
+          "id": 9,
+          "frente": "O que é a Resolução CMN nº 4.539/2016?",
+          "verso": "Dispõe sobre a política de relacionamento com o cliente e a implementação de ouvidoria pelas instituições financeiras. Estabelece direitos do consumidor bancário.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a Resolução CMN 4.860/2020 (ouvidoria).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 10."
+        },
+        {
+          "id": 10,
+          "frente": "O que é a Resolução CMN nº 4.860/2020?",
+          "verso": "Dispõe sobre a constituição e o funcionamento de componente organizacional de ouvidoria pelas instituições financeiras e demais instituições autorizadas pelo BACEN.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a 4.539/2016 (relacionamento com cliente).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 11."
+        },
+        {
+          "id": 11,
+          "frente": "O que é a Resolução CMN nº 3.694/2009?",
+          "verso": "Dispõe sobre a prevenção de riscos na contratação de operações e na prestação de serviços, com o objetivo de assegurar ao consumidor a transparência e a adequação dos produtos e serviços bancários.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com a 4.539/2016.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 12."
+        },
+        {
+          "id": 12,
+          "frente": "O que é o Código de Defesa do Consumidor (CDC)?",
+          "verso": "Lei nº 8.078/1990. Estabelece direitos e deveres nas relações de consumo, como informação clara, proteção contra publicidade enganosa, direito de arrependimento e inversão do ônus da prova.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o CDC se aplica apenas a produtos (aplica-se a serviços também).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 14."
+        },
+        {
+          "id": 13,
+          "frente": "O que é o Estatuto do Idoso?",
+          "verso": "Lei nº 10.741/2003. Assegura direitos aos idosos (60+), incluindo atendimento prioritário, gratuidade em transportes, proteção contra violência e acesso à saúde.",
+          "dificuldade": 2,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o atendimento prioritário vale apenas para maiores de 80 anos (é para 60+; acima de 80 é prioridade especial).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 14,
+          "frente": "O que é a Lei nº 13.466/2017?",
+          "verso": "Altera o Estatuto do Idoso para assegurar prioridade especial de atendimento aos maiores de 80 anos, em relação aos demais idosos.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que se aplica a todos os idosos (é só 80+).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 15,
+          "frente": "O que é a Lei nº 14.364/2022?",
+          "verso": "Assegura ao idoso acompanhante, quando necessário, no atendimento presencial em instituições financeiras, com prioridade no atendimento.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o acompanhante tem prioridade sobre o idoso (não tem).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 16,
+          "frente": "O que é o SARB nº 004/2009?",
+          "verso": "Normativo de Autorregulação Bancária da FEBRABAN que estabelece padrões de atendimento ao consumidor na rede de agências bancárias, como tempo de espera e acessibilidade.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o SARB 023/2020 (idoso) ou 024/2021 (vulneráveis).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 17,
+          "frente": "O que é o SARB nº 023/2020?",
+          "verso": "Normativo de Autorregulação Bancária que estabelece diretrizes para o relacionamento com o consumidor idoso, garantindo atendimento humanizado, prioridade e proteção contra fraudes.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o SARB 004/2009 (atendimento geral).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 18,
+          "frente": "O que é o SARB nº 024/2021?",
+          "verso": "Normativo de Autorregulação Bancária que estabelece diretrizes para o relacionamento com consumidores potencialmente vulneráveis, como pessoas com deficiência, analfabetos e vítimas de fraude.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Confundir com o SARB 023 (idoso).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 15."
+        },
+        {
+          "id": 19,
+          "frente": "O que é a Lei nº 12.764/2012?",
+          "verso": "Institui a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista (TEA), garantindo atendimento prioritário e proteção de direitos.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que o atendimento prioritário a TEA está na Lei 10.741 (Idoso) — está na 12.764.",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 16."
+        },
+        {
+          "id": 20,
+          "frente": "O que é o Decreto nº 8.727/2016?",
+          "verso": "Dispõe sobre o uso do nome social e o reconhecimento da identidade de gênero de pessoas travestis e transexuais no âmbito da administração pública federal direta, autárquica e fundacional.",
+          "dificuldade": 3,
+          "tipo": "definicao",
+          "banca": "Cesgranrio",
+          "pegadinha": "Achar que se aplica a toda a sociedade (é no âmbito da administração pública federal).",
+          "fundamento": "Edital CAIXA 2024, Anexo IV, Atendimento Bancário, item 17."
+        }
       ]
     }
   }
