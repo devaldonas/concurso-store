@@ -190,7 +190,7 @@ const products = [
   description: 'Concurso para Assistente em Administração da UFABC',
   badge: 'Novo',
   category: 'Educação',
-  features: ['Mapas mentais', 'Flashcards digitais', 'Revisão programada', 'Simulados exclusivos']
+  features: ['Mapas mentais', '110 flashcards', 'Revisão programada', 'Simulados exclusivos']
 }
 ];
 

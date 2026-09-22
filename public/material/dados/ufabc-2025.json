@@ -1,49 +1,1143 @@
 {
   "nome": "UFABC 2025 - Assistente em Administração",
+  "banca": "AOCP",
+  "cargo": "Assistente em Administração",
+  "nivel": "medio",
+  "edital_ref": "Edital nº 38/2025 - UFABC (AOCP)",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto, identificando ideias principais, inferências e intenções do autor", "dificuldade": 1},
-        {"id": 2, "frente": "Quais são os 5 tipos de texto quanto à tipologia?", "verso": "Narrativo, descritivo, dissertativo, injuntivo e expositivo", "dificuldade": 2},
-        {"id": 3, "frente": "O que são figuras de linguagem?", "verso": "Recursos estilísticos que tornam a mensagem mais expressiva", "dificuldade": 2},
-        {"id": 4, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome e verbo", "dificuldade": 1},
-        {"id": 5, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção e interjeição", "dificuldade": 1},
-        {"id": 6, "frente": "O que é regência verbal?", "verso": "É a relação entre o verbo e seus complementos. Pode ser direta (sem preposição) ou indireta (com preposição)", "dificuldade": 2},
-        {"id": 7, "frente": "Quando usar a crase?", "verso": "Fusão da preposição 'a' com o artigo 'a'. Usa-se em locuções adverbiais femininas, antes de palavras femininas e em indicações de horas", "dificuldade": 3},
-        {"id": 8, "frente": "Quais são os tipos de concordância?", "verso": "Verbal (verbo concorda com o sujeito) e nominal (artigo, adjetivo, numeral e pronome concordam com o substantivo)", "dificuldade": 2},
-        {"id": 9, "frente": "O que é sujeito na oração?", "verso": "É o termo sobre o qual se declara algo. Pode ser simples, composto, oculto ou indeterminado", "dificuldade": 1},
-        {"id": 10, "frente": "O que é intertextualidade?", "verso": "É a relação entre diferentes textos, onde um faz referência a outro", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(AOCP) Na frase 'O servidor cumpriu as normas, porém não obteve êxito', a conjunção 'porém' estabelece relação de:",
+          "verso": "Alternativa correta: OPOSIÇÃO. 'Porém' é conjunção coordenativa adversativa, que expressa contraste entre as orações.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar por 'portanto' (conclusiva) ou 'pois' (explicativa).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Sintaxe."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) Em 'Faz dez anos que a UFABC modernizou o ensino', o verbo 'fazer' está corretamente flexionado?",
+          "verso": "SIM. Indicando tempo decorrido, 'fazer' é impessoal e fica obrigatoriamente na 3ª pessoa do singular. 'Fazem dez anos' estaria ERRADO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Pluralizar para 'Fazem dez anos' por atração do termo 'dez anos'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Concordância verbal."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) Em 'Haviam muitos servidores na reunião', o verbo 'haver' está corretamente empregado?",
+          "verso": "NÃO. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular: 'Havia muitos servidores'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Pluralizar 'haver' por atração do sujeito, confundindo com 'existir'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Concordância verbal."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) Em 'Refiro-me à servidora que solicitou a certidão', o acento grave está corretamente empregado?",
+          "verso": "SIM. 'Referir-se' é transitivo indireto (exige 'a') e 'servidora' é substantivo feminino determinado → a + a = à. Crase obrigatória.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que 'referir-se a' não admite artigo.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Crase."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) Em 'Entreguei o relatório a uma servidora', o uso da crase seria obrigatório se escrevêssemos 'à uma servidora'?",
+          "verso": "NÃO. Não se usa crase antes de artigo indefinido ('uma'). O correto é 'a uma servidora', sem acento grave.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Induzir o candidato a achar que a crase é obrigatória antes de qualquer palavra feminina.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Crase."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) Em 'Vendem-se livros na livraria', o 'se' é partícula apassivadora?",
+          "verso": "SIM. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética, equivalente a 'Livros são vendidos na livraria'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito (que ocorre com VTI).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) Em 'Trata-se de questões complexas', o 'se' é índice de indeterminação do sujeito?",
+          "verso": "SIM. O verbo 'tratar-se' é transitivo indireto (exige a preposição 'de'). Nesse caso, o 'se' indetermina o sujeito e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com partícula apassivadora (VTD).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) Em 'O servidor que estudou por 3 anos foi aprovado', a oração 'que estudou por 3 anos' é subordinada adjetiva:",
+          "verso": "Alternativa correta: RESTRITIVA. Não está entre vírgulas e restringe o sentido de 'servidor'. Explicativa viria entre vírgulas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar restritiva (sem vírgula) por explicativa (com vírgula).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Sintaxe."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) Em 'O servidor, que é dedicado, foi promovido', a oração destacada é subordinada adjetiva:",
+          "verso": "Alternativa correta: EXPLICATIVA. Está isolada por vírgulas e explica uma característica do antecedente 'servidor', sem restringir o sentido.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que a vírgula não muda a classificação da oração.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Pontuação."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) Em 'Não me disse a verdade', a próclise é obrigatória por causa do advérbio de negação 'não'?",
+          "verso": "SIM. Palavras atrativas (como 'não', 'nunca', 'jamais', 'que', 'quem') atraem o pronome oblíquo para antes do verbo (próclise).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Colocação pronominal."
+        },
+        {
+          "id": 11,
+          "frente": "(AOCP) Em 'Entreguei-lhe o relatório', o pronome 'lhe' funciona como:",
+          "verso": "Alternativa correta: OBJETO INDIRETO. O pronome 'lhe' complementa verbo transitivo indireto. Aqui 'o relatório' é o OD e 'lhe' é o OI.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar as funções de 'lhe' (OI) e 'o/a' (OD).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 12,
+          "frente": "(AOCP) A palavra 'benefício' está corretamente grafada segundo o Novo Acordo Ortográfico?",
+          "verso": "SIM. A grafia 'benefício' (com 'i' tônico) está correta. Não confundir com 'beneficiente' ou 'beneficência'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar por 'benefício' (errado) ou 'beneficio' sem acento.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Ortografia."
+        },
+        {
+          "id": 13,
+          "frente": "(AOCP) A palavra 'administração' está corretamente acentuada?",
+          "verso": "SIM. 'Administração' é acentuada por ser paroxítona terminada em '-ão'.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Tirar o acento (virando 'administracao').",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Acentuação gráfica."
+        },
+        {
+          "id": 14,
+          "frente": "(AOCP) O texto dissertativo-argumentativo tem como característica principal:",
+          "verso": "Alternativa correta: DEFESA DE UM PONTO DE VISTA COM ARGUMENTOS ORGANIZADOS. Apresenta tese + argumentos + conclusão, visando convencer o leitor.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com dissertativo-expositivo (que apenas informa, sem defender tese).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Tipologia textual."
+        },
+        {
+          "id": 15,
+          "frente": "(AOCP) Em 'A UFABC, universidade federal, atende milhares de alunos', o termo 'universidade federal' é:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO. Explica/especifica o antecedente 'UFABC', isolado por vírgulas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com vocativo (chamamento) ou predicativo.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Sintaxe."
+        },
+        {
+          "id": 16,
+          "frente": "(AOCP) Em 'Preciso de que o servidor compareça à reunião', o 'que' é:",
+          "verso": "Alternativa correta: CONJUNÇÃO INTEGRANTE. Introduz oração subordinada substantiva completiva nominal (complementa 'de').",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 17,
+          "frente": "(AOCP) Em 'A avaliação foi realizada ontem', o termo 'ontem' é:",
+          "verso": "Alternativa correta: ADJUNTO ADVERBIAL DE TEMPO. 'Ontem' indica circunstância de tempo, modificando o verbo 'foi realizada'.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com aposto, predicativo ou objeto indireto.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 18,
+          "frente": "(AOCP) A coesão textual é garantida exclusivamente pelo uso de conjunções?",
+          "verso": "NÃO. A coesão pode ser referencial (pronomes, sinônimos, elipses, numerais) OU sequencial (conjunções, conectivos). Não se limita a conjunções.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Restringir a coesão a apenas um mecanismo.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Coesão e coerência."
+        },
+        {
+          "id": 19,
+          "frente": "(AOCP) Qual a função do 'que' em 'O projeto que você analisou está aprovado'?",
+          "verso": "Alternativa correta: PRONOME RELATIVO. Retoma o antecedente 'projeto' e introduz oração subordinada adjetiva restritiva.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com conjunção integrante.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Morfologia."
+        },
+        {
+          "id": 20,
+          "frente": "(AOCP) Em 'Estudei muito, portanto passei', a vírgula está corretamente empregada?",
+          "verso": "SIM. A vírgula separa oração coordenada sindética conclusiva (conjunção 'portanto').",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Suprimir a vírgula antes de 'portanto'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Pontuação."
+        },
+        {
+          "id": 21,
+          "frente": "(AOCP) Em 'João, o diretor do departamento, chegou cedo', as vírgulas isolam:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO ('o diretor do departamento'). O aposto explica ou especifica o termo anterior.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com vocativo (chamamento) ou com oração adjetiva explicativa.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Pontuação."
+        },
+        {
+          "id": 22,
+          "frente": "(AOCP) Qual a regência correta do verbo 'obedecer'?",
+          "verso": "Alternativa correta: 'OBEDECER' É TRANSITIVO INDIRETO. Exige a preposição 'a': 'Obedeço às leis'. O mesmo vale para 'desobedecer'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Usar sem preposição ('Obedeço as leis') ou sem crase.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Regência verbal e nominal."
+        },
+        {
+          "id": 23,
+          "frente": "(AOCP) Qual a regência correta do verbo 'assistir' no sentido de 'ver'?",
+          "verso": "Alternativa correta: TRANSITIVO INDIRETO (EXIGE 'A'). 'Assisti ao filme'. No sentido de 'ajudar', é transitivo direto: 'O médico assistiu o paciente'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Usar 'assistir o filme' (sem preposição) no sentido de ver.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Regência verbal e nominal."
+        },
+        {
+          "id": 24,
+          "frente": "(AOCP) Em 'Ele disse que viria, mas não veio', o 'mas' introduz qual relação de sentido?",
+          "verso": "Alternativa correta: OPOSIÇÃO/CONTRASTE. É conjunção coordenativa adversativa.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com adição ('e') ou conclusão ('portanto').",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Sintaxe."
+        },
+        {
+          "id": 25,
+          "frente": "(AOCP) Em 'O servidor, que é dedicado, foi promovido', se retirarmos as vírgulas, o sentido:",
+          "verso": "Muda. Com vírgulas = EXPLICATIVA (todos os servidores foram promovidos? ou o servidor específico?). Sem vírgulas = RESTRITIVA (apenas o servidor que é dedicado foi promovido).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que as vírgulas são decorativas e não mudam o sentido.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Língua Portuguesa - Pontuação."
+        }
       ]
     },
-    "matematica": {
+    "matematica-raciocinio": {
       "nome": "Matemática e Raciocínio Lógico",
       "cards": [
-        {"id": 1, "frente": "Quais são os conjuntos numéricos?", "verso": "Naturais (N), Inteiros (Z), Racionais (Q), Irracionais (I) e Reais (R)", "dificuldade": 1},
-        {"id": 2, "frente": "O que é uma função linear?", "verso": "Função do tipo f(x) = ax + b, onde 'a' é a taxa de variação e 'b' é o coeficiente linear", "dificuldade": 2},
-        {"id": 3, "frente": "Como resolver uma equação do 2º grau?", "verso": "Usando a fórmula de Bhaskara: x = (-b ± √(b²-4ac))/2a", "dificuldade": 3},
-        {"id": 4, "frente": "Qual a fórmula para calcular área de um círculo?", "verso": "A = π × r², onde r é o raio do círculo", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma progressão aritmética (PA)?", "verso": "Sequência onde cada termo é igual ao anterior acrescido de um valor fixo chamado razão (r)", "dificuldade": 2},
-        {"id": 6, "frente": "O que é uma função quadrática?", "verso": "Função do tipo f(x) = ax² + bx + c, com gráfico em forma de parábola", "dificuldade": 2},
-        {"id": 7, "frente": "Como calcular a média aritmética?", "verso": "Soma de todos os valores dividida pelo número de valores", "dificuldade": 1},
-        {"id": 8, "frente": "Qual a fórmula do teorema de Pitágoras?", "verso": "a² = b² + c², onde 'a' é a hipotenusa", "dificuldade": 2},
-        {"id": 9, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser classificada como verdadeira ou falsa", "dificuldade": 1},
-        {"id": 10, "frente": "O que é porcentagem?", "verso": "Razão centesimal representada por %", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(AOCP) Qual o MMC de 12 e 18?",
+          "verso": "Alternativa correta: 36. 12 = 2² × 3; 18 = 2 × 3². MMC = 2² × 3² = 4 × 9 = 36.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir MMC com MDC.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - MMC."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) Qual o MDC de 24 e 36?",
+          "verso": "Alternativa correta: 12. 24 = 2³ × 3; 36 = 2² × 3². MDC = 2² × 3 = 4 × 3 = 12.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir MDC com MMC.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - MDC."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) Se 3/5 de um valor é R$ 240, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 400. 3/5 × X = 240 → X = 240 × 5 / 3 = 400.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter a fração (calcular 5/3).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Frações."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) Se um produto de R$ 800 sofre um desconto de 15%, qual o valor final?",
+          "verso": "Alternativa correta: R$ 680. 800 × 0,85 = 680. O desconto é de R$ 120.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Calcular 15% de 800 = 120 e esquecer de subtrair (deixando 120).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Porcentagem."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) Se 4 servidores fazem um trabalho em 6 horas, quantas horas levam 8 servidores?",
+          "verso": "Alternativa correta: 3 horas. Grandezas inversas: 4 × 6 = 8 × X → X = 3.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Tratar como grandezas diretas.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Regra de três."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) Qual a média aritmética simples de 4, 7, 9 e 12?",
+          "verso": "Alternativa correta: 8. (4+7+9+12)/4 = 32/4 = 8.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Esquecer de dividir pela quantidade de valores.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Média aritmética."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) Qual a solução da equação 3x - 9 = 0?",
+          "verso": "Alternativa correta: x = 3. 3x = 9 → x = 3.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Errar o sinal ou inverter a operação.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Equação do 1º grau."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) Qual a solução do sistema x + y = 10 e x - y = 4?",
+          "verso": "Alternativa correta: x = 7 e y = 3. Somando as duas equações: 2x = 14 → x = 7; y = 10 - 7 = 3.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Subtrair em vez de somar as equações.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Sistema de equações."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) Quantos segundos há em 2 horas e 30 minutos?",
+          "verso": "Alternativa correta: 9.000 segundos. 2h = 7200s; 30min = 1800s. Total = 7200 + 1800 = 9000s.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Esquecer de converter as horas ou os minutos.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Sistema métrico."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) Uma sala retangular tem 12m de comprimento e 8m de largura. Qual a área?",
+          "verso": "Alternativa correta: 96 m². Área = 12 × 8 = 96 m².",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Calcular perímetro em vez de área.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Geometria."
+        },
+        {
+          "id": 11,
+          "frente": "(AOCP) Um triângulo retângulo tem catetos de 3cm e 4cm. Qual a hipotenusa?",
+          "verso": "Alternativa correta: 5 cm. Teorema de Pitágoras: a² = 3² + 4² = 9 + 16 = 25 → a = 5.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Somar os catetos (3+4=7) em vez de usar Pitágoras.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Geometria."
+        },
+        {
+          "id": 12,
+          "frente": "(AOCP) Se 30% de um valor é R$ 450, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 1.500. 0,30 × X = 450 → X = 450 / 0,30 = 1500.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Multiplicar em vez de dividir.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Porcentagem."
+        },
+        {
+          "id": 13,
+          "frente": "(AOCP) Um carro percorre 240 km em 3 horas. Qual a velocidade média?",
+          "verso": "Alternativa correta: 80 km/h. Velocidade = distância / tempo = 240 / 3 = 80 km/h.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter (tempo / distância).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Grandezas."
+        },
+        {
+          "id": 14,
+          "frente": "(AOCP) Um aumento de 20% seguido de um desconto de 20% resulta:",
+          "verso": "Alternativa correta: VALOR MENOR QUE O ORIGINAL. Ex.: 100 × 1,20 = 120; 120 × 0,80 = 96. Resultado final: 96 (4% menor).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que +20% e −20% se anulam.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Porcentagem."
+        },
+        {
+          "id": 15,
+          "frente": "(AOCP) Qual o volume de um cubo com aresta de 3 cm?",
+          "verso": "Alternativa correta: 27 cm³. V = a³ = 3³ = 27 cm³.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Calcular área (3²=9) em vez de volume.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Matemática - Geometria."
+        },
+        {
+          "id": 16,
+          "frente": "(AOCP) A condicional 'Se P, então Q' é falsa apenas quando:",
+          "verso": "Alternativa correta: P É VERDADEIRO E Q É FALSO. Na condicional (P → Q), o único caso em que é falsa é V → F.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que F→V ou F→F são falsas.",
+          "fundamento": "Edital UFABC 2025, Anexo II, RLM - Lógica proposicional."
+        },
+        {
+          "id": 17,
+          "frente": "(AOCP) A negação de 'Todos os servidores são concursados' é:",
+          "verso": "Alternativa correta: 'ALGUM SERVIDOR NÃO É CONCURSADO' (ou 'Pelo menos um não é'). A negação de 'Todos' é 'Algum não'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, RLM - Diagramas lógicos."
+        },
+        {
+          "id": 18,
+          "frente": "(AOCP) A negação de 'P e Q' é:",
+          "verso": "Alternativa correta: 'NÃO P OU NÃO Q'. Pela Lei de De Morgan, ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar 'ou' por 'e' na negação.",
+          "fundamento": "Edital UFABC 2025, Anexo II, RLM - Leis de De Morgan."
+        },
+        {
+          "id": 19,
+          "frente": "(AOCP) A negação de 'P ou Q' é:",
+          "verso": "Alternativa correta: 'NÃO P E NÃO Q'. Pela Lei de De Morgan, ¬(P ∨ Q) = ¬P ∧ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar 'e' por 'ou' na negação.",
+          "fundamento": "Edital UFABC 2025, Anexo II, RLM - Leis de De Morgan."
+        },
+        {
+          "id": 20,
+          "frente": "(AOCP) Uma tabela-verdade com 3 proposições simples tem quantas linhas?",
+          "verso": "Alternativa correta: 8 LINHAS. O número de linhas é 2^n, onde n é o número de proposições. 2³ = 8.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com 2×3=6 ou 3²=9.",
+          "fundamento": "Edital UFABC 2025, Anexo II, RLM - Tabela-verdade."
+        }
       ]
     },
-    "especificos": {
-      "nome": "Conhecimentos Específicos",
+    "administracao-publica": {
+      "nome": "Noções de Administração Pública",
       "cards": [
-        {"id": 1, "frente": "Quais são os princípios da Administração Pública?", "verso": "Legalidade, impessoalidade, moralidade, publicidade e eficiência", "dificuldade": 2},
-        {"id": 2, "frente": "O que é a Lei 8.112/90?", "verso": "Regime Jurídico Único dos Servidores Públicos Civis da União", "dificuldade": 2},
-        {"id": 3, "frente": "O que é a Lei de Improbidade Administrativa?", "verso": "Lei 8.429/92 - define atos de improbidade e suas penalidades", "dificuldade": 2},
-        {"id": 4, "frente": "O que é a Lei de Acesso à Informação?", "verso": "Lei 12.527/11 - garante acesso a informações públicas", "dificuldade": 2},
-        {"id": 5, "frente": "O que é administração direta?", "verso": "Órgãos diretamente ligados ao chefe do Executivo", "dificuldade": 2},
-        {"id": 6, "frente": "O que são autarquias?", "verso": "Entidades administrativas autônomas criadas por lei", "dificuldade": 2},
-        {"id": 7, "frente": "O que é o princípio da legalidade?", "verso": "O administrador só pode fazer o que a lei permite", "dificuldade": 1},
-        {"id": 8, "frente": "O que é o princípio da impessoalidade?", "verso": "A administração deve tratar todos igualmente", "dificuldade": 1},
-        {"id": 9, "frente": "O que é o princípio da moralidade?", "verso": "A administração deve agir com ética", "dificuldade": 1},
-        {"id": 10, "frente": "O que é o princípio da publicidade?", "verso": "Os atos administrativos devem ser divulgados", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(AOCP) Quais são os princípios constitucionais expressos da Administração Pública (art. 37 da CF/88)?",
+          "verso": "Alternativa correta: LEGALIDADE, IMPESSOALIDADE, MORALIDADE, PUBLICIDADE E EFICIÊNCIA (LIMPE).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Princípios."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) O que é o princípio da legalidade na Administração Pública?",
+          "verso": "Alternativa correta: O ADMINISTRADOR PÚBLICO SÓ PODE FAZER O QUE A LEI PERMITE (diferente do particular, que pode fazer tudo o que a lei não proíbe).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com a legalidade do particular.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Princípios."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) O que é o princípio da impessoalidade?",
+          "verso": "Alternativa correta: A ADMINISTRAÇÃO DEVE TRATAR TODOS IGUALMENTE, SEM FAVORECIMENTOS OU DISCRIMINAÇÕES. Também veda a promoção pessoal de agentes públicos.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que impessoalidade é só 'não ter opinião' (é tratamento igualitário).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Princípios."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) O que é o princípio da publicidade?",
+          "verso": "Alternativa correta: OS ATOS ADMINISTRATIVOS DEVEM SER DIVULGADOS OFICIALMENTE, para garantir transparência e controle social. Exceção: segurança nacional, intimidade, etc.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que a publicidade é absoluta (tem exceções).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Princípios."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) O que é o princípio da eficiência?",
+          "verso": "Alternativa correta: A ADMINISTRAÇÃO DEVE BUSCAR OS MELHORES RESULTADOS COM OS RECURSOS DISPONÍVEIS, com economicidade e qualidade no serviço público. Incluído pela EC 19/98.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que eficiência é só 'fazer rápido' (é fazer bem com menos).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Princípios."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) O que é a administração direta?",
+          "verso": "Alternativa correta: CONJUNTO DE ÓRGÃOS PÚBLICOS LIGADOS DIRETAMENTE AO CHEFE DO PODER EXECUTIVO (União, Estados, DF, Municípios). Não têm personalidade jurídica própria.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com administração indireta (entidades com personalidade jurídica).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Organização."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) O que é a administração indireta?",
+          "verso": "Alternativa correta: CONJUNTO DE ENTIDADES COM PERSONALIDADE JURÍDICA PRÓPRIA: autarquias, fundações públicas, empresas públicas e sociedades de economia mista.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Incluir 'órgãos públicos' (são da administração direta).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Organização."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) As autarquias são criadas por:",
+          "verso": "Alternativa correta: LEI ESPECÍFICA. Autarquias são entidades de direito público criadas por lei, com autonomia administrativa e financeira.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que autarquia é criada por decreto (é por lei).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Organização."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) Empresas públicas e sociedades de economia mista são pessoas jurídicas de:",
+          "verso": "Alternativa correta: DIREITO PRIVADO. Apesar de integrarem a administração indireta, são regidas por direito privado.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar 'privado' por 'público'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Organização."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) O que é um ato administrativo?",
+          "verso": "Alternativa correta: DECLARAÇÃO UNILATERAL DE VONTADE DO ESTADO OU DE QUEM O REPRESENTE, que produz efeitos jurídicos imediatos, com o objetivo de atender ao interesse público.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com fato administrativo (que não tem manifestação de vontade).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Atos administrativos."
+        },
+        {
+          "id": 11,
+          "frente": "(AOCP) Quais são os atributos do ato administrativo?",
+          "verso": "Alternativa correta: PRESUNÇÃO DE LEGITIMIDADE, IMPERATIVIDADE, AUTOEXECUTORIEDADE E TIPICIDADE. São características que os atos administrativos possuem.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Omitir algum ou incluir atributos que não existem.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Atos administrativos."
+        },
+        {
+          "id": 12,
+          "frente": "(AOCP) A presunção de legitimidade do ato administrativo é absoluta?",
+          "verso": "NÃO. É RELATIVA (juris tantum), admitindo prova em contrário. O ato se presume legítimo até que se prove o contrário.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que é absoluta (juris et de jure).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Atos administrativos."
+        },
+        {
+          "id": 13,
+          "frente": "(AOCP) Quais são os poderes administrativos?",
+          "verso": "Alternativa correta: HIERÁRQUICO, DISCIPLINAR, REGULAMENTAR E DE POLÍCIA. São os poderes que o administrador possui para o exercício da função pública.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Omitir algum ou incluir 'poder vinculado' (não é classificação de poder).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Poderes."
+        },
+        {
+          "id": 14,
+          "frente": "(AOCP) O que é o poder de polícia?",
+          "verso": "Alternativa correta: FACULDADE DE CONDICIONAR E RESTRINGIR O USO DE BENS E O EXERCÍCIO DE DIREITOS EM BENEFÍCIO DO INTERESSE PÚBLICO. Ex.: fiscalização sanitária, trânsito.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com poder disciplinar (que pune servidores).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Poderes."
+        },
+        {
+          "id": 15,
+          "frente": "(AOCP) A Lei 8.112/90 dispõe sobre:",
+          "verso": "Alternativa correta: REGIME JURÍDICO ÚNICO DOS SERVIDORES PÚBLICOS CIVIS DA UNIÃO, autarquias e fundações públicas federais. Inclui provimento, vacância, direitos, deveres e regime disciplinar.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que se aplica a todos os entes (é federal).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 8.112/90."
+        },
+        {
+          "id": 16,
+          "frente": "(AOCP) Quais são as formas de provimento de cargo público previstas na Lei 8.112/90?",
+          "verso": "Alternativa correta: NOMEAÇÃO, PROMOÇÃO, READAPTAÇÃO, REVERSÃO, APROVEITAMENTO, REINTEGRAÇÃO E RECONDUÇÃO. A nomeação é a forma originária; as demais são derivadas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Omitir alguma forma ou incluir 'transferência' (que foi extinta).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 8.112/90."
+        },
+        {
+          "id": 17,
+          "frente": "(AOCP) Qual o prazo de estágio probatório previsto na Lei 8.112/90?",
+          "verso": "Alternativa correta: 24 MESES (2 ANOS) DE EFETIVO EXERCÍCIO. Durante esse período, o servidor é avaliado em: assiduidade, disciplina, iniciativa, produtividade e responsabilidade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar 24 por 36 meses (após EC 19/98, é 24).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 8.112/90."
+        },
+        {
+          "id": 18,
+          "frente": "(AOCP) A Lei 8.429/92 (Improbidade Administrativa), após a Lei 14.230/2021, exige:",
+          "verso": "Alternativa correta: DOLO ESPECÍFICO PARA TODAS AS MODALIDADES DE IMPROBIDADE. A modalidade culposa foi extinta.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que ainda existe improbidade culposa.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 8.429/92."
+        },
+        {
+          "id": 19,
+          "frente": "(AOCP) A Lei 9.784/99 regula:",
+          "verso": "Alternativa correta: O PROCESSO ADMINISTRATIVO NO ÂMBITO DA ADMINISTRAÇÃO PÚBLICA FEDERAL. Estabelece princípios, prazos e procedimentos.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que se aplica a todos os entes federativos (é federal).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 9.784/99."
+        },
+        {
+          "id": 20,
+          "frente": "(AOCP) Qual o prazo para a Administração anular seus próprios atos, salvo comprovada má-fé?",
+          "verso": "Alternativa correta: 5 ANOS, contados da data do ato (art. 54 da Lei 9.784/99). A Súmula 633 do STJ estendeu aos estados e municípios.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Trocar '5 anos' por '10 anos'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Noções de Administração Pública - Lei 9.784/99."
+        }
+      ]
+    },
+    "administracao-geral": {
+      "nome": "Noções de Administração Geral",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(AOCP) Quais são as funções administrativas segundo Fayol (teoria clássica)?",
+          "verso": "Alternativa correta: PLANEJAR, ORGANIZAR, DIRIGIR E CONTROLAR (PODC). São as quatro funções básicas da administração.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Omitir alguma ou incluir 'coordenar' (Fayol tinha 5, mas a versão atual é PODC).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Teorias da Administração."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) O que é o planejamento estratégico?",
+          "verso": "Alternativa correta: PROCESSO DE DEFINIÇÃO DE OBJETIVOS DE LONGO PRAZO E DAS ESTRATÉGIAS PARA ALCANÇÁ-LOS. Envolve missão, visão, valores, análise SWOT.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com planejamento tático (médio prazo) ou operacional (curto prazo).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Planejamento."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) O que é a análise SWOT?",
+          "verso": "Alternativa correta: FERRAMENTA DE PLANEJAMENTO ESTRATÉGICO QUE AVALIA FORÇAS, FRAQUEZAS, OPORTUNIDADES E AMEAÇAS. Ajuda a identificar o posicionamento estratégico.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir SWOT com BSC ou Matriz GUT.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Planejamento."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) O que é a organização no processo administrativo?",
+          "verso": "Alternativa correta: FUNÇÃO QUE ESTRUTURA OS RECURSOS E ATIVIDADES DA EMPRESA, DEFININDO ÓRGÃOS, CARGOS, RESPONSABILIDADES E RELAÇÕES. Envolve departamentalização.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que organização é 'arrumar a bagunça' (é estruturar recursos).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Processo administrativo."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) O que é a direção no processo administrativo?",
+          "verso": "Alternativa correta: FUNÇÃO QUE ENVOLVE LIDERANÇA, MOTIVAÇÃO E COMUNICAÇÃO, ORIENTANDO AS PESSOAS PARA OS OBJETIVOS DA ORGANIZAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com controle (que verifica resultados).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Processo administrativo."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) O que é o controle no processo administrativo?",
+          "verso": "Alternativa correta: FUNÇÃO QUE VERIFICA SE O QUE FOI PLANEJADO ESTÁ SENDO EXECUTADO, identificando desvios e corrigindo rumos. Envolve padrões, avaliação e ação corretiva.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que controle é só 'vigiar' (é monitorar e corrigir).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Processo administrativo."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) O que é a departamentalização funcional?",
+          "verso": "Alternativa correta: AGRUPAMENTO POR FUNÇÃO (produção, marketing, finanças, RH). É a forma mais comum de estrutura organizacional.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com departamentalização por produto, cliente ou região.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Estrutura organizacional."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) O que é a departamentalização por produto?",
+          "verso": "Alternativa correta: AGRUPAMENTO POR LINHA DE PRODUTO OU SERVIÇO. Cada produto tem sua própria estrutura. Vantagem: foco no produto; desvantagem: duplicação de recursos.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com departamentalização funcional.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Estrutura organizacional."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) O que é a administração por objetivos (APO)?",
+          "verso": "Alternativa correta: METODOLOGIA EM QUE SUPERIORES E SUBORDINADOS DEFINEM CONJUNTAMENTE OS OBJETIVOS E AVALIAM O DESEMPENHO. Baseada em Peter Drucker.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com OKR (versão moderna e mais ágil).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Teorias da Administração."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) O que é o BSC (Balanced Scorecard)?",
+          "verso": "Alternativa correta: FERRAMENTA DE GESTÃO ESTRATÉGICA QUE ORGANIZA OBJETIVOS EM 4 PERSPECTIVAS: financeira, clientes, processos internos, aprendizado e crescimento. Criada por Kaplan e Norton.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que BSC é só financeiro (abrange 4 perspectivas).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Planejamento."
+        },
+        {
+          "id": 11,
+          "frente": "(AOCP) O que é gestão por processos (BPM)?",
+          "verso": "Alternativa correta: ABORDAGEM QUE FOCO EM MAPEAR, ANALISAR, REDESENHAR E MONITORAR PROCESSOS, BUSCANDO EFICIÊNCIA E VALOR AO CLIENTE. Visão horizontal (não departamental).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com gestão por funções (verticalizada).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão por processos."
+        },
+        {
+          "id": 12,
+          "frente": "(AOCP) O que é o ciclo PDCA?",
+          "verso": "Alternativa correta: PLAN (planejar), DO (executar), CHECK (verificar), ACT (agir). Ferramenta de melhoria contínua aplicável à gestão de processos e qualidade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com SDCA (padronização) ou DMAIC (Six Sigma).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão por processos."
+        },
+        {
+          "id": 13,
+          "frente": "(AOCP) O que é a gestão da qualidade total (GQT)?",
+          "verso": "Alternativa correta: ABORDAGEM QUE ENVOLVE TODOS OS COLABORADORES NA BUSCA DA MELHORIA CONTÍNUA DA QUALIDADE, com foco no cliente e na satisfação das necessidades.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que qualidade é só 'inspecionar' (é responsabilidade de todos).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Qualidade."
+        },
+        {
+          "id": 14,
+          "frente": "(AOCP) O que são as ferramentas da qualidade?",
+          "verso": "Alternativa correta: DIAGRAMA DE PARETO, DIAGRAMA DE ISHIKAWA (causa-efeito), HISTOGRAMA, CARTA DE CONTROLE, FLUXOGRAMA, FOLHA DE VERIFICAÇÃO E DIAGRAMA DE DISPERSÃO. São 7 ferramentas clássicas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Omitir alguma das 7 ferramentas.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Qualidade."
+        },
+        {
+          "id": 15,
+          "frente": "(AOCP) O que é a gestão de projetos?",
+          "verso": "Alternativa correta: APLICAÇÃO DE CONHECIMENTOS, HABILIDADES E TÉCNICAS PARA ATINGIR OBJETIVOS DE UM PROJETO, DENTRO DE PRAZO, CUSTO E QUALIDADE. Baseada no PMBOK.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir projeto (temporário) com processo (contínuo).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de projetos."
+        }
+      ]
+    },
+    "gestao-pessoas": {
+      "nome": "Noções de Gestão de Pessoas",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(AOCP) O que é recrutamento de pessoal?",
+          "verso": "Alternativa correta: PROCESSO DE ATRAIR CANDIDATOS PARA UMA VAGA, podendo ser interno (dentro da organização) ou externo (mercado). Antecede a seleção.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir recrutamento (atrair) com seleção (escolher).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) O que é seleção de pessoal?",
+          "verso": "Alternativa correta: PROCESSO DE ESCOLHER, ENTRE OS CANDIDATOS RECRUTADOS, AQUELE QUE MELHOR SE ADEQUA AO CARGO. Envolve entrevistas, testes e dinâmicas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir seleção (escolher) com recrutamento (atrair).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) O que é treinamento?",
+          "verso": "Alternativa correta: PROCESSO DE CURTO PRAZO FOCADO EM MELHORAR O DESEMPENHO EM TAREFAS ESPECÍFICAS DO CARGO ATUAL.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir treinamento (curto prazo) com desenvolvimento (longo prazo).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) O que é desenvolvimento de pessoal?",
+          "verso": "Alternativa correta: PROCESSO DE LONGO PRAZO FOCADO EM PREPARAR O COLABORADOR PARA ASSUMIR POSIÇÕES MAIS COMPLEXAS NO FUTURO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir desenvolvimento (longo prazo) com treinamento (curto prazo).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) O que é gestão de desempenho?",
+          "verso": "Alternativa correta: PROCESSO DE AVALIAR O RENDIMENTO DO COLABORADOR E FORNECER FEEDBACK PARA MELHORAR OS RESULTADOS. Envolve metas, avaliação e plano de desenvolvimento.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que avaliação de desempenho é apenas anual.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) O que é a motivação intrínseca?",
+          "verso": "Alternativa correta: MOTIVAÇÃO INTERNA, RELACIONADA AO PRAZER E À SATISFAÇÃO PESSOAL NA EXECUÇÃO DA PRÓPRIA ATIVIDADE. Vem de dentro do indivíduo.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter intrínseca (interna) com extrínseca (externa).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) O que é a Pirâmide de Maslow?",
+          "verso": "Alternativa correta: TEORIA QUE ORGANIZA AS NECESSIDADES HUMANAS EM 5 NÍVEIS: fisiológicas, segurança, sociais, estima e autorrealização. Da base para o topo.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter a ordem da pirâmide.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) O que é a Teoria dos Dois Fatores de Herzberg?",
+          "verso": "Alternativa correta: DIVIDE OS FATORES EM HIGIÊNICOS (evitam insatisfação: salário, condições) E MOTIVACIONAIS (geram satisfação: reconhecimento, crescimento).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que fatores higiênicos geram motivação (só evitam insatisfação).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) O que é a gestão por competências?",
+          "verso": "Alternativa correta: ABORDAGEM QUE ALINHA AS COMPETÊNCIAS DOS COLABORADORES (conhecimentos, habilidades e atitudes - CHA) ÀS NECESSIDADES ESTRATÉGICAS DA ORGANIZAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Reduzir competência a 'conhecimento' (inclui habilidade e atitude).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) O que é a qualidade de vida no trabalho (QVT)?",
+          "verso": "Alternativa correta: CONJUNTO DE AÇÕES QUE VISAM MELHORAR AS CONDIÇÕES DE TRABALHO, O BEM-ESTAR E A SATISFAÇÃO DOS COLABORADORES. Inclui ergonomia, clima, relações interpessoais e equilíbrio trabalho-vida.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Reduzir QVT a 'salário' ou 'benefícios'.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Pessoas."
+        }
+      ]
+    },
+    "gestao-materiais-contratos": {
+      "nome": "Noções de Gestão de Materiais e Contratos",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(AOCP) O que é a classificação de materiais?",
+          "verso": "Alternativa correta: PROCESSO DE AGRUPAR ITENS COM CARACTERÍSTICAS SEMELHANTES, FACILITANDO A GESTÃO DE ESTOQUES. Pode ser por natureza, uso, criticidade, etc.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que classificação é só por preço.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Materiais."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) O que é a curva ABC na gestão de estoques?",
+          "verso": "Alternativa correta: FERRAMENTA QUE CLASSIFICA OS ITENS EM A (maior valor/importância), B (intermediário) e C (menor valor). Foco de gestão nos itens A.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter a ordem (A é o mais importante, não o menos).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão de Materiais."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) O que é o inventário de bens patrimoniais?",
+          "verso": "Alternativa correta: PROCEDIMENTO DE VERIFICAÇÃO FÍSICA DOS BENS, COMPARANDO O FÍSICO COM O REGISTRADO. Garante a fidedignidade do patrimônio.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir inventário (verificação) com baixa (exclusão).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão Patrimonial."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) O que é a baixa de bens patrimoniais?",
+          "verso": "Alternativa correta: PROCEDIMENTO DE EXCLUSÃO DEFINITIVA DO BEM DO PATRIMÔNIO DA ORGANIZAÇÃO, por venda, doação, inservibilidade ou outras hipóteses legais.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir baixa (exclusão) com transferência (mudança de local).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Gestão Patrimonial."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) Qual a lei que rege as licitações e contratos administrativos atualmente?",
+          "verso": "Alternativa correta: LEI 14.133/2021 (NOVA LEI DE LICITAÇÕES), que substituiu a Lei 8.666/93, a Lei 10.520/2002 (pregão) e o RDC (Lei 12.462/2011).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que a 8.666/93 ainda está em vigor plenamente.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Licitações."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) Quais são as modalidades de licitação previstas na Lei 14.133/2021?",
+          "verso": "Alternativa correta: PREGÃO, CONCORRÊNCIA, CONCURSO, LEILÃO E DIÁLOGO COMPETITIVO. São 5 modalidades.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Incluir 'tomada de preços' ou 'convite' (extintas).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Licitações."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) O pregão é a modalidade de licitação obrigatória para:",
+          "verso": "Alternativa correta: AQUISIÇÃO DE BENS E SERVIÇOS COMUNS. É obrigatório para esse tipo de contratação, podendo ser eletrônico ou presencial.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que o pregão é opcional (é obrigatório para bens comuns).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Licitações."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) A licitação é inexigível quando:",
+          "verso": "Alternativa correta: HÁ INVIABILIDADE DE COMPETIÇÃO. Ex.: contratação de artista consagrado, fornecedor exclusivo. Art. 74 da Lei 14.133/2021.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir inexigibilidade (impossível competir) com dispensa (possível competir, mas lei dispensa).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Licitações."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) O que é o termo de referência?",
+          "verso": "Alternativa correta: DOCUMENTO QUE DEFINE O OBJETO DA CONTRATAÇÃO, COM ESPECIFICAÇÕES TÉCNICAS E REQUISITOS. Obrigatório para bens e serviços (art. 6º, XXIII, Lei 14.133/2021).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com projeto básico (obras de engenharia).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Contratos."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) Qual o papel do fiscal do contrato?",
+          "verso": "Alternativa correta: ACOMPANHAR A EXECUÇÃO CONTRATUAL, REGISTRAR OCORRÊNCIAS E REPORTAR AO GESTOR. É o servidor designado pela Administração para fiscalizar o contrato.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir fiscal (acompanha) com gestor (coordena).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Contratos."
+        }
+      ]
+    },
+    "afo-arquivologia": {
+      "nome": "Noções de AFO e Arquivologia",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(AOCP) O que é o Plano Plurianual (PPA)?",
+          "verso": "Alternativa correta: INSTRUMENTO QUE ESTABELECE AS DIRETRIZES, OBJETIVOS E METAS DA ADMINISTRAÇÃO PÚBLICA PARA UM PERÍODO DE 4 ANOS. Art. 165, I, CF/88.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que o PPA dura 1 ano (é 4).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 2,
+          "frente": "(AOCP) O que é a Lei de Diretrizes Orçamentárias (LDO)?",
+          "verso": "Alternativa correta: INSTRUMENTO QUE COMPREENDE AS METAS E PRIORIDADES DA ADMINISTRAÇÃO PÚBLICA, ORIENTANDO A ELABORAÇÃO DA LOA. Art. 165, II, CF/88.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir LDO (diretrizes) com LOA (orçamento).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 3,
+          "frente": "(AOCP) O que é a Lei Orçamentária Anual (LOA)?",
+          "verso": "Alternativa correta: INSTRUMENTO QUE ESTIMA AS RECEITAS E FIXA AS DESPESAS PARA O EXERCÍCIO FINANCEIRO. Art. 165, III, CF/88.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir LOA (orçamento) com LDO (diretrizes).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 4,
+          "frente": "(AOCP) O ciclo orçamentário compreende quais etapas?",
+          "verso": "Alternativa correta: ELABORAÇÃO (Executivo), APROVAÇÃO (Legislativo), EXECUÇÃO E AVALIAÇÃO/CONTROLE. São 4 etapas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Pular a etapa de avaliação.",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 5,
+          "frente": "(AOCP) A despesa pública passa pelos estágios de:",
+          "verso": "Alternativa correta: EMPENHO (reserva), LIQUIDAÇÃO (verificação) E PAGAMENTO (quitação). São 3 estágios, nessa ordem.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Inverter a ordem (empenho → liquidação → pagamento).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 6,
+          "frente": "(AOCP) Qual a lei que estabelece normas gerais de direito financeiro para elaboração e controle dos orçamentos?",
+          "verso": "Alternativa correta: LEI 4.320/1964. Estabelece normas gerais de direito financeiro para elaboração e controle dos orçamentos e balanços da União, Estados, DF e Municípios.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com a LRF (LC 101/2000).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 7,
+          "frente": "(AOCP) O que é a Lei de Responsabilidade Fiscal (LRF)?",
+          "verso": "Alternativa correta: LEI COMPLEMENTAR 101/2000, QUE ESTABELECE NORMAS DE FINANÇAS PÚBLICAS VOLTADAS PARA A RESPONSABILIDADE NA GESTÃO FISCAL. Inclui planejamento, transparência e controle.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que a LRF é uma lei ordinária (é complementar).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - AFO."
+        },
+        {
+          "id": 8,
+          "frente": "(AOCP) O que é a arquivologia?",
+          "verso": "Alternativa correta: CIÊNCIA QUE ESTUDA A GESTÃO DE DOCUMENTOS E ARQUIVOS, SUAS FUNÇÕES E CICLO DE VIDA. Envolve organização, guarda, preservação e destinação.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir com biblioteconomia (livros).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Arquivologia."
+        },
+        {
+          "id": 9,
+          "frente": "(AOCP) O que é o ciclo vital dos documentos (teoria das três idades)?",
+          "verso": "Alternativa correta: COMPREENDE AS IDADES CORRENTE (uso frequente), INTERMEDIÁRIA (uso eventual) E PERMANENTE (guarda definitiva).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Confundir intermediária (eventual) com permanente (definitiva).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Arquivologia."
+        },
+        {
+          "id": 10,
+          "frente": "(AOCP) O que é a tabela de temporalidade de documentos?",
+          "verso": "Alternativa correta: INSTRUMENTO QUE DEFINE OS PRAZOS DE GUARDA E A DESTINAÇÃO FINAL DOS DOCUMENTOS (eliminação ou guarda permanente).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "AOCP",
+          "pegadinha": "Achar que só define prazos (define também destinação).",
+          "fundamento": "Edital UFABC 2025, Anexo II, Conhecimentos Específicos - Arquivologia."
+        }
       ]
     }
   }
