@@ -101,7 +101,7 @@ const products = [
     badge: 'Lançamento',
     category: 'Educação',
     features: [
-      '180 flashcards',
+      '130 flashcards',
       '3 mapas mentais',
       'Guia de revisão 4 semanas',
       '80 questões - 5h'
