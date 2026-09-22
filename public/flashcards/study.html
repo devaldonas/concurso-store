@@ -193,7 +193,16 @@
             const storageKey = `flashcards_${concurso}_${baralhoId}`;
             const progressoSalvo = localStorage.getItem(storageKey);
             if (progressoSalvo) {
-                state.cards = JSON.parse(progressoSalvo);
+                const cardsSalvos = JSON.parse(progressoSalvo);
+                // Valida se o número de cards bate com o JSON atual
+                if (cardsSalvos.length === dados.cards.length) {
+                    state.cards = cardsSalvos;
+                } else {
+                    // Se o número mudou, descarta o progresso antigo
+                    console.warn(`Progresso antigo descartado: ${cardsSalvos.length} cards salvos vs ${dados.cards.length} no JSON atual`);
+                    state.cards = dados.cards.map(c => ({ ...c, revisado: false }));
+                    localStorage.removeItem(storageKey);
+                }
             } else {
                 state.cards = dados.cards.map(c => ({ ...c, revisado: false }));
             }
