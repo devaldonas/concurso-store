@@ -1,79 +1,1348 @@
 {
   "nome": "PM/SP 2026 - Soldado",
+  "banca": "Vunesp",
+  "cargo": "Aluno-Soldado PM",
+  "nivel": "medio",
+  "edital_ref": "Edital nº DP-3/321/26 - PM/SP (Vunesp)",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "Em 'Faz dez anos que sirvo', por que o verbo 'fazer' fica no singular?", "verso": "Porque indicando tempo decorrido é impessoal.", "dificuldade": 2},
-        {"id": 2, "frente": "Em 'Chegamos à conclusão', por que há crase?", "verso": "Fusão da preposição 'a' com o artigo 'a' antes de palavra feminina.", "dificuldade": 2},
-        {"id": 3, "frente": "O que isola a vírgula em 'O policial, que é experiente, resolveu o caso'?", "verso": "Oração subordinada adjetiva explicativa.", "dificuldade": 2},
-        {"id": 4, "frente": "Qual a regência correta do verbo 'obedecer'?", "verso": "Obedeço às leis (transitivo indireto com preposição 'a').", "dificuldade": 2},
-        {"id": 5, "frente": "Como se forma a palavra 'inconstitucional'?", "verso": "Derivação prefixal: prefixo 'in-' + 'constitucional'.", "dificuldade": 2},
-        {"id": 6, "frente": "Quando usar próclise em colocação pronominal?", "verso": "Com palavras atrativas: não, nunca, que, quem, etc.", "dificuldade": 3},
-        {"id": 7, "frente": "O que é agente da passiva?", "verso": "Termo que pratica a ação na voz passiva analítica.", "dificuldade": 2},
-        {"id": 8, "frente": "O que a vírgula isola em 'O policial, que é experiente, resolveu'?", "verso": "Oração subordinada adjetiva explicativa.", "dificuldade": 2},
-        {"id": 9, "frente": "Com o pronome 'quem' como sujeito, o verbo concorda com quem?", "verso": "Pode concordar com o antecedente ou ficar na 3ª pessoa.", "dificuldade": 3},
-        {"id": 10, "frente": "Qual a grafia correta: 'previlégio' ou 'privilégio'?", "verso": "Privilégio (com 'i' após 'pr').", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(VUNESP) Na frase 'O policial cumpriu as normas, porém não obteve êxito', a conjunção 'porém' estabelece relação de:",
+          "verso": "Alternativa correta: OPOSIÇÃO. 'Porém' é conjunção coordenativa adversativa, que expressa contraste entre as orações.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por 'portanto' (conclusiva) ou 'pois' (explicativa).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 8 - Conjunção."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Em 'Faz dez anos que a PM/SP modernizou o policiamento', o verbo 'fazer' está corretamente flexionado?",
+          "verso": "SIM. Indicando tempo decorrido, 'fazer' é impessoal e fica obrigatoriamente na 3ª pessoa do singular. 'Fazem dez anos' estaria ERRADO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Pluralizar para 'Fazem dez anos' por atração do termo 'dez anos'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 6 - Concordância verbal."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Em 'Haviam muitos policiais na operação', o verbo 'haver' está corretamente empregado?",
+          "verso": "NÃO. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular: 'Havia muitos policiais'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Pluralizar 'haver' por atração do sujeito, confundindo com 'existir'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 6 - Concordância verbal."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Em 'Refiro-me à ocorrência que foi registrada', o acento grave está corretamente empregado?",
+          "verso": "SIM. 'Referir-se' é transitivo indireto (exige 'a') e 'ocorrência' é substantivo feminino determinado → a + a = à. Crase obrigatória.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que 'referir-se a' não admite artigo.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 9 - Crase."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Em 'Entreguei o relatório a uma autoridade', o uso da crase seria obrigatório se escrevêssemos 'à uma autoridade'?",
+          "verso": "NÃO. Não se usa crase antes de artigo indefinido ('uma'). O correto é 'a uma autoridade', sem acento grave.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Induzir o candidato a achar que a crase é obrigatória antes de qualquer palavra feminina.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 9 - Crase."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Em 'Vendem-se armas no mercado ilegal', o 'se' é partícula apassivadora?",
+          "verso": "SIM. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética, equivalente a 'Armas são vendidas no mercado ilegal'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito (que ocorre com VTI).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: pronome."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Em 'Trata-se de ocorrências graves', o 'se' é índice de indeterminação do sujeito?",
+          "verso": "SIM. O verbo 'tratar-se' é transitivo indireto (exige a preposição 'de'). Nesse caso, o 'se' indetermina o sujeito e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com partícula apassivadora (VTD).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: pronome."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Em 'O policial que prendeu o suspeito foi condecorado', a oração 'que prendeu o suspeito' é subordinada adjetiva:",
+          "verso": "Alternativa correta: RESTRITIVA. Não está entre vírgulas e restringe o sentido de 'policial'. Explicativa viria entre vírgulas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar restritiva (sem vírgula) por explicativa (com vírgula).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: pronome."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Em 'O policial, que é experiente, resolveu o caso', a oração destacada é subordinada adjetiva:",
+          "verso": "Alternativa correta: EXPLICATIVA. Está isolada por vírgulas e explica uma característica do antecedente 'policial', sem restringir o sentido.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a vírgula não muda a classificação da oração.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 4 - Pontuação."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Em 'Não me disse a verdade', a próclise é obrigatória por causa do advérbio de negação 'não'?",
+          "verso": "SIM. Palavras atrativas (como 'não', 'nunca', 'jamais', 'que', 'quem') atraem o pronome oblíquo para antes do verbo (próclise).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 8 - Colocação pronominal."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Em 'Entreguei-lhe o relatório', o pronome 'lhe' funciona como:",
+          "verso": "Alternativa correta: OBJETO INDIRETO. O pronome 'lhe' complementa verbo transitivo indireto. Aqui 'o relatório' é o OD e 'lhe' é o OI.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar as funções de 'lhe' (OI) e 'o/a' (OD).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: pronome."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) A palavra 'benefício' está corretamente grafada segundo o Novo Acordo Ortográfico?",
+          "verso": "SIM. A grafia 'benefício' (com 'i' tônico) está correta. Não confundir com 'beneficiente' ou 'beneficência'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por 'benefício' (errado) ou 'beneficio' sem acento.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 2 - Sinônimos e antônimos."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) A palavra 'policial' está corretamente acentuada?",
+          "verso": "SIM. 'Policial' não tem acento gráfico. É paroxítona terminada em '-l', não acentuada.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Colocar acento em 'polícial' ou 'policiál'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 3 - Sentido próprio e figurado das palavras."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) O texto dissertativo-argumentativo tem como característica principal:",
+          "verso": "Alternativa correta: DEFESA DE UM PONTO DE VISTA COM ARGUMENTOS ORGANIZADOS. Apresenta tese + argumentos + conclusão, visando convencer o leitor.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com dissertativo-expositivo (que apenas informa, sem defender tese).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 1 - Leitura e interpretação de textos."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Em 'A PM/SP, órgão de segurança pública, atua em todo o Estado', o termo 'órgão de segurança pública' é:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO. Explica/especifica o antecedente 'PM/SP', isolado por vírgulas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com vocativo (chamamento) ou predicativo.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: substantivo."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Em 'Preciso de que o policial compareça ao local', o 'que' é:",
+          "verso": "Alternativa correta: CONJUNÇÃO INTEGRANTE. Introduz oração subordinada substantiva completiva nominal (complementa 'de').",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: conjunção."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Em 'A ocorrência foi registrada ontem', o termo 'ontem' é:",
+          "verso": "Alternativa correta: ADJUNTO ADVERBIAL DE TEMPO. 'Ontem' indica circunstância de tempo, modificando o verbo 'foi registrada'.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com aposto, predicativo ou objeto indireto.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: advérbio."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) A coesão textual é garantida exclusivamente pelo uso de conjunções?",
+          "verso": "NÃO. A coesão pode ser referencial (pronomes, sinônimos, elipses, numerais) OU sequencial (conjunções, conectivos). Não se limita a conjunções.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Restringir a coesão a apenas um mecanismo.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 1 - Leitura e interpretação de textos."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Qual a função do 'que' em 'O caso que você investigou está arquivado'?",
+          "verso": "Alternativa correta: PRONOME RELATIVO. Retoma o antecedente 'caso' e introduz oração subordinada adjetiva restritiva.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com conjunção integrante.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 5 - Classes de palavras: pronome."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Em 'Estudei muito, portanto passei', a vírgula está corretamente empregada?",
+          "verso": "SIM. A vírgula separa oração coordenada sindética conclusiva (conjunção 'portanto').",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Suprimir a vírgula antes de 'portanto'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 4 - Pontuação."
+        },
+        {
+          "id": 21,
+          "frente": "(VUNESP) Em 'João, o comandante do batalhão, chegou cedo', as vírgulas isolam:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO ('o comandante do batalhão'). O aposto explica ou especifica o termo anterior.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com vocativo (chamamento) ou com oração adjetiva explicativa.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 4 - Pontuação."
+        },
+        {
+          "id": 22,
+          "frente": "(VUNESP) Qual a regência correta do verbo 'obedecer'?",
+          "verso": "Alternativa correta: 'OBEDECER' É TRANSITIVO INDIRETO. Exige a preposição 'a': 'Obedeço às leis'. O mesmo vale para 'desobedecer'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar sem preposição ('Obedeço as leis') ou sem crase.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 7 - Regência verbal e nominal."
+        },
+        {
+          "id": 23,
+          "frente": "(VUNESP) Qual a regência correta do verbo 'assistir' no sentido de 'ver'?",
+          "verso": "Alternativa correta: TRANSITIVO INDIRETO (EXIGE 'A'). 'Assisti ao filme'. No sentido de 'ajudar', é transitivo direto: 'O médico assistiu o paciente'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar 'assistir o filme' (sem preposição) no sentido de ver.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 7 - Regência verbal e nominal."
+        },
+        {
+          "id": 24,
+          "frente": "(VUNESP) Em 'Ele disse que viria, mas não veio', o 'mas' introduz qual relação de sentido?",
+          "verso": "Alternativa correta: OPOSIÇÃO/CONTRASTE. É conjunção coordenativa adversativa.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com adição ('e') ou conclusão ('portanto').",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 8 - Conjunção."
+        },
+        {
+          "id": 25,
+          "frente": "(VUNESP) Em 'O policial, que é dedicado, foi promovido', se retirarmos as vírgulas, o sentido:",
+          "verso": "Muda. Com vírgulas = EXPLICATIVA (todos os policiais foram promovidos? ou o policial específico?). Sem vírgulas = RESTRITIVA (apenas o policial que é dedicado foi promovido).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que as vírgulas são decorativas e não mudam o sentido.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Língua Portuguesa, item 4 - Pontuação."
+        }
+      ]
+    },
+    "raciocinio-logico": {
+      "nome": "Raciocínio Lógico",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) A condicional 'Se P, então Q' é falsa apenas quando:",
+          "verso": "Alternativa correta: P É VERDADEIRO E Q É FALSO. Na condicional (P → Q), o único caso em que é falsa é V → F.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que F→V ou F→F são falsas.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) A negação de 'Todos os policiais são corajosos' é:",
+          "verso": "Alternativa correta: 'ALGUM POLICIAL NÃO É CORAJOSO' (ou 'Pelo menos um não é'). A negação de 'Todos' é 'Algum não'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) A negação de 'P e Q' é:",
+          "verso": "Alternativa correta: 'NÃO P OU NÃO Q'. Pela Lei de De Morgan, ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'ou' por 'e' na negação.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) A negação de 'P ou Q' é:",
+          "verso": "Alternativa correta: 'NÃO P E NÃO Q'. Pela Lei de De Morgan, ¬(P ∨ Q) = ¬P ∧ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'e' por 'ou' na negação.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Uma tabela-verdade com 3 proposições simples tem quantas linhas?",
+          "verso": "Alternativa correta: 8 LINHAS. O número de linhas é 2^n, onde n é o número de proposições. 2³ = 8.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com 2×3=6 ou 3²=9.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) O que é uma tautologia?",
+          "verso": "Alternativa correta: PROPOSIÇÃO COMPOSTA SEMPRE VERDADEIRA, independentemente dos valores lógicos das proposições simples que a compõem (ex.: P ∨ ¬P).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com contradição (sempre falsa).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) O que é contradição em lógica?",
+          "verso": "Alternativa correta: PROPOSIÇÃO COMPOSTA SEMPRE FALSA, independentemente dos valores lógicos das proposições simples (ex.: P ∧ ¬P).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com tautologia (sempre verdadeira).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) A união de dois conjuntos A e B contém:",
+          "verso": "Alternativa correta: TODOS OS ELEMENTOS QUE PERTENCEM A A OU A B (ou a ambos). A ∪ B = {x | x ∈ A ou x ∈ B}.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir união (∪) com interseção (∩).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) A interseção de dois conjuntos A e B contém:",
+          "verso": "Alternativa correta: APENAS OS ELEMENTOS COMUNS AOS DOIS. A ∩ B = {x | x ∈ A e x ∈ B}.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com união.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Se 40% dos policiais são homens e 25% são maiores de 30 anos, quantos por cento são necessariamente homens E maiores de 30 anos?",
+          "verso": "NÃO É POSSÍVEL DETERMINAR. A interseção entre os dois conjuntos não pode ser inferida apenas com os percentuais isolados. Poderia ser de 0% a 25%.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Somar ou subtrair percentuais sem considerar a interseção.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) A proposição 'Se o candidato estudou, então foi aprovado' é logicamente equivalente a:",
+          "verso": "Alternativa correta: 'SE O CANDIDATO NÃO FOI APROVADO, ENTÃO NÃO ESTUDOU'. A equivalência da condicional P → Q é a contrapositiva ¬Q → ¬P.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com a recíproca (Q → P) ou inversa (¬P → ¬Q).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Qual o próximo termo da sequência: 2, 6, 18, 54, ...?",
+          "verso": "Alternativa correta: 162. É uma PG de razão 3: 2×3=6, 6×3=18, 18×3=54, 54×3=162.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir PA (adição) com PG (multiplicação).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Qual o próximo termo da sequência: 1, 4, 9, 16, 25, ...?",
+          "verso": "Alternativa correta: 36. São os quadrados perfeitos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Tentar achar uma PA ou PG onde não existe.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Em uma urna há 5 bolas vermelhas e 3 azuis. Qual a probabilidade de retirar uma bola vermelha?",
+          "verso": "Alternativa correta: 5/8. Total = 8 bolas. Favoráveis = 5 vermelhas. P = 5/8.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir favoráveis com total ou inverter os números.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) A proposição 'Se P então Q' é equivalente a:",
+          "verso": "Alternativa correta: 'NÃO P OU Q'. A equivalência lógica da condicional P → Q é ¬P ∨ Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é 'P e Q' ou 'Q e P'.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 13 - Raciocínio lógico."
+        }
       ]
     },
     "matematica": {
       "nome": "Matemática",
       "cards": [
-        {"id": 1, "frente": "Como calcular velocidade média?", "verso": "Velocidade = distância / tempo.", "dificuldade": 1},
-        {"id": 2, "frente": "Como dividir um valor em partes proporcionais a 2, 3 e 4?", "verso": "Soma as partes (2+3+4=9); cada parte = (n/9) × valor total.", "dificuldade": 2},
-        {"id": 3, "frente": "Quanto é 3/5 de 25?", "verso": "3/5 × 25 = 15.", "dificuldade": 2},
-        {"id": 4, "frente": "Resolva 5x - 15 = 35.", "verso": "5x = 50 → x = 10.", "dificuldade": 2},
-        {"id": 5, "frente": "Como calcular 30% de 60?", "verso": "0,30 × 60 = 18.", "dificuldade": 1},
-        {"id": 6, "frente": "Qual a área de um retângulo 12 × 8?", "verso": "Área = 12 × 8 = 96 m².", "dificuldade": 1},
-        {"id": 7, "frente": "Como resolver 'x + 2x = 45'?", "verso": "3x = 45 → x = 15.", "dificuldade": 2},
-        {"id": 8, "frente": "5 policiais fazem uma ronda em 8h. Quantas horas levam 10 policiais?", "verso": "Grandezas inversas: 5 × 8 = 10 × x → x = 4h.", "dificuldade": 3},
-        {"id": 9, "frente": "Qual a média de 4, 7, 9 e 12?", "verso": "(4+7+9+12)/4 = 32/4 = 8.", "dificuldade": 1},
-        {"id": 10, "frente": "Produto de R$ 1.200 com 15% de desconto?", "verso": "Desconto = 180; valor final = R$ 1.020,00.", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(VUNESP) O MMC (Mínimo Múltiplo Comum) de 12 e 18 é:",
+          "verso": "Alternativa correta: 36. 12 = 2² × 3; 18 = 2 × 3². MMC = 2² × 3² = 4 × 9 = 36.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir MMC com MDC.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 3 - MMC."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Se 3/5 de um valor é R$ 240, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 400. 3/5 × X = 240 → X = 240 × 5 / 3 = 400.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter a fração (calcular 5/3).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 2 - Números racionais."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Se um produto de R$ 800 sofre um desconto de 15%, qual o valor final?",
+          "verso": "Alternativa correta: R$ 680. 800 × 0,85 = 680. O desconto é de R$ 120.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular 15% de 800 = 120 e esquecer de subtrair (deixando 120).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 5 - Porcentagem."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Se 4 policiais fazem uma ronda em 6 horas, quantas horas levam 8 policiais?",
+          "verso": "Alternativa correta: 3 horas. Grandezas inversas: 4 × 6 = 8 × X → X = 3.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Tratar como grandezas diretas (4×6/8 = 3 está certo, mas confundir).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 6 - Regra de três simples."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Qual a média aritmética simples de 4, 7, 9 e 12?",
+          "verso": "Alternativa correta: 8. (4+7+9+12)/4 = 32/4 = 8.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Esquecer de dividir pela quantidade de valores.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 7 - Média aritmética simples."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Qual a solução da equação 3x - 9 = 0?",
+          "verso": "Alternativa correta: x = 3. 3x = 9 → x = 3.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Errar o sinal ou inverter a operação.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 8 - Equação do 1º grau."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Qual a solução do sistema x + y = 10 e x - y = 4?",
+          "verso": "Alternativa correta: x = 7 e y = 3. Somando as duas equações: 2x = 14 → x = 7; y = 10 - 7 = 3.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Subtrair em vez de somar as equações.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 9 - Sistema de equações do 1º grau."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Quantos segundos há em 2 horas e 30 minutos?",
+          "verso": "Alternativa correta: 9.000 segundos. 2h = 7200s; 30min = 1800s. Total = 7200 + 1800 = 9000s.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Esquecer de converter as horas ou os minutos.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 10 - Sistema métrico: medidas de tempo."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Uma sala retangular tem 12m de comprimento e 8m de largura. Qual a área?",
+          "verso": "Alternativa correta: 96 m². Área = 12 × 8 = 96 m².",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular perímetro em vez de área.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 12 - Noções de geometria."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Um triângulo retângulo tem catetos de 3cm e 4cm. Qual a hipotenusa?",
+          "verso": "Alternativa correta: 5 cm. Teorema de Pitágoras: a² = 3² + 4² = 9 + 16 = 25 → a = 5.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Somar os catetos (3+4=7) em vez de usar Pitágoras.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 12 - Noções de geometria."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Se 30% de um valor é R$ 450, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 1.500. 0,30 × X = 450 → X = 450 / 0,30 = 1500.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Multiplicar em vez de dividir.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 5 - Porcentagem."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Um carro percorre 240 km em 3 horas. Qual a velocidade média?",
+          "verso": "Alternativa correta: 80 km/h. Velocidade = distância / tempo = 240 / 3 = 80 km/h.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter (tempo / distância).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 11 - Relação entre grandezas."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Um aumento de 20% seguido de um desconto de 20% resulta:",
+          "verso": "Alternativa correta: VALOR MENOR QUE O ORIGINAL. Ex.: 100 × 1,20 = 120; 120 × 0,80 = 96. Resultado final: 96 (4% menor).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que +20% e −20% se anulam.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 5 - Porcentagem."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Qual o volume de um cubo com aresta de 3 cm?",
+          "verso": "Alternativa correta: 27 cm³. V = a³ = 3³ = 27 cm³.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular área (3²=9) em vez de volume.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 12 - Noções de geometria."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Se um salário de R$ 2.000 sofre aumento de 15%, o novo valor é:",
+          "verso": "Alternativa correta: R$ 2.300. 2.000 × 1,15 = 2.300. O aumento é de R$ 300.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular 15% de 2.000 = 300 e esquecer de somar (deixando 300).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 5 - Porcentagem."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Em um grupo de 100 candidatos, 60 têm menos de 30 anos. Quantos têm 30 anos ou mais?",
+          "verso": "Alternativa correta: 40. 100 − 60 = 40. Se 60 têm menos de 30 anos, o restante (40) tem 30 anos ou mais.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Complicar um cálculo direto de complementar.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 14 - Resolução de situações-problema."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Quantos centímetros há em 2,5 metros?",
+          "verso": "Alternativa correta: 250 cm. 2,5 × 100 = 250 cm.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Multiplicar por 1000 em vez de 100.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 10 - Sistema métrico: medidas de comprimento."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Se um carro percorre 300 km com 25 litros de combustível, qual o consumo médio?",
+          "verso": "Alternativa correta: 12 km/l. Consumo = 300 / 25 = 12 km/l.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter (25/300).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 11 - Relação entre grandezas."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Um capital de R$ 2.000 é aplicado a juros simples de 3% ao mês por 4 meses. Qual o montante?",
+          "verso": "Alternativa correta: R$ 2.240. J = 2000 × 0,03 × 4 = 240. M = 2000 + 240 = 2240.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular juros compostos por engano.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 14 - Resolução de situações-problema."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Qual o perímetro de um retângulo com 10m de comprimento e 5m de largura?",
+          "verso": "Alternativa correta: 30 m. P = 2 × (10 + 5) = 2 × 15 = 30 m.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Somar apenas um lado (10+5=15) ou calcular área.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Matemática, item 12 - Noções de geometria."
+        }
       ]
     },
     "conhecimentos-gerais": {
       "nome": "Conhecimentos Gerais",
       "cards": [
-        {"id": 1, "frente": "Quem chegou ao poder com a Revolução de 1930?", "verso": "Getúlio Vargas.", "dificuldade": 1},
-        {"id": 2, "frente": "Em que período ocorreu a Segunda Guerra Mundial?", "verso": "1939 a 1945.", "dificuldade": 1},
-        {"id": 3, "frente": "Qual foi o período do Regime Militar no Brasil?", "verso": "1964 a 1985.", "dificuldade": 2},
-        {"id": 4, "frente": "Qual a capital do Estado de São Paulo?", "verso": "São Paulo.", "dificuldade": 1},
-        {"id": 5, "frente": "Quais países disputaram a Guerra Fria?", "verso": "EUA e URSS.", "dificuldade": 1},
-        {"id": 6, "frente": "Quem foi o primeiro presidente do Brasil?", "verso": "Deodoro da Fonseca (1889-1891).", "dificuldade": 2},
-        {"id": 7, "frente": "Qual o maior bioma brasileiro?", "verso": "Amazônia.", "dificuldade": 1},
-        {"id": 8, "frente": "Em que ano foi promulgada a atual CF?", "verso": "1988.", "dificuldade": 1},
-        {"id": 9, "frente": "O que foi o AI-5?", "verso": "Ato Institucional de 1968, o mais rígido do regime militar.", "dificuldade": 3},
-        {"id": 10, "frente": "Qual oceano banha o litoral brasileiro?", "verso": "Oceano Atlântico.", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(VUNESP) A Primeira Guerra Mundial (1914-1918) foi desencadeada, entre outros fatores, pela:",
+          "verso": "Alternativa correta: CORRIDA IMPERIALISTA E PELA DISPUTA POR MERCADOS E COLÔNIAS. O assassinato do arquiduque Francisco Ferdinando foi o estopim, mas as causas estruturais foram o imperialismo, o militarismo e o sistema de alianças.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que foi só o assassinato (foi o estopim, não a causa).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.1 - Primeira Guerra Mundial."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) O nazifascismo, que surgiu na Europa entre as duas guerras mundiais, caracterizou-se por:",
+          "verso": "Alternativa correta: TOTALITARISMO, NACIONALISMO EXACERBADO, ANTICOMUNISMO E CULTO AO LÍDER. São características comuns ao nazismo alemão e ao fascismo italiano.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o nazifascismo era de esquerda (era de extrema-direita).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.2 - Nazifascismo e Segunda Guerra Mundial."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) A Segunda Guerra Mundial (1939-1945) terminou com:",
+          "verso": "Alternativa correta: A DERROTA DAS POTÊNCIAS DO EIXO (Alemanha, Itália e Japão) E A CRIAÇÃO DA ONU. O lançamento das bombas atômicas em Hiroshima e Nagasaki (agosto/1945) marcou o fim do conflito.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a guerra terminou antes das bombas atômicas.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.2 - Segunda Guerra Mundial."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) A Guerra Fria (1947-1991) foi caracterizada pela:",
+          "verso": "Alternativa correta: BIPOLARIDADE ENTRE EUA E URSS, COM DISPUTA IDEOLÓGICA, CORRIDA ARMAMENTISTA E ESPACIAL, SEM CONFRONTO DIRETO ENTRE AS POTÊNCIAS. O Muro de Berlim (1961-1989) foi um símbolo do conflito.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que houve confronto direto entre EUA e URSS (nunca houve).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.3 - Guerra Fria."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) A globalização, intensificada a partir dos anos 1990, caracteriza-se por:",
+          "verso": "Alternativa correta: INTEGRAÇÃO ECONÔMICA, CULTURAL E POLÍTICA ENTRE OS PAÍSES, COM AVANÇO DAS TELECOMUNICAÇÕES E DO COMÉRCIO INTERNACIONAL. Marcada pela atuação das empresas multinacionais.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a globalização só tem aspectos positivos (tem críticas).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.4 - Globalização e políticas neoliberais."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) A Revolução de 1930, que levou Getúlio Vargas ao poder, foi motivada por:",
+          "verso": "Alternativa correta: A CRISE DA REPÚBLICA VELHA E A RUPTURA COM A POLÍTICA DO CAFÉ COM LEITE. O movimento representou a ascensão de novas elites urbanas e militares.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que foi uma revolução popular (foi um golpe das elites).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.1 - Revolução de 1930 e Era Vargas."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) A Era Vargas (1930-1945) foi marcada por:",
+          "verso": "Alternativa correta: CENTRALIZAÇÃO DO PODER, CRIAÇÃO DA LEGISLAÇÃO TRABALHISTA (CLT), NACIONALISMO ECONÔMICO E O ESTADO NOVO (1937-1945). Vargas governou de forma autoritária.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a Era Vargas foi democrática (teve o Estado Novo ditatorial).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.1 - Era Vargas."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) A Constituição de 1946, que marcou a redemocratização após o Estado Novo, caracterizou-se por:",
+          "verso": "Alternativa correta: RESTAURAR A DEMOCRACIA, GARANTIR DIREITOS FUNDAMENTAIS E ESTABELECER A DIVISÃO DOS TRÊS PODERES. Ficou conhecida como 'Constituição Cidadã' (mas a de 1988 é a atual).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com a Constituição de 1988 (a atual 'Cidadã').",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.2 - Constituições Republicanas."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) O período militar no Brasil (1964-1985) foi marcado por:",
+          "verso": "Alternativa correta: DITADURA, SUPRESSÃO DE DIREITOS POLÍTICOS, CENSURA, ATOS INSTITUCIONAIS (AI-5) E MILAGRE ECONÔMICO. A abertura política foi lenta e gradual.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o AI-5 foi o primeiro (foi o quinto, em 1968, o mais rígido).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.3 - Período militar."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) A redemocratização do Brasil, a partir de 1985, foi marcada por:",
+          "verso": "Alternativa correta: ELEIÇÃO INDIRETA DE TANCREDO NEVES, POSSE DE JOSÉ SARNEY, PROMULGAÇÃO DA CF/88 E ELEIÇÕES DIRETAS EM 1989. A Constituição de 1988 é conhecida como 'Constituição Cidadã'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a primeira eleição direta foi em 1985 (foi em 1989).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.4 - Abertura política e redemocratização."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) A Nova Ordem Mundial, após o fim da Guerra Fria, caracteriza-se por:",
+          "verso": "Alternativa correta: MULTIPOLARIDADE, COM OS EUA COMO ÚNICA SUPERPOTÊNCIA MILITAR, MAS COM EMERGÊNCIA DE NOVOS POLOS ECONÔMICOS (UE, China, Rússia, etc.) E CONFLITOS REGIONAIS.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o mundo é unipolar (é multipolar, com várias potências).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 3.1 - Nova ordem mundial."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre os principais problemas ambientais globais, é correto afirmar que:",
+          "verso": "Alternativa correta: INCLUEM O AQUECIMENTO GLOBAL, A DESTRUIÇÃO DA CAMADA DE OZÔNIO, A PERDA DE BIODIVERSIDADE E A POLUIÇÃO. O Protocolo de Kyoto e o Acordo de Paris buscam mitigar esses problemas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a camada de ozônio é o principal problema atual (é o aquecimento global).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 3.2 - Problemas ambientais."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre a natureza brasileira, é correto afirmar que:",
+          "verso": "Alternativa correta: O BRASIL TEM GRANDE DIVERSIDADE DE RELEVO, HIDROGRAFIA, CLIMA E VEGETAÇÃO. Os principais biomas são: Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir os biomas ou excluir algum.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 4.1 - Natureza brasileira."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a população brasileira, é correto afirmar que:",
+          "verso": "Alternativa correta: É UMA POPULAÇÃO MAJORITARIAMENTE URBANA (mais de 80%), COM CRESCIMENTO DEMOGRÁFICO EM DESACELERAÇÃO E DISTRIBUIÇÃO DESIGUAL PELO TERRITÓRIO. As regiões Sudeste e Nordeste são as mais populosas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a população é majoritariamente rural (é urbana).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 4.2 - População brasileira."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre as atividades econômicas brasileiras, é correto afirmar que:",
+          "verso": "Alternativa correta: O BRASIL É UM DOS MAIORES PRODUTORES MUNDIAIS DE COMMODITIES AGRÍCOLAS (soja, café, carne) E TEM PARQUE INDUSTRIAL DIVERSIFICADO (automotivo, siderúrgico, químico). A matriz energética é predominantemente renovável (hidrelétrica).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a matriz energética brasileira é predominantemente fóssil (é renovável).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 4.3 - Atividades econômicas."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Sobre os impactos ambientais no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: INCLUEM DESMATAMENTO (principalmente na Amazônia e Cerrado), QUEIMADAS, POLUIÇÃO URBANA E INDUSTRIAL, ASSOREAMENTO DE RIOS E PERDA DE BIODIVERSIDADE.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o desmatamento é só na Amazônia (também no Cerrado, Mata Atlântica, etc.).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 4.4 - Impactos ambientais."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) O que foi o AI-5 (Ato Institucional nº 5)?",
+          "verso": "Alternativa correta: FOI O ATO MAIS RÍGIDO DO REGIME MILITAR, EDITADO EM 1968, QUE FECHOU O CONGRESSO, SUSPENDEU O HABEAS CORPUS EM CRIMES POLÍTICOS E AUTORIZOU INTERVENÇÃO EM ESTADOS E MUNICÍPIOS.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir o AI-5 com outros atos (o AI-2 instituiu o bipartidarismo).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.3 - Período militar."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) O que foi a Política do Café com Leite na República Velha?",
+          "verso": "Alternativa correta: FOI UM ACORDO POLÍTICO ENTRE SÃO PAULO (CAFÉ) E MINAS GERAIS (LEITE) PARA ALTERNAR A PRESIDÊNCIA DA REPÚBLICA. Foi rompida com a Revolução de 1930.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que era um acordo comercial (era política).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 2.1 - Revolução de 1930."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) O que foi o Plano Real (1994)?",
+          "verso": "Alternativa correta: FOI UM PLANO ECONÔMICO QUE ESTABILIZOU A MOEDA BRASILEIRA, CONTROLANDO A HIPERINFLAÇÃO. Criou o Real como moeda e foi implementado no governo Itamar Franco, com Fernando Henrique Cardoso como Ministro da Fazenda.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que foi no governo Lula (foi no governo Itamar/FHC).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Sobre a ONU (Organização das Nações Unidas), é correto afirmar que:",
+          "verso": "Alternativa correta: FOI CRIADA EM 1945, APÓS A SEGUNDA GUERRA MUNDIAL, COM O OBJETIVO DE MANTER A PAZ E A SEGURANÇA INTERNACIONAIS, PROMOVER OS DIREITOS HUMANOS E O DESENVOLVIMENTO SUSTENTÁVEL. Sua sede é em Nova York.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que foi criada após a 1ª Guerra (foi após a 2ª).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 1.2 - Segunda Guerra Mundial."
+        }
+      ]
+    },
+    "atualidades": {
+      "nome": "Atualidades",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre a segurança pública no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: É DEVER DO ESTADO, DIREITO E RESPONSABILIDADE DE TODOS, EXERCIDA PELOS ÓRGÃOS PREVISTOS NO ART. 144 DA CF/88 (Polícia Federal, Polícia Rodoviária Federal, Polícia Ferroviária Federal, Polícias Civis, Polícias Militares e Corpos de Bombeiros Militares).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que segurança pública é só dever do Estado (é também responsabilidade de todos).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre a violência urbana no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: É UM FENÔMENO MULTICAUSAL, RELACIONADO À DESIGUALDADE SOCIAL, AO TRÁFICO DE DROGAS, À FALTA DE OPORTUNIDADES E À FRAGILIDADE DAS POLÍTICAS PÚBLICAS. As facções criminosas têm papel relevante.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é só por causa do tráfico (é multicausal).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre o sistema prisional brasileiro, é correto afirmar que:",
+          "verso": "Alternativa correta: ENFRENTA SUPERLOTAÇÃO, FALTA DE ESTRUTURA E DOMÍNIO DE FACÇÕES CRIMINOSAS. A ressocialização é um dos principais desafios. O Brasil tem a 3ª maior população carcerária do mundo.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o sistema prisional brasileiro é referência mundial.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre o crime organizado no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: ATUA EM DIVERSAS FRENTES (tráfico de drogas, armas, contrabando, lavagem de dinheiro, roubo de cargas) E TEM RAMIFICAÇÕES INTERNACIONAIS. O PCC e o Comando Vermelho são as principais facções.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o crime organizado atua só no tráfico de drogas.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a Lei de Drogas (Lei 11.343/2006), é correto afirmar que:",
+          "verso": "Alternativa correta: DIFERENCIA USUÁRIO DE TRAFICANTE, PREVÊ PENAS ALTERNATIVAS PARA USUÁRIOS E PENAS RIGOROSAS PARA TRAFICANTES. Não descriminaliza o porte para uso, mas prevê medidas educativas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a lei descriminalizou o porte (não descriminalizou, só previu medidas alternativas).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre o Estatuto da Criança e do Adolescente (ECA - Lei 8.069/1990), é correto afirmar que:",
+          "verso": "Alternativa correta: ESTABELECE A PROTEÇÃO INTEGRAL DE CRIANÇAS E ADOLESCENTES, COM DIREITOS FUNDAMENTAIS E MEDIDAS SOCIOEDUCATIVAS. Prevê a inimputabilidade penal até 18 anos.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o ECA prevê pena de prisão para menores (prevê medidas socioeducativas).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre a violência doméstica no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: A LEI MARIA DA PENHA (Lei 11.340/2006) CRIA MECANISMOS PARA COIBIR A VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A MULHER, COM MEDIDAS PROTETIVAS DE URGÊNCIA E ATENDIMENTO ESPECIALIZADO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a Lei Maria da Penha só se aplica a violência física (aplica-se a 5 tipos: física, psicológica, sexual, patrimonial e moral).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre o feminicídio, é correto afirmar que:",
+          "verso": "Alternativa correta: É O HOMICÍDIO CONTRA A MULHER POR RAZÕES DA CONDIÇÃO DE SEXO (Lei 13.104/2015). É considerado crime hediondo e tem pena aumentada.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que todo homicídio de mulher é feminicídio (só quando há razões de gênero).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre o racismo no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: É CRIME INAFIANÇÁVEL E IMPRESCRITÍVEL (art. 5º, XLII, CF/88), PREVISTO NA LEI 7.716/1989. O racismo estrutural é um desafio para as políticas públicas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir racismo (inafiançável e imprescritível) com injúria racial (crime comum).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o trabalho policial-militar no Brasil, é correto afirmar que:",
+          "verso": "Alternativa correta: AS POLÍCIAS MILITARES SÃO FORÇAS AUXILIARES E RESERVA DO EXÉRCITO (art. 144, §6º, CF/88), COM ATRIBUIÇÃO DE POLICIAMENTO OSTENSIVO E PRESERVAÇÃO DA ORDEM PÚBLICA.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a PM é subordinada ao Exército (é força auxiliar, mas subordinada ao Governador do Estado).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Conhecimentos Gerais, item 5 - Atualidades."
+        }
       ]
     },
     "informatica": {
-      "nome": "Noções de Informática",
+      "nome": "Noções Básicas de Informática",
       "cards": [
-        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia recursos do computador.", "dificuldade": 1},
-        {"id": 2, "frente": "O que significa URL?", "verso": "Uniform Resource Locator (endereço de recurso na internet).", "dificuldade": 1},
-        {"id": 3, "frente": "Qual tecla atualiza uma página no navegador?", "verso": "F5.", "dificuldade": 1},
-        {"id": 4, "frente": "Qual atalho copia um texto?", "verso": "Ctrl + C.", "dificuldade": 1},
-        {"id": 5, "frente": "O que é um arquivo .pdf?", "verso": "Documento portátil de formato fixo.", "dificuldade": 1},
-        {"id": 6, "frente": "O que é phishing?", "verso": "Fraude que visa obter dados pessoais.", "dificuldade": 2},
-        {"id": 7, "frente": "O que é um firewall?", "verso": "Sistema que bloqueia acessos não autorizados.", "dificuldade": 1},
-        {"id": 8, "frente": "O que é backup?", "verso": "Cópia de segurança de dados.", "dificuldade": 1},
-        {"id": 9, "frente": "O que é uma intranet?", "verso": "Rede privada dentro de uma organização.", "dificuldade": 1},
-        {"id": 10, "frente": "O que é a computação em nuvem?", "verso": "Armazenamento e processamento de dados pela internet.", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(VUNESP) No MS-Windows 10, o atalho Win+E serve para:",
+          "verso": "Alternativa correta: ABRIR O EXPLORADOR DE ARQUIVOS. Win+E é o atalho universal do Windows Explorer.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por Win+R (Executar) ou Win+L (bloquear).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 1 - Windows 10."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) No MS-Windows 10, o atalho Ctrl+Shift+Esc serve para:",
+          "verso": "Alternativa correta: ABRIR O GERENCIADOR DE TAREFAS DIRETAMENTE. Ctrl+Shift+Esc abre o Task Manager sem passar pelo menu.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por Ctrl+Alt+Del (que abre menu de opções).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 1 - Windows 10."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) No MS-Windows 10, a Lixeira armazena arquivos excluídos:",
+          "verso": "Alternativa correta: TEMPORARIAMENTE, PERMITINDO RESTAURAÇÃO. Só há exclusão definitiva se o usuário esvaziar a Lixeira ou usar Shift+Delete.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que Lixeira = exclusão definitiva.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 1 - Windows 10."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) No MS-Word 2016, o atalho Ctrl+B serve para:",
+          "verso": "Alternativa correta: NEGRITAR O TEXTO SELECIONADO. Ctrl+B = Bold (negrito).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir Ctrl+B (bold/negrito) com Ctrl+S (save/salvar).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 2 - MS-Word 2016."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) No MS-Word 2016, o atalho Ctrl+S serve para:",
+          "verso": "Alternativa correta: SALVAR O DOCUMENTO. Ctrl+S = Save.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que Ctrl+S é 'sublinhar' (é Ctrl+U).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 2 - MS-Word 2016."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) No MS-Word 2016, para inserir uma quebra de página, usa-se o atalho:",
+          "verso": "Alternativa correta: Ctrl+Enter. Insere quebra de página manual no ponto do cursor.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Enter (parágrafo) ou Shift+Enter (quebra de linha).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 2 - MS-Word 2016."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) No MS-Excel 2016, a fórmula =SOMA(A1:A10) serve para:",
+          "verso": "Alternativa correta: SOMAR OS VALORES DAS CÉLULAS A1 ATÉ A10. O operador ':' indica intervalo.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com ';' (separador de argumentos).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 3 - MS-Excel 2016."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) No MS-Excel 2016, a fórmula =MÉDIA(A1:A5) serve para:",
+          "verso": "Alternativa correta: CALCULAR A MÉDIA ARITMÉTICA DOS VALORES DE A1 A A5. Soma e divide pela quantidade de células.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é soma (é média).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 3 - MS-Excel 2016."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) No MS-Excel 2016, uma referência absoluta é indicada por:",
+          "verso": "Alternativa correta: $. Ex.: $A$1. O '$' antes da coluna e/ou linha trava a referência durante a cópia.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com referência relativa (sem $).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 3 - MS-Excel 2016."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) No MS-PowerPoint 2016, o atalho F5 serve para:",
+          "verso": "Alternativa correta: INICIAR A APRESENTAÇÃO DE SLIDES DESDE O COMEÇO. Shift+F5 inicia do slide atual.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir F5 com Shift+F5.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 4 - MS-PowerPoint 2016."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre o correio eletrônico, o campo 'Cc' significa:",
+          "verso": "Alternativa correta: CÓPIA CARBONO. Envia cópia do e-mail e todos os destinatários veem quem mais recebeu. 'Cco' é a cópia oculta.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir Cc com Cco.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 5 - Correio Eletrônico."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre a Internet, uma URL é:",
+          "verso": "Alternativa correta: UNIFORM RESOURCE LOCATOR. É o endereço que identifica recursos na internet (ex.: https://www.policiamilitar.sp.gov.br).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir URL com HTTP ou HTML.",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 6 - Internet."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre o Google Workspace, o Google Drive serve para:",
+          "verso": "Alternativa correta: ARMAZENAMENTO E COMPARTILHAMENTO DE ARQUIVOS EM NUVEM. Permite criar, editar e compartilhar documentos online.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o Drive é só para backup (é também para colaboração).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 7 - Google Workspace."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre o Google Meet, é correto afirmar que:",
+          "verso": "Alternativa correta: É UMA FERRAMENTA DE VIDEOCHAMADAS DO GOOGLE WORKSPACE, QUE PERMITE REUNIÕES ONLINE COM ÁUDIO E VÍDEO, COMPARTILHAMENTO DE TELA E GRAVAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Google Chat (mensagens) ou Google Agenda (calendário).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 7 - Google Workspace."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre o Microsoft Teams, é correto afirmar que:",
+          "verso": "Alternativa correta: É UMA FERRAMENTA DE COLABORAÇÃO QUE PERMITE CHATS, CHAMADAS DE ÁUDIO E VÍDEO, CRIAÇÃO DE GRUPOS, AGENDAMENTO DE REUNIÕES E GRAVAÇÃO, INTEGRADA AO OFFICE 365.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o Teams só serve para chat (tem videochamada, reuniões, etc.).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Informática, item 8 - Microsoft Teams."
+        }
       ]
     },
-    "administracao": {
-      "nome": "Administração Pública",
+    "administracao-publica": {
+      "nome": "Noções de Administração Pública",
       "cards": [
-        {"id": 1, "frente": "Qual princípio exige divulgação oficial dos atos?", "verso": "Publicidade.", "dificuldade": 1},
-        {"id": 2, "frente": "O que determina o princípio da legalidade?", "verso": "O administrador só pode fazer o que a lei autoriza.", "dificuldade": 1},
-        {"id": 3, "frente": "O que compõe a Administração Pública direta?", "verso": "Órgãos ligados diretamente ao chefe do Executivo.", "dificuldade": 2},
-        {"id": 4, "frente": "Qual artigo da CF trata da Segurança Pública?", "verso": "Art. 144 da CF/88.", "dificuldade": 2},
-        {"id": 5, "frente": "A Polícia Militar é força auxiliar de qual instituição?", "verso": "Exército Brasileiro (força auxiliar e reserva).", "dificuldade": 2},
-        {"id": 6, "frente": "Quais são os 5 princípios expressos da Administração Pública?", "verso": "Legalidade, impessoalidade, moralidade, publicidade, eficiência.", "dificuldade": 1},
-        {"id": 7, "frente": "O que é impessoalidade?", "verso": "Tratamento igual a todos perante a Administração.", "dificuldade": 1},
-        {"id": 8, "frente": "O que é eficiência na Administração Pública?", "verso": "Buscar os melhores resultados com os recursos disponíveis.", "dificuldade": 1},
-        {"id": 9, "frente": "O que é moralidade administrativa?", "verso": "Agir com ética e bons costumes na gestão pública.", "dificuldade": 1},
-        {"id": 10, "frente": "O que é segurança pública?", "verso": "Dever do Estado, direito e responsabilidade de todos.", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre os direitos e deveres individuais e coletivos (art. 5º da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO APLICÁVEIS IMEDIATAMENTE, COM EFICÁCIA PLENA. Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que os direitos fundamentais dependem de lei regulamentadora (têm aplicação imediata).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.1.1 - Direitos e Deveres Individuais e Coletivos."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre a inviolabilidade do domicílio (art. 5º, XI, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A CASA É ASILO INVIOLÁVEL, PODENDO SER PENETRADA SEM CONSENTIMENTO DO MORADOR APENAS EM CASO DE FLAGRANTE DELITO, DESASTRE, PARA PRESTAR SOCORRO, OU, DURANTE O DIA, POR DETERMINAÇÃO JUDICIAL.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a ordem judicial permite entrada à noite (só durante o dia).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.1.1 - Direitos e Deveres Individuais e Coletivos."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre o direito de reunião (art. 5º, XVI, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: TODOS PODEM REUNIR-SE PACIFICAMENTE, SEM ARMAS, EM LOCAIS ABERTOS AO PÚBLICO, INDEPENDENTEMENTE DE AUTORIZAÇÃO, DESDE QUE NÃO FRUSTREM OUTRA REUNIÃO ANTERIORMENTE CONVOCADA PARA O MESMO LOCAL, SENDO EXIGIDO APENAS AVISO PRÉVIO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a reunião exige autorização (exige apenas aviso prévio).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.1.1 - Direitos e Deveres Individuais e Coletivos."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre os direitos políticos (arts. 14-16 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A SOBERANIA POPULAR É EXERCIDA PELO SUFRÁGIO UNIVERSAL E PELO VOTO DIRETO E SECRETO, COM VALOR IGUAL PARA TODOS. O ALISTAMENTO E O VOTO SÃO OBRIGATÓRIOS PARA MAIORES DE 18 ANOS E FACULTATIVOS PARA ANALFABETOS, MAIORES DE 70 E MAIORES DE 16 E MENORES DE 18.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o voto é obrigatório para maiores de 70 (é facultativo).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.1.2 - Direitos Políticos."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a Administração Pública (art. 37 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A ADMINISTRAÇÃO DIRETA E INDIRETA DE QUALQUER DOS PODERES DA UNIÃO, ESTADOS, DF E MUNICÍPIOS OBEDECERÁ AOS PRINCÍPIOS DE LEGALIDADE, IMPESSOALIDADE, MORALIDADE, PUBLICIDADE E EFICIÊNCIA (LIMPE).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.2.1.1 - Disposições Gerais."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre o concurso público (art. 37, II, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A INVESTIDURA EM CARGO OU EMPREGO PÚBLICO DEPENDE DE APROVAÇÃO PRÉVIA EM CONCURSO PÚBLICO, RESSALVADAS AS NOMEAÇÕES PARA CARGO EM COMISSÃO DECLARADO EM LEI DE LIVRE NOMEAÇÃO E EXONERAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que TODO cargo em comissão dispensa concurso (só os de livre nomeação).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.2.1.1 - Disposições Gerais."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre a segurança pública (art. 144 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: É DEVER DO ESTADO, DIREITO E RESPONSABILIDADE DE TODOS, EXERCIDA PARA PRESERVAÇÃO DA ORDEM PÚBLICA E DA INCOLUMIDADE DAS PESSOAS E DO PATRIMÔNIO. Os órgãos são: Polícia Federal, Polícia Rodoviária Federal, Polícia Ferroviária Federal, Polícias Civis, Polícias Militares e Corpos de Bombeiros Militares.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a segurança pública é só dever do Estado (é também responsabilidade de todos).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.3.1 - Segurança Pública."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre as Polícias Militares (art. 144, §5º e §6º, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO FORÇAS AUXILIARES E RESERVA DO EXÉRCITO, SUBORDINADAS AOS GOVERNADORES DOS ESTADOS, DO DISTRITO FEDERAL E DOS TERRITÓRIOS. TÊM COMO ATRIBUIÇÃO O POLICIAMENTO OSTENSIVO E A PRESERVAÇÃO DA ORDEM PÚBLICA.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a PM é subordinada ao Exército (é força auxiliar, mas subordinada ao Governador).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 1.3.1 - Segurança Pública."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre a Constituição do Estado de São Paulo, é correto afirmar que:",
+          "verso": "Alternativa correta: A CONSTITUIÇÃO ESTADUAL DE 1989 ORGANIZA OS PODERES DO ESTADO, DISPÕE SOBRE A ADMINISTRAÇÃO PÚBLICA, OS SERVIDORES PÚBLICOS (CIVIS E MILITARES) E A SEGURANÇA PÚBLICA, INCLUINDO A POLÍCIA MILITAR.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a Constituição Estadual é de 1988 (é de 1989, promulgada após a CF/88).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 2 - Constituição do Estado de São Paulo."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o Poder Executivo na Constituição do Estado de SP, é correto afirmar que:",
+          "verso": "Alternativa correta: É EXERCIDO PELO GOVERNADOR DO ESTADO, AUXILIADO PELOS SECRETÁRIOS DE ESTADO. O Governador é eleito para mandato de 4 anos, podendo ser reeleito para um único período subsequente.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o Governador pode ser reeleito várias vezes (só uma).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 2.1.1 - Poder Executivo."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre a Justiça Militar do Estado de SP, é correto afirmar que:",
+          "verso": "Alternativa correta: É COMPETENTE PARA PROCESSAR E JULGAR OS POLICIAIS MILITARES E OS BOMBEIROS MILITARES NOS CRIMES MILITARES DEFINIDOS EM LEI. É um órgão do Poder Judiciário Estadual.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a Justiça Militar Estadual julga civis (só militares, em crimes militares).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 2.1.2.1 - Justiça Militar."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre os servidores públicos militares (Constituição do Estado de SP), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO REGIDOS POR ESTATUTO PRÓPRIO (Lei Complementar 1.291/2016) E TÊM COMO PRINCÍPIOS A HIERARQUIA, A DISCIPLINA E A SUBORDINAÇÃO. A carreira é estruturada em graduações e postos.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir o regime militar com o regime civil (são estatutos diferentes).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 2.2.2.2 - Servidores Públicos Militares."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre a Lei de Acesso à Informação (Lei 12.527/2011), é correto afirmar que:",
+          "verso": "Alternativa correta: ESTABELECE O DIREITO DE QUALQUER PESSOA, FÍSICA OU JURÍDICA, SOLICITAR E RECEBER INFORMAÇÕES PÚBLICAS, SEM NECESSIDADE DE JUSTIFICATIVA. O PRAZO DE RESPOSTA É DE 20 DIAS, PRORROGÁVEL POR MAIS 10.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é preciso justificar o pedido (não é).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 3 - Lei 12.527/2011."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre as informações classificadas como sigilosas (LAI), é correto afirmar que:",
+          "verso": "Alternativa correta: PODEM SER CLASSIFICADAS COMO ULTRASSECRETAS (25 ANOS), SECRETAS (15 ANOS) OU RESERVADAS (5 ANOS). O acesso é restrito durante o prazo de sigilo, que pode ser prorrogado.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar os prazos (ultrassecreta é 25, não 15).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 3 - Lei 12.527/2011."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre o Decreto 68.155/2023 (SP), é correto afirmar que:",
+          "verso": "Alternativa correta: REGULAMENTA, EM ÂMBITO ESTADUAL, A LEI FEDERAL 12.527/2011 (LAI), DISPONDO SOBRE O ACESSO A INFORMAÇÕES E DANDO PROVIDÊNCIAS CORRELATAS NO ESTADO DE SÃO PAULO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o decreto revoga a LAI (apenas regulamenta no âmbito estadual).",
+          "fundamento": "Edital PM/SP 2026, Anexo B, Administração Pública, item 3.1 - Decreto 68.155/2023."
+        }
+      ]
+    },
+    "legislacao-pm": {
+      "nome": "Legislação Aplicada à PM/SP",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o Estatuto dos Policiais Militares do Estado de SP (Lei Complementar 1.291/2016), é correto afirmar que:",
+          "verso": "Alternativa correta: O ESTATUTO REGULA A SITUAÇÃO DOS POLICIAIS MILITARES, ESTABELECENDO DIREITOS, DEVERES, GARANTIAS E O REGIME DISCIPLINAR. A hierarquia e a disciplina são os pilares da instituição.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o policial militar é regido pela CLT (é regido por estatuto próprio).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - LC 1.291/2016."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre as formas de provimento de cargo na PM/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: O INGRESSO NA CARREIRA DE PRAÇAS SE DÁ PELO CARGO DE ALUNO-SOLDADO PM, MEDIANTE APROVAÇÃO EM CONCURSO PÚBLICO, E A PROMOÇÃO OCORRE POR ANTIGUIDADE E MERECIMENTO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a promoção é só por antiguidade (é por antiguidade E merecimento).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - LC 1.291/2016."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre os deveres do policial militar, é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO DEVERES: CUMPRIR AS ORDENS SUPERIORES, MANTER A DISCIPLINA, ZELAR PELO PATRIMÔNIO PÚBLICO, AGIR COM HONESTIDADE E RESPEITAR OS DIREITOS HUMANOS. A violação gera sanções disciplinares.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o PM pode descumprir ordem manifestamente ilegal (deve representar).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - LC 1.291/2016."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre as penalidades disciplinares na PM/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO PREVISTAS: ADVERTÊNCIA, SUSPENSÃO, DEMISSÃO, CASSAÇÃO DE APOSENTADORIA E EXCLUSÃO. A aplicação deve observar a hierarquia e o devido processo legal.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir as penalidades ou excluir alguma.",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - LC 1.291/2016."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a Lei 10.859/2001 (Promoções de Praças), é correto afirmar que:",
+          "verso": "Alternativa correta: DISCIPLINA AS PROMOÇÕES DOS POLICIAIS MILITARES DA CARREIRA DE PRAÇAS, ESTABELECENDO OS CRITÉRIOS DE ANTIGUIDADE E MERECIMENTO, BEM COMO OS INTERSTÍCIOS MÍNIMOS PARA CADA GRADUAÇÃO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a promoção é automática por tempo de serviço (depende de critérios).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - Lei 10.859/2001."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre a Lei Complementar 1.036/2008 (Carreira de Praças), é correto afirmar que:",
+          "verso": "Alternativa correta: INSTITUI O PLANO DE CARREIRA PARA OS POLICIAIS MILITARES DO ESTADO DE SÃO PAULO, DEFININDO A ESTRUTURA DAS GRADUAÇÕES, AS PROMOÇÕES E OS REQUISITOS PARA ASCENSÃO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a carreira é regida pela LC 1.291/2016 (são leis complementares diferentes).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - LC 1.036/2008."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre o ingresso na PM/SP (Lei 12.147/2005), é correto afirmar que:",
+          "verso": "Alternativa correta: A LEI DISPÕE SOBRE O INGRESSO NA CARREIRA DE OFICIAL E DE PRAÇAS DA PM/SP, ESTABELECENDO OS REQUISITOS E AS ETAPAS DO CONCURSO PÚBLICO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o ingresso é feito por indicação (é por concurso público).",
+          "fundamento": "Edital PM/SP 2026, Legislação PM - Lei 12.147/2005."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre as etapas do concurso PM/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: INCLUEM EXAMES DE CONHECIMENTOS (PROVA OBJETIVA E DISSERTATIVA), EXAMES DE APTIDÃO FÍSICA, EXAMES DE SAÚDE, EXAMES PSICOLÓGICOS, AVALIAÇÃO DA CONDUTA SOCIAL E ANÁLISE DE DOCUMENTOS. Todas são eliminatórias.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que alguma etapa não é eliminatória (todas são).",
+          "fundamento": "Edital PM/SP 2026, Capítulo IV - Etapas do concurso."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre os requisitos para inscrição no concurso PM/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO REQUISITOS: SER BRASILEIRO, TER IDADE MÍNIMA DE 17 ANOS E MÁXIMA DE 30 ANOS, TER ESTATURA MÍNIMA DE 155 CM (MULHER) E 160 CM (HOMEM). Também é exigida CNH entre B e E.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar as alturas ou as idades.",
+          "fundamento": "Edital PM/SP 2026, Capítulo II - Requisitos para inscrição."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre as tatuagens no concurso PM/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: O CANDIDATO PODE APRESENTAR TATUAGEM, EXCETO QUANDO DIVULGAR SÍMBOLO OU INSCRIÇÃO OFENDENDO VALORES E DEVERES ÉTICOS, IDEOLOGIA TERRORISTA, IDEIA OU ATO LIBIDINOSO, OU IDEIA OFENSIVA AOS DIREITOS HUMANOS. A verificação é feita nos Exames de Saúde.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que qualquer tatuagem impede a inscrição (só as ofensivas).",
+          "fundamento": "Edital PM/SP 2026, Capítulo II - Tatuagens."
+        }
       ]
     }
   }

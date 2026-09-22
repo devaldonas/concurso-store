@@ -116,7 +116,7 @@ const products = [
     badge: 'Destaque',
     category: 'Segurança',
     features: [
-      '115 flashcards',
+      '130 flashcards',
       '5 mapas mentais',
       'Guia de revisão 4 semanas',
       '60 questões - 5h'
