@@ -176,7 +176,7 @@ const products = [
     badge: '',
     category: 'Judiciário',
     features: [
-      '100 flashcards',
+      '200 flashcards',
       '1 mapa mental',
       'Guia de revisão 4 semanas',
       '80 questões - 4h'

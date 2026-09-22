@@ -7,3 +7,4 @@ yarn-debug.log*
 yarn-error.log*
 *.bak
 *.bak-antes-do-patch
+*.bak-antes-do-patch*

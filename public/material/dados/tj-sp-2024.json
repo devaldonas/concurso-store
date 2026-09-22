@@ -1,124 +1,2063 @@
 {
-  "nome": "TJ/SP 2024 - Escrevente",
+  "nome": "TJ/SP 2024 - Escrevente Técnico Judiciário",
+  "banca": "Vunesp",
+  "cargo": "Escrevente Técnico Judiciário",
+  "nivel": "medio",
+  "edital_ref": "Edital nº 01/2024 - TJ/SP (Vunesp)",
   "baralhos": {
     "portugues": {
       "nome": "Língua Portuguesa",
       "cards": [
-        {"id": 1, "frente": "O que é interpretação de texto?", "verso": "Capacidade de compreender o sentido global do texto", "dificuldade": 1},
-        {"id": 2, "frente": "O que são figuras de linguagem?", "verso": "Recursos estilísticos que tornam a mensagem mais expressiva", "dificuldade": 2},
-        {"id": 3, "frente": "O que é uma metáfora?", "verso": "Comparação implícita entre dois termos", "dificuldade": 2},
-        {"id": 4, "frente": "O que é denotação?", "verso": "Sentido literal da palavra", "dificuldade": 1},
-        {"id": 5, "frente": "O que é conotação?", "verso": "Sentido figurado da palavra", "dificuldade": 2},
-        {"id": 6, "frente": "Quais são as classes de palavras variáveis?", "verso": "Substantivo, adjetivo, artigo, numeral, pronome, verbo", "dificuldade": 1},
-        {"id": 7, "frente": "Quais são as classes de palavras invariáveis?", "verso": "Advérbio, preposição, conjunção, interjeição", "dificuldade": 1},
-        {"id": 8, "frente": "O que é concordância verbal?", "verso": "Flexão do verbo para concordar com o sujeito", "dificuldade": 2},
-        {"id": 9, "frente": "O que é concordância nominal?", "verso": "Concordância entre o substantivo e seus modificadores", "dificuldade": 2},
-        {"id": 10, "frente": "O que é regência verbal?", "verso": "Relação entre o verbo e seus complementos", "dificuldade": 2},
-        {"id": 11, "frente": "O que é regência nominal?", "verso": "Relação entre um nome e seu complemento", "dificuldade": 2},
-        {"id": 12, "frente": "O que é crase?", "verso": "Fusão da preposição 'a' com o artigo 'a'", "dificuldade": 3},
-        {"id": 13, "frente": "Quando usar crase?", "verso": "Em locuções adverbiais femininas, antes de palavras femininas e em horas", "dificuldade": 3},
-        {"id": 14, "frente": "O que é um período simples?", "verso": "Possui apenas uma oração", "dificuldade": 1},
-        {"id": 15, "frente": "O que é um período composto?", "verso": "Possui duas ou mais orações", "dificuldade": 2},
-        {"id": 16, "frente": "O que é coesão textual?", "verso": "Conexão entre as partes do texto", "dificuldade": 2},
-        {"id": 17, "frente": "O que é coerência textual?", "verso": "Harmonia lógica entre as ideias", "dificuldade": 2},
-        {"id": 18, "frente": "O que é pontuação?", "verso": "Uso de sinais gráficos para estruturar o texto", "dificuldade": 2},
-        {"id": 19, "frente": "Como usar a vírgula?", "verso": "Separa elementos, isola aposto e vocativo, separa orações", "dificuldade": 2},
-        {"id": 20, "frente": "O que é um sujeito?", "verso": "Termo sobre o qual se declara algo", "dificuldade": 1},
-        {"id": 21, "frente": "O que é um predicado?", "verso": "Parte da oração que contém informação sobre o sujeito", "dificuldade": 1},
-        {"id": 22, "frente": "O que é um aposto?", "verso": "Termo que explica ou especifica outro", "dificuldade": 2},
-        {"id": 23, "frente": "O que é um vocativo?", "verso": "Termo usado para chamar o interlocutor", "dificuldade": 1},
-        {"id": 24, "frente": "O que é polissemia?", "verso": "Palavra com múltiplos significados", "dificuldade": 2},
-        {"id": 25, "frente": "O que é sinonímia?", "verso": "Palavras com significados semelhantes", "dificuldade": 1},
-        {"id": 26, "frente": "O que é antonímia?", "verso": "Palavras com significados opostos", "dificuldade": 1},
-        {"id": 27, "frente": "O que é intertextualidade?", "verso": "Relação entre diferentes textos", "dificuldade": 2},
-        {"id": 28, "frente": "O que é redação oficial?", "verso": "Forma padronizada de escrever documentos oficiais", "dificuldade": 2},
-        {"id": 29, "frente": "Quais são os atributos da redação oficial?", "verso": "Clareza, precisão, objetividade, concisão, coesão, coerência, impessoalidade", "dificuldade": 2},
-        {"id": 30, "frente": "O que é impessoalidade?", "verso": "Texto sem marcas de opinião pessoal", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(VUNESP) Na frase 'O servidor cumpriu as normas, porém não obteve êxito', a conjunção 'porém' estabelece relação de:",
+          "verso": "Alternativa correta: OPOSIÇÃO. 'Porém' é conjunção coordenativa adversativa, que expressa contraste entre as orações.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por 'portanto' (conclusiva) ou 'pois' (explicativa).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 4 - Estruturação do texto."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Em 'Faz dez anos que o TJ/SP modernizou o atendimento', o verbo 'fazer' está corretamente flexionado?",
+          "verso": "SIM. Indicando tempo decorrido, 'fazer' é impessoal e fica obrigatoriamente na 3ª pessoa do singular. 'Fazem dez anos' estaria ERRADO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Pluralizar para 'Fazem dez anos' por atração do termo 'dez anos'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 9 - Concordância verbal e nominal."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Em 'Haviam muitos processos na fila do cartório', o verbo 'haver' está corretamente empregado?",
+          "verso": "NÃO. No sentido de 'existir', 'haver' é impessoal e fica na 3ª pessoa do singular: 'Havia muitos processos'. O correto seria 'Existiam muitos processos' se fosse o verbo 'existir'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Pluralizar 'haver' por atração do sujeito, confundindo com 'existir'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 9 - Concordância verbal e nominal."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Em 'Refiro-me à servidora que solicitou a certidão', o acento grave está corretamente empregado?",
+          "verso": "SIM. 'Referir-se' é transitivo indireto (exige 'a') e 'servidora' é substantivo feminino determinado → a + a = à. Crase obrigatória.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que 'referir-se a' não admite artigo ou confundir com 'a' simples.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 12 - Crase."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Em 'Entreguei o processo a uma servidora', o uso da crase seria obrigatório se escrevêssemos 'à uma servidora'?",
+          "verso": "NÃO. Não se usa crase antes de artigo indefinido ('uma'). O correto é 'a uma servidora', sem acento grave.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Induzir o candidato a achar que a crase é obrigatória antes de qualquer palavra feminina.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 12 - Crase."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Em 'Vendem-se certidões no cartório', o 'se' é partícula apassivadora?",
+          "verso": "SIM. O verbo 'vender' é transitivo direto e o 'se' forma voz passiva sintética, equivalente a 'Certidões são vendidas no cartório'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com índice de indeterminação do sujeito (que ocorre com VTI).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: pronome."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Em 'Trata-se de questões complexas', o 'se' é índice de indeterminação do sujeito?",
+          "verso": "SIM. O verbo 'tratar-se' é transitivo indireto (exige a preposição 'de'). Nesse caso, o 'se' indetermina o sujeito e o verbo fica obrigatoriamente na 3ª pessoa do singular.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com partícula apassivadora (VTD).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: pronome."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Em 'O escrevente que estudou por 3 anos será aprovado', a oração 'que estudou por 3 anos' é subordinada adjetiva:",
+          "verso": "Alternativa correta: RESTRITIVA. Não está entre vírgulas e restringe o sentido de 'escrevente'. Explicativa viria entre vírgulas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar restritiva (sem vírgula) por explicativa (com vírgula).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 4 - Estruturação do texto."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Em 'O servidor, que é dedicado, foi promovido', a oração destacada é subordinada adjetiva:",
+          "verso": "Alternativa correta: EXPLICATIVA. Está isolada por vírgulas e explica uma característica do antecedente 'servidor', sem restringir o sentido.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a vírgula não muda a classificação da oração.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 13 - Pontuação."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Em 'Não me disse a verdade', a próclise é obrigatória por causa do advérbio de negação 'não'?",
+          "verso": "SIM. Palavras atrativas (como 'não', 'nunca', 'jamais', 'que', 'quem') atraem o pronome oblíquo para antes do verbo (próclise).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar ênclise ('disse-me') mesmo com palavra atrativa.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 11 - Colocação pronominal."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Em 'Entreguei-lhe o processo', o pronome 'lhe' funciona como:",
+          "verso": "Alternativa correta: OBJETO INDIRETO. O pronome 'lhe' complementa verbo transitivo indireto. Aqui 'o processo' é o OD e 'lhe' é o OI.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar as funções de 'lhe' (OI) e 'o/a' (OD).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: pronome."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) A palavra 'benefício' está corretamente grafada segundo o Novo Acordo Ortográfico?",
+          "verso": "SIM. A grafia 'benefício' (com 'i' tônico) está correta. Não confundir com 'beneficiente' ou 'beneficência'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por 'benefício' (errado) ou 'beneficio' sem acento.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 6 - Sinônimos e antônimos."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) A palavra 'concurso' está corretamente acentuada?",
+          "verso": "SIM. 'Concurso' não tem acento gráfico. É paroxítona terminada em '-o', não acentuada.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Colocar acento em 'cóncurso' ou 'concúrso'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 6 - Sentido próprio e figurado das palavras."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) O texto dissertativo-argumentativo tem como característica principal:",
+          "verso": "Alternativa correta: DEFESA DE UM PONTO DE VISTA COM ARGUMENTOS ORGANIZADOS. Apresenta tese + argumentos + conclusão, visando convencer o leitor.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com dissertativo-expositivo (que apenas informa, sem defender tese).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 1 - Análise, compreensão e interpretação de textos."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Em 'O TJ/SP, órgão do Poder Judiciário, atende milhões de cidadãos', o termo 'órgão do Poder Judiciário' é:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO. Explica/especifica o antecedente 'TJ/SP', isolado por vírgulas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com vocativo (chamamento) ou predicativo.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: substantivo."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Em 'Preciso de que o servidor compareça à perícia', o 'que' é:",
+          "verso": "Alternativa correta: CONJUNÇÃO INTEGRANTE. Introduz oração subordinada substantiva completiva nominal (complementa 'de').",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com pronome relativo (que retoma antecedente).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: conjunção."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Em 'A perícia médica foi realizada ontem', o termo 'ontem' é:",
+          "verso": "Alternativa correta: ADJUNTO ADVERBIAL DE TEMPO. 'Ontem' indica circunstância de tempo, modificando o verbo 'foi realizada'.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com aposto, predicativo ou objeto indireto.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: advérbio."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) A coesão textual é garantida exclusivamente pelo uso de conjunções?",
+          "verso": "NÃO. A coesão pode ser referencial (pronomes, sinônimos, elipses, numerais) OU sequencial (conjunções, conectivos). Não se limita a conjunções.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Restringir a coesão a apenas um mecanismo.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 4 - Estruturação do texto: recursos de coesão."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Qual a função do 'que' em 'O processo que você analisou está arquivado'?",
+          "verso": "Alternativa correta: PRONOME RELATIVO. Retoma o antecedente 'processo' e introduz oração subordinada adjetiva restritiva.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com conjunção integrante.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 8 - Classes de palavras: pronome."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Em 'Estudei muito, portanto passei', a vírgula está corretamente empregada?",
+          "verso": "SIM. A vírgula separa oração coordenada sindética conclusiva (conjunção 'portanto').",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Suprimir a vírgula antes de 'portanto'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 13 - Pontuação."
+        },
+        {
+          "id": 21,
+          "frente": "(VUNESP) Em 'João, o escrevente da vara, chegou cedo', as vírgulas isolam:",
+          "verso": "Alternativa correta: APOSTO EXPLICATIVO ('o escrevente da vara'). O aposto explica ou especifica o termo anterior.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com vocativo (chamamento) ou com oração adjetiva explicativa.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 13 - Pontuação."
+        },
+        {
+          "id": 22,
+          "frente": "(VUNESP) Qual a regência correta do verbo 'obedecer'?",
+          "verso": "Alternativa correta: 'OBEDECER' É TRANSITIVO INDIRETO. Exige a preposição 'a': 'Obedeço às leis'. O mesmo vale para 'desobedecer'.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar sem preposição ('Obedeço as leis') ou sem crase.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 10 - Regência verbal e nominal."
+        },
+        {
+          "id": 23,
+          "frente": "(VUNESP) Qual a regência correta do verbo 'assistir' no sentido de 'ver'?",
+          "verso": "Alternativa correta: TRANSITIVO INDIRETO (EXIGE 'A'). 'Assisti ao filme'. No sentido de 'ajudar', é transitivo direto: 'O médico assistiu o paciente'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Usar 'assistir o filme' (sem preposição) no sentido de ver.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 10 - Regência verbal e nominal."
+        },
+        {
+          "id": 24,
+          "frente": "(VUNESP) Em 'Ele disse que viria, mas não veio', o 'mas' introduz qual relação de sentido?",
+          "verso": "Alternativa correta: OPOSIÇÃO/CONTRASTE. É conjunção coordenativa adversativa.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com adição ('e') ou conclusão ('portanto').",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 4 - Estruturação do texto: relações entre ideias."
+        },
+        {
+          "id": 25,
+          "frente": "(VUNESP) Em 'O servidor, que é dedicado, foi promovido', se retirarmos as vírgulas, o sentido:",
+          "verso": "Muda. Com vírgulas = EXPLICATIVA (todos os servidores foram promovidos? ou o servidor específico?). Sem vírgulas = RESTRITIVA (apenas o servidor que é dedicado foi promovido).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que as vírgulas são decorativas e não mudam o sentido.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco I, tópico 13 - Pontuação."
+        }
       ]
     },
-    "direito": {
-      "nome": "Conhecimentos em Direito",
-      "cards": [
-        {"id": 1, "frente": "O que é o Direito?", "verso": "Conjunto de normas que regem a sociedade", "dificuldade": 1},
-        {"id": 2, "frente": "O que é o Código Civil?", "verso": "Conjunto de normas que regem as relações civis", "dificuldade": 2},
-        {"id": 3, "frente": "O que é o Código Penal?", "verso": "Conjunto de normas que definem crimes e penas", "dificuldade": 2},
-        {"id": 4, "frente": "O que é o Código de Processo Civil?", "verso": "Normas para o processo judicial civil", "dificuldade": 2},
-        {"id": 5, "frente": "O que é o Código de Processo Penal?", "verso": "Normas para o processo judicial penal", "dificuldade": 2},
-        {"id": 6, "frente": "O que é a Constituição Federal?", "verso": "Lei maior do Brasil", "dificuldade": 1},
-        {"id": 7, "frente": "O que é a Lei?", "verso": "Norma jurídica aprovada pelo Legislativo", "dificuldade": 1},
-        {"id": 8, "frente": "O que é a jurisprudência?", "verso": "Conjunto de decisões dos tribunais", "dificuldade": 2},
-        {"id": 9, "frente": "O que é a doutrina?", "verso": "Estudos e opiniões de juristas", "dificuldade": 2},
-        {"id": 10, "frente": "O que é um contrato?", "verso": "Acordo entre partes com efeitos jurídicos", "dificuldade": 2},
-        {"id": 11, "frente": "O que é um ato jurídico?", "verso": "Manifestação de vontade com efeitos jurídicos", "dificuldade": 2},
-        {"id": 12, "frente": "O que é um direito subjetivo?", "verso": "Poder de exigir algo de outra pessoa", "dificuldade": 2},
-        {"id": 13, "frente": "O que é um direito objetivo?", "verso": "Conjunto de normas jurídicas", "dificuldade": 2},
-        {"id": 14, "frente": "O que é a ação judicial?", "verso": "Demanda levada ao Poder Judiciário", "dificuldade": 2},
-        {"id": 15, "frente": "O que é a sentença?", "verso": "Decisão final do juiz no processo", "dificuldade": 2},
-        {"id": 16, "frente": "O que é o recurso?", "verso": "Meio de impugnar uma decisão judicial", "dificuldade": 2},
-        {"id": 17, "frente": "O que é a execução?", "verso": "Cumprimento forçado de uma decisão", "dificuldade": 2},
-        {"id": 18, "frente": "O que é a prescrição?", "verso": "Perda do direito pelo decurso do tempo", "dificuldade": 3},
-        {"id": 19, "frente": "O que é a decadência?", "verso": "Perda do direito pela inércia do titular", "dificuldade": 3},
-        {"id": 20, "frente": "O que é o direito de família?", "verso": "Ramo do direito que regula as relações familiares", "dificuldade": 2},
-        {"id": 21, "frente": "O que é o direito das sucessões?", "verso": "Ramo do direito que regula a herança", "dificuldade": 2},
-        {"id": 22, "frente": "O que é o direito das obrigações?", "verso": "Ramo do direito que regula as obrigações entre pessoas", "dificuldade": 2},
-        {"id": 23, "frente": "O que é o direito dos contratos?", "verso": "Ramo do direito que regula os contratos", "dificuldade": 2},
-        {"id": 24, "frente": "O que é o direito de propriedade?", "verso": "Direito de usar, gozar e dispor de um bem", "dificuldade": 2},
-        {"id": 25, "frente": "O que é a posse?", "verso": "Exercício de fato de um direito de propriedade", "dificuldade": 2},
-        {"id": 26, "frente": "O que é o usufruto?", "verso": "Direito de usar e gozar de um bem alheio", "dificuldade": 2},
-        {"id": 27, "frente": "O que é o direito real?", "verso": "Direito sobre uma coisa", "dificuldade": 2},
-        {"id": 28, "frente": "O que é o direito pessoal?", "verso": "Direito contra uma pessoa", "dificuldade": 2},
-        {"id": 29, "frente": "O que é a responsabilidade civil?", "verso": "Dever de reparar danos causados", "dificuldade": 2},
-        {"id": 30, "frente": "O que é a responsabilidade penal?", "verso": "Responsabilidade por crimes", "dificuldade": 2}
-      ]
-    },
-    "logica": {
+    "raciocinio-logico": {
       "nome": "Raciocínio Lógico",
       "cards": [
-        {"id": 1, "frente": "O que é uma proposição lógica?", "verso": "Frase que pode ser verdadeira ou falsa", "dificuldade": 1},
-        {"id": 2, "frente": "O que é uma proposição simples?", "verso": "Frase com uma única afirmação", "dificuldade": 1},
-        {"id": 3, "frente": "O que é uma proposição composta?", "verso": "Frase com mais de uma afirmação", "dificuldade": 2},
-        {"id": 4, "frente": "O que é uma conjunção (e)?", "verso": "Verdadeira apenas quando ambas são verdadeiras", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma disjunção (ou)?", "verso": "Verdadeira quando pelo menos uma é verdadeira", "dificuldade": 2},
-        {"id": 6, "frente": "O que é uma condicional (se...então)?", "verso": "Falsa apenas quando a primeira é verdadeira e a segunda falsa", "dificuldade": 3},
-        {"id": 7, "frente": "O que é uma bicondicional (se e somente se)?", "verso": "Verdadeira quando ambas têm o mesmo valor", "dificuldade": 3},
-        {"id": 8, "frente": "O que é a negação?", "verso": "Inverte o valor lógico", "dificuldade": 2},
-        {"id": 9, "frente": "O que é uma tautologia?", "verso": "Proposição sempre verdadeira", "dificuldade": 2},
-        {"id": 10, "frente": "O que é um conjunto?", "verso": "Agrupamento de elementos", "dificuldade": 1},
-        {"id": 11, "frente": "O que é união de conjuntos?", "verso": "Reunião de elementos de dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 12, "frente": "O que é interseção de conjuntos?", "verso": "Elementos comuns a dois ou mais conjuntos", "dificuldade": 2},
-        {"id": 13, "frente": "O que é diferença de conjuntos?", "verso": "Elementos de um que não estão no outro", "dificuldade": 2},
-        {"id": 14, "frente": "O que é um diagrama lógico?", "verso": "Representação visual de conjuntos", "dificuldade": 1},
-        {"id": 15, "frente": "O que é um argumento lógico?", "verso": "Sequência de proposições com conclusão", "dificuldade": 2},
-        {"id": 16, "frente": "O que é um silogismo?", "verso": "Argumento com duas premissas e uma conclusão", "dificuldade": 2},
-        {"id": 17, "frente": "O que é equivalência lógica?", "verso": "Duas proposições com a mesma tabela-verdade", "dificuldade": 3},
-        {"id": 18, "frente": "O que é a Lei de De Morgan?", "verso": "¬(P∧Q) = ¬P∨¬Q", "dificuldade": 3},
-        {"id": 19, "frente": "O que é a negação de 'P → Q'?", "verso": "P ∧ ¬Q", "dificuldade": 3},
-        {"id": 20, "frente": "O que é raciocínio dedutivo?", "verso": "Do geral para o particular", "dificuldade": 2}
+        {
+          "id": 1,
+          "frente": "(VUNESP) A proposição 'Todo escrevente do TJ/SP é concursado' é uma proposição:",
+          "verso": "Alternativa correta: CATEGÓRICA (com quantificador universal). Expressa relação entre conjuntos.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir proposição categórica com proposição simples.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Estruturas lógicas."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) A condicional 'Se P, então Q' é falsa apenas quando:",
+          "verso": "Alternativa correta: P É VERDADEIRO E Q É FALSO. Na condicional (P → Q), o único caso em que é falsa é V → F.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que F→V ou F→F são falsas.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) A negação de 'Todos os processos foram arquivados' é:",
+          "verso": "Alternativa correta: 'ALGUM PROCESSO NÃO FOI ARQUIVADO' (ou 'Pelo menos um não foi'). A negação de 'Todos' é 'Algum não'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Diagramas lógicos."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) A negação de 'P e Q' é:",
+          "verso": "Alternativa correta: 'NÃO P OU NÃO Q'. Pela Lei de De Morgan, ¬(P ∧ Q) = ¬P ∨ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'ou' por 'e' na negação.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) A negação de 'P ou Q' é:",
+          "verso": "Alternativa correta: 'NÃO P E NÃO Q'. Pela Lei de De Morgan, ¬(P ∨ Q) = ¬P ∧ ¬Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'e' por 'ou' na negação.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Uma tabela-verdade com 3 proposições simples tem quantas linhas?",
+          "verso": "Alternativa correta: 8 LINHAS. O número de linhas é 2^n, onde n é o número de proposições. 2³ = 8.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com 2×3=6 ou 3²=9.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Estruturas lógicas."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) O que é uma tautologia?",
+          "verso": "Alternativa correta: PROPOSIÇÃO COMPOSTA SEMPRE VERDADEIRA, independentemente dos valores lógicos das proposições simples que a compõem (ex.: P ∨ ¬P).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com contradição (sempre falsa).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) O que é contradição em lógica?",
+          "verso": "Alternativa correta: PROPOSIÇÃO COMPOSTA SEMPRE FALSA, independentemente dos valores lógicos das proposições simples (ex.: P ∧ ¬P).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com tautologia (sempre verdadeira).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) A união de dois conjuntos A e B contém:",
+          "verso": "Alternativa correta: TODOS OS ELEMENTOS QUE PERTENCEM A A OU A B (ou a ambos). A ∪ B = {x | x ∈ A ou x ∈ B}.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir união (∪) com interseção (∩).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Diagramas lógicos."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) A interseção de dois conjuntos A e B contém:",
+          "verso": "Alternativa correta: APENAS OS ELEMENTOS COMUNS AOS DOIS. A ∩ B = {x | x ∈ A e x ∈ B}.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com união.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Diagramas lógicos."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Se 40% dos servidores são homens e 25% são maiores de 30 anos, quantos por cento são necessariamente homens E maiores de 30 anos?",
+          "verso": "NÃO É POSSÍVEL DETERMINAR. A interseção entre os dois conjuntos não pode ser inferida apenas com os percentuais isolados. Poderia ser de 0% a 25%.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Somar ou subtrair percentuais sem considerar a interseção.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Diagramas lógicos."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Um aumento de 20% seguido de um desconto de 20% resulta:",
+          "verso": "Alternativa correta: VALOR MENOR QUE O ORIGINAL. Ex.: 100 × 1,20 = 120; 120 × 0,80 = 96. Resultado final: 96 (4% menor).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que +20% e −20% se anulam.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Sequências."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Se um salário de R$ 2.000 sofre aumento de 15%, o novo valor é:",
+          "verso": "Alternativa correta: R$ 2.300. 2.000 × 1,15 = 2.300. O aumento é de R$ 300.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular 15% de 2.000 = 300 e esquecer de somar (deixando 300).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Sequências."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) A proposição 'Se o candidato estudou, então foi aprovado' é logicamente equivalente a:",
+          "verso": "Alternativa correta: 'SE O CANDIDATO NÃO FOI APROVADO, ENTÃO NÃO ESTUDOU'. A equivalência da condicional P → Q é a contrapositiva ¬Q → ¬P.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com a recíproca (Q → P) ou inversa (¬P → ¬Q).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Se em um grupo de 100 candidatos, 60 têm menos de 30 anos, quantos têm 30 anos ou mais?",
+          "verso": "Alternativa correta: 40. 100 − 60 = 40. Se 60 têm menos de 30 anos, o restante (40) tem 30 anos ou mais.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Complicar um cálculo direto de complementar.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Sequências."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Qual o próximo termo da sequência: 2, 6, 18, 54, ...?",
+          "verso": "Alternativa correta: 162. É uma PG de razão 3: 2×3=6, 6×3=18, 18×3=54, 54×3=162.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir PA (adição) com PG (multiplicação).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Sequências."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Qual o próximo termo da sequência: 1, 4, 9, 16, 25, ...?",
+          "verso": "Alternativa correta: 36. São os quadrados perfeitos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Tentar achar uma PA ou PG onde não existe.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Sequências."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Em uma urna há 5 bolas vermelhas e 3 azuis. Qual a probabilidade de retirar uma bola vermelha?",
+          "verso": "Alternativa correta: 5/8. Total = 8 bolas. Favoráveis = 5 vermelhas. P = 5/8.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir favoráveis com total ou inverter os números.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Estruturas lógicas."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) A proposição 'Se P então Q' é equivalente a:",
+          "verso": "Alternativa correta: 'NÃO P OU Q'. A equivalência lógica da condicional P → Q é ¬P ∨ Q.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é 'P e Q' ou 'Q e P'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Lógica de argumentação."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Em 'Todos os escreventes são servidores públicos', a negação é:",
+          "verso": "Alternativa correta: 'ALGUM ESCREVENTE NÃO É SERVIDOR PÚBLICO'. A negação de 'Todo A é B' é 'Algum A não é B'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar 'Algum não' por 'Nenhum'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, RLM - Diagramas lógicos."
+        }
+      ]
+    },
+    "direito-penal": {
+      "nome": "Direito Penal",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o crime de falsificação de documento público (art. 297 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: A PENA É DE RECLUSÃO, DE 2 A 6 ANOS, E MULTA. O crime está previsto no art. 297 do CP e protege a fé pública.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com falsificação de documento particular (art. 298).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 297."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre o crime de falsidade ideológica (art. 299 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: CONFIGURA-SE QUANDO O AGENTE INSERE DECLARAÇÃO FALSA EM DOCUMENTO PÚBLICO OU PARTICULAR. A pena é de reclusão, de 1 a 5 anos, e multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com falsificação material (que altera a forma do documento).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 299."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre o crime de peculato (art. 312 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: É CRIME PRATICADO POR FUNCIONÁRIO PÚBLICO QUE SE APROPRIÁ OU DESVIA BENS EM RAZÃO DO CARGO. Pena: reclusão, de 2 a 12 anos, e multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir peculato (apropriação) com concussão (exigência) ou corrupção (solicitação).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 312."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre o crime de concussão (art. 316 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE PÚBLICO EXIGE VANTAGEM INDEVIDA. Pena: reclusão, de 2 a 8 anos, e multa. Não há pedido, há EXIGÊNCIA.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir concussão (exigir) com corrupção passiva (solicitar/receber).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 316."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre o crime de corrupção passiva (art. 317 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE PÚBLICO SOLICITA, RECEBE OU ACEITA PROMESSA DE VANTAGEM INDEVIDA. Pena: reclusão, de 2 a 12 anos, e multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir corrupção passiva (receber/solicitar) com concussão (exigir).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 317."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre o crime de prevaricação (art. 319 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE PÚBLICO RETARDA OU DEIXA DE PRATICAR ATO DE OFÍCIO PARA SATISFAZER INTERESSE PESSOAL. Pena: detenção, de 3 meses a 1 ano, ou multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir prevaricação (interesse pessoal) com corrupção (vantagem indevida).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 319."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre o crime de advocacia administrativa (art. 321 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE PÚBLICO PATROCINA INTERESSE PRIVADO PERANTE A ADMINISTRAÇÃO PÚBLICA. Pena: detenção, de 1 a 3 meses, ou multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com tráfico de influência (art. 332).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 321."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre o crime de tráfico de influência (art. 332 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE SOLICITA, EXIGE OU RECEBE VANTAGEM PARA INFLUENCIAR EM ATO DE OUTRO FUNCIONÁRIO. Pena: reclusão, de 2 a 5 anos, e multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com advocacia administrativa (patrocinar interesse próprio).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 332."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre o crime de denunciação caluniosa (art. 339 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE DÁ CAUSA A INSTAURAÇÃO DE INVESTIGAÇÃO, PROCESSO OU AÇÃO CONTRA PESSOA INOCENTE. Pena: reclusão, de 2 a 8 anos, e multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com comunicação falsa de crime (art. 340).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 339."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o crime de comunicação falsa de crime (art. 340 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE COMUNICA À AUTORIDADE A OCORRÊNCIA DE CRIME QUE NÃO OCORREU. Pena: detenção, de 1 a 6 meses, ou multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com denunciação caluniosa (que envolve pessoa determinada).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 340."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre o crime de falso testemunho (art. 342 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: A TESTEMUNHA FAZ AFIRMAÇÃO FALSA, NEGA OU CALA A VERDADE EM PROCESSO. Pena: reclusão, de 2 a 4 anos, e multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a retratação não isenta de pena (o art. 342, §2º isenta se a retratação ocorrer antes da sentença).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 342."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre o crime de coação no curso do processo (art. 344 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE USA DE VIOLÊNCIA OU GRAVE AMEAÇA PARA FAVORECER INTERESSE PRÓPRIO OU DE OUTREM EM PROCESSO. Pena: reclusão, de 1 a 4 anos, e multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com fraude processual (art. 347).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 344."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre o crime de fraude processual (art. 347 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE INOVA ARTIFICIOSAMENTE OU MODIFICA O ESTADO DE LUGAR, COISA OU PESSOA PARA INDUZIR A ERRO O JUIZ OU PERITO. Pena: detenção, de 3 meses a 2 anos, e multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com coação no curso do processo (violência/ameaça).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 347."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre o crime de favorecimento pessoal (art. 348 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE AUXILIA O CRIMINOSO A FUGIR OU A SE OCULTAR. Pena: detenção, de 1 a 6 meses, ou multa. Não se aplica a ascendente, descendente, cônjuge ou irmão.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que parentes próximos também cometem o crime (há escusa absolutória).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 348."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre o crime de favorecimento real (art. 349 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O AGENTE PRESTA AUXÍLIO A CRIMINOSO PARA TORNAR SEGURO O PROVEITO DO CRIME. Pena: detenção, de 1 a 6 meses, ou multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com favorecimento pessoal (auxiliar a fugir).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 349."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Sobre o crime de falsificação de documento particular (art. 298 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: FALSIFICAR, NO TODO OU EM PARTE, DOCUMENTO PARTICULAR OU ALTERAR DOCUMENTO PARTICULAR VERDADEIRO. Pena: reclusão, de 1 a 5 anos, e multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com falsificação de documento público (art. 297), que tem pena maior.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 298."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Sobre o crime de supressão de documento (art. 305 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: DESTRUIR, SUPRIMIR OU OCULTAR DOCUMENTO PÚBLICO OU PARTICULAR DE QUE PODERIA SERVIR PROVA. Pena: detenção, de 2 meses a 2 anos, ou multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com falsificação (que cria/altera documento).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 305."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Sobre o crime de corrupção ativa (art. 333 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: O PARTICULAR OFERECE OU PROMETE VANTAGEM INDEVIDA A FUNCIONÁRIO PÚBLICO. Pena: reclusão, de 2 a 12 anos, e multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir corrupção ativa (particular oferece) com passiva (funcionário recebe).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 333."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Sobre o crime de descaminho (art. 334 do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: ILUDIR, NO TODO OU EM PARTE, O PAGAMENTO DE IMPOSTO DEVIDO PELA ENTRADA OU SAÍDA DE MERCADORIA. Pena: reclusão, de 1 a 4 anos.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir descaminho (não paga imposto) com contrabando (mercadoria proibida).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 334."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Sobre o crime de contrabando (art. 334-A do CP), é correto afirmar que:",
+          "verso": "Alternativa correta: IMPORTAR OU EXPORTAR MERCADORIA PROIBIDA. Pena: reclusão, de 2 a 5 anos. É diferente de descaminho (mercadoria permitida, mas sem pagar imposto).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir contrabando (proibida) com descaminho (permitida, mas sonegada).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 1 - CP, art. 334-A."
+        }
+      ]
+    },
+    "processual-penal": {
+      "nome": "Direito Processual Penal",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o juiz no processo penal (arts. 251-258 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ DEVE DECLARAR-SE SUSPEITO OU IMPEDIDO, SOB PENA DE NULIDADE. Os arts. 251-258 tratam das suspeições e impedimentos.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a suspeição é opcional.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 251-258."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre o Ministério Público no processo penal (arts. 257-258 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: O MP ATUA COMO FISCAL DA LEI E TITULAR DA AÇÃO PENAL PÚBLICA. Não pode desistir da ação nem da prova.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o MP pode desistir da ação (não pode).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 257-258."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre o acusado no processo penal (arts. 261-267 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: O ACUSADO TEM DIREITO À DEFESA TÉCNICA, SOB PENA DE NULIDADE ABSOLUTA. Se não tiver advogado, o juiz nomeia defensor dativo.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a falta de defesa é nulidade relativa (é absoluta).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 261-267."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre a citação no processo penal (arts. 351-372 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: A CITAÇÃO PESSOAL É A REGRA; A CITAÇÃO POR EDITAL É EXCEÇÃO. O réu citado por edital que não comparece nem constitui advogado tem o processo suspenso (art. 366).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a citação por edital é a regra.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 351-372."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a suspensão condicional do processo (art. 89 da Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: APLICA-SE A CRIMES COM PENA MÍNIMA NÃO SUPERIOR A 1 ANO. O MP propõe a suspensão por 2 a 4 anos, com condições.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que se aplica a crimes com pena mínima superior a 1 ano.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - Lei 9.099/95, art. 89."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre a transação penal (art. 76 da Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: APLICA-SE A INFRAÇÕES DE MENOR POTENCIAL OFENSIVO, COM PENA MÁXIMA NÃO SUPERIOR A 2 ANOS. O MP propõe pena restritiva de direitos ou multa.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir transação penal (art. 76) com suspensão condicional do processo (art. 89).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - Lei 9.099/95, art. 76."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre a composição civil dos danos (art. 74 da Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: NOS CRIMES DE AÇÃO PENAL PRIVADA OU PÚBLICA CONDICIONADA À REPRESENTAÇÃO, A COMPOSIÇÃO CIVIL ACARRETA A EXTINÇÃO DA PUNIBILIDADE.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a composição civil sempre extingue a punibilidade (só nos casos específicos).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - Lei 9.099/95, art. 74."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre o processo comum ordinário (arts. 394-405 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: APLICA-SE A CRIMES CUJA PENA MÁXIMA SEJA IGUAL OU SUPERIOR A 4 ANOS. O procedimento é mais amplo, com todas as fases.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir ordinário (pena ≥ 4 anos) com sumário (pena < 4 anos) e sumaríssimo (pena ≤ 2 anos).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 394-405."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre o processo comum sumário (arts. 531-538 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: APLICA-SE A CRIMES CUJA PENA MÁXIMA SEJA INFERIOR A 4 ANOS. Procedimento mais enxuto que o ordinário.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com sumaríssimo (Lei 9.099, pena ≤ 2 anos).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 531-538."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o processo comum sumaríssimo (Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: APLICA-SE A INFRAÇÕES DE MENOR POTENCIAL OFENSIVO, COM PENA MÁXIMA NÃO SUPERIOR A 2 ANOS. É o rito mais simplificado.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com sumário (CPP, pena < 4 anos).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - Lei 9.099/95."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre a prisão em flagrante (arts. 301-310 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: QUALQUER DO POVO PODE PRENDER QUEM ESTEJA EM FLAGRANTE; AUTORIDADES POLICIAIS E SEUS AGENTES TÊM O DEVER DE PRENDER. A prisão deve ser comunicada ao juiz em 24h.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o particular é obrigado a prender (é facultativo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 301-310."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre a prisão preventiva (arts. 311-316 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE COMO GARANTIA DA ORDEM PÚBLICA, DA ORDEM ECONÔMICA, POR CONVENIÊNCIA DA INSTRUÇÃO CRIMINAL OU PARA ASSEGURAR A APLICAÇÃO DA LEI PENAL. Requer fumus comissi delicti e periculum libertatis.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a preventiva pode ser decretada de ofício (após a Lei 13.964/19, não pode).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 311-316."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre a prisão temporária (Lei 7.960/89), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE NA INVESTIGAÇÃO DE CRIMES GRAVES, PELO PRAZO DE 5 DIAS (PRORROGÁVEL POR MAIS 5 EM CASO DE EXTREMA GRAVIDADE) OU 30 DIAS (CRIMES HEDIONDOS).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir temporária (investigação) com preventiva (processo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - Lei 7.960/89."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a liberdade provisória (arts. 321-350 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ PODE CONCEDER LIBERDADE PROVISÓRIA COM OU SEM FIANÇA, QUANDO A PRISÃO NÃO FOR LEGAL OU QUANDO AINDA NÃO HOUVER SENTENÇA CONDENATÓRIA. Não cabe em crimes hediondos, tortura, tráfico e terrorismo.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que cabe liberdade provisória em crimes hediondos (não cabe, salvo se houver desvinculação).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 321-350."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre a sentença penal (arts. 381-405 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: A SENTENÇA DEVE CONTER RELATÓRIO, MOTIVAÇÃO E DISPOSITIVO. A motivação é requisito essencial (art. 93, IX, CF/88), sob pena de nulidade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a motivação é opcional.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 381-405."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Sobre o recurso de apelação (arts. 593-606 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE APELAÇÃO CONTRA SENTENÇA CONDENATÓRIA OU ABSOLUTÓRIA, NO PRAZO DE 5 DIAS. É o recurso mais amplo, permitindo ampla devolutividade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar o prazo (5 dias, não 15).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 593-606."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Sobre o recurso em sentido estrito (arts. 581-592 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE CONTRA DECISÕES INTERLOCUTÓRIAS PREVISTAS TAXATIVAMENTE NO ART. 581. O prazo é de 5 dias.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que cabe contra qualquer decisão interlocutória (é taxativo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 581-592."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Sobre os embargos de declaração (arts. 619-620 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABEM CONTRA SENTENÇA OU ACÓRDÃO COM OBSCURIDADE, AMBIGUIDADE, CONTRADIÇÃO OU OMISSÃO. Prazo: 2 dias.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar o prazo (2 dias, não 5).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 619-620."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Sobre o habeas corpus (arts. 647-667 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE SEMPRE QUE ALGUÉM SOFRER OU SE ACHAR NA IMINÊNCIA DE SOFRER VIOLÊNCIA OU COAÇÃO EM SUA LIBERDADE DE LOCOMOÇÃO. Não exige advogado nem formalidade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o HC exige advogado (não exige).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 647-667."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Sobre a revisão criminal (arts. 621-631 do CPP), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE QUANDO A SENTENÇA CONDENATÓRIA FOR CONTRÁRIA À EVIDÊNCIA DOS AUTOS, QUANDO A PROVA FOR FALSA, OU QUANDO SURGIREM NOVAS PROVAS. A competência é do tribunal.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que cabe revisão criminal contra absolvição (só contra condenação).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 2 - CPP, arts. 621-631."
+        }
+      ]
+    },
+    "processual-civil": {
+      "nome": "Direito Processual Civil",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o impedimento do juiz (arts. 144-145 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ ESTÁ IMPEDIDO QUANDO ATUOU EM OUTRO GRAU, COMO ADVOGADO, PERITO, TESTEMUNHA OU HERDEIRO. O impedimento gera nulidade absoluta.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir impedimento (nulidade absoluta) com suspeição (nulidade relativa).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 144-145."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre a suspeição do juiz (arts. 145-148 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ É SUSPEITO QUANDO TEM AMIZADE ÍNTIMA OU INIMIZADE COM UMA DAS PARTES, INTERESSE NO JULGAMENTO, OU SEU CÔNJUGE/PARENTE É PARTE. Gera nulidade relativa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir suspeição (nulidade relativa) com impedimento (nulidade absoluta).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 145-148."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre os prazos no processo civil (arts. 218-235 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: OS PRAZOS SERÃO CONTADOS EM DIAS ÚTEIS, EXCLUINDO O DIA DO COMEÇO E INCLUINDO O DO VENCIMENTO. A regra foi introduzida pela Lei 13.105/2015.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a contagem é em dias corridos (é em dias úteis).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 218-235."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre a tutela provisória (arts. 294-311 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: A TUTELA PODE SER DE URGÊNCIA (SATISFATIVA OU CAUTELAR) OU DE EVIDÊNCIA. A de urgência exige fumus boni iuris e periculum in mora.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir tutela de urgência (risco) com tutela de evidência (prova robusta).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 294-311."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a tutela de evidência (art. 311 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: NÃO EXIGE PERICULUM IN MORA. Será concedida independentemente de risco, quando houver prova robusta do direito.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que exige periculum in mora (não exige).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, art. 311."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre a contestação (arts. 335-342 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: O RÉU DEVE MANIFESTAR TODA A MATÉRIA DE DEFESA NA CONTESTAÇÃO, SOB PENA DE PRECLUSÃO. Inclui defesas processuais e de mérito.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que pode trazer defesa nova depois (precluiu).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 335-342."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre a revelia (arts. 344-346 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: SE O RÉU NÃO CONTESTAR, PRESUMEM-SE VERDADEIRAS AS ALEGAÇÕES DE FATO. Exceções: pluralidade de réus, direitos indisponíveis, alegações inverossímeis.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a revelia sempre gera presunção de veracidade (há exceções).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 344-346."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre as exceções à revelia, é correto afirmar que NÃO se aplica quando:",
+          "verso": "Alternativa correta: HOUVER PLURALIDADE DE RÉUS, O DIREITO FOR INDISPONÍVEL, OU AS ALEGAÇÕES FOREM INVEROSSÍMEIS. Nesses casos, o juiz manda produzir provas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a revelia só não se aplica em direitos indisponíveis.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, art. 345."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre a audiência de conciliação (art. 334 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ DESIGNA AUDIÊNCIA DE CONCILIAÇÃO OU MEDIAÇÃO, SALVO SE AMBAS AS PARTES MANIFESTAREM DESINTERESSE. A ausência injustificada gera multa.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a audiência é sempre obrigatória (pode ser dispensada).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, art. 334."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre a apelação (arts. 1009-1014 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE CONTRA SENTENÇA, NO PRAZO DE 15 DIAS ÚTEIS. Pode versar sobre questões processuais e de mérito.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar o prazo (15 dias, não 5).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 1009-1014."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre o agravo de instrumento (arts. 1015-1020 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE CONTRA DECISÕES INTERLOCUTÓRIAS PREVISTAS TAXATIVAMENTE NO ART. 1015. Prazo: 15 dias úteis.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que cabe contra qualquer decisão (é taxativo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 1015-1020."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre os embargos de declaração (arts. 1022-1026 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: CABEM CONTRA QUALQUER DECISÃO JUDICIAL, PARA ESCLARECER OBSCURIDADE, OMISSÃO, CONTRADIÇÃO OU ERRO MATERIAL. Prazo: 5 dias úteis.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar o prazo (5 dias, não 15).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 1022-1026."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre o recurso especial (arts. 1029-1041 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE AO STJ CONTRA DECISÃO DE TRIBUNAL QUE CONTRARIAR TRATADO OU LEI FEDERAL, OU DIVERGIR DE OUTRO TRIBUNAL. Prazo: 15 dias úteis.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com recurso extraordinário (STF, matéria constitucional).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 1029-1041."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre o recurso extraordinário (arts. 1029-1041 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE AO STF CONTRA DECISÃO QUE CONTRARIAR A CONSTITUIÇÃO FEDERAL. Exige repercussão geral. Prazo: 15 dias úteis.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que não exige repercussão geral (exige).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 1029-1041."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre os Juizados Especiais Cíveis (Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: COMPETÊNCIA PARA CAUSAS DE VALOR ATÉ 40 SALÁRIOS MÍNIMOS. Não se admitem causas complexas, de natureza alimentar, fiscal ou de estado.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar o valor (40 salários, não 20).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - Lei 9.099/95, arts. 3º-19."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Sobre os princípios dos Juizados Especiais Cíveis (Lei 9.099/95), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO PRINCÍPIOS A ORALIDADE, SIMPLICIDADE, INFORMALIDADE, ECONOMIA PROCESSUAL E CELERIDADE. Busca-se a conciliação.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Excluir algum princípio (são 5).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - Lei 9.099/95, art. 2º."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Sobre a Lei 12.153/2009 (Juizados da Fazenda Pública), é correto afirmar que:",
+          "verso": "Alternativa correta: COMPETÊNCIA PARA CAUSAS DE VALOR ATÉ 60 SALÁRIOS MÍNIMOS, CONTRA A FAZENDA PÚBLICA. Não se admitem causas de natureza alimentar, tributária ou de estado.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Juizados Cíveis (40 salários).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - Lei 12.153/2009."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Sobre a competência do Juizado Especial da Fazenda Pública, é correto afirmar que:",
+          "verso": "Alternativa correta: NÃO SE ADMITE CAUSAS DE NATUREZA ALIMENTAR, TRIBUTÁRIA OU DE ESTADO, NEM AÇÕES DE DESAPROPRIAÇÃO. Só causas patrimoniais.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que cabe qualquer causa contra a Fazenda.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - Lei 12.153/2009."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Sobre a petição inicial (arts. 319-329 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: DEVE CONTER OS FATOS, OS FUNDAMENTOS JURÍDICOS, O PEDIDO, O VALOR DA CAUSA, AS PROVAS, E A OPÇÃO PELA AUDIÊNCIA DE CONCILIAÇÃO. Se faltar algum requisito, o juiz manda emendar.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a falta de requisito gera extinção imediata (manda emendar).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, arts. 319-329."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Sobre a improcedência liminar do pedido (art. 332 do CPC), é correto afirmar que:",
+          "verso": "Alternativa correta: O JUIZ PODE JULGAR LIMINARMENTE IMPROCEDENTE O PEDIDO QUANDO ESTE CONTRARIAR SÚMULA DO STF/STJ, ACÓRDÃO EM REPERCUSSÃO GERAL OU RECURSO REPETITIVO. Independe de citação.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que sempre exige citação (pode julgar liminarmente).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 3 - CPC, art. 332."
+        }
+      ]
+    },
+    "constitucional": {
+      "nome": "Direito Constitucional",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre os direitos e garantias fundamentais (art. 5º da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO APLICÁVEIS IMEDIATAMENTE, COM APLICAÇÃO MEDIATA PARA OS DIREITOS SOCIAIS. Os direitos individuais têm eficácia plena; os sociais, em regra, programática.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que todos os direitos fundamentais têm a mesma eficácia.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, Título II, Cap. I."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre o habeas corpus (art. 5º, LXVIII, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE SEMPRE QUE ALGUÉM SOFRER OU SE ACHAR NA IMINÊNCIA DE SOFRER VIOLÊNCIA OU COAÇÃO EM SUA LIBERDADE DE LOCOMOÇÃO. É gratuito e não exige advogado.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o HC exige advogado (não exige).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 5º, LXVIII."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre o mandado de segurança (art. 5º, LXIX, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: CABE PARA PROTEGER DIREITO LÍQUIDO E CERTO, NÃO AMPARADO POR HABEAS CORPUS OU HABEAS DATA. Prazo: 120 dias do ato impugnado.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com habeas data (informação pessoal) ou ação popular.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 5º, LXIX."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre o mandado de segurança coletivo (art. 5º, LXX, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: PODE SER IMPETRADO POR PARTIDO POLÍTICO COM REPRESENTAÇÃO NO CN, ORGANIZAÇÃO SINDICAL, ENTIDADE DE CLASSE OU ASSOCIAÇÃO LEGALMENTE CONSTITUÍDA E EM FUNCIONAMENTO HÁ PELO MENOS 1 ANO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar '1 ano' por '2 anos'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 5º, LXX."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre os direitos sociais (art. 6º da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A EDUCAÇÃO, A SAÚDE, A ALIMENTAÇÃO, O TRABALHO, A MORADIA, O TRANSPORTE, O LAZER, A SEGURANÇA, A PREVIDÊNCIA SOCIAL, A PROTEÇÃO À MATERNIDADE E À INFÂNCIA E A ASSISTÊNCIA AOS DESAMPARADOS SÃO DIREITOS SOCIAIS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Excluir itens acrescentados por emendas (ex.: alimentação, transporte, moradia).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 6º."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre a nacionalidade (art. 12 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO BRASILEIROS NATOS OS NASCIDOS NO BRASIL, AINDA QUE DE PAIS ESTRANGEIROS, DESDE QUE ESTES NÃO ESTEJAM A SERVIÇO DE SEU PAÍS. A nacionalidade pode ser originária (natos) ou derivada (naturalizados).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que todo filho de estrangeiros no Brasil é brasileiro nato (há exceções).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 12."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre os direitos políticos (arts. 14-16 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: O ALISTAMENTO ELEITORAL E O VOTO SÃO OBRIGATÓRIOS PARA MAIORES DE 18 ANOS, FACULTATIVOS PARA ANALFABETOS, MAIORES DE 70 E MAIORES DE 16 E MENORES DE 18.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o voto é obrigatório para maiores de 70 (é facultativo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 14."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre a soberania popular (art. 14 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SERÁ EXERCIDA PELO SUFRÁGIO UNIVERSAL E PELO VOTO DIRETO E SECRETO, COM VALOR IGUAL PARA TODOS, E, NOS TERMOS DA LEI, MEDIANTE PLEBISCITO, REFERENDO E INICIATIVA POPULAR.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir plebiscito (antes da lei) com referendo (depois da lei).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 14."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre a Administração Pública (art. 37 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A ADMINISTRAÇÃO DIRETA E INDIRETA DE QUALQUER DOS PODERES DA UNIÃO, ESTADOS, DF E MUNICÍPIOS OBEDECERÁ AOS PRINCÍPIOS DE LEGALIDADE, IMPESSOALIDADE, MORALIDADE, PUBLICIDADE E EFICIÊNCIA (LIMPE).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Excluir 'eficiência' (incluída pela EC 19/98).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 37."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o concurso público (art. 37, II, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A INVESTIDURA EM CARGO OU EMPREGO PÚBLICO DEPENDE DE APROVAÇÃO PRÉVIA EM CONCURSO PÚBLICO, RESSALVADAS AS NOMEAÇÕES PARA CARGO EM COMISSÃO DECLARADO EM LEI DE LIVRE NOMEAÇÃO E EXONERAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que TODO cargo em comissão dispensa concurso (só os de livre nomeação).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 37, II."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre o prazo de validade do concurso público (art. 37, III, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SERÁ DE ATÉ 2 ANOS, PRORROGÁVEL UMA VEZ, POR IGUAL PERÍODO. Contado da homologação.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar '2 anos' por '1 ano' ou dizer que é prorrogável duas vezes.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 37, III."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre a acumulação de cargos públicos (art. 37, XVI, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: É VEDADA A ACUMULAÇÃO REMUNERADA DE CARGOS PÚBLICOS, EXCETO QUANDO HOUVER COMPATIBILIDADE DE HORÁRIOS E: 2 CARGOS DE PROFESSOR; 1 DE PROFESSOR + 1 TÉCNICO/CIENTÍFICO; 2 CARGOS PRIVATIVOS DE SAÚDE.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir as hipóteses de acumulação.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 37, XVI."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre o teto remuneratório (art. 37, XI, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: A REMUNERAÇÃO E O SUBSÍDIO DOS OCUPANTES DE CARGOS, FUNÇÕES E EMPREGOS PÚBLICOS NÃO PODERÃO EXCEDER O SUBSÍDIO MENSAL DOS MINISTROS DO STF. Nos Municípios, o teto é o subsídio do Prefeito.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o teto é o subsídio do Presidente da República.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 37, XI."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a estabilidade do servidor público (art. 41, CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: O SERVIDOR NOMEADO PARA CARGO DE PROVIMENTO EFETIVO EM VIRTUDE DE CONCURSO PÚBLICO ADQUIRE ESTABILIDADE APÓS 3 ANOS DE EFETIVO EXERCÍCIO. Perde o cargo por sentença judicial, PAD ou avaliação periódica.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar '3 anos' por '2 anos' ou omitir a avaliação periódica.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 41."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre o Poder Judiciário (art. 92 da CF/88), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO ÓRGÃOS DO PODER JUDICIÁRIO: STF, CNJ, STJ, TST, TSE, STM, TRFs, TRTs, TREs, TJs, TJMs, Tribunais de Justiça Militar, Juízes Federais, Juízes do Trabalho, Juízes Eleitorais, Juízes Militares, Juízes dos Estados e do DF e Territórios, Juizados Especiais e de Pequenas Causas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Omitir o CNJ (que é órgão do Judiciário).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 4 - CF, art. 92."
+        }
+      ]
+    },
+    "administrativo": {
+      "nome": "Direito Administrativo",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o regime disciplinar do Estatuto dos Funcionários Públicos Civis do Estado de SP (Lei 10.261/68), é correto afirmar que:",
+          "verso": "Alternativa correta: AS PENALIDADES DISCIPLINARES SÃO: ADVERTÊNCIA, SUSPENSÃO, DEMISSÃO, CASSAÇÃO DE APOSENTADORIA E DISPONIBILIDADE. A advertência é a mais leve; a demissão, a mais grave.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir as penalidades ou omitir a cassação de aposentadoria.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68, arts. 239-323."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre os deveres do funcionário público (Lei 10.261/68), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO DEVERES: EXERCER COM ZELO E DEDICAÇÃO AS ATRIBUIÇÕES DO CARGO, SER ASSÍDUO E PONTUAL, OBSERVAR AS NORMAS LEGAIS E REGULAMENTARES, MANTER CONDUTA COMPATÍVEL COM A MORALIDADE ADMINISTRATIVA E CUMPRIR AS ORDENS SUPERIORES.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Incluir deveres que não existem.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre as proibições do funcionário público (Lei 10.261/68), é correto afirmar que:",
+          "verso": "Alternativa correta: É PROIBIDO AUSENTAR-SE DO SERVIÇO SEM AUTORIZAÇÃO, VALER-SE DO CARGO PARA OBTER FAVORECIMENTO, RETIRAR DOCUMENTOS DA REPARTIÇÃO, ENTRE OUTRAS CONDUTAS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que apenas a ausência sem autorização é proibida.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre o processo administrativo disciplinar (PAD) na Lei 10.261/68, é correto afirmar que:",
+          "verso": "Alternativa correta: O PAD DEVE OBSERVAR OS PRINCÍPIOS DO CONTRADITÓRIO E DA AMPLA DEFESA, SENDO COMPOSTO POR COMISSÃO DE 3 FUNCIONÁRIOS ESTÁVEIS. Fases: instauração, inquérito, defesa, relatório e julgamento.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a comissão pode ter 2 ou 5 membros (são 3).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre a prescrição da ação disciplinar (Lei 10.261/68), é correto afirmar que:",
+          "verso": "Alternativa correta: PRESCREVE EM 5 ANOS A AÇÃO DISCIPLINAR PARA DEMISSÃO; 2 ANOS PARA SUSPENSÃO; 1 ANO PARA ADVERTÊNCIA. Contados da data do conhecimento do fato.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar os prazos ou o termo inicial.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre a demissão (Lei 10.261/68), é correto afirmar que:",
+          "verso": "Alternativa correta: A DEMISSÃO SERÁ APLICADA NOS CASOS DE CRIME CONTRA A ADMINISTRAÇÃO PÚBLICA, ABANDONO DE CARGO, INCONTINÊNCIA PÚBLICA, EMBRIAGUEZ HABITUAL, CORRUPÇÃO, ENTRE OUTROS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a demissão é automática (exige PAD).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 10.261/68."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre o crime de improbidade administrativa (Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: APÓS A LEI 14.230/2021, TODAS AS MODALIDADES DE IMPROBIDADE EXIGEM DOLO ESPECÍFICO. NÃO HÁ MAIS IMPROBIDADE CULPOSA.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que ainda existe improbidade culposa.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre os atos de improbidade que importam enriquecimento ilícito (art. 9º da Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: EXIGE-SE DOLO E VANTAGEM PATRIMONIAL INDEVIDA. Ex.: receber vantagem econômica para intermediar liberação de verba pública.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com atos que causam prejuízo ao erário (art. 10).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 9º."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre os atos de improbidade que causam prejuízo ao erário (art. 10 da Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: EXIGE-SE DOLO E EFETIVO PREJUÍZO AO ERÁRIO. Ex.: realizar operação financeira sem observância das normas legais.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que basta a ilegalidade (exige prejuízo).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 10."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre os atos de improbidade que atentam contra os princípios da Administração Pública (art. 11 da Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: APÓS A LEI 14.230/2021, EXIGE-SE DOLO ESPECÍFICO E FINALIDADE DE OBTER VANTAGEM. Ex.: negar publicidade aos atos oficiais, deixar de prestar contas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que basta a violação do princípio (exige dolo específico).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 11."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre as sanções da Lei de Improbidade (art. 12 da Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: AS SANÇÕES INCLUEM PERDA DOS BENS OU VALORES ACRESCIDOS ILICITAMENTE, PERDA DA FUNÇÃO PÚBLICA, SUSPENSÃO DOS DIREITOS POLÍTICOS, MULTA CIVIL E PROIBIÇÃO DE CONTRATAR COM O PODER PÚBLICO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que só há multa (há várias sanções).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 12."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre a prescrição na Lei de Improbidade (art. 23 da Lei 8.429/92), é correto afirmar que:",
+          "verso": "Alternativa correta: A AÇÃO PRESCREVE EM 8 ANOS CONTADOS DA OCORRÊNCIA DO FATO. Após a Lei 14.230/2021, o prazo é prescricional (não decadencial).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar '8 anos' por '5 anos'.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 23."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre a suspensão dos direitos políticos por improbidade, é correto afirmar que:",
+          "verso": "Alternativa correta: A SUSPENSÃO SERÁ DE 8 A 10 ANOS PARA ATOS QUE IMPORTAM ENRIQUECIMENTO ILÍCITO; 5 A 8 ANOS PARA PREJUÍZO AO ERÁRIO; 3 A 5 ANOS PARA ATOS CONTRA PRINCÍPIOS.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar os prazos entre as modalidades.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92, art. 12."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a responsabilidade do servidor por improbidade, é correto afirmar que:",
+          "verso": "Alternativa correta: A RESPONSABILIDADE É SUBJETIVA (EXIGE DOLO). O MERO ERRO ADMINISTRATIVO NÃO CONFIGURA IMPROBIDADE. É necessário o dolo específico (vontade livre e consciente de obter vantagem indevida).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a responsabilidade é objetiva.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre a aplicação das sanções de improbidade, é correto afirmar que:",
+          "verso": "Alternativa correta: AS SANÇÕES PODEM SER APLICADAS ISOLADA OU CUMULATIVAMENTE, CONFORME A GRAVIDADE DO FATO. A aplicação deve observar a proporcionalidade.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que as sanções são sempre cumulativas ou sempre isoladas (é conforme o caso).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 5 - Lei 8.429/92."
+        }
+      ]
+    },
+    "corregedoria": {
+      "nome": "Normas da Corregedoria Geral da Justiça",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre a Corregedoria Geral da Justiça do TJ/SP, é correto afirmar que:",
+          "verso": "Alternativa correta: É O ÓRGÃO DE FISCALIZAÇÃO E ORIENTAÇÃO DOS SERVIÇOS JUDICIAIS E EXTRAJUDICIAIS. Atua por meio de provimentos, portarias e normas.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é órgão do Poder Executivo (é do Judiciário).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. II."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre os provimentos da Corregedoria (Tomo I, Cap. II, Seção I), é correto afirmar que:",
+          "verso": "Alternativa correta: OS PROVIMENTOS SÃO ATOS NORMATIVOS INTERNOS, DE CUMPRIMENTO OBRIGATÓRIO POR TODOS OS SERVIDORES DO TJ/SP E DAS SERVENTIAS EXTRAJUDICIAIS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que os provimentos são meras recomendações (são obrigatórios).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. II."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre a competência do Corregedor-Geral da Justiça, é correto afirmar que:",
+          "verso": "Alternativa correta: COMPETE AO CORREGEDOR-GERAL EXPEDIR PROVIMENTOS, REALIZAR CORREIÇÕES ORDINÁRIAS E EXTRAORDINÁRIAS, E FISCALIZAR OS SERVIÇOS JUDICIAIS E EXTRAJUDICIAIS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir correição ordinária (periódica) com extraordinária (pontual).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. II."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre as correições ordinárias (Tomo I, Cap. III, Seção I), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO REALIZADAS PERIODICAMENTE, VISANDO VERIFICAR O FUNCIONAMENTO DOS SERVIÇOS, A REGULARIDADE DOS ATOS E O CUMPRIMENTO DAS NORMAS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que são realizadas apenas quando há denúncia.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção I."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre as correições extraordinárias (Tomo I, Cap. III, Seção I), é correto afirmar que:",
+          "verso": "Alternativa correta: SÃO REALIZADAS A QUALQUER TEMPO, POR DETERMINAÇÃO DO CORREGEDOR-GERAL, QUANDO HOUVER INDÍCIOS DE IRREGULARIDADES OU DENÚNCIAS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com correição ordinária (periódica).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção I."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre os livros obrigatórios nas serventias judiciais (Tomo I, Cap. III, Seção V), é correto afirmar que:",
+          "verso": "Alternativa correta: AS SERVENTIAS DEVEM MANTER LIVROS DE REGISTRO DE ATOS, DE PROTOCOLO, DE CARGA E OUTROS EXIGIDOS POR LEI, TODOS COM TERMOS DE ABERTURA E ENCERRAMENTO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que os livros são facultativos (são obrigatórios).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção V."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre os prazos processuais (Tomo I, Cap. III, Seção VI), é correto afirmar que:",
+          "verso": "Alternativa correta: OS PRAZOS SÃO CONTADOS EM DIAS ÚTEIS, EXCLUINDO O DIA DO COMEÇO E INCLUINDO O DO VENCIMENTO. Os prazos são fatais e peremptórios.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a contagem é em dias corridos.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção VI."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre a distribuição de processos (Tomo I, Cap. III, Seção VII), é correto afirmar que:",
+          "verso": "Alternativa correta: A DISTRIBUIÇÃO DEVE SER ALTERNada E IGUALITÁRIA, OBSERVANDO-SE A COMPETÊNCIA DAS VARAS E A REGRA DA LIVRE DISTRIBUIÇÃO.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a distribuição é feita por escolha do juiz.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção VII."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre a carga dos autos (Tomo I, Cap. III, Seção VIII), é correto afirmar que:",
+          "verso": "Alternativa correta: A CARGA DOS AUTOS DEVE SER REGISTRADA NO LIVRO PRÓPRIO, COM INDICAÇÃO DO NOME DE QUEM A RECEBEU, DATA E PRAZO PARA DEVOLUÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a carga é apenas para advogados (também para MP, peritos, etc.).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção VIII."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre o atendimento ao público (Tomo I, Cap. III, Seção IX), é correto afirmar que:",
+          "verso": "Alternativa correta: O ATENDIMENTO DEVE SER CORTÊS, EFICIENTE E EM HORÁRIO REGULAR, GARANTINDO-SE PRIORIDADE A IDOSOS, PESSOAS COM DEFICIÊNCIA E GESTANTES.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a prioridade é opcional (é obrigatória).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção IX."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Sobre a digitalização de processos (Tomo I, Cap. III, Seção X), é correto afirmar que:",
+          "verso": "Alternativa correta: A DIGITALIZAÇÃO DEVE GARANTIR A INTEGRIDADE E A AUTENTICIDADE DOS DOCUMENTOS, SEGUINDO PADRÕES TÉCNICOS E NORMAS ESPECÍFICAS.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a digitalização dispensa conferência (exige).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção X."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre a guarda de documentos (Tomo I, Cap. III, Seção XI), é correto afirmar que:",
+          "verso": "Alternativa correta: OS DOCUMENTOS DEVEM SER GUARDADOS EM LOCAL ADEQUADO, SEGUINDO TABELA DE TEMPORALIDADE E NORMAS DE ARQUIVAMENTO, GARANTINDO A SEGURANÇA E O SIGILO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que qualquer documento pode ser descartado a qualquer tempo.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. III, Seção XI."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre a Secretaria de Gestão de Pessoas (Tomo I, Cap. XI, Seção I), é correto afirmar que:",
+          "verso": "Alternativa correta: COMPETE À SGP GERENCIAR OS RECURSOS HUMANOS DO TJ/SP, INCLUINDO ADMISSÃO, LOTAÇÃO, REMOÇÃO, APOSENTADORIA E DESENVOLVIMENTO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com a Secretaria de Finanças.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. XI, Seção I."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a frequência e o ponto dos servidores (Tomo I, Cap. XI, Seção IV), é correto afirmar que:",
+          "verso": "Alternativa correta: A FREQUÊNCIA É CONTROLADA POR PONTO ELETRÔNICO OU MECÂNICO, SENDO O REGISTRO DE ENTRADA E SAÍDA OBRIGATÓRIO, SALVO EXCEÇÕES LEGAIS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o ponto é dispensável para todos os cargos.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Normas da CGJ, Tomo I, Cap. XI, Seção IV."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre o teletrabalho no TJ/SP (Resolução 850/2021), é correto afirmar que:",
+          "verso": "Alternativa correta: O SERVIDOR EM TELETRABALHO DEVE PROVIDENCIAR, ÀS SUAS EXPENSAS, TODOS OS RECURSOS NECESSÁRIOS PARA O DESEMPENHO DAS ATIVIDADES (computador, internet, móveis, etc.).",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o TJ fornece todos os equipamentos (não fornece).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco II, item 6 - Resolução TJSP 850/2021, art. 5º."
+        }
+      ]
+    },
+    "atualidades": {
+      "nome": "Atualidades",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) Sobre o Estatuto da Pessoa com Deficiência (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: A AVALIAÇÃO DA DEFICIÊNCIA, QUANDO NECESSÁRIA, SERÁ BIOPSICOSSOCIAL, REALIZADA POR EQUIPE MULTIPROFISSIONAL E INTERDISCIPLINAR. Considera impedimentos nas funções e nas estruturas do corpo.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a avaliação é apenas médica (é biopsicossocial).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 2º."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) Sobre os direitos da pessoa com deficiência (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: É DEVER DO ESTADO, DA FAMÍLIA, DA COMUNIDADE E DA SOCIEDADE EM GERAL ASSEGURAR À PESSOA COM DEFICIÊNCIA, COM PRIORIDADE, A EFETIVAÇÃO DOS DIREITOS À VIDA, À SAÚDE, À SEXUALIDADE, À PATERNIDADE E À MATERNIDADE, À HABILITAÇÃO E REABILITAÇÃO, À EDUCAÇÃO, ENTRE OUTROS.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é dever apenas do Estado.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 8º."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Sobre a acessibilidade (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: ACESSIBILIDADE É A POSSIBILIDADE E CONDIÇÃO DE ALCANCE PARA UTILIZAÇÃO, COM SEGURANÇA E AUTONOMIA, TOTAL OU ASSISTIDA, DE ESPAÇOS, MOBILIÁRIOS, EQUIPAMENTOS URBANOS, EDIFICAÇÕES, TRANSPORTES, INFORMAÇÃO E COMUNICAÇÃO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que acessibilidade se limita a rampas e elevadores.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 3º."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Sobre o atendimento prioritário (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: A PESSOA COM DEFICIÊNCIA TEM DIREITO A ATENDIMENTO PRIORITÁRIO EM ÓRGÃOS PÚBLICOS E PRIVADOS, INCLUINDO RESTITUIÇÃO DE IMPOSTO DE RENDA E RECEBIMENTO DE VALORES.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a prioridade é apenas em filas (abrange outros serviços).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 9º."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Sobre o direito à educação (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: É DEVER DO ESTADO, DA FAMÍLIA, DA COMUNIDADE ESCOLAR E DA SOCIEDADE ASSEGURAR EDUCAÇÃO DE QUALIDADE À PESSOA COM DEFICIÊNCIA, SENDO VEDADA A RECUSA DE MATRÍCULA EM ESCOLA PÚBLICA OU PRIVADA.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que escola privada pode recusar matrícula (não pode).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 27."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Sobre o direito ao trabalho (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: A PESSOA COM DEFICIÊNCIA TEM DIREITO AO TRABALHO DE SUA LIVRE ESCOLHA, SENDO VEDADA QUALQUER DISCRIMINAÇÃO OU RESTRIÇÃO. O AMBIENTE DEVE SER ACESSÍVEL E INCLUSIVO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a pessoa com deficiência só pode trabalhar em funções adaptadas.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 34."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Sobre a Lei Brasileira de Inclusão (LBI), é correto afirmar que:",
+          "verso": "Alternativa correta: A LBI (LEI 13.146/2015) TAMBÉM É CONHECIDA COMO ESTATUTO DA PESSOA COM DEFICIÊNCIA E VISA PROMOVER A INCLUSÃO SOCIAL E A CIDADANIA.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com outras leis (ex.: Lei 7.853/89).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Sobre o conceito de pessoa com deficiência (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: CONSIDERA-SE PESSOA COM DEFICIÊNCIA AQUELA QUE TEM IMPEDIMENTO DE LONGO PRAZO DE NATUREZA FÍSICA, MENTAL, INTELECTUAL OU SENSORIAL, QUE, EM INTERAÇÃO COM BARREIRAS, PODE OBSTRUIR SUA PARTICIPAÇÃO PLENA E EFETIVA NA SOCIEDADE.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que basta ter a deficiência (é preciso o impedimento de longo prazo + barreiras).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 2º."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Sobre o direito à moradia (Lei 13.146/2015), é correto afirmar que:",
+          "verso": "Alternativa correta: A PESSOA COM DEFICIÊNCIA TEM DIREITO À MORADIA DIGNA, COM ACESSIBILIDADE, EM PROGRAMAS HABITACIONAIS PÚBLICOS. O PODER PÚBLICO DEVE ADOTAR MEDIDAS PARA GARANTIR ESSE DIREITO.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a acessibilidade é opcional em programas habitacionais.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 2 - Lei 13.146/2015, art. 32."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Sobre a temática de atualidades cobrada no edital, é correto afirmar que:",
+          "verso": "Alternativa correta: SERÃO COBRADOS FATOS POLÍTICOS, ECONÔMICOS, SOCIAIS E CULTURAIS, NACIONAIS E INTERNACIONAIS, OCORRIDOS A PARTIR DO 1º SEMESTRE DE 2024. Além disso, a Lei 13.146/2015 (arts. 1º a 13 e 34 a 38).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que só cai brasileira (cai internacional também).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Atualidades, item 1."
+        }
+      ]
+    },
+    "matematica": {
+      "nome": "Matemática",
+      "cards": [
+        {
+          "id": 1,
+          "frente": "(VUNESP) O MMC (Mínimo Múltiplo Comum) de 12 e 18 é:",
+          "verso": "Alternativa correta: 36. 12 = 2² × 3; 18 = 2 × 3². MMC = 2² × 3² = 4 × 9 = 36.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir MMC com MDC.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 2."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) O MDC (Máximo Divisor Comum) de 24 e 36 é:",
+          "verso": "Alternativa correta: 12. 24 = 2³ × 3; 36 = 2² × 3². MDC = 2² × 3 = 4 × 3 = 12.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir MDC com MMC.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 2."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) Se 3/5 de um valor é R$ 240, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 400. 3/5 × X = 240 → X = 240 × 5 / 3 = 400.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter a fração (calcular 5/3).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 3."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) Se um produto de R$ 800 sofre um desconto de 15%, qual o valor final?",
+          "verso": "Alternativa correta: R$ 680. 800 × 0,85 = 680. O desconto é de R$ 120.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular 15% de 800 = 120 e esquecer de subtrair (deixando 120).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 4."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) Se 4 servidores arquivam 200 processos em 5 dias, quantos processos 6 servidores arquivam em 10 dias?",
+          "verso": "Alternativa correta: 600. Regra de três composta: 4/6 × 5/10 = 200/X → X = 600.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Não considerar as duas grandezas (servidores e dias).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 5."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) Qual a média aritmética simples de 4, 7, 9 e 12?",
+          "verso": "Alternativa correta: 8. (4+7+9+12)/4 = 32/4 = 8.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Esquecer de dividir pela quantidade de valores.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 6."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) Se um capital de R$ 2.000 é aplicado a juros simples de 3% ao mês por 4 meses, qual o montante?",
+          "verso": "Alternativa correta: R$ 2.240. J = 2000 × 0,03 × 4 = 240. M = 2000 + 240 = 2240.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular juros compostos por engano.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 7."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) Qual a solução da equação 3x - 9 = 0?",
+          "verso": "Alternativa correta: x = 3. 3x = 9 → x = 3.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Errar o sinal ou inverter a operação.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 8."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) Quais são as raízes da equação x² - 5x + 6 = 0?",
+          "verso": "Alternativa correta: x = 2 e x = 3. Bhaskara: Δ = 25 - 24 = 1; x = (5±1)/2 → x=3 ou x=2.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Errar o sinal de b (é -5, então -b = +5).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 8."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) Qual a solução do sistema x + y = 10 e x - y = 4?",
+          "verso": "Alternativa correta: x = 7 e y = 3. Somando as duas equações: 2x = 14 → x = 7; y = 10 - 7 = 3.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Subtrair em vez de somar as equações.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 9."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) Uma sala retangular tem 12m de comprimento e 8m de largura. Qual a área?",
+          "verso": "Alternativa correta: 96 m². Área = 12 × 8 = 96 m².",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Calcular perímetro em vez de área.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 12."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Um triângulo retângulo tem catetos de 3cm e 4cm. Qual a hipotenusa?",
+          "verso": "Alternativa correta: 5 cm. Teorema de Pitágoras: a² = 3² + 4² = 9 + 16 = 25 → a = 5.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Somar os catetos (3+4=7) em vez de usar Pitágoras.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 12."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Se 30% de um valor é R$ 450, qual é o valor total?",
+          "verso": "Alternativa correta: R$ 1.500. 0,30 × X = 450 → X = 450 / 0,30 = 1500.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Multiplicar em vez de dividir.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 4."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Um carro percorre 240 km em 3 horas. Qual a velocidade média?",
+          "verso": "Alternativa correta: 80 km/h. Velocidade = distância / tempo = 240 / 3 = 80 km/h.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter (tempo / distância).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 10."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Qual a média ponderada de um aluno com notas 7 (peso 2), 8 (peso 3) e 9 (peso 5)?",
+          "verso": "Alternativa correta: 8,3. (7×2 + 8×3 + 9×5) / (2+3+5) = (14+24+45)/10 = 83/10 = 8,3.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Esquecer de dividir pela soma dos pesos.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Matemática, item 6."
+        }
       ]
     },
     "informatica": {
-      "nome": "Noções de Informática",
+      "nome": "Informática",
       "cards": [
-        {"id": 1, "frente": "O que é um sistema operacional?", "verso": "Software que gerencia recursos do computador", "dificuldade": 1},
-        {"id": 2, "frente": "Quais são os sistemas operacionais?", "verso": "Windows, Linux, macOS", "dificuldade": 1},
-        {"id": 3, "frente": "O que é o Windows 10?", "verso": "Sistema operacional da Microsoft", "dificuldade": 1},
-        {"id": 4, "frente": "O que é o Linux?", "verso": "Sistema operacional de código aberto", "dificuldade": 2},
-        {"id": 5, "frente": "O que é uma rede de computadores?", "verso": "Conjunto de computadores interligados", "dificuldade": 1},
-        {"id": 6, "frente": "O que é a Internet?", "verso": "Rede mundial de computadores", "dificuldade": 1},
-        {"id": 7, "frente": "O que é intranet?", "verso": "Rede privada dentro de uma organização", "dificuldade": 2},
-        {"id": 8, "frente": "O que é um navegador?", "verso": "Software para acessar páginas na internet", "dificuldade": 1},
-        {"id": 9, "frente": "Quais são os navegadores?", "verso": "Chrome, Firefox, Edge, Opera, Safari", "dificuldade": 1},
-        {"id": 10, "frente": "O que é segurança da informação?", "verso": "Medidas para proteger dados e sistemas", "dificuldade": 2},
-        {"id": 11, "frente": "O que é um vírus de computador?", "verso": "Programa malicioso que se replica", "dificuldade": 1},
-        {"id": 12, "frente": "O que é um firewall?", "verso": "Sistema que bloqueia acessos não autorizados", "dificuldade": 2},
-        {"id": 13, "frente": "O que é criptografia?", "verso": "Técnica para codificar informações", "dificuldade": 2},
-        {"id": 14, "frente": "O que é backup?", "verso": "Cópia de segurança de dados", "dificuldade": 1},
-        {"id": 15, "frente": "O que é o MS Office?", "verso": "Suíte de escritório da Microsoft", "dificuldade": 1},
-        {"id": 16, "frente": "O que é a nuvem (cloud computing)?", "verso": "Armazenamento e processamento pela internet", "dificuldade": 2},
-        {"id": 17, "frente": "O que é um arquivo?", "verso": "Unidade de armazenamento de dados", "dificuldade": 1},
-        {"id": 18, "frente": "O que é um banco de dados?", "verso": "Conjunto organizado de dados", "dificuldade": 2},
-        {"id": 19, "frente": "O que é uma planilha?", "verso": "Documento com linhas e colunas", "dificuldade": 1},
-        {"id": 20, "frente": "O que é um editor de texto?", "verso": "Software para escrever documentos", "dificuldade": 1}
+        {
+          "id": 1,
+          "frente": "(VUNESP) No MS-Windows 10, o atalho Win+E serve para:",
+          "verso": "Alternativa correta: ABRIR O EXPLORADOR DE ARQUIVOS. Win+E é o atalho universal do Windows Explorer.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por Win+R (Executar) ou Win+L (bloquear).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Windows 10."
+        },
+        {
+          "id": 2,
+          "frente": "(VUNESP) No Windows 10, o atalho Ctrl+Shift+Esc serve para:",
+          "verso": "Alternativa correta: ABRIR O GERENCIADOR DE TAREFAS DIRETAMENTE. Ctrl+Shift+Esc abre o Task Manager sem passar pelo menu.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Trocar por Ctrl+Alt+Del (que abre menu de opções).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Windows 10."
+        },
+        {
+          "id": 3,
+          "frente": "(VUNESP) No Windows 10, a Lixeira armazena arquivos excluídos:",
+          "verso": "Alternativa correta: TEMPORARIAMENTE, PERMITINDO RESTAURAÇÃO. Só há exclusão definitiva se o usuário esvaziar a Lixeira ou usar Shift+Delete.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que Lixeira = exclusão definitiva.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Windows 10."
+        },
+        {
+          "id": 4,
+          "frente": "(VUNESP) No Windows 10, o atalho Alt+Tab serve para:",
+          "verso": "Alternativa correta: ALTERNAR ENTRE JANELAS ABERTAS. Mostra as janelas ativas para troca rápida.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Alt+F4 (fechar janela).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Windows 10."
+        },
+        {
+          "id": 5,
+          "frente": "(VUNESP) No MS-Word 365, o atalho Ctrl+B serve para:",
+          "verso": "Alternativa correta: NEGRITAR O TEXTO SELECIONADO. Ctrl+B = Bold (negrito).",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir Ctrl+B (bold/negrito) com Ctrl+S (save/salvar).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 6,
+          "frente": "(VUNESP) No MS-Word 365, o atalho Ctrl+S serve para:",
+          "verso": "Alternativa correta: SALVAR O DOCUMENTO. Ctrl+S = Save.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que Ctrl+S é 'sublinhar' (é Ctrl+U).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 7,
+          "frente": "(VUNESP) No MS-Word 365, o atalho Ctrl+I serve para:",
+          "verso": "Alternativa correta: ITÁLICO. Ctrl+I = Italic.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Ctrl+B (negrito) ou Ctrl+U (sublinhado).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 8,
+          "frente": "(VUNESP) No MS-Excel 365, a fórmula =SOMA(A1:A10) serve para:",
+          "verso": "Alternativa correta: SOMAR OS VALORES DAS CÉLULAS A1 ATÉ A10. O operador ':' indica intervalo.",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com ';' (separador de argumentos).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Excel."
+        },
+        {
+          "id": 9,
+          "frente": "(VUNESP) No MS-Excel 365, a fórmula =MÉDIA(A1:A5) serve para:",
+          "verso": "Alternativa correta: CALCULAR A MÉDIA ARITMÉTICA DOS VALORES DE A1 A A5. Soma e divide pela quantidade de células.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é soma (é média).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Excel."
+        },
+        {
+          "id": 10,
+          "frente": "(VUNESP) No MS-Excel 365, a fórmula =SE(A1>10; \"Aprovado\"; \"Reprovado\") serve para:",
+          "verso": "Alternativa correta: FAZER UMA VERIFICAÇÃO CONDICIONAL. Se A1 > 10, exibe 'Aprovado'; senão, 'Reprovado'.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Inverter a ordem (SE(CONDIÇÃO; VERDADEIRO; FALSO)).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Excel."
+        },
+        {
+          "id": 11,
+          "frente": "(VUNESP) No MS-PowerPoint 365, o atalho F5 serve para:",
+          "verso": "Alternativa correta: INICIAR A APRESENTAÇÃO DE SLIDES DESDE O COMEÇO. Shift+F5 inicia do slide atual.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir F5 com Shift+F5.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-PowerPoint."
+        },
+        {
+          "id": 12,
+          "frente": "(VUNESP) Sobre o correio eletrônico, o campo 'Cc' significa:",
+          "verso": "Alternativa correta: CÓPIA CARBONO. Envia cópia do e-mail e todos os destinatários veem quem mais recebeu. 'Cco' é a cópia oculta.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir Cc com Cco.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Correio eletrônico."
+        },
+        {
+          "id": 13,
+          "frente": "(VUNESP) Sobre o correio eletrônico, o campo 'Cco' significa:",
+          "verso": "Alternativa correta: CÓPIA OCULTA. Os destinatários não veem quem mais recebeu. Útil para envio em massa com privacidade.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir Cco com Cc.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Correio eletrônico."
+        },
+        {
+          "id": 14,
+          "frente": "(VUNESP) Sobre a Internet, uma URL é:",
+          "verso": "Alternativa correta: UNIFORM RESOURCE LOCATOR. É o endereço que identifica recursos na internet (ex.: https://www.tjsp.jus.br).",
+          "dificuldade": 1,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir URL com HTTP ou HTML.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Internet."
+        },
+        {
+          "id": 15,
+          "frente": "(VUNESP) Sobre a Internet, o protocolo HTTPS é:",
+          "verso": "Alternativa correta: UMA VERSÃO SEGURA DO HTTP, COM CRIPTOGRAFIA SSL/TLS. Garante confidencialidade e integridade dos dados.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que HTTP e HTTPS são a mesma coisa.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Internet."
+        },
+        {
+          "id": 16,
+          "frente": "(VUNESP) Sobre o MS Teams, é correto afirmar que:",
+          "verso": "Alternativa correta: É UMA FERRAMENTA DE COLABORAÇÃO QUE PERMITE CHATS, CHAMADAS DE ÁUDIO E VÍDEO, CRIAÇÃO DE GRUPOS, AGENDAMENTO DE REUNIÕES E GRAVAÇÃO, INTEGRADA AO OFFICE 365.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que o Teams só serve para chat (tem videochamada, reuniões, etc.).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS Teams."
+        },
+        {
+          "id": 17,
+          "frente": "(VUNESP) Sobre o OneDrive, é correto afirmar que:",
+          "verso": "Alternativa correta: É UM SERVIÇO DE ARMAZENAMENTO EM NUVEM DA MICROSOFT, QUE PERMITE SALVAR, SINCRONIZAR E COMPARTILHAR ARQUIVOS. Integrado ao Office 365.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir OneDrive (nuvem) com SharePoint (colaboração).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - OneDrive."
+        },
+        {
+          "id": 18,
+          "frente": "(VUNESP) Sobre o MS-Word 365, para inserir uma quebra de página, usa-se o atalho:",
+          "verso": "Alternativa correta: Ctrl+Enter. Insere quebra de página manual no ponto do cursor.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com Enter (parágrafo) ou Shift+Enter (quebra de linha).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 19,
+          "frente": "(VUNESP) Sobre o MS-Excel 365, para congelar painéis, acessa-se:",
+          "verso": "Alternativa correta: GUIA EXIBIR > CONGELAR PAINÉIS. Permite fixar linhas/colunas durante a rolagem.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com 'Bloquear Células' (proteção).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Excel."
+        },
+        {
+          "id": 20,
+          "frente": "(VUNESP) Sobre o MS-PowerPoint 365, para adicionar uma anotação no slide, usa-se:",
+          "verso": "Alternativa correta: INSERIR > CAIXA DE TEXTO, OU USAR A ÁREA DE ANOTAÇÕES DO SLIDE. As anotações não aparecem na apresentação, só no modo de edição.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a anotação aparece para a plateia (só para o apresentador).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-PowerPoint."
+        },
+        {
+          "id": 21,
+          "frente": "(VUNESP) Sobre a área de transferência do Windows, é correto afirmar que:",
+          "verso": "Alternativa correta: É UM RECURSO QUE ARMAZENA TEMPORARIAMENTE DADOS COPIADOS OU RECORTADOS. No Windows 10, o histórico pode ser acessado com Win+V.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que a área de transferência é permanente (é temporária).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - Windows 10."
+        },
+        {
+          "id": 22,
+          "frente": "(VUNESP) Sobre o MS-Word 365, para adicionar cabeçalho, acessa-se:",
+          "verso": "Alternativa correta: GUIA INSERIR > CABEÇALHO. O cabeçalho se repete em todas as páginas do documento.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir cabeçalho com rodapé ou nota de rodapé.",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 23,
+          "frente": "(VUNESP) Sobre o MS-Excel 365, uma referência absoluta é indicada por:",
+          "verso": "Alternativa correta: $. Ex.: $A$1. O '$' antes da coluna e/ou linha trava a referência durante a cópia.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Confundir com referência relativa (sem $).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Excel."
+        },
+        {
+          "id": 24,
+          "frente": "(VUNESP) Sobre o MS-Word 365, para contar palavras do documento, acessa-se:",
+          "verso": "Alternativa correta: GUIA REVISÃO > CONTAGEM DE PALAVRAS. Mostra o número de palavras, caracteres, parágrafos e linhas.",
+          "dificuldade": 3,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Procurar em 'Inserir' (é em 'Revisão').",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS-Word."
+        },
+        {
+          "id": 25,
+          "frente": "(VUNESP) Sobre o MS Teams, o recurso 'Compartilhar Tela' serve para:",
+          "verso": "Alternativa correta: MOSTRAR O CONTEÚDO DA TELA DO COMPUTADOR AOS DEMAIS PARTICIPANTES DA REUNIÃO. Útil para apresentações e colaboração.",
+          "dificuldade": 2,
+          "tipo": "multipla_escolha",
+          "banca": "Vunesp",
+          "pegadinha": "Achar que é só para gravar (é para compartilhar em tempo real).",
+          "fundamento": "Edital TJ/SP 2024, Anexo VI, Bloco III, Informática - MS Teams."
+        }
       ]
     }
   }
