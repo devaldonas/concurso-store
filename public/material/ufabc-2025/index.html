@@ -27,8 +27,16 @@
         .btn-mapa-portugues:hover { background: #c0392b; }
         .btn-mapa-matematica { background: #0066a1; color: white; }
         .btn-mapa-matematica:hover { background: #004d7a; }
-        .btn-mapa-especificos { background: #2d7d46; color: white; }
-        .btn-mapa-especificos:hover { background: #1e5e34; }
+        .btn-mapa-adm-publica { background: #2d7d46; color: white; }
+        .btn-mapa-adm-publica:hover { background: #1e5e34; }
+        .btn-mapa-adm-geral { background: #7d5a2d; color: white; }
+        .btn-mapa-adm-geral:hover { background: #5e431e; }
+        .btn-mapa-gestao-pessoas { background: #5a2d7d; color: white; }
+        .btn-mapa-gestao-pessoas:hover { background: #431e5e; }
+        .btn-mapa-materiais { background: #2d7d7d; color: white; }
+        .btn-mapa-materiais:hover { background: #1e5e5e; }
+        .btn-mapa-afo { background: #7d2d5a; color: white; }
+        .btn-mapa-afo:hover { background: #5e1e43; }
         .mapas-container { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
         @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
     </style>
@@ -73,9 +81,13 @@
                     <h3>🧠 Mapas Mentais</h3>
                     <p>3 mapas para visualização do conteúdo</p>
                     <div class="mapas-container">
-                        <a href="/material/ufabc-2025/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa</a>
-                        <a href="/material/ufabc-2025/mapas-mentais/matematica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-matematica">📗 Matemática e Raciocínio Lógico</a>
-                        <a href="/material/ufabc-2025/mapas-mentais/especificos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-especificos">📙 Conhecimentos Específicos</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa (25 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/matematica-raciocinio.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-matematica">📗 Matemática e RLM (20 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/administracao-publica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-adm-publica">📙 Noções de Adm. Pública (20 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/administracao-geral.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-adm-geral">📕 Noções de Adm. Geral (15 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/gestao-pessoas.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-gestao-pessoas">📒 Gestão de Pessoas (10 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/gestao-materiais-contratos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-materiais">📓 Materiais e Contratos (10 cards)</a>
+                        <a href="/material/ufabc-2025/mapas-mentais/afo-arquivologia.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-afo">📔 AFO e Arquivologia (10 cards)</a>
                     </div>
                 </div>
 
