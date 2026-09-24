@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mental - Conhecimentos Gerais | PM/SP 2026</title>
+    <title>Mapa Mental - Raciocínio Lógico | PM/SP 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
@@ -12,11 +12,11 @@
         .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
         .header p { opacity: 0.8; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
-        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2d7d46; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2980b9; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .card h2 { color: #0f0f1a; font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
         .card ul { list-style: none; padding: 0; }
         .card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #495057; border-bottom: 1px solid #f8f9fa; }
-        .card ul li::before { content: "▸"; color: #2d7d46; position: absolute; left: 0; font-weight: bold; }
+        .card ul li::before { content: "▸"; color: #2980b9; position: absolute; left: 0; font-weight: bold; }
         .card ul ul { padding-left: 1.5rem; }
         .card ul ul li { border-bottom: none; font-size: 0.9rem; color: #6c757d; }
         .card ul ul li::before { content: "◦"; color: #adb5bd; }
@@ -26,48 +26,53 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Conhecimentos Gerais - PM/SP</h1>
+            <h1>Raciocínio Lógico - PM/SP</h1>
             <p>Conteúdo programático - Edital DP-3/321/26</p>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">15 questões | 20 cards disponíveis</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">10 questões | 15 cards disponíveis</p>
         </div>
 
         <div class="grid">
             <div class="card">
-                <h2>História Geral</h2>
+                <h2>Lógica Proposicional</h2>
                 <ul>
-                    <li>Primeira Guerra Mundial</li>
-                    <li>Nazifascismo e Segunda Guerra Mundial</li>
-                    <li>Guerra Fria</li>
-                    <li>Globalização e políticas neoliberais</li>
+                    <li>Proposições simples e compostas</li>
+                    <li>Conectivos lógicos
+                        <ul>
+                            <li>Conjunção (e), disjunção (ou)</li>
+                            <li>Condicional (se...então)</li>
+                            <li>Bicondicional (se e somente se)</li>
+                        </ul>
+                    </li>
+                    <li>Tabelas-verdade</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>História do Brasil</h2>
+                <h2>Equivalências e Negação</h2>
                 <ul>
-                    <li>Revolução de 1930 e Era Vargas</li>
-                    <li>Constituições Republicanas</li>
-                    <li>Período militar (1964-1985)</li>
-                    <li>Abertura política e redemocratização</li>
+                    <li>Equivalências lógicas</li>
+                    <li>Leis de De Morgan</li>
+                    <li>Contrapositiva</li>
+                    <li>Negação de proposições compostas</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Geografia Geral</h2>
+                <h2>Diagramas Lógicos</h2>
                 <ul>
-                    <li>Nova ordem mundial e geopolítica</li>
-                    <li>Globalização</li>
-                    <li>Principais problemas ambientais</li>
+                    <li>Conjuntos</li>
+                    <li>União, interseção, diferença</li>
+                    <li>Quantificadores (todo, algum, nenhum)</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Geografia do Brasil</h2>
+                <h2>Sequências e Problemas</h2>
                 <ul>
-                    <li>Natureza: relevo, hidrografia, clima e vegetação</li>
-                    <li>População: crescimento, distribuição e movimentos</li>
-                    <li>Atividades econômicas: industrialização, urbanização, energia e agropecuária</li>
-                    <li>Impactos ambientais</li>
+                    <li>Sequências numéricas (PA, PG)</li>
+                    <li>Sequências figurais</li>
+                    <li>Análise combinatória e probabilidade básica</li>
+                    <li>Resolução de problemas aritméticos</li>
                 </ul>
             </div>
         </div>

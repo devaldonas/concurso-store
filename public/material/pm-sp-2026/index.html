@@ -66,6 +66,27 @@
         @media (max-width: 768px) {
             .material-grid { grid-template-columns: 1fr; }
         }
+        .btn-mapa { font-size: 0.85rem; padding: 0.5rem; margin-top: 0.3rem; width: 100%; display: inline-block; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; color: white; }
+        .btn-mapa-portugues { background: #e94560; }
+        .btn-mapa-portugues:hover { background: #c0392b; }
+        .btn-mapa-matematica { background: #0066a1; }
+        .btn-mapa-matematica:hover { background: #004d7a; }
+        .btn-mapa-conhecimentos-gerais { background: #2d7d46; }
+        .btn-mapa-conhecimentos-gerais:hover { background: #1e5e34; }
+        .btn-mapa-informatica { background: #8e44ad; }
+        .btn-mapa-informatica:hover { background: #6c3483; }
+        .btn-mapa-administracao-publica { background: #6c5ce7; }
+        .btn-mapa-administracao-publica:hover { background: #5a4bd1; }
+        .btn-mapa-raciocinio-logico { background: #2980b9; }
+        .btn-mapa-raciocinio-logico:hover { background: #1f6d9e; }
+        .btn-mapa-atualidades { background: #d35400; }
+        .btn-mapa-atualidades:hover { background: #a04000; }
+        .btn-mapa-legislacao-pm { background: #c0392b; }
+        .btn-mapa-legislacao-pm:hover { background: #962d22; }
+        @media (max-width: 768px) {
+            .grid-mapas { grid-template-columns: 1fr; }
+        }
+        }
     </style>
 </head>
 <body>
@@ -104,10 +125,19 @@
                     <p>130 cards para memorização</p>
                     <a href="/material/flashcards.html?concurso=pm-sp-2026&session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
                 </div>
-                <div class="material-card">
+                <div class="material-card" style="grid-column: 1 / -1;">
                     <h3>🧠 Mapas Mentais</h3>
-                    <p>5 mapas para visualização do conteúdo</p>
-                    <a href="/material/pm-sp-2026/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                    <p>8 mapas para visualização do conteúdo</p>
+                    <div class="grid-mapas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                        <a href="/material/pm-sp-2026/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa (25)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/matematica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-matematica">📗 Matemática (20)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/conhecimentos-gerais.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-conhecimentos-gerais">📙 Conhecimentos Gerais (20)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/informatica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-informatica">💻 Informática (15)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/administracao-publica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-administracao-publica">⚖️ Adm. Pública (15)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/raciocinio-logico.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-raciocinio-logico">🧩 Raciocínio Lógico (15)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/atualidades.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-atualidades">📰 Atualidades (10)</a>
+                        <a href="/material/pm-sp-2026/mapas-mentais/legislacao-pm.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-legislacao-pm">📋 Legislação PM (10)</a>
+                    </div>
                 </div>
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>
