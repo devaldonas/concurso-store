@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - LOAS e Outros | INSS</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/concurso-store-icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #0f0f1a, #1a1a2e); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 small { font-size: 1rem; opacity: 0.8; display: block; font-weight: normal; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-voltar-material { display: inline-block; background: rgba(255,255,255,0.15); color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+        .btn-voltar-material:hover { background: rgba(255,255,255,0.25); text-decoration: none !important; }
+        .badge-inss { display: inline-block; background: #d35400; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; margin-top: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #d35400; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h2 { color: #0f0f1a; font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #495057; border-bottom: 1px solid #f8f9fa; }
+        .card ul li::before { content: "▸"; color: #d35400; position: absolute; left: 0; font-weight: bold; }
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li { border-bottom: none; font-size: 0.9rem; color: #6c757d; }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
+        @media (max-width: 768px) { body { padding: 1rem; } .header { flex-direction: column; text-align: center; } .header-actions { justify-content: center; width: 100%; } .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>📋 LOAS e Outros</h1>
+                <small>INSS 2022 - Técnico do Seguro Social</small>
+            </div>
+            <div class="header-actions">
+                <a href="/material/inss-2022/?session_id=<%= session_id %>" class="btn-voltar-material">📖 Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <span class="badge-inss">Conhecimentos Específicos (P2)</span>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6c757d;">15 cards disponíveis</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>LOAS e BPC</h2>
+                <ul>
+                    <li>LOAS (Lei 8.742/1993)</li>
+                    <li>BPC (Benefício de Prestação Continuada)
+                        <ul>
+                            <li>Idoso 65+</li>
+                            <li>Pessoa com deficiência (PCD)</li>
+                            <li>Renda per capita: 1/4 do salário mínimo</li>
+                            <li>Não exige contribuição</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Auxílio-Inclusão</h2>
+                <ul>
+                    <li>Lei 14.176/2021</li>
+                    <li>Para PCD que recebe BPC</li>
+                    <li>Atividade remunerada até 2 salários mínimos</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Regimes Próprios (RPPS)</h2>
+                <ul>
+                    <li>Servidores efetivos</li>
+                    <li>Contagem recíproca</li>
+                    <li>Compensação previdenciária (Lei 9.796/1999)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Legislações Especiais</h2>
+                <ul>
+                    <li>Pensão Síndrome de Talidomida (Lei 7.070/1982)</li>
+                    <li>Pensão Seringueiros (Lei 7.986/1989)</li>
+                    <li>Pensão Ex-combatente (Lei 8.059/1990)</li>
+                    <li>Pensão Césio 137 (Lei 9.425/1996)</li>
+                    <li>Pensão Zika Vírus (Lei 13.985/2020)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Seguro-Defeso</h2>
+                <ul>
+                    <li>Pescador artesanal</li>
+                    <li>Período de proibição da pesca</li>
+                    <li>Lei 10.779/2003</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>LC 142/2013</h2>
+                <ul>
+                    <li>Aposentadoria da PCD no RGPS</li>
+                    <li>Regras conforme o grau de deficiência</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
