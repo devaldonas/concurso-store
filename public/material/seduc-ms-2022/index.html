@@ -27,8 +27,14 @@
         .btn-mapa-portugues:hover { background: #c0392b; }
         .btn-mapa-pedagogia { background: #6c5ce7; color: white; }
         .btn-mapa-pedagogia:hover { background: #5a4bd1; }
-        .btn-mapa-especificos { background: #2d7d46; color: white; }
-        .btn-mapa-especificos:hover { background: #1e5e34; }
+        .btn-mapa-legislacao { background: #2d7d46; color: white; }
+        .btn-mapa-legislacao:hover { background: #1e5e34; }
+        .btn-mapa-bncc { background: #0984e3; color: white; }
+        .btn-mapa-bncc:hover { background: #0768b3; }
+        .btn-mapa-avaliacao { background: #d63031; color: white; }
+        .btn-mapa-avaliacao:hover { background: #b02020; }
+        .btn-mapa-componente { background: #00b894; color: white; }
+        .btn-mapa-componente:hover { background: #009475; }
         .mapas-container { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
         @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
     </style>
@@ -73,16 +79,19 @@
                     <h3>🧠 Mapas Mentais</h3>
                     <p>3 mapas para visualização do conteúdo</p>
                     <div class="mapas-container">
-                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa</a>
-                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-conhecimentos-pedagogicos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-pedagogia">📗 Conhecimentos Pedagógicos</a>
-                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-especificos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-especificos">📙 Conhecimentos Específicos</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa (25 cards)</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-conhecimentos-pedagogicos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-pedagogia">📗 Conhecimentos Pedagógicos (25 cards)</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-legislacao-educacional.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-legislacao">📙 Legislação Educacional (25 cards)</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-bncc-curriculo-ms.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-bncc">📕 BNCC e Currículo de MS (20 cards)</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-avaliacao-competencias.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-avaliacao">📒 Avaliação e Competências (15 cards)</a>
+                        <a href="/material/seduc-ms-2022/mapas-mentais/mapa-componente-curricular.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-componente">📓 Componente Curricular (20 cards)</a>
                     </div>
                 </div>
 
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>
                     <p>Cronograma de 4 semanas</p>
-                    <a href="/material/seduc-ms-2022/guias/revisao.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Guia</a>
+                    <a href="/material/seduc-ms-2022/guias/revisao-programada.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Guia</a>
                 </div>
 
                 <div class="material-card">
