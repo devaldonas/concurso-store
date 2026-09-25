@@ -10,3 +10,4 @@ yarn-error.log*
 *.bak-antes-do-patch*
 *.bak-antes-do-fix
 *.bak-antes-mapas
+*.bak-antes-patch-*

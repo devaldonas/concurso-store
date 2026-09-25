@@ -20,7 +20,28 @@
         .breadcrumb { margin: 1rem 0; color: #6c757d; }
         .breadcrumb a { color: #1a5276; text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
-        @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
+        .btn-mapa { font-size: 0.85rem; padding: 0.5rem; margin-top: 0.3rem; width: 100%; display: inline-block; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; color: white; }
+        .btn-mapa-portugues { background: #e94560; }
+        .btn-mapa-portugues:hover { background: #c0392b; }
+        .btn-mapa-constitucional { background: #2d7d46; }
+        .btn-mapa-constitucional:hover { background: #1e5e34; }
+        .btn-mapa-administrativo { background: #6c5ce7; }
+        .btn-mapa-administrativo:hover { background: #5a4bd1; }
+        .btn-mapa-penal-processual { background: #c0392b; }
+        .btn-mapa-penal-processual:hover { background: #962d22; }
+        .btn-mapa-direitos-humanos { background: #e67e22; }
+        .btn-mapa-direitos-humanos:hover { background: #d35400; }
+        .btn-mapa-legislacao-especial { background: #16a085; }
+        .btn-mapa-legislacao-especial:hover { background: #117a65; }
+        .btn-mapa-estatistica { background: #f39c12; }
+        .btn-mapa-estatistica:hover { background: #d68910; }
+        .btn-mapa-raciocinio-logico { background: #2980b9; }
+        .btn-mapa-raciocinio-logico:hover { background: #1f6d9e; }
+        .btn-mapa-informatica { background: #8e44ad; }
+        .btn-mapa-informatica:hover { background: #6c3483; }
+        .btn-mapa-contabilidade { background: #34495e; }
+        .btn-mapa-contabilidade:hover { background: #2c3e50; }
+        @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } .grid-mapas { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -54,13 +75,24 @@
             <div class="material-grid">
                 <div class="material-card">
                     <h3>🃏 Flashcards</h3>
-                    <p>205 cards para memorização</p>
+                    <p>170 cards para memorização</p>
                     <a href="/material/flashcards.html?concurso=pf-2024&session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
                 </div>
-                <div class="material-card">
+                <div class="material-card" style="grid-column: 1 / -1;">
                     <h3>🧠 Mapas Mentais</h3>
-                    <p>Mapas para visualização do conteúdo</p>
-                    <a href="/material/pf-2024/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                    <p>10 mapas para visualização do conteúdo</p>
+                    <div class="grid-mapas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                        <a href="/material/pf-2024/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa (20)</a>
+                        <a href="/material/pf-2024/mapas-mentais/direito-constitucional.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-constitucional">⚖️ Dir. Constitucional (20)</a>
+                        <a href="/material/pf-2024/mapas-mentais/direito-administrativo.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-administrativo">📙 Dir. Administrativo (20)</a>
+                        <a href="/material/pf-2024/mapas-mentais/direito-penal-processual.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-penal-processual">🔒 Penal e Proc. Penal (20)</a>
+                        <a href="/material/pf-2024/mapas-mentais/direitos-humanos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-direitos-humanos">🕊️ Direitos Humanos (15)</a>
+                        <a href="/material/pf-2024/mapas-mentais/legislacao-especial.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-legislacao-especial">📜 Legislação Especial (15)</a>
+                        <a href="/material/pf-2024/mapas-mentais/estatistica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-estatistica">📊 Estatística (15)</a>
+                        <a href="/material/pf-2024/mapas-mentais/raciocinio-logico.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-raciocinio-logico">🧩 RLM (15)</a>
+                        <a href="/material/pf-2024/mapas-mentais/informatica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-informatica">💻 Informática (15)</a>
+                        <a href="/material/pf-2024/mapas-mentais/contabilidade-geral.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-contabilidade">📒 Contabilidade (15)</a>
+                    </div>
                 </div>
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>

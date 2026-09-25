@@ -161,8 +161,8 @@ const products = [
     badge: 'Premium',
     category: 'Segurança',
     features: [
-      '205 flashcards',
-      '1 mapa mental',
+      '170 flashcards',
+      '10 mapas mentais',
       'Guia de revisão 4 semanas',
       '80 questões - 4h'
     ]

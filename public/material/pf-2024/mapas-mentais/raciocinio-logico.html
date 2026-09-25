@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mental - Língua Portuguesa | PF 2025</title>
+    <title>Mapa Mental - RLM | PF 2025</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
@@ -14,11 +14,11 @@
         .btn-voltar-material { display: inline-block; background: rgba(255,255,255,0.15); color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
         .btn-voltar-material:hover { background: rgba(255,255,255,0.25); text-decoration: none !important; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
-        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #e94560; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2980b9; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .card h2 { color: #0f0f1a; font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
         .card ul { list-style: none; padding: 0; }
         .card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #495057; border-bottom: 1px solid #f8f9fa; }
-        .card ul li::before { content: "▸"; color: #e94560; position: absolute; left: 0; font-weight: bold; }
+        .card ul li::before { content: "▸"; color: #2980b9; position: absolute; left: 0; font-weight: bold; }
         .card ul ul { padding-left: 1.5rem; }
         .card ul ul li { border-bottom: none; font-size: 0.9rem; color: #6c757d; }
         .card ul ul li::before { content: "◦"; color: #adb5bd; }
@@ -29,9 +29,9 @@
     <div class="container">
         <div class="header">
             <div class="header-info">
-                <h1>Língua Portuguesa - PF 2025</h1>
+                <h1>Raciocínio Lógico - PF 2025</h1>
                 <p>Conteúdo programático - Edital nº 6/2025</p>
-                <p style="font-size: 0.9rem; margin-top: 0.5rem;">20 cards disponíveis</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">15 cards disponíveis</p>
             </div>
             <div>
                 <a href="/material/pf-2024/?session_id=<%= session_id %>" class="btn-voltar-material">📖 Voltar ao Material</a>
@@ -40,48 +40,38 @@
 
         <div class="grid">
             <div class="card">
-                <h2>Compreensão e Interpretação</h2>
+                <h2>Lógica Proposicional</h2>
                 <ul>
-                    <li>Interpretação de textos</li>
-                    <li>Ideias principais e secundárias</li>
-                    <li>Inferências e conclusões</li>
-                    <li>Tipologia textual</li>
+                    <li>Proposições simples e compostas</li>
+                    <li>Conectivos (e, ou, se...então, se e somente se)</li>
+                    <li>Tabelas-verdade</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Semântica</h2>
+                <h2>Equivalências e Negação</h2>
                 <ul>
-                    <li>Sinônimos e antônimos</li>
-                    <li>Denotação e conotação</li>
-                    <li>Polissemia</li>
+                    <li>Leis de De Morgan</li>
+                    <li>Contrapositiva</li>
+                    <li>Negação de proposições compostas</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Morfologia</h2>
+                <h2>Conjuntos e Diagramas</h2>
                 <ul>
-                    <li>Classes de palavras variáveis</li>
-                    <li>Classes de palavras invariáveis</li>
+                    <li>União, interseção, diferença</li>
+                    <li>Quantificadores (todo, algum, nenhum)</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Sintaxe e Pontuação</h2>
+                <h2>Sequências e Problemas</h2>
                 <ul>
-                    <li>Concordância verbal e nominal</li>
-                    <li>Regência verbal e nominal</li>
-                    <li>Colocação pronominal</li>
-                    <li>Crase</li>
-                    <li>Pontuação</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h2>Coesão e Coerência</h2>
-                <ul>
-                    <li>Coesão referencial e sequencial</li>
-                    <li>Conectores</li>
+                    <li>PA e PG</li>
+                    <li>Sequências figurais</li>
+                    <li>Análise combinatória</li>
+                    <li>Probabilidade básica</li>
                 </ul>
             </div>
         </div>
