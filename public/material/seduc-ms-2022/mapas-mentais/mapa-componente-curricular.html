@@ -8,7 +8,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
         .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #0f0f1a, #1a1a2e); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; text-align: center; }
+        .header { background: linear-gradient(135deg, #0f0f1a, #1a1a2e); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .header-info h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header-info p { opacity: 0.8; }
+        .btn-voltar-material { display: inline-block; background: rgba(255,255,255,0.15); color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+        .btn-voltar-material:hover { background: rgba(255,255,255,0.25); text-decoration: none !important; }
+        @media (max-width: 768px) { .header { flex-direction: column; text-align: center; } }
         .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
         .header p { opacity: 0.8; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
@@ -26,9 +31,14 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Componente Curricular - SEDUC/MS</h1>
-            <p>Conhecimentos Específicos - Edital nº 1/2022</p>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">20 cards disponíveis</p>
+            <div class="header-info">
+                <h1>Componente Curricular - SEDUC/MS</h1>
+                <p>Conhecimentos Específicos - Edital nº 1/2022</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">20 cards disponíveis</p>
+            </div>
+            <div>
+                <a href="/material/seduc-ms-2022/?session_id=<%= session_id %>" class="btn-voltar-material">📖 Voltar ao Material</a>
+            </div>
         </div>
 
         <div class="grid">
