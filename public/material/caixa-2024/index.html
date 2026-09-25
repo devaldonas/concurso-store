@@ -19,7 +19,26 @@
         .badge-caixa { display: inline-block; background: #004d8b; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; }
         .breadcrumb { margin: 1rem 0; color: #6c757d; }
         .breadcrumb a { color: #004d8b; text-decoration: none; }
-        @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } }
+        .btn-mapa { font-size: 0.85rem; padding: 0.5rem; margin-top: 0.3rem; width: 100%; display: inline-block; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; color: white; }
+        .btn-mapa-portugues { background: #e94560; }
+        .btn-mapa-portugues:hover { background: #c0392b; }
+        .btn-mapa-ingles { background: #3498db; }
+        .btn-mapa-ingles:hover { background: #2980b9; }
+        .btn-mapa-matematica-financeira { background: #2ecc71; }
+        .btn-mapa-matematica-financeira:hover { background: #27ae60; }
+        .btn-mapa-probabilidade-estatistica { background: #f39c12; }
+        .btn-mapa-probabilidade-estatistica:hover { background: #d68910; }
+        .btn-mapa-comportamentos-eticos { background: #9b59b6; }
+        .btn-mapa-comportamentos-eticos:hover { background: #8e44ad; }
+        .btn-mapa-conhecimentos-bancarios { background: #e67e22; }
+        .btn-mapa-conhecimentos-bancarios:hover { background: #d35400; }
+        .btn-mapa-ti-comunicacao { background: #1abc9c; }
+        .btn-mapa-ti-comunicacao:hover { background: #16a085; }
+        .btn-mapa-comportamentos-digitais { background: #34495e; }
+        .btn-mapa-comportamentos-digitais:hover { background: #2c3e50; }
+        .btn-mapa-atendimento-bancario { background: #c0392b; }
+        .btn-mapa-atendimento-bancario:hover { background: #962d22; }
+        @media (max-width: 768px) { .material-grid { grid-template-columns: 1fr; } .grid-mapas { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -56,10 +75,20 @@
                     <p>165 cards para memorização</p>
                     <a href="/material/flashcards.html?concurso=caixa-2024&session_id=<%= session_id %>" class="btn btn-primary">Estudar Flashcards</a>
                 </div>
-                <div class="material-card">
+                <div class="material-card" style="grid-column: 1 / -1;">
                     <h3>🧠 Mapas Mentais</h3>
-                    <p>Mapas para visualização do conteúdo</p>
-                    <a href="/material/caixa-2024/mapas-mentais/bancario.html?session_id=<%= session_id %>" class="btn btn-primary">Ver Mapas</a>
+                    <p>9 mapas para visualização do conteúdo</p>
+                    <div class="grid-mapas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                        <a href="/material/caixa-2024/mapas-mentais/portugues.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-portugues">📘 Língua Portuguesa (20)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/ingles.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-ingles">🇬🇧 Língua Inglesa (15)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/matematica-financeira.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-matematica-financeira">📗 Mat. Financeira (20)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/probabilidade-estatistica.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-probabilidade-estatistica">📊 Probabilidade (15)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/comportamentos-eticos.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-comportamentos-eticos">⚖️ Comport. Éticos (15)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/conhecimentos-bancarios.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-conhecimentos-bancarios">🏦 Conhec. Bancários (25)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/ti-comunicacao.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-ti-comunicacao">💻 TI e Comunicação (15)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/comportamentos-digitais.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-comportamentos-digitais">🧠 Comport. Digitais (15)</a>
+                        <a href="/material/caixa-2024/mapas-mentais/atendimento-bancario.html?session_id=<%= session_id %>" class="btn-mapa btn-mapa-atendimento-bancario">🤝 Atendimento (20)</a>
+                    </div>
                 </div>
                 <div class="material-card">
                     <h3>📅 Guia de Revisão</h3>

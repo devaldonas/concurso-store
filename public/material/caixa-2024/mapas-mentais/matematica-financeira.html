@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Matemática Financeira | CAIXA 2024</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #0f0f1a, #1a1a2e); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .header-info h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header-info p { opacity: 0.8; }
+        .btn-voltar-material { display: inline-block; background: rgba(255,255,255,0.15); color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+        .btn-voltar-material:hover { background: rgba(255,255,255,0.25); text-decoration: none !important; }
+        @media (max-width: 768px) {
+            .header { flex-direction: column; text-align: center; }
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.8; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2ecc71; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h2 { color: #0f0f1a; font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f3f5; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #495057; border-bottom: 1px solid #f8f9fa; }
+        .card ul li::before { content: "▸"; color: #2ecc71; position: absolute; left: 0; font-weight: bold; }
+        .card ul ul { padding-left: 1.5rem; }
+        .card ul ul li { border-bottom: none; font-size: 0.9rem; color: #6c757d; }
+        .card ul ul li::before { content: "◦"; color: #adb5bd; }
+        @media (max-width: 768px) { body { padding: 1rem; } .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-info">
+                <h1>Matemática Financeira - CAIXA</h1>
+                <p>Conteúdo programático - Edital CAIXA 2024 (Cesgranrio)</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">5 questões | 20 cards disponíveis</p>
+            </div>
+            <div>
+                <a href="/material/caixa-2024/?session_id=<%= session_id %>" class="btn-voltar-material">📖 Voltar ao Material</a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Conceitos Gerais</h2>
+                <ul>
+                    <li>Valor do dinheiro no tempo</li>
+                    <li>Valor presente (VP) e valor futuro (VF)</li>
+                    <li>Juro, taxa de juro, prazo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Juros Simples</h2>
+                <ul>
+                    <li>J = C × i × t</li>
+                    <li>M = C + J</li>
+                    <li>M = C(1 + i·t)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Juros Compostos</h2>
+                <ul>
+                    <li>M = C × (1 + i)^t</li>
+                    <li>J = M − C</li>
+                    <li>Capitalização sobre juros acumulados</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Séries Uniformes</h2>
+                <ul>
+                    <li>Pagamentos iguais em intervalos regulares</li>
+                    <li>Série antecipada</li>
+                    <li>Série postecipada</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Sistemas de Amortização</h2>
+                <ul>
+                    <li>SAC (amortização constante)</li>
+                    <li>PRICE / Francês (prestação constante)</li>
+                    <li>SAM (misto)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Descontos</h2>
+                <ul>
+                    <li>Desconto comercial simples (por fora)</li>
+                    <li>Desconto racional composto (por dentro)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Sequências</h2>
+                <ul>
+                    <li>Progressão Aritmética (PA)</li>
+                    <li>Progressão Geométrica (PG)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
